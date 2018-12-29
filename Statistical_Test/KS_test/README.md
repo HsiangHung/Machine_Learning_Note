@@ -9,7 +9,7 @@ The two-sample K–S test is sensitive to differences in both location and shape
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
 
-where <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{I}_{[-\infty,&space;x]}(X_i)" title="\textrm{I}_{[-\infty, x]}(X_i)" /></a> is an indication function, 
+where I(Xi) is an indication function, equal to 1 if Xi ≤ x and equal to 0 otherwise.
 
 
 
