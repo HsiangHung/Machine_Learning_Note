@@ -5,9 +5,12 @@
 
 The Kolmogorov–Smirnov statistic quantifies a **distance** between the **empirical distribution function of the sample** and the cumulative distribution function of the reference distribution, or between the empirical distribution functions of two samples.  The null hypothesis is the sample drawn from the reference distribution (in the one-sample case), or from the same distribution (in the two-sample case). 
 
-The two-sample K–S test is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples. In [[Wiki]][Kolmogorov–Smirnov test], they defined ghe empirical distribution function Fn for n iid ordered observations Xi as
+The two-sample K–S test is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples. In [[Wiki]][Kolmogorov–Smirnov test], they defined the empirical distribution function (for n iid ordered observations `Xi`) as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
+
+where <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{I}_{[-\infty,&space;x]}(X_i)" title="\textrm{I}_{[-\infty, x]}(X_i)" /></a> is an indication function, 
+
 
 
 `X` is strictly stationary meaning if the distribution of (`x[t+1]`,…,`x[t+k]`) is identical to that of (`x[1]`,…,`x[k]`) for each t and k. From Wiki: a stationary process is a stochastic process whose joint **probability distribution does not change when shifted in time or space** (by IrishStat, [[StackExchange, 1]][Why does a time series have to be stationary?]). Consequently, a stationary time-series is one whose statistical properties such as **mean**, **variance**, **autocorrelation**, etc. are all **constant over time**. [[Robert Nau, Stationarity and differencing]][Stationarity and differencing]
