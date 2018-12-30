@@ -63,7 +63,11 @@ against the alternative hypothesis
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" title="H_a : \textrm{the samples do NOT come from } F_n" /></a>
 
-As we described previously, when <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;K_{\alpha}&space;/&space;\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;K_{\alpha}&space;/&space;\sqrt{n}" title="D_n > K_{\alpha} / \sqrt{n}" /></a>, we reject the null hypothesis.
+As we described previously, when 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;K_{\alpha}&space;/&space;\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;K_{\alpha}&space;/&space;\sqrt{n}" title="D_n > K_{\alpha} / \sqrt{n}" /></a>, 
+
+we reject the null hypothesis.
 
 As an example given by Massa [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], the KS statistic `Dn` is 0.092. For sample size `n=100` and significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>. Therefore `Dn` is still smaller than 0.136. 
 
