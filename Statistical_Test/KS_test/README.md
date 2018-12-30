@@ -27,11 +27,14 @@ The `Kolmogorov–Smirnov statistic` for a given cumulative distribution functio
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>
 
-The one-sample KS test is used to test against
+The null hypothesis is 
 
-H0 : the samples come from P,
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" title="H_0 : \textrm{the samples come from } F_n" /></a>
 
-H1 : the samples do not come from P 
+
+against the alternative hypothesis 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" title="H_a : \textrm{the samples do NOT come from } F_n" /></a>
 
 
 
