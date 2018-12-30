@@ -1,5 +1,7 @@
 
-# What is Kolmogorov–Smirnov test ?
+# Kolmogorov–Smirnov test 
+
+## What is Kolmogorov–Smirnov test?
 
 `Kolmogorov–Smirnov test` (`K–S test` or `KS test`) is a **nonparametric** test of the equality of continuous, one-dimensional probability distributions that can be used to compare a sample with a **reference probability distribution** (**one-sample** K–S test), or to compare two samples (**two-sample** K–S test) [[Wiki]][Kolmogorov–Smirnov test].
 
@@ -24,7 +26,7 @@ Massa provides very good explanation about the application of KS test in her lec
 
 
 
-# Kolmogorov distribution
+## Kolmogorov distribution
 
 The Kolmogorov distribution is the distribution of the random variable
 
@@ -46,8 +48,7 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}" target="_b
 
 
 
-
-# One-sample KS test
+## One-sample KS test
 
 
 The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** (reference) `F(x)` is
@@ -65,7 +66,7 @@ against the alternative hypothesis
 
 
 
-# Two-sample KS test
+## Two-sample KS test
 
 Suppose now we have two samples, `F1` and `F2` are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size)
 
@@ -73,9 +74,6 @@ Suppose now we have two samples, `F1` and `F2` are the empirical distribution fu
 
 
 
-### ARIMA(p,d,q)
-
-By Sunny Mewati [[Quora, 1]][What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?], Box and Jenkins claimed (successfully) [[Box, Jenkins, Reinsel]][Time Series Analysis] that nonstationary data can be made stationary by differencing the series. This series, <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*" title="Y^*" /></a> is the input in Box-Jenkins analysis. The general model for <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*" title="Y^*" /></a> is written as
 
 
 
