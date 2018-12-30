@@ -30,11 +30,12 @@ Massa provides very good explanation about the application of KS test in her lec
 
 The Kolmogorov distribution is the distribution of the random variable
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{t&space;\in&space;[0,1]}&space;\left&space;|&space;B(t)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{t&space;\in&space;[0,1]}&space;\left&space;|&space;B(t)&space;\right&space;|" title="K = \lbrace X_1, X_2, \cdots, X_n \rbrace = \textrm{sup}_{t \in [0,1]} \left | B(t) \right |" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{x&space;\in&space;[0,1]}&space;\left&space;|&space;B(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{x&space;\in&space;[0,1]}&space;\left&space;|&space;B(x)&space;\right&space;|" title="K = \lbrace X_1, X_2, \cdots, X_n \rbrace = \textrm{sup}_{x \in [0,1]} \left | B(x) \right |" /></a>
 
-where B(t) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge). The cumulative distribution function of K is given by [[Wiki]][Kolmogorov–Smirnov test]
+where B(x) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge). The cumulative distribution function of K is given by [[Wiki]][Kolmogorov–Smirnov test]
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;\pi^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;\pi^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 \pi^2)}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}" /></a>
+
 
 Given a null hypothesis, we reject the null hypothesis at level α if Kolmogorov–Smirnov statistic 
 
