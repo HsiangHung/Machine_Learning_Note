@@ -16,7 +16,7 @@ where `I(Xi)` is an indication function, equal to 1 if Xi ≤ x and equal to 0 o
 
 
 
-[[S. Massa]][Kolmogorov Smirnov Test & Power of Tests] provides very good explanation about the application of KS test.
+Massa provides very good explanation about the application of KS test in her lecture [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests].
 
 
 
