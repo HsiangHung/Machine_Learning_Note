@@ -28,9 +28,24 @@ Massa provides very good explanation about the application of KS test in her lec
 
 The Kolmogorov distribution is the distribution of the random variable
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=K&space;=&space;\textrm{sup}_{t&space;\in&space;[0,1]}&space;\left&space;|&space;B(t)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K&space;=&space;\textrm{sup}_{t&space;\in&space;[0,1]}&space;\left&space;|&space;B(t)&space;\right&space;|" title="K = \textrm{sup}_{t \in [0,1]} \left | B(t) \right |" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{t&space;\in&space;[0,1]}&space;\left&space;|&space;B(t)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{t&space;\in&space;[0,1]}&space;\left&space;|&space;B(t)&space;\right&space;|" title="K = \lbrace X_1, X_2, \cdots, X_n \rbrace = \textrm{sup}_{t \in [0,1]} \left | B(t) \right |" /></a>
 
-where B(t) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge).
+where B(t) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge). The cumulative distribution function of K is given by [[Wiki]][Kolmogorov–Smirnov test]
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;\pi^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;\pi^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 \pi^2)}" /></a>
+
+Given a null hypothesis, we reject the null hypothesis at level α if Kolmogorov–Smirnov statistic 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > \frac{K_{\alpha}}{\sqrt{n}}" /></a>
+
+where <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}" title="K_{\alpha}" /></a> is from 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" title="\textrm{Pr}(K \le K_{\alpha}) = 1 -\alpha" /></a>
+
+
+
+
+
 
 # One-sample KS test
 
