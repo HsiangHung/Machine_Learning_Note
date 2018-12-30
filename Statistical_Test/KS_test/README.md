@@ -17,6 +17,9 @@ where `I(Xi)` is an indication function, equal to 1 if Xi ≤ x and equal to 0 o
 [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests] provides very good explanation about the application of KS test.
 
 
+
+# Kolmogorov distribution
+
 # One-sample KS test
 
 
@@ -24,12 +27,17 @@ The `Kolmogorov–Smirnov statistic` for a given cumulative distribution functio
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>
 
+The one-sample KS test is used to test against
+
+H0 : the samples come from P,
+
+H1 : the samples do not come from P 
 
 
 
 # Two-sample KS test
 
-Suppose now we have two samples, <a href="https://www.codecogs.com/eqnedit.php?latex=F_{1,n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_{1,n}" title="F_{1,n}" /></a> and `F2` are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size)
+Suppose now we have two samples, `F1` and `F2` are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" title="D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |" /></a>
 
