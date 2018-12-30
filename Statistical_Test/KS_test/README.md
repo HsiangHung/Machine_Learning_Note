@@ -10,13 +10,13 @@ In the Wiki page, they defined the **empirical distribution function** (for n ii
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
 
 
-where `I(Xi)` is an indication function, equal to 1 if Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample `{x1, . . . , xn}`, the empirical distribution function is the proportion of the data that lies below x [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], 
+where `I(Xi)` is called the indicator function, equal to 1 if Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample `{x1, . . . , xn}`, the empirical distribution function is the proportion of the data that lies below x [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" title="F(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" title="F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}" /></a>
 
 If we order the sample observations  `x1 ≤ x2 ≤ ··· ≤ xn`, then 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F(X_i)&space;=&space;\frac{i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F(X_i)&space;=&space;\frac{i}{n}" title="F(X_i) = \frac{i}{n}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=F_n(X_i)&space;=&space;\frac{i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(X_i)&space;=&space;\frac{i}{n}" title="F_n(X_i) = \frac{i}{n}" /></a>
 
 
 
