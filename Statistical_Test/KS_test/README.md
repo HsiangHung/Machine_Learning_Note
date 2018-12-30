@@ -7,9 +7,11 @@ The Kolmogorov–Smirnov statistic quantifies a **distance** between the **empir
 
 The two-sample K–S test is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples. In Wiki page, they defined the empirical distribution function (for n iid ordered observations `Xi`) as [[Wiki]][Kolmogorov–Smirnov test]
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
+
 
 where `I(Xi)` is an indication function, equal to 1 if Xi ≤ x and equal to 0 otherwise.
+
 
 
 [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests] provides very good explanation about the application of KS test.
@@ -17,14 +19,25 @@ where `I(Xi)` is an indication function, equal to 1 if Xi ≤ x and equal to 0 o
 
 # One-sample KS test
 
-If the series is consistently increasing over time, the sample mean and variance will grow with the size of the sample, and they will always underestimate the mean and variance in future periods. 
 
-In addition to this, stationary processes avoid the problem of **spurious regression**. 
+The `Kolmogorov–Smirnov statistic` for a given cumulative distribution function `F(x)` is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>
 
 
-# Two-Sample KS test
 
-Most business and economic time series are far from stationary when expressed in their original units of measurement, and even after deflation or seasonal adjustment they will typically still exhibit trends, cycles, random-walking, and other non-stationary behavior.
+
+# Two-sample KS test
+
+Suppose now we have two samples, F
+F_{1,n} and 
+F
+2
+,
+m
+{\displaystyle F_{2,m}} are the empirical distribution functions of the first and the second sample respectively, and 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" title="D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |" /></a>
 
 
 
