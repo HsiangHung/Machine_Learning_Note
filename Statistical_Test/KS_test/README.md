@@ -69,7 +69,7 @@ As we described previously, when
 
 we reject the null hypothesis.
 
-As an example given by Massa [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], the KS statistic `Dn` is 0.092. For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. Therefore `Dn` is still smaller than 0.136. 
+As an example given by Massa [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], the KS statistic `Dn` is 0.092. For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. Therefore `Dn` is still smaller than 0.136, and we do not reject the null hypothesis. 
 
 
 ## Two-sample KS test
