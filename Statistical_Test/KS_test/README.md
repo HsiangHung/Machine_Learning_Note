@@ -10,11 +10,11 @@ In the Wiki page, they defined the **empirical distribution function** (for n ii
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
 
 
-where `I(Xi)` is called the indicator function, equal to 1 if Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample `{x1, . . . , xn}`, the empirical distribution function is the proportion of the data that lies below x [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], 
+where `I(Xi)` is called the indicator function, equal to 1 if Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample `{X1, . . . , Xn}`, the empirical distribution function is the proportion of the data that lies below x [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" title="F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}" /></a>
 
-If we order the sample observations  `x1 ≤ x2 ≤ ··· ≤ xn`, then 
+If we order the sample observations  `X1 ≤ X2 ≤ ··· ≤ Xn`, then 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(X_i)&space;=&space;\frac{i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(X_i)&space;=&space;\frac{i}{n}" title="F_n(X_i) = \frac{i}{n}" /></a>
 
@@ -26,10 +26,16 @@ Massa provides very good explanation about the application of KS test in her lec
 
 # Kolmogorov distribution
 
+The Kolmogorov distribution is the distribution of the random variable
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=K&space;=&space;\textrm{sup}_{t&space;\in&space;[0,1]}&space;\left&space;|&space;B(t)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K&space;=&space;\textrm{sup}_{t&space;\in&space;[0,1]}&space;\left&space;|&space;B(t)&space;\right&space;|" title="K = \textrm{sup}_{t \in [0,1]} \left | B(t) \right |" /></a>
+
+where B(t) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge).
+
 # One-sample KS test
 
 
-The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** `F(x)` is
+The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** (reference) `F(x)` is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>
 
