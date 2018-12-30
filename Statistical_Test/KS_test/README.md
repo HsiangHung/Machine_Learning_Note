@@ -10,7 +10,9 @@ The two-sample K–S test is sensitive to differences in both location and shape
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
 
 
-where `I(Xi)` is an indication function, equal to 1 if Xi ≤ x and equal to 0 otherwise.
+where `I(Xi)` is an indication function, equal to 1 if Xi ≤ x and equal to 0 otherwise. If we order the sample observations  `x1 ≤ x2 ≤ ··· ≤ xn`, then [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests]
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=F(X_i)&space;=&space;\frac{i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F(X_i)&space;=&space;\frac{i}{n}" title="F(X_i) = \frac{i}{n}" /></a>
 
 
 
@@ -23,7 +25,7 @@ where `I(Xi)` is an indication function, equal to 1 if Xi ≤ x and equal to 0 o
 # One-sample KS test
 
 
-The `Kolmogorov–Smirnov statistic` for a given cumulative distribution function `F(x)` is
+The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** `F(x)` is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>
 
