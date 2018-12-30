@@ -37,13 +37,11 @@ where B(x) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridg
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}" /></a>
 
 
-Given a null hypothesis, we reject the null hypothesis at level α if Kolmogorov–Smirnov statistic 
+Given a null hypothesis, we reject the null hypothesis at level α if Kolmogorov–Smirnov statistic `Dn` satisfies
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > \frac{K_{\alpha}}{\sqrt{n}}" /></a>
 
-where <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}" title="K_{\alpha}" /></a> is from 
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" title="\textrm{Pr}(K \le K_{\alpha}) = 1 -\alpha" /></a>
+where <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}" title="K_{\alpha}" /></a> is from <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" title="\textrm{Pr}(K \le K_{\alpha}) = 1 -\alpha" /></a>.
 
 
 
