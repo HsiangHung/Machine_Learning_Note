@@ -29,7 +29,7 @@ The `Kolmogorov–Smirnov statistic` for a given cumulative distribution functio
 
 # Two-sample KS test
 
-Suppose now we have two samples, <a href="https://www.codecogs.com/eqnedit.php?latex=F^*" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F^*" title="F^*" /></a> and `F2` are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size)
+Suppose now we have two samples, <a href="https://www.codecogs.com/eqnedit.php?latex=F_{1,n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_{1,n}" title="F_{1,n}" /></a> and `F2` are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" title="D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |" /></a>
 
