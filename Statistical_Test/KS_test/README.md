@@ -52,9 +52,9 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}" target="_b
 
 The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** (reference) `F(x)` is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>,
 
-The null hypothesis is 
+which is the maximum distance between `F` and `Fn`. The null hypothesis is 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" title="H_0 : \textrm{the samples come from } F_n" /></a>
 
