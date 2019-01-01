@@ -24,7 +24,7 @@ If we order the sample observations  `X1 ≤ X2 ≤ ··· ≤ Xn`, then
 
 
 
-Massa provides very good explanation about the application of KS test in her lecture [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests].
+Massa provides very good explanation about the application of KS test in her lecture [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests]. Marc-Olivier Arsenault has very nice blog to introduce the concept without math [[Marc-Olivier Arsenault]][Kolmogorov-Smirnov Test].
 
 
 
@@ -99,8 +99,8 @@ The null hypothesis is rejected at level α if
 [Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
 [[S. Massa] Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
-
-
+[Kolmogorov-Smirnov Test]: https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d
+[[Marc-Olivier Arsenault] Kolmogorov-Smirnov Test](https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d)
 
 [Kolmogorov–Smirnov test]: https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test
 [[Wiki] Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)
