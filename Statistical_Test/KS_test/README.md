@@ -39,7 +39,7 @@ where B(x) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridg
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}" /></a>
 
 
-Given a null hypothesis, we reject the null hypothesis at level α if Kolmogorov–Smirnov statistic `Dn` satisfies
+Given a null hypothesis, we reject the null hypothesis at level α (α = 0.05, for example) if Kolmogorov–Smirnov statistic `Dn` satisfies
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > \frac{K_{\alpha}}{\sqrt{n}}" /></a>
 
@@ -56,7 +56,7 @@ The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution funct
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>,
 
-which is the maximum distance between `F` and `Fn`. The null hypothesis is 
+where the KS statistic is determined by the maximal distance between `F` and `Fn`. The null hypothesis is 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" title="H_0 : \textrm{the samples come from } F_n" /></a>
 
@@ -71,7 +71,7 @@ As we described previously, when
 
 we reject the null hypothesis.
 
-As an example given by Massa [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], the KS statistic `Dn` is 0.092. For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. Therefore `Dn` is still smaller than 0.136, and we do not reject the null hypothesis. 
+As an example given by Massa [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], suppose we have data and we are wondering if it is normally distributed. In her lecture, we first order the data to form the empirical distribution function `Fn`, and prepare a CDF of normal distribution `F`. Then we compute all `|Fn-F|` and determine the KS statistic `Dn` is 0.092 (maximal difference). For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. Therefore `Dn` is still smaller than 0.136, and we do not reject the null hypothesis. 
 
 
 ## Two-sample KS test
