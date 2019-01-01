@@ -24,7 +24,7 @@ If we order the sample observations  `X1 ≤ X2 ≤ ··· ≤ Xn`, then
 
 
 
-Massa provides very good explanation about the application of KS test in her lecture [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests]. Marc-Olivier Arsenault has very nice blog to introduce the concept without math [[Marc-Olivier Arsenault]][Kolmogorov-Smirnov Test].
+Massa provides very good explanation about the application of KS test in her lecture [[Massa]][Kolmogorov Smirnov Test & Power of Tests]. Marc-Olivier Arsenault has very nice blog to introduce the concept without math [[Marc-Olivier Arsenault]][Kolmogorov-Smirnov Test].
 
 
 
@@ -71,7 +71,7 @@ As we described previously, when
 
 we reject the null hypothesis.
 
-As an example given by Massa [[S. Massa]][Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed `N(0,1)`. In her lecture, we first order the data to form the empirical distribution function `Fn`, and prepare the CDF of `N(0,1)` as `F`. Then we compute all `|Fn-F|` and determine the KS statistic `Dn` is 0.092 (maximal difference). For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. Therefore `Dn` is still smaller than 0.136, and we do not reject the null hypothesis. 
+As an example given by Massa [[Massa]][Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed `N(0,1)`. In her lecture, we first order the data to form the empirical distribution function `Fn`, and prepare the CDF of `N(0,1)` as `F`. Then we compute all `|Fn-F|` and determine the KS statistic `Dn` is 0.092 (maximal difference). For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. Therefore `Dn` is still smaller than 0.136, and we do not reject the null hypothesis. 
 
 
 ## Two-sample KS test
@@ -96,11 +96,12 @@ The null hypothesis is rejected at level α if
 # Reference
 
 
-[Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
-[[S. Massa] Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
 [Kolmogorov-Smirnov Test]: https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d
 [[Marc-Olivier Arsenault] Kolmogorov-Smirnov Test](https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d)
+
+[Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
+[[Massa] Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
 [Kolmogorov–Smirnov test]: https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test
 [[Wiki] Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)
