@@ -41,9 +41,9 @@ where B(x) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridg
 
 Given a null hypothesis, we reject the null hypothesis at level α (α = 0.05, for example), if Kolmogorov–Smirnov statistic `Dn` satisfies
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > \frac{K_{\alpha}}{\sqrt{n}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}" /></a>
 
-where <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}" title="K_{\alpha}" /></a> is from <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" title="\textrm{Pr}(K \le K_{\alpha}) = 1 -\alpha" /></a>.
+where <a href="https://www.codecogs.com/eqnedit.php?latex=D_{\textrm{crit},&space;n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{\textrm{crit},&space;n}" title="D_{\textrm{crit}, n}" /></a> is the critical value and <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}" title="K_{\alpha}" /></a> is from <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" title="\textrm{Pr}(K \le K_{\alpha}) = 1 -\alpha" /></a>.
 
 
 
@@ -67,7 +67,7 @@ against the alternative hypothesis
 
 As we described previously, when 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;K_{\alpha}&space;/&space;\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;K_{\alpha}&space;/&space;\sqrt{n}" title="D_n > K_{\alpha} / \sqrt{n}" /></a>, 
+<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}" /></a>
 
 we reject the null hypothesis.
 
