@@ -71,11 +71,11 @@ As we described previously, when
 
 we reject the null hypothesis.
 
-As an example given by Massa [[Massa]][Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed `N(0,1)`. In her lecture, we first order the data to form the empirical distribution function `Fn`, and prepare the CDF of `N(0,1)` as `F`. Then we compute all `|Fn-F|` and determine the KS statistic `Dn` is 0.092 (maximal difference). For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. Therefore,
+As an example given by Massa [[Massa]][Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed `N(0,1)`. In her lecture, we first order the data to form the empirical distribution function `Fn`, and prepare the CDF of `N(0,1)` as `F`. Then we compute all `|Fn-F|` and determine the KS statistic `Dn` is 0.092 (maximal difference). For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. As a consequence,
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_{n}&space;=&space;0.092&space;<&space;1.36/\sqrt{100}&space;=&space;0.136" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n}&space;=&space;0.092&space;<&space;1.36/\sqrt{100}&space;=&space;0.136" title="D_{n} = 0.092 < 1.36/\sqrt{100} = 0.136" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" title="D_{n} = 0.092 < D_{\textrm{crit}, n} = \frac{1.36}{\sqrt{100}} = 0.136" /></a>
 
-and we do not reject the null hypothesis. 
+and we retain the null hypothesis. 
 
 
 ## Two-sample KS test
