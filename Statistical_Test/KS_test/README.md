@@ -14,7 +14,7 @@ In the Wiki page, they defined the **empirical distribution function** (for n ii
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
 
 
-where `I(Xi)` is called the indicator function, equal to 1 if Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample `{X1, . . . , Xn}`, the empirical distribution function is the proportion of the data that lies below x [[Massa]][Kolmogorov Smirnov Test & Power of Tests], 
+where `I(Xi)` is called the indicator function, equal to 1 if Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample `{X1, . . . , Xn}`, the empirical distribution function is the proportion of the data that lies below x [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" title="F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}" /></a>
 
@@ -24,7 +24,7 @@ If we order the sample observations  `X1 ≤ X2 ≤ ··· ≤ Xn`, then
 
 
 
-Massa provides very good explanation about the application of KS test in her lecture [[Massa]][Kolmogorov Smirnov Test & Power of Tests]. Marc-Olivier Arsenault has very nice blog to introduce the concept without math [[Marc-Olivier Arsenault]][Kolmogorov-Smirnov Test].
+Massa provides very good explanation about the application of KS test in her lecture [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests]. Marc-Olivier Arsenault has very nice blog to introduce the concept without math [[Marc-Olivier Arsenault]][Kolmogorov-Smirnov Test].
 
 
 
@@ -71,7 +71,7 @@ As we described previously, when
 
 we reject the null hypothesis.
 
-As an example given by Massa [[Massa]][Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed `N(0,1)`. In her lecture, we first order the data to form the empirical distribution function `Fn`, and prepare the CDF of `N(0,1)` as `F`. Then we compute all `|Fn-F|` and determine the KS statistic `Dn` is 0.092 (maximal difference). For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. As a consequence,
+As an example given by Massa [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed `N(0,1)`. In her lecture, we first order the data to form the empirical distribution function `Fn`, and prepare the CDF of `N(0,1)` as `F`. Then we compute all `|Fn-F|` and determine the KS statistic `Dn` is 0.092 (maximal difference). For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. As a consequence,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" title="D_{n} = 0.092 < D_{\textrm{crit}, n} = \frac{1.36}{\sqrt{100}} = 0.136" /></a>
 
@@ -104,8 +104,8 @@ The null hypothesis is rejected at level α if
 [Kolmogorov-Smirnov Test]: https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d
 [[Marc-Olivier Arsenault] Kolmogorov-Smirnov Test](https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d)
 
-[Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
-[[Massa] Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
+[S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
+[[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
 [Kolmogorov–Smirnov test]: https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test
 [[Wiki] Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)
