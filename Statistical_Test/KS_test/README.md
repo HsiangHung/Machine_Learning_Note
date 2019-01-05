@@ -5,11 +5,11 @@ For z-test and t-test, we have a strong assumption: the sample distribution is n
 
 ## What is Kolmogorov–Smirnov test?
 
-Kolmogorov–Smirnov test (`K–S test` or `KS test`) is a **nonparametric** test of the equality of continuous, one-dimensional probability distributions that can be used to compare a sample with a **reference probability distribution** (**one-sample** K–S test), or to compare two samples (**two-sample** K–S test) [[Wiki]][Kolmogorov–Smirnov test]. The KS-test has the advantage of making no assumption about the distribution of data [[Kirkman]][Kirkman T. W., Kolmogorov-Smirnov Test]. 
+Kolmogorov–Smirnov test (`K–S test` or `KS test`) is a **nonparametric** test of the equality of continuous, one-dimensional probability distributions that can be used to compare a sample with a **reference probability distribution** (**one-sample** K–S test), or to compare two samples (**two-sample** K–S test) [[Wiki]][Wiki, Kolmogorov–Smirnov test]. The KS-test has the advantage of making no assumption about the distribution of data [[Kirkman]][Kirkman T. W., Kolmogorov-Smirnov Test]. 
 
 The Kolmogorov–Smirnov statistic quantifies a **distance** between the **empirical distribution function of the sample** and the cumulative distribution function of the reference distribution, or between the empirical distribution functions of two samples.  The null hypothesis is the sample drawn from the reference distribution (in the one-sample case), or from the same distribution (in the two-sample case). The two-sample K–S test is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples. 
 
-In the Wiki page, they defined the **empirical distribution function** (for n iid ordered observations `Xi`) as [[Wiki]][Kolmogorov–Smirnov test]
+In the Wiki page, they defined the **empirical distribution function** (for n iid ordered observations `Xi`) as [[Wiki]][Wiki, Kolmogorov–Smirnov test]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
 
@@ -34,7 +34,7 @@ The Kolmogorov distribution is the distribution of the random variable
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{x&space;\in&space;[0,1]}&space;\left&space;|&space;B(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{x&space;\in&space;[0,1]}&space;\left&space;|&space;B(x)&space;\right&space;|" title="K = \lbrace X_1, X_2, \cdots, X_n \rbrace = \textrm{sup}_{x \in [0,1]} \left | B(x) \right |" /></a>
 
-where B(x) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge). The cumulative distribution function of K is given by [[Wiki]][Kolmogorov–Smirnov test]
+where B(x) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge). The cumulative distribution function of K is given by [[Wiki]][Wiki, Kolmogorov–Smirnov test]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}" /></a>
 
@@ -103,6 +103,7 @@ The null hypothesis is rejected at level α if
 [Kirkman T. W., Kolmogorov-Smirnov Test]: http://www.physics.csbsju.edu/stats/KS-test.html
 [[Kirkman] Kirkman T. W., Kolmogorov-Smirnov Test](http://www.physics.csbsju.edu/stats/KS-test.html)
 
+
 [Marc-Olivier Arsenault, Kolmogorov-Smirnov Test]: https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d
 [[Marc-Olivier Arsenault] Marc-Olivier Arsenault, Kolmogorov-Smirnov Test](https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d)
 
@@ -114,6 +115,6 @@ The null hypothesis is rejected at level α if
 [S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
 [[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
-[Kolmogorov–Smirnov test]: https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test
-[[Wiki] Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)
+[Wiki, Kolmogorov–Smirnov test]: https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test
+[[Wiki] Wiki, Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)
 
