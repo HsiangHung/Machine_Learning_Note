@@ -5,7 +5,7 @@ For z-test and t-test, we have a strong assumption: the sample distribution is n
 
 ## What is Kolmogorov–Smirnov test?
 
-Kolmogorov–Smirnov test (`K–S test` or `KS test`) is a **nonparametric** test of the equality of continuous, one-dimensional probability distributions that can be used to compare a sample with a **reference probability distribution** (**one-sample** K–S test), or to compare two samples (**two-sample** K–S test) [[Wiki]][Kolmogorov–Smirnov test]. The KS-test has the advantage of making no assumption about the distribution of data. 
+Kolmogorov–Smirnov test (`K–S test` or `KS test`) is a **nonparametric** test of the equality of continuous, one-dimensional probability distributions that can be used to compare a sample with a **reference probability distribution** (**one-sample** K–S test), or to compare two samples (**two-sample** K–S test) [[Wiki]][Kolmogorov–Smirnov test]. The KS-test has the advantage of making no assumption about the distribution of data [[Kirkman]][Kirkman T. W., Kolmogorov-Smirnov Test]. 
 
 The Kolmogorov–Smirnov statistic quantifies a **distance** between the **empirical distribution function of the sample** and the cumulative distribution function of the reference distribution, or between the empirical distribution functions of two samples.  The null hypothesis is the sample drawn from the reference distribution (in the one-sample case), or from the same distribution (in the two-sample case). The two-sample K–S test is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples. 
 
@@ -100,6 +100,8 @@ The null hypothesis is rejected at level α if
 # Reference
 
 
+[Kirkman T. W., Kolmogorov-Smirnov Test]: http://www.physics.csbsju.edu/stats/KS-test.html
+[[Kirkman] Kirkman T. W., Kolmogorov-Smirnov Test](http://www.physics.csbsju.edu/stats/KS-test.html)
 
 
 [Marc-Olivier Arsenault, Kolmogorov-Smirnov Test]: https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d
