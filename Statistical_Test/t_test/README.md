@@ -15,9 +15,14 @@ If we do not know the population variance σ, we simply replaced it with the sam
 
 which is an estimate of σ from the sample.
 
-Now we have similar format to z-statistic as
+Now we have similar format to z-statistic, defined as t-statistic
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=&space;\frac{\bar{X}-\mu}{s/\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=&space;\frac{\bar{X}-\mu}{s/\sqrt{n}}" title="t = \frac{\bar{X}-\mu}{s/\sqrt{n}}" /></a>
+
+The distribution of T will be **more dispersed** than that of Z. This implies that you underestimate probabilities of extreme observations, such that you compute will be too narrow confidence intervals.
+
+
+
 
 
 The Kolmogorov–Smirnov statistic quantifies a **distance** between the **empirical distribution function of the sample** and the cumulative distribution function of the reference distribution, or between the empirical distribution functions of two samples.  The null hypothesis is the sample drawn from the reference distribution (in the one-sample case), or from the same distribution (in the two-sample case). The two-sample K–S test is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples. 
