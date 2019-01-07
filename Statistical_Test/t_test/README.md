@@ -22,7 +22,11 @@ Now we have similar format to z-statistic, defined as t-statistic
 The distribution of T will be **more dispersed** than that of Z. This implies that you underestimate probabilities of extreme observations, such that you compute will be too narrow confidence intervals.
 
 
+## Student’s t-Distribution
 
+William Gossett computed the distribution of the t-statistic while working for the Guiness brewery, published it under the pseudonym Student, so called Student's t-distribution. **He was concerned with small sample sizes**.
+
+The t-distribution has a single parameter called the number of degrees of freedom; his is equal to the sample size minus 1. For large samples, typically more than 50, the sample variance is very accurate. 
 
 
 The Kolmogorov–Smirnov statistic quantifies a **distance** between the **empirical distribution function of the sample** and the cumulative distribution function of the reference distribution, or between the empirical distribution functions of two samples.  The null hypothesis is the sample drawn from the reference distribution (in the one-sample case), or from the same distribution (in the two-sample case). The two-sample K–S test is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples. 
@@ -118,26 +122,10 @@ The null hypothesis is rejected at level α if
 # Reference
 
 
-[Kirkman T. W., Kolmogorov-Smirnov Test]: http://www.physics.csbsju.edu/stats/KS-test.html
-[[Kirkman] Kirkman T. W., Kolmogorov-Smirnov Test](http://www.physics.csbsju.edu/stats/KS-test.html)
 
 
-[Marc-Olivier Arsenault, Kolmogorov-Smirnov Test]: https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d
-[[Marc-Olivier Arsenault] Marc-Olivier Arsenault, Kolmogorov-Smirnov Test](https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d)
+[S. Massa, t-Test]: http://www.stats.ox.ac.uk/~massa/Lecture%2010.pdf
+[[Massa] S. Massa, t-Test](http://www.stats.ox.ac.uk/~massa/Lecture%2010.pdf)
 
 
-[S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
-[[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
-
-
-[MIT course, Kolmogorov-Smirnov Test]: https://ocw.mit.edu/courses/mathematics/18-443-statistics-for-applications-fall-2006/lecture-notes/lecture14.pdf
-[[MIT] MIT course, Kolmogorov-Smirnov Test](https://ocw.mit.edu/courses/mathematics/18-443-statistics-for-applications-fall-2006/lecture-notes/lecture14.pdf)
-
-
-[Statistics How To, Kolmogorov-Smirnov Goodness of Fit Test]: https://www.statisticshowto.datasciencecentral.com/kolmogorov-smirnov-test/
-[[Statistics How To] Statistics How To, Kolmogorov-Smirnov Goodness of Fit Test](https://www.statisticshowto.datasciencecentral.com/kolmogorov-smirnov-test/)
-
-
-[Wiki, Kolmogorov–Smirnov test]: https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test
-[[Wiki] Wiki, Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)
 
