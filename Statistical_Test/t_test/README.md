@@ -24,12 +24,15 @@ The distribution of T will be **more dispersed** than that of Z. This implies th
 
 ## Student’s t-Distribution
 
-William Gossett computed the distribution of the t-statistic while working for the Guiness brewery, published it under the pseudonym Student, so called Student's t-distribution. **He was concerned with small sample sizes**.
+William Gossett computed the distribution of the t-statistic while working for the Guiness brewery, published it under the pseudonym Student, so called Student's t-distribution. He was concerned with **small sample sizes**.
 
-The t-distribution has a single parameter called the number of degrees of freedom; his is equal to the sample size minus 1. For large samples, typically more than 50, the sample standard deviation is very accurate. 
+The t-distribution has a single parameter called the number of degrees of freedom; his is equal to the sample size minus 1. For large samples, typically more than 50, the sample standard deviation is very accurate, and the t-distribution is close to a normal distribution. See below [[Massa]][S. Massa, t-Test].
 
 ![](images/t-distribution.png)
 
+For two-sided z-test and 95% confidence, the critical value of statisitic is 1.96. The t-test critical values for degree of freedoms (df) = 10 and 50 are 2.23 and 2.01, respectively. Thus we can see df = 50 is close to a z-test.
+
+![](images/t-test_flowchart.png)
 
 
 
@@ -54,8 +57,11 @@ Massa provides very good explanation about the application of KS test in her lec
 
 
 
+## Paired t-test
 
+## Two independent Sample t-Test
 
+[[NIST Two-Sample t-Test][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]
 
 
 
@@ -66,8 +72,15 @@ Massa provides very good explanation about the application of KS test in her lec
 
 
 
+
 [S. Massa, t-Test]: http://www.stats.ox.ac.uk/~massa/Lecture%2010.pdf
 [[Massa] S. Massa, t-Test](http://www.stats.ox.ac.uk/~massa/Lecture%2010.pdf)
+
+
+[NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]: https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm
+[[NIST Two-Sample t-Test] NIST, 1.3.5.3. Two-Sample t-Test for Equal Means](https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm)
+
+
 
 
 
