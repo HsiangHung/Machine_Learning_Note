@@ -46,9 +46,13 @@ The workflow to determine using z-test or t-test is as follows [[Massa]][S. Mass
 
 ## Paired t-test
 
-The two-sample t-test is used to determine where the two samples are dependent, like patents' reaction before and after treatment. The sample sizes are the same. For each sample observation, we need to compute the difference, and 
+The two-sample t-test is used to determine where the two samples are dependent and come in pair, like patents' reaction before and after treatment. The sample sizes are the same. For each sample observation, we need to compute the difference, and 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\bar{X}_d&space;=0,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_d&space;\ne0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\bar{X}_d&space;=0,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_d&space;\ne0" title="\textrm{H}_0: \bar{X}_d =0, \ \ \textrm{H}_a: \bar{X}_d \ne0" /></a>
+
+The test statistic is
+
+
 
 
 ## Two independent Sample t-Test
@@ -76,9 +80,21 @@ where `sp` is the pool sample variance
 
 
 
-# Reference
+
+## Correction Factor
+
+So far we have used the following formula for the standard error:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{SE}&space;=&space;\textrm{var}(X)&space;=&space;\frac{\sigma}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{SE}&space;=&space;\textrm{var}(X)&space;=&space;\frac{\sigma}{\sqrt{n}}" title="\textrm{SE} = \textrm{var}(X) = \frac{\sigma}{\sqrt{n}}" /></a>
+
+This is based on the premise that we are sampling from an infinite population [[Massa]][S. Massa, t-Test]. Usually sampling is performed from a finite population and without replacement.􏰔 In this case, if a **significant proportion of the population > 5% is sampled**, we need to use the correction factor, such that standard error becomes
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" title="\textrm{SE} = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}" /></a>
 
 
+
+
+## Reference
 
 
 
@@ -88,6 +104,10 @@ where `sp` is the pool sample variance
 
 [NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]: https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm
 [[NIST Two-Sample t-Test] NIST, 1.3.5.3. Two-Sample t-Test for Equal Means](https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm)
+
+
+[M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)]: https://www4.uwsp.edu/psych/stat/11/hyptest2s.htm
+[[Plonsky] M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)](https://www4.uwsp.edu/psych/stat/11/hyptest2s.htm)
 
 
 
