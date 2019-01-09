@@ -1,5 +1,5 @@
 
-# t test 
+# t-test 
 
 t-test is used when sample size is too small or population standard deviation is unknown. Note we have assumption the sample is approximate normal distribution.
 
