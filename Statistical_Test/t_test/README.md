@@ -5,11 +5,11 @@ t-test is used when sample size is too small or population standard deviation is
 
 ## When to use t-test rather than Z-test
 
-Suppose we have sample X = {X1, X2, ....Xn}, the sample mean is <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}" title="\bar{X}" /></a> and the population standard deviation is σ. The null and alternative hypotheses are
+Suppose we have sample X = {X1, X2, ....Xn}, the sample mean is <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}" title="\bar{X}" /></a> and the population standard deviation is σ. Our null and alternative hypotheses are
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\bar{X}&space;=&space;\mu,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}&space;\ne&space;\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\bar{X}&space;=&space;\mu,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}&space;\ne&space;\mu" title="\textrm{H}_0: \bar{X} = \mu, \ \ \textrm{H}_a: \bar{X} \ne \mu" /></a>
 
-The z-statistic computed from the sample is
+Then the z-statistic computed from the sample is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" title="z = \frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" /></a>
 
@@ -19,7 +19,7 @@ If we do not know the population variance σ, we simply replaced it with the sam
 
 which is an estimate of σ from the sample.
 
-Now we have similar format to z-statistic, defined as t-statistic
+Now we have similar format to z-statistic, t-statistic defined as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=&space;\frac{\bar{X}-\mu}{s/\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=&space;\frac{\bar{X}-\mu}{s/\sqrt{n}}" title="t = \frac{\bar{X}-\mu}{s/\sqrt{n}}" /></a>
 
@@ -49,7 +49,11 @@ The workflow to determine using z-test or t-test is as follows [[Massa]][S. Mass
 ## Two independent Sample t-Test
 
 
-The two-sample t-test (Snedecor and Cochran, 1989) is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]. The test statistic is
+The two-sample t-test (Snedecor and Cochran, 1989) is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\bar{X}_1&space;=&space;\bar{X}_2,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_1&space;\ne&space;\bar{X}_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\bar{X}_1&space;=&space;\bar{X}_2,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_1&space;\ne&space;\bar{X}_2" title="\textrm{H}_0: \bar{X}_1 = \bar{X}_2, \ \ \textrm{H}_a: \bar{X}_1 \ne \bar{X}_2" /></a>
+
+The test statistic is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}&plus;\frac{s^2_2}{n_2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}&plus;\frac{s^2_2}{n_2}}}" title="t =\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}+\frac{s^2_2}{n_2}}}" /></a>
 
