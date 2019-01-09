@@ -57,7 +57,7 @@ The test statistic is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}&plus;\frac{s^2_2}{n_2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}&plus;\frac{s^2_2}{n_2}}}" title="t =\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}+\frac{s^2_2}{n_2}}}" /></a>
 
-If equal variances are assumed,
+where `s1` and `s2` are the sample variances. If equal variances are assumed, the test statistic becomes
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=&space;\frac{\bar{X}_1-\bar{X}_2}{s_p\sqrt{\frac{1}{n_1}&plus;\frac{1}{n_2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=&space;\frac{\bar{X}_1-\bar{X}_2}{s_p\sqrt{\frac{1}{n_1}&plus;\frac{1}{n_2}}}" title="t = \frac{\bar{X}_1-\bar{X}_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}" /></a>
 
