@@ -5,7 +5,11 @@ t-test is used when sample size is too small or population standard deviation is
 
 ## When to use t-test rather than Z-test
 
-Suppose we have sample X = {X1, X2, ....Xn}, the sample mean is <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}" title="\bar{X}" /></a> and the population standard deviation is σ. Then the z-statistic computed from the sample is
+Suppose we have sample X = {X1, X2, ....Xn}, the sample mean is <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}" title="\bar{X}" /></a> and the population standard deviation is σ. The null and alternative hypotheses are
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\bar{X}&space;=&space;\mu,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}&space;\ne&space;\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\bar{X}&space;=&space;\mu,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}&space;\ne&space;\mu" title="\textrm{H}_0: \bar{X} = \mu, \ \ \textrm{H}_a: \bar{X} \ne \mu" /></a>
+
+The z-statistic computed from the sample is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" title="z = \frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" /></a>
 
@@ -33,7 +37,7 @@ The t-distribution has a single parameter called the number of degrees of freedo
 For two-sided z-test and 95% confidence, the critical value of statisitic is 1.96. The t-test critical values for degree of freedoms (df) = 10 and 50 are 2.23 and 2.01, respectively. Thus we can see the t-distribution with df = 50 is quite close to a z-test.
 
 
-The workflow to determine using z-test or t-test is as follows
+The workflow to determine using z-test or t-test is as follows [[Massa]][S. Massa, t-Test]
 
 ![](images/t-test_flowchart.png)
 
