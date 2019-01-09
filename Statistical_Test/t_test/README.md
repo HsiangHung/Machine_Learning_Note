@@ -44,9 +44,18 @@ The workflow to determine using z-test or t-test is as follows
 
 ## Two independent Sample t-Test
 
-[[NIST Two-Sample t-Test][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]
 
+The two-sample t-test (Snedecor and Cochran, 1989) is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]. The test statistic is
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}&plus;\frac{s^2_2}{n_2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}&plus;\frac{s^2_2}{n_2}}}" title="t =\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}+\frac{s^2_2}{n_2}}}" /></a>
+
+If equal variances are assumed,
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=&space;\frac{\bar{X}_1-\bar{X}_2}{s_p\sqrt{\frac{1}{n_1}&plus;\frac{1}{n_2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=&space;\frac{\bar{X}_1-\bar{X}_2}{s_p\sqrt{\frac{1}{n_1}&plus;\frac{1}{n_2}}}" title="t = \frac{\bar{X}_1-\bar{X}_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}" /></a>
+
+where the pool sample variance is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=s_p&space;=&space;\sqrt{\frac{(n_1-1)s_1^2&plus;(n_2-1)s_2^2}{n_1&plus;n_2-2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s_p&space;=&space;\sqrt{\frac{(n_1-1)s_1^2&plus;(n_2-1)s_2^2}{n_1&plus;n_2-2}}" title="s_p = \sqrt{\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}}" /></a>
 
 
 
