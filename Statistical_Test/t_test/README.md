@@ -46,10 +46,15 @@ The workflow to determine using z-test or t-test is as follows [[Massa]][S. Mass
 
 ## Paired t-test
 
+The two-sample t-test is used to determine where the two samples are dependent, like patents' reaction before and after treatment. The sample sizes are the same. For each sample observation, we need to compute the difference, and 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\bar{X}_d&space;=0,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_d&space;\ne0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\bar{X}_d&space;=0,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_d&space;\ne0" title="\textrm{H}_0: \bar{X}_d =0, \ \ \textrm{H}_a: \bar{X}_d \ne0" /></a>
+
+
 ## Two independent Sample t-Test
 
 
-The two-sample t-test (Snedecor and Cochran, 1989) is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]
+The two-sample t-test is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\bar{X}_1&space;=&space;\bar{X}_2,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_1&space;\ne&space;\bar{X}_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\bar{X}_1&space;=&space;\bar{X}_2,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_1&space;\ne&space;\bar{X}_2" title="\textrm{H}_0: \bar{X}_1 = \bar{X}_2, \ \ \textrm{H}_a: \bar{X}_1 \ne \bar{X}_2" /></a>
 
@@ -57,7 +62,7 @@ If population standard deviations are known, then we have z-statistic
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{\sigma^2_1}{n_1}&plus;\frac{\sigma^2_2}{n_2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{\sigma^2_1}{n_1}&plus;\frac{\sigma^2_2}{n_2}}}" title="z = \frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma^2_2}{n_2}}}" /></a>
 
-If the population standard deviations are unknown, the test statistic is
+If the population standard deviations are unknown, the t-test test statistic is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}&plus;\frac{s^2_2}{n_2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}&plus;\frac{s^2_2}{n_2}}}" title="t =\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}+\frac{s^2_2}{n_2}}}" /></a>
 
