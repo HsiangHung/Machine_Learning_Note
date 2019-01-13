@@ -108,7 +108,8 @@ The test statistic is z-test, defined as
 ## Two sample Proportion z-test
 
 
-For comparing two independent sample proportions [[Stattrek: Difference Between Proportions]][Stattrek, Hypothesis Test: Difference Between Proportions], [[PSU, 1]][Penn State, Applied Statistic: Comparing Two Population Proportions with Independent Samples], [[PSU, 2]][Penn State, Probability Theory and Mathematical Statistics: Comparing Two Proportions]. 
+For comparing two independent sample proportions [[Stattrek: Difference Between Proportions]][Stattrek, Hypothesis Test: Difference Between Proportions], [[PSU, 1]][Penn State, Applied Statistic: Comparing Two Population Proportions with Independent Samples], [[PSU, 2]][Penn State, Probability Theory and Mathematical Statistics: Comparing Two Proportions].
+Assume two samples have 'success' proportions, <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}_1&space;=&space;x_1/n_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}_1&space;=&space;x_1/n_1" title="\hat{p}_1 = x_1/n_1" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}_2&space;=&space;x_2/n_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}_2&space;=&space;x_2/n_2" title="\hat{p}_2 = x_2/n_2" /></a>, the test statistic is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" title="z = \frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}+\frac{1}{n_2}\Big)}}" /></a>
 
