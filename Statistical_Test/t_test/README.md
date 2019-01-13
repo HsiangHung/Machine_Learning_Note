@@ -58,7 +58,7 @@ The test statistic is
 ## Two independent Sample t-Test
 
 
-The two-sample t-test is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means][[Plonsky]][M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)]
+The two-sample t-test is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means], [[Plonsky]][M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\bar{X}_1&space;=&space;\bar{X}_2,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_1&space;\ne&space;\bar{X}_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\bar{X}_1&space;=&space;\bar{X}_2,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_1&space;\ne&space;\bar{X}_2" title="\textrm{H}_0: \bar{X}_1 = \bar{X}_2, \ \ \textrm{H}_a: \bar{X}_1 \ne \bar{X}_2" /></a>
 
@@ -79,6 +79,11 @@ where `sp` is the pool sample variance
 <a href="https://www.codecogs.com/eqnedit.php?latex=s_p&space;=&space;\sqrt{\frac{(n_1-1)s_1^2&plus;(n_2-1)s_2^2}{n_1&plus;n_2-2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s_p&space;=&space;\sqrt{\frac{(n_1-1)s_1^2&plus;(n_2-1)s_2^2}{n_1&plus;n_2-2}}" title="s_p = \sqrt{\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}}" /></a>
 
 
+
+## Single Proportion z-test
+
+
+## Two sample Proportion z-test
 
 
 ## Correction Factor
