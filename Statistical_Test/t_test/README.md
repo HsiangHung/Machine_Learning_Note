@@ -3,7 +3,7 @@
 
 t-test is used **when sample size is too small or population standard deviation is unknown**. Note we have assumption the sample is approximate normal distribution.
 
-## When to use t-test rather than Z-test
+## When to use t-test rather than z-test
 
 Suppose we have sample X = {X1, X2, ....Xn}, the sample mean is <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}" title="\bar{X}" /></a> and the population standard deviation is σ. Our null and alternative hypotheses are
 
@@ -19,7 +19,7 @@ If we **do not know the population variance σ**, we simply replaced it with the
 
 which is an estimate of σ from the sample.
 
-Now we have similar format to z-statistic, t-statistic defined as
+Now we have similar format to z-statistic, called t-statistic, defined as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=&space;\frac{\bar{X}-\mu}{s/\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=&space;\frac{\bar{X}-\mu}{s/\sqrt{n}}" title="t = \frac{\bar{X}-\mu}{s/\sqrt{n}}" /></a>
 
