@@ -94,7 +94,7 @@ The test statistic is z-test, defined as
 ## Two sample Proportion z-test
 
 
-For comparing two independent sample proportions [[Stattrek: Difference Between Proportions][Stattrek, Hypothesis Test: Difference Between Proportions]. 
+For comparing two independent sample proportions [[Stattrek: Difference Between Proportions][Stattrek, Hypothesis Test: Difference Between Proportions]]. 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" title="z = \frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}+\frac{1}{n_2}\Big)}}" /></a>
 
