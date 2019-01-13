@@ -82,8 +82,15 @@ where `sp` is the pool sample variance
 
 ## Single Proportion z-test
 
+For a proportion compared to population. <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> is the sample proportion, like number of clikcs divided by number of lands. <a href="https://www.codecogs.com/eqnedit.php?latex=p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_0" title="p_0" /></a> is the population proportion. The test statistic is z-test, defined as 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> 
+
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" title="z = \frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" /></a>
 
 ## Two sample Proportion z-test
+
 
 
 ## Correction Factor
