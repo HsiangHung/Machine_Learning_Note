@@ -82,7 +82,7 @@ where `sp` is the pool sample variance
 
 ## Single Proportion z-test
 
-For comparing a sample proportion with the population proportion. <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> is the sample proportion, like number of clikcs divided by number of lands. <a href="https://www.codecogs.com/eqnedit.php?latex=p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_0" title="p_0" /></a> is the population proportion. The null and alternative hypotheses are separately
+For comparing a sample proportion with the population proportion. Assume <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> is the sample proportion, like number of clikcs divided by number of lands, and <a href="https://www.codecogs.com/eqnedit.php?latex=p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_0" title="p_0" /></a> is the population proportion. The sample size is still `n`. The null and alternative hypotheses are separately
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\hat{p}&space;=&space;p_0,&space;\&space;\textrm{H}_a:&space;\hat{p}&space;\ne&space;p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\hat{p}&space;=&space;p_0,&space;\&space;\textrm{H}_a:&space;\hat{p}&space;\ne&space;p_0" title="\textrm{H}_0: \hat{p} = p_0, \ \textrm{H}_a: \hat{p} \ne p_0" /></a>
 
@@ -94,7 +94,7 @@ The test statistic is z-test, defined as
 ## Two sample Proportion z-test
 
 
-For comparing two sample proportions. 
+For comparing two independent sample proportions [[Stattrek: Difference Between Proportions][Stattrek, Hypothesis Test: Difference Between Proportions]. 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" title="z = \frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}+\frac{1}{n_2}\Big)}}" /></a>
 
@@ -134,6 +134,9 @@ This is based on the premise that we are sampling from an infinite population [[
 [[Plonsky] M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)](https://www4.uwsp.edu/psych/stat/11/hyptest2s.htm)
 
 
+
+[Stattrek, Hypothesis Test: Difference Between Proportions]: https://stattrek.com/hypothesis-test/difference-in-proportions.aspx
+[[Stattrek: Difference Between Proportions] Stattrek, Hypothesis Test: Difference Between Proportions](https://stattrek.com/hypothesis-test/difference-in-proportions.aspx)
 
 
 
