@@ -23,7 +23,7 @@ Now we have similar format to z-statistic, called t-statistic, defined as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=&space;\frac{\bar{X}-\mu}{s/\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=&space;\frac{\bar{X}-\mu}{s/\sqrt{n}}" title="t = \frac{\bar{X}-\mu}{s/\sqrt{n}}" /></a>
 
-The distribution of T will be **more dispersed** than that of Z. This implies that you underestimate probabilities of extreme observations, such that you compute will be too narrow confidence intervals.
+The distribution of T will be **more dispersed** than that of Z. This implies that you underestimate probabilities of extreme observations, such that what you compute have too narrow confidence intervals.
 
 
 ## Student’s t-Distribution
