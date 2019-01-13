@@ -82,15 +82,19 @@ where `sp` is the pool sample variance
 
 ## Single Proportion z-test
 
-For a proportion compared to population. <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> is the sample proportion, like number of clikcs divided by number of lands. <a href="https://www.codecogs.com/eqnedit.php?latex=p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_0" title="p_0" /></a> is the population proportion. The test statistic is z-test, defined as 
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> 
-
+For comparing a sample proportion with the population proportion. <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> is the sample proportion, like number of clikcs divided by number of lands. <a href="https://www.codecogs.com/eqnedit.php?latex=p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_0" title="p_0" /></a> is the population proportion. The test statistic is z-test, defined as 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" title="z = \frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" /></a>
 
+
 ## Two sample Proportion z-test
 
+
+For comparing two sample proportions. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" title="z = \frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}+\frac{1}{n_2}\Big)}}" /></a>
+
+where <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}&space;=&space;\frac{x_1&plus;x_2}{n_1&plus;n_2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}&space;=&space;\frac{x_1&plus;x_2}{n_1&plus;n_2}" title="\hat{p} = \frac{x_1+x_2}{n_1+n_2}" /></a> is the sample pool proportion.
 
 
 ## Correction Factor
