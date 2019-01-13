@@ -1,7 +1,7 @@
 
 # t-test 
 
-t-test is used when sample size is too small or population standard deviation is unknown. Note we have assumption the sample is approximate normal distribution.
+t-test is used **when sample size is too small or population standard deviation is unknown**. Note we have assumption the sample is approximate normal distribution.
 
 ## When to use t-test rather than Z-test
 
@@ -13,7 +13,7 @@ Then the z-statistic computed from the sample is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" title="z = \frac{\bar{X}-\mu}{\sigma/\sqrt{n}}" /></a>
 
-If we do not know the population variance σ, we simply replaced it with the sample standard deviation s,
+If we **do not know the population variance σ**, we simply replaced it with the sample standard deviation s,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=s&space;=&space;\sqrt{\frac{1}{n-1}\sum^n_{i=1}(X_i-\bar{X})^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s&space;=&space;\sqrt{\frac{1}{n-1}\sum^n_{i=1}(X_i-\bar{X})^2}" title="s = \sqrt{\frac{1}{n-1}\sum^n_{i=1}(X_i-\bar{X})^2}" /></a>
 
