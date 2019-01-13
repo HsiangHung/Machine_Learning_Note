@@ -58,7 +58,7 @@ The test statistic is
 ## Two independent Sample t-Test
 
 
-The two-sample t-test is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means], [[Plonsky]][M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)], [[PSU, 1]][Penn State, Applied Statistic: Comparing Two Population Proportions with Independent Samples], 
+The two-sample t-test is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means], [[Plonsky]][M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)]
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\bar{X}_1&space;=&space;\bar{X}_2,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_1&space;\ne&space;\bar{X}_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\bar{X}_1&space;=&space;\bar{X}_2,&space;\&space;\&space;\textrm{H}_a:&space;\bar{X}_1&space;\ne&space;\bar{X}_2" title="\textrm{H}_0: \bar{X}_1 = \bar{X}_2, \ \ \textrm{H}_a: \bar{X}_1 \ne \bar{X}_2" /></a>
@@ -95,7 +95,7 @@ The test statistic is z-test, defined as
 ## Two sample Proportion z-test
 
 
-For comparing two independent sample proportions [Stattrek: Difference Between Proportions][Stattrek, Hypothesis Test: Difference Between Proportions]. 
+For comparing two independent sample proportions [[Stattrek: Difference Between Proportions]][Stattrek, Hypothesis Test: Difference Between Proportions], [[PSU, 1]][Penn State, Applied Statistic: Comparing Two Population Proportions with Independent Samples], [[PSU, 2]][Penn State, Probability Theory and Mathematical Statistics: Comparing Two Proportions]. 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" title="z = \frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}+\frac{1}{n_2}\Big)}}" /></a>
 
