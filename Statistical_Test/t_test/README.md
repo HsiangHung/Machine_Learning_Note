@@ -80,6 +80,19 @@ where `sp` is the pool sample variance
 <a href="https://www.codecogs.com/eqnedit.php?latex=s_p&space;=&space;\sqrt{\frac{(n_1-1)s_1^2&plus;(n_2-1)s_2^2}{n_1&plus;n_2-2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s_p&space;=&space;\sqrt{\frac{(n_1-1)s_1^2&plus;(n_2-1)s_2^2}{n_1&plus;n_2-2}}" title="s_p = \sqrt{\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}}" /></a>
 
 
+## Correction Factor
+
+So far we have used the following formula for the standard error:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{SE}&space;=&space;\textrm{var}(X)&space;=&space;\frac{\sigma}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{SE}&space;=&space;\textrm{var}(X)&space;=&space;\frac{\sigma}{\sqrt{n}}" title="\textrm{SE} = \textrm{var}(X) = \frac{\sigma}{\sqrt{n}}" /></a>
+
+This is based on the premise that we are sampling from an infinite population [[Massa]][S. Massa, t-Test]. Usually sampling is performed from a finite population and without replacement.􏰔 In this case, if a **significant proportion of the population > 5% is sampled**, we need to use the correction factor, such that standard error becomes
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" title="\textrm{SE} = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}" /></a>
+
+
+# z-test
+
 
 ## Single Proportion z-test
 
@@ -106,15 +119,6 @@ where
 is the sample pool proportion.
 
 
-## Correction Factor
-
-So far we have used the following formula for the standard error:
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{SE}&space;=&space;\textrm{var}(X)&space;=&space;\frac{\sigma}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{SE}&space;=&space;\textrm{var}(X)&space;=&space;\frac{\sigma}{\sqrt{n}}" title="\textrm{SE} = \textrm{var}(X) = \frac{\sigma}{\sqrt{n}}" /></a>
-
-This is based on the premise that we are sampling from an infinite population [[Massa]][S. Massa, t-Test]. Usually sampling is performed from a finite population and without replacement.􏰔 In this case, if a **significant proportion of the population > 5% is sampled**, we need to use the correction factor, such that standard error becomes
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" title="\textrm{SE} = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}" /></a>
 
 
 
