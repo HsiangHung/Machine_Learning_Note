@@ -95,7 +95,9 @@ For comparing two sample proportions.
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}&plus;\frac{1}{n_2}\Big)}}" title="z = \frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\Big(\frac{1}{n_1}+\frac{1}{n_2}\Big)}}" /></a>
 
 where 
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}&space;=&space;\frac{x_1&plus;x_2}{n_1&plus;n_2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}&space;=&space;\frac{x_1&plus;x_2}{n_1&plus;n_2}" title="\hat{p} = \frac{x_1+x_2}{n_1+n_2}" /></a> 
+
 is the sample pool proportion.
 
 
