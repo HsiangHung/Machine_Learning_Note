@@ -1,5 +1,5 @@
 
-# t-test 
+# 1. t-test 
 
 t-test is used **when sample size is too small or population standard deviation is unknown**. Note we have assumption the sample is approximate normal distribution.
 
@@ -91,21 +91,21 @@ This is based on the premise that we are sampling from an infinite population [[
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" title="\textrm{SE} = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}" /></a>
 
 
-# z-test
+# 2. z-test
 
 
 ## Single Proportion z-test
 
-For comparing a sample proportion with the population proportion. Assume <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> is the sample proportion, like number of clikcs divided by number of lands, and <a href="https://www.codecogs.com/eqnedit.php?latex=p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_0" title="p_0" /></a> is the population proportion. The sample size is still `n`. The null and alternative hypotheses are separately
+For comparing a sample proportion with the population proportion. Assume <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> is the sample proportion, like number of clicks divided by number of lands, and <a href="https://www.codecogs.com/eqnedit.php?latex=p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_0" title="p_0" /></a> is the population proportion. The sample size is still `n`. The null and alternative hypotheses are separately
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{H}_0:&space;\hat{p}&space;=&space;p_0,&space;\&space;\textrm{H}_a:&space;\hat{p}&space;\ne&space;p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{H}_0:&space;\hat{p}&space;=&space;p_0,&space;\&space;\textrm{H}_a:&space;\hat{p}&space;\ne&space;p_0" title="\textrm{H}_0: \hat{p} = p_0, \ \textrm{H}_a: \hat{p} \ne p_0" /></a>
 
-The test statistic is z-test, defined as 
+The test statistic is z-test, defined as [[Stattrek: Hypothesis Test for a Proportion]][Stattrek, Hypothesis Test for a Proportion]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" title="z = \frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" /></a>
 
 
-## Two sample Proportion z-test
+## Two Proportion z-test
 
 
 For comparing two independent sample proportions [[Stattrek: Difference Between Proportions]][Stattrek, Hypothesis Test: Difference Between Proportions], [[PSU, 1]][Penn State, Applied Statistic: Comparing Two Population Proportions with Independent Samples], [[PSU, 2]][Penn State, Probability Theory and Mathematical Statistics: Comparing Two Proportions].
@@ -150,6 +150,11 @@ is the sample pool proportion.
 
 [M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)]: https://www4.uwsp.edu/psych/stat/11/hyptest2s.htm
 [[Plonsky] M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)](https://www4.uwsp.edu/psych/stat/11/hyptest2s.htm)
+
+
+[Stattrek, Hypothesis Test for a Proportion]: https://stattrek.com/hypothesis-test/proportion.aspx
+[[Stattrek: Hypothesis Test for a Proportion] Stattrek, Hypothesis Test for a Proportion](https://stattrek.com/hypothesis-test/proportion.aspx)
+
 
 
 [Stattrek, Hypothesis Test: Difference Between Proportions]: https://stattrek.com/hypothesis-test/difference-in-proportions.aspx
