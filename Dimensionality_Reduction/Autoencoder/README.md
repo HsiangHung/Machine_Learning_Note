@@ -19,9 +19,9 @@ Here we introdcue the autoencoder typically used for dimensionality reduction us
 
 The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d) shows very nice and decent diagrams to interpret the difference between bagging and boosting. 
 
-![ensembling](images/ensembling.png)
+![autoencoder](im/autoencoder.png)
 
-![bagging_and_boostin](images/bagging_and_boosting.png)
+
 
 
 
@@ -47,4 +47,7 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 [Dimension Reduction - Autoencoders]: https://blog.paperspace.com/dimension-reduction-with-autoencoders/
 [[3] Dimension Reduction - Autoencoders](https://blog.paperspace.com/dimension-reduction-with-autoencoders/)
 
+
+[Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
+[[4] Arden Dertat, Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
 
