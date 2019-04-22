@@ -1,10 +1,10 @@
 
-#Dimensionality reduction using Keras Auto Encoder
+# Dimensionality reduction using Keras Auto Encoder
 
 Here we introdcue the autoencoder typically used for dimensionality reduction use cases where there are more number of features. This is an undercomplete autoencoder  −
   The size of hidden layer is smaller than the input layer. By reducing the hidden layer size we force the network to learn the important features of the dataset.
 
-For each machine learning model, the error is determined by noise, variance, and bias. Ensemble techs can help reduce variance, and bias (noise is irreducible error) [[1]][Gradient Boosting from scratch].
+For each machine learning model, the error is determined by noise, variance, and bias. Ensemble techs can help reduce variance, and bias (noise is irreducible error) [[1]][Dimensionality reduction using Keras Auto Encoder].
 
 An ensemble is just a **collection of predictors** which come together (e.g. mean of all predictions) to give a final prediction. The reason we use ensembles is that many different predictors trying to predict same target variable will perform a better job than any single predictor alone. Ensembling techniques are further classified into Bagging and Boosting.
 
