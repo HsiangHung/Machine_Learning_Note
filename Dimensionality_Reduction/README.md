@@ -1,16 +1,16 @@
 
 # Dimensionality Reduction 
 
-A comprehensive post about all dimensionality reduction methods. [[1] Reducing Dimensionality from Dimensionality Reduction Techniques]
+Here is the note I read many blogs or posts about dimensionality reduction methods. There is a comprehensive post about all dimensionality reduction methods. [[1]][Reducing Dimensionality from Dimensionality Reduction Techniques]
 
 
 ## PCA
 
 
-
-
 ## ICA
 
+
+## t-SNE
 
 ## Autoencoder
    
