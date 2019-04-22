@@ -2,15 +2,15 @@
 # Dimensionality Reduction 
 
 
-### PCA
+## PCA
 
 
 
 
-### ICA
+## ICA
 
 
-### Autoencoder
+## Autoencoder
    
 
 An ensemble is just a **collection of predictors** which come together (e.g. mean of all predictions) to give a final prediction.
