@@ -1,6 +1,8 @@
 
 # Dimensionality Reduction 
 
+A comprehensive post about all dimensionality reduction methods. [[1] Reducing Dimensionality from Dimensionality Reduction Techniques]
+
 
 ## PCA
 
@@ -35,6 +37,14 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 
 ## Reference
 
+[Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
+[[1] Elior Cohen, Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
+
+
 [Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
 [[4] Arden Dertat, Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
+
+
+
+
 
