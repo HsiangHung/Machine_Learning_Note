@@ -12,12 +12,12 @@ The common applications (or DO’s) are (1) **Data compression in machine learni
 
 The common mistakes (or DON’Ts) are (1) **Fixing overfitting** : Overfitting is usually caused by having too many features. The large amount of features results in the rise in cross validation error due to to high variance on our training data. People assume that reducing the number of dimensions will automatically reduce the influence of certain features and hence fix overfitting. However, we still need feature selection and regularization to fix overfitting, (2) **Set standard**: Another common mistake people make is that we **HAVE TO USE PCA** for every machine learning application. This is a false assumption.
 
-In machine learning, the assumption why PCA works is that the interclass variance is larger than the intraclass variance. However, it is not always true. Roberto Reif gave an example to interpret it. [[Roberto Reif]][Limitations of Applying Dimensionality Reduction using PCA]
+In machine learning, the assumption why PCA works is that the interclass variance is larger than the intraclass variance. However, it is not always true. Roberto Reif gave an intutive example to interpret it. [[Roberto Reif]][Limitations of Applying Dimensionality Reduction using PCA]
 
-In the following case, the data variance occurs on different classes. Therefore, the PCA is still useful for machine learning.
+In the following case, the data variance along the first principal component occurs on different classes. Therefore, after PCA, the first principal component is useful for classification.
 ![inter_class_variance](images/inter_class_variance.png)
 
-On the other hand, if the data variance occurs on both classes, the PCA is not useful for machine learning.
+On the other hand, if the data variance along the first principal component occurs evenly in both classes, the PCA is not useful for classification.
 ![intra_class_variance](images/intra_class_variance.png)
 
 ## ICA
