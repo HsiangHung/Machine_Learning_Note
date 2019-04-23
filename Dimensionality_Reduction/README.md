@@ -38,7 +38,7 @@ An ensemble is just a **collection of predictors** which come together (e.g. mea
 
 The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d) 
 
-![ensembling](images/ensembling.png)
+
 
 
 
