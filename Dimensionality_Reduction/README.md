@@ -6,7 +6,7 @@ Here is the note I read many blogs or posts about dimensionality reduction metho
 
 ## PCA
 
-PCA is a commonly used algorithm in data science to compresses your data from a higher dimension to a lower dimension based on the eigenvector of the variance in your dataset, by **linear orthogonal transformation** [[Quroa, What are some of the limitations of principal component analysis?]][limitations of principal component analysis?]. The post [[Syed Sadat Nazrul]][The DOs and DON’Ts of Principal Component Analysis] lists DO’s and DON'ts points. 
+PCA is a commonly used algorithm in data science to compresses your data from a higher dimension to a lower dimension based on the eigenvector of the variance in your dataset, by **linear orthogonal transformation** [[Quroa: What are some of the limitations of principal component analysis?]][What are some of the limitations of principal component analysis?]. The post [[Syed Sadat Nazrul]][The DOs and DON’Ts of Principal Component Analysis] lists DO’s and DON'ts points. 
 
 The common applications (or DO’s) are (1) **Data compression in machine learning**: We often wish to decompose the features into a lower dimension, without a significant loss in variance, (2) **Visualization of higher dimensions**: In particular, we can visualize classe or cluster spatial distributions of my higher dimension dataset, (3) **Feature selection**. 
 
