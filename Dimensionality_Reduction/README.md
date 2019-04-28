@@ -6,7 +6,7 @@ Here is the note I read many blogs or posts about dimensionality reduction metho
 
 ## PCA
 
-PCA is a commonly used algorithm in data science to compresses your data from a higher dimension to a lower dimension based on the eigenvector of the variance in your dataset, by **linear orthogonal transformation** [[Quroa, What are some of the limitations of principal component analysis?][limitations of principal component analysis?]. The post [[Syed Sadat Nazrul]][The DOs and DON’Ts of Principal Component Analysis] lists DO’s and DON'ts points. 
+PCA is a commonly used algorithm in data science to compresses your data from a higher dimension to a lower dimension based on the eigenvector of the variance in your dataset, by **linear orthogonal transformation** [[Quroa, What are some of the limitations of principal component analysis?]][limitations of principal component analysis?]. The post [[Syed Sadat Nazrul]][The DOs and DON’Ts of Principal Component Analysis] lists DO’s and DON'ts points. 
 
 The common applications (or DO’s) are (1) **Data compression in machine learning**: We often wish to decompose the features into a lower dimension, without a significant loss in variance, (2) **Visualization of higher dimensions**: In particular, we can visualize classe or cluster spatial distributions of my higher dimension dataset, (3) **Feature selection**. 
 
@@ -53,18 +53,14 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 [Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
 [Elior Cohen, Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
 
-
 [Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
 [Arden Dertat, Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
-
 
 [The DOs and DON’Ts of Principal Component Analysis]: https://medium.com/@sadatnazrul/the-dos-and-donts-of-principal-component-analysis-7c2e9dc8cc48
 [Syed Sadat Nazrul, The DOs and DON’Ts of Principal Component Analysis](https://medium.com/@sadatnazrul/the-dos-and-donts-of-principal-component-analysis-7c2e9dc8cc48)
 
-
 [What are some of the limitations of principal component analysis?]: https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis
 [Quroa, What are some of the limitations of principal component analysis?](https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis)
-
 
 [Limitations of Applying Dimensionality Reduction using PCA]: https://www.robertoreif.com/blog/2018/1/9/pca
 [Roberto Reif, Limitations of Applying Dimensionality Reduction using PCA](https://www.robertoreif.com/blog/2018/1/9/pca)
