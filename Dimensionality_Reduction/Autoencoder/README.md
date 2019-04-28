@@ -11,6 +11,8 @@ Autoencoders are is a neural network used to learn efficient data patterns in an
 
 
 
+
+
 ## Summary
 
 
@@ -28,6 +30,9 @@ Autoencoders are is a neural network used to learn efficient data patterns in an
 
 
 ## Reference
+
+[Building Autoencoders in Keras]: https://blog.keras.io/building-autoencoders-in-keras.html
+[Building Autoencoders in Keras](https://blog.keras.io/building-autoencoders-in-keras.html)
 
 
 [Dimension Reduction - Autoencoders]: https://blog.paperspace.com/dimension-reduction-with-autoencoders/
