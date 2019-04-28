@@ -10,6 +10,15 @@ Autoencoders are is a neural network used to learn efficient data patterns in an
 
 
 
+The original neural network (supervised) models is trained as 
+
+`\textrm{model.fit(X, y)}`
+
+But an autocorder is trained as
+
+`\textrm{model.fit(X, X)}`
+
+In other words, we build a model to predict output similar to input [[Elior Cohen]][Reducing Dimensionality from Dimensionality Reduction Techniques]. The way to determine the parameters in the hidden layers is to minimize the difference between original data and autoencoded data (compressed data).
 
 
 
@@ -34,9 +43,11 @@ Autoencoders are is a neural network used to learn efficient data patterns in an
 [Building Autoencoders in Keras]: https://blog.keras.io/building-autoencoders-in-keras.html
 [Building Autoencoders in Keras](https://blog.keras.io/building-autoencoders-in-keras.html)
 
-
 [Dimension Reduction - Autoencoders]: https://blog.paperspace.com/dimension-reduction-with-autoencoders/
 [Dimension Reduction - Autoencoders](https://blog.paperspace.com/dimension-reduction-with-autoencoders/)
+
+[Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
+[Elior Cohen, Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
 
 [Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
 [Arden Dertat, Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
