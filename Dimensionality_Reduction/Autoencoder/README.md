@@ -18,7 +18,7 @@ But an autocorder is trained as
 
 `\textrm{model.fit(X, X)}`
 
-In other words, we build a model to predict output similar to input [[Elior Cohen]][Reducing Dimensionality from Dimensionality Reduction Techniques]. The way to determine the parameters in the hidden layers is to minimize the difference between original data and autoencoded data (compressed data).
+In other words, we build a model to predict output with the same dimension as input and minimum loss on information [[Elior Cohen]][Reducing Dimensionality from Dimensionality Reduction Techniques]. The way to determine the parameters in the hidden layers is to minimize the difference between original data and autoencoded data (compressed data).
 
 
 
