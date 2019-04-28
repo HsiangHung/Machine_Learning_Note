@@ -28,15 +28,13 @@ On the other hand, if the data variance along the first principal component occu
 ## Autoencoder
    
 
-An ensemble is just a **collection of predictors** which come together (e.g. mean of all predictions) to give a final prediction.
-[[Arden Dertat]][Applied Deep Learning - Part 3: Autoencoders]
+An autoencoder is a dimensionality reduction method using nonlinear transformation. The model is constructed by neural networks and need training. The detail could be found [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder), and [[Arden Dertat]][Applied Deep Learning - Part 3: Autoencoders].
 
 
 
 
 ## Summary
 
-The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d) 
 
 
 
