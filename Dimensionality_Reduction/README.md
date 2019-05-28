@@ -20,16 +20,17 @@ In the following case, the data variance along the first principal component occ
 On the other hand, if the data variance along the first principal component occurs evenly in both classes, the PCA is not useful for classification.
 ![intra_class_variance](images/intra_class_variance.png)
 
-## ICA
-
-
-## t-SNE
 
 ## Autoencoder
    
 
 An autoencoder is a dimensionality reduction method using nonlinear transformation. The model is constructed by neural networks and need training. The detail could be found [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder), and [[Arden Dertat]][Applied Deep Learning - Part 3: Autoencoders].
 
+
+## Curse of Dimensionality 
+
+
+[[Vincent Spruyt]][The Curse of Dimensionality in classification]
 
 
 
@@ -64,5 +65,7 @@ An autoencoder is a dimensionality reduction method using nonlinear transformati
 [Roberto Reif, Limitations of Applying Dimensionality Reduction using PCA](https://www.robertoreif.com/blog/2018/1/9/pca)
 
 
+[The Curse of Dimensionality in classification]: http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/
+[Vincent Spruyt, The Curse of Dimensionality in classification](http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/)
 
 
