@@ -28,7 +28,7 @@ It calculates distance from each point to its nearest neighbor within the same p
 
 ## Validation of Brutal Searching Epsilon in DBSCAN
 
-Validation to choose epsilon in DBSSCAN. [[Davoud Moulavi et al.]][Density-Based Clustering Validation]
+Validation to choose epsilon in DBSCAN. [[Davoud Moulavi et al.]][Density-Based Clustering Validation]
 
 
 In the following case, the data variance along the first principal component occurs on different classes. Therefore, after PCA, the first principal component is useful for classification.
@@ -36,6 +36,9 @@ In the following case, the data variance along the first principal component occ
 
 
    
+## Disadvanatge in High-dimensional Space
+
+In higher dimensional spaces because  'curse of dimensionality'  the euclidean distance is not a very good metric for distance measurement. It may be helpful to change the distance metric to the cosine similarity [[Quora2]][Why DBSCAN clustering will not work in high dimensional space?].
 
 
 
@@ -76,7 +79,12 @@ In the following case, the data variance along the first principal component occ
 
 
 [How do I choose value of epsilon in DBSCAN?]: https://www.quora.com/How-do-I-choose-value-of-epsilon-in-DBSCAN
-[Quora, How do I choose value of epsilon in DBSCAN?](https://www.quora.com/How-do-I-choose-value-of-epsilon-in-DBSCAN)
+[Quora1, How do I choose value of epsilon in DBSCAN?](https://www.quora.com/How-do-I-choose-value-of-epsilon-in-DBSCAN)
+
+
+[Why DBSCAN clustering will not work in high dimensional space?]: https://www.quora.com/Why-DBSCAN-clustering-will-not-work-in-high-dimensional-space
+[Quora2, Why DBSCAN clustering will not work in high dimensional space?](https://www.quora.com/Why-DBSCAN-clustering-will-not-work-in-high-dimensional-space)
+
 
 
 
