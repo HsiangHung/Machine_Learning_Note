@@ -1,11 +1,18 @@
 
 # DBSCAN clustering
 
-DBSCAN is a popular clustering algorithm which is fundamentally very different from k-means.
+DBSCAN is a popular clustering algorithm which is fundamentally very different from k-means. The comparison is summarized by [[Chris McCormick]][DBSCAN Clustering].
 
-* In k-means clustering, each cluster is represented by a centroid, and points are assigned to whichever centroid they are closest to. In DBSCAN, there are no centroids, and clusters are formed by linking nearby points to one another.
+* In k-means clustering, each cluster is represented by a **centroid**, and points are assigned to whichever centroid they are closest to. In DBSCAN, there are no centroids, and clusters are formed by linking nearby points to one another.
 
+* k-means requires specifying the number of clusters, ‘k’. DBSCAN does not, but does require specifying two parameters, a distance threshold, “epsilon”, and “MinPts”, minimum number of points in a cluster.
 
+* k-means runs over many iterations to converge on a good set of clusters, and cluster assignments can change on each iteration. DBSCAN makes only a single pass through the data,
+
+There are also few other apsects:
+
+* Since there is no centroid in DBSCAN, the clusters can be any shape.
+* DBSCAN is scabable.
 
 
 ## Choosing Epsilon in DBSCAN
@@ -46,6 +53,11 @@ In the following case, the data variance along the first principal component occ
 
 
 ## Reference
+
+
+[DBSCAN Clustering]:http://mccormickml.com/2016/11/08/dbscan-clustering/
+[Chris McCormick, DBSCAN Clustering](http://mccormickml.com/2016/11/08/dbscan-clustering/)
+
 
 
 [Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra]:https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf
