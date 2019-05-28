@@ -1,6 +1,11 @@
 
 # DBSCAN clustering
 
+DBSCAN is a popular clustering algorithm which is fundamentally very different from k-means.
+
+    In k-means clustering, each cluster is represented by a centroid, and points are assigned to whichever centroid they are closest to. In DBSCAN, there are no centroids, and clusters are formed by linking nearby points to one another.
+
+
 
 
 ## Choosing Epsilon in DBSCAN
