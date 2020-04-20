@@ -5,7 +5,7 @@ DBSCAN is a popular clustering algorithm which is fundamentally very different f
 
 * In k-means clustering, each cluster is represented by a **centroid**, and points are assigned to whichever centroid they are closest to. In DBSCAN, there are no centroids, and clusters are formed by linking nearby points to one another.
 
-* k-means requires specifying the number of clusters, ‘k’. DBSCAN does not, but does require specifying two parameters, a distance threshold, “epsilon”, and “MinPts”, minimum number of points in a cluster.
+* k-means requires specifying **the number of clusters**, ‘k’. DBSCAN does not, but does require specifying two parameters, a distance threshold, “epsilon”, and “MinPts”, minimum number of points in a cluster.
 
 * k-means runs over many iterations to converge on a good set of clusters, and cluster assignments can change on each iteration. DBSCAN makes only a single pass through the data,
 
