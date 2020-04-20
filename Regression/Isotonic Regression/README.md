@@ -3,7 +3,7 @@
 
 # Isotonic Regression
 
-In machine learning, a classifier has outcome to predict, `p(y=1|X)`, the probability of finding a positive event, given data `X`. In reality, however, the predictive probability may be deviated away from the true positive probability, defined as `Pf` from data. To make the predictive probability more informational, we can perform probability calibration, building the map: `p(y=1|X) -> Pf`. In general there are two approaches: Platt's scaling and isotonic regression [[FastML]][Classifier calibration with Platt's scaling and isotonic regression]. Here we only focus on the later. 
+In classification problems, a classifier is trained to predict the probability of finding a positive event, denoted as `p(y=1|X)`, given data `X`. In reality, however, the predictive probability may not align with the true positive probability, `Pt(X)`, defined as the number of positive events/number of events given data `X`. To make the predictive probability more informational, we can perform probability calibration, building the map: `p(y=1|X) -> Pf`. In general there are two approaches: Platt's scaling and isotonic regression [[FastML]][Classifier calibration with Platt's scaling and isotonic regression]. Here we only focus on the later. 
 
 The idea for the isotonic regression model is to fit a piecewise-constant non-decreasing function instead of logistic regression. Piecewise-constant non-decreasing means stair-step shaped. Here is an example (credit from sklearn):
 
