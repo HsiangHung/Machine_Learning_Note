@@ -15,7 +15,7 @@ For classification, we show another example of usage of isotonic regression (cre
 
 ![probability_calibration_plot](images/probability_calibration_curve.png)
 
-This example describes predictive probability (x-axis) vs true positive probability (y-axis). The model linear support-vector classifier (SVC) gives predictive probabilities, but they overestimate at beginning and then underestimate. We can see at `p(y=1|X) = 0.4`, `p(X) ~ 0.1`, and at `p(y=1|X) = 0.8`, `p(X) ~ 1`. 
+This example describes predictive probability (x-axis) vs true positive probability (y-axis) plot in the orange curve. Note that the model linear support-vector classifier (SVC) gives predictive probabilities, but they overestimate at beginning and then underestimate. We can see at `p(y=1|X) = 0.4`, `p(X) ~ 0.1`, and at `p(y=1|X) = 0.8`, `p(X) ~ 1`; `p(y=1|X)` and `p(X)` do not align with each other. The green curve describes the SVC outcome with isotonic regression calibration. 
 
 
 
@@ -32,6 +32,20 @@ This example describes predictive probability (x-axis) vs true positive probabil
 [Isotonic Regression is THE Coolest Machine-Learning Model You Might Not Have Heard Of]: https://towardsdatascience.com/isotonic-regression-is-the-coolest-machine-learning-model-you-might-not-have-heard-of-3ce14afc6d1e
 [Emmett Boudreau, Isotonic Regression is THE Coolest Machine-Learning Model You Might Not Have Heard Of](https://towardsdatascience.com/isotonic-regression-is-the-coolest-machine-learning-model-you-might-not-have-heard-of-3ce14afc6d1e)
 
+
+[Isotonic regression]: http://fa.bianp.net/blog/2013/isotonic-regression/
+[fa.bianp.net, Isotonic regression](http://fa.bianp.net/blog/2013/isotonic-regression/)
+
+
 [Classifier calibration with Platt's scaling and isotonic regression]: http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/
 [FastML, Classifier calibration with Platt's scaling and isotonic regression](http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/)
+
+
+[Isotonic regression]: https://stat.fandom.com/wiki/Isotonic_regression
+[Stat Wiki, Isotonic regression](https://stat.fandom.com/wiki/Isotonic_regression)
+
+
+[Isotonic regression]: https://en.wikipedia.org/wiki/Isotonic_regression
+[Wiki, Isotonic regression](https://en.wikipedia.org/wiki/Isotonic_regression)
+
 
