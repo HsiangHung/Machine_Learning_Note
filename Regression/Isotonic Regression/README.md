@@ -30,8 +30,8 @@ This example describes predictive probability (x-axis) vs true positive probabil
 
 
 [Isotonic Regression is THE Coolest Machine-Learning Model You Might Not Have Heard Of]: https://towardsdatascience.com/isotonic-regression-is-the-coolest-machine-learning-model-you-might-not-have-heard-of-3ce14afc6d1e
-[[Emmett Boudreau] Isotonic Regression is THE Coolest Machine-Learning Model You Might Not Have Heard Of](https://towardsdatascience.com/isotonic-regression-is-the-coolest-machine-learning-model-you-might-not-have-heard-of-3ce14afc6d1e)
+[Emmett Boudreau, Isotonic Regression is THE Coolest Machine-Learning Model You Might Not Have Heard Of](https://towardsdatascience.com/isotonic-regression-is-the-coolest-machine-learning-model-you-might-not-have-heard-of-3ce14afc6d1e)
 
 [Classifier calibration with Platt's scaling and isotonic regression]: http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/
-[[FastML] Classifier calibration with Platt's scaling and isotonic regression](http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/)
+[FastML, Classifier calibration with Platt's scaling and isotonic regression](http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/)
 

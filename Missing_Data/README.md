@@ -43,10 +43,10 @@ The researcher should keep in mind that if the data are MCAR, then he may choose
 # Reference
 
 [How to Handle Missing Data]: https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4
-[[Alvira Swalin] How to Handle Missing Data](https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4)
+[Alvira Swalin, How to Handle Missing Data](https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4)
 
 
 [Missing Values in Data]: http://www.statisticssolutions.com/missing-values-in-data/
-[[statisticssolutions.com] Missing Values in Data](http://www.statisticssolutions.com/missing-values-in-data/)
+[statisticssolutions.com, Missing Values in Data](http://www.statisticssolutions.com/missing-values-in-data/)
 
     
