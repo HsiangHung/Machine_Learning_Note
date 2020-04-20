@@ -5,6 +5,10 @@
 
 In machine learning, we train a classifier to predict, `p(y=1|X)`, the probability of an event being positive, given data `X`. In reality, however, the probability may be deviated away from true positive probability. To make the probability more meaningful, we can calibrate the probability. In general there are two approaches Platt's scaling and isotonic regression [[FastML]][Classifier calibration with Platt's scaling and isotonic regression]. Here we focus on the later. 
 
+The idea for isotonic regression is to fit a piecewise-constant non-decreasing function instead of logistic regression. Piecewise-constant non-decreasing means stair-step shaped. Here is an example:
+
+![ir_plot](images/isotonic_regression_plot.png)
+
 
 1. Missing at Random (MAR): In MAR, the missing values are not randomly distributed across observations but are distributed within one or more sub-samples.
 
