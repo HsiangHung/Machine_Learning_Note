@@ -39,7 +39,7 @@ In the first two cases, it is safe to remove the data with missing values depend
 [[FastML] Classifier calibration with Platt's scaling and isotonic regression](http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/)
 
 
-[Missing Values in Data]: http://www.statisticssolutions.com/missing-values-in-data/
-[[2] Missing Values in Data](http://www.statisticssolutions.com/missing-values-in-data/)
+[Isotonic Regression is THE Coolest Machine-Learning Model You Might Not Have Heard Of]: https://towardsdatascience.com/isotonic-regression-is-the-coolest-machine-learning-model-you-might-not-have-heard-of-3ce14afc6d1e
+[[Emmett Boudreau] Isotonic Regression is THE Coolest Machine-Learning Model You Might Not Have Heard Of](https://towardsdatascience.com/isotonic-regression-is-the-coolest-machine-learning-model-you-might-not-have-heard-of-3ce14afc6d1e)
 
     
