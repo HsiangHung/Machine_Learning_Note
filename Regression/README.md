@@ -26,7 +26,7 @@ In the first two cases, it is safe to remove the data with missing values depend
 # Reference
 
 [Classifier calibration with Platt's scaling and isotonic regression]: http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/
-[FastML, Classifier calibration with Platt's scaling and isotonic regression](http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/)
+[[FastML] Classifier calibration with Platt's scaling and isotonic regression](http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/)
 
 
 [Missing Values in Data]: http://www.statisticssolutions.com/missing-values-in-data/
