@@ -15,7 +15,9 @@ For classification, we show another example of usage of isotonic regression (cre
 
 ![probability_calibration_plot](images/probability_calibration_curve.png)
 
-This example describes predictive probability (x-axis) vs true positive probability (y-axis) plot in the orange curve. Note that the model linear support-vector classifier (SVC) gives predictive probabilities, but they overestimate at beginning and then underestimate. We can see at `p(y=1|X) = 0.4`, `p(X) ~ 0.1`, and at `p(y=1|X) = 0.8`, `p(X) ~ 1`; `p(y=1|X)` and `p(X)` do not align with each other. The green curve describes the SVC outcome with isotonic regression calibration. 
+This example describes predictive probability `p(y=1|X)` (x-axis) vs true positive probability `p(X)` (y-axis). Such plot is called reliability diagram. Note that the model linear support-vector classifier (SVC) gives predictive probabilities (indicted by the orange curve) but they overestimate at beginning and then underestimate. We can see at `p(y=1|X) = 0.4`, `p(X) ~ 0.1`, and at `p(y=1|X) = 0.8`, `p(X) ~ 1`; `p(y=1|X)` and `p(X)` do not align with each other. 
+
+On the other hand, the green curve describes the SVC outcome with isotonic regression calibration. After probability calibration, the outcome probability align with the true positive probability. As a consequence, `p(y=1|X)` vs `p(X)` shows diagonal in the reliability diagram.
 
 
 
