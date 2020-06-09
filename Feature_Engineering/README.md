@@ -22,7 +22,11 @@ reduced_df = df.loc[:, mask]
 
 ### C. Remove highly-correlated features 
 
-   Correlation is a way to understand the relationship between multiple variables and attributes in your dataset.[[Will Badr]][Why Feature Correlation Matters.. A Lot!] The features A and B have high correlation coefficient meaning that the features are redundant which may lead to overfitting or mutlicollinearity. We can simply choose `threshold value > 0.8` as threshold value but in reality it should depend on dataset. 
+   Correlation is a way to understand the relationship between multiple variables and attributes in your dataset.[[Will Badr]][Why Feature Correlation Matters.. A Lot!] 
+   
+   The features A and B have high correlation coefficient meaning that the features are redundant which may lead to overfitting or mutlicollinearity. Though boosted trees algorithms are immune to multicollinearity by nature, the multicollinearity issue can mislead interpretation on feature importance when using linear model.
+   
+   We can simply set `threshold value > 0.8` as threshold value but in reality it should depend on dataset. 
 
 
 
