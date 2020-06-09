@@ -22,9 +22,9 @@ reduced_df = df.loc[:, mask]
 
 ### C. Remove highly-correlated features 
 
-   Features could be removed using Threshold value. The features A and B with high correlation coefficient means the features are redundant and lead to overfitting or mutlicollinearity. We can simply choose `threshold value > 0.8` but depending on dataset. 
+   Correlation is a way to understand the relationship between multiple variables and attributes in your dataset.[[Will Badr]][Why Feature Correlation Matters.. A Lot!] The features A and B have high correlation coefficient meaning that the features are redundant which may lead to overfitting or mutlicollinearity. We can simply choose `threshold value > 0.8` as threshold value but in reality it should depend on dataset. 
 
-   
+
 
    In bagging, we build many **independent** predictors/models/learners and combine them using some model averaging techniques. (e.g. weighted average, majority vote or normal average) We random **sub-sample/bootstrap** data for each model, so each observation is chosen with **replacement** to be used as input for each of the model. Then we take these uncorrelated learners to make a final model, by the principle of `wisdom of the crowds`. It reduces error by reducing **variance**. So when you use `bagging`, you’re incentivized to use `high-variance and low-bias estimators` (e.g. deep decision trees). Example of bagging ensemble is **Random Forest models** (RF). 
    
@@ -101,30 +101,6 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 [Shaked Zychlinski, The Search for Categorical Correlation](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
 
 
-[Gradient boosting simplified]: https://www.kaggle.com/grroverpr/gradient-boosting-simplified/
-[[3] Gradient boosting simplified](https://www.kaggle.com/grroverpr/gradient-boosting-simplified/)
+[Why Feature Correlation Matters.. A Lot!]: https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4
+[Will Badr, Why Feature Correlation Matters.. A Lot!](https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4)
 
-
-[Gradient Boosting vs Random Forest]: https://medium.com/@aravanshad/gradient-boosting-versus-random-forest-cfa3fa8f0d80
-[[4] Gradient Boosting vs Random Forest](https://medium.com/@aravanshad/gradient-boosting-versus-random-forest-cfa3fa8f0d80)
-
-
-[An Introduction to Random Forests for Multi-class Object Detection]: https://pdfs.semanticscholar.org/9035/e87ce49b67b751838c7346d36fe481260217.pdf
-[[5] An Introduction to Random Forests for Multi-class Object Detection](https://pdfs.semanticscholar.org/9035/e87ce49b67b751838c7346d36fe481260217.pdf)
-
-
-[Random Forest - Disadvantages]: http://www.liquisearch.com/random_forest/disadvantages
-[[6] Random Forest - Disadvantages](http://www.liquisearch.com/random_forest/disadvantages)
-
-
-
-[Efficient top rank optimization with gradient boosting for supervised anomaly detection]: http://ecmlpkdd2017.ijs.si/papers/paperID241.pdf
-[[7] Efficient top rank optimization with gradient boosting for supervised anomaly detection](http://ecmlpkdd2017.ijs.si/papers/paperID241.pdf)
-
-
-[What is better: gradient-boosted trees, or a random forest?]:http://fastml.com/what-is-better-gradient-boosted-trees-or-random-forest/
-[[8] What is better: gradient-boosted trees, or a random forest?](http://fastml.com/what-is-better-gradient-boosted-trees-or-random-forest/)
-
-
-[An Empirical Comparison of Supervised Learning Algorithms Using Different Performance Metrics (2005)]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.60.3232
-[[9] An Empirical Comparison of Supervised Learning Algorithms Using Different Performance Metrics (2005)](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.60.3232)
