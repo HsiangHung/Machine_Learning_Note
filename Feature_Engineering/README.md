@@ -1,7 +1,10 @@
 # Feature Engineering
 
 
-For each machine learning model, the error is determined by noise, variance, and bias. Ensemble techs can help reduce variance, and bias (noise is irreducible error) [[Ashish Bansal]][Need for Feature Engineering in Machine Learning].
+Feature Selection/Extraction is one of the most important concepts in Machine learning which is a process of selecting a subset of relevant features/ attributes (such as a column in tabular data) that are most relevant for the modelling. Irrelevant or partially relevant features can negatively impact model performance. Benefits of Feature Engineering include [[Ashish Bansal]][Need for Feature Engineering in Machine Learning]
+1.  Reduce Overfitting
+2. Improves Accuracy
+3. Reduce Training Time
 
 An ensemble is just a **collection of predictors** which come together (e.g. mean of all predictions) to give a final prediction. The reason we use ensembles is that many different predictors trying to predict same target variable will perform a better job than any single predictor alone. Ensembling techniques are further classified into Bagging and Boosting.
 
