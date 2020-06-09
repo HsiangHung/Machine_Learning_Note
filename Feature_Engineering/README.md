@@ -8,10 +8,16 @@ Feature Selection/Extraction is one of the most important concepts in Machine le
 
 In the following, we follow several blogs to list of feature engineering procedures 
 
-### A. Filter out features which has zero standard deviation.
+### A. Filter out zero standard deviation features.
 
+### B. Filter out low variance features.
 
 ```Python
+from sklearn.feature_selection import VarianceThreshold
+sel= VarianceThreshold(threshold=0.18)
+sel.fit(df)
+mask = sel.get_support()
+reduced_df = df.loc[:, mask]
 ```
 
 ### B. 
