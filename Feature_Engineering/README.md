@@ -73,11 +73,13 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 
 ## Reference
 
-[Gradient Boosting from scratch]: https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d
-[[1] Gradient Boosting from scratchs](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
+[Need for Feature Engineering in Machine Learning]: https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6
+[Ashish Bansal, Need for Feature Engineering in Machine Learning](https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6)
 
-[What are the differences between Random Forest and Gradient Tree Boosting algorithms?]: https://www.quora.com/What-are-the-differences-between-Random-Forest-and-Gradient-Tree-Boosting-algorithms
-[[2] What are the differences between Random Forest and Gradient Tree Boosting algorithms?](https://www.quora.com/What-are-the-differences-between-Random-Forest-and-Gradient-Tree-Boosting-algorithms)
+
+
+[The Search for Categorical Correlation]: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
+[Shaked Zychlinski, The Search for Categorical Correlation](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
 
 
 [Gradient boosting simplified]: https://www.kaggle.com/grroverpr/gradient-boosting-simplified/
