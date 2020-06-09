@@ -8,9 +8,9 @@ Feature Selection/Extraction is one of the most important concepts in Machine le
 
 In the following, we follow several blogs to list of feature engineering procedures 
 
-### A. Filter out zero standard deviation features.
+### A. Remove zero standard deviation features.
 
-### B. Filter out low variance features.
+### B. Remove out low variance features.
 
 ```Python
 from sklearn.feature_selection import VarianceThreshold
@@ -20,7 +20,11 @@ mask = sel.get_support()
 reduced_df = df.loc[:, mask]
 ```
 
-### B. 
+### C. Remove highly-correlated features 
+
+   Features could be removed using Threshold value. The features A and B with high correlation coefficient means the features are redundant and lead to overfitting or mutlicollinearity. We can simply choose `threshold value > 0.8` but depending on dataset. 
+
+   
 
    In bagging, we build many **independent** predictors/models/learners and combine them using some model averaging techniques. (e.g. weighted average, majority vote or normal average) We random **sub-sample/bootstrap** data for each model, so each observation is chosen with **replacement** to be used as input for each of the model. Then we take these uncorrelated learners to make a final model, by the principle of `wisdom of the crowds`. It reduces error by reducing **variance**. So when you use `bagging`, you’re incentivized to use `high-variance and low-bias estimators` (e.g. deep decision trees). Example of bagging ensemble is **Random Forest models** (RF). 
    
