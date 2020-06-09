@@ -6,9 +6,15 @@ Feature Selection/Extraction is one of the most important concepts in Machine le
 2. Improves Accuracy
 3. Reduce Training Time
 
-An ensemble is just a **collection of predictors** which come together (e.g. mean of all predictions) to give a final prediction. The reason we use ensembles is that many different predictors trying to predict same target variable will perform a better job than any single predictor alone. Ensembling techniques are further classified into Bagging and Boosting.
+In the following, we follow several blogs to list of feature engineering procedures 
 
-### Bagging
+### A. Filter out features which has zero standard deviation.
+
+
+```Python
+```
+
+### B. 
 
    In bagging, we build many **independent** predictors/models/learners and combine them using some model averaging techniques. (e.g. weighted average, majority vote or normal average) We random **sub-sample/bootstrap** data for each model, so each observation is chosen with **replacement** to be used as input for each of the model. Then we take these uncorrelated learners to make a final model, by the principle of `wisdom of the crowds`. It reduces error by reducing **variance**. So when you use `bagging`, you’re incentivized to use `high-variance and low-bias estimators` (e.g. deep decision trees). Example of bagging ensemble is **Random Forest models** (RF). 
    
