@@ -1,7 +1,7 @@
 # Feature Engineering
 
 
-For each machine learning model, the error is determined by noise, variance, and bias. Ensemble techs can help reduce variance, and bias (noise is irreducible error) [[1]][Gradient Boosting from scratch].
+For each machine learning model, the error is determined by noise, variance, and bias. Ensemble techs can help reduce variance, and bias (noise is irreducible error) [[Ashish Bansal]][Need for Feature Engineering in Machine Learning].
 
 An ensemble is just a **collection of predictors** which come together (e.g. mean of all predictions) to give a final prediction. The reason we use ensembles is that many different predictors trying to predict same target variable will perform a better job than any single predictor alone. Ensembling techniques are further classified into Bagging and Boosting.
 
@@ -18,7 +18,7 @@ An ensemble is just a **collection of predictors** which come together (e.g. mea
 ## Models: Random Forest (RF) and Gradient Boosting (GBM)
 
 
-   Both are ensemble models to produce a distribution of simple ML models on subsets of the original data, and both leverage decision trees as their base estimator, and then combine the distribution into one "aggregated" model. [[2]][What are the differences between Random Forest and Gradient Tree Boosting algorithms?]
+   Both are ensemble models to produce a distribution of simple ML models on subsets of the original data, and both leverage decision trees as their base estimator, and then combine the distribution into one "aggregated" model. [[Shaked Zychlinski]][The Search for Categorical Correlation]
 
    Notice RF can run trees in parallel, thus making it possible to parallelize jobs on a multiprocessor machine. GBM instead uses a sequential approach.
 
