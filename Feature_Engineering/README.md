@@ -30,7 +30,7 @@ reduced_df = df.loc[:, mask]
 
    #### C1. Pearson correlation matrix
 
-      Pearson Correlation Coefficient can be used with continuous variables that have a linear relationship. To print the Pearson coefficient score, I simply run `pearsonr(X,Y)` and the results are: `(0.88763627518577326, 5.1347242986713319e-05)` where the first value is the Pearson Correlation Coefficients and the second value is the P-value. `0.88` means that the variables are highly positively correlated.
+      Pearson Correlation Coefficient can be used with continuous variables that have a linear relationship. To print the Pearson coefficient score, I simply run `pearsonr(X,Y)` and the results are:(0.88763627518577326, 5.1347242986713319e-05) where the first value is the Pearson Correlation Coefficients and the second value is the P-value. 0.88 indicates the features are highly correlated.
 
    #### C2. Spearman correlation matrix
 
