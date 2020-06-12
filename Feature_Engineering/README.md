@@ -30,11 +30,11 @@ reduced_df = df.loc[:, mask]
 
    #### C1. Pearson correlation matrix
 
-      Pearson Correlation Coefficient can be used with continuous variables that have a linear relationship. To print the Pearson coefficient score, I simply run `pearsonr(X,Y)` and the results are:(0.88763627518577326, 5.1347242986713319e-05) where the first value is the Pearson Correlation Coefficients and the second value is the P-value. 0.88 indicates the features are highly correlated.
+   Pearson Correlation Coefficient can be used with continuous variables that have a linear relationship. To print the Pearson coefficient score, I simply run `pearsonr(X,Y)` and the results are:(0.88763627518577326, 5.1347242986713319e-05) where the first value is the Pearson Correlation Coefficients and the second value is the P-value. 0.88 indicates the features are highly correlated.
 
    #### C2. Spearman correlation matrix
 
-      Spearman Correlation Coefficient is used if variables have a non-linear relationship. It can also be used with ordinal categorical variables. You can get the Spearman Coefficient Score by running: `scipy.stats.spearmanr(X,Y)`.
+   Spearman Correlation Coefficient is used if variables have a non-linear relationship. It can also be used with ordinal categorical variables. You can get the Spearman Coefficient Score by running: `scipy.stats.spearmanr(X,Y)`.
 
 
    In bagging, we build many **independent** predictors/models/learners and combine them using some model averaging techniques. (e.g. weighted average, majority vote or normal average) We random **sub-sample/bootstrap** data for each model, so each observation is chosen with **replacement** to be used as input for each of the model. Then we take these uncorrelated learners to make a final model, by the principle of `wisdom of the crowds`. It reduces error by reducing **variance**. So when you use `bagging`, you’re incentivized to use `high-variance and low-bias estimators` (e.g. deep decision trees). Example of bagging ensemble is **Random Forest models** (RF). 
