@@ -31,6 +31,12 @@ Why is it important? The study of error estimates for bagged classifiers in Brei
 
 
 
+## Hyperparameter Fine Tuning
+
+1. n_estimators: usually higher the number of trees the better to learn the data.
+2. max_depth: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
+3. min_samples_split: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case.
+
 
 ## Reference
 
