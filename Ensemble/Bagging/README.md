@@ -41,11 +41,19 @@ Some good sources about hyperparameter fine tuning: [[Mohtadi Ben Fraj]][In Dept
 4. `min_samples_leaf`: min_samples_leaf is The minimum number of samples required to be at a leaf node. Increasing this value can cause underfitting.
 5. `max_features`: max_features represents the number of features to consider when looking for the best split. Higher max_features indicates an overfitting case. 
 
+In discussion of [[Stackoverflow, Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], more trees also mean more computational cost and after a certain number of trees, the improvement is negligible.
+
+![](images/ntrees_vs_OOB.png)
 
 ## Reference
 
 [In Depth: Parameter tuning for Random Forest]: https://medium.com/all-things-ai/in-depth-parameter-tuning-for-random-forest-d67bb7e920d
 [[Mohtadi Ben Fraj] In Depth: Parameter tuning for Random Forest](https://medium.com/all-things-ai/in-depth-parameter-tuning-for-random-forest-d67bb7e920d)
+
+
+[Random forest tuning - tree depth and number of trees]: https://stackoverflow.com/questions/34997134/random-forest-tuning-tree-depth-and-number-of-trees
+[[Stackoverflow, Random forest tuning - tree depth and number of trees] Random forest tuning - tree depth and number of trees](https://stackoverflow.com/questions/34997134/random-forest-tuning-tree-depth-and-number-of-trees)
+
 
 [What is out of bag error in Random Forests?]: https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests
 [[Stackoverflow, What is out of bag error in Random Forests?] What is out of bag error in Random Forests?](https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests)
