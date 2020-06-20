@@ -33,7 +33,7 @@ Why is it important? The study of error estimates for bagged classifiers in Brei
 
 ## Hyperparameter Fine Tuning
 
-Some good sources about hyperparameter fine tuning: [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest].
+There is a good article talking about hyperparameter fine tuning: [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest].
 
 1. `n_estimators`: usually higher the number of trees the better to learn the data.
 2. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
@@ -44,6 +44,8 @@ Some good sources about hyperparameter fine tuning: [[Mohtadi Ben Fraj]][In Dept
 In discussion of [[Stackoverflow, Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], more trees also mean more computational cost and after a certain number of trees, the improvement is negligible.
 
 ![](images/ntrees_vs_OOB.png)
+
+
 
 ## Reference
 
