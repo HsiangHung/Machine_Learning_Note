@@ -2,7 +2,7 @@
 
 
 
-Suppose our training data set is represented by `T` and suppose data set has `M` features (or attributes or variables) [[1]][What is out of bag error in Random Forests?].
+Suppose our training data set is represented by `T` and suppose data set has `M` features (or attributes or variables) [[Stackoverflow, What is out of bag error in Random Forests?]][What is out of bag error in Random Forests?].
 
     T = {(X1,y1), (X2,y2), ... (Xn, yn)}
 
@@ -33,15 +33,20 @@ Why is it important? The study of error estimates for bagged classifiers in Brei
 
 ## Hyperparameter Fine Tuning
 
-1. n_estimators: usually higher the number of trees the better to learn the data.
-2. max_depth: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
-3. min_samples_split: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case.
+1. `n_estimators`: usually higher the number of trees the better to learn the data.
+2. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
+3. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case.
+4. `min_samples_leaf`: min_samples_leaf is The minimum number of samples required to be at a leaf node. Increasing this value can cause underfitting.
+5. `max_features`: max_features represents the number of features to consider when looking for the best split. Higher max_features indicates an overfitting case. 
 
 
 ## Reference
 
+[In Depth: Parameter tuning for Random Forest]: https://medium.com/all-things-ai/in-depth-parameter-tuning-for-random-forest-d67bb7e920d
+[[Mohtadi Ben Fraj] In Depth: Parameter tuning for Random Forest](https://medium.com/all-things-ai/in-depth-parameter-tuning-for-random-forest-d67bb7e920d)
+
 [What is out of bag error in Random Forests?]: https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests
-[[1] What is out of bag error in Random Forests?](https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests)
+[[Stackoverflow, What is out of bag error in Random Forests?] What is out of bag error in Random Forests?](https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests)
 
 
 
