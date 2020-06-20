@@ -33,7 +33,7 @@ Why is it important? The study of error estimates for bagged classifiers in Brei
 
 ## Hyperparameter Fine Tuning
 
-There is a good article talking about hyperparameter fine tuning: [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest]. We have attached the script in this folder.
+There is a good article talking about hyperparameter fine tuning: [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest] and [[Will Koehrsen]][Hyperparameter Tuning the Random Forest in Python]. We have attached the script in this folder.
 
 1. `n_estimators`: usually higher the number of trees the better to learn the data.
 2. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
@@ -59,6 +59,10 @@ In discussion of [[Stackoverflow, Random forest tuning - tree depth and number o
 
 [What is out of bag error in Random Forests?]: https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests
 [[Stackoverflow, What is out of bag error in Random Forests?] What is out of bag error in Random Forests?](https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests)
+
+
+[Hyperparameter Tuning the Random Forest in Python]: https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
+[[Will Koehrsen] Hyperparameter Tuning the Random Forest in Python](https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74)
 
 
 
