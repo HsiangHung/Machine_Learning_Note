@@ -6,7 +6,7 @@ Feature Selection/Extraction is one of the most important concepts in Machine le
 2. Improves Accuracy
 3. Reduce Training Time
 
-In the following, we follow several blogs to list of feature engineering procedures. The steps include:
+In the following, we follow several blogs to list of feature engineering procedures [[Ashish Bansal]][Need for Feature Engineering in Machine Learning], [[Reinhard Sellmair]][How to handle correlated Features?]. The steps include:
 
 ### A. Remove zero standard deviation features.
 
@@ -40,16 +40,16 @@ reduced_df = df.loc[:, mask]
    
    #### C2. Categorical attributes
 
-   `Cramér’s V` is based on a nominal variation of [**Pearson’s Chi-Square Test**](https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V). The output is in the range of [0,1], where 0 means no association and 1 is full association. Unlike correlation, there are no negative values [[Shaked Zychlinski]][The Search for Categorical Correlation]. Like correlation, Cramer’s V is symmetrical — it is insensitive to swapping x and y. Shaked Zychlinski indicated the code to compute the correlation:
+   `Cramér’s V` is based on a nominal variation of [**Pearson’s Chi-Square Test**](https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V). The output is in the range of [0,1], where 0 means no association and 1 is full association. Unlike correlation, there are no negative values [[Shaked Zychlinski]][The Search for Categorical Correlation]. Like correlation, Cramer’s V is symmetrical — it is insensitive to swapping x and y. The blog author Shaked Zychlinski indicated the code to compute the correlation:
 
    ```Python
    def cramers_v(x, y):
-    confusion_matrix = pd.crosstab(x,y)
-    stat = ss.chi2_contingency(confusion_matrix)[0]
-    n = confusion_matrix.sum().sum()
-    phi2 = stat/n
-    r,k = confusion_matrix.shape
-    return np.sqrt(phi2/min(r-1, k-1))
+      confusion_matrix = pd.crosstab(x,y)
+      stat = ss.chi2_contingency(confusion_matrix)[0]
+      n = confusion_matrix.sum().sum()
+      phi2 = stat/n
+      r,k = confusion_matrix.shape
+      return np.sqrt(phi2/min(r-1, k-1))
    ```
 
 
@@ -86,6 +86,12 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 
 [Need for Feature Engineering in Machine Learning]: https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6
 [[Ashish Bansal] Need for Feature Engineering in Machine Learning](https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6)
+
+
+
+[How to handle correlated Features?]: https://www.kaggle.com/reisel/how-to-handle-correlated-features
+[[Reinhard Sellmair] How to handle correlated Features?](https://www.kaggle.com/reisel/how-to-handle-correlated-features)
+
 
 
 [The Search for Categorical Correlation]: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
