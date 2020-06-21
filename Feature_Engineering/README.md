@@ -2,7 +2,7 @@
 
 
 Feature Selection/Extraction is one of the most important concepts in Machine learning which is a process of selecting a subset of relevant features/ attributes (such as a column in tabular data) that are most relevant for the modelling. Irrelevant or partially relevant features can negatively impact model performance. Benefits of Feature Engineering include [[Ashish Bansal]][Need for Feature Engineering in Machine Learning]
-1.  Reduce Overfitting
+1. Reduce Overfitting
 2. Improves Accuracy
 3. Reduce Training Time
 
@@ -26,21 +26,30 @@ reduced_df = df.loc[:, mask]
    
    The features A and B have high correlation coefficient meaning that the features are redundant which may lead to overfitting or mutlicollinearity. Though boosted trees algorithms are immune to multicollinearity by nature, the multicollinearity issue can mislead interpretation on feature importance when using linear model.
    
+   Note that correlation should not be interpreted as causation.
+
    We can simply set `threshold value > 0.8` as threshold value but in reality it should depend on dataset. Depending on variable types (numeric and categorical), there are several ways to calculate correlation:
 
-   #### C1. Pearson correlation matrix
+   #### C1. Pearson correlation matrix (numeric attributes)
 
-   Pearson Correlation Coefficient can be used with continuous variables that have a linear relationship. The Pearson coefficient score used `pearsonr(X,Y)` and the first value is the Pearson Correlation Coefficients and the second value is the P-value.
+   Pearson Correlation Coefficient can be used with continuous variables that have a **linear** relationship. The Pearson coefficient score used `pearsonr(X,Y)` and the first value is the Pearson Correlation Coefficients and the second value is the P-value.
 
-   #### C2. Spearman correlation matrix
+   #### C2. Spearman correlation matrix (numeric attributes)
 
-   Spearman Correlation Coefficient is used if variables have a non-linear relationship. It can also be used with ordinal categorical variables. You can get the Spearman coefficient score by running: `scipy.stats.spearmanr(X,Y)`.
+   Spearman Correlation Coefficient is used if variables have a **non-linear** relationship. It can also be used with ordinal categorical variables. You can get the Spearman coefficient score by running: `scipy.stats.spearmanr(X,Y)`.
 
    There is also another popular method called — `Kendall’s Tau Coefficient` which is also based on variable ranks but unlike Spearman’s coefficient, it does not take into account the difference between ranks.
    
+   #### C3. Cramér’s V (categorical attributes)
+
+   Cramér’s V is based on a nominal variation of Pearson’s Chi-Square Test. The output is in the range of [0,1], where 0 means no association and 1 is full association. Unlike correlation, there are no negative values.
+
+
+
+
 ### Boosting
 
-   In boosting, predictors are not made independently, but **sequentially**. The subsequent predictors learn from the mistakes of the previous predictors. Therefore, the observations have an **unequal probability of appearing in subsequent models** and ones with the **highest error appear most**, rather than bagging where the observations are chosen based on the bootstrap process. The predictors can be chosen from a range of models like decision trees, regressors, classifiers etc. Because new predictors are learning from mistakes committed by previous predictors, it takes less time/iterations to reach close to actual predictions. One can interpret boosting as trying to **minimize the bias** of the overall predictor. So when you use `boosting`, you’re incentivized to use `low-variance and high-bias estimators` (e.g. shallow decision trees). However, it could lead to **overfitting** on training data. **Gradient Boosting** (GBM) is an example of boosting algorithm.
+   In boosting[[Shaked Zychlinski]][The Search for Categorical Correlation], predictors are not made independently, but **sequentially**. The subsequent predictors learn from the mistakes of the previous predictors. Therefore, the observations have an **unequal probability of appearing in subsequent models** and ones with the **highest error appear most**, rather than bagging where the observations are chosen based on the bootstrap process. The predictors can be chosen from a range of models like decision trees, regressors, classifiers etc. Because new predictors are learning from mistakes committed by previous predictors, it takes less time/iterations to reach close to actual predictions. One can interpret boosting as trying to **minimize the bias** of the overall predictor. So when you use `boosting`, you’re incentivized to use `low-variance and high-bias estimators` (e.g. shallow decision trees). However, it could lead to **overfitting** on training data. **Gradient Boosting** (GBM) is an example of boosting algorithm.
    
 
 ## Models: Random Forest (RF) and Gradient Boosting (GBM)
@@ -102,14 +111,13 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 ## Reference
 
 [Need for Feature Engineering in Machine Learning]: https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6
-[Ashish Bansal, Need for Feature Engineering in Machine Learning](https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6)
-
+[[Ashish Bansal] Need for Feature Engineering in Machine Learning](https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6)
 
 
 [The Search for Categorical Correlation]: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
-[Shaked Zychlinski, The Search for Categorical Correlation](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
+[[Shaked Zychlinski] The Search for Categorical Correlation](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
 
 
 [Why Feature Correlation Matters.. A Lot!]: https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4
-[Will Badr, Why Feature Correlation Matters.. A Lot!](https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4)
+[[Will Badr] Why Feature Correlation Matters.. A Lot!](https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4)
 
