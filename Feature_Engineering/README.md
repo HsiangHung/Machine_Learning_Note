@@ -2,6 +2,7 @@
 
 
 Feature Selection/Extraction is one of the most important concepts in Machine learning which is a process of selecting a subset of relevant features/ attributes (such as a column in tabular data) that are most relevant for the modelling. Irrelevant or partially relevant features can negatively impact model performance. Benefits of Feature Engineering include [[Ashish Bansal]][Need for Feature Engineering in Machine Learning]:
+
 1. Reduce Overfitting
 2. Improves Accuracy
 3. Reduce Training Time
@@ -90,7 +91,7 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 
 
 [How to handle correlated Features?]: https://www.kaggle.com/reisel/how-to-handle-correlated-features
-[[Reinhard Sellmair] How to handle correlated Features?](https://www.kaggle.com/reisel/how-to-handle-correlated-features)
+[[Reinhard Sellmair] Kaggle: How to handle correlated Features?](https://www.kaggle.com/reisel/how-to-handle-correlated-features)
 
 
 
