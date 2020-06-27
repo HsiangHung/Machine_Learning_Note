@@ -12,7 +12,7 @@ There are mainly two boosting algorithms: Gradient Boosting (GBM) and Adaptive B
 ## 1. Gradient Boosting
 
 
- A GBM will start with a not very deep tree and will model the original target. Then it takes the errors from the first round of predictions, and passes the errors as a new target to a second tree. The second tree will model the error from the first tree, record the new errors and pass that as a target to the third tree. And so forth. Essentially it focuses on modelling errors from previous trees. It is high bias-low variance algorithm, and aims to decrease bias not variance. An excellent notebook [[1]][Gradient Boosting from scratchs] demonstrates how a GBM minimizes bias during training (also see [[2]][Gradient boosting simplified]).
+ A GBM will start with a not very deep tree and will model the original target. Then it takes the errors from the first round of predictions, and passes the errors as a new target to a second tree. The second tree will model the error from the first tree, record the new errors and pass that as a target to the third tree. And so forth. Essentially it focuses on modelling errors from previous trees. It is high bias-low variance algorithm, and aims to decrease bias not variance. An excellent notebook [[Prince Grover-1]][Gradient Boosting from scratchs] demonstrates how a GBM minimizes bias during training (also see [[Prince Grover-2]][Gradient boosting simplified]).
    
 In the following, we explain the boosting pictures using the figures depicted from [Prof. Ihler's lecture slides](http://sli.ics.uci.edu/Classes/2012F-273a?action=download&upname=10-ensembles.pdf) (also the [lecture video](https://www.youtube.com/watch?v=sRktKszFmSk)). Ben Gorman, a Kaggle master also provided a comprehensive description to interpret the math behind GBM in [[3]][A Kaggle Master Explains Gradient Boosting]. 
 
@@ -62,9 +62,10 @@ where `m=1,2,3...` From the gradient descent aspect, the `Loss` is minimized as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^{m&plus;1}&space;:=\hat{y}^m&space;&plus;&space;\alpha&space;\frac{\partial&space;J_m(y,&space;\hat{y})}{\partial&space;\hat{y}^m}&space;=&space;y&space;&plus;&space;\alpha&space;\Big(&space;2&space;\sum_i&space;(y_i&space;-&space;\hat{y}^m_i)&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^{m&plus;1}&space;:=\hat{y}^m&space;&plus;&space;\alpha&space;\frac{\partial&space;J_m(y,&space;\hat{y})}{\partial&space;\hat{y}^m}&space;=&space;y&space;&plus;&space;\alpha&space;\Big(&space;2&space;\sum_i&space;(y_i&space;-&space;\hat{y}^m_i)&space;\Big)" title="\hat{y}^{m+1} :=\hat{y}^m + \alpha \frac{\partial J_m(y, \hat{y})}{\partial \hat{y}^m} = y + \alpha \Big( 2 \sum_i (y_i - \hat{y}^m_i) \Big)" /></a>
 
-where `\alpha` is the learning rate. From the expression, we can see the gradient is equal to the errors, and the predicted value `ym` is updated by multiplying the learning rate to the errors. This is why at each step we fit the residuals, where equivalently we are computing the gradient of `J`. The posts [[2]][Gradient boosting simplified], [[3]][A Kaggle Master Explains Gradient Boosting] and [Prof. Ilher's lecture video](https://www.youtube.com/watch?v=sRktKszFmSk) have more detailed interpretation.
+where `\alpha` is the learning rate. From the expression, we can see the gradient is equal to the errors, and the predicted value `ym` is updated by multiplying the learning rate to the errors. This is why at each step we fit the residuals, where equivalently we are computing the gradient of `J`. The posts [[Prince Grover
+-2]][Gradient boosting simplified], [[Kaggle]][A Kaggle Master Explains Gradient Boosting] and [Prof. Ilher's lecture video](https://www.youtube.com/watch?v=sRktKszFmSk) have more detailed interpretation.
 
-Terence Parr in a Quora post [[4]][What is an intuitive explanation of Gradient Boosting?] offered a very interesting picture, which explian the procedures very well.
+Terence Parr in a Quora post [[Quora-1]][What is an intuitive explanation of Gradient Boosting?] offered a very interesting picture, which explian the procedures very well.
 
 ![](images/golf.png)
 
@@ -72,36 +73,44 @@ Terence Parr in a Quora post [[4]][What is an intuitive explanation of Gradient 
 
 ## 2. AdaBoost
 
-On the other hand, adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[5]][What is the difference between gradient boosting and adaboost?].
+On the other hand, adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[Quora-2]][What is the difference between gradient boosting and adaboost?].
 
 On the other hand, gradient boosting doesn’t modify the sample distribution. 
 
 ## 3. XGBoost
 
-XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard regularization parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[6]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?].
+XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard regularization parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora-3]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?].
+
+
+## 4. LighGBM
+
+LGBM model hyperparameter fine-tuning: [[LGBM Parameters]][LGBM Parameters].
 
 
 ## Reference
 
 
 [Gradient Boosting from scratchs]: https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d
-[[1] Gradient Boosting from scratchs](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
+[[Prince Grove-1] Gradient Boosting from scratchs](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
 
 [Gradient boosting simplified]: https://www.kaggle.com/grroverpr/gradient-boosting-simplified/
-[[2] Gradient boosting simplified](https://www.kaggle.com/grroverpr/gradient-boosting-simplified/)
+[[Prince Grover-2] Gradient boosting simplified](https://www.kaggle.com/grroverpr/gradient-boosting-simplified/)
 
 [A Kaggle Master Explains Gradient Boosting]: http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/
-[[3] A Kaggle Master Explains Gradient Boosting](http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/)
+[[Kaggle] A Kaggle Master Explains Gradient Boosting](http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/)
 
 [What is an intuitive explanation of Gradient Boosting?]: https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting
-[[4] What is an intuitive explanation of Gradient Boosting?](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting)
+[[Quora-1] What is an intuitive explanation of Gradient Boosting?](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting)
 
 [What is the difference between gradient boosting and adaboost?]: https://www.quora.com/What-is-the-difference-between-gradient-boosting-and-adaboost#
-[[5] What is the difference between gradient boosting and adaboost?](https://www.quora.com/What-is-the-difference-between-gradient-boosting-and-adaboost#)
-
+[[Quora-2] What is the difference between gradient boosting and adaboost?](https://www.quora.com/What-is-the-difference-between-gradient-boosting-and-adaboost#)
 
 [What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]: https://www.quora.com/What-is-the-difference-between-eXtreme-Gradient-Boosting-XGBoost-AdaBoost-and-Gradient-Boosting
-[[6] What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?](https://www.quora.com/What-is-the-difference-between-eXtreme-Gradient-Boosting-XGBoost-AdaBoost-and-Gradient-Boosting)
+[[Quora-3] What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?](https://www.quora.com/What-is-the-difference-between-eXtreme-Gradient-Boosting-XGBoost-AdaBoost-and-Gradient-Boosting)
+
+
+[LGBM Parameters]: https://lightgbm.readthedocs.io/en/latest/Parameters.html
+[[LGBM Parameters] LGBM Parameters](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
 
 
 
