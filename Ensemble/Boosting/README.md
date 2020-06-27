@@ -84,7 +84,7 @@ XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost th
 
 ## 4. LighGBM
 
-LGBM model is a relatively newer model. Rather than level-wise tree growth in XGboost, LGBM is lesf-wise tree growth, which shows faster performance [[Analytics Vidhya]][Which algorithm takes the crown: Light GBM vs XGBOOST?], [[Harry Moreno]][Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)], [[Aman Cyberia]][Good summary of XGBoost vs CatBoost vs LightGBM]. 
+LGBM model is a relatively newer model. Rather than level-wise tree growth in XGboost, LGBM is lesf-wise tree growth, which shows faster performance [[Analytics Vidhya]][Which algorithm takes the crown: Light GBM vs XGBOOST?], [[Harry Moreno]][Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)], [[Aman Cyberia]][Good summary of XGBoost vs CatBoost vs LightGBM], [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!]. 
 
 The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Python-Intro.html), and the [model hyperparameter list](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The guide page shows how to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html).
 
@@ -122,6 +122,7 @@ The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Pyth
 [Gradient boosting simplified]: https://www.kaggle.com/grroverpr/gradient-boosting-simplified/
 [[Prince Grover-2] Gradient boosting simplified](https://www.kaggle.com/grroverpr/gradient-boosting-simplified/)
 
-
+[XGBOOST vs LightGBM: Which algorithm wins the race !!!]: https://towardsdatascience.com/lightgbm-vs-xgboost-which-algorithm-win-the-race-1ff7dd4917d#:~:text=The%20development%20of%20Boosting%20Machines,because%20it%20is%20extremely%20powerful.
+[[Sai Nikhilesh Kasturi] XGBOOST vs LightGBM: Which algorithm wins the race !!!](https://towardsdatascience.com/lightgbm-vs-xgboost-which-algorithm-win-the-race-1ff7dd4917d#:~:text=The%20development%20of%20Boosting%20Machines,because%20it%20is%20extremely%20powerful.)
 
 
