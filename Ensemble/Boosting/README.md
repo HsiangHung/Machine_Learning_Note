@@ -79,12 +79,12 @@ On the other hand, gradient boosting doesn’t modify the sample distribution.
 
 ## 3. XGBoost
 
-XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard regularization parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora-3]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?].
+XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard regularization parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora-3]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
 
 
 ## 4. LighGBM
 
-LGBM model is a relatively newer model. Rather than level-wise tree growth in XGboost, LGBM is lesf-wise tree growth, which shows faster performance [[Analytics Vidhya]][Which algorithm takes the crown: Light GBM vs XGBOOST?]. The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Python-Intro.html), and the [model hyperparameter list](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The guide page shows how to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html).
+LGBM model is a relatively newer model. Rather than level-wise tree growth in XGboost, LGBM is lesf-wise tree growth, which shows faster performance [[Analytics Vidhya]][Which algorithm takes the crown: Light GBM vs XGBOOST?], [[Harry Moreno]][Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)]. The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Python-Intro.html), and the [model hyperparameter list](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The guide page shows how to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html).
 
 
 ## Reference
@@ -92,6 +92,12 @@ LGBM model is a relatively newer model. Rather than level-wise tree growth in XG
 [Which algorithm takes the crown: Light GBM vs XGBOOST?]: https://www.analyticsvidhya.com/blog/2017/06/which-algorithm-takes-the-crown-light-gbm-vs-xgboost/
 [[Analytics Vidhya] Which algorithm takes the crown: Light GBM vs XGBOOST?](https://www.analyticsvidhya.com/blog/2017/06/which-algorithm-takes-the-crown-light-gbm-vs-xgboost/)
 
+
+[Gradient Boosting and XGBoost]: https://medium.com/@gabrieltseng/gradient-boosting-and-xgboost-c306c1bcfaf5
+[[Gabriel Tseng] Gradient Boosting and XGBoost](https://medium.com/@gabrieltseng/gradient-boosting-and-xgboost-c306c1bcfaf5)
+
+[Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)]: https://medium.com/kaggle-nyc/gradient-boosting-decision-trees-xgboost-vs-lightgbm-and-catboost-72df6979e0bb#:~:text=In%20summary%2C%20LightGBM%20improves%20on,fraction%20of%20the%20whole%20dataset.
+[[Harry Moreno] Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)](https://medium.com/kaggle-nyc/gradient-boosting-decision-trees-xgboost-vs-lightgbm-and-catboost-72df6979e0bb#:~:text=In%20summary%2C%20LightGBM%20improves%20on,fraction%20of%20the%20whole%20dataset.)
 
 [A Kaggle Master Explains Gradient Boosting]: http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/
 [[Kaggle] A Kaggle Master Explains Gradient Boosting](http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/)
