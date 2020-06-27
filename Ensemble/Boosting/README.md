@@ -84,7 +84,7 @@ XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost th
 
 ## 4. LighGBM
 
-LGBM model [hyperparameter fine-tuning](https://lightgbm.readthedocs.io/en/latest/Parameters.html).
+LGBM model [hyperparameters](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The introduction to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html).
 
 
 ## Reference
