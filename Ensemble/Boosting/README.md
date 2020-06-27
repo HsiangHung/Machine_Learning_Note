@@ -84,7 +84,7 @@ XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost th
 
 ## 4. LighGBM
 
-LGBM model hyperparameter fine-tuning: [[LGBM Parameters]][LGBM Parameters].
+LGBM model [hyperparameter fine-tuning](https://lightgbm.readthedocs.io/en/latest/Parameters.html).
 
 
 ## Reference
@@ -108,9 +108,6 @@ LGBM model hyperparameter fine-tuning: [[LGBM Parameters]][LGBM Parameters].
 [What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]: https://www.quora.com/What-is-the-difference-between-eXtreme-Gradient-Boosting-XGBoost-AdaBoost-and-Gradient-Boosting
 [[Quora-3] What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?](https://www.quora.com/What-is-the-difference-between-eXtreme-Gradient-Boosting-XGBoost-AdaBoost-and-Gradient-Boosting)
 
-
-[LGBM Parameters]: https://lightgbm.readthedocs.io/en/latest/Parameters.html
-[[LGBM Parameters] LGBM Parameters](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
 
 
 
