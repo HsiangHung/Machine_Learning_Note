@@ -84,7 +84,7 @@ XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost th
 
 ## 4. LighGBM
 
-LGBM model [hyperparameters](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The introduction to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html).
+LGBM model is a relatively newer model. It is similar to XGboost, but faster. The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Python-Intro.html), and the [model hyperparameter list](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The introduction to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html).
 
 
 ## Reference
