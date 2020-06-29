@@ -40,7 +40,7 @@ In the followings, we show how the hyperparameter influences the performance. Th
 1. `n_estimators`: usually higher the number of trees the better to learn the data.
 
 ![](images/n_estimate_1.png)
-![](images/n_estimate_2.png){ width=50% }
+![](images/n_estimate_2.png){:height="50%" width="50%"}
 
 
 2. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
