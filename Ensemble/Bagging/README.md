@@ -37,28 +37,33 @@ There are good articles talking about hyperparameter fine tuning in random fores
 
 In the followings, we show how the hyperparameter influences the performance. The results are all from [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest] or [[Jason Brownlee]][How to Develop a Random Forest Ensemble in Python].
 
-1. `n_estimators`: usually higher the number of trees the better to learn the data.
+
+1. `n_samples`: more sample data for training, better accuracy.
+
+![](images/n_sample.png)
+
+2. `n_estimators`: usually higher the number of trees the better to learn the data.
 
 ![](images/n_estimate_1.png)
 
 
-2. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
+3. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
 
 ![](images/max_depth_1.png)
 
-3. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case.
+4. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case.
 
 ![](images/min_sample_split.png)
 
-4. `min_samples_leaf`: min_samples_leaf is The minimum number of samples required to be at a leaf node. Increasing this value can cause underfitting.
+5. `min_samples_leaf`: min_samples_leaf is The minimum number of samples required to be at a leaf node. Increasing this value can cause underfitting.
 
 ![](images/min_sample_leaf.png)
 
-5. `max_features`: max_features represents the number of features to consider when looking for the best split. Higher max_features indicates an overfitting case. 
+6. `max_features`: max_features represents the number of features to consider when looking for the best split. Higher max_features indicates an overfitting case. 
 
 ![](images/max_features.png)
 
-6. `number_trees`: more tress provide better accuracy. However, more trees also mean more computational cost.
+7. `number_trees`: more tress provide better accuracy. However, more trees also mean more computational cost.
 In discussion of [[Stackoverflow, Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], after a certain number of trees, the improvement is negligible.
 
 ![](images/ntrees_vs_OOB.png)
