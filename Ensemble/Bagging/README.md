@@ -35,7 +35,14 @@ Why is it important? The study of error estimates for bagged classifiers in Brei
 
 There are good articles talking about hyperparameter fine tuning in random forest: [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest], [[Will Koehrsen]][Hyperparameter Tuning the Random Forest in Python], [[StackExchange, Practical questions on tuning Random Forests]][Practical questions on tuning Random Forests] and [[Kaggle, Random Forest using GridSearchCV]][Random Forest using GridSearchCV]. We have attached the script in this folder.
 
+In the followings, we show how the hyperparameter influences the performance. The results are all from [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest] and [[Jason Brownlee]][How to Develop a Random Forest Ensemble in Python].
+
 1. `n_estimators`: usually higher the number of trees the better to learn the data.
+
+![](images/n_estimate_1.png)
+![](images/n_estimate_2.png)
+
+
 2. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
 3. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case.
 4. `min_samples_leaf`: min_samples_leaf is The minimum number of samples required to be at a leaf node. Increasing this value can cause underfitting.
@@ -47,7 +54,14 @@ In discussion of [[Stackoverflow, Random forest tuning - tree depth and number o
 
 
 
+
+
 ## Reference
+
+
+[How to Develop a Random Forest Ensemble in Python]: https://machinelearningmastery.com/random-forest-ensemble-in-python/
+[[Jason Brownlee] How to Develop a Random Forest Ensemble in Python](https://machinelearningmastery.com/random-forest-ensemble-in-python/)
+
 
 
 [Random Forest using GridSearchCV]: https://www.kaggle.com/sociopath00/random-forest-using-gridsearchcv
