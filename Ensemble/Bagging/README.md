@@ -39,9 +39,7 @@ In the followings, we show how the hyperparameter influences the performance. Th
 
 
 1. `n_samples`: more sample data for training, better accuracy.
-
-![](images/n_sample.png)
-
+![](images/n_sample.png =100x20)
 2. `n_estimators`: usually higher the number of trees the better to learn the data.
 
 ![](images/n_estimate_1.png)
