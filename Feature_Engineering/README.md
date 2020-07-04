@@ -35,7 +35,7 @@ reduced_df = df.loc[:, mask]
 
    `Pearson Correlation Coefficient` can be used with continuous variables that have a **linear** relationship. The Pearson coefficient score used `pearsonr(X,Y)` and the first value is the Pearson Correlation Coefficients and the second value is the P-value.
 
-   `Spearman Correlation Coefficient` is used if variables have a **non-linear** relationship. It can also be used with ordinal categorical variables. You can get the Spearman coefficient score by running: `scipy.stats.spearmanr(X,Y)`.
+   `Spearman Correlation Coefficient` or called `Speatman's Rank-Order Correlation` is used if variables have a **non-linear** relationship. It can also be used with ordinal categorical variables, and determines the strength and direction of the **monotonic relationship** between your two variables [[Laerd]][Spearman's Rank-Order Correlation]. You can get the Spearman coefficient score by running: `scipy.stats.spearmanr(X,Y)`.
 
    There is also another popular method called — `Kendall’s Tau Coefficient` which is also based on variable ranks but unlike Spearman’s coefficient, it does not take into account the difference between ranks.
    
@@ -88,6 +88,9 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 [Need for Feature Engineering in Machine Learning]: https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6
 [[Ashish Bansal] Need for Feature Engineering in Machine Learning](https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6)
 
+
+[Spearman's Rank-Order Correlation]: https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.
+[[Laerd] Spearman's Rank-Order Correlation](https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.)
 
 
 [How to handle correlated Features?]: https://www.kaggle.com/reisel/how-to-handle-correlated-features
