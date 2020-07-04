@@ -39,9 +39,9 @@ reduced_df = df.loc[:, mask]
 
    #### 3A. Numeric attributes
 
-   `Pearson Correlation Coefficient` can be used with continuous variables that have a **linear** relationship. The Pearson coefficient score used `pearsonr(X,Y)` and the first value is the Pearson Correlation Coefficients and the second value is the P-value.
+   `Pearson Correlation Coefficient` can be used with **continuous** variables that have a **linear** relationship. The Pearson coefficient score used `pearsonr(X,Y)` and the first value is the Pearson Correlation Coefficients and the second value is the P-value.
 
-   `Spearman Correlation Coefficient` or called `Speatman's Rank-Order Correlation` is used if variables have a **non-linear** relationship. It can also be used with ordinal categorical variables, and determines the strength and direction of the **monotonic relationship** between your two variables [[Laerd]][Spearman's Rank-Order Correlation]. You can get the Spearman coefficient score by running: `scipy.stats.spearmanr(X,Y)`.
+   `Spearman Correlation Coefficient` or called `Spearman's Rank-Order Correlation` is used if variables have a **non-linear** relationship. It can also be used with **ordinal** categorical variables, and determines the strength and direction of the **monotonic relationship** between your two variables [[Laerd]][Spearman's Rank-Order Correlation]. You can get the Spearman coefficient score by running: `scipy.stats.spearmanr(X,Y)`.
 
    There is also another popular method called — `Kendall’s Tau Coefficient` which is also based on variable ranks but unlike Spearman’s coefficient, it does not take into account the difference between ranks.
    
