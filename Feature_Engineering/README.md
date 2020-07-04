@@ -7,11 +7,15 @@ Feature Selection/Extraction is one of the most important concepts in Machine le
 2. Improves Accuracy
 3. Reduce Training Time
 
-In the following, we follow several blogs to list of feature engineering procedures [[Ashish Bansal]][Need for Feature Engineering in Machine Learning], [[Reinhard Sellmair]][How to handle correlated Features?]. The steps include:
+In the following, we follow several blogs to list of feature engineering procedures [[Ashish Bansal]][Need for Feature Engineering in Machine Learning], [[Reinhard Sellmair]][How to handle correlated Features?]. The feature selection processes include:
 
 ### 1. Remove zero standard deviation features.
 
+Of course, if a feature has only one value or all are missing values, it is not useful as a predictor in models.
+
 ### 2. Remove low variance features.
+
+On the other hand, if a low variance feature is not likely to be a predictor in models.
 
 ```Python
 from sklearn.feature_selection import VarianceThreshold
@@ -25,11 +29,13 @@ reduced_df = df.loc[:, mask]
 
    Correlation is a way to understand the relationship between multiple variables and attributes in your dataset [[Will Badr]][Why Feature Correlation Matters.. A Lot!].
    
-   The features A and B have high correlation coefficient meaning that the features are redundant which may lead to overfitting or mutlicollinearity. Though boosted trees algorithms are immune to multicollinearity by nature, the multicollinearity issue can mislead interpretation on feature importance when using linear model.
+   If features **A** and **B** have high correlation, it means that one of the features are redundant which may lead to overfitting or mutlicollinearity. Though boosted trees algorithms are immune to multicollinearity by nature, the multicollinearity issue can mislead interpretation on feature importance when using linear model.
    
    Note that correlation should not be interpreted as causation.
 
-   We can simply set `threshold value > 0.8` as threshold value but in reality it should depend on dataset. Depending on variable types (numeric and categorical), there are several ways to calculate correlation:
+   We can simply set `threshold value > 0.8` as threshold value but in reality it should depend on dataset. For example, if features **A** and **B** are highly correlated, we can retain the feature which has higher correlation with respect to target (dependent) variable.
+   
+   Depending on variable types (numeric and categorical), there are several ways to calculate correlation:
 
    #### 3A. Numeric attributes
 
