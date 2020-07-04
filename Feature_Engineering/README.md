@@ -53,6 +53,9 @@ reduced_df = df.loc[:, mask]
       return np.sqrt(phi2/min(r-1, k-1))
    ```
 
+   #### 3C. Between Categorical and Numeric Variables 
+
+   refer [[Outside Two Standard Deviations]][An overview of correlation measures between categorical and continuous variables].
 
 ### 4. Feature Reduction 
 
@@ -93,9 +96,13 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 [[Laerd] Spearman's Rank-Order Correlation](https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.)
 
 
+
+[An overview of correlation measures between categorical and continuous variables]: https://medium.com/@outside2SDs/an-overview-of-correlation-measures-between-categorical-and-continuous-variables-4c7f85610365
+[[Outside Two Standard Deviations] An overview of correlation measures between categorical and continuous variables](https://medium.com/@outside2SDs/an-overview-of-correlation-measures-between-categorical-and-continuous-variables-4c7f85610365)
+
+
 [How to handle correlated Features?]: https://www.kaggle.com/reisel/how-to-handle-correlated-features
 [[Reinhard Sellmair] Kaggle: How to handle correlated Features?](https://www.kaggle.com/reisel/how-to-handle-correlated-features)
-
 
 
 [The Search for Categorical Correlation]: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
