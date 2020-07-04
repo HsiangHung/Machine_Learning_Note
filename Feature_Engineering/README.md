@@ -33,7 +33,7 @@ reduced_df = df.loc[:, mask]
    
    Note that correlation should not be interpreted as causation.
 
-   We can simply set `threshold value > 0.8` to determine if features are highly-correlated, but in reality it should depend on dataset. For example, if feature **A** and **B** are highly correlated and **B** has higher correlation with respect to target (dependent) variable, we can retain the feature **B**.
+   We can simply set `threshold value > 0.8` to determine if features are highly-correlated, but in reality it should depend on dataset. For example, if feature **A** and **B** are highly correlated and **B** has higher correlation with respect to target (dependent) variable than **A**, we will retain feature **B**.
    
    Depending on variable types (numeric and categorical), there are several ways to calculate correlation:
 
