@@ -29,11 +29,11 @@ reduced_df = df.loc[:, mask]
 
    Correlation is a way to understand the relationship between multiple variables and attributes in your dataset [[Will Badr]][Why Feature Correlation Matters.. A Lot!].
    
-   If features **A** and **B** have high correlation, it means that one of the features are redundant which may lead to overfitting or mutlicollinearity. Though boosted trees algorithms are immune to multicollinearity by nature, the multicollinearity issue can mislead interpretation on feature importance when using linear model.
+   If feature **A** and **B** have high correlation, it means that one of the features are redundant which may lead to overfitting or mutlicollinearity. Though boosted trees algorithms are immune to multicollinearity by nature, the multicollinearity issue can mislead interpretation on feature importance when using linear model.
    
    Note that correlation should not be interpreted as causation.
 
-   We can simply set `threshold value > 0.8` to determine if features are highly-correlated, but in reality it should depend on dataset. For example, if features **A** and **B** are highly correlated, we can retain the feature which has higher correlation with respect to target (dependent) variable.
+   We can simply set `threshold value > 0.8` to determine if features are highly-correlated, but in reality it should depend on dataset. For example, if feature **A** and **B** are highly correlated and **B** has higher correlation with respect to target (dependent) variable, we can retain the feature **B**.
    
    Depending on variable types (numeric and categorical), there are several ways to calculate correlation:
 
