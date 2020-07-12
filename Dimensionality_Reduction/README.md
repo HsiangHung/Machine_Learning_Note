@@ -22,7 +22,19 @@ On the other hand, if the data variance along the first principal component occu
 
 ### When to use PCA? Before or After Train-Test Split?
 
-Here there is a blog to discuss the time to use PCA [[Divyesh Aegis]][When to use PCA before or after a train-test split?].
+Here there is a blog to discuss the time to use PCA [[Divyesh Aegis]][When to use PCA before or after a train-test split?]. The code shows below
+```Python
+## Performing standardization before applying PCA
+scaler = StandardScaler()
+scaler.fit(X_train)
+X_train = scaler.transform(X_train)
+
+pca = PCA(n_components = 5)
+pca.fit(X_train)
+print(pca.explained_variance_)
+X_train_pca = pca.transform(X_train)
+X_test_pca = pca.transform(X_test)
+```
 
 
 ## Autoencoder
