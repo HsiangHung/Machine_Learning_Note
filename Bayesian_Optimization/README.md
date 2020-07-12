@@ -5,7 +5,7 @@ Bayesian Optimization is useful to help us search optiaml hyperparameters. It is
 
 ## HyperOpt Code Example for LGBM
 
-There are [code examples](https://www.programcreek.com/python/example/98788/hyperopt.Trials) showing how to use hyperopt. Also an introduction [Jupyter Notebook](https://github.com/WillKoehrsen/hyperparameter-optimization/blob/master/Introduction%20to%20Bayesian%20Optimization%20with%20Hyperopt.ipynb)(from Will Koehrsen). 
+There are [code examples](https://www.programcreek.com/python/example/98788/hyperopt.Trials) showing how to use hyperopt. Also an introduction [Jupyter Notebook](https://github.com/WillKoehrsen/hyperparameter-optimization/blob/master/Introduction%20to%20Bayesian%20Optimization%20with%20Hyperopt.ipynb)  (by Will Koehrsen). 
 
 For LightGBM, please look for Project: **kddcup2019-automl**, Author: **shuyao95**, File: **automl.py** (example number may vary).
 
