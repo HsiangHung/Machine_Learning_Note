@@ -68,29 +68,29 @@ An autoencoder is a dimensionality reduction method using nonlinear transformati
 
 
 [Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
-[Arden Dertat, Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
+[[Arden Dertat] Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
 
 
 [When to use PCA before or after a train-test split?]: https://www.codementor.io/@divyeshaegis/when-to-use-pca-before-or-after-a-train-test-split-vxdrlu6ci
-[Divyesh Aegis, When to use PCA before or after a train-test split?](https://www.codementor.io/@divyeshaegis/when-to-use-pca-before-or-after-a-train-test-split-vxdrlu6ci)
+[[Divyesh Aegis] When to use PCA before or after a train-test split?](https://www.codementor.io/@divyeshaegis/when-to-use-pca-before-or-after-a-train-test-split-vxdrlu6ci)
 
 [Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
-[Elior Cohen, Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
+[[Elior Cohen] Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
 
 
 [What are some of the limitations of principal component analysis?]: https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis
-[Quroa, What are some of the limitations of principal component analysis?](https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis)
+[]Quroa] What are some of the limitations of principal component analysis?](https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis)
 
 
 [Limitations of Applying Dimensionality Reduction using PCA]: https://www.robertoreif.com/blog/2018/1/9/pca
-[Roberto Reif, Limitations of Applying Dimensionality Reduction using PCA](https://www.robertoreif.com/blog/2018/1/9/pca)
+[[Roberto Reif] Limitations of Applying Dimensionality Reduction using PCA](https://www.robertoreif.com/blog/2018/1/9/pca)
 
 
 [The DOs and DON’Ts of Principal Component Analysis]: https://medium.com/@sadatnazrul/the-dos-and-donts-of-principal-component-analysis-7c2e9dc8cc48
-[Syed Sadat Nazrul, The DOs and DON’Ts of Principal Component Analysis](https://medium.com/@sadatnazrul/the-dos-and-donts-of-principal-component-analysis-7c2e9dc8cc48)
+[[Syed Sadat Nazrul] The DOs and DON’Ts of Principal Component Analysis](https://medium.com/@sadatnazrul/the-dos-and-donts-of-principal-component-analysis-7c2e9dc8cc48)
 
 
 [The Curse of Dimensionality in classification]: http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/
-[Vincent Spruyt, The Curse of Dimensionality in classification](http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/)
+[[Vincent Spruyt] The Curse of Dimensionality in classification](http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/)
 
 
