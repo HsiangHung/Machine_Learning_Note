@@ -22,7 +22,7 @@ On the other hand, if the data variance along the first principal component occu
 
 ### When to use PCA? Before or After Train-Test Split?
 
-Here there is a blog to discuss the time to use PCA [[Divyesh Aegis]][When to use PCA before or after a train-test split?]. The code shows below
+Here there is a blog to discuss the time to use PCA [[Divyesh Aegis]][When to use PCA before or after a train-test split?]. Before fitting PCA, remember to standardize data. The code shows below
 ```Python
 ## Performing standardization before applying PCA
 scaler = StandardScaler()
