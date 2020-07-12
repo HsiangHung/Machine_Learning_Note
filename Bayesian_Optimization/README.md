@@ -1,9 +1,9 @@
 # Bayesian Optimization
 
-Bayesian Optimization is useful to help us search optiaml hyperparameters. It is particularly important in machine learnin; sometimes we need to fine tune hyperparameter to find optimal solution. Bayesian Optimization use historical information to efficiently find solution rather than grid search and random search.[[Mike Kraus]][Using Bayesian Optimization to reduce the time spent on hyperparameter tuning], [[Martin Krasser]][Bayesian optimization], [[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning].
+Bayesian Optimization is useful to help us search optiaml hyperparameters. It is particularly important in machine learnin; sometimes we need to fine tune hyperparameter to find optimal solution. Bayesian Optimization use historical information to efficiently find solution rather than grid search and random search.[[Mike Kraus]][Using Bayesian Optimization to reduce the time spent on hyperparameter tuning], [[Martin Krasser]][Bayesian optimization], [[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning], [[Matti Karppanen]][Bayesian Hyperparameter Optimization], [[Apoorv Agnihotri and Nipun Batra]][Exploring Bayesian Optimization].
 
 
-# HyperOpt Code Example for LGBM
+## HyperOpt Code Example for LGBM
 
 Code examples are [here](https://www.programcreek.com/python/example/98788/hyperopt.Trials). For LightGBM, look for Project: **kddcup2019-automl**, Author: **shuyao95**, File: **automl.py** (example number may vary).
 
@@ -82,11 +82,16 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 ## Reference
 
 
+[Exploring Bayesian Optimization]: https://distill.pub/2020/bayesian-optimization/
+[[Apoorv Agnihotri and Nipun Batra] Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/)
+
 
 [Bayesian optimization]: http://krasserm.github.io/2018/03/21/bayesian-optimization/
 [[Martin Krasser] Bayesian optimization](http://krasserm.github.io/2018/03/21/bayesian-optimization/)
 
 
+[Bayesian Hyperparameter Optimization]: https://towardsdatascience.com/bayesian-hyperparameter-optimization-17dc5834112d
+[[Matti Karppanen] Bayesian Hyperparameter Optimization](https://towardsdatascience.com/bayesian-hyperparameter-optimization-17dc5834112d)
 
 
 [Using Bayesian Optimization to reduce the time spent on hyperparameter tuning]: https://medium.com/vantageai/bringing-back-the-time-spent-on-hyperparameter-tuning-with-bayesian-optimisation-2e21a3198afb
