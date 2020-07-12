@@ -3,7 +3,7 @@
 Bayesian Optimization is useful to help us search optiaml hyperparameters. It is particularly important in machine learnin; sometimes we need to fine tune hyperparameter to find optimal solution. Bayesian Optimization use historical information to efficiently find solution rather than grid search and random search.[[Mike Kraus]][Using Bayesian Optimization to reduce the time spent on hyperparameter tuning].
 
 
-code examples are [here](https://www.programcreek.com/python/example/98788/hyperopt.Trials)
+Code examples are [here](https://www.programcreek.com/python/example/98788/hyperopt.Trials). For LightGBM, see **example 28**.
    
 
 
