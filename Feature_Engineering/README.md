@@ -71,7 +71,7 @@ The weight of evidence tells the predictive power of an independent variable in 
    WOE = ln|(Distribution of Goods)/(Distribution of Bads)|
 ```
 
-where `Distribution of Goods`/`Distribution of Bads` are % of Good Customers/% of Bad Customers in a particular group and `ln` is natural log.
+where `Distribution of Goods` and `Distribution of Bads` are % of Good Customers and % of Bad Customers in a particular group, respectively and `ln` is natural log.
 
 When IV < 0.02, the feature is a useless preditor. [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)], [[Sundar Krishnan]][Weight of evidence and Information Value using Python]
 
