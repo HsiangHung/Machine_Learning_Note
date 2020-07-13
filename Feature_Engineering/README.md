@@ -68,12 +68,12 @@ reduced_df = df.loc[:, mask]
 The weight of evidence tells the predictive power of an independent variable in relation to the dependent variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan. and "Good Customers" refers to the customers who paid back loan [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained]
 
 ```
-   WOE = ln((Distribution of Goods)/(Distribution of Bads))
+   WOE = ln|(Distribution of Goods)/(Distribution of Bads)|
 ```
 
 where `Distribution of Goods`/`Distribution of Bads` are % of Good Customers/% of Bad Customers in a particular group and `ln` is natural log.
 
-[[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)]
+When IV < 0.02, the feature is a useless preditor. [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)], [[Sundar Krishnan]][Weight of evidence and Information Value using Python]
 
 
 ### 5. Feature Selection By Machine Learning
@@ -134,12 +134,12 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 
 
 
-[]: 
-[[] ]()
-
-
 [The Search for Categorical Correlation]: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
 [[Shaked Zychlinski] The Search for Categorical Correlation](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
+
+
+[Weight of evidence and Information Value using Python]: https://medium.com/@sundarstyles89/weight-of-evidence-and-information-value-using-python-6f05072e83eb
+[[Sundar Krishnan] Weight of evidence and Information Value using Python](https://medium.com/@sundarstyles89/weight-of-evidence-and-information-value-using-python-6f05072e83eb)
 
 
 [Why Feature Correlation Matters.. A Lot!]: https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4
