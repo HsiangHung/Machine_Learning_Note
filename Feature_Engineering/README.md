@@ -63,7 +63,18 @@ reduced_df = df.loc[:, mask]
 
    refer [[Outside Two Standard Deviations]][An overview of correlation measures between categorical and continuous variables].
 
-### 4. Feature Selection By Machine Learning
+### 4. Information Value (IV) and Weight of Evidence (WOE)
+
+The weight of evidence tells the predictive power of an independent variable in relation to the dependent variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan. and "Good Customers" refers to the customers who paid back loan [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained]
+
+   WOE = ln(Distribution of Goods - % of Good Customers in a particular group)/ (Distribution of Bads - % of Bad Customers in a particular group)
+
+where `ln` is natural log.
+
+[[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)]
+
+
+### 5. Feature Selection By Machine Learning
 
 Finding out the coefficients with respect to features using logistic regression or with L1 regularization. Remove those features which have low coefficients. 
 
@@ -100,6 +111,10 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 [[Ashish Bansal] Need for Feature Engineering in Machine Learning](https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6)
 
 
+[Weight of evidence (WOE) and information value (IV) explained]: https://www.listendata.com/2015/03/weight-of-evidence-woe-and-information.html
+[[Deepanshu Bhalla] Weight of evidence (WOE) and information value (IV) explained](https://www.listendata.com/2015/03/weight-of-evidence-woe-and-information.html)
+
+
 [Spearman's Rank-Order Correlation]: https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.
 [[Laerd] Spearman's Rank-Order Correlation](https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.)
 
@@ -110,6 +125,15 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 
 [How to handle correlated Features?]: https://www.kaggle.com/reisel/how-to-handle-correlated-features
 [[Reinhard Sellmair] Kaggle: How to handle correlated Features?](https://www.kaggle.com/reisel/how-to-handle-correlated-features)
+
+
+[Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)]: http://ucanalytics.com/blogs/information-value-and-weight-of-evidencebanking-case/
+[[Roopam Upadhyay] Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)](http://ucanalytics.com/blogs/information-value-and-weight-of-evidencebanking-case/)
+
+
+
+[]: 
+[[] ]()
 
 
 [The Search for Categorical Correlation]: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
