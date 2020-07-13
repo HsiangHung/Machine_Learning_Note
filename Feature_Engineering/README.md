@@ -79,7 +79,7 @@ Information value (IV) is the the sum over all bins:
 ```
   IV = Sum ((Distribution of Goods for bin i) - (Distribution of Bads for bin i)) * WOE(i)
 ```
-A feature with IV < 0.02 suggests it is a useless preditor. [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)], [[Sundar Krishnan]][Weight of evidence and Information Value using Python] and in feature engineering we can remove it. `0.3 < IV < 0.5` indicates a strong predictor. If `IV > 0.5`, instead we should be suspicious to check it is useful. 
+A feature with IV < 0.02 suggests it is a useless preditor. [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)], [[Sundar Krishnan]][Weight of evidence and Information Value using Python], [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained] and in feature engineering we can remove it. `0.3 < IV < 0.5` indicates a strong predictor. If `IV > 0.5`, instead we should be suspicious to check it is useful. 
 
 
 ### 5. Feature Selection By Machine Learning
