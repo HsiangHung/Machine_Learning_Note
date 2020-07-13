@@ -63,7 +63,9 @@ reduced_df = df.loc[:, mask]
 
    refer [[Outside Two Standard Deviations]][An overview of correlation measures between categorical and continuous variables].
 
-### 4. Feature Reduction 
+### 4. Feature Selection By Machine Learning
+
+Finding out the coefficients with respect to features using logistic regression or with L1 regularization. Remove those features which have low coefficients. 
 
 
 
@@ -100,7 +102,6 @@ The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-b
 
 [Spearman's Rank-Order Correlation]: https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.
 [[Laerd] Spearman's Rank-Order Correlation](https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.)
-
 
 
 [An overview of correlation measures between categorical and continuous variables]: https://medium.com/@outside2SDs/an-overview-of-correlation-measures-between-categorical-and-continuous-variables-4c7f85610365
