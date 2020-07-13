@@ -84,7 +84,7 @@ XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost th
 
 ## 4. LightGBM
 
-LightGBM (LGBM) model is a relatively newer model. Rather than level-wise tree growth in regular decision tree algorithms [[Github] Github: LGBM], 
+LightGBM (LGBM) model is a relatively newer model. Rather than level-wise tree growth in regular decision tree algorithms [[Github]][Github: LGBM], 
 
 ![level_wise](images/level-wise.png)
 
