@@ -65,14 +65,20 @@ reduced_df = df.loc[:, mask]
 
 ### 4. Information Value (IV) and Weight of Evidence (WOE)
 
-The weight of evidence tells the predictive power of an independent variable in relation to the dependent variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan. and "Good Customers" refers to the customers who paid back loan [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained]
+The weight of evidence tells the predictive power of an **independent** variable (predictor) in relation to the **dependent** variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan, and "Good Customers" refers to the customers who paid back loan. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained], [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)] In a particular group, WOE reads
 
 ```
-   WOE = ln|(Distribution of Goods)/(Distribution of Bads)|
+  WOE = ln|(Distribution of Goods)/(Distribution of Bads)|
 ```
 
-where `Distribution of Goods` and `Distribution of Bads` are % of Good Customers and % of Bad Customers in a particular group, respectively and `ln` is natural log.
+where `Distribution of Goods` and `Distribution of Bads` mean % of Good Customers over all Good customers and % of Bad Customers over bad customers in this group, respectively and `ln` is natural log. 
 
+To calulate WOE, we need to create bins (like every 5%, or a equal value range) for a continuous independent variable (if catgeorical, no need). Fewer bins, more smoothing and leave out noise. For each bin, we have a WOE. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained] has discussion on binning.
+
+Information value (IV) is the sum over binning:
+```
+  IV = Sum ((Distribution of Goods for bin i) - (Distribution of Bads for bin i)) * WOE(i)
+```
 When IV < 0.02, the feature is a useless preditor. [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)], [[Sundar Krishnan]][Weight of evidence and Information Value using Python]
 
 
