@@ -75,11 +75,11 @@ where `Distribution of Goods` and `Distribution of Bads` mean % of Good Customer
 
 To calulate WOE, we need to create bins (like every 5%, or a equal value range) for a continuous independent variable (if catgeorical, no need). Fewer bins, more smoothing and leave out noise. For each bin, we have a WOE. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained] has discussion on binning.
 
-Information value (IV) is the sum over binning:
+Information value (IV) is the the sum over all bins:
 ```
   IV = Sum ((Distribution of Goods for bin i) - (Distribution of Bads for bin i)) * WOE(i)
 ```
-When IV < 0.02, the feature is a useless preditor. [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)], [[Sundar Krishnan]][Weight of evidence and Information Value using Python]
+When IV < 0.02, the feature is a useless preditor. [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)], [[Sundar Krishnan]][Weight of evidence and Information Value using Python] and we can remove it.
 
 
 ### 5. Feature Selection By Machine Learning
