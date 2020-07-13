@@ -96,13 +96,11 @@ which shows faster performance [[Analytics Vidhya]][Which algorithm takes the cr
 
 Another good introduction is given by [[Andrich van Wyk]][An Overview of LightGBM]. The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Python-Intro.html) as well as [the model hyperparameter list](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The guide page and [[Andrich van Wyk] An Overview of LightGBM] show how to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html). They summarize as:
 
-    max_bin: the maximum numbers bins that feature values are bucketed in. A smaller max_bin reduces overfitting.
-
-    min_child_weight: the minimum sum hessian for a leaf. In conjuction with min_child_samples, larger values reduce overfitting.
-    
-    bagging_fraction and bagging_freq: enables bagging (subsampling) of the training data. Both values need to be set for bagging to be used. The frequency controls how often (iteration) bagging is used. Smaller fractions and frequencies reduce overfitting.
-    feature_fraction: controls the subsampling of features used for training (as opposed to subsampling the actual training data in the case of bagging). Smaller fractions reduce overfitting.
-    lambda_l1 and lambda_l2: controls L1 and L2 regularization.
+1. max_bin: the maximum numbers bins that feature values are bucketed in. A smaller max_bin reduces overfitting.
+2. min_child_weight: the minimum sum hessian for a leaf. In conjuction with min_child_samples, larger values reduce overfitting.
+3. bagging_fraction and bagging_freq: enables bagging (subsampling) of the training data. Both values need to be set for bagging to be used. The frequency controls how often (iteration) bagging is used. Smaller fractions and frequencies reduce overfitting.
+4. feature_fraction: controls the subsampling of features used for training (as opposed to subsampling the actual training data in the case of bagging). Smaller fractions reduce overfitting.
+5. lambda_l1 and lambda_l2: controls L1 and L2 regularization.
 
 
 
