@@ -67,9 +67,11 @@ reduced_df = df.loc[:, mask]
 
 The weight of evidence tells the predictive power of an independent variable in relation to the dependent variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan. and "Good Customers" refers to the customers who paid back loan [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained]
 
-   WOE = ln(Distribution of Goods - % of Good Customers in a particular group)/ (Distribution of Bads - % of Bad Customers in a particular group)
+```
+   WOE = ln((Distribution of Goods)/(Distribution of Bads))
+```
 
-where `ln` is natural log.
+where `Distribution of Goods`/`Distribution of Bads` are % of Good Customers/% of Bad Customers in a particular group and `ln` is natural log.
 
 [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)]
 
