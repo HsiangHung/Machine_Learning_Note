@@ -22,12 +22,15 @@ On the other hand, if the data variance along the first principal component occu
 
 ### When to use PCA? Before or After Train-Test Split?
 
-Here there is a blog to discuss the time to use PCA [[Divyesh Aegis]][When to use PCA before or after a train-test split?]. Before fitting PCA, remember to standardize data. The code shows below
+Here there is a blog to discuss the time to use PCA [[Divyesh Aegis]][When to use PCA before or after a train-test split?]. Before fitting PCA, remember to standardize data. The code shows below [[Divyesh Aegis]][When to use PCA before or after a train-test split?], [[Michael Galarnyk]][PCA using Python (scikit-learn)]
 ```Python
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
 ## Performing standardization before applying PCA
 scaler = StandardScaler()
 scaler.fit(X_train)
 X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
 
 pca = PCA(n_components = 5)
 pca.fit(X_train)
@@ -76,6 +79,10 @@ An autoencoder is a dimensionality reduction method using nonlinear transformati
 
 [Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
 [[Elior Cohen] Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
+
+
+[PCA using Python (scikit-learn)]: https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60
+[[Michael Galarnyk] PCA using Python (scikit-learn)](https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60)
 
 
 [What are some of the limitations of principal component analysis?]: https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis
