@@ -38,7 +38,7 @@ print(pca.explained_variance_)
 X_train_pca = pca.transform(X_train)
 X_test_pca = pca.transform(X_test)
 ```
-
+We need to split training and test datasets before standardizing and PCA.
 
 ## Autoencoder
    
