@@ -47,6 +47,10 @@ reduced_df = df.loc[:, mask]
    
    #### 3B. Categorical attributes
 
+
+   The simplest way to convert a categorical attribute is using dummy variable, called **One-Hot Encoding**. This approach however may expand feature dimenionality. Theoretically it could be exponential growth.
+
+
    [`Cramér’s V`](https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V) is based on a nominal variation of [**Pearson’s Chi-Square Test**](https://machinelearningmastery.com/chi-squared-test-for-machine-learning/). The output is in the range of [0,1], where 0 means no association and 1 is full association. Unlike correlation, there are no negative values [[Shaked Zychlinski]][The Search for Categorical Correlation]. Like correlation, Cramer’s V is symmetrical — it is insensitive to swapping x and y. The blog author Shaked Zychlinski indicated the code to compute the correlation:
 
    ```Python
@@ -65,15 +69,15 @@ reduced_df = df.loc[:, mask]
 
 ### 4. Information Value (IV) and Weight of Evidence (WOE)
 
-The weight of evidence tells the predictive power of an **independent** variable (predictor) in relation to the **dependent** variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan, and "Good Customers" refers to the customers who paid back loan. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained], [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)] In a particular group, WOE reads
+The weight of evidence tells the predictive power of an **independent** variable (predictor) in relation to the **dependent** variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan, and "Good Customers" refers to the customers who paid back loan. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained], [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)] In a particular group (bin), WOE reads
 
 ```
   WOE = ln|(Distribution of Goods)/(Distribution of Bads)|
 ```
 
-where `Distribution of Goods` and `Distribution of Bads` mean % of Good Customers over all Good customers and % of Bad Customers over bad customers in this group, respectively and `ln` is natural log. 
+where `Distribution of Goods` and `Distribution of Bads` mean % of Good Customers over all Good customers and % of Bad Customers over bad customers in this group (bin), respectively and `ln` is natural log. 
 
-To calulate WOE, we need to create bins (like every 10% population, or a equal value range like age 20-30, 30-40...) for a continuous independent variable (if catgeorical, no need). Fewer bins, more smoothing and leave out noise. For each bin, we have a WOE. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained] has discussion on binning.
+To calulate WOE, we need to create bins (like every 10% population, or a equal value range like age 20-30, 30-40...) for a continuous independent variable (if catgeorical, no need). Fewer bins, more smoothing and leave out noise. For each bin, we have a WOE. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained] has more detailed discussion on binning continuous variable.
 
 Information value (IV) is the the sum over all bins:
 ```
