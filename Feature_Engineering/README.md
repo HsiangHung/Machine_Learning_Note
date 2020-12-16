@@ -69,7 +69,7 @@ reduced_df = df.loc[:, mask]
 
 ### 4. Information Value (IV) and Weight of Evidence (WOE)
 
-The weight of evidence tells the predictive power of an **independent** variable (predictor) in relation to the **dependent** variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan, and "Good Customers" refers to the customers who paid back loan. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained], [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)] In a particular group (bin), WOE reads
+The weight of evidence tells the predictive power of an **independent** variable (predictor) in relation to the **dependent** variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan and won't pay back, and "Good Customers" refers to the customers who paid back loan. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained], [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)] In a particular group (bin), WOE reads
 
 ```
   WOE = ln|(Distribution of Goods)/(Distribution of Bads)|
@@ -100,11 +100,6 @@ Finding out the coefficients with respect to features using logistic regression 
 
 ## Summary
 
-The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d) shows very nice and decent diagrams to interpret the difference between bagging and boosting. 
-
-![ensembling](images/ensembling.png)
-
-![bagging_and_boostin](images/bagging_and_boosting.png)
 
 
 
