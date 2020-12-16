@@ -69,11 +69,7 @@ reduced_df = df.loc[:, mask]
 
 ### 4. Information Value (IV) and Weight of Evidence (WOE)
 
-The weight of evidence tells the predictive power of an **independent** variable (predictor) in relation to the **dependent** variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan and won't pay back, and "Good Customers" refers to the customers who paid back loan. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained], [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)] In a particular group (bin), WOE reads
-
-```
-  WOE = ln|(Distribution of Goods)/(Distribution of Bads)|
-```
+The weight of evidence tells the predictive power of an **independent** variable (predictor) in relation to the **dependent** variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan and won't pay back, and "Good Customers" refers to the customers who paid back loan. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained], [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)] In a particular group, say bin-i, WOE reads
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\text{WOE}_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{WOE}_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big]" title="\text{WOE}_i = \ln \Big[ \frac{ \text{% of Good (nonfraud) in bin-i} } {\text{% of Bad (fraud) in bin-i}} \Big]" /></a>
 
