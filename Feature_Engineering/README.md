@@ -75,7 +75,7 @@ The weight of evidence tells the predictive power of an **independent** variable
 
 
 
-where `Distribution of Goods` and `Distribution of Bads` mean % of Good Customers over all Good customers and % of Bad Customers over bad customers in this group (bin), respectively and `ln` is natural log. 
+where `% of Goods` and `% of Bads` mean that % of Good Customers in the bin-i over all Good customers and % of Bad Customers in the bin-i over bad customers in this group (bin), respectively and `ln` is natural log. 
 
 To calulate WOE, we need to create bins (like every 10% population, or a equal value range like age 20-30, 30-40...) for a continuous independent variable (if catgeorical, no need). Fewer bins, more smoothing and leave out noise. For each bin, we have a WOE. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained] has more detailed discussion on binning continuous variable.
 
