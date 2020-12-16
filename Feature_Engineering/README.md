@@ -83,11 +83,14 @@ The weight of evidence tells the predictive power of an **independent** variable
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\text{WOE}_i&space;=&space;\ln&space;\Big(&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{WOE}_i&space;=&space;\ln&space;\Big(&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big)" title="\text{WOE}_i = \ln \Big() \frac{ \text{% of Good (nonfraud) in bin-i} } {\text{% of Bad (fraud) in bin-i}} \Big)," /></a>
 
-where `% of Goods` and `% of Bads` mean that % of Good Customers in the bin-i over all Good customers and % of Bad Customers in the bin-i over bad customers in this group (bin), respectively and `ln` is natural log. 
+where `% of Goods` and `% of Bads` mean that % of Good Customers in the bin-`i` over all Good customers,  and % of Bad Customers in the bin-`i` over bad customers, respectively and `ln` is natural log. Note that for each bin, there is one WOE.
 
 To calulate WOE, we need to create bins (like every 10% population, or a equal value range like age 20-30, 30-40...) for a continuous independent variable (if catgeorical, no need). Fewer bins, more smoothing and leave out noise. For each bin, we have a WOE. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained] has more detailed discussion on binning continuous variable.
 
 Information value (IV) is the the sum over all bins:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=IV&space;=&space;\sum_i&space;\big(&space;\text{%&space;of&space;Good&space;in&space;bin-i}&space;-\text{%&space;of&space;Bad&space;in&space;bin-i}&space;\big)*\text{WOE}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?IV&space;=&space;\sum_i&space;\big(&space;\text{%&space;of&space;Good&space;in&space;bin-i}&space;-\text{%&space;of&space;Bad&space;in&space;bin-i}&space;\big)*\text{WOE}_i" title="IV = \sum_i \big( \text{% of Good in bin-i} -\text{% of Bad in bin-i} \big)*\text{WOE}_i" /></a>
+
 ```
   IV = Sum ((Distribution of Goods for bin i) - (Distribution of Bads for bin i)) * WOE(i)
 ```
