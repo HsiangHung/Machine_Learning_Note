@@ -43,7 +43,7 @@ reduced_df = df.loc[:, mask]
 
    <a href="https://www.codecogs.com/eqnedit.php?latex=\rho_{x,y}&space;=&space;\frac{\sum_i&space;(x_i&space;-&space;\bar{x})(y_i-\bar{y})}{\sigma_x&space;\sigma_y}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\rho_{x,y}&space;=&space;\frac{\sum_i&space;(x_i&space;-&space;\bar{x})(y_i-\bar{y})}{\sigma_x&space;\sigma_y}," title="\rho_{x,y} = \frac{\sum_i (x_i - \bar{x})(y_i-\bar{y})}{\sigma_x \sigma_y}," /></a>
    
-   where <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma_x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma_x" title="\sigma_x" /></a> the standard deviation of `x`. The Pearson coefficient score used `pearsonr(X,Y)` and the first value is the Pearson Correlation Coefficients and the second value is the P-value.
+   where <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma_x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma_x" title="\sigma_x" /></a> the standard deviation of `x`. The Pearson coefficient score used `pearsonr(X,Y)` from [scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html) and the first value is the Pearson Correlation Coefficients and the second value is the P-value.
 
    `Spearman Correlation Coefficient` or called `Spearman's Rank-Order Correlation` is used if variables have a **non-linear** relationship. It can also be used with **ordinal** categorical variables, and determines the strength and direction of the **monotonic relationship** between your two variables [[Laerd]][Spearman's Rank-Order Correlation]. You can get the Spearman coefficient score by running: `scipy.stats.spearmanr(X,Y)`.
 
