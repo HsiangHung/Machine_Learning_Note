@@ -41,7 +41,8 @@ reduced_df = df.loc[:, mask]
 
    `Pearson Correlation Coefficient` can be used with **continuous** variables that have a **linear** relationship, defined as
 
-   <a href="https://www.codecogs.com/eqnedit.php?latex=\rho_{x,y}&space;=&space;\frac{\sum_i&space;(x_i&space;-&space;\bar{x})(y_i-\bar{y})}{\sigma_x&space;\sigma_y}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\rho_{x,y}&space;=&space;\frac{\sum_i&space;(x_i&space;-&space;\bar{x})(y_i-\bar{y})}{\sigma_x&space;\sigma_y}" title="\rho_{x,y} = \frac{\sum_i (x_i - \bar{x})(y_i-\bar{y})}{\sigma_x \sigma_y}" /></a>
+   <a href="https://www.codecogs.com/eqnedit.php?latex=\rho_{x,y}&space;=&space;\frac{\sum_i&space;(x_i&space;-&space;\bar{x})(y_i-\bar{y})}{\sigma_x&space;\sigma_y}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\rho_{x,y}&space;=&space;\frac{\sum_i&space;(x_i&space;-&space;\bar{x})(y_i-\bar{y})}{\sigma_x&space;\sigma_y}" title="\rho_{x,y} = \frac{\sum_i (x_i - \bar{x})(y_i-\bar{y})}{\sigma_x \sigma_y}," /></a>
+   
    where <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma_x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma_x" title="\sigma_x" /></a> the standard deviation of `x`. The Pearson coefficient score used `pearsonr(X,Y)` and the first value is the Pearson Correlation Coefficients and the second value is the P-value.
 
    `Spearman Correlation Coefficient` or called `Spearman's Rank-Order Correlation` is used if variables have a **non-linear** relationship. It can also be used with **ordinal** categorical variables, and determines the strength and direction of the **monotonic relationship** between your two variables [[Laerd]][Spearman's Rank-Order Correlation]. You can get the Spearman coefficient score by running: `scipy.stats.spearmanr(X,Y)`.
@@ -56,7 +57,7 @@ reduced_df = df.loc[:, mask]
 
    [`Cramér’s V`](https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V) is based on a nominal variation of [**Pearson’s Chi-Square Test**](https://machinelearningmastery.com/chi-squared-test-for-machine-learning/), defined as
 
-   <a href="https://www.codecogs.com/eqnedit.php?latex=V&space;=&space;\Big(\frac{\chi^2/n}{\text{min}(k-1,&space;r-1)}&space;\Big)^{0.5}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V&space;=&space;\Big(\frac{\chi^2/n}{\text{min}(k-1,&space;r-1)}&space;\Big)^{0.5}" title="V = \Big(\frac{\chi^2/n}{\text{min}(k-1, r-1)} \Big)^{0.5}" /></a>
+   <a href="https://www.codecogs.com/eqnedit.php?latex=V&space;=&space;\Big(\frac{\chi^2/n}{\text{min}(k-1,&space;r-1)}&space;\Big)^{0.5}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V&space;=&space;\Big(\frac{\chi^2/n}{\text{min}(k-1,&space;r-1)}&space;\Big)^{0.5}" title="V = \Big(\frac{\chi^2/n}{\text{min}(k-1, r-1)} \Big)^{0.5}," /></a>
 
    where <a href="https://www.codecogs.com/eqnedit.php?latex=\chi^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\chi^2" title="\chi^2" /></a> is derived from Pearson's chi-squared test, `n` is the grand total of observations, `k` being the number of columns and `r` being the number of rows. 
 
@@ -80,9 +81,7 @@ reduced_df = df.loc[:, mask]
 
 The weight of evidence tells the predictive power of an **independent** variable (predictor) in relation to the **dependent** variable. Since it evolved from credit scoring world, it is generally described as a measure of the separation of good and bad customers. "Bad Customers" refers to the customers who defaulted on a loan and won't pay back, and "Good Customers" refers to the customers who paid back loan. [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained], [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)] In a particular group, say bin-i, WOE reads
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\text{WOE}_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{WOE}_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big]" title="\text{WOE}_i = \ln \Big[ \frac{ \text{% of Good (nonfraud) in bin-i} } {\text{% of Bad (fraud) in bin-i}} \Big]" /></a>
-
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\text{WOE}_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{WOE}_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big]" title="\text{WOE}_i = \ln \Big[ \frac{ \text{% of Good (nonfraud) in bin-i} } {\text{% of Bad (fraud) in bin-i}} \Big]," /></a>
 
 where `% of Goods` and `% of Bads` mean that % of Good Customers in the bin-i over all Good customers and % of Bad Customers in the bin-i over bad customers in this group (bin), respectively and `ln` is natural log. 
 
