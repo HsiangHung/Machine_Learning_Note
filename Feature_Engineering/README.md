@@ -51,7 +51,15 @@ reduced_df = df.loc[:, mask]
    The simplest way to convert a categorical attribute is using dummy variable, called **One-Hot Encoding**. This approach however may expand feature dimenionality. Theoretically it could be exponential growth.
 
 
-   [`Cramér’s V`](https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V) is based on a nominal variation of [**Pearson’s Chi-Square Test**](https://machinelearningmastery.com/chi-squared-test-for-machine-learning/). The output is in the range of [0,1], where 0 means no association and 1 is full association. Unlike correlation, there are no negative values [[Shaked Zychlinski]][The Search for Categorical Correlation]. Like correlation, Cramer’s V is symmetrical — it is insensitive to swapping x and y. The blog author Shaked Zychlinski indicated the code to compute the correlation:
+   [`Cramér’s V`](https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V) is based on a nominal variation of [**Pearson’s Chi-Square Test**](https://machinelearningmastery.com/chi-squared-test-for-machine-learning/), defined as
+
+   <a href="https://www.codecogs.com/eqnedit.php?latex=V&space;=&space;\Big(\frac{\chi^2/n}{\text{min}(k-1,&space;r-1)}&space;\Big)^{0.5}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V&space;=&space;\Big(\frac{\chi^2/n}{\text{min}(k-1,&space;r-1)}&space;\Big)^{0.5}" title="V = \Big(\frac{\chi^2/n}{\text{min}(k-1, r-1)} \Big)^{0.5}" /></a>
+
+   where <a href="https://www.codecogs.com/eqnedit.php?latex=\chi^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\chi^2" title="\chi^2" /></a> is derived from Pearson's chi-squared test
+`n` is the grand total of observations and
+`k` being the number of columns.
+`r` being the number of rows. 
+   The output is in the range of [0,1], where 0 means no association and 1 is full association. Unlike correlation, there are no negative values [[Shaked Zychlinski]][The Search for Categorical Correlation]. Like correlation, Cramer’s V is symmetrical — it is insensitive to swapping x and y. The blog author Shaked Zychlinski indicated the code to compute the correlation:
 
    ```Python
    def cramers_v(x, y):
