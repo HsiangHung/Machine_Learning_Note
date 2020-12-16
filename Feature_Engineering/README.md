@@ -75,7 +75,8 @@ The weight of evidence tells the predictive power of an **independent** variable
   WOE = ln|(Distribution of Goods)/(Distribution of Bads)|
 ```
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=WOE_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{Distribution&space;of&space;Good&space;(nonfraud)}&space;}&space;{\text{Distribution&space;of&space;Bad&space;(fraud)}}&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?WOE_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{Distribution&space;of&space;Good&space;(nonfraud)}&space;}&space;{\text{Distribution&space;of&space;Bad&space;(fraud)}}&space;\Big]" title="WOE_i = \ln \Big[ \frac{ \text{Distribution of Good (nonfraud)} } {\text{Distribution of Bad (fraud)}} \Big]" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\text{WOE}_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{WOE}_i&space;=&space;\ln&space;\Big[&space;\frac{&space;\text{%&space;of&space;Good&space;(nonfraud)&space;in&space;bin-i}&space;}&space;{\text{%&space;of&space;Bad&space;(fraud)&space;in&space;bin-i}}&space;\Big]" title="\text{WOE}_i = \ln \Big[ \frac{ \text{% of Good (nonfraud) in bin-i} } {\text{% of Bad (fraud) in bin-i}} \Big]" /></a>
+
 
 
 where `Distribution of Goods` and `Distribution of Bads` mean % of Good Customers over all Good customers and % of Bad Customers over bad customers in this group (bin), respectively and `ln` is natural log. 
