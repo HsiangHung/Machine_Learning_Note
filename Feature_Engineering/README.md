@@ -97,7 +97,7 @@ A feature with IV < 0.02 suggests it is a useless preditor. [[Roopam Upadhyay]][
 
 ### 5. Feature Selection By Machine Learning
 
-Finding out the coefficients with respect to features using logistic regression or with L1 regularization. Remove those features which have low coefficients. 
+Finding out the coefficients with respect to features using logistic regression or with `L1 regularization` (Lasso). Remove those features which have low coefficients. 
 
 
 
