@@ -89,7 +89,8 @@ To calulate WOE, we need to create bins (like every 10% population, or a equal v
 
 Information value (IV) is the the sum over all bins:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=IV&space;=&space;\sum_i&space;\big(&space;\text{%&space;of&space;Good&space;in&space;bin-i}&space;-\text{%&space;of&space;Bad&space;in&space;bin-i}&space;\big)*\text{WOE}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?IV&space;=&space;\sum_i&space;\big(&space;\text{%&space;of&space;Good&space;in&space;bin-i}&space;-\text{%&space;of&space;Bad&space;in&space;bin-i}&space;\big)*\text{WOE}_i" title="IV = \sum_i \big( \text{% of Good in bin-i} -\text{% of Bad in bin-i} \big)*\text{WOE}_i" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=IV&space;=&space;\sum_i&space;\Big[&space;\big(\text{%&space;of&space;Good&space;in&space;bin-i}\big)&space;-&space;\big(&space;\text{%&space;of&space;Bad&space;in&space;bin-i}&space;\big)&space;\Big]*\text{WOE}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?IV&space;=&space;\sum_i&space;\Big[&space;\big(\text{%&space;of&space;Good&space;in&space;bin-i}\big)&space;-&space;\big(&space;\text{%&space;of&space;Bad&space;in&space;bin-i}&space;\big)&space;\Big]*\text{WOE}_i" title="IV = \sum_i \Big[ \big(\text{% of Good in bin-i}\big) - \big( \text{% of Bad in bin-i} \big) \Big]*\text{WOE}_i" /></a>
+
 
 A feature with IV < 0.02 suggests it is a useless preditor. [[Roopam Upadhyay]][Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)], [[Sundar Krishnan]][Weight of evidence and Information Value using Python], [[Deepanshu Bhalla]][Weight of evidence (WOE) and information value (IV) explained] and in feature engineering we can remove it. `0.3 < IV < 0.5` indicates a strong predictor. If `IV > 0.5`, instead we should be suspicious to check it is useful. 
 
