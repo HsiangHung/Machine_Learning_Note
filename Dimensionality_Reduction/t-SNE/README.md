@@ -3,7 +3,7 @@
 
 
 
-Fine tune hyperparameter: [[Nikolay Oskolkov]][How to tune hyperparameters of tSNE] lists DO’s and DON'ts points. 
+Fine tune hyperparameter: [[Nikolay Oskolkov]][How to tune hyperparameters of tSNE] 
 
 
 
