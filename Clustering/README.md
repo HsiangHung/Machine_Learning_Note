@@ -28,7 +28,7 @@ We now define a silhouette (value) of one data point `i`
 
 From the above definition it is clear that `s(i) = [-1, 1]`.
 
-The silhouette score can be computed using Scikit-learn. [The sklearn page](https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html) shows a example. From our bare eyes, the best outcome is given by 4 clusters. We can visualize silhouette score `s(i)` for each data point in different clusters:
+The silhouette score can be computed using Scikit-learn. [The sklearn page](https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html) shows an excellent example. From our bare eyes, the best outcome is given by 4 clusters. We can visualize silhouette score `s(i)` for each data point in different clusters:
 
 ![silhouette_n_2](images/silhouette_n2.png)
 ![silhouette_n_3](images/silhouette_n3.png)
@@ -36,7 +36,7 @@ The silhouette score can be computed using Scikit-learn. [The sklearn page](http
 ![silhouette_n_5](images/silhouette_n5.png)
 ![silhouette_n_6](images/silhouette_n6.png)
 
-and we see the 4 clusters (execpet for 2 clusters) certainly gives the highest silhouette score.
+and we see the 4 clusters (execpet for 2 clusters) certainly gives the highest silhouette score from the page.
 ```
 For n_clusters = 2 The average silhouette_score is : 0.7049787496083262 
 For n_clusters = 3 The average silhouette_score is : 0.5882004012129721
@@ -52,8 +52,6 @@ For n_clusters = 6 The average silhouette_score is : 0.4504666294372765
 
 [How to do Unsupervised Clustering with Keras]: https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/
 [[Chengwei] How to do Unsupervised Clustering with Keras](https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/)
-
-
 
 
 [Deep Clustering for Financial Market Segmentation]: https://towardsdatascience.com/deep-clustering-for-financial-market-segmentation-2a41573618cf
