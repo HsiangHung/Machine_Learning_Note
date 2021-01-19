@@ -1,7 +1,7 @@
 
 # Unsupervised Clustering 
 
-DBSCAN, K-means, Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation].
+DBSCAN, K-means, Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation] and [[Chengwei]][How to do Unsupervised Clustering with Keras].
 
 
 ## Metric
@@ -39,6 +39,9 @@ From the above definition it is clear that `s(i) = [-1, 1]`.
 
 ## Reference
 
+
+[How to do Unsupervised Clustering with Keras]: https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/
+[[Chengwei] How to do Unsupervised Clustering with Keras](https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/)
 
 
 
