@@ -1,7 +1,7 @@
 
-# Unsupervised Clustering 
+#  Deep Embedded Clustering (DEC)
 
-DBSCAN, K-means, Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation] and [[Chengwei]][How to do Unsupervised Clustering with Keras].
+Deep Learning using AutoEncoder and K-means clustering [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation] and [[Chengwei]][How to do Unsupervised Clustering with Keras].
 
 
 
