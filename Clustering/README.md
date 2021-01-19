@@ -20,7 +20,11 @@ Next we can define **dissimilarity** by considering the mean distance from `i` t
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;b(i)=\min&space;_{k\neq&space;i}{\frac&space;{1}{|C_{k}|}}\sum&space;_{j\in&space;C_{k}}d(i,j)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;b(i)=\min&space;_{k\neq&space;i}{\frac&space;{1}{|C_{k}|}}\sum&space;_{j\in&space;C_{k}}d(i,j)}" title="{\displaystyle b(i)=\min _{k\neq i}{\frac {1}{|C_{k}|}}\sum _{j\in C_{k}}d(i,j)}" /></a>
 
-Note here we use `min`: the cluster with this smallest mean dissimilarity is said to be the "neighboring cluster" of `C_i`.
+Note here we have `min`, meaning the cluster with this smallest mean dissimilarity is said to be the "neighboring cluster" of `C_i`.
+
+We now define a silhouette (value) of one data point `i`
+
+<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}}},&space;if&space;{\displaystyle&space;|C_{i}|>1}{\displaystyle&space;|C_{i}|>1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}}},&space;if&space;{\displaystyle&space;|C_{i}|>1}{\displaystyle&space;|C_{i}|>1}" title="{\displaystyle s(i)={\frac {b(i)-a(i)}{\max\{a(i),b(i)\}}}}, if {\displaystyle |C_{i}|>1}{\displaystyle |C_{i}|>1}" /></a>
 
 
 ![inter_class_variance](images/inter_class_variance.png)
