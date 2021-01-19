@@ -52,6 +52,9 @@ An autoencoder is a dimensionality reduction method using nonlinear transformati
 [[Vincent Spruyt]][The Curse of Dimensionality in classification]
 
 
+## t-SNE
+
+
 
 ## Summary
 
