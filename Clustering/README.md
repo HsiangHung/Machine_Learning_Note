@@ -24,7 +24,9 @@ Note here we have `min`, meaning the cluster with this smallest mean dissimilari
 
 We now define a silhouette (value) of one data point `i`
 
-<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}}},&space;if&space;{\displaystyle&space;|C_{i}|>1}{\displaystyle&space;|C_{i}|>1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}}},&space;if&space;{\displaystyle&space;|C_{i}|>1}{\displaystyle&space;|C_{i}|>1}" title="{\displaystyle s(i)={\frac {b(i)-a(i)}{\max\{a(i),b(i)\}}}}, if {\displaystyle |C_{i}|>1}{\displaystyle |C_{i}|>1}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}},&space;\textrm{if&space;}&space;|C_{i}|>1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}},&space;\textrm{if&space;}&space;|C_{i}|>1" title="s(i)={\frac {b(i)-a(i)}{\max\{a(i),b(i)\}}}, \textrm{if } |C_{i}|>1" /></a>
+
+
 
 
 ![inter_class_variance](images/inter_class_variance.png)
