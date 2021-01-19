@@ -23,8 +23,19 @@ In other words, we build a model to predict output with the same dimension as in
 
 The autoencoder learns an approximation for the identity function, and by placing constraints on the network, such as by limiting the number of hidden units, we can discover interesting structure about the data [[UFLDL Tutorial]][Autoencoders].
 
-As a concrete example, suppose the inputs x are the pixel intensity values from a 10×10 image (100 pixels) so n=100, and there are 50 hidden units in layer L2, and we still have output layer n=100. Since there are only 50 hidden units, the network is forced to learn a ”compressed” representation of the input, i.e. **reconstruct** the 100-pixel input x. If the input were completely random—say, each `x_i` comes from an iid Gaussian independent of the other features—then this compression task would be very difficult. But if there is structure in the data, for example, if some of the input features are correlated, then this algorithm will be able to discover some of those correlations.
+As a concrete example, suppose the inputs x are the pixel intensity values from a 10×10 image (100 pixels) so n=100, and there are 50 hidden units in layer L2, and we still have output layer n=100. Since there are only 50 hidden units, the network is forced to learn a ”compressed” representation of the input, i.e. **reconstruct** the 100-pixel input x. If the input were completely random—say, each `x_i` comes from an iid Gaussian independent of the other features—then this compression task would be very difficult. But if there is structure in the data, for example, if some of the input features are correlated, then this algorithm will be able to discover some of those correlations [[UFLDL Tutorial]][Autoencoders].
 
+## Cost (Loss) Function
+
+Our overall cost function for the autoencoder is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" title="C = C(x, \hat{x}) + \textrm{regularization}" /></a>
+
+The first term comes the reconstruction cost during forward propagation in nueral networks, and the second term is to penalize the activations of hidden units.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{regularization}&space;=&space;\sum^{l^{(h)}}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{l^{(h)}}_{j=1}&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{regularization}&space;=&space;\sum^{l^{(h)}}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{l^{(h)}}_{j=1}&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}" title="\textrm{regularization} = \sum^{l^{(h)}}_{j=1} \textrm{KL}(\rho || \hat{\rho}_j) = \sum^{l^{(h)}}_{j=1} \rho \log\frac{\rho}{\hat{\rho_j}} + (1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}" /></a>
+
+Kullback-Leibler (KL) divergence between a Bernoulli random variable with mean ρ and a Bernoulli random variable with mean ρ̂_j. KL-divergence is a standard function for measuring how different two different distributions are
 
 
 
