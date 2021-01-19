@@ -28,11 +28,14 @@ We now define a silhouette (value) of one data point `i`
 
 From the above definition it is clear that `s(i) = [-1, 1]`.
 
+The silhouette score can be computed using Scikit-learn. [The sklearn page](https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html) shows a example. From our bare eyes, the best is from n=4, and we see the 4 clusters (execpet for 2 clusters) certainly gives the highest silhouette score.
 
 
-![inter_class_variance](images/inter_class_variance.png)
-
-
+![silhouette_n_2](images/silhouette_n2.png)
+![silhouette_n_3](images/silhouette_n3.png)
+![silhouette_n_4](images/silhouette_n4.png)
+![silhouette_n_5](images/silhouette_n5.png)
+![silhouette_n_6](images/silhouette_n6.png)
 
 
 
