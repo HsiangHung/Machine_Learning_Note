@@ -33,16 +33,17 @@ Generally, nonparametric machine learning algorithms that have a lot of flexibil
 
 We can plot learning curves: MSE (error) vs the size of training set on the a) right model b) underfitting and c) overfitting cases for machine learning diagnostic. Here I cited the lectures given by Prof. [Nando de Freitas's ML classes at UBC](https://www.youtube.com/watch?v=-ouQeu_ywfY&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=19) and [Prof. Andrew Ng's coursera courserses](https://www.youtube.com/watch?v=ISBGFY-gBug&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN&index=63). 
 
-### a) About Right
+### a) Model about right
 
+Both training test erros are low.
 ![nando-right](images/Nando-right.png)
 
-### b) Underfit 
+### b) Underfitting
 Both training test erros are high. More training data is not helpful to improve performance. 
 ![nando-underfit](images/Nando-underfit.png)
 ![andrew-underfit](images/Andrew-underfit.png)
 
-### c) Overfit
+### c) Overfitting
 Training error is low but test erro is high. More training data could be not helpful to improve performance.
 ![nando-overfit](images/Nando-overfit.png)
 ![andrew-overfit](images/Andrew-overfit.png)
@@ -83,7 +84,8 @@ Below are two examples of configuring the bias-variance trade-off for specific a
 
 (3) For linear regression and logistic regression, we can add regularization. By increasing the regularization strength, we move from high variance to low variance. However, in the large limit of the regularization strength, we reach high bias. The tradeoff should be chosen at best performance using cross validation dataset.
 
-
+![andrew-model](images/Andrew-model_selection.png)
+![andrew-regularization](images/Andrew-regularization.png)
 
 
 
