@@ -13,17 +13,17 @@ The bias-variance trade-off is a conceptual idea in applied machine learning to 
 
 ## Bias 
 
-The bias is error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (**underfitting**) [[1]][What are the differences between Random Forest and Gradient Tree Boosting algorithms?].
+The bias is error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (**underfitting**) [[Quora: Yisong Yue]][What are the differences between Random Forest and Gradient Tree Boosting algorithms?].
 
-Generally, **parametric algorithms** have a **high bias** making them fast to learn and easier to understand but generally less flexible [[2]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]. In turn, they have **lower predictive performance**. In Blog [[2]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning], Jason interpreted Low-Bias/High-Bias as less/more assumptions about the form of the target function (`y = f(x)`). 
+Generally, **parametric algorithms** have a **high bias** making them fast to learn and easier to understand but generally less flexible [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]. In turn, they have **lower predictive performance**. In Blog [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning], Jason interpreted Low-Bias/High-Bias as less/more assumptions about the form of the target function (`y = f(x)`). 
 
-Examples of low-bias ML algorithms are **Decision Trees**, **k-Nearest Neighbors** and **Support Vector Machines**, where high-bias algorithms are **Linear Regression**, **Linear Discriminant Analysis** and **Logistic Regression**. Note random forest and boosting are non-parametric; do not confuse the hyperparameters. The parameters in the parametrical models point to the assumptions regarding the data distribution. The post [[3]][Are Random Forest and Boosting parametric or non-parametric?] has clearified the concept. Peter even further explain: In statistical sense, the model is parametric, if **parameters are learned** or **inferred** based on the **data**. A tree in this sense is nonparametric. Of course the tree depth is a parameter of the algorithm, but it is not inherently derived from the data, but rather an input parameter that has to be provided by the user.
+Examples of low-bias ML algorithms are **Decision Trees**, **k-Nearest Neighbors** and **Support Vector Machines**, where high-bias algorithms are **Linear Regression**, **Linear Discriminant Analysis** and **Logistic Regression**. Note random forest and boosting are non-parametric; do not confuse the hyperparameters. The parameters in the parametrical models point to the assumptions regarding the data distribution. The post [[StachExchange]][Are Random Forest and Boosting parametric or non-parametric?] has clearified the concept. Peter even further explain: In statistical sense, the model is parametric, if **parameters are learned** or **inferred** based on the **data**. A tree in this sense is nonparametric. Of course the tree depth is a parameter of the algorithm, but it is not inherently derived from the data, but rather an input parameter that has to be provided by the user.
 
 
 
 ## Variance
 
-n the other hand, the variance is error from sensitivity to small fluctuations in the training set. High variance can cause **overfitting**: modeling the random noise in the training data, rather than the intended outputs [[2]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]. 
+n the other hand, the variance is error from sensitivity to small fluctuations in the training set. High variance can cause **overfitting**: modeling the random noise in the training data, rather than the intended outputs [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]. 
 
 Low/High Variance suggests small/large changes to the estimate of the target function with changes to the training dataset.
 Generally, nonparametric machine learning algorithms that have a lot of flexibility have a high variance. For example, decision trees have a high variance, that is even higher if the trees are not pruned before use. The high-bias models are usually low-variance models; examples include: Linear Regression, Linear Discriminant Analysis and Logistic Regression. On the other hand, examples of high-variance machine learning algorithms include: Decision Trees, k-Nearest Neighbors and Support Vector Machines.
@@ -31,18 +31,18 @@ Generally, nonparametric machine learning algorithms that have a lot of flexibil
 
 ## Learning Curve
 
-MSE (error) vs the size of training set.
+We can plot learning curves: MSE (error) vs the size of training set on the a) right model b) underfitting and c) overfitting cases for machine learning diagnostic. Here I cited the lectures given by Prof. [Nando de Freitas's ML classes at UBC](https://www.youtube.com/watch?v=-ouQeu_ywfY&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=19) and [Prof. Andrew Ng's coursera courserses](https://www.youtube.com/watch?v=ISBGFY-gBug&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN&index=63). 
 
-### About Right
+### a) About Right
 
 ![nando-right](images/Nando-right.png)
 
-### Underfit 
+### b) Underfit 
 ![nando-underfit](images/Nando-underfit.png)
+![andrew-underfit](images/Andrew-underfit.png)
 
-
-### Overfit
-![nando-overfit](images/Nando-overfit.png)
+### c) Overfit
+![andrew-overfit](images/Andrew-overfit.png)
 
 ## Measuring Bias and Variance
 
@@ -87,17 +87,17 @@ Below are two examples of configuring the bias-variance trade-off for specific a
 ## Reference
 
 
-[What are the differences between Random Forest and Gradient Tree Boosting algorithms?]: https://www.quora.com/What-are-the-differences-between-Random-Forest-and-Gradient-Tree-Boosting-algorithms
-[[1] What are the differences between Random Forest and Gradient Tree Boosting algorithms?](https://www.quora.com/What-are-the-differences-between-Random-Forest-and-Gradient-Tree-Boosting-algorithms)
 
 
 [Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]: https://machinelearningmastery.com/gentle-introduction-to-the-bias-variance-trade-off-in-machine-learning/
-[[2] Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning](https://machinelearningmastery.com/gentle-introduction-to-the-bias-variance-trade-off-in-machine-learning/)
+[[Jason Brownlee] Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning](https://machinelearningmastery.com/gentle-introduction-to-the-bias-variance-trade-off-in-machine-learning/)
+
+
+[What are the differences between Random Forest and Gradient Tree Boosting algorithms?]: https://www.quora.com/What-are-the-differences-between-Random-Forest-and-Gradient-Tree-Boosting-algorithms
+[[Quora: Yisong Yue] What are the differences between Random Forest and Gradient Tree Boosting algorithms?](https://www.quora.com/What-are-the-differences-between-Random-Forest-and-Gradient-Tree-Boosting-algorithms)
 
 
 [Are Random Forest and Boosting parametric or non-parametric?]: https://stats.stackexchange.com/questions/147587/are-random-forest-and-boosting-parametric-or-non-parametric
-[[3] Are Random Forest and Boosting parametric or non-parametric?](https://stats.stackexchange.com/questions/147587/are-random-forest-and-boosting-parametric-or-non-parametric)
+[[StachExchange] Are Random Forest and Boosting parametric or non-parametric?](https://stats.stackexchange.com/questions/147587/are-random-forest-and-boosting-parametric-or-non-parametric)
 
 
-[MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation]: https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/
-[[4] MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation](https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/)
