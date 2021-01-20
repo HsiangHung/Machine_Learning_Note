@@ -84,10 +84,12 @@ Below are two examples of configuring the bias-variance trade-off for specific a
 
 (3) For linear regression and logistic regression, we can add regularization. By increasing the regularization strength, we move from high variance to low variance. However, in the large limit of the regularization strength, we reach high bias. The tradeoff should be chosen at best performance using cross validation dataset.
 
-![andrew-model](images/Andrew-model_selection.png)
+The following is the example how regularization vs training/test errors (from Prof. Andrew Ng's coursera courserses)
 ![andrew-regularization](images/Andrew-regularization.png)
 
+Also, the learning curve can be used for model selection. A good example is that models will be over-complicated if we consider many polynomial terms, and over-simple if few terms. 
 
+![andrew-model](images/Andrew-model_selection.png)
 
 ## Reference
 
