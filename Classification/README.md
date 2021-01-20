@@ -49,7 +49,11 @@ Here I just summarize the answers in the post and list in the following:
 6. In the case of airport security, where a safety risk is the positive class, we want to make sure that every potential safety risk is investigated. In this case, we will have high **Recall** at the expense of precision (a lot of bags where there are no safety hazards will be investigated).
 
 
+If there is no external concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold that maximizes TPR-FPT, or use `F1 score`
 
+```
+F1 = Precision * Recall/(Precision + Recall)
+```
 
 
 `a(i)` can be interpreted as **similarity**; the smaller value, the better the clustering.
