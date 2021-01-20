@@ -38,12 +38,12 @@ We can plot learning curves: MSE (error) vs the size of training set on the a) r
 Both training test erros are low.
 ![nando-right](images/Nando-right.png)
 
-### b) Underfitting
+### b) Underfitting (High bias)
 Both training test erros are high. More training data is not helpful to improve performance. 
 ![nando-underfit](images/Nando-underfit.png)
 ![andrew-underfit](images/Andrew-underfit.png)
 
-### c) Overfitting
+### c) Overfitting (High Variance)
 Training error is low but test erro is high. More training data could be not helpful to improve performance.
 ![nando-overfit](images/Nando-overfit.png)
 ![andrew-overfit](images/Andrew-overfit.png)
