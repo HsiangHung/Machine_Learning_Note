@@ -29,6 +29,21 @@ Low/High Variance suggests small/large changes to the estimate of the target fun
 Generally, nonparametric machine learning algorithms that have a lot of flexibility have a high variance. For example, decision trees have a high variance, that is even higher if the trees are not pruned before use. The high-bias models are usually low-variance models; examples include: Linear Regression, Linear Discriminant Analysis and Logistic Regression. On the other hand, examples of high-variance machine learning algorithms include: Decision Trees, k-Nearest Neighbors and Support Vector Machines.
 
 
+## Learning Curve
+
+MSE (error) vs the size of training set.
+
+### About Right
+
+![nando-right](images/Nando-right.png)
+
+### Underfit 
+![nando-underfit](images/Nando-underfit.png)
+
+
+### Overfit
+![nando-overfit](images/Nando-overfit.png)
+
 ## Measuring Bias and Variance
 
    The presentation [Bias-Variance in Machine
