@@ -18,6 +18,16 @@ Call the definition:
 Pred Pos | TP  | FP  |
 Pred Neg | FN  | TN  |
 ```
+The relevant metrics are 
+```
+precision = TP/(TP+FP), recall = TP/(TP+FN)
+TPR = recall, FPR = FP/(FP+TN)
+```
+Each probability threshold in classifier determiones a set of the above metrics. Also we can define review rate 
+```
+review rate = N(prob > threshold)/N
+````
+where `N` is the number of events.
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=a(i)&space;=&space;\frac{1}{|C_i|-1}&space;\sum_{j\in&space;C_{i},i\neq&space;j}d(i,j)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a(i)&space;=&space;\frac{1}{|C_i|-1}&space;\sum_{j\in&space;C_{i},i\neq&space;j}d(i,j)" title="a(i) = \frac{1}{|C_i|-1} \sum_{j\in C_{i},i\neq j}d(i,j)" /></a>
