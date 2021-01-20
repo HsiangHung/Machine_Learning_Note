@@ -1,14 +1,14 @@
 
 # Classification 
 
-DBSCAN, K-means, Deep Embedded Clustering (DEC) [[StackExchange]][When is precision more important over recall?].
+
 
 
 ## Metric
 
 ### Precision and Recall
 
-In imbalanced cases, which metric should we use for models, precision or recall? Classifier to have high True Positive Rate (TPR) or False Positive Rate (FPR)? It depends on domain and our business goal.
+In most cases, there are no perfect classifiers. A good common question is which metric should we use for model selection, precision or recall? Classifier to have high True Positive Rate (TPR) or False Positive Rate (FPR)? It depends on domain and our business goal.
 
 Call the definition:
 
@@ -21,13 +21,22 @@ Pred Neg | FN  | TN  |
 The relevant metrics are 
 ```
 precision = TP/(TP+FP), recall = TP/(TP+FN)
+```
+and
+```
 TPR = recall, FPR = FP/(FP+TN)
 ```
 Each probability threshold in classifier determiones a set of the above metrics. Also we can define review rate 
 ```
 review rate = N(prob > threshold)/N
-````
-where `N` is the number of events.
+```
+where `N` is the number of data points.
+
+Here is the post to list some examples whrn precision is important and when recall is important ? [[StackExchange]][When is precision more important over recall?]. Depends on whhcih we want to minimize, FP or FN? Here I just summarize my understanding and list in the following:
+
+1. For rare cancer data modeling, a false negative is usually more disastrous than a false positive for preliminary diagnoses. We want to minimize FN to have higher recall. So **Recall** is a better measure than precision.
+
+
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=a(i)&space;=&space;\frac{1}{|C_i|-1}&space;\sum_{j\in&space;C_{i},i\neq&space;j}d(i,j)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a(i)&space;=&space;\frac{1}{|C_i|-1}&space;\sum_{j\in&space;C_{i},i\neq&space;j}d(i,j)" title="a(i) = \frac{1}{|C_i|-1} \sum_{j\in C_{i},i\neq j}d(i,j)" /></a>
