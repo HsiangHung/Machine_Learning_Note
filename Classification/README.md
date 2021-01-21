@@ -36,6 +36,8 @@ review rate = N(prob > threshold)/N
 ```
 where `N` is the number of data points.
 
+### Business concern
+
 Here is the post to list some examples whrn precision is important and when recall is important ? [[StackExchange-1]][When is precision more important over recall?] [[StackExchange-2]][How to determine the optimal threshold for a classifier and generate ROC curve?]. Depends on whhcih we want to minimize, FP or FN costs more? Note it has been mentioned in the post that you could have 100% recall yet have a useless model: if your model always outputs a positive prediction, it would have 100% recall but be completely uninformative.
 
 Here I just summarize the answers in the post and list in the following:
