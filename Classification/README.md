@@ -27,8 +27,8 @@ TPR = recall, FPR = FP/(FP+TN)
 ```
 Each probability threshold in a classifier determiones a set of the above metrics. The relation between probability threshold and the metrics are 
 ```
-  large threshold -> less positive predicted -> lower TPR (recall), higher FPR -> higher precision
-  small threshold -> more positive predicted -> higher TPR (recall), lower FPR -> higher recall
+  large threshold -> less positive predicted -> less TP -> lower TPR (recall), higher FPR -> higher precision
+  small threshold -> more positive predicted -> more TP -> higher TPR (recall), lower FPR -> higher recall
 ```
 Also we can define review rate 
 ```
