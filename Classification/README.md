@@ -10,8 +10,7 @@
 
 In most cases, there are no perfect classifiers. A good common question is which metric should we use for model selection, precision or recall? Classifier to have high True Positive Rate (TPR) or False Positive Rate (FPR)? It depends on domain and our business goal.
 
-Call the definition:
-
+Recall the definition:
 ```
              * Truth *
    ------- | Pos | Neg |
@@ -26,7 +25,12 @@ and
 ```
 TPR = recall, FPR = FP/(FP+TN)
 ```
-Each probability threshold in classifier determiones a set of the above metrics. Also we can define review rate 
+Each probability threshold in a classifier determiones a set of the above metrics. The relation between probability threshold and the metrics are 
+```
+  large threshold -> less positive predicted -> lower TPR (recall), higher FPR -> higher precision
+  small threshold -> more positive predicted -> higher TPR (recall), lower FPR -> higher recall
+```
+Also we can define review rate 
 ```
 review rate = N(prob > threshold)/N
 ```
