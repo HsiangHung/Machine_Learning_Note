@@ -79,11 +79,10 @@ Kmeans algorithm is good in capturing structure of the data if clusters have a *
 
 
 ## D. K-Means++
-K-Means++ is a smart centroid initialization technique and the rest of the algorithm is the same as that of K-Means [[Satyam Kumar]][Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]. The [coursera course, Machine Learning: Clustering & Retrieval](https://www.coursera.org/lecture/ml-clustering-and-retrieval/smart-initialization-via-k-means-T9ZaG) has better explanation.
+K-Means++ is a smart centroid initialization technique and the rest of the algorithm is the same as that of K-Means [[Satyam Kumar]][Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]. The [coursera course, Machine Learning: Clustering & Retrieval](https://www.coursera.org/lecture/ml-clustering-and-retrieval/smart-initialization-via-k-means-T9ZaG) has better explanation about the procedures:
 
-
-* Pick the first centroid point (C_1) randomly.
-* Compute distance of all points in the dataset from the centroid. The data point has the maximum distance of x_i point will be second centroid.  Now we have (C1, c2).
+* Pick the first centroid point (`C1`) randomly.
+* Compute distance of all points in the dataset from the centroid. The data point which has the maximum distance to `C1` will be second centroid.  Now we have `(C1, C2)`.
 * Compute distance of all points in the dataset from the nearest centroid. For example, we have C1 are closetes centroid of (x1,x3,x6), and assume x6 has maxiumum distance d(6,1) to C1. C2 are closetes centroid of (x2,x4,x5), and assume x4 has maxiumum distance d(4,2) to C2. We assign x4 as third centroid if d(4,2) > d(6,1), C3 = x4. Now we have (C1, C2, C3).
 * Repeat the above step till you find K centroids.
 
