@@ -22,7 +22,7 @@ For each K{
 
 ### Stop Criterion
 
-See [[Azika Amelia]][K-Means Clustering: From A to Z]:
+See [[Azika Amelia]][K-Means Clustering: From A to Z] and [[Pulkit Sharma]][The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need]:
 1. The datapoints assigned to specific cluster remain the same.
 2. Centroids remain the same ([Stanford course](https://stanford.edu/~cpiech/cs221/handouts/kmeans.html) used this criterion).
 3. The distance of datapoints from their centroid is minimum.
