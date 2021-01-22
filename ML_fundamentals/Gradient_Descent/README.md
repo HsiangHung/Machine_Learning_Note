@@ -46,9 +46,9 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 
 ## Other Variants of Graident Descent
 
-[[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning]
+The following discussion used the same notation by [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], but we can also refer [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning].
 
-Assume the graident is defined as
+We can denote the graident as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" title="g_{t,i} = \frac{\partial J(\theta_{t,i})}{\partial \theta_{t,i}}" /></a>
 
