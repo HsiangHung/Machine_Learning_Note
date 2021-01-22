@@ -48,10 +48,13 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 
 [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning]
 
+Assume the graident is defined as
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" title="g_{t,i} = \frac{\partial J(\theta_{t,i})}{\partial \theta_{t,i}}" /></a>
 
+For each step, the model parameter is updated as
 
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\alpha&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\alpha&space;g_{t,i}" title="\theta_{t+1, i} = \theta_{t,i} - \alpha g_{t,i}" /></a>
 
 
 ## Reference
