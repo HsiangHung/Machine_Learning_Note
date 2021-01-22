@@ -90,7 +90,12 @@ In summary, the new centroid is determined by maximum probability proportional t
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C_{n&plus;1}&space;=&space;x_i,&space;\&space;\textrm{if}&space;\&space;d_i&space;=&space;\max_{&space;C_j&space;\textrm{closest&space;to&space;}x_i&space;}&space;||x_i&space;-&space;C_j||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C_{n&plus;1}&space;=&space;x_i,&space;\&space;\textrm{if}&space;\&space;d_i&space;=&space;\max_{&space;C_j&space;\textrm{closest&space;to&space;}x_i&space;}&space;||x_i&space;-&space;C_j||^2" title="C_{n+1} = x_i, \ \textrm{if} \ d_i = \max_{ C_j \textrm{closest to }x_i } ||x_i - C_j||^2" /></a>
 
+where `n` centroids have been picked.
 
+In scikit-learn, it is easy to implement
+```
+KMeans(n_clusters=3, init='k-means++')
+```
 
 
 ## Reference
