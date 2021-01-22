@@ -10,8 +10,8 @@ DBSCAN, K-means, Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clusterin
 Randomly initialize K cluster centorids μ1, μ2,... μK
 
 Repeat{
-    1. for i = 1, ...m, each data point, assign c(i), where i-th centroid is the closest to x(i)  
-    2. for j = 1, ...K, each centroid is determined by average of 
+    1. for i = 1, ...m, each data point, assign c(i), where x(i) is closest to the i-th centroid μc.
+    2. for j = 1, ...K, each centroid μ_j is determined by average of 
 }
 ```
 
