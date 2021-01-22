@@ -44,8 +44,8 @@ The cost function in K-means is also called **distortion** function. The distort
 
 K-means is an algorithm to minimize `J(..)`:
 
-* The above procedure a, the cluster assignment step is to minimize `J(..)` by updating c(1), c(2),.. ,c(m).
-* The above procedure b, the move centroid step is to minimize `J(..)` by updating μ1, μ2,... μK.
+* The above procedure a is the cluster assignment step, to minimize `J(..)` by updating c(1), c(2),.. ,c(m).
+* The above procedure b is the move centroid step, to minimize `J(..)` by updating μ1, μ2,... μK.
 
 
 ## C. Some Notice:
