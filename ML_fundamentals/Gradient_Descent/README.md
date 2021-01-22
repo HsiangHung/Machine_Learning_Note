@@ -66,8 +66,20 @@ Adagrad modifies the general learning rate at each time step `t` for every param
 
 Adam is another method that computes adaptive learning rates for each parameter. In addition to storing an exponentially decaying average of past squared gradients `vt` like Adadelta and RMSprop, Adam also keeps an exponentially decaying average of past gradients `mt`, similar to momentum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms].  In simple words you can consider it to be ADAGRAD + momentum [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning].
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\hat{v}_t}&space;&plus;&space;\epsilon}&space;\hat{m}_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\hat{v}_t}&space;&plus;&space;\epsilon}&space;\hat{m}_t" title="\theta_{t+1, i} = \theta_{t,i} - \frac{\alpha}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t" /></a>
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\hat{v}_t&space;&plus;&space;\epsilon}&space;\hat{m}_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\hat{v}_t&space;&plus;&space;\epsilon}&space;\hat{m}_t" title="\theta_{t+1, i} = \theta_{t,i} - \frac{\alpha}{\hat{v}_t + \epsilon} \hat{m}_t" /></a>
+where 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{m}_t&space;=&space;\frac{m_t}{1-\beta^t_1},&space;\&space;m_t&space;=&space;\beta_1&space;m_{t-1}&space;&plus;&space;(1-\beta_1)g_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{m}_t&space;=&space;\frac{m_t}{1-\beta^t_1},&space;\&space;m_t&space;=&space;\beta_1&space;m_{t-1}&space;&plus;&space;(1-\beta_1)g_t" title="\hat{m}_t = \frac{m_t}{1-\beta^t_1}, \ m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t" /></a>
+
+and 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{v}_t&space;=&space;\frac{v_t}{1-\beta^t_2},&space;\&space;v_t&space;=&space;\beta_2&space;v_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{v}_t&space;=&space;\frac{v_t}{1-\beta^t_2},&space;\&space;v_t&space;=&space;\beta_2&space;v_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" title="\hat{v}_t = \frac{v_t}{1-\beta^t_2}, \ v_t = \beta_2 v_{t-1} + (1-\beta_2)g^2_t" /></a>
+
+The proposed default values are `β1 = 0.9`, `β2 = 0.999`, and `ϵ = 10^{-8}`.
+
+
+
 
 ## Reference
 
