@@ -1,6 +1,10 @@
 
 # Gradient Descent 
 
+```
+parameter = parameter - learning_rate * gradient
+```
+
 ## Batch, Stochastic, Mini-Batch 
 
 [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent],[[Aditya Ananthram]][Optimizers be TensorFlow’s Appetizers], [[CrossValidated: Batch gradient descent versus stochastic gradient descent]][Batch gradient descent versus stochastic gradient descent]
@@ -16,7 +20,7 @@
 ## The Termination Condition For Gradient Descent?
 
 
-Discussion about the termination condition for gradient descent: [[CrossValidated: How to define the termination condition for gradient descent?]][How can stochastic gradient descent avoid the problem of a local minimum?], [[Mathematics]][Stopping criteria for gradient method]
+Discussion about the termination condition for gradient descent: [[CrossValidated: How to define the termination condition for gradient descent?]][How can stochastic gradient descent avoid the problem of a local minimum?], [[Mathematics: Stopping criteria for gradient method]][Stopping criteria for gradient method]
 
 * Determine the number of iterations we need to perform to achieve a desired error .
 * Terminating when changes in parameter or changes in cost functions is small enough. 
@@ -63,7 +67,7 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 
 
 [Stopping criteria for gradient method]: https://math.stackexchange.com/questions/1618330/stopping-criteria-for-gradient-method
-[[Mathematics] Stopping criteria for gradient method](https://math.stackexchange.com/questions/1618330/stopping-criteria-for-gradient-method)
+[[Mathematics: Stopping criteria for gradient method] Stopping criteria for gradient method](https://math.stackexchange.com/questions/1618330/stopping-criteria-for-gradient-method)
 
 
 [Batch, Mini Batch & Stochastic Gradient Descent]: https://towardsdatascience.com/batch-mini-batch-stochastic-gradient-descent-7a62ecba642a
