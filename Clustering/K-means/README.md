@@ -10,8 +10,8 @@ DBSCAN, K-means, Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clusterin
 Randomly initialize K cluster centorids μ1, μ2,... μK,
 
 Repeat{
-    1. for i = 1, ...m, each data point, assign c(i), where the i-th centroid μc is the closest to x(i).
-    2. for j = 1, ...K, each centroid μj is updated by average of data points where are labeled to c(j)
+    a. for i = 1, ...m, each data point, assign c(i), where the i-th centroid μc is the closest to x(i).
+    b. for j = 1, ...K, each centroid μj is updated by average of data points where are labeled to c(j)
 }
 ```
 
@@ -20,6 +20,10 @@ Repeat{
 The cost function in K-means is also called distortion function.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=J(c^{(1)},\cdots&space;,&space;c^{(m)},&space;\mu_1,&space;\cdots&space;,&space;\mu_K)&space;=&space;\frac{1}{m}\sum^m_{i=1}&space;||x^{(i)}-\mu_{c^{(i)}}||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J(c^{(1)},\cdots&space;,&space;c^{(m)},&space;\mu_1,&space;\cdots&space;,&space;\mu_K)&space;=&space;\frac{1}{m}\sum^m_{i=1}&space;||x^{(i)}-\mu_{c^{(i)}}||^2" title="J(c^{(1)},\cdots , c^{(m)}, \mu_1, \cdots , \mu_K) = \frac{1}{m}\sum^m_{i=1} ||x^{(i)}-\mu_{c^{(i)}}||^2" /></a>
+
+The above procedure a, cluster assignment step is to minimize `J(..)` by updating c(1), c(2),.. ,c(m).
+The above procedure b, move centroid step is to minimize `J(..)` by updating μ1, μ2,... μK.
+
 
 ## Stop Criterion
 
