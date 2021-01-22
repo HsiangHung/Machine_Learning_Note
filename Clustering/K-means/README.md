@@ -4,7 +4,7 @@
 
 
 
-## Procedures
+## A. Procedures
 
 ```
 For each K{
@@ -34,7 +34,7 @@ For each K, randomly initial centroids many times to avoid K-means traps in loca
 ![local_optima](images/kmeans_localoptima.png)
 
 
-## Optimization Objectives (Distortion)
+## B. Optimization Objectives (Distortion)
 
 The cost function in K-means is also called distortion function. The distortion function is helpful to understand if K-means converges. 
 
@@ -45,7 +45,7 @@ The above procedure a, cluster assignment step is to minimize `J(..)` by updatin
 The above procedure b, move centroid step is to minimize `J(..)` by updating μ1, μ2,... μK.
 
 
-## Some Points:
+## C. Some Notice:
 
 It’s important to preprocess your data before performing K-Means. You would have to convert your dataset into numerical values if it is not already, so that calculations can be performed. Also, applying feature reduction techniques would speed up the process, and also improve the results. These steps are important to follow because K-Means is sensitive to outliers, just like every other algo that uses average/mean values. Following these steps alleviate these issues.
 
