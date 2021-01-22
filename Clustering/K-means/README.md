@@ -6,6 +6,8 @@
 
 ## A. Procedures
 
+Assume there are `m` data points
+
 ```
 For each K{
 
@@ -22,7 +24,7 @@ For each K{
 
 See [[Azika Amelia]][K-Means Clustering: From A to Z]:
 1. The datapoints assigned to specific cluster remain the same.
-2. Centroids remain the same.
+2. Centroids remain the same ([Stanford course](https://stanford.edu/~cpiech/cs221/handouts/kmeans.html) used this criterion).
 3. The distance of datapoints from their centroid is minimum.
 4. Fixed number of iterations have reached (insufficient iterations → poor results, choose max iteration wisely).
 
@@ -55,9 +57,9 @@ Elbow method (credit from Andrew Ng's ML class)
 
 ### Evaluating the cluster quality 
 
-see [[Azika Amelia]][K-Means Clustering: From A to Z]
+see [[Azika Amelia]][K-Means Clustering: From A to Z] and [[Pulkit Sharma]][The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need]
 
-1. **Inertia**: Intuitively, inertia tells how far away the points within a cluster are. Therefore, a small of inertia is aimed for. The range of inertia’s value starts from zero and goes up.
+1. **Inertia**: Inertia actually calculates the sum of distances of all the points within a cluster from the centroid of that cluster. Therefore, a small of inertia is aimed for. The range of inertia’s value starts from zero and goes up.
 
 2. **Silhouette score**: Silhouette score tells how far away the datapoints in one cluster are, from the datapoints in another cluster. The range of silhouette score is from -1 to 1. Score should be closer to 1 than -1.
 
@@ -74,4 +76,5 @@ see [[Azika Amelia]][K-Means Clustering: From A to Z]
 [[Azika Amelia] K-Means Clustering: From A to Z](https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a)
 
 
-
+[The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need]: https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
+[[Pulkit Sharma] The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need](https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/)
