@@ -79,7 +79,7 @@ Kmeans algorithm is good in capturing structure of the data if clusters have a *
 
 
 ## D. K-Means++
-K-Means++ is a smart centroid initialization technique and the rest of the algorithm is the same as that of K-Means [[Satyam Kumar]][Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]. The [coursera course, Machine Learning: Clustering & Retrieval](https://www.coursera.org/lecture/ml-clustering-and-retrieval/smart-initialization-via-k-means-T9ZaG) has better explanation about the procedures:
+K-Means++ is a smart centroid initialization technique and the rest of the algorithm is the same as that of K-Means [[Satyam Kumar]][Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]. The coursera course: [Machine Learning: Clustering & Retrieval](https://www.coursera.org/lecture/ml-clustering-and-retrieval/smart-initialization-via-k-means-T9ZaG) has better explanation about the procedures:
 
 * Pick the first centroid point (`C1`) randomly.
 * Compute distance of all points in the dataset from the centroid. The data point which has the maximum distance to `C1` will be second centroid.  Now we have `(C1, C2)`.
@@ -92,7 +92,7 @@ In summary, the new centroid is determined by maximum probability proportional t
 
 where `n` centroids have been picked.
 
-In scikit-learn, it is easy to implement
+In scikit-learn, it is easy to implement [[Satyam Kumar]][Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]
 
 ```Python
 KMeans(n_clusters=3, init='k-means++')
