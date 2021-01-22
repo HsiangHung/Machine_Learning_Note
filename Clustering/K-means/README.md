@@ -93,7 +93,8 @@ In summary, the new centroid is determined by maximum probability proportional t
 where `n` centroids have been picked.
 
 In scikit-learn, it is easy to implement
-```
+
+```Python
 KMeans(n_clusters=3, init='k-means++')
 ```
 
