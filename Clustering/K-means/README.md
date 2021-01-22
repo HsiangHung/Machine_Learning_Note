@@ -48,7 +48,7 @@ K-means is an algorithm to minimize `J(..)`:
 * The above procedure b is the move centroid step, to minimize `J(..)` by updating μ1, μ2,... μK.
 
 
-## C. Some Notice:
+## C. Some Notes
 
 It’s important to preprocess your data before performing K-Means. You would have to convert your dataset into numerical values if it is not already, so that calculations can be performed. Also, applying feature reduction techniques would speed up the process, and also improve the results. These steps are important to follow because K-Means is sensitive to outliers, just like every other algo that uses average/mean values. Following these steps alleviate these issues.
 
