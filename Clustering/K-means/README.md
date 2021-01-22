@@ -53,7 +53,7 @@ It’s important to preprocess your data before performing K-Means. You would ha
 
 ### Chooseing the value of K
 Elbow method (credit from Andrew Ng's ML class)
-![elbow_method](images/kmeans_elblow.png)
+![elbow_method](images/kmeans_elbow.png)
 
 ### Evaluating the cluster quality 
 
