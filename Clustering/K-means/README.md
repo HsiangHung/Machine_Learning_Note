@@ -18,6 +18,22 @@ For each K{
 }
 ```
 
+### Stop Criterion
+
+See [[Azika Amelia]][K-Means Clustering: From A to Z]:
+1. The datapoints assigned to specific cluster remain the same.
+2. Centroids remain the same.
+3. The distance of datapoints from their centroid is minimum.
+4. Fixed number of iterations have reached (insufficient iterations → poor results, choose max iteration wisely).
+
+
+### Randomly Initialize Centroids
+
+For each K, randomly initial centroids many times to avoid K-means traps in local optima (see below example, credit from Andrew Ng's ML class). Pick clustering with lowest cost `J(..)`.
+
+![local_optima](images/kmeans_localoptima.png)
+
+
 ## Optimization Objectives (Distortion)
 
 The cost function in K-means is also called distortion function. The distortion function is helpful to understand if K-means converges. 
@@ -31,22 +47,21 @@ The above procedure b, move centroid step is to minimize `J(..)` by updating μ1
 
 ## Some Points:
 
-### Stop Criterion
+It’s important to preprocess your data before performing K-Means. You would have to convert your dataset into numerical values if it is not already, so that calculations can be performed. Also, applying feature reduction techniques would speed up the process, and also improve the results. These steps are important to follow because K-Means is sensitive to outliers, just like every other algo that uses average/mean values. Following these steps alleviate these issues.
 
-See [[Azika Amelia]][K-Means Clustering: From A to Z]:
-1. The datapoints assigned to specific cluster remain the same (takes too much time).
-2. Centroids remain the same (time consuming).
-3. The distance of datapoints from their centroid is minimum (the thresh you’ve set).
-4. Fixed number of iterations have reached (insufficient iterations → poor results, choose max iteration wisely).
+### Chooseing the value of K
+Elbow method (credit from Andrew Ng's ML class)
+![elbow_method](images/kmeans_elblow.png)
 
-### Randomly Initialize Centroids
+### Evaluating the cluster quality 
 
-For each K, randomly initial centroids many times to avoid K-means traps in local optima (see below example). Pick clustering with lowest cost `J(..)`.
+see [[Azika Amelia]][K-Means Clustering: From A to Z]
 
-![local_optima](images/kmeans_localoptima.png)
+1. **Inertia**: Intuitively, inertia tells how far away the points within a cluster are. Therefore, a small of inertia is aimed for. The range of inertia’s value starts from zero and goes up.
+
+2. **Silhouette score**: Silhouette score tells how far away the datapoints in one cluster are, from the datapoints in another cluster. The range of silhouette score is from -1 to 1. Score should be closer to 1 than -1.
 
 
-The silhouette score can be computed using Scikit-learn. [The sklearn page](https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html) shows an excellent example. From our bare eyes, the best outcome is given by 4 clusters. We can visualize silhouette score `s(i)` for each data point in different clusters:
 
 
 
