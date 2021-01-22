@@ -15,8 +15,9 @@ parameter = parameter - learning_rate * gradient
 
 * **Min-batch**: A mixture of Batch and SGD. The drawback is that it wanders around the minimum region but never converges (like SGD).
 
+The comparison between the gradient descents are:
 ![comparison-1](images/gradient_descent-1.png)
-![comparison-2](images/gradient_descent-1.png)
+![comparison-2](images/gradient_descent-2.png)
 
 
 
