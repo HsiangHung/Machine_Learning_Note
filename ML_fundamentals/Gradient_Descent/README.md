@@ -15,7 +15,11 @@ parameter = parameter - learning_rate * gradient
 
 * **Min-batch**: A mixture of Batch and SGD. The drawback is that it wanders around the minimum region but never converges (like SGD).
 
-The comparison between the gradient descents can be illustrated below:
+For Batch Gradient Descent, the algorithm traces a straight line towards the minimum. If the cost function is convex, then it converges to a global minimum and if the cost function is not convex, then it converges to a local minimum. The learning rate is typically held constant over here.
+
+
+
+The comparison between the gradient descents can be illustrated below (credit from [[Z² Little]][Gradient Descent: Stochastic vs. Mini-batch vs. Batch vs. AdaGrad vs. RMSProp vs. Adam]):
 ![comparison](images/gradient_comparison.png)
 
 
@@ -40,7 +44,11 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 2. Use an adaptive learning rate to "anneal" closer to the global minimum
 
 
+## Other Variants of Graident Descent
 
+[[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning]
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" title="g_{t,i} = \frac{\partial J(\theta_{t,i})}{\partial \theta_{t,i}}" /></a>
 
 
 
@@ -68,6 +76,14 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 
 [Stopping criteria for gradient method]: https://math.stackexchange.com/questions/1618330/stopping-criteria-for-gradient-method
 [[Mathematics: Stopping criteria for gradient method] Stopping criteria for gradient method](https://math.stackexchange.com/questions/1618330/stopping-criteria-for-gradient-method)
+
+
+[What is Gradient Descent For Machine Learning]: https://www.knowledgehut.com/blog/data-science/gradient-descent-in-machine-learning
+[[Priyankur Sarkar] What is Gradient Descent For Machine Learning](https://www.knowledgehut.com/blog/data-science/gradient-descent-in-machine-learning)
+
+
+[An overview of gradient descent optimization algorithms]: https://ruder.io/optimizing-gradient-descent/index.html#adam
+[[Sebastian Ruder] An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html#adam)
 
 
 [Batch, Mini Batch & Stochastic Gradient Descent]: https://towardsdatascience.com/batch-mini-batch-stochastic-gradient-descent-7a62ecba642a
