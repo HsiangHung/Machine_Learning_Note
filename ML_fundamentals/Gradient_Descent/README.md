@@ -17,7 +17,6 @@ parameter = parameter - learning_rate * gradient
 
 The comparison between the gradient descents can be illustrated below:
 ![comparison](images/gradient_comparison.png)
-![comparison-2](images/gradient_descent-2.png)
 
 
 
