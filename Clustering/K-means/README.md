@@ -53,7 +53,14 @@ It’s important to preprocess your data before performing K-Means. You would ha
 
 ### Chooseing the value of K
 Elbow method (credit from Andrew Ng's ML class)
+
 ![elbow_method](images/kmeans_elbow.png)
+
+The right panel is hard to determine value of K. Then we can evaluate cluster quality.
+
+Sometimes K-means is used to helpful to give business purpose, e.g. if we decide to make T-shirt in 5 sizes, the size range:
+
+![business_purpose](images/kmeans_purpose.png)
 
 ### Evaluating the cluster quality 
 
