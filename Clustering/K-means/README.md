@@ -73,10 +73,23 @@ see [[Azika Amelia]][K-Means Clustering: From A to Z] and [[Pulkit Sharma]][The 
 
 2. **Silhouette score**: Silhouette score tells how far away the datapoints in one cluster are, from the datapoints in another cluster. The range of silhouette score is from -1 to 1. Score should be closer to 1 than -1.
 
-
 ### Drawbacks
 
 Kmeans algorithm is good in capturing structure of the data if clusters have a **spherical-like shape**. It always try to construct a nice spherical shape around the centroid. That means, the minute the clusters have a complicated geometric shapes, kmeans does a poor job in clustering the data. We’ll illustrate three cases where kmeans will not perform well.
+
+
+## D. K-Means++
+K-Means++ is a smart centroid initialization technique and the rest of the algorithm is the same as that of K-Means [[Satyam Kumar]][Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]. The [coursera course, Machine Learning: Clustering & Retrieval](https://www.coursera.org/lecture/ml-clustering-and-retrieval/smart-initialization-via-k-means-T9ZaG) has better explanation.
+
+
+* Pick the first centroid point (C_1) randomly.
+* Compute distance of all points in the dataset from the centroid. The data point has the maximum distance of x_i point will be second centroid.  Now we have (C1, c2).
+* Compute distance of all points in the dataset from the nearest centroid. For example, we have C1 are closetes centroid of (x1,x3,x6), and assume x6 has maxiumum distance d(6,1) to C1. C2 are closetes centroid of (x2,x4,x5), and assume x4 has maxiumum distance d(4,2) to C2. We assign x4 as third centroid if d(4,2) > d(6,1), C3 = x4. Now we have (C1, C2, C3).
+* Repeat the above step till you find K centroids.
+
+In summary, the new centroid is determined by maximum probability proportional to distance sqaure where the distance is the distance bwtween a data point and its nearest centroid:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=C_{n&plus;1}&space;=&space;x_i,&space;\&space;\textrm{if}&space;\&space;d_i&space;=&space;\max_{&space;C_j&space;\textrm{closest&space;to&space;}x_i&space;}&space;||x_i&space;-&space;C_j||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C_{n&plus;1}&space;=&space;x_i,&space;\&space;\textrm{if}&space;\&space;d_i&space;=&space;\max_{&space;C_j&space;\textrm{closest&space;to&space;}x_i&space;}&space;||x_i&space;-&space;C_j||^2" title="C_{n+1} = x_i, \ \textrm{if} \ d_i = \max_{ C_j \textrm{closest to }x_i } ||x_i - C_j||^2" /></a>
 
 
 
@@ -94,3 +107,7 @@ Kmeans algorithm is good in capturing structure of the data if clusters have a *
 
 [The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need]: https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
 [[Pulkit Sharma] The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need](https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/)
+
+
+[Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]: https://towardsdatascience.com/understanding-k-means-k-means-and-k-medoids-clustering-algorithms-ad9c9fbf47ca
+[[Satyam Kumar] Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms](https://towardsdatascience.com/understanding-k-means-k-means-and-k-medoids-clustering-algorithms-ad9c9fbf47ca)
