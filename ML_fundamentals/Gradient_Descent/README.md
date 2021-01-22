@@ -56,6 +56,12 @@ For each step, the model parameter is updated as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\alpha&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\alpha&space;g_{t,i}" title="\theta_{t+1, i} = \theta_{t,i} - \alpha g_{t,i}" /></a>
 
+### Adagrad (Adaptive Gradient Algorithm)
+
+Adagrad modifies the general learning rate at each time step `t` for every parameter θ based on the past gradients
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{j=1}(g_{j,i})^2&space;&plus;&space;\epsilon}}&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{j=1}(g_{j,i})^2&space;&plus;&space;\epsilon}}&space;g_{t,i}" title="\theta_{t+1, i} = \theta_{t,i} - \frac{\alpha}{\sqrt{\sum^t_{j=1}(g_{j,i})^2 + \epsilon}} g_{t,i}" /></a>
+
 
 ## Reference
 
