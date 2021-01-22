@@ -14,8 +14,8 @@ For each K{
     Randomly initialize K cluster centorids μ1, μ2,... μK,
 
     Repeat{
-          a. for i = 1, ...m, each data point, assign c(i), where the i-th centroid μc is the closest to x(i).
-          b. for j = 1, ...K, each centroid μj is updated by average of data points where are labeled to c(j)
+          a. for i = 1, ...m, each data point, assign c(i), where the centroid μc is the closest to x(i).
+          b. for j = 1, ...K, each centroid μj is updated by average of data points which are labeled to c(j)
           }
 }
 ```
