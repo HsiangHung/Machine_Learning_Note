@@ -58,7 +58,7 @@ For each step, the model parameter is updated as
 
 ### Adagrad (Adaptive Gradient Algorithm)
 
-Adagrad modifies the general learning rate at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]
+Adagrad modifies the general learning rate at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau,i})^2&space;&plus;&space;\epsilon}}&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau,i})^2&space;&plus;&space;\epsilon}}&space;g_{t,i}" title="\theta_{t+1, i} = \theta_{t,i} - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau,i})^2 + \epsilon}} g_{t,i}" /></a>
 
@@ -107,6 +107,11 @@ The proposed default values are `β1 = 0.9`, `β2 = 0.999`, and `ϵ = 10^{-8}`.
 
 [What is Gradient Descent For Machine Learning]: https://www.knowledgehut.com/blog/data-science/gradient-descent-in-machine-learning
 [[Priyankur Sarkar] What is Gradient Descent For Machine Learning](https://www.knowledgehut.com/blog/data-science/gradient-descent-in-machine-learning)
+
+
+[An Introduction to AdaGrad]: https://medium.com/konvergen/an-introduction-to-adagrad-f130ae871827gradient-descent-in-machine-learning
+[[Roan Gylberth] An Introduction to AdaGrad](https://medium.com/konvergen/an-introduction-to-adagrad-f130ae871827)
+
 
 
 [An overview of gradient descent optimization algorithms]: https://ruder.io/optimizing-gradient-descent/index.html#adam
