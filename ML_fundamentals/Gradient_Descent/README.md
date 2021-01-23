@@ -85,6 +85,8 @@ Thought the Adam optimizer seems to works better than others; SGD is a better ge
 
 There is often a value to using more than one method (an ensemble), because every method has a weakness. See the performance comparison below (credit from [[SALu]][SGD > Adam?? Which One Is The Best Optimizer: Dogs-VS-Cats Toy Experiment])
 
+`val`: validation, `trn`: training.
+
 ![comparison_optimizer](images/comparison_optimizer.png)
 
 ## Reference
