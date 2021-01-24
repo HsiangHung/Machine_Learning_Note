@@ -72,7 +72,7 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 
 There are many variants of SGD (stochastic gradient descent). We will briefly introduce them in the following discussion and explain with the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning] also provide good introduction.
 
-We can denote the graident as
+In the following, we designate the graident as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" title="g_{t,i} = \frac{\partial J(\theta_{t,i})}{\partial \theta_{t,i}}" /></a>
 
@@ -86,7 +86,7 @@ During optimization, SGD used to oscillate across the slopes of the ravine while
 
 ![SGD_momentum](images/SGD_momentum.png)
 
-Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first find velocity
+Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first find the velocity
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t,i}&space;=&space;\gamma&space;v_{t-1,i}&space;&plus;&space;\alpha&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t,i}&space;=&space;\gamma&space;v_{t-1,i}&space;&plus;&space;\alpha&space;g_{t,i}" title="v_{t,i} = \gamma v_{t-1,i} + \alpha g_{t,i}" /></a>
 
