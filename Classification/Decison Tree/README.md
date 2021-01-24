@@ -15,7 +15,7 @@ Note even on the leaves, there exists data noise so we still see various class d
 
 ## How to Select Feature for Split?
 
-### Information gain
+### a. Information gain
 
 Given a split way of features, calculate entropy for root and its childs. The tree split is to maximize reduction of the entropy, which is defined as **information gain**. Given a class, the entropy defines
 
@@ -25,7 +25,7 @@ where `p` and `n` are probability of positive and negative events
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=p&space;=&space;\frac{N_p}{N_p&plus;N_n},&space;\&space;n&space;=&space;\frac{N_n}{N_p&plus;N_n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p&space;=&space;\frac{N_p}{N_p&plus;N_n},&space;\&space;n&space;=&space;\frac{N_n}{N_p&plus;N_n}" title="p = \frac{N_p}{N_p+N_n}, \ n = \frac{N_n}{N_p+N_n}" /></a>
 
-Then we can calculate **Expected Entropy** (EH) remaining after trying attribute `A` (with branches i=1,2,...,K) in childs as
+Then we can calculate **Expected Entropy** (EH) remaining after trying attribute `A` (with branches i=1,2,...,K types) in childs as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=EH(A)&space;=&space;\sum^K_{i=1}&space;H(p_i,&space;n_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EH(A)&space;=&space;\sum^K_{i=1}&space;H(p_i,&space;n_i)" title="EH(A) = \sum^K_{i=1} H(p_i, n_i)" /></a>
 
@@ -39,6 +39,15 @@ Later information gain leads to less homogeneity on class distributions. See exa
 
 We can see the larger information gain split makes better classification.
 
+
+### b. Gini Index
+
+The Gini index defines (assume use attribute `A` to have K branches)
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" title="G = 1- \sum^K_{i=1} (p^2_i + n^2_i)" /></a>
+
+
+Smaller Gini index means better attribute to split tree.
 
 ## Reference
 
