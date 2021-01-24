@@ -68,15 +68,15 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 2. Use an adaptive learning rate to "anneal" closer to the global minimum
 
 
-## Vanishing Gradient [[Chi-Feng Wang]][The Vanishing Gradient Problem]
+## Vanishing Gradient
 
-In nerual networks, we may face the vanishing gradients issue. For example, the derivative of sigmoid activation function looks like
+In nerual networks, we may face the vanishing gradients issue. For example, the derivative of sigmoid activation function looks like (credit from [[Chi-Feng Wang]][The Vanishing Gradient Problem])
 
 ![derivative_sigmoid](images/derivative_sigmoid.png)
 
 For shallow network with only a few layers that use these activations, this isn’t a big problem. However, when more layers are used, it can cause the gradient to be too small for training to work effectively.
 
-Gradients of neural networks are found using backpropagation. Simply put, backpropagation finds the derivatives of the network by moving layer by layer from the final layer to the initial one. By the chain rule, the derivatives of each layer are multiplied down the network (from the final layer to the initial) to compute the derivatives of the initial layers.
+Gradients of neural networks are found using backpropagation. Simply put, backpropagation finds the derivatives of the network by moving layer by layer from the final layer to the initial one. By the chain rule, the derivatives of each layer are multiplied down the network (from the final layer to the initial) to compute the derivatives of the initial layers [[Chi-Feng Wang]][The Vanishing Gradient Problem].
 
 However, when n hidden layers use an activation like the sigmoid function, n small derivatives are multiplied together. Thus, the gradient decreases exponentially as we propagate down to the initial layers.
 
