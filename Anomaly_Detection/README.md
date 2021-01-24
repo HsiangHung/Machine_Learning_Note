@@ -19,15 +19,15 @@ If all of above is true, we can just use an algorithm like Random Forests or Sup
 
 ## 3. Metrics
 
-Anomaly detection problems have to deal with trade-off between **recall**  and **precision**. In situations where we want to detect instances of a minority class, we are usually concerned more so with recall than precision, since it is usually **more costly to miss a positive instance than to falsely label a negative instance**. See Blog [[2]][Dealing with Imbalanced Classes in Machine Learning].
+Anomaly detection problems have to deal with trade-off between **recall**  and **precision**. In situations where we want to detect instances of a minority class, we are usually concerned more so with recall than precision, since it is usually **more costly to miss a positive instance than to falsely label a negative instance**. See Blog [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning].
 
-Thus, when comparing approaches to imbalanced classification problems, consider using metrics beyond accuracy such as **recall, precision, and AUROC** [[3]][Fraud Detection Under Extreme Class Imbalance]. It may be that switching the metric you optimize for during parameter selection or model selection is enough to provide desirable performance detecting the minority class.
+Thus, when comparing approaches to imbalanced classification problems, consider using metrics beyond accuracy such as **recall, precision, and AUROC** [[Syed Sadat Nazrul]][Fraud Detection Under Extreme Class Imbalance]. It may be that switching the metric you optimize for during parameter selection or model selection is enough to provide desirable performance detecting the minority class.
 
-However, there are some discussion [[4]][What is the difference between a ROC curve and a precision-recall curve?] and [[log0]][Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)] about the difference using **AUPR** and **AUROC**. Sometimes the area under the precision-recall curve **AUPR** is more useful in imblanced data. 
+However, there are some discussion [[Quora: What is the difference between a ROC curve and a precision-recall curve?]][What is the difference between a ROC curve and a precision-recall curve?] and [[log0]][Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)] about the difference using **AUPR** and **AUROC**. Sometimes the area under the precision-recall curve **AUPR** is more useful in imblanced data. 
 
 ROC curve plot True Positive Rate Vs. False Positive Rate; Whereas, PR curve plot Precision Vs. Recall. If the class is highly imbalanced and positive samples are very rare, then use PR-curve. One example may be fraud detection, where non-fraud sample may be 10000 and fraud sample may be below 100. In other cases, ROC curve will be more helpful.
 
-Let’s take an example of fraud detection problem where there are 100 frauds out of 2 million samples [[4]][What is the difference between a ROC curve and a precision-recall curve?].
+Let’s take an example of fraud detection problem where there are 100 frauds out of 2 million samples [[Quora: What is the difference between a ROC curve and a precision-recall curve?]][What is the difference between a ROC curve and a precision-recall curve?].
 
     Algorithm 1: 90 relevant out of 100 identified (predicted positive = 100, so FP = 10)
     Algorithm 2: 90 relevant out of 1000 identified (predicted positive = 1000, so FP = 910)
@@ -48,7 +48,7 @@ Thus, in this case, the difference is more apparent in **PR curve**.
 
 ## 4. Data Preprocess
 
-A simple way to fix imbalanced data-sets is simply to balance them, either by oversampling the minority class or undersampling the majority class. See Blogs: [[2]][Dealing with Imbalanced Classes in Machine Learning], [[3]][Fraud Detection Under Extreme Class Imbalance] and 
+A simple way to fix imbalanced data-sets is simply to balance them, either by oversampling the minority class or undersampling the majority class. See Blogs: [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning], [[Syed Sadat Nazrul]][Fraud Detection Under Extreme Class Imbalance] and 
 [[Elite Data Science]][How to Handle Imbalanced Classes in Machine Learning].
 
 ### 4.1 Undersample: Down-sample Majority Class
@@ -63,7 +63,7 @@ Note both oversample and undersample changes data distribution [[Silicon Valley 
 
 ### 4.3 Synthesize Minor Samples
 
-Rather than randomly duplicating minority class, creating synthetic samples is a close cousin of up-sampling. For example, the SMOTE [(Synthetic Minority Oversampling TEchnique)](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume16/chawla02a-html/chawla2002.html) and ADASYN algorithms are methods of resampling from the minority class while slightly perturbing feature values, thereby creating "new" samples. The blog [[2]][Dealing with Imbalanced Classes in Machine Learning] simply interprets how to synthesize minority class. SMOTE was generally successful and led to many variants, extensions, and adaptations to different concept learning algorithms [[Silicon Valley Data Science]][Learning from Imbalanced Classe].
+Rather than randomly duplicating minority class, creating synthetic samples is a close cousin of up-sampling. For example, the SMOTE [(Synthetic Minority Oversampling TEchnique)](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume16/chawla02a-html/chawla2002.html) and ADASYN algorithms are methods of resampling from the minority class while slightly perturbing feature values, thereby creating "new" samples. The blog [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] simply interprets how to synthesize minority class. SMOTE was generally successful and led to many variants, extensions, and adaptations to different concept learning algorithms [[Silicon Valley Data Science]][Learning from Imbalanced Classe].
 
 However, Marco, brought up a great point about the risks of using SMOTE without proper cross-validation. See Blog [[Marco Altini]][DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION].
 
@@ -86,19 +86,19 @@ The cons for the Z scores are that it is only convenient to use in a low dimensi
 
 ### 5.2 Supervised Learning
 
-Generally, the class imbalance is solved using an ensemble built by resampling data many times.  The idea is to first create new datasets by taking **all anomalous data points** and **adding a subset of normal data points** (e.g. as 4 times as anomalous data points). Then a classifier is built for each data set using SVM or Random Forest, and those classifiers are combined using ensemble learning. This approach has worked well and produced very good results [[1]][Introduction to Anomaly Detection: Concepts and Techniques].
+Generally, the class imbalance is solved using an ensemble built by resampling data many times.  The idea is to first create new datasets by taking **all anomalous data points** and **adding a subset of normal data points** (e.g. as 4 times as anomalous data points). Then a classifier is built for each data set using SVM or Random Forest, and those classifiers are combined using ensemble learning. This approach has worked well and produced very good results [[Srinath Perera]][Introduction to Anomaly Detection: Concepts and Techniques].
 
 #### 5.2.1 Use Tree-Based Algorithms
 We can also consider tree-based algorithms. Decision trees often perform well on imbalanced datasets because their hierarchical structure allows them to learn signals from both classes. In modern applied machine learning, tree ensembles (Random Forests, Gradient Boosted Trees, etc.) almost always outperform singular decision trees [[Elite Data Science]][How to Handle Imbalanced Classes in Machine Learning].
 
 #### 5.2.2 Penalize Algorithms (Cost-Sensitive Training)
 
-Another tactic is to use penalized learning algorithms that increase the cost of classification mistakes on the minority class [[2]][Dealing with Imbalanced Classes in Machine Learning] and [[Elite Data Science]][How to Handle Imbalanced Classes in Machine Learning].
+Another tactic is to use penalized learning algorithms that increase the cost of classification mistakes on the minority class [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] and [[Elite Data Science]][How to Handle Imbalanced Classes in Machine Learning].
 In regular learning, we treat all misclassifications equally, which causes issues in imbalanced classification problems, as there is no extra reward for identifying the minority class over the majority class. 
 
 Cost-sensitive learning allows us to **penalize misclassifications of the minority class** more heavily than we do with misclassifications of the majority class, in hopes that this increases the true positive rate. A common scheme for this is to have the cost equal to the inverse of the proportion of the data-set that the class makes up. This increases the penalization as the class size decreases.
 
-A popular algorithm for this technique is Penalized-SVM, During training, we can use the argument `class_weight='balanced'` to penalize mistakes on the minority class by an amount proportional to how under-represented it is. Another penalized algorithms is penalized-LDA [[3]][Fraud Detection Under Extreme Class Imbalance].
+A popular algorithm for this technique is Penalized-SVM, During training, we can use the argument `class_weight='balanced'` to penalize mistakes on the minority class by an amount proportional to how under-represented it is. Another penalized algorithms is penalized-LDA [[Syed Sadat Nazrul]][Fraud Detection Under Extreme Class Imbalance].
 
 
 ### 5.3 Unsupervised Learning
@@ -130,43 +130,45 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 ## Reference
 
-[Introduction to Anomaly Detection: Concepts and Techniques]: https://iwringer.wordpress.com/2015/11/17/anomaly-detection-concepts-and-techniques/
-[[1] Introduction to Anomaly Detection: Concepts and Techniques](https://iwringer.wordpress.com/2015/11/17/anomaly-detection-concepts-and-techniques/)
-
 
 [Dealing with Imbalanced Classes in Machine Learning]: https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2
-[[2] Dealing with Imbalanced Classes in Machine Learning](https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2)
+[[Devin Soni] Dealing with Imbalanced Classes in Machine Learning](https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2)
 
-
-[Fraud Detection Under Extreme Class Imbalance]: https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c
-[[3] Fraud Detection Under Extreme Class Imbalance](https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c)
-
-
-[What is the difference between a ROC curve and a precision-recall curve?]: https://www.quora.com/What-is-the-difference-between-a-ROC-curve-and-a-precision-recall-curve-When-should-I-use-each
-[[4] What is the difference between a ROC curve and a precision-recall curve?](https://www.quora.com/What-is-the-difference-between-a-ROC-curve-and-a-precision-recall-curve-When-should-I-use-each)
-
+[How to Handle Imbalanced Classes in Machine Learning]: https://elitedatascience.com/imbalanced-classes
+[[Elite Data Science] How to Handle Imbalanced Classes in Machine Learning](https://elitedatascience.com/imbalanced-classes)
 
 [Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)]: http://www.chioka.in/differences-between-roc-auc-and-pr-auc/
 [[log0] Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)](http://www.chioka.in/differences-between-roc-auc-and-pr-auc/)
 
 
-[Learning from Imbalanced Classe]: https://www.svds.com/learning-imbalanced-classes/
-[[Silicon Valley Data Science] Learning from Imbalanced Classe](https://www.svds.com/learning-imbalanced-classes/)
-
 [DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION]: https://www.marcoaltini.com/blog/dealing-with-imbalanced-data-undersampling-oversampling-and-proper-cross-validation
 [[Marco Altini] DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION](https://www.marcoaltini.com/blog/dealing-with-imbalanced-data-undersampling-oversampling-and-proper-cross-validation)
-
-
-[A Brief Overview of Outlier Detection Techniques]: https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561
-[[Sergio Santoyo] A Brief Overview of Outlier Detection Techniques](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
 
 
 [Detection of Outliers]: https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm
 [[NIST/SEMATECH e-Handbook of Statistical Methods] Detection of Outliers](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm)
 
 
-[How to Handle Imbalanced Classes in Machine Learning]: https://elitedatascience.com/imbalanced-classes
-[[Elite Data Science] How to Handle Imbalanced Classes in Machine Learning](https://elitedatascience.com/imbalanced-classes)
+[What is the difference between a ROC curve and a precision-recall curve?]: https://www.quora.com/What-is-the-difference-between-a-ROC-curve-and-a-precision-recall-curve-When-should-I-use-each
+[[Quora: What is the difference between a ROC curve and a precision-recall curve?] What is the difference between a ROC curve and a precision-recall curve?](https://www.quora.com/What-is-the-difference-between-a-ROC-curve-and-a-precision-recall-curve-When-should-I-use-each)
+
+
+[A Brief Overview of Outlier Detection Techniques]: https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561
+[[Sergio Santoyo] A Brief Overview of Outlier Detection Techniques](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
+
+
+[Learning from Imbalanced Classe]: https://www.svds.com/learning-imbalanced-classes/
+[[Silicon Valley Data Science] Learning from Imbalanced Classe](https://www.svds.com/learning-imbalanced-classes/)
+
+
+[Introduction to Anomaly Detection: Concepts and Techniques]: https://iwringer.wordpress.com/2015/11/17/anomaly-detection-concepts-and-techniques/
+[[Srinath Perera] Introduction to Anomaly Detection: Concepts and Techniques](https://iwringer.wordpress.com/2015/11/17/anomaly-detection-concepts-and-techniques/)
+
+
+[Fraud Detection Under Extreme Class Imbalance]: https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c
+[[Syed Sadat Nazrul] Fraud Detection Under Extreme Class Imbalance](https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c)
+
+
 
 
 
