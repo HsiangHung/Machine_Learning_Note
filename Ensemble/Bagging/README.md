@@ -47,7 +47,7 @@ In the followings, we show how the hyperparameter influences the performance. Th
 ![](images/n_estimate_1.png)
 
 
-3. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
+3. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting. We can also visualize how depth infleunces the classification.
 
 <!-- ![](images/max_depth_1.png) -->
 ![](images/effect_depth.png)
@@ -65,7 +65,7 @@ In the followings, we show how the hyperparameter influences the performance. Th
 ![](images/max_features.png)
 
 7. `number_trees`: more tress provides better accuracy. However, more trees also mean more computational cost.
-In discussion of [[Stackoverflow: Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], after a certain number of trees, the improvement is negligible.
+In discussion of [[Stackoverflow: Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], after a certain number of trees, the improvement is negligible. Meanwhile, we can also visualize how the "forest" plays the role on classification.
 
 
 ![](images/effect_numtrees.png)
