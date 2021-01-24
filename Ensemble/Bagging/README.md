@@ -66,9 +66,8 @@ In the followings, we show how the hyperparameter influences the performance. Th
 7. `number_trees`: more tress provides better accuracy. However, more trees also mean more computational cost.
 In discussion of [[Stackoverflow: Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], after a certain number of trees, the improvement is negligible.
 
-<!-- ![](images/ntrees_vs_OOB.png) -->
 
-![](images/effect_numtree.png)
+![](images/effect_numtrees.png)
 
 
 
