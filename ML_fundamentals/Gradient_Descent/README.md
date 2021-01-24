@@ -17,7 +17,7 @@ for i in range(nb_epochs):
   params = params - learning_rate * params_grad
 ```
 
-* **Stochastic**: If our dataset is very huge it is not an efficient way for using all examples in one epoch. Stochastic gradient descent (SGD) just uses one example at a time to take a single step. SGD can update to the parameters more frequently, like real-time updating. Notice how the cost effectively takes steps towards the minimum point of cost but does not get there directly. It can also never actually reach the very point of minimum cost, it can only be circulating in its region. (pseudo-code credit from [[Sebastian Ruder]][An overview of gradient descent optimization algorithms])
+* **Stochastic**: If our dataset is very huge it is not an efficient way for using all examples in one epoch. stochastic gradient descent (SGD) just uses one example at a time to take a single step. SGD can update to the parameters more frequently, like real-time updating. Notice how the cost effectively takes steps towards the minimum point of cost but does not get there directly. It can also never actually reach the very point of minimum cost, it can only be circulating in its region. (pseudo-code credit from [[Sebastian Ruder]][An overview of gradient descent optimization algorithms])
 
 ```Python
 for i in range(nb_epochs):
@@ -70,15 +70,24 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 
 ## Other Variants of Graident Descent
 
-The following discussion used the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], but we can also refer to [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning].
+There are many variants of SGD (stochastic gradient descent). We will briefly introduce them in the following discussion and explain with the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], but we can also refer to [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning].
 
 We can denote the graident as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" title="g_{t,i} = \frac{\partial J(\theta_{t,i})}{\partial \theta_{t,i}}" /></a>
 
-For each step, the model parameter is updated as
+For each step `t`, the model parameter is updated as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\alpha&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\alpha&space;g_{t,i}" title="\theta_{t+1, i} = \theta_{t,i} - \alpha g_{t,i}" /></a>
+
+### Momentum
+
+During optimization, SGD used to oscillate across the slopes of the ravine while only making hesitant progress along the bottom towards the local optimum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Look the left image below. 
+
+![SGD_momentum](images/SGD_momentum.png)
+
+Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. 
+
 
 ### Adagrad (Adaptive Gradient Algorithm)
 
