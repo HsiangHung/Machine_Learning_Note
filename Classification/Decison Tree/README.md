@@ -44,10 +44,9 @@ We can see the larger information gain split makes better classification.
 
 The Gini index defines (assume use attribute `A` to have K branches)
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" title="G = 1- \sum^K_{i=1} (p^2_i + n^2_i)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" title="G(A) = 1- \sum^K_{i=1} (p^2_i + n^2_i)" /></a>
 
-
-Smaller Gini index means better attribute to split tree.
+Smaller Gini index means better attribute used to split tree.
 
 ## Reference
 
