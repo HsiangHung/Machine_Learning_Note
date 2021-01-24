@@ -82,11 +82,18 @@ For each step `t`, the model parameter is updated as
 
 ### Momentum
 
-During optimization, SGD used to oscillate across the slopes of the ravine while only making hesitant progress along the bottom towards the local optimum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Look the left image below. 
+During optimization, SGD used to oscillate across the slopes of the ravine while only making hesitant progress along the bottom towards the local optimum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Look the left image below (credit from [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]). 
 
 ![SGD_momentum](images/SGD_momentum.png)
 
 Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=v_{t,i}&space;=&space;\gamma&space;v_{t-1,i}&space;&plus;&space;\alpha&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t,i}&space;=&space;\gamma&space;v_{t-1,i}&space;&plus;&space;\alpha&space;g_{t,i}" title="v_{t,i} = \gamma v_{t-1,i} + \alpha g_{t,i}" /></a>
+
+and then
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,i}&space;=&space;\theta_{t,i}&space;-&space;v_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,i}&space;=&space;\theta_{t,i}&space;-&space;v_{t,i}" title="\theta_{t+1,i} = \theta_{t,i} - v_{t,i}" /></a>
+
 
 
 ### Adagrad (Adaptive Gradient Algorithm)
