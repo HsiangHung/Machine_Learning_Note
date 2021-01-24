@@ -56,7 +56,8 @@ Previous description assumes all learners in the same weight. Where is the `grad
 
 The boosting process is equivalent to minimizing `Loss` by sequentially generating models `F1(x)`, `F2(x)`, .... Therefore, we can add a superscript on the `Loss` function to represent the `Loss` function in `m`-th iteration
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;J_m(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^m_i&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;J_m(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^m_i&space;\big)^2" title="\textrm{Loss} = J_m(y, \hat{y}) = \sum_i \big( y_i - \hat{y}^m_i \big)^2" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;J_m(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^m_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_m(x_i)&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;J_m(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^m_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_m(x_i)&space;\big)^2" title="\textrm{Loss} = J_m(y, \hat{y}) = \sum_i \big( y_i - \hat{y}^m_i \big)^2 = \sum_i \big( y_i - F_m(x_i) \big)^2" /></a>
+
 
 where `m=1,2,3...` From the gradient descent aspect, the `Loss` is minimized as
 
