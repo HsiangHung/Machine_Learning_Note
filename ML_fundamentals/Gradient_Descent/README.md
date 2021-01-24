@@ -68,7 +68,20 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 2. Use an adaptive learning rate to "anneal" closer to the global minimum
 
 
-## Other Variants of Graident Descent
+## Vanishing Gradient [[Chi-Feng Wang]][The Vanishing Gradient Problem]
+
+In nerual networks, we may face the vanishing gradients issue. For example, the derivative of sigmoid activation function looks like
+
+![derivative_sigmoid](images/derivative_sigmoid.png)
+
+For shallow network with only a few layers that use these activations, this isn’t a big problem. However, when more layers are used, it can cause the gradient to be too small for training to work effectively.
+
+Gradients of neural networks are found using backpropagation. Simply put, backpropagation finds the derivatives of the network by moving layer by layer from the final layer to the initial one. By the chain rule, the derivatives of each layer are multiplied down the network (from the final layer to the initial) to compute the derivatives of the initial layers.
+
+However, when n hidden layers use an activation like the sigmoid function, n small derivatives are multiplied together. Thus, the gradient decreases exponentially as we propagate down to the initial layers.
+
+
+## Other Variants of Gradient Descent
 
 There are many variants of SGD (stochastic gradient descent). We will briefly introduce them in the following discussion and explain with the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning] also provide good introduction.
 
@@ -136,6 +149,12 @@ There is often a value to using more than one method (an ensemble), because ever
 
 [Optimizers be TensorFlow’s Appetizers]: https://towardsdatascience.com/optimizers-be-deeps-appetizers-511f3706aa67
 [[Aditya Ananthram] Optimizers be TensorFlow’s Appetizers](https://towardsdatascience.com/optimizers-be-deeps-appetizers-511f3706aa67)
+
+
+
+[The Vanishing Gradient Problem]: https://towardsdatascience.com/optimizers-be-deeps-appetizers-511f3706aa67
+[[Chi-Feng Wang] The Vanishing Gradient Problem](https://towardsdatascience.com/optimizers-be-deeps-appetizers-511f3706aa67)
+
 
 
 [Batch gradient descent versus stochastic gradient descent]: https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent
