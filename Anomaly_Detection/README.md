@@ -23,7 +23,7 @@ Anomaly detection problems have to deal with trade-off between **recall**  and *
 
 Thus, when comparing approaches to imbalanced classification problems, consider using metrics beyond accuracy such as **recall, precision, and AUROC** [[3]][Fraud Detection Under Extreme Class Imbalance]. It may be that switching the metric you optimize for during parameter selection or model selection is enough to provide desirable performance detecting the minority class.
 
-However, there are some discussion [[4]][What is the difference between a ROC curve and a precision-recall curve?] and [[5]][Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)] about the difference using **AUPR** and **AUROC**. Sometimes the area under the precision-recall curve **AUPR** is more useful in imblanced data. 
+However, there are some discussion [[4]][What is the difference between a ROC curve and a precision-recall curve?] and [[log0]][Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)] about the difference using **AUPR** and **AUROC**. Sometimes the area under the precision-recall curve **AUPR** is more useful in imblanced data. 
 
 ROC curve plot True Positive Rate Vs. False Positive Rate; Whereas, PR curve plot Precision Vs. Recall. If the class is highly imbalanced and positive samples are very rare, then use PR-curve. One example may be fraud detection, where non-fraud sample may be 10000 and fraud sample may be below 100. In other cases, ROC curve will be more helpful.
 
@@ -49,7 +49,7 @@ Thus, in this case, the difference is more apparent in **PR curve**.
 ## 4. Data Preprocess
 
 A simple way to fix imbalanced data-sets is simply to balance them, either by oversampling the minority class or undersampling the majority class. See Blogs: [[2]][Dealing with Imbalanced Classes in Machine Learning], [[3]][Fraud Detection Under Extreme Class Imbalance] and 
-[[5]][How to Handle Imbalanced Classes in Machine Learning].
+[[Elite Data Science]][How to Handle Imbalanced Classes in Machine Learning].
 
 ### 4.1 Undersample: Down-sample Majority Class
 
@@ -59,41 +59,41 @@ Undersampling involves randomly removing observations from the majority class. T
 
 Oversampling is the process of randomly duplicating observations from the minority class. We'll resample the minority class **with replacement**, setting the number of samples to match that of the majority class.
 
-Note both oversample and undersample changes data distribution [[6]][Learning from Imbalanced Classe]. Oversample makes variables appear to have lower variance than they do. Conversely, undersampling can make the independent variables look like they have a higher variance than they do. 
+Note both oversample and undersample changes data distribution [[Silicon Valley Data Science]][Learning from Imbalanced Classe]. Oversample makes variables appear to have lower variance than they do. Conversely, undersampling can make the independent variables look like they have a higher variance than they do. 
 
 ### 4.3 Synthesize Minor Samples
 
-Rather than randomly duplicating minority class, creating synthetic samples is a close cousin of up-sampling. For example, the SMOTE [(Synthetic Minority Oversampling TEchnique)](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume16/chawla02a-html/chawla2002.html) and ADASYN algorithms are methods of resampling from the minority class while slightly perturbing feature values, thereby creating "new" samples. The blog [[2]][Dealing with Imbalanced Classes in Machine Learning] simply interprets how to synthesize minority class. SMOTE was generally successful and led to many variants, extensions, and adaptations to different concept learning algorithms [[6]][Learning from Imbalanced Classe].
+Rather than randomly duplicating minority class, creating synthetic samples is a close cousin of up-sampling. For example, the SMOTE [(Synthetic Minority Oversampling TEchnique)](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume16/chawla02a-html/chawla2002.html) and ADASYN algorithms are methods of resampling from the minority class while slightly perturbing feature values, thereby creating "new" samples. The blog [[2]][Dealing with Imbalanced Classes in Machine Learning] simply interprets how to synthesize minority class. SMOTE was generally successful and led to many variants, extensions, and adaptations to different concept learning algorithms [[Silicon Valley Data Science]][Learning from Imbalanced Classe].
 
-However, Marco, brought up a great point about the risks of using SMOTE without proper cross-validation. See Blog [[7]][DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION].
+However, Marco, brought up a great point about the risks of using SMOTE without proper cross-validation. See Blog [[Marco Altini]][DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION].
 
 
 ## 5. Anomaly Detection Techniques
 
 
 ### 5.1 Inference: Z score and Modified Z score
-The z-score or standard score of an observation is a metric that indicates how many standard deviations a data point is from the sample’s mean, assuming a gaussian distribution [[8]][A Brief Overview of Outlier Detection Techniques]. The z-score of any data point can be calculated as
+The z-score or standard score of an observation is a metric that indicates how many standard deviations a data point is from the sample’s mean, assuming a gaussian distribution [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]. The z-score of any data point can be calculated as
     
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{x-\bar{x}}{\sigma}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{x-\bar{x}}{\sigma}" title="z = \frac{x-\bar{x}}{\sigma}" /></a>
 
-The modified Z score `M` is defined as [[9]][Detection of Outliers]
+The modified Z score `M` is defined as [[NIST/SEMATECH e-Handbook of Statistical Methods]][Detection of Outliers]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{M}&space;=&space;\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{M}&space;=&space;\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" title="\textrm{M} = \frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" /></a>
      
 where `MAD` denoting the median absolute deviation and `x̃`  denoting the median. The modified Z-scores with an absolute value of greater than 3.5 is labeled as potential outliers.
 
-The cons for the Z scores are that it is only convenient to use in a low dimensional feature space, in a small to medium sized dataset and not recommended when distributions can not be assumed to be parametric [[8]][A Brief Overview of Outlier Detection Techniques].
+The cons for the Z scores are that it is only convenient to use in a low dimensional feature space, in a small to medium sized dataset and not recommended when distributions can not be assumed to be parametric [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
 ### 5.2 Supervised Learning
 
 Generally, the class imbalance is solved using an ensemble built by resampling data many times.  The idea is to first create new datasets by taking **all anomalous data points** and **adding a subset of normal data points** (e.g. as 4 times as anomalous data points). Then a classifier is built for each data set using SVM or Random Forest, and those classifiers are combined using ensemble learning. This approach has worked well and produced very good results [[1]][Introduction to Anomaly Detection: Concepts and Techniques].
 
 #### 5.2.1 Use Tree-Based Algorithms
-We can also consider tree-based algorithms. Decision trees often perform well on imbalanced datasets because their hierarchical structure allows them to learn signals from both classes. In modern applied machine learning, tree ensembles (Random Forests, Gradient Boosted Trees, etc.) almost always outperform singular decision trees [[10]][How to Handle Imbalanced Classes in Machine Learning].
+We can also consider tree-based algorithms. Decision trees often perform well on imbalanced datasets because their hierarchical structure allows them to learn signals from both classes. In modern applied machine learning, tree ensembles (Random Forests, Gradient Boosted Trees, etc.) almost always outperform singular decision trees [[Elite Data Science]][How to Handle Imbalanced Classes in Machine Learning].
 
 #### 5.2.2 Penalize Algorithms (Cost-Sensitive Training)
 
-Another tactic is to use penalized learning algorithms that increase the cost of classification mistakes on the minority class [[2]][Dealing with Imbalanced Classes in Machine Learning] and [[10]][How to Handle Imbalanced Classes in Machine Learning].
+Another tactic is to use penalized learning algorithms that increase the cost of classification mistakes on the minority class [[2]][Dealing with Imbalanced Classes in Machine Learning] and [[Elite Data Science]][How to Handle Imbalanced Classes in Machine Learning].
 In regular learning, we treat all misclassifications equally, which causes issues in imbalanced classification problems, as there is no extra reward for identifying the minority class over the majority class. 
 
 Cost-sensitive learning allows us to **penalize misclassifications of the minority class** more heavily than we do with misclassifications of the majority class, in hopes that this increases the true positive rate. A common scheme for this is to have the cost equal to the inverse of the proportion of the data-set that the class makes up. This increases the penalization as the class size decreases.
@@ -105,7 +105,7 @@ A popular algorithm for this technique is Penalized-SVM, During training, we can
 
 If your training data does not have label, using unsupervised learning and semi-supervised learning. However, after building the model, you will have no idea how well it is doing as you have nothing to test it against. Hence, the results of those methods need to be tested in the field before placing them in the critical path.
 
-#### 5.3.1 Dbscan (Density Based Spatial Clustering) [[8]][A Brief Overview of Outlier Detection Techniques]
+#### 5.3.1 Dbscan (Density Based Spatial Clustering) [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
 
 Dbscan is a density based clustering algorithm, focusing on finding neighbors by density (MinPts) on an ‘n-dimensional sphere’ with radius ɛ. A cluster can be defined as the maximal set of ‘density connected points’ in the feature space. The complexity of dbscan is of O(n log n). Outliers (noise) will be assigned to the -1 cluster. 
 
@@ -113,15 +113,15 @@ After **rescaling (standardize)** the features, choose the spatial metric on whi
 
 The parameter `eps (ɛ)` must be chosen accordingly to perform clustering. If `ɛ` is too big many points will be density connected, if its too small the clustering will result in many meaningless clusters. A good approach is to try values ranging from 0.25 to 0.75.
 
-The cons of Dbscan are that selecting the optimal parameters eps, MinPts and metric can be difficult since it is very sensitive to any of the three params [[8]][A Brief Overview of Outlier Detection Techniques].
+The cons of Dbscan are that selecting the optimal parameters eps, MinPts and metric can be difficult since it is very sensitive to any of the three params [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
-#### 5.3.2 Isolation Forests [[8]][A Brief Overview of Outlier Detection Techniques]
+#### 5.3.2 Isolation Forests [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
 
 One of approaches to solving the imbalance problem is to discard the minority examples and treat it as a single-class (or anomaly detection) problem. Isolation forest implemented the concept.
 
-Isolation forest’s basic principle is that outliers are few and far from the rest of the observations. For prediction, it compares an observation against that splitting value in a “node”, that node will have two node children on which another random comparisons will be made. The number of “splittings” made by the algorithm for an instance is named: “path length”. As expected, outliers will have shorter path lengths than the rest of the observations. Also see the [notebook example](https://github.com/HsiangHung/MachineLearningNote/blob/master/anomaly%20detection/outlier_methods_sklearn.ipynb).
+Isolation forest’s basic principle is that outliers are few and far from the rest of the observations. For prediction, it compares an observation against that splitting value in a “node”, that node will have two node children on which another random comparisons will be made. The number of “splittings” made by the algorithm for an instance is named: “path length”. As expected, outliers will have shorter path lengths than the rest of the observations. Also see the [notebook example](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Anomaly_Detection/outlier_methods_sklearn.ipynb).
 
-The cons of isolation forest include that visualizing results is complicated, and if not correctly optimized, training time can be very long and computationally expensive [[8]][A Brief Overview of Outlier Detection Techniques].
+The cons of isolation forest include that visualizing results is complicated, and if not correctly optimized, training time can be very long and computationally expensive [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
 
 ## 6. Time-Series Anomaly Detection
@@ -147,26 +147,26 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 
 [Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)]: http://www.chioka.in/differences-between-roc-auc-and-pr-auc/
-[[5] Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)](http://www.chioka.in/differences-between-roc-auc-and-pr-auc/)
+[[log0] Differences between Receiver Operating Characteristic AUC (ROC AUC) and Precision Recall AUC (PR AUC)](http://www.chioka.in/differences-between-roc-auc-and-pr-auc/)
 
 
 [Learning from Imbalanced Classe]: https://www.svds.com/learning-imbalanced-classes/
-[[6] Learning from Imbalanced Classe](https://www.svds.com/learning-imbalanced-classes/)
+[[Silicon Valley Data Science] Learning from Imbalanced Classe](https://www.svds.com/learning-imbalanced-classes/)
 
 [DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION]: https://www.marcoaltini.com/blog/dealing-with-imbalanced-data-undersampling-oversampling-and-proper-cross-validation
-[[7] DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION](https://www.marcoaltini.com/blog/dealing-with-imbalanced-data-undersampling-oversampling-and-proper-cross-validation)
+[[Marco Altini] DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION](https://www.marcoaltini.com/blog/dealing-with-imbalanced-data-undersampling-oversampling-and-proper-cross-validation)
 
 
 [A Brief Overview of Outlier Detection Techniques]: https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561
-[[8] A Brief Overview of Outlier Detection Techniques](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
+[[Sergio Santoyo] A Brief Overview of Outlier Detection Techniques](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
 
 
 [Detection of Outliers]: https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm
-[[9] Detection of Outliers](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm)
+[[NIST/SEMATECH e-Handbook of Statistical Methods] Detection of Outliers](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm)
 
 
 [How to Handle Imbalanced Classes in Machine Learning]: https://elitedatascience.com/imbalanced-classes
-[[10] How to Handle Imbalanced Classes in Machine Learning](https://elitedatascience.com/imbalanced-classes)
+[[Elite Data Science] How to Handle Imbalanced Classes in Machine Learning](https://elitedatascience.com/imbalanced-classes)
 
 
 
