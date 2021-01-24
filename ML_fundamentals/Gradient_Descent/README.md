@@ -86,13 +86,14 @@ During optimization, SGD used to oscillate across the slopes of the ravine while
 
 ![SGD_momentum](images/SGD_momentum.png)
 
-Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. 
+Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first find velocity
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t,i}&space;=&space;\gamma&space;v_{t-1,i}&space;&plus;&space;\alpha&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t,i}&space;=&space;\gamma&space;v_{t-1,i}&space;&plus;&space;\alpha&space;g_{t,i}" title="v_{t,i} = \gamma v_{t-1,i} + \alpha g_{t,i}" /></a>
 
-and then
+The momentrum term `γ` is usually set to 0.9 or a similar value [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Then update model
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,i}&space;=&space;\theta_{t,i}&space;-&space;v_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,i}&space;=&space;\theta_{t,i}&space;-&space;v_{t,i}" title="\theta_{t+1,i} = \theta_{t,i} - v_{t,i}" /></a>
+
 
 
 
