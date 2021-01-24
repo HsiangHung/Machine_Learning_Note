@@ -15,9 +15,9 @@ parameter = parameter - learning_rate * gradient
 
 * **Min-batch**: A mixture of Batch and SGD. The drawback is that it wanders around the minimum region but never converges (like SGD).
 
-For Batch Gradient Descent, the algorithm traces a straight line towards the minimum. If the cost function is convex, then it converges to a global minimum and if the cost function is not convex, then it converges to a local minimum. The learning rate is typically held constant over here.
+For Batch Gradient Descent, the algorithm traces a straight line towards the minimum. If the cost function is convex, then it converges to a global minimum and if the cost function is not convex, then it converges to a local minimum. The learning rate is typically held constant over here. 
 
-
+Here is the post [[Jason Brownlee]][A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size] to discuss what value of batch size in Mini-Batch Gradient Descent. A good default for batch size might be 32, and 64,.... 
 
 The comparison between the gradient descents can be illustrated below (credit from [[Z² Little]][Gradient Descent: Stochastic vs. Mini-batch vs. Batch vs. AdaGrad vs. RMSProp vs. Adam]):
 ![comparison_gradient](images/gradient_comparison.png)
@@ -111,6 +111,13 @@ There is often a value to using more than one method (an ensemble), because ever
 
 [Why not always use the ADAM optimization technique?]: https://datascience.stackexchange.com/questions/30344/why-not-always-use-the-adam-optimization-technique/30347
 [[Data Science: Why not always use the ADAM optimization technique?] Why not always use the ADAM optimization technique?](https://datascience.stackexchange.com/questions/30344/why-not-always-use-the-adam-optimization-technique/30347)
+
+
+
+
+[A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size]: https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/
+[[Jason Brownlee] A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size](https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/)
+
 
 
 
