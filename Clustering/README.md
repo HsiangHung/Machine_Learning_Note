@@ -1,7 +1,7 @@
 
 # Unsupervised Clustering 
 
-DBSCAN, HDBSCAN [[Pepe Berba]][A gentle introduction to HDBSCAN and density-based clustering], K-means, Expectation–Maximization (EM) Clustering [[George Seif]][The 5 Clustering Algorithms Data Scientists Need to Know], Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation] and [[Chengwei]][How to do Unsupervised Clustering with Keras].
+DBSCAN, HDBSCAN [[Pepe Berba]][A gentle introduction to HDBSCAN and density-based clustering], K-means, Expectation–Maximization (EM) Clustering [[George Seif]][The 5 Clustering Algorithms Data Scientists Need to Know], Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation] and [[Chengwei]][How to do Unsupervised Clustering with Keras], [[Syed Sadat Nazrul]][Clustering Based Unsupervised Learning].
 
 The clustering comparison (credit from scikit-learn):
 
@@ -64,9 +64,11 @@ For n_clusters = 6 The average silhouette_score is : 0.4504666294372765
 [[Pepe Berba] A gentle introduction to HDBSCAN and density-based clustering](https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8)
 
 
+[Clustering Based Unsupervised Learning]: https://towardsdatascience.com/clustering-based-unsupervised-learning-8d705298ae51
+[[Syed Sadat Nazrul] Clustering Based Unsupervised Learning](https://towardsdatascience.com/clustering-based-unsupervised-learning-8d705298ae51)
+
 [Deep Clustering for Financial Market Segmentation]: https://towardsdatascience.com/deep-clustering-for-financial-market-segmentation-2a41573618cf
 [[Yuefeng Zhang] Deep Clustering for Financial Market Segmentation](https://towardsdatascience.com/deep-clustering-for-financial-market-segmentation-2a41573618cf)
-
 
 
 [Silhouette (clustering)]: https://en.wikipedia.org/wiki/Silhouette_(clustering)
