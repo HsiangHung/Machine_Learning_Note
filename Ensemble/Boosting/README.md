@@ -94,7 +94,7 @@ As a concrete example, suppose we have data if patients have heart disease as fo
 At the beginning each data has same sample weight = 1/8.
 
 Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` and patients' weight < as `No`.
-For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 incorrect (#4). Then next step we reweight #4 data with higher sample weight than others
+For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 incorrect (#4). Then next step we reweigh #4 data with higher sample weight than others since it is misclassified
 ```
  # | chest | weight | disease | new sample weight|
 --------------------------------------------
@@ -107,7 +107,7 @@ For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 in
  7 |  Yes  |  168   |   No    |  0.07  |
  8 |  Yes  |  172   |   No    |  0.07  |
 ```
-Then we reconstruct data in next forest by sample weight. For example, if r < 0.07 we pick #1; if 0.08 <= r < 0.14 we pick #2,...; if 0.21 <= r < 0.7 pick #4,.... In this case we will pick #4 more frequently than others.
+Then we reconstruct data in next forest by the new sample weights. For example, given a random number r: if r < 0.07 we pick #1; if 0.08 <= r < 0.14 we pick #2,...; if 0.21 <= r < 0.7 pick #4,.... In this case we will pick #4 more frequently than others.
 
 
 
