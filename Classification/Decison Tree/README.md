@@ -15,12 +15,13 @@ Note even on the leaves, there exists data noise so we still see various class d
 
 ## How to Select Feature for Split?
 
+Given a split way of features, calculate entropy for root and its childs. The tree split is to maximize reduction of the entropy, which is defined as information gain. 
 
 ![example_information_gain](images/example_information_gain.png)
 
+Later information gain leads to less homogeneity on class distributions. See examples below: 
 
-
-
+![split_example](images/split_example.png)
 
 
 
