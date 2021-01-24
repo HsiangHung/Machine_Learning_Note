@@ -78,7 +78,7 @@ On the other hand, adaptive boosting **changes sample distribution** by **modify
 
 On the other hand, gradient boosting doesn’t modify the sample distribution. 
 
-As a concrete example, suppose we have data if patients have heart disease as follows (**chest** = if chest pain,**weight** = patient weight, **disease** = heart disease and **sample weight**):
+As a concrete example, we follow Josh Starmer's video lecture: [Adaboost, clearly explained](https://www.youtube.com/watch?v=LsK-xG1cLYA) below. Suppose we have data if patients have heart disease as follows (**chest** = if chest pain,**weight** = patient weight, **disease** = heart disease and **sample weight**):
 ```
  # | chest | weight | disease | sample weight|
 --------------------------------------------
