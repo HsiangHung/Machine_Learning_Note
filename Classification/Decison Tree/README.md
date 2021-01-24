@@ -4,7 +4,7 @@
 
 
 
-## How DO A Tree Interpret Probability?
+## How To Interpret Probability in Tree?
 
 In Prof. Nando de Freitas UBC Machine Learning class, he shows a picture how probability works in a given decision tree:
 
@@ -13,9 +13,10 @@ In Prof. Nando de Freitas UBC Machine Learning class, he shows a picture how pro
 Note even on the leaves, there exists data noise so we still see various class distribution.
 
 
+## How to Select Feature for Split?
 
 
-
+![example_information_gain](images/example_information_gain.png)
 
 
 
