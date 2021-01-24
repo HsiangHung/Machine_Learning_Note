@@ -49,7 +49,8 @@ In the followings, we show how the hyperparameter influences the performance. Th
 
 3. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting.
 
-![](images/max_depth_1.png)
+<!-- ![](images/max_depth_1.png) -->
+![](images/effect_depth.png)
 
 4. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case.
 
