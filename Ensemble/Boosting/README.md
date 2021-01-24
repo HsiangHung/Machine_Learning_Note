@@ -4,7 +4,7 @@
 
 An ensemble is just a **collection of predictors (learners)** which come together (e.g. mean of all predictions) to give a final prediction. 
 
-Boosting is one of ensemble techniques to **sequentially** generate predictors. The subsequent predictors learn from the mistakes of the previous predictors. Therefore, the observations have an **unequal probability of appearing in subsequent models** and ones with the **highest error appear most**. The predictors can be chosen from a range of models like decision trees, regressors, classifiers etc. One can interpret boosting as trying to **minimize bias** of the overall predictor. So when you use boosting, you’re incentivized to use low-variance and high-bias estimators (e.g. shallow decision trees). However, it could lead to **overfitting** on training data. 
+Boosting is one of ensemble techniques to **sequentially** generate predictors. The subsequent predictors learn from the mistakes of the previous predictors. Therefore, the observations (data) have an **unequal probability of appearing in subsequent models** and ones with the **highest error appear most**. The predictors can be chosen from a range of models like decision trees, regressors, classifiers etc. One can interpret boosting as trying to **minimize bias** of the overall predictor. So when you use boosting, you’re incentivized to use **low-variance and high-bias estimators** (e.g. shallow decision trees. In LGBM, tree depth > 5 may be too deep). However, it could lead to **overfitting** on training data. 
 
 There are mainly two boosting algorithms: Gradient Boosting (GBM) and Adaptive Boosting (Adaboost). XGBoost is a brand new tool developed by Tianran Chen by optimizing GBM.
 
@@ -65,7 +65,7 @@ where `m=1,2,3...` From the gradient descent aspect, the `Loss` is minimized as
 where `\alpha` is the learning rate. From the expression, we can see the gradient is equal to the errors, and the predicted value `ym` is updated by multiplying the learning rate to the errors. This is why at each step we fit the residuals, where equivalently we are computing the gradient of `J`. The posts [[Prince Grover
 -2]][Gradient boosting simplified], [[Kaggle]][A Kaggle Master Explains Gradient Boosting] and [Prof. Ilher's lecture video](https://www.youtube.com/watch?v=sRktKszFmSk) have more detailed interpretation.
 
-Terence Parr in a Quora post [[Quora-1]][What is an intuitive explanation of Gradient Boosting?] offered a very interesting picture, which explian the procedures very well.
+Terence Parr in a Quora post [[Quora: What is an intuitive explanation of Gradient Boosting?]][What is an intuitive explanation of Gradient Boosting?] offered a very interesting picture, which explian the procedures very well.
 
 ![](images/golf.png)
 
@@ -73,26 +73,26 @@ Terence Parr in a Quora post [[Quora-1]][What is an intuitive explanation of Gra
 
 ## 2. AdaBoost
 
-On the other hand, adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[Quora-2]][What is the difference between gradient boosting and adaboost?].
+On the other hand, adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[Quora: What is the difference between gradient boosting and adaboost?]][What is the difference between gradient boosting and adaboost?].
 
 On the other hand, gradient boosting doesn’t modify the sample distribution. 
 
 ## 3. XGBoost
 
-XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard regularization parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora-3]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
+XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard regularization parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
 
 
 ## 4. LightGBM
 
-LightGBM (LGBM) model is a relatively newer model. Rather than level-wise tree growth in regular decision tree algorithms (credit from [here](https://github.com/Microsoft/LightGBM/blob/master/docs/)), 
+LightGBM (LGBM) model is a relatively new model. Rather than **level-wise** tree growth in regular decision tree algorithms (credit from [here](https://github.com/Microsoft/LightGBM/blob/master/docs/)), 
 
 ![level_wise](images/level-wise.png)
 
-LGBM is leaf-wise tree growth, 
+LGBM is **leaf-wise** tree growth, 
 
 ![leaf_wise](images/leaf-wise.png)
 
-which shows faster performance [[Analytics Vidhya]][Which algorithm takes the crown: Light GBM vs XGBOOST?], [[Harry Moreno]][Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)], [[Aman Cyberia]][Good summary of XGBoost vs CatBoost vs LightGBM], [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!], [[Alvira Swalin]][CatBoost vs. Light GBM vs. XGBoost], [[Jason Brownlee]][Gradient Boosting with Scikit-Learn, XGBoost, LightGBM, and CatBoost], [[Github]][Github: LGBM]. Leaf-wise algorithms tend to achieve lower loss than level-wise algorithms. However, Leaf-wise may cause over-fitting when #data is small, so LightGBM includes the max_depth parameter to limit tree depth. 
+which shows faster performance [[Analytics Vidhya]][Which algorithm takes the crown: Light GBM vs XGBOOST?], [[Harry Moreno]][Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)], [[Aman Cyberia]][Good summary of XGBoost vs CatBoost vs LightGBM], [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!], [[Alvira Swalin]][CatBoost vs. Light GBM vs. XGBoost], [[Jason Brownlee]][Gradient Boosting with Scikit-Learn, XGBoost, LightGBM, and CatBoost], [[Github]][Github: LGBM]. Leaf-wise algorithms tend to achieve lower loss than level-wise algorithms. However, Leaf-wise may cause over-fitting when the data size is small, so LightGBM includes the max_depth parameter to limit tree depth. 
 
 Another good introduction blogs are given by [[Andrich van Wyk]][An Overview of LightGBM] and [[Neptune.ai]][Understanding LightGBM Parameters (and How to Tune Them)]. The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Python-Intro.html) as well as [the model hyperparameter list](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The guide page and [[Andrich van Wyk] An Overview of LightGBM] show how to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html). The summary includes:
 
@@ -148,15 +148,15 @@ Another good introduction blogs are given by [[Andrich van Wyk]][An Overview of 
 
 
 [What is an intuitive explanation of Gradient Boosting?]: https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting
-[[Quora-1] What is an intuitive explanation of Gradient Boosting?](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting)
+[[Quora: What is an intuitive explanation of Gradient Boosting?] What is an intuitive explanation of Gradient Boosting?](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting)
 
 
 [What is the difference between gradient boosting and adaboost?]: https://www.quora.com/What-is-the-difference-between-gradient-boosting-and-adaboost#
-[[Quora-2] What is the difference between gradient boosting and adaboost?](https://www.quora.com/What-is-the-difference-between-gradient-boosting-and-adaboost#)
+[[Quora: What is the difference between gradient boosting and adaboost?] What is the difference between gradient boosting and adaboost?](https://www.quora.com/What-is-the-difference-between-gradient-boosting-and-adaboost#)
 
 
 [What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]: https://www.quora.com/What-is-the-difference-between-eXtreme-Gradient-Boosting-XGBoost-AdaBoost-and-Gradient-Boosting
-[[Quora-3] What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?](https://www.quora.com/What-is-the-difference-between-eXtreme-Gradient-Boosting-XGBoost-AdaBoost-and-Gradient-Boosting)
+[[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?] What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?](https://www.quora.com/What-is-the-difference-between-eXtreme-Gradient-Boosting-XGBoost-AdaBoost-and-Gradient-Boosting)
 
 
 [Gradient Boosting from scratchs]: https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d
