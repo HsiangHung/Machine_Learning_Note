@@ -93,7 +93,7 @@ As a concrete example, suppose we have data if patients have heart disease as fo
 ```
 At the beginning each data has same sample weight = 1/8.
 
-Suppose we select weight = 176 to split node, patients' weight > 176 as yes and patients' weight < as No.
+Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` and patients' weight < as `No`.
 For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 incorrect (#4). Then next step we reweight #4 data with higher sample weight than others
 ```
  # | chest | weight | disease | new sample weight|
