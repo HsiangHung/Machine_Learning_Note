@@ -2,16 +2,16 @@
 
 
 
-Suppose our training data set is represented by `T` and suppose data set has `M` features (or attributes or variables) [[Stackoverflow, What is out of bag error in Random Forests?]][What is out of bag error in Random Forests?].
+Suppose our training data set is represented by `T` and suppose data set has `M` features (or attributes or variables) [[Stackoverflow: What is out of bag error in Random Forests?]][What is out of bag error in Random Forests?].
 
     T = {(X1,y1), (X2,y2), ... (Xn, yn)}
 
-and `Xi` is input vector `{xi1, xi2, ... xiM}`, `yi` is the label (or output or class). 
+and `Xi` is input vector `{xi_1, xi_2, ... xi_M}`, `yi` is the label (or output or class). 
 
 
 Random Forests algorithm is a classifier based on primarily two methods - Bagging and Random subspace method.
 
-Suppose we decide to have `S` number of trees in our forest, then we first create `S` datasets of "same size as original" created from random resampling of data in `T` with-replacement (`n` times for each dataset). This will result in `{T1, T2, ... TS}` datasets. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset `Ti` can have duplicate data records and `Ti` can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
+Suppose we decide to have `S` number of trees in our forest, then we first create `S` datasets of "same size as original" created from random resampling of data in `T` **with-replacement** (`n` times for each dataset). This will result in `{T1, T2, ... TS}` datasets. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset `Ti` can have duplicate data records and `Ti` can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
 
 **Bagging** is the process of taking bootstraps & then aggregating the models learned on each bootstrap.
 
@@ -33,7 +33,7 @@ Why is it important? The study of error estimates for bagged classifiers in Brei
 
 ## Hyperparameter Fine Tuning
 
-There are good articles talking about hyperparameter fine tuning in random forest: [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest], [[Will Koehrsen]][Hyperparameter Tuning the Random Forest in Python], [[StackExchange, Practical questions on tuning Random Forests]][Practical questions on tuning Random Forests] and [[Kaggle, Random Forest using GridSearchCV]][Random Forest using GridSearchCV]. We have attached the script in this folder.
+There are good articles talking about hyperparameter fine tuning in random forest: [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest], [[Will Koehrsen]][Hyperparameter Tuning the Random Forest in Python], [[Cross Validated: Practical questions on tuning Random Forests]][Practical questions on tuning Random Forests] and [[Kaggle, Random Forest using GridSearchCV]][Random Forest using GridSearchCV]. We have attached the script in this folder.
 
 In the followings, we show how the hyperparameter influences the performance. The results are all from [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest] or [[Jason Brownlee]][How to Develop a Random Forest Ensemble in Python].
 
@@ -62,7 +62,7 @@ In the followings, we show how the hyperparameter influences the performance. Th
 ![](images/max_features.png)
 
 7. `number_trees`: more tress provides better accuracy. However, more trees also mean more computational cost.
-In discussion of [[Stackoverflow, Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], after a certain number of trees, the improvement is negligible.
+In discussion of [[Stackoverflow: Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], after a certain number of trees, the improvement is negligible.
 
 ![](images/ntrees_vs_OOB.png)
 
@@ -86,15 +86,15 @@ In discussion of [[Stackoverflow, Random forest tuning - tree depth and number o
 
 
 [Practical questions on tuning Random Forests]: https://stats.stackexchange.com/questions/53240/practical-questions-on-tuning-random-forests
-[[StackExchange, Practical questions on tuning Random Forests] Practical questions on tuning Random Forests](https://stats.stackexchange.com/questions/53240/practical-questions-on-tuning-random-forests)
+[[Cross Validated: Practical questions on tuning Random Forests] Practical questions on tuning Random Forests](https://stats.stackexchange.com/questions/53240/practical-questions-on-tuning-random-forests)
 
 
 [Random forest tuning - tree depth and number of trees]: https://stackoverflow.com/questions/34997134/random-forest-tuning-tree-depth-and-number-of-trees
-[[Stackoverflow, Random forest tuning - tree depth and number of trees] Random forest tuning - tree depth and number of trees](https://stackoverflow.com/questions/34997134/random-forest-tuning-tree-depth-and-number-of-trees)
+[[Stackoverflow: Random forest tuning - tree depth and number of trees] Random forest tuning - tree depth and number of trees](https://stackoverflow.com/questions/34997134/random-forest-tuning-tree-depth-and-number-of-trees)
 
 
 [What is out of bag error in Random Forests?]: https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests
-[[Stackoverflow, What is out of bag error in Random Forests?] What is out of bag error in Random Forests?](https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests)
+[[Stackoverflow: What is out of bag error in Random Forests?] What is out of bag error in Random Forests?](https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests)
 
 
 [Hyperparameter Tuning the Random Forest in Python]: https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
