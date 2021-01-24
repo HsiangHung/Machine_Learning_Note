@@ -174,6 +174,3 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 
 
-
-
-[Clustering Based Unsupervised Learning]: https://towardsdatascience.com/clustering-based-unsupervised-learning-8d705298ae51
