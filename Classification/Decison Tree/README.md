@@ -23,6 +23,7 @@ Later information gain leads to less homogeneity on class distributions. See exa
 
 ![split_example](images/split_example.png)
 
+We can see the larger information gain split makes better classification.
 
 
 ## Reference
