@@ -78,6 +78,39 @@ On the other hand, adaptive boosting **changes sample distribution** by **modify
 
 On the other hand, gradient boosting doesn’t modify the sample distribution. 
 
+As a concrete example, suppose we have data if patients have heart disease as follows (ches pair|| patient weight||heart disease||sample weight||):
+```
+ # | chest | weight | disease | sample weight|
+--------------------------------------------
+ 1 |  Yes  |  205   |   Yes   |  1/8  |
+ 2 |  No   |  180   |   Yes   |  1/8  |
+ 3 |  Yes  |  210   |   Yes   |  1/8  |
+ 4 |  Yes  |  167   |   Yes   |  1/8  |
+ 5 |  No   |  156   |   No    |  1/8  |
+ 6 |  No   |  125   |   No    |  1/8  |
+ 7 |  Yes  |  168   |   No    |  1/8  |
+ 8 |  Yes  |  172   |   No    |  1/8  |
+```
+At the beginning each data has same sample weight = 1/8.
+
+Suppose we select weight = 176 to split node, patients' weight > 176 as yes and patients' weight < as No.
+For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 incorrect (#4). Then next step we reweight #4 data with higher sample weight than others
+```
+ # | chest | weight | disease | new sample weight|
+--------------------------------------------
+ 1 |  Yes  |  205   |   Yes   |  0.07  |
+ 2 |  No   |  180   |   Yes   |  0.07  |
+ 3 |  Yes  |  210   |   Yes   |  0.07  |
+ 4 |  Yes  |  167   |   Yes   |  0.49  |
+ 5 |  No   |  156   |   No    |  0.07  |
+ 6 |  No   |  125   |   No    |  0.07  |
+ 7 |  Yes  |  168   |   No    |  0.07  |
+ 8 |  Yes  |  172   |   No    |  0.07  |
+```
+Then we reconstruct data in next forest by sample weight. For example, if r < 0.07 we pick #1; if 0.08 <= r < 0.14 we pick #2,...; if 0.21 <= r < 0.7 pick #4,.... In this case we will pick #4 more frequently than others.
+
+
+
 ## 3. XGBoost
 
 XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard regularization parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
