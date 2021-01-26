@@ -127,9 +127,16 @@ The comprehensive tutorial on introduction to the model, [Introduction to Booste
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="\hat{y}^2_i = \hat{y}^1_i + f_2(x_i) = f_1(x_i) + f_2(x_i)" /></a>
 
-eventually we have the following relation
+... Eventually we have the following relation
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^m_i&space;=&space;\hat{y}^{m-1}_i&space;&plus;&space;f_{m}(x_i)&space;=&space;\sum^{m-1}_{n=1}&space;f_n(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^m_i&space;=&space;\hat{y}^{m-1}_i&space;&plus;&space;f_{m}(x_i)&space;=&space;\sum^{m-1}_{n=1}&space;f_n(x_i)" title="\hat{y}^m_i = \hat{y}^{m-1}_i + f_{m}(x_i) = \sum^{m-1}_{n=1} f_n(x_i)" /></a>
+
+Here f0(x) is like F1 in previous description, and f1, f2, ... are h1, h2,....
+
+The cost function in XGBoost has regularization on the `f` functions, 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_m&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^m_i&space;\big)^2&space;&plus;&space;\sum^m_{n=1}&space;\Omega(f_n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_m&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^m_i&space;\big)^2&space;&plus;&space;\sum^m_{n=1}&space;\Omega(f_n)" title="J_m = \sum^n_{i=1} \big( y_i - \hat{y}^m_i \big)^2 + \sum^m_{n=1} \Omega(f_n)" /></a>
+
 
 
 
