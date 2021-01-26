@@ -117,7 +117,16 @@ Then we reconstruct data in next forest by the new sample weights. For example, 
 
 ## 3. XGBoost
 
-XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard regularization parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
+XGBoost (Chen) was developed to put this on a more formal footing. In XGBoost the size of the tree and the magnitude of the weights are controlled by standard **regularization** parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
+
+The comprehensive tutorial on introduction to the model, [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) explained more detailed [[Data Science: GBM vs XGBOOST? Key differences?]][GBM vs XGBOOST? Key differences?].  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^0_i&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^0_i&space;=&space;0" title="\hat{y}^0_i = 0" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^1_i&space;=&space;\hat{y}^0_i&space;&plus;&space;f_1(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^1_i&space;=&space;\hat{y}^0_i&space;&plus;&space;f_1(x_i)" title="\hat{y}^1_i = \hat{y}^0_i + f_1(x_i)" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="\hat{y}^2_i = \hat{y}^1_i + f_2(x_i) = f_1(x_i) + f_2(x_i)" /></a>
+
 
 
 ## 4. LightGBM
@@ -159,6 +168,10 @@ Another good introduction blogs are given by [[Andrich van Wyk]][An Overview of 
 
 [Which algorithm takes the crown: Light GBM vs XGBOOST?]: https://www.analyticsvidhya.com/blog/2017/06/which-algorithm-takes-the-crown-light-gbm-vs-xgboost/
 [[Analytics Vidhya] Which algorithm takes the crown: Light GBM vs XGBOOST?](https://www.analyticsvidhya.com/blog/2017/06/which-algorithm-takes-the-crown-light-gbm-vs-xgboost/)
+
+
+[GBM vs XGBOOST? Key differences?]: https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences
+[[Data Science: GBM vs XGBOOST? Key differences?] GBM vs XGBOOST? Key differences?](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences)
 
 
 [Gradient Boosting and XGBoost]: https://medium.com/@gabrieltseng/gradient-boosting-and-xgboost-c306c1bcfaf5
