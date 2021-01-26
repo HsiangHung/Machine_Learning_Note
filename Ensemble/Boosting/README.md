@@ -20,9 +20,9 @@ In the following, we explain the boosting pictures using the figures depicted fr
 ### Boosting steps in GBM
 
 
-We usually start with a very simple estimator, say one-layer decision tree to fit the data `(x1, y1), (x2, y2),...`. In the following panels, the red points denote the data points and green dots are reisduals. We build the first regressor by fitting `F1(x) = y`, then we have
+We usually start with a very simple estimator, say one-layer decision tree to fit the data `(x1, y1), (x2, y2),...`. In the following panels, the red points denote the data points and green dots are reisduals. We build the first regressor by fitting 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^1_i&space;=&space;\hat{y}^0_i&space;&plus;&space;F_1(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^1_i&space;=&space;\hat{y}^0_i&space;&plus;&space;F_1(x_i)" title="\hat{y}^1_i = \hat{y}^0_i + F_1(x_i)" /></a>
+    F1(x) = y
 
 ![](images/GBM1.png)
 
@@ -42,7 +42,11 @@ and so on. In this case, mathmetically we have an iterative relation
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_m&space;(x)&space;=&space;F_{m-1}(x)&space;&plus;&space;h_{m-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_m&space;(x)&space;=&space;F_{m-1}(x)&space;&plus;&space;h_{m-1}(x)" title="F_m (x) = F_{m-1}(x) + h_{m-1}(x)" /></a>
 
-and the residual fitting model is given by   <a href="https://www.codecogs.com/eqnedit.php?latex=h_m&space;(x)&space;=&space;y&space;-&space;F_m(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_m&space;(x)&space;=&space;y&space;-&space;F_m(x)" title="h_m (x) = y - F_m(x)" /></a>. Prof. Ihler gave a [comprehensive description](http://sli.ics.uci.edu/Classes/2012F-273a?action=download&upname=10-ensembles.pdf) about the boosting steps in his lecture and here we borrow to show below
+and the residual fitting model is given by   
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=h_m&space;(x)&space;=&space;y&space;-&space;F_m(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_m&space;(x)&space;=&space;y&space;-&space;F_m(x)" title="h_m (x) = y - F_m(x)" /></a>. 
+
+Prof. Ihler gave a [comprehensive description](http://sli.ics.uci.edu/Classes/2012F-273a?action=download&upname=10-ensembles.pdf) about the boosting steps in his lecture and here we borrow to show below
 ![](images/GBM3.png)
 Upper panel shows data and fitting models `F1(x)`, `F2(x)`, ....`Fm(x)` and lower shows the residuals. The first estimator is built on the leftmost, whereas the rightmost shows the last iteration. We can see by boosting, the predictors are becoming more and more complex but fit the data better and better. Meanwhile, the residuals are moving toward to smaller values (if you zoom in).
 
