@@ -1,5 +1,5 @@
 
-# Unsupervised Clustering 
+# Naive Bayes Classifier
 
 DBSCAN, K-means, Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation] and [[Chengwei]][How to do Unsupervised Clustering with Keras].
 
