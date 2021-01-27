@@ -27,7 +27,7 @@ Given `x`, if `y=1` has higher probability than `y=0`, we assign y=1 for the eve
 
 This is mostly used for document classification problem. The features/predictors used by the classifier are the **frequency** of the words present in the document.
 
-If `x` is categorical, `P(x|y)` is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
+If `x` is categorical and more than two categories, `P(x|y)` is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
 
 ![weather_data](images/example_data1.png)
 
