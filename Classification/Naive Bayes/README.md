@@ -21,7 +21,7 @@ The class `y` is determined by maximum probability
 
 Given `x`, if `y=1` has higher probability than `y=0`, we assign y=1 for the event.
 
-## Example
+## Learnng Naive Bayes
 
 ### Categorical Features
 
@@ -31,7 +31,8 @@ If `x` is categorical, `P(x|y)` is simply a count ratio. As a concrete example, 
 
 The data has predictors: `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Windy`, and target `y=Play`. We will have prior [[Zixuan Zhang]][Naive Bayes Explained]
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;play}}{\textrm{total&space;count}}&space;=&space;\frac{9}{14}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;play}}{\textrm{total&space;count}}&space;=&space;\frac{9}{14}," title="P(\textrm{play}) = \frac{\textrm{count of play}}{\textrm{total count}} = \frac{9}{14}," /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{play})&space;=&space;\frac{\textrm{count(play)}}{\textrm{count(all)}}&space;=&space;\frac{9}{14}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{play})&space;=&space;\frac{\textrm{count(play)}}{\textrm{count(all)}}&space;=&space;\frac{9}{14}," title="P(\textrm{play}) = \frac{\textrm{count(play)}}{\textrm{count(all)}} = \frac{9}{14}," /></a>
+
 
 and the likelihood as 
 
