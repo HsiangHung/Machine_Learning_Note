@@ -29,20 +29,20 @@ If `x` is categorical, `P(x|y)` is simply a count ratio. As a concrete example, 
 
 ![weather_data](images/example_data1.png)
 
-The data has predictors: `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Windy`, and target `y=Play`. We will have prior [[Zixuan Zhang]][Naive Bayes Explained]
+The data has predictors: `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Windy`, and target `y=Play`. We will have prior `P(y)` like [[Zixuan Zhang]][Naive Bayes Explained]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{play})&space;=&space;\frac{\textrm{count(play)}}{\textrm{count(all)}}&space;=&space;\frac{9}{14}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{play})&space;=&space;\frac{\textrm{count(play)}}{\textrm{count(all)}}&space;=&space;\frac{9}{14}," title="P(\textrm{play}) = \frac{\textrm{count(play)}}{\textrm{count(all)}} = \frac{9}{14}," /></a>
 
 
-and the likelihood as 
+and the likelihood `P(x|y)` as 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;sunny&space;and&space;play}}{\textrm{count&space;of&space;play}}=\frac{2}{9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;sunny&space;and&space;play}}{\textrm{count&space;of&space;play}}=\frac{2}{9}" title="P(\textrm{sunny}|\textrm{play}) = \frac{\textrm{count of sunny and play}}{\textrm{count of play}}=\frac{2}{9}" /></a>
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count(sunny,&space;play)}}{\textrm{count(play)}}=\frac{2}{9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count(sunny,&space;play)}}{\textrm{count(play)}}=\frac{2}{9}" title="P(\textrm{sunny}|\textrm{play}) = \frac{\textrm{count(sunny, play)}}{\textrm{count(play)}}=\frac{2}{9}" /></a>
 
 Note if some feature values never show (maybe lack of data), their likelihood will be zero, which makes the whole posterior probability zero. One simple way to fix this problem is called **Laplace smoothing**
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(x&space;=&space;A|&space;y&space;=&space;1)&space;=&space;\frac{\textrm{(count&space;of&space;x=A,&space;y=1)}&plus;1}{\textrm{(count&space;of&space;y=1)}&space;&plus;&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x&space;=&space;A|&space;y&space;=&space;1)&space;=&space;\frac{\textrm{(count&space;of&space;x=A,&space;y=1)}&plus;1}{\textrm{(count&space;of&space;y=1)}&space;&plus;&space;V}" title="P(x = A| y = 1) = \frac{\textrm{(count of x=A, y=1)}+1}{\textrm{(count of y=1)} + V}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(x=A|y=1)&space;=&space;\frac{\textrm{count(x=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x=A|y=1)&space;=&space;\frac{\textrm{count(x=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" title="P(x=A|y=1) = \frac{\textrm{count(x=A, y=1)}+1}{\textrm{count(y=1)} + V}" /></a>
 
+For example, `count(Outlook=overcast,y=No) = 0. 
 
 
 ### Continuous features
