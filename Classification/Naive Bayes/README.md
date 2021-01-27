@@ -23,11 +23,13 @@ Given `x`, if `y=1` has higher probability than `y=0`, we assign y=1 for the eve
 
 ## Example
 
+### Categorical Features
+
 As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
 
 ![weather_data](images/example_data1.png)
 
-The features are `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Windy`, and `y=Play`. We will have prior [[Zixuan Zhang]][Naive Bayes Explained]
+The data has predictors: `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Windy`, and target `y=Play`. We will have prior [[Zixuan Zhang]][Naive Bayes Explained]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;play}}{\textrm{total&space;count}}&space;=&space;\frac{9}{14}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;play}}{\textrm{total&space;count}}&space;=&space;\frac{9}{14}," title="P(\textrm{play}) = \frac{\textrm{count of play}}{\textrm{total count}} = \frac{9}{14}," /></a>
 
@@ -36,10 +38,17 @@ and the likelihood as
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;sunny&space;and&space;play}}{\textrm{count&space;of&space;play}}=\frac{2}{9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;sunny&space;and&space;play}}{\textrm{count&space;of&space;play}}=\frac{2}{9}" title="P(\textrm{sunny}|\textrm{play}) = \frac{\textrm{count of sunny and play}}{\textrm{count of play}}=\frac{2}{9}" /></a>
 
 
+Note if some feature values never show (maybe lack of data), their likelihood will be zero, which makes the whole posterior probability zero. One simple way to fix this problem is called **Laplace smoothing**
 
-## Metric
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(x&space;=&space;A|&space;y&space;=&space;1)&space;=&space;\frac{\textrm{(count&space;of&space;x=A,&space;y=1)}&plus;1}{\textrm{(count&space;of&space;y=1)}&space;&plus;&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x&space;=&space;A|&space;y&space;=&space;1)&space;=&space;\frac{\textrm{(count&space;of&space;x=A,&space;y=1)}&plus;1}{\textrm{(count&space;of&space;y=1)}&space;&plus;&space;V}" title="P(x = A| y = 1) = \frac{\textrm{(count of x=A, y=1)}+1}{\textrm{(count of y=1)} + V}" /></a>
 
-### Silhouette Score
+
+
+### Continuous features
+
+
+
+
 
 
 
