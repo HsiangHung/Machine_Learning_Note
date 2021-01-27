@@ -40,9 +40,10 @@ and the likelihood `P(x|y)` as
 
 Note if some feature values never show (maybe lack of data), their likelihood will be zero, which makes the whole posterior probability zero. One simple way to fix this problem is called **Laplace smoothing**
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(x=A|y=1)&space;=&space;\frac{\textrm{count(x=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x=A|y=1)&space;=&space;\frac{\textrm{count(x=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" title="P(x=A|y=1) = \frac{\textrm{count(x=A, y=1)}+1}{\textrm{count(y=1)} + V}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(x_i=A|y=1)&space;=&space;\frac{\textrm{count(}x_i\textrm{=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x_i=A|y=1)&space;=&space;\frac{\textrm{count(}x_i\textrm{=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" title="P(x_i=A|y=1) = \frac{\textrm{count(}x_i\textrm{=A, y=1)}+1}{\textrm{count(y=1)} + V}" /></a>
 
-For example, `count(Outlook=overcast,y=No) = 0. 
+where `V` is the number of distinct categories for `xi`.
+For example, `count(Outlook=overcast,y=No) = 0`, and `V=3`, and then `P(overcast|No)` is not vanishing.
 
 
 ### Continuous features
