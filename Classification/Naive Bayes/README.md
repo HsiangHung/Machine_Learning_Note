@@ -23,9 +23,7 @@ Given `x`, if `y=1` has higher probability than `y=0`, we assign y=1 for the eve
 
 ## Learnng Naive Bayes
 
-### Multinomial Naive Bayes
-
-This is mostly used for document classification problem. The features/predictors used by the classifier are the **frequency** of the words present in the document.
+### Categorical feature
 
 If `x` is categorical, `P(x|y)` is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
 
@@ -48,13 +46,32 @@ where `V` is the number of distinct categories for `xi`.
 
 For example, although `count(Outlook=overcast, y=No) = 0`, with the Lapalce smoothing, `P(overcast|No)` is not vanishing (`V=3`).
 
+
+### Continuous feature
+
+If feature is continuous, and we visualize the data and see a bell-curve-like distribution, it is fair to make an assumption that the feature is a normal distribution. For example, suppose `xi` is continuous variable, we look for the mean value and standard deviation under `y=1`
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(x|&space;y&space;=&space;1)&space;=&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|&space;y&space;=&space;1)&space;=&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" title="P(x| y = 1) = \frac{1}{\sqrt{2 \pi \sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" /></a>
+
+
+## Text Mining
+
+### Multinomial Naive Bayes
+
+This is mostly used for document multi-class problem, i.e whether a document belongs to the category of sports, politics, technology etc. The features/predictors used by the classifier are the **frequency** of the words present in the document.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(x|y)&space;=&space;\theta^{x_{1}}_{1}\theta^{x_{2}}_{2}&space;\cdots&space;\theta^{x_{k}}_{k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|y)&space;=&space;\theta^{x_{1}}_{1}\theta^{x_{2}}_{2}&space;\cdots&space;\theta^{x_{k}}_{k}" title="P(x|y) = \theta^{x_{1}}_{1}\theta^{x_{2}}_{2} \cdots \theta^{x_{k}}_{k}" /></a>
+
+
+
 ### Bernoulli Naive Bayes
 
-If predictors are boolean variables; for example in text mining, if a predictor is if word occurs in the text or not, we can use Bernoulli distribution 
+If predictors are boolean variables and targets to predict are only yes or no, we can use Bernoulli distribution. For example in text mining, if a predictor is if word occurs in the text or not and we want to predict positive/negative comments.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(x_i|y)&space;=&space;\theta^{x_i}_i&space;(1-\theta_i)^{1-x_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x_i|y)&space;=&space;\theta^{x_i}_i&space;(1-\theta_i)^{1-x_i}" title="P(x_i|y) = \theta^{x_i}_i (1-\theta_i)^{1-x_i}" /></a>
 
-where `θ` is still the count ratio.	
+where `θ` is still the count ratio.
+
 
 
 ### Gaussian Naive Bayes
