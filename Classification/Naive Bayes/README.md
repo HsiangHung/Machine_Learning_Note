@@ -27,7 +27,7 @@ Given `x`, if `y=1` has higher probability than `y=0`, we assign y=1 for the eve
 
 This is mostly used for document classification problem. The features/predictors used by the classifier are the **frequency** of the words present in the document.
 
-If `x` is categorical and more than two categories, `P(x|y)` is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
+If `x` is categorical, `P(x|y)` is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
 
 ![weather_data](images/example_data1.png)
 
@@ -47,6 +47,14 @@ Note if some feature values never show (maybe lack of data), their likelihood wi
 where `V` is the number of distinct categories for `xi`.
 
 For example, although `count(Outlook=overcast, y=No) = 0`, with the Lapalce smoothing, `P(overcast|No)` is not vanishing (`V=3`).
+
+### Bernoulli Naive Bayes
+
+If predictors are boolean variables; for example in text mining, if a predictor is if word occurs in the text or not, we can use Bernoulli distribution 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(x_i|y)&space;=&space;\theta^{x_i}_i&space;(1-\theta_i)^{1-x_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x_i|y)&space;=&space;\theta^{x_i}_i&space;(1-\theta_i)^{1-x_i}" title="P(x_i|y) = \theta^{x_i}_i (1-\theta_i)^{1-x_i}" /></a>
+
+where `θ` is still the count ratio.	
 
 
 ### Gaussian Naive Bayes
