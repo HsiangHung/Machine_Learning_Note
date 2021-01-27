@@ -71,7 +71,6 @@ If predictors are boolean variables and targets to predict are only yes or no, w
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(x|y)&space;=&space;\theta^{x_1}_1&space;(1-\theta_1)^{1-x_1}&space;\cdots&space;\theta^{x_k}_k&space;(1-\theta_k)^{1-x_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|y)&space;=&space;\theta^{x_1}_1&space;(1-\theta_1)^{1-x_1}&space;\cdots&space;\theta^{x_k}_k&space;(1-\theta_k)^{1-x_k}" title="P(x|y) = \theta^{x_1}_1 (1-\theta_1)^{1-x_1} \cdots \theta^{x_k}_k (1-\theta_k)^{1-x_k}" /></a>
 
-now we only care if word-i appears in `x`.
 
 
 ## Pro and Con
