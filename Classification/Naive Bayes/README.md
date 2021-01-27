@@ -30,11 +30,13 @@ As a concrete example, we use the weather data (from [University of Edinburgh le
 
 ![weather_data](images/example_data1.png)
 
-The features are `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Windy`, and `y=Play`. 
+The features are `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Windy`, and `y=Play`. We will have prior
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{play})&space;=&space;\frac{9}{14},&space;\&space;P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{num&space;of&space;sunny&space;and&space;play}}{\textrm{num&space;of&space;play}}=\frac{2}{9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{play})&space;=&space;\frac{9}{14},&space;\&space;P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{num&space;of&space;sunny&space;and&space;play}}{\textrm{num&space;of&space;play}}=\frac{2}{9}" title="P(\textrm{play}) = \frac{9}{14}, \ P(\textrm{sunny}|\textrm{play}) = \frac{\textrm{num of sunny and play}}{\textrm{num of play}}=\frac{2}{9}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;play}}{\textrm{total&space;count}}&space;=&space;\frac{9}{14}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;play}}{\textrm{total&space;count}}&space;=&space;\frac{9}{14}," title="P(\textrm{play}) = \frac{\textrm{count of play}}{\textrm{total count}} = \frac{9}{14}," /></a>
 
+and the likelihood as 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;play}}{\textrm{total&space;count}}&space;=&space;\frac{9}{14},&space;\&space;P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;sunny&space;and&space;play}}{\textrm{count&space;of&space;play}}=\frac{2}{9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;play}}{\textrm{total&space;count}}&space;=&space;\frac{9}{14},&space;\&space;P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count&space;of&space;sunny&space;and&space;play}}{\textrm{count&space;of&space;play}}=\frac{2}{9}" title="P(\textrm{play}) = \frac{\textrm{count of play}}{\textrm{total count}} = \frac{9}{14}, \ P(\textrm{sunny}|\textrm{play}) = \frac{\textrm{count of sunny and play}}{\textrm{count of play}}=\frac{2}{9}" /></a>
 ## Metric
 
 ### Silhouette Score
