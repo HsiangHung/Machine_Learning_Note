@@ -58,22 +58,25 @@ If feature is continuous, and we visualize the data and see a bell-curve-like di
 
 ### Multinomial Naive Bayes
 
-This is mostly used for document multi-class problem, i.e whether a document belongs to the category of sports, politics, technology etc. The features/predictors used by the classifier are the **frequency** of the words present in the document.
+This is mostly used for document multi-class problem, i.e whether a document belongs to the category of sports, politics, technology etc. The features/predictors used by the classifier are the **frequency** of the words present in the document. For example, in a sentence or a paragraph `x`, there are `k` distinct words and word-1 appears `x1` times, word-2 `x2` times,... etc
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(x|y)&space;=&space;\theta^{x_{1}}_{1}\theta^{x_{2}}_{2}&space;\cdots&space;\theta^{x_{k}}_{k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|y)&space;=&space;\theta^{x_{1}}_{1}\theta^{x_{2}}_{2}&space;\cdots&space;\theta^{x_{k}}_{k}" title="P(x|y) = \theta^{x_{1}}_{1}\theta^{x_{2}}_{2} \cdots \theta^{x_{k}}_{k}" /></a>
 
+where `θi` is the ratio of count(word-i & y) and count(y) from corpus.
 
 
 ### Bernoulli Naive Bayes
 
 If predictors are boolean variables and targets to predict are only yes or no, we can use Bernoulli distribution. For example in text mining, if a predictor is if word occurs in the text or not and we want to predict positive/negative comments.
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(x_i|y)&space;=&space;\theta^{x_i}_i&space;(1-\theta_i)^{1-x_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x_i|y)&space;=&space;\theta^{x_i}_i&space;(1-\theta_i)^{1-x_i}" title="P(x_i|y) = \theta^{x_i}_i (1-\theta_i)^{1-x_i}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(x|y)&space;=&space;\theta^{x_1}_1&space;(1-\theta_1)^{1-x_1}&space;\cdots&space;\theta^{x_k}_k&space;(1-\theta_k)^{1-x_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|y)&space;=&space;\theta^{x_1}_1&space;(1-\theta_1)^{1-x_1}&space;\cdots&space;\theta^{x_k}_k&space;(1-\theta_k)^{1-x_k}" title="P(x|y) = \theta^{x_1}_1 (1-\theta_1)^{1-x_1} \cdots \theta^{x_k}_k (1-\theta_k)^{1-x_k}" /></a>
 
-where `θ` is still the count ratio.
+now we only care if word-i appears in `x`.
 
 
-## Pro and Con [[Zixuan Zhang]][Naive Bayes Explained]
+## Pro and Con
+
+The pro and con are listed below [[Zixuan Zhang]][Naive Bayes Explained]
 
 ### Pro
 1. Even though the naive assumption is rarely true, the algorithm performs surprisingly good in many cases
