@@ -23,7 +23,9 @@ Given `x`, if `y=1` has higher probability than `y=0`, we assign y=1 for the eve
 
 ## Learnng Naive Bayes
 
-### Categorical Features
+### Multinomial Naive Bayes
+
+This is mostly used for document classification problem. The features/predictors used by the classifier are the **frequency** of the words present in the document.
 
 If `x` is categorical, `P(x|y)` is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
 
@@ -38,17 +40,18 @@ and the likelihood `P(x|y)` as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count(sunny,&space;play)}}{\textrm{count(play)}}=\frac{2}{9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count(sunny,&space;play)}}{\textrm{count(play)}}=\frac{2}{9}" title="P(\textrm{sunny}|\textrm{play}) = \frac{\textrm{count(sunny, play)}}{\textrm{count(play)}}=\frac{2}{9}" /></a>
 
-Note if some feature values never show (maybe lack of data), their likelihood will be zero, which makes the whole posterior probability zero. One simple way to fix this problem is called **Laplace smoothing**
+Note if some feature values never show (maybe lack of data), their likelihood will be zero, which makes the whole posterior probability zero. One simple way to fix this problem is called **Laplace smoothing**. We can rewrite the likelihood as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(x_i=A|y=1)&space;=&space;\frac{\textrm{count(}x_i\textrm{=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x_i=A|y=1)&space;=&space;\frac{\textrm{count(}x_i\textrm{=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" title="P(x_i=A|y=1) = \frac{\textrm{count(}x_i\textrm{=A, y=1)}+1}{\textrm{count(y=1)} + V}" /></a>
 
 where `V` is the number of distinct categories for `xi`.
-For example, `count(Outlook=overcast,y=No) = 0`, and `V=3`, and then `P(overcast|No)` is not vanishing.
+
+For example, although `count(Outlook=overcast, y=No) = 0`, with the Lapalce smoothing, `P(overcast|No)` is not vanishing (`V=3`).
 
 
-### Continuous features
+### Gaussian Naive Bayes
 
-If we visualize the data and see a bell-curve-like distribution, it is fair to make an assumption that the feature is a normal distribution. For example, suppose `xi` is continuous variable, we look for the mean value and standard deviation under `y=1`
+If feature is continuous, and we visualize the data and see a bell-curve-like distribution, it is fair to make an assumption that the feature is a normal distribution. For example, suppose `xi` is continuous variable, we look for the mean value and standard deviation under `y=1`
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(x|&space;y&space;=&space;1)&space;=&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|&space;y&space;=&space;1)&space;=&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" title="P(x| y = 1) = \frac{1}{\sqrt{2 \pi \sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" /></a>
 
