@@ -1,6 +1,20 @@
 
 # Naive Bayes Classifier
 
+
+The Naive Bayes classifier is based on the Bayes theorem
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(B|A)&space;=&space;\frac{P(A|B)P(B)}{P(A)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(B|A)&space;=&space;\frac{P(A|B)P(B)}{P(A)}" title="P(B|A) = \frac{P(A|B)P(B)}{P(A)}" /></a>
+
+
+[[Rohith Gandhi]][Naive Bayes Classifier] [[Zixuan Zhang]][Naive Bayes Explained]
+
+
+Given dataset `X`, we predict `y` by
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(y|X)&space;=&space;\frac{P(X|y)P(y)}{P(X)}&space;\propto&space;P(X|y)P(y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(y|X)&space;=&space;\frac{P(X|y)P(y)}{P(X)}&space;\propto&space;P(X|y)P(y)" title="P(y|X) = \frac{P(X|y)P(y)}{P(X)} \propto P(X|y)P(y)" /></a>
+
+
 DBSCAN, K-means, Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation] and [[Chengwei]][How to do Unsupervised Clustering with Keras].
 
 
@@ -50,17 +64,13 @@ For n_clusters = 6 The average silhouette_score is : 0.4504666294372765
 ## Reference
 
 
-[How to do Unsupervised Clustering with Keras]: https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/
-[[Chengwei] How to do Unsupervised Clustering with Keras](https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/)
+[Naive Bayes Explained]: https://towardsdatascience.com/naive-bayes-explained-9d2b96f4a9c0
+[[Zixuan Zhang] Naive Bayes Explained](https://towardsdatascience.com/naive-bayes-explained-9d2b96f4a9c0)
 
 
-[Deep Clustering for Financial Market Segmentation]: https://towardsdatascience.com/deep-clustering-for-financial-market-segmentation-2a41573618cf
-[[Yuefeng Zhang] Deep Clustering for Financial Market Segmentation](https://towardsdatascience.com/deep-clustering-for-financial-market-segmentation-2a41573618cf)
+[Naive Bayes Classifier]: https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c
+[[Rohith Gandhi] Naive Bayes Classifier](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
 
 
-
-
-[Silhouette (clustering)]: https://en.wikipedia.org/wiki/Silhouette_(clustering)
-[[wiki] Silhouette (clustering)](https://en.wikipedia.org/wiki/Silhouette_(clustering))
 
 
