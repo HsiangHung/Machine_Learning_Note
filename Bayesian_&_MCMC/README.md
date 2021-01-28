@@ -102,6 +102,14 @@ By the similar procesures, we can see the posterior is learned to have peak near
 
 In Bayesian framework, maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP), are both methods for estimating some variable in the setting of probability distributions or graphical models [[Agustinus Kristiadi]][MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation].
 
+In short words, MLE is 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)" title="\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta)" /></a>
+
+and MAP is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D)" /></a>
+
 ## 2.1 MLE
 
 
