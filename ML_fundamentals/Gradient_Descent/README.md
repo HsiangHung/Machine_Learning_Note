@@ -105,7 +105,7 @@ Momentum is a method that helps **accelerate** SGD in the relevant direction and
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\Delta&space;\theta_t&space;=&space;\gamma&space;\Delta&space;\theta_{t-1}&space;-&space;\alpha&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\Delta&space;\theta_t&space;=&space;\gamma&space;\Delta&space;\theta_{t-1}&space;-&space;\alpha&space;g_{t}" title="v_{t} = \Delta \theta_t = \gamma \Delta \theta_{t-1} - \alpha g_{t}" /></a>
 
 
-The momentrum term `γ` is usually set to 0.9 or a similar value [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Then update model
+The momentrum term `γ` is usually set to 0.9 or a similar value [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Then models are updated as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_y&space;=&space;\theta_t&space;&plus;&space;v_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_y&space;=&space;\theta_t&space;&plus;&space;v_{t}" title="\theta_{t+1} = \theta_{t} +\Delta \theta_y = \theta_t + v_{t}" /></a>
 
@@ -115,9 +115,17 @@ The momentrum term `γ` is usually set to 0.9 or a similar value [[Sebastian Rud
 
 Adagrad modifies the general learning rate at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau,i})^2&space;&plus;&space;\epsilon}}&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau,i})^2&space;&plus;&space;\epsilon}}&space;g_{t,i}" title="\theta_{t+1, i} = \theta_{t,i} - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau,i})^2 + \epsilon}} g_{t,i}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\theta_{t+1} = \theta_{t} - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
 
-### c. Adam (Adaptive Moment Estimation)
+### c. RMSProp (Root Mean Square Propagation)
+
+RMSProp improves the latter by including the exponential moving average of the squared gradient
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\theta_{t+1} = \theta_{t} - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
+
+
+
+### d. Adam (Adaptive Moment Estimation)
 
 Adam is another method that computes adaptive learning rates for each parameter. In addition to storing an exponentially decaying average of past squared gradients `vt` like Adadelta and RMSprop, Adam also keeps an exponentially decaying average of past gradients `mt`, similar to momentum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms].  In simple words you can consider it to be ADAGRAD + momentum [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning].
 
