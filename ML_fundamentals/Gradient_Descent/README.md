@@ -121,10 +121,11 @@ Adagrad modifies the general learning rate at each time step `t` for every param
 
 RMSProp improves the latter by including the exponential moving average of the squared gradient. A constant ρ also appears, which is known as the forgetting factor:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" title="v_{t} = \rho v_{t-1} + (1-\rho)g^2_t" /></a>
-
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\frac{\alpha}{\sqrt{v_t&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\frac{\alpha}{\sqrt{v_t&space;&plus;&space;\epsilon}}&space;g_{t}" title="\Delta \theta_{t} = - \frac{\alpha}{\sqrt{v_t + \epsilon}} g_{t}" /></a>
 
+where 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" title="v_{t} = \rho v_{t-1} + (1-\rho)g^2_t" /></a>
 
 ### d. Adam (Adaptive Moment Estimation)
 
@@ -140,7 +141,7 @@ where
 The proposed default values are `β1 = 0.9`, `β2 = 0.999`, and `ϵ = 10^{-8}`.
 
 
-### d. Comparison Between Optimizers
+### e. Comparison Between Optimizers
 
 Thought the Adam optimizer seems to works better than others; SGD is a better generalized adapter than ADAM [[Data Science: Why not always use the ADAM optimization technique?]][Why not always use the ADAM optimization technique?].
 
