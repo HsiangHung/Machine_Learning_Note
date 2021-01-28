@@ -87,7 +87,7 @@ There are many variants of SGD (stochastic gradient descent). We will briefly in
 
 In the following, we designate the graident as
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t,i}&space;=&space;\frac{\partial&space;J(\theta_{t,i})}{\partial&space;\theta_{t,i}}" title="g_{t,i} = \frac{\partial J(\theta_{t,i})}{\partial \theta_{t,i}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=g_{t}&space;=&space;\frac{\partial&space;J(\theta_{t})}{\partial&space;\theta_{t}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t}&space;=&space;\frac{\partial&space;J(\theta_{t})}{\partial&space;\theta_{t}}" title="g_{t} = \frac{\partial J(\theta_{t})}{\partial \theta_{t}}" /></a>
 
 For each step `t`, the model parameter is updated as
 
