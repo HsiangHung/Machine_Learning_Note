@@ -165,12 +165,14 @@ Using the log trick, we can rewrite the above expression as
 
 What it means is that, the likelihood is now weighted with some weight coming from the prior [[Agustinus Kristiadi]][MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation]. When the prior is uniform, i.e. we assign equal weights everywhere, on all possible values of the `θ`, MLE and MAP have same estimate. When we know parameter distribution, MAP could be more helpful [[Mary Mcglohon]][MLE, MAP, AND NAIVE BAYES].
 
+### Prior plays a role as regularization
+
 Instead, if we implement Gaussian distribution to the prior `P(θ)`, 
 
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" title="\log P(\theta) \sim \log \Big( \exp{\frac{(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = \frac{1}{2\sigma^2} (\theta - \mu_{\theta})^2" /></a>
 
-which can be identify to a regularization term (if <a href="http://www.codecogs.com/eqnedit.php?latex=\mu_{\theta}=0" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mu_{\theta}=0" title="\mu_{\theta}=0" /></a> ) commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
+which can be identify to a **regularization term** (if <a href="http://www.codecogs.com/eqnedit.php?latex=\mu_{\theta}=0" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mu_{\theta}=0" title="\mu_{\theta}=0" /></a> ) commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
 
 
 MLE is that it overfits the data, meaning that the variance of the parameter estimates is high, or put another way, that the outcome of the parameter estimate is sensitive to random variations in data (by James McInerney, [[Quora]][What is the difference between Maximum Likelihood (ML) and Maximum a Posteriori (MAP) estimation?]). Maximizing MAP can be regarded as adding regularisation to MLE. 
