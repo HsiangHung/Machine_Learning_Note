@@ -231,6 +231,12 @@ simply rewritten as
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;=&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}&space;\theta^{\alpha^{'}-1}(1-\theta)^{\beta^{'}-1},&space;\textrm{&space;where&space;}&space;\alpha^{'}=\alpha&plus;N_H,&space;\&space;\beta^{'}=\beta&plus;N_T" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta|D)&space;=&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}&space;\theta^{\alpha^{'}-1}(1-\theta)^{\beta^{'}-1},&space;\textrm{&space;where&space;}&space;\alpha^{'}=\alpha&plus;N_H,&space;\&space;\beta^{'}=\beta&plus;N_T" title="P(\theta|D) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} \theta^{\alpha^{'}-1}(1-\theta)^{\beta^{'}-1}, \textrm{ where } \alpha^{'}=\alpha+N_H, \ \beta^{'}=\beta+N_T" /></a>
 
 
+Given the data, the expectation value on `θ` is 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\int&space;\theta&space;P(\theta|D)&space;d\theta=&space;\frac{\Gamma(\alpha^{\prime}&space;&plus;&space;\beta^{\prime})}{\Gamma(\alpha^{\prime})&space;\Gamma(\beta^{\prime})}\int&space;\theta^{\alpha^{\prime}}&space;(1-\theta)^{\beta^{\prime}-1}d\theta&space;=&space;\frac{\alpha^{\prime}}{&space;\alpha^{\prime}&plus;\beta^{\prime}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\int&space;\theta&space;P(\theta|D)&space;d\theta=&space;\frac{\Gamma(\alpha^{\prime}&space;&plus;&space;\beta^{\prime})}{\Gamma(\alpha^{\prime})&space;\Gamma(\beta^{\prime})}\int&space;\theta^{\alpha^{\prime}}&space;(1-\theta)^{\beta^{\prime}-1}d\theta&space;=&space;\frac{\alpha^{\prime}}{&space;\alpha^{\prime}&plus;\beta^{\prime}}" title="\bar{\theta} = \int \theta P(\theta|D) d\theta= \frac{\Gamma(\alpha^{\prime} + \beta^{\prime})}{\Gamma(\alpha^{\prime}) \Gamma(\beta^{\prime})}\int \theta^{\alpha^{\prime}} (1-\theta)^{\beta^{\prime}-1}d\theta = \frac{\alpha^{\prime}}{ \alpha^{\prime}+\beta^{\prime}}" /></a>
+
+
+
 By maximizing P(θ|D), we have 
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}&space;=&space;\frac{N_H&plus;\beta_H-1}{N_H&plus;\beta_H&plus;N_T&plus;\beta_T-2}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}&space;=&space;\frac{N_H&plus;\beta_H-1}{N_H&plus;\beta_H&plus;N_T&plus;\beta_T-2}" title="\theta_{\textrm{MAP}} = \frac{N_H+\beta_H-1}{N_H+\beta_H+N_T+\beta_T-2}" /></a>
