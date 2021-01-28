@@ -188,11 +188,11 @@ The prior beliefs about the parameters determine what this random process looks 
 
 ## 2.3 Examples of MLE and MAP
 
-
-
 First let's come back to the coin-flip problem; the outcome is either head or tail. The likelihood of each sample is a Bernoulli distribution (or entire dataset is a binomial distribution) [[Barnabás Póczos & Aarti Singh]][MLE, MAP, Bayes classifications]
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" title="P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}" /></a>
+
+Now suppose we observed data `X = {1,1,1,1,1,1}`, what is a good guess of `θ`?
 
 ### MLE
 
