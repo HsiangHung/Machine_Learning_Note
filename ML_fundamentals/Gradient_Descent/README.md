@@ -91,7 +91,8 @@ In the following, we designate the graident as
 
 For each step `t`, the model parameter is updated as
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\alpha&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\alpha&space;g_{t,i}" title="\theta_{t+1, i} = \theta_{t,i} - \alpha g_{t,i}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;&space;\Delta&space;\theta_{t},&space;\textrm{&space;here&space;}&space;\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;&space;\Delta&space;\theta_{t},&space;\textrm{&space;here&space;}&space;\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;g_{t}" title="\theta_{t+1} = \theta_{t} + \Delta \theta_{t}, \textrm{ here } \Delta \theta_{t} = - \alpha g_{t}" /></a>
+
 
 ### a. Momentum
 
