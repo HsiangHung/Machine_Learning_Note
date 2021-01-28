@@ -219,7 +219,9 @@ if we implement Beta distribution (which is a conjugate prior for binomal distri
 
 then we can see the posterior and prior has same form
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=p(\theta|D)&space;\sim&space;\textrm{Beta}(N_H&plus;\beta_H,&space;N_T&plus;\beta_T)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?p(\theta|D)&space;\sim&space;\textrm{Beta}(N_H&plus;\beta_H,&space;N_T&plus;\beta_T)" title="p(\theta|D) \sim \textrm{Beta}(N_H+\beta_H, N_T+\beta_T)" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;\propto&space;P(\theta)P(D|\theta)&space;=&space;\Big(&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;\Big)&space;\theta^{N_H}&space;(1-\theta)^{N_T}&space;=&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta|D)&space;\propto&space;P(\theta)P(D|\theta)&space;=&space;\Big(&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;\Big)&space;\theta^{N_H}&space;(1-\theta)^{N_T}&space;=&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}" title="P(\theta|D) \propto P(\theta)P(D|\theta) = \Big( \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} \Big) \theta^{N_H} (1-\theta)^{N_T} = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}" /></a>
+
 
 By maximizing P(θ|D), we have 
 
