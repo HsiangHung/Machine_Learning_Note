@@ -216,8 +216,12 @@ if we implement Beta distribution (which is a conjugate prior for binomal distri
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;=&space;\frac{1}{B(\alpha,&space;\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;=&space;\frac{1}{B(\alpha,&space;\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}" title="P(\theta)= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} = \frac{1}{B(\alpha, \beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1}" /></a>
 
+By probability normalization, we will have the following relation
 
-then we can see the posterior and prior has same form
+<a href="https://www.codecogs.com/eqnedit.php?latex=\int&space;P(\theta)&space;d\theta=&space;1=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\int&space;\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}d\theta&space;=&space;\frac{\Gamma(\alpha)&space;\Gamma(\beta)}{\Gamma(\alpha&plus;\beta)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\int&space;P(\theta)&space;d\theta=&space;1=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\int&space;\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}d\theta&space;=&space;\frac{\Gamma(\alpha)&space;\Gamma(\beta)}{\Gamma(\alpha&plus;\beta)}" title="\int P(\theta) d\theta= 1= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\int \theta^{\alpha-1} (1-\theta)^{\beta-1}d\theta = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}" /></a>
+
+
+Then we can see the posterior and prior has same form
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;\propto&space;P(\theta)P(D|\theta)&space;=&space;\Big(&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;\Big)&space;\theta^{N_H}&space;(1-\theta)^{N_T}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta|D)&space;\propto&space;P(\theta)P(D|\theta)&space;=&space;\Big(&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;\Big)&space;\theta^{N_H}&space;(1-\theta)^{N_T}" title="P(\theta|D) \propto P(\theta)P(D|\theta) = \Big( \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} \Big) \theta^{N_H} (1-\theta)^{N_T}" /></a>
