@@ -18,6 +18,13 @@ Dropout is a widely used method and it was proven to greatly improve the perform
 It means that the neural network cannot rely on any input node, since each have a random probability of being removed. Therefore, the neural network will be reluctant to give high weights to certain features, because they might disappear.
 Consequently, the weights are spread across all features, making them smaller. This effectively shrinks the model and regularizes it.
 
+### Some observations using dropout:
+
+[[Amar Budhiraja]][Dropout in (Deep) Machine learning]
+
+1. Dropout forces a neural network to learn more robust features that are useful in conjunction with many different random subsets of the other neurons.
+2. Dropout roughly doubles the number of iterations required to converge. However, training time for each epoch is less.
+3. With H hidden units, each of which can be dropped, we have 2^H possible models. In testing phase, the entire network is considered and each activation is reduced by a factor p.
 
 
 
@@ -35,6 +42,11 @@ Consequently, the weights are spread across all features, making them smaller. T
 
 
 ## Reference
+
+[Dropout in (Deep) Machine learning]: https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5
+[[Amar Budhiraja] Dropout in (Deep) Machine learning](https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5)
+
+
 
 
 [A Quick Guide on Basic Regularization Methods for Neural Networks]: https://medium.com/yottabytes/a-quick-guide-on-basic-regularization-methods-for-neural-networks-e10feb101328
