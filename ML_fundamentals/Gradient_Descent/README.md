@@ -119,7 +119,7 @@ Adagrad modifies the general learning rate at each time step `t` for every param
 
 ### c. RMSProp (Root Mean Square Propagation)
 
-RMSProp improves the latter by including the exponential moving average of the squared gradient
+RMSProp improves the latter by including the exponential moving average of the squared gradient. A constant ρ also appears, which is known as the forgetting factor:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" title="v_{t} = \rho v_{t-1} + (1-\rho)g^2_t" /></a>
 
@@ -128,9 +128,9 @@ RMSProp improves the latter by including the exponential moving average of the s
 
 ### d. Adam (Adaptive Moment Estimation)
 
-Adam is another method that computes adaptive learning rates for each parameter. In addition to storing an exponentially decaying average of past squared gradients `vt` like Adadelta and RMSprop, Adam also keeps an exponentially decaying average of past gradients `mt`, similar to momentum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms].  In simple words you can consider it to be ADAGRAD + momentum [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning].
+Adam is another method that computes adaptive learning rates for each parameter. In addition to storing an exponentially decaying average of past squared gradients `vt` like Adadelta and RMSprop, Adam also keeps an exponentially decaying average of past gradients `mt`, similar to momentum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms].  In simple words you can consider it to be RMSProp + momentum [[Jaime Durán]][Everything You Need to Know about Gradient Descent Applied to Neural Networks].
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\hat{v}_t}&space;&plus;&space;\epsilon}&space;\hat{m}_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1,&space;i}&space;=&space;\theta_{t,i}&space;-&space;\frac{\alpha}{\sqrt{\hat{v}_t}&space;&plus;&space;\epsilon}&space;\hat{m}_t" title="\theta_{t+1, i} = \theta_{t,i} - \frac{\alpha}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\alpha&space;\Big(&space;\frac{m_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}\Big)&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\alpha&space;\Big(&space;\frac{m_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}\Big)&space;g_{t}" title="\Delta \theta_t = - \alpha \Big( \frac{m_t}{\sqrt{v_t + \epsilon}}\Big) g_{t}" /></a>
 
 where 
 
