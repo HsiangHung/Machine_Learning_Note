@@ -20,7 +20,7 @@ Consequently, the weights are spread across all features, making them smaller. T
 
 ### Some observations using dropout:
 
-[[Amar Budhiraja]][Dropout in (Deep) Machine learning]
+From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 
 1. Dropout forces a neural network to learn more robust features that are useful in conjunction with many different random subsets of the other neurons.
 2. Dropout roughly doubles the number of iterations required to converge. However, training time for each epoch is less.
