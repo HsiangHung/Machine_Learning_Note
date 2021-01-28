@@ -141,10 +141,7 @@ On the other hand, in logistic regression (binary classification), the likelihoo
 
 Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
 
-
-
-<a href="http://www.codecogs.com/eqnedit.php?latex=l(D)&space;=&space;\sum_i&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{\theta^Tx_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{\theta^Tx_i}}&space;\big)&space;\Big)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?l(D)&space;=&space;\sum_i&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{\theta^Tx_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{\theta^Tx_i}}&space;\big)&space;\Big)" title="l(D) = \sum_i \Big( y_i \log \big( \frac{1}{1+e^{\theta^Tx_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{\theta^Tx_i}} \big) \Big)" /></a>
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\big)&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\big)&space;\Big)" title="C(D) = \sum^n_{i=1} \Big( y_i \log \big( \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}} \big) \Big)" /></a>
 
 
 ## 2.2 MAP
