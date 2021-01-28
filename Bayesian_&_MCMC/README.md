@@ -196,7 +196,7 @@ First let's come back to the coin-flip problem; the outcome is either head or ta
 
 Now suppose we observed data `X = {1,1,1,1,1,1}` and the sample comes from iid Bernoulli distribution, what is a good guess of `θ`?
 
-### MLE
+#### MLE
 
 Here we denote `N_H` is the number of heads and θ is the probability to have heads. Now we are looking for θ which maximizes the probability of observed data
 
@@ -208,7 +208,7 @@ To do it, we differentiate l(θ) with respect to θ and make it equal to zero. T
 
 which is consistent with our intution. 
 
-### MAP 
+#### MAP 
 
 For MAP, we need to look for Bayesian posterior `P(θ|D)`:
 
