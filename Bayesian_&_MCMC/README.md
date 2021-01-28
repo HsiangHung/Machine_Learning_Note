@@ -208,7 +208,11 @@ which is consistent with our intution.
 
 ### MAP 
 
-For MAP, if we implement Beta distribution (which is a conjugate prior for binomal distribution) as the prior
+For MAP, we need to look for Bayesian posterior 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" /></a>
+
+if we implement Beta distribution (which is a conjugate prior for binomal distribution) as the prior
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=p(\theta)=\frac{\theta^{\beta_H-1}&space;(1-\theta)^{\theta_T-1}}{B(\beta_H,&space;\beta_T)}&space;\sim&space;\textrm{Beta}(\beta_H,&space;\beta_T)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?p(\theta)=\frac{\theta^{\beta_H-1}&space;(1-\theta)^{\theta_T-1}}{B(\beta_H,&space;\beta_T)}&space;\sim&space;\textrm{Beta}(\beta_H,&space;\beta_T)" title="p(\theta)=\frac{\theta^{\beta_H-1} (1-\theta)^{\theta_T-1}}{B(\beta_H, \beta_T)} \sim \textrm{Beta}(\beta_H, \beta_T)" /></a>
 
