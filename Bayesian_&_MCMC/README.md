@@ -115,9 +115,15 @@ and MAP is
 
 We actually use MLE without knowing it in our common life. For example, when fitting a Gaussian to our dataset, we immediately take the sample mean and sample variance, and use it as the parameter of our Gaussian. This is MLE, as, if we **take the derivative of the Gaussian function with respect to the mean and variance and setting the derivative to zero** [[Agustinus Kristiadi]][MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation]. This step is to maximize the likelihood. Another example is Naive Bayes spam filter. We can comute the likelihood of a specific word appearing in a spam. Thus, given an email, the probability of the email being spam is the naive mulitplication of the individual likelihoods whose words appear in the email. 
 
-**Most of the optimization in Machine Learning and Deep Learning (neural net, etc), could be interpreted as MLE**. Given model parameters θ, the probability to get data or dataset `D` is the likelihood `P(D|θ)`. The parameters are determined by maximizing the likelihood function
+**Most of the optimization in Machine Learning and Deep Learning (neural net, etc), could be interpreted as MLE**. Given model parameters θ, the probability to get data or dataset `D` is the likelihood `P(D|θ)`. The parameters are determined by maximizing the likelihood function. In comparison, MLE is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i,&space;y_i|\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i,&space;y_i|\theta)" title="\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta) = \underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i, y_i|\theta)" /></a>
+
+On other had, MAP is 
+
+<a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;=&space;\underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)}&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;=&space;\underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)}&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) = \underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)} \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" /></a>
+
+
 
 ### Linear regression
 
