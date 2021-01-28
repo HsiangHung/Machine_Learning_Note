@@ -121,8 +121,9 @@ Adagrad modifies the general learning rate at each time step `t` for every param
 
 RMSProp improves the latter by including the exponential moving average of the squared gradient
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\theta_{t+1} = \theta_{t} - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" title="v_{t} = \rho v_{t-1} + (1-\rho)g^2_t" /></a>
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\frac{\alpha}{\sqrt{v_t&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\frac{\alpha}{\sqrt{v_t&space;&plus;&space;\epsilon}}&space;g_{t}" title="\Delta \theta_{t} = - \frac{\alpha}{\sqrt{v_t + \epsilon}} g_{t}" /></a>
 
 
 ### d. Adam (Adaptive Moment Estimation)
