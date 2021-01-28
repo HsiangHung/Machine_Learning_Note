@@ -100,7 +100,7 @@ During optimization, SGD used to oscillate across the slopes of the ravine while
 
 ![SGD_momentum](images/SGD_momentum.png)
 
-Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first define the velocity
+Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first define the velocity[[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\Delta&space;\theta_t&space;=&space;\gamma&space;\Delta&space;\theta_{t-1}&space;-&space;\alpha&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\Delta&space;\theta_t&space;=&space;\gamma&space;\Delta&space;\theta_{t-1}&space;-&space;\alpha&space;g_{t}" title="v_{t} = \Delta \theta_t = \gamma \Delta \theta_{t-1} - \alpha g_{t}" /></a>
 
@@ -114,7 +114,8 @@ The momentrum term `γ` is usually set to 0.9 or a similar value [[Sebastian Rud
 
 Adagrad modifies the general learning rate at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\theta_{t+1} = \theta_{t} - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\Delta \theta_t = - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
+
 
 ### c. RMSProp (Root Mean Square Propagation)
 
