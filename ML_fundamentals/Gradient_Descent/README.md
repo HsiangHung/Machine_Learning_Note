@@ -102,7 +102,8 @@ During optimization, SGD used to oscillate across the slopes of the ravine while
 
 Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first find the velocity
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=v_{t,i}&space;=&space;\gamma&space;v_{t-1,i}&space;&plus;&space;\alpha&space;g_{t,i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t,i}&space;=&space;\gamma&space;v_{t-1,i}&space;&plus;&space;\alpha&space;g_{t,i}" title="v_{t,i} = \gamma v_{t-1,i} + \alpha g_{t,i}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\Delta&space;\theta_t&space;=&space;\gamma&space;\Delta&space;\theta_{t-1}&space;-&space;\alpha&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\Delta&space;\theta_t&space;=&space;\gamma&space;\Delta&space;\theta_{t-1}&space;-&space;\alpha&space;g_{t}" title="v_{t} = \Delta \theta_t = \gamma \Delta \theta_{t-1} - \alpha g_{t}" /></a>
+
 
 The momentrum term `γ` is usually set to 0.9 or a similar value [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Then update model
 
