@@ -192,7 +192,7 @@ First let's come back to the coin-flip problem; the outcome is either head or ta
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" title="P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}" /></a>
 
-Now suppose we observed data `X = {1,1,1,1,1,1}`, what is a good guess of `θ`?
+Now suppose we observed data `X = {1,1,1,1,1,1}` and the sample comes from iid Bernoulli distribution, what is a good guess of `θ`?
 
 ### MLE
 
@@ -240,7 +240,7 @@ So
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" title="\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}" /></a>
 
-Using `B(2,2)`, `θ = 8/10`; `B(1, 1)`, `θ = 7/8`; `B(1, 0.01)`, `θ = 7/7.01`
+Using `B(2,2)`, `θ = 8/10`; `B(1, 1)`, `θ = 7/8`; `B(1, 0.01)`, `θ = 7/7.01`.
 
 
 ### Multinomial outcome
