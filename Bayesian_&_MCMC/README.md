@@ -119,11 +119,11 @@ We actually use MLE without knowing it in our common life. For example, when fit
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i,&space;y_i|\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i,&space;y_i|\theta)" title="\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta) = \underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i, y_i|\theta)" /></a>
 
-On other had, MAP is 
+which gives us an estimate on `θ`. On other had, MAP is 
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;=&space;\underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)}&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;=&space;\underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)}&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) = \underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)} \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D)" /></a>
 
-
+which gives us a distribution of `θ`.
 
 ### Linear regression
 
