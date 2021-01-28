@@ -121,10 +121,15 @@ then the likelihood is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="L = P(\bold{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
 
-Maximizing the log of the likelihood is equal to optimizing the negative log likelidhood. Then we have the cost functions  
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=l(D)&space;=&space;\sum_i&space;(y-\theta&space;x_i)^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?l(D)&space;=&space;\sum_i&space;(y-\theta&space;x_i)^2" title="l(D) = \sum_i (y-\theta x_i)^2" /></a>
+Note that maximizing the likelihood functions is equal to maximizing the log of these functions. Therefore, We usually denote MLE as
 
+<a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}\log&space;\Big(&space;\prod_{i}P(x_i,&space;y_i|&space;\theta)&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(x_i,&space;y_i|&space;\theta)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}\log&space;\Big(&space;\prod_{i}P(x_i,&space;y_i|&space;\theta)&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(x_i,&space;y_i|&space;\theta)" title="\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}}\log \Big( \prod_{i}P(x_i, y_i| \theta) \Big) = \underset{\theta}{\textrm{argmax}} \sum_{i} \log P(x_i, y_i| \theta)" /></a>
+
+
+Thus the problem is equivalent to optimizing the cost functions  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;(y-&space;\bold{\theta}^T&space;\bold{x}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;(y-&space;\bold{\theta}^T&space;\bold{x}_i)^2" title="C(D) = \sum^n_{i=1} (y- \bold{\theta}^T \bold{x}_i)^2" /></a>
 
 
 
@@ -132,11 +137,9 @@ Maximizing the log of the likelihood is equal to optimizing the negative log lik
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=P(x_i,&space;y_i|\theta)&space;\sim&space;\Big(&space;\frac{1}{1&plus;e^{\theta^Tx_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{\theta^Tx_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(x_i,&space;y_i|\theta)&space;\sim&space;\Big(&space;\frac{1}{1&plus;e^{\theta^Tx_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{\theta^Tx_i}}&space;\Big)^{1-y_i}" title="P(x_i, y_i|\theta) \sim \Big( \frac{1}{1+e^{\theta^Tx_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{\theta^Tx_i}} \Big)^{1-y_i}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(\bold{x}_i, y_i|\theta) \sim h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{\bold{\theta}^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{\bold{\theta}^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
 
-Note that maximizing the likelihood functions is equal to maximizing the log of these functions. Therefore, We usually denote MLE as
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}\log&space;\Big(&space;\prod_{i}P(x_i,&space;y_i|&space;\theta)&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(x_i,&space;y_i|&space;\theta)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}\log&space;\Big(&space;\prod_{i}P(x_i,&space;y_i|&space;\theta)&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(x_i,&space;y_i|&space;\theta)" title="\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}}\log \Big( \prod_{i}P(x_i, y_i| \theta) \Big) = \underset{\theta}{\textrm{argmax}} \sum_{i} \log P(x_i, y_i| \theta)" /></a>
 
 Then it turns out that maximizing the log of the likelihood is equal to optimizing the loss functions  
 
