@@ -281,12 +281,14 @@ To be more concrete, let's look at Bayesian logisitic regression [[Nando de Frei
 
 Given data D = (X, y), the logisitic regression model specifies a probability of a binary output `y = 0, 1` given input X:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(y|X,&space;\theta)&space;=&space;\prod_{i=1}^{n}&space;\textrm{Ber}(y_i&space;|\textrm{sigmoid}(\theta^T&space;\bold{x}_i))&space;=&space;\prod_{i=1}^n&space;\Big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{\theta^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(y|X,&space;\theta)&space;=&space;\prod_{i=1}^{n}&space;\textrm{Ber}(y_i&space;|\textrm{sigmoid}(\theta^T&space;\bold{x}_i))&space;=&space;\prod_{i=1}^n&space;\Big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{\theta^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(y|X, \theta) = \prod_{i=1}^{n} \textrm{Ber}(y_i |\textrm{sigmoid}(\theta^T \bold{x}_i)) = \prod_{i=1}^n \Big( \frac{1}{1+e^{-\theta^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{\theta^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(y|X,&space;\theta)&space;=&space;\prod_{i=1}^{n}&space;\textrm{Ber}(y_i&space;|\textrm{sigmoid}(\theta^T&space;\bold{x}_i))&space;=&space;\prod_{i=1}^n&space;\Big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(y|X,&space;\theta)&space;=&space;\prod_{i=1}^{n}&space;\textrm{Ber}(y_i&space;|\textrm{sigmoid}(\theta^T&space;\bold{x}_i))&space;=&space;\prod_{i=1}^n&space;\Big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(y|X, \theta) = \prod_{i=1}^{n} \textrm{Ber}(y_i |\textrm{sigmoid}(\theta^T \bold{x}_i)) = \prod_{i=1}^n \Big( \frac{1}{1+e^{-\theta^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\theta^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
+
 
 
 here P(y|θ,X) is the likelihood. We can assume the prior is a Gaussian:
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;=&space;\frac{1}{\sqrt{2\pi}\sigma}\exp{\Big(-\frac{\theta^T&space;\theta}{2\sigma^2}&space;\Big)}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(\theta)&space;=&space;\frac{1}{\sqrt{2\pi}\sigma}\exp{\Big(-\frac{\theta^T&space;\theta}{2\sigma^2}&space;\Big)}" title="P(\theta) = \frac{1}{\sqrt{2\pi}\sigma}\exp{\Big(-\frac{\theta^T \theta}{2\sigma^2} \Big)}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;=&space;\frac{1}{\sqrt{2\pi&space;\sigma^2}}\exp{\Big(-\frac{\theta^T&space;\theta}{2\sigma^2}&space;\Big)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)&space;=&space;\frac{1}{\sqrt{2\pi&space;\sigma^2}}\exp{\Big(-\frac{\theta^T&space;\theta}{2\sigma^2}&space;\Big)}" title="P(\theta) = \frac{1}{\sqrt{2\pi \sigma^2}}\exp{\Big(-\frac{\theta^T \theta}{2\sigma^2} \Big)}" /></a>
+
 
 Our goal is to look for find optimal values of θ. Given the posterior density
 
