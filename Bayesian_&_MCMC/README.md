@@ -111,6 +111,7 @@ We actually use MLE without knowing it in our common life. For example, when fit
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i,&space;y_i|\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i,&space;y_i|\theta)" title="\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta) = \underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(x_i, y_i|\theta)" /></a>
 
+### Linear regression
 
 To provide more concrete examples, in linear regression, we make an assumption that the likelihood is a normal distribution (both `θ` and `x` are multi-dimensional)
 
@@ -118,7 +119,16 @@ To provide more concrete examples, in linear regression, we make an assumption t
 
 then the likelihood is 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="P(\bold{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="L = P(\bold{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
+
+Maximizing the log of the likelihood is equal to optimizing the negative log likelidhood. Then we have the cost functions  
+
+<a href="http://www.codecogs.com/eqnedit.php?latex=l(D)&space;=&space;\sum_i&space;(y-\theta&space;x_i)^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?l(D)&space;=&space;\sum_i&space;(y-\theta&space;x_i)^2" title="l(D) = \sum_i (y-\theta x_i)^2" /></a>
+
+
+
+
+### Logistic regression
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
