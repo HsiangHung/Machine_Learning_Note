@@ -136,19 +136,15 @@ Thus the problem is equivalent to optimizing the cost functions
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(\bold{x}_i, y_i|\theta) \sim h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{\bold{\theta}^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{\bold{\theta}^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;=&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;=&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(\bold{x}_i, y_i|\theta) = h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
 
 
+Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
 
-Then it turns out that maximizing the log of the likelihood is equal to optimizing the loss functions  
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=l(D)&space;=&space;\sum_i&space;(y-\theta&space;x_i)^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?l(D)&space;=&space;\sum_i&space;(y-\theta&space;x_i)^2" title="l(D) = \sum_i (y-\theta x_i)^2" /></a>
-
-and
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=l(D)&space;=&space;\sum_i&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{\theta^Tx_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{\theta^Tx_i}}&space;\big)&space;\Big)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?l(D)&space;=&space;\sum_i&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{\theta^Tx_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{\theta^Tx_i}}&space;\big)&space;\Big)" title="l(D) = \sum_i \Big( y_i \log \big( \frac{1}{1+e^{\theta^Tx_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{\theta^Tx_i}} \big) \Big)" /></a>
 
-in linear regression and logistic regression, respectively.
 
 
 ## 2.2 MAP
