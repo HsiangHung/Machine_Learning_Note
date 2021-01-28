@@ -109,7 +109,8 @@ We actually use MLE without knowing it in our common life. For example, when fit
 
 **Most of the optimization in Machine Learning and Deep Learning (neural net, etc), could be interpreted as MLE**. Given model parameters θ, the probability to get data or dataset `D` is the likelihood `P(D|θ)`. The parameters are determined by maximizing the likelihood function
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod_{i}P(x_i,&space;y_i|&space;\theta)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod_{i}P(x_i,&space;y_i|&space;\theta)" title="\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta) = \underset{\theta}{\textrm{argmax}}\prod_{i}P(x_i, y_i| \theta)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(y_i|&space;x_i,&space;\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(y_i|&space;x_i,&space;\theta)" title="\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta) = \underset{\theta}{\textrm{argmax}}\prod^{n}_{i=1}P(y_i| x_i, \theta)" /></a>
+
 
 To provide more concrete examples, in linear regression, we make an assumption that the likelihood is a normal distribution
 
