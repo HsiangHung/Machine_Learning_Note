@@ -83,7 +83,7 @@ However, when n hidden layers use an activation like the sigmoid function, n sma
 
 ## Other Variants of Gradient Descent
 
-There are many variants of SGD (stochastic gradient descent). We will briefly introduce them in the following discussion and explain with the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning] also provide good introduction.
+There are many variants of SGD (stochastic gradient descent). We will briefly introduce them in the following discussion and explain with the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms] and [[Jaime Durán]][Everything You Need to Know about Gradient Descent Applied to Neural Networks]. [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning] also provide good introduction.
 
 In the following, we designate the graident as
 
@@ -183,6 +183,8 @@ There is often a value to using more than one method (an ensemble), because ever
 [[Data Science: Why not always use the ADAM optimization technique?] Why not always use the ADAM optimization technique?](https://datascience.stackexchange.com/questions/30344/why-not-always-use-the-adam-optimization-technique/30347)
 
 
+[Everything You Need to Know about Gradient Descent Applied to Neural Networks]: https://medium.com/yottabytes/everything-you-need-to-know-about-gradient-descent-applied-to-neural-networks-d70f85e0cc14
+[[Jaime Durán] Everything You Need to Know about Gradient Descent Applied to Neural Networks](https://medium.com/yottabytes/everything-you-need-to-know-about-gradient-descent-applied-to-neural-networks-d70f85e0cc14)
 
 
 [A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size]: https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/
