@@ -107,8 +107,7 @@ Momentum is a method that helps **accelerate** SGD in the relevant direction and
 
 The momentrum term `γ` is usually set to 0.9 or a similar value [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Then models are updated as
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_y&space;=&space;\theta_t&space;&plus;&space;v_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_y&space;=&space;\theta_t&space;&plus;&space;v_{t}" title="\theta_{t+1} = \theta_{t} +\Delta \theta_y = \theta_t + v_{t}" /></a>
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_t&space;=&space;\theta_t&space;&plus;&space;v_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_t&space;=&space;\theta_t&space;&plus;&space;v_{t}" title="\theta_{t+1} = \theta_{t} +\Delta \theta_t = \theta_t + v_{t}" /></a>
 
 
 ### b. Adagrad (Adaptive Gradient Algorithm)
