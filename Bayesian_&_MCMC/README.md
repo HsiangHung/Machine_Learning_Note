@@ -129,7 +129,7 @@ Note that maximizing the likelihood functions is equal to maximizing the log of 
 
 Thus the problem is equivalent to optimizing the cost functions  
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;(y-&space;\bold{\theta}^T&space;\bold{x}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;(y-&space;\bold{\theta}^T&space;\bold{x}_i)^2" title="C(D) = \sum^n_{i=1} (y- \bold{\theta}^T \bold{x}_i)^2" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;(y_i&space;-&space;\bold{\theta}^T&space;\bold{x}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;(y_i&space;-&space;\bold{\theta}^T&space;\bold{x}_i)^2" title="C(D) = \sum^n_{i=1} (y_i - \bold{\theta}^T \bold{x}_i)^2" /></a>
 
 
 
