@@ -134,11 +134,7 @@ Adam is another method that computes adaptive learning rates for each parameter.
 
 where 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\&space;m_t&space;=&space;\beta_1&space;m_{t-1}&space;&plus;&space;(1-\beta_1)g_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\&space;m_t&space;=&space;\beta_1&space;m_{t-1}&space;&plus;&space;(1-\beta_1)g_t" title="\ m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t" /></a>
-
-and 
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\&space;v_t&space;=&space;\beta_2&space;v_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\&space;v_t&space;=&space;\beta_2&space;v_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" title="\ v_t = \beta_2 v_{t-1} + (1-\beta_2)g^2_t" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=m_t&space;=&space;\beta_1&space;m_{t-1}&space;&plus;&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;v_t&space;=&space;\beta_2&space;v_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_t&space;=&space;\beta_1&space;m_{t-1}&space;&plus;&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;v_t&space;=&space;\beta_2&space;v_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" title="m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t \textrm{, and } v_t = \beta_2 v_{t-1} + (1-\beta_2)g^2_t" /></a>
 
 
 The proposed default values are `β1 = 0.9`, `β2 = 0.999`, and `ϵ = 10^{-8}`.
