@@ -160,7 +160,7 @@ On the other hand, MAP usually comes up in Bayesian setting. It works on a poste
 
 Using the log trick, we can rewrite the above expression as
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(x_i,&space;y_i|&space;\theta)P(\theta)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(x_i,&space;y_i|&space;\theta)P(\theta)" title="\theta_{\textrm{MAP}} = \underset{\theta}{\textrm{argmax}} \sum_{i} \log P(x_i, y_i| \theta)P(\theta)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum^n_{i=1}&space;\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)P(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum^n_{i=1}&space;\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)P(\theta)" title="\theta_{\textrm{MAP}} = \underset{\theta}{\textrm{argmax}} \sum^n_{i=1} \log P(\bold{x}_i, y_i| \theta)P(\theta)" /></a>
 
 
 What it means is that, the likelihood is now weighted with some weight coming from the prior [[Agustinus Kristiadi]][MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation]. When the prior is uniform, i.e. we assign equal weights everywhere, on all possible values of the θ, MLE and MAP have same estimate. When we know parameter distribution, MAP could be more helpful [[Mary Mcglohon]][MLE, MAP, AND NAIVE BAYES].
