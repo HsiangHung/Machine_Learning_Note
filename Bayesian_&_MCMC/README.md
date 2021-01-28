@@ -188,6 +188,8 @@ The prior beliefs about the parameters determine what this random process looks 
 
 ## 2.3 Examples of MLE and MAP
 
+### a. Binomial outcome
+
 First let's come back to the coin-flip problem; the outcome is either head or tail. The likelihood of each sample is a Bernoulli distribution (or entire dataset is a binomial distribution) [[Barnabás Póczos & Aarti Singh]][MLE, MAP, Bayes classifications]
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" title="P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}" /></a>
@@ -243,7 +245,7 @@ So
 Using `B(2,2)`, `θ = 8/10`; `B(1, 1)`, `θ = 7/8`; `B(1, 0.01)`, `θ = 7/7.01`.
 
 
-### Multinomial outcome
+### b. Multinomial outcome
 
 Second example is to extend binomial outcome to multinomial. Let's say if now we have a dice, then the likelihood function becomes 
 
