@@ -202,7 +202,7 @@ Here we denote `N_H` is the number of heads and θ is the probability to have he
 
 To do it, we differentiate l(θ) with respect to θ and make it equal to zero. Then we obtain the MLE estimate
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\frac{N_H}{N_H&plus;N_T}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\frac{N_H}{N_H&plus;N_T}" title="\theta_{\textrm{MLE}} = \frac{N_H}{N_H+N_T}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\frac{N_H}{N_H&plus;N_T}&space;=&space;\frac{6}{6}&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\frac{N_H}{N_H&plus;N_T}&space;=&space;\frac{6}{6}&space;=&space;1" title="\theta_{\textrm{MLE}} = \frac{N_H}{N_H+N_T} = \frac{6}{6} = 1" /></a>
 
 which is consistent with our intution. 
 
