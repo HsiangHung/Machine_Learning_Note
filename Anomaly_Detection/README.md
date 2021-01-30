@@ -71,7 +71,7 @@ Note both oversample and undersample changes data distribution [[Silicon Valley 
 
 ### 4.3 Synthesize Minor Samples
 
-Rather than randomly duplicating minority class, creating synthetic samples is a close cousin of up-sampling. For example, the **SMOTE** [(Synthetic Minority Oversampling TEchnique)](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume16/chawla02a-html/chawla2002.html) and ADASYN algorithms [[Digital Catapult]][Dealing with Imbalanced Data] are methods of resampling from the minority class while slightly perturbing feature values, thereby creating "new" samples. The blog [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] simply interprets how to synthesize minority class. SMOTE was generally successful and led to many variants, extensions, and adaptations to different concept learning algorithms [[Silicon Valley Data Science]][Learning from Imbalanced Classe].
+Rather than randomly duplicating minority class, creating synthetic samples is a close cousin of up-sampling. For example, the **SMOTE** [(Synthetic Minority Oversampling TEchnique)](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume16/chawla02a-html/chawla2002.html) and **ADASYN** algorithms [[Digital Catapult]][Dealing with Imbalanced Data] are methods of resampling from the minority class while slightly perturbing feature values, thereby creating "new" samples. The blog [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] simply interprets how to synthesize minority class. SMOTE was generally successful and led to many variants, extensions, and adaptations to different concept learning algorithms [[Silicon Valley Data Science]][Learning from Imbalanced Classe].
 
 **SMOTE** creates new instances of the minority class by forming convex combinations of neighboring instances. [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] As the graphic below shows (credit: (a) from [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] and (b,c) from [[Jason Brownlee]][SMOTE for Imbalanced Classification with Python]), it effectively draws lines between minority points in the feature space, explained in (a), and samples along these lines. This allows us to balance our data-set without as much overfitting, as we create new synthetic examples rather than using duplicates. 
 
@@ -152,7 +152,6 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 [5 SMOTE Techniques for Oversampling your Imbalance Data]: https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5
 [[Cornellius Yudha Wijaya] 5 SMOTE Techniques for Oversampling your Imbalance Data](https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5)
-
 
 
 [Dealing with Imbalanced Classes in Machine Learning]: https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2
