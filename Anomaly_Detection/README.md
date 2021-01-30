@@ -77,7 +77,7 @@ Rather than randomly duplicating minority class, creating synthetic samples is a
 
 ![SMOTE_example](images/SMOTE_example.png)
 
-(c) is with generated SMOTE data from (b).
+Above (c) shows generated SMOTE data from (b).
 
 
 However, Marco, brought up a great point about the risks of using SMOTE without proper cross-validation. See Blog [[Marco Altini]][DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION].
