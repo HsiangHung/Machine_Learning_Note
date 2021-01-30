@@ -45,6 +45,14 @@ Let’s take an example of fraud detection problem where there are 100 frauds ou
 
 Thus, in this case, the difference is more apparent in **PR curve**.
 
+If we wanted a balance between precision and recall then we’d look at F1 score [[Numal Jayawardena]][How to Deal with Imbalanced Data]
+```
+F1 = 2 * precsion * recall/(precsion + recall)
+```
+
+**Kappa (or Cohen’s kappa)**: Classification accuracy normalized by the imbalance of the classes in the data [[Numal Jayawardena]][How to Deal with Imbalanced Data].
+
+
 
 ## 4. Data Preprocess
 
@@ -156,6 +164,11 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 [Detection of Outliers]: https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm
 [[NIST/SEMATECH e-Handbook of Statistical Methods] Detection of Outliers](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm)
+
+
+[How to Deal with Imbalanced Data]: https://towardsdatascience.com/how-to-deal-with-imbalanced-data-34ab7db9b100
+[[Numal Jayawardena] How to Deal with Imbalanced Data](https://towardsdatascience.com/how-to-deal-with-imbalanced-data-34ab7db9b100)
+
 
 
 [What is the difference between a ROC curve and a precision-recall curve?]: https://www.quora.com/What-is-the-difference-between-a-ROC-curve-and-a-precision-recall-curve-When-should-I-use-each
