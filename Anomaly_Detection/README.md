@@ -77,7 +77,7 @@ Rather than randomly duplicating minority class, creating synthetic samples is a
 
 ![SMOTE_example](images/SMOTE_example.png)
 
-Above (c) shows generated SMOTE data from (b).
+Above (c) shows generated SMOTE data from (b). The blog [[Cornellius Yudha Wijaya]][5 SMOTE Techniques for Oversampling your Imbalance Data] discussed more extension about SMOTE.
 
 
 However, Marco, brought up a great point about the risks of using SMOTE without proper cross-validation. See Blog [[Marco Altini]][DEALING WITH IMBALANCED DATA: UNDERSAMPLING, OVERSAMPLING AND PROPER CROSS-VALIDATION].
@@ -148,6 +148,11 @@ The cons of isolation forest include that visualizing results is complicated, an
 [Oracle article: Introduction: Anomaly Detection](https://www.datascience.com/blog/python-anomaly-detection)
 
 ## Reference
+
+
+[5 SMOTE Techniques for Oversampling your Imbalance Data]: https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5
+[[Cornellius Yudha Wijaya] 5 SMOTE Techniques for Oversampling your Imbalance Data](https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5)
+
 
 
 [Dealing with Imbalanced Classes in Machine Learning]: https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2
