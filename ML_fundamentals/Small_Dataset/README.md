@@ -3,7 +3,7 @@
 
 ## What Does "Small Dataset" Mean?
 
-When the data has `n << p` (number of samples << number of features) --  common in industries like medical data -- the richer feature space implies a much higher risk to **overfit** the data. Thus, when n << p, **high variance models should be avoided** entirely [[Cheng-Tao Chu]][Machine Learning Done Wrong], [[Quora: What are some machine learning algorithms that can learn well even with a small data set?]][What are some machine learning algorithms that can learn well even with a small data set?]. Or by Xavier Amatriain [[Quora: What are some machine learning algorithms that can learn well even with a small data set?]][What are some machine learning algorithms that can learn well even with a small data set?], from a Bayesian point of view, if you don’t have much data, you should mostly trust your prior.
+When the data has `n << p` (number of samples << number of features) --  common in industries like medical data -- the richer feature space implies a much higher risk to **overfit** the data. Thus, when n << p, **high variance models should be avoided** entirely [[Cheng-Tao Chu]][Machine Learning Done Wrong], [[Quora: What are some machine learning algorithms that can learn well even with a small data set?]][What are some machine learning algorithms that can learn well even with a small data set?]. Or by Xavier Amatriain in the Quora post, from a Bayesian point of view, if you don’t have much data, you should mostly trust your prior.
 
 So, if you have a small dataset, you need models that have few parameters (low complexity) and/or a strong prior, or doing perform feature selection and regularization [[Ahmed El Deeb]][What to do with “small” data?]. **Bayesian inference** may be well suited for dealing with smaller datasets, especially if you can use domain expertise to construct sensible priors. Meanwhile, it is also a good idea to try model averaging and estimate confidence intervals rather than point estimates [[Ahmed El Deeb]][What to do with “small” data?].
 
@@ -20,12 +20,12 @@ There is so-call one-shot limitation learning tech to propose, using small amoun
 ## Summary
 
 
-For small datasets we should avoid overfitting. Try 
+For small datasets we should avoid overfitting. Try [[Ahmed El Deeb]][What to do with “small” data?], [[Rafael Alencar]][Dealing with very small datasets]
 * Use simple models
 * Beware the outliers
 * Select the features
 * Balance the dataset with synthetic samples (SMOTE)
-
+* Model averaging
 
 
 
