@@ -17,7 +17,7 @@ Linear models such as linear/logistic regression. Not only you can adapt the num
 When the data has `n << p` (number of samples << number of features) --  common in industries like medical data -- the richer feature space implies a much higher risk to **overfit** the data. Thus, when n << p, **high variance models should be avoided** entirely [[Cheng-Tao Chu]][Machine Learning Done Wrong], [[Quora: What are some machine learning algorithms that can learn well even with a small data set?]][What are some machine learning algorithms that can learn well even with a small data set?]. Or by Xavier Amatriain in the Quora post, from a Bayesian point of view, if you don’t have much data, you should mostly trust your prior.
 
 
-There is so-call one-shot limitation learning tech to propose, using small amount of data to train models [[Bharath Ramsundar]][Machine Learning with Small Data], [[Yan Duan et al.]][One-Shot Imitation Learnin].
+There is so-call one-shot limitation learning tech to propose, using small amount of data to train models [[Bharath Ramsundar]][Machine Learning with Small Data], [[Yan Duan et al.]][One-Shot Imitation Learning].
 
 
 ## Summary
