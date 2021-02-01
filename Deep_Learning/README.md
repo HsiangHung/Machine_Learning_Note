@@ -47,7 +47,7 @@ Dropout is a widely used method and it was proven to greatly improve the perform
 It means that the neural network cannot rely on any input node, since each have a random probability of being removed. Therefore, the neural network will be reluctant to give high weights to certain features, because they might disappear [[Marco Peixeiro]][How to Improve a Neural Network With Regularization].
 Consequently, the weights are spread across all features, making them smaller. This effectively shrinks the model and regularizes it.
 
-### Some observations using dropout:
+#### Some observations using dropout:
 
 From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 
@@ -55,6 +55,15 @@ From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 2. Dropout roughly doubles the number of iterations required to converge. However, training time for each epoch is less.
 3. With H hidden units, each of which can be dropped, we have 2^H possible models. In testing phase, the entire network is considered and each activation is reduced by a factor p.
 
+### Note from Andrew Ng's class
+
+Dropout is used in computer vision field to prevent overfitting if there is no enough data. 
+
+Meanwhile, the hyperparameter, the probability to keep neurons trigger, **keep_prob**, could be layer-dependent. As an example below, the second hidden layer has more parameters (7 times 7), we can assign smaller **keep_prob**, and larger **keep_prob** in other layers. 
+
+![dropout_2](images/dropout_2.png)
+
+The drawback for dropout is difficult to define cost function. 
 
 
 
