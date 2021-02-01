@@ -59,7 +59,9 @@ From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 
 Dropout is used in computer vision field to prevent overfitting if there is no enough data. 
 
-Meanwhile, the hyperparameter, the probability to keep neurons trigger, **keep_prob**, could be layer-dependent. As an example below, the second hidden layer has more parameters (7 times 7), we can assign smaller **keep_prob**, and larger **keep_prob** in other layers. 
+Meanwhile, the hyperparameter, the probability to keep neurons trigger, **keep_prob**, could be layer-dependent. 
+
+As a concrete example, suppose we have a neural netwrok below. The second hidden layer has more parameters (7 times 7), we can assign smaller **keep_prob**, and larger **keep_prob** in other layers. 
 
 ![dropout_2](images/dropout_2.png)
 
