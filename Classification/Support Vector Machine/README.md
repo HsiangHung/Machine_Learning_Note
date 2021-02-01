@@ -18,12 +18,12 @@ The loss function of SVM is very similar to that of Logistic Regression. Looking
 
 ![cost_function](images/cost_function.png)
 
-What is the hypothesis for SVM? It’s simple and straightforward. When θᵀx ≥ 0, predict 1, otherwise, predict 0.
+
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;y_i&space;\textrm{Cost}_1(\theta^T&space;\bold{x}_i)&space;&plus;&space;(1-y_i)&space;\textrm{Cost}_0(\theta^T&space;\bold{x}_i)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;y_i&space;\textrm{Cost}_1(\theta^T&space;\bold{x}_i)&space;&plus;&space;(1-y_i)&space;\textrm{Cost}_0(\theta^T&space;\bold{x}_i)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} y_i \textrm{Cost}_1(\theta^T \bold{x}_i) + (1-y_i) \textrm{Cost}_0(\theta^T \bold{x}_i) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
 
-To extend SVM to cases in which the data are not linearly separable, the hinge loss function is helpful
+What is the hypothesis for SVM? It’s simple and straightforward. When θᵀx ≥ 0, predict 1, otherwise, predict 0. To extend SVM to cases in which the data are not linearly separable, the hinge loss function is helpful
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{x}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{x}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{x}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{x}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \bold{x}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \bold{x}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
