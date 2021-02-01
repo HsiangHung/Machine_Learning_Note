@@ -12,9 +12,9 @@ Support vectors are data points that are closer to the hyperplane and influence 
 ![support_vectors](images/support_vector.png)
 
 
-## SVM Cost Function
+## Cost Function
 
-The loss function of SVM is very similar to that of Logistic Regression. Looking at it by y = 1 and y = 0 separately in below plot, the black line is the cost function of Logistic Regression, and the red line is for SVM. Please note that the X axis here is the raw model output, θᵀx. 
+The cost function of SVM is very similar to that of Logistic Regression. Looking at it by y = 1 and y = 0 separately in below plot, the black line is the cost function of Logistic Regression, and the red line is for SVM. Please note that the X axis here is the raw model output, θᵀx. 
 
 ![cost_function](images/cost_function.png)
 
