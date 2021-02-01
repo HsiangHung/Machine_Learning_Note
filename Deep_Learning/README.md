@@ -10,7 +10,7 @@ Check training/dev error and compare to **optimal Bayes error**: the lowest poss
 
 ![bias_variance](images/bias_variance.png)
 
-The expected value of errors is 
+The expected value of errors is ([Wiki: Bias–variance tradeoff](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff))
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)&space;=&space;(\textrm{Bias}[\hat{f}])^2&space;&plus;&space;\textrm{Var}(\hat{f})&space;&plus;&space;\epsilon^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)&space;=&space;(\textrm{Bias}[\hat{f}])^2&space;&plus;&space;\textrm{Var}(\hat{f})&space;&plus;&space;\epsilon^2" title="E[(y-\hat{y})^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \textrm{Var}(\epsilon) = (\textrm{Bias}[\hat{f}])^2 + \textrm{Var}(\hat{f}) + \epsilon^2" /></a>
 
