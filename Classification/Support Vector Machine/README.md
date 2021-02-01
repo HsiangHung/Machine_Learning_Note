@@ -18,7 +18,7 @@ The loss function of SVM is very similar to that of Logistic Regression. Looking
 
 ![cost_function](images/cost_function.png)
 
-
+Therefore we can write the following generic form
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;y_i&space;\textrm{Cost}_1(\theta^T&space;\bold{x}_i)&space;&plus;&space;(1-y_i)&space;\textrm{Cost}_0(\theta^T&space;\bold{x}_i)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;y_i&space;\textrm{Cost}_1(\theta^T&space;\bold{x}_i)&space;&plus;&space;(1-y_i)&space;\textrm{Cost}_0(\theta^T&space;\bold{x}_i)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} y_i \textrm{Cost}_1(\theta^T \bold{x}_i) + (1-y_i) \textrm{Cost}_0(\theta^T \bold{x}_i) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
