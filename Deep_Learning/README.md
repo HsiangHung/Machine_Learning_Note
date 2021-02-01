@@ -6,7 +6,7 @@ Learning rate, number of iteration, number of hidden layers, number of hidden la
 
 ## Bias/Variance
 
-Check training/dev error and compare to optimal Bayes error: the lowest possible prediction error that can be achieved and is the same as irreducible error.
+Check training/dev error and compare to **optimal Bayes error**: the lowest possible prediction error that can be achieved and is the same as irreducible error [[Cross Validated: What is Bayes Error in machine learning?]][What is Bayes Error in machine learning?].
 
 ![bias_variance](images/bias_variance.png)
 
@@ -69,6 +69,8 @@ From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 [[Amar Budhiraja] Dropout in (Deep) Machine learning](https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5)
 
 
+[What is Bayes Error in machine learning?]: https://stats.stackexchange.com/questions/302900/what-is-bayes-error-in-machine-learning
+[[Cross Validated: What is Bayes Error in machine learning?] What is Bayes Error in machine learning?](https://stats.stackexchange.com/questions/302900/what-is-bayes-error-in-machine-learning)
 
 
 [A Quick Guide on Basic Regularization Methods for Neural Networks]: https://medium.com/yottabytes/a-quick-guide-on-basic-regularization-methods-for-neural-networks-e10feb101328
