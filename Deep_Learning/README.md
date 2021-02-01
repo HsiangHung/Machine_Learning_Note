@@ -6,6 +6,8 @@ Learning rate, number of iteration, number of hidden layers, number of hidden la
 
 ## Bias/Variance
 
+Check training/dev error and compare to optimal Bayes error: the lowest possible prediction error that can be achieved and is the same as irreducible error.
+
 ![bias_variance](images/bias_variance.png)
 
 ## Activation Function
