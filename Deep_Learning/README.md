@@ -1,3 +1,15 @@
+# Deep Learning
+
+## Activation Function
+
+![activation](images/activation.png)
+
+### Linear activation
+
+For classificastion, output layer uses sigmoid activation; for regression, uses linear activation.
+
+However, if using linear activation in hidden layers, the neural network is equivalent to logisitc regression.
+
 
 ## Dropout Regularization
 
