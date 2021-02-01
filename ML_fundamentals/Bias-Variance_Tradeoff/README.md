@@ -10,7 +10,7 @@ It is the model that you will use to make predictions on new data were you do no
 
 The bias-variance trade-off is a conceptual idea in applied machine learning to help understand the sources of error in models. 
 
-Suppose we have model such that prediction:
+Suppose we have a model such that given `X`, the prediction is:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;\hat{f}(X)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;\hat{f}(X)" title="\hat{y} = \hat{f}(X)" /></a>
 
