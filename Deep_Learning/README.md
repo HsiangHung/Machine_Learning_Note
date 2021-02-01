@@ -1,5 +1,13 @@
 # Deep Learning
 
+## Hyperparameter
+
+Learning rate, number of iteration, number of hidden layers, number of hidden layer units, choice of activation functions, momentum, mini-batch size, regularization.
+
+## Bias/Variance
+
+![bias_variance](images/bias_variance.png)
+
 ## Activation Function
 
 ![activation](images/activation.png)
@@ -8,7 +16,7 @@
 
 For classificastion, output layer uses sigmoid activation; for regression, uses linear activation.
 
-However, if using linear activation in hidden layers, the neural network is equivalent to logisitc regression.
+However, if using linear activation in hidden layers, the neural network is equivalent to logisitc regression. Therefore it is critical for deep learning using non-linear activation functions.
 
 
 ## Dropout Regularization
