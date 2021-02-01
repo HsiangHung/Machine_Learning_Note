@@ -8,7 +8,13 @@ A final model is trained on all available data, e.g. the training and the test s
 
 It is the model that you will use to make predictions on new data were you do not know the outcome. A problem with most final models is that they suffer variance in their predictions.
 
-The bias-variance trade-off is a conceptual idea in applied machine learning to help understand the sources of error in models.
+The bias-variance trade-off is a conceptual idea in applied machine learning to help understand the sources of error in models. 
+
+Suppose we have model such that prediction:
+
+Then the expected value of squared difference btween the prediction and actual value `y`, 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)" title="E[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \textrm{Var}(\epsilon)" /></a>
 
 
 ## Bias 
