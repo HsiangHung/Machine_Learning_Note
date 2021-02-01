@@ -16,9 +16,9 @@ Suppose we have a model such that given `X`, the prediction is:
 
 Then the expected value of squared difference btween the prediction and actual value `y`, 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)" title="E[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \textrm{Var}(\epsilon)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\epsilon^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\epsilon^2" title="E[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2" /></a>
 
-The first term is reducible erros: Bias + Variance and the second term is irreducible, i.e. Bayes error [[Cross Validated: What is Bayes Error in machine learning?]][What is Bayes Error in machine learning?]. 
+The first term is reducible erros: Bias + Variance and the second term is irreducible, i.e. Bayes error [[Cross Validated: What is Bayes Error in machine learning?]][What is Bayes Error in machine learning?]. The irreducible error is the lower bound error from a perfect model.
 
 ## Bias 
 
