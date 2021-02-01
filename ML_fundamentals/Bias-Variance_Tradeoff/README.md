@@ -12,10 +12,13 @@ The bias-variance trade-off is a conceptual idea in applied machine learning to 
 
 Suppose we have model such that prediction:
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;\hat{f}(X)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;\hat{f}(X)" title="\hat{y} = \hat{f}(X)" /></a>
+
 Then the expected value of squared difference btween the prediction and actual value `y`, 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)" title="E[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \textrm{Var}(\epsilon)" /></a>
 
+The first term is reducible erros: Bias + Variance and the second term is irreducible, also Bayes error [[Cross Validated: What is Bayes Error in machine learning?]][What is Bayes Error in machine learning?]. 
 
 ## Bias 
 
@@ -100,11 +103,13 @@ Also, the learning curve can be used for model selection. A good example is that
 ## Reference
 
 
+[What is Bayes Error in machine learning?]: https://stats.stackexchange.com/questions/302900/what-is-bayes-error-in-machine-learning
+[[Cross Validated: What is Bayes Error in machine learning?] What is Bayes Error in machine learning?](https://stats.stackexchange.com/questions/302900/what-is-bayes-error-in-machine-learning)
+
+
 
 [UNDERSTANDING BIAS-VARIANCE TRADEOFF]: https://www.listendata.com/2017/02/bias-variance-tradeoff.html
 [[Deepanshu Bhalla] UNDERSTANDING BIAS-VARIANCE TRADEOFF](https://www.listendata.com/2017/02/bias-variance-tradeoff.html)
-
-
 
 
 [Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]: https://machinelearningmastery.com/gentle-introduction-to-the-bias-variance-trade-off-in-machine-learning/
