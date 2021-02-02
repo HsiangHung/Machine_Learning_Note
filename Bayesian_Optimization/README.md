@@ -32,9 +32,9 @@ The process is as follows (credit from Nando de Freitas's [UBC machine learning 
 
 The black dash line is the true object function we are looking for. The black solid line is mean of posterior. The purple region covers confidence intervals and defines upper/lower bounds. The green line denotes acquisition function. Our goal is to find the **maximum** of the true objective.
 
-@t=2, we have two trial observations `(x1, y1)` and `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look regions where the objective is potentially higher than the right (say `(x2, y2)`), and as well as wide purple area. This corresponds to the maximum on acquisition function. Suppose we label the third point `x2` by the red triangle.
+@t=2, we have two trial observations `(x1, y1)` and `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look regions where the objective is potentially higher than the right (say `(x2, y2)`), and as well as wide purple area. This corresponds to the maximum on acquisition function. Suppose we label the third point `x3` by the red triangle.
 
-@t=3, the uncertiantity of objective function nearby `x3` diminishes, so the purple area shrinks, and the bloack solid line moves closer to the dash line. Note meanwhile the acquisition function also drop. `(x2, y2)` still higher objective, so next step looks for it's right with wide purple area, with maximum acquisition function.
+@t=3, the uncertiantity of objective function nearby `x3` diminishes, so the purple area shrinks. Also the bloack solid line moves closer to the dash line, and the acquisition function also drops. `(x2, y2)` still higher objective, so next step looks for it's right with wide purple area, with maximum acquisition function.
 
 @t=4, now we can see the mean of posterior is close to the true objective line.
 
