@@ -65,8 +65,14 @@ As a concrete example, suppose we have a neural netwrok below. The second hidden
 
 ![dropout_2](images/dropout_2.png)
 
-The drawback for dropout is difficult to define cost function. 
+The drawback for dropout is difficult to define cost function. While doing prediction on test datasets, don't use dropout.
 
+
+## Vanishing/Exploding Gradients
+
+In very deep neural networks, we may meet vanishing and exploding gradient issue. Andrew Ng's deep learning class provided some intuition:
+
+![vanishing_gradients](images/vanishing_gradient.png)
 
 
 
