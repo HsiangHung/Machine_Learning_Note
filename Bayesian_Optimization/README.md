@@ -24,7 +24,7 @@ P(score|hyperparameters)
 ```
 The probability model is called a “surrogate” for the objective function. Bayesian methods work by finding the next set of hyperparameters to evaluate on the actual objective function by selecting hyperparameters that perform best on the surrogate function. 
 
-![Figure_1](images/Bayesian_optimization_process.png)
+![Figure_1](images/bayesian_optimization_process.png)
 
 
 ## HyperOpt Code Example for LGBM
