@@ -34,8 +34,9 @@ The black dash line is the true object function we are looking for. The black so
 
 @t=2, we have two trial observations. With these two points `(x1, y1)` and `(x2, y2)`, we can use Gaussina process to infer the purple area. Next point is to look for high-mean regions (exploitation) and high-variance regions (exploration). So we only look regions where the objective is higher than the right (and right `(x2, y2)` > left `(x1, y1)`), and also purple area is wide, as well as the maximum on acquisition function. Here it is labeled by the red triangle at `x3`.
 
-@t=3, with `x3`, the uncertiantity vanishes so the purple area shrinks. Note meanwhile the acquisition function also drop. `(x2, y2)` still higher objective, so next step looks for it's right with wide purple area.
+@t=3, with `x3`, the uncertiantity vanishes so the purple area shrinks, and the bloack solid line moves closer to the dash line. Note meanwhile the acquisition function also drop. `(x2, y2)` still higher objective, so next step looks for it's right with wide purple area, with maximum acquisition function.
 
+@t=4, now we can see the mean of posterior is close to the true objective line.
 
 ## HyperOpt Code Example for LGBM
 
