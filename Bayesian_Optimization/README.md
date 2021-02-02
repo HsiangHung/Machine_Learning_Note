@@ -26,7 +26,7 @@ P(score|hyperparameters)
 ```
 The probability model is called a **surrogate** for the objective function. Bayesian methods work by finding the next set of hyperparameters to evaluate on the actual objective function by selecting hyperparameters that perform best on the surrogate function. 
 
-The Bayesian optimization process is shown in (a) below (x-axis denotes values of hyperparameter, and y-axis objective function; credit from Nando de Freitas's [UBC machine learning class](https://www.cs.ubc.ca/~nando/540-2013/lectures.html)): 
+The Bayesian optimization process (credit from Nando de Freitas's [UBC machine learning class](https://www.cs.ubc.ca/~nando/540-2013/lectures.html)) is shown in (a) below (x-axis denotes values of hyperparameter, and y-axis objective function): 
 
 ![Figure_1](images/bayesian_optimization_process.png)
 
