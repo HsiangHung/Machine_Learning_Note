@@ -5,7 +5,7 @@
 ## What are Support Vectors?
 
 
-Support vectors are data points that are closer to the hyperplane and influence the position and orientation of the hyperplane. Using these support vectors, we maximize the margin of the classifier. Deleting the support vectors will change the position of the hyperplane. These are the points that help us build our SVM [[Rohith Gandhi]][Support Vector Machine — Introduction to Machine Learning Algorithms], [[Shuyu Luo]][Loss Function(Part III): Support Vector Machine]
+Support vectors are data points that are closer to the hyperplane and influence the position and orientation of the hyperplane. Using these support vectors, we maximize the margin of the classifier. Deleting the support vectors will change the position of the hyperplane. These are the points that help us build our SVM [[Rohith Gandhi]][Support Vector Machine — Introduction to Machine Learning Algorithms], [[Shuyu Luo]][Loss Function(Part III): Support Vector Machine], [[Priyankur Sarkar]][Support Vector Machines in Machine Learning]
 .
 (credit from [Wiki](https://en.wikipedia.org/wiki/Support-vector_machine) and [[Rohith Gandhi]][Support Vector Machine — Introduction to Machine Learning Algorithms])
 
@@ -32,7 +32,7 @@ With a very large value of C (similar to no regularization), this large margin c
 
 ## Non-Linear SVM
 
-The cost function turns to 
+The non-linear boundary problem can be solved if we introduce a kernel [[Priyankur Sarkar][Support Vector Machines in Machine Learning]. The cost function turns to 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \bold{f}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \bold{f}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
 
@@ -67,6 +67,11 @@ Andrew's Ng's Machine learning class also provided comparison between logisitic 
 
 
 ## Reference
+
+
+[Support Vector Machines in Machine Learning]: https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning
+[[Priyankur Sarkar] Support Vector Machines in Machine Learning](https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning)
+
 
 
 [Support Vector Machine — Introduction to Machine Learning Algorithms]: https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
