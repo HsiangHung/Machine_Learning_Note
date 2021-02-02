@@ -36,7 +36,7 @@ In (a), the dash line is the true object function we are looking for. The black 
 
 (b) shows how we determine next trial observation. We always look up regions which potentially have higher objective, so in this example, we can ignore the shaded area. 
 
-@t=2, we have two trial observations `(x1, y1)` and `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look up regions where the objective is potentially higher than the right (say `y2`), and as well as wide purple area.  This corresponds to the maximum on acquisition function. Suppose we label the third point `x3` by the red triangle.
+@t=2, we have two trial observations left: `(x1, y1)` and right: `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look up regions where the objective is potentially higher than `y2`, and as well as wide purple area.  This corresponds to the maximum on acquisition function. Suppose we label the third point `x3` by the red triangle.
 
 @t=3, the uncertiantity of the objective function nearby `x3` diminishes, so the purple area shrinks. Also the black solid line moves closer to the dash line, and the acquisition function also drops. `y2` still highest objective among the observations, so for next step, we looks for `x > x2` with wide purple area, i.e. maximum on the acquisition function.
 
