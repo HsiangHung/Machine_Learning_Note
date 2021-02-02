@@ -34,7 +34,7 @@ The black dash line is the true object function we are looking for. The black so
 
 @t=2, we have two trial observations `(x1, y1)` and `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look regions where the objective is potentially higher than the right (say `(x2, y2)`), and as well as wide purple area. This corresponds to the maximum on acquisition function. Suppose we label the third point `x3` by the red triangle.
 
-@t=3, the uncertiantity of objective function nearby `x3` diminishes, so the purple area shrinks. Also the bloack solid line moves closer to the dash line, and the acquisition function also drops. `(x2, y2)` still higher objective, so next step looks for it's right with wide purple area, with maximum acquisition function.
+@t=3, the uncertiantity of the objective function nearby `x3` diminishes, so the purple area shrinks. Also the black solid line moves closer to the dash line, and the acquisition function also drops. `y2` still highest objective among the observations, so for next step, we looks for `x > x2` with wide purple area, i.e. maximum on the acquisition function.
 
 @t=4, now we can see the mean of posterior is close to the true objective line.
 
