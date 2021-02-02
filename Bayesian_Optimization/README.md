@@ -1,6 +1,14 @@
 # Bayesian Optimization
 
-Bayesian Optimization is useful to help us search optiaml hyperparameters. It is particularly important in machine learnin; sometimes we need to fine tune hyperparameter to find optimal solution. Bayesian Optimization use historical information to efficiently find solution rather than grid search and random search.[[Mike Kraus]][Using Bayesian Optimization to reduce the time spent on hyperparameter tuning], [[Martin Krasser]][Bayesian optimization], [[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning], [[Matti Karppanen]][Bayesian Hyperparameter Optimization], [[Apoorv Agnihotri and Nipun Batra]][Exploring Bayesian Optimization].
+Bayesian Optimization is useful to help us search optiaml hyperparameters. It is particularly important in machine learnin; sometimes we need to fine tune hyperparameter to find optimal solution. Bayesian Optimization use **historical** information to efficiently find solution rather than grid search and random search.[[Mike Kraus]][Using Bayesian Optimization to reduce the time spent on hyperparameter tuning], [[Martin Krasser]][Bayesian optimization], [[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning], [[Matti Karppanen]][Bayesian Hyperparameter Optimization], [[Apoorv Agnihotri and Nipun Batra]][Exploring Bayesian Optimization].
+
+
+The one-sentence summary of Bayesian hyperparameter optimization is: build a probability model of the objective function and use it to select the most promising hyperparameters to evaluate in the true objective function.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" title="\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}" /></a>
+
+
+
 
 
 ## HyperOpt Code Example for LGBM
@@ -64,11 +72,6 @@ def hyperopt_lightgbm(X: pd.DataFrame, y: pd.Series, params: Dict, config: Confi
 
 
 ## Summary
-
-The blog [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d) shows very nice and decent diagrams to interpret the difference between bagging and boosting. 
-
-![ensembling](images/ensembling.png)
-
 
 
 
