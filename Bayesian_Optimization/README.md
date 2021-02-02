@@ -26,17 +26,17 @@ P(score|hyperparameters)
 ```
 The probability model is called a **surrogate** for the objective function. Bayesian methods work by finding the next set of hyperparameters to evaluate on the actual objective function by selecting hyperparameters that perform best on the surrogate function. 
 
-The Bayesian optimization process (credit from Nando de Freitas's [UBC machine learning class](https://www.cs.ubc.ca/~nando/540-2013/lectures.html)) is shown below (x-axis denotes values of hyperparameter, and y-axis objective function `f`): 
+The Bayesian optimization process (credit from Nando de Freitas's [UBC machine learning class](https://www.cs.ubc.ca/~nando/540-2013/lectures.html)) is shown below (x-axis denotes values of hyperparameter, and y-axis objective function `f(x)`): 
 
 ![Figure_1](images/bayesian_optimization_process.png)
 
-Our goal is to find `x` to have **maximum** true objective.
+Our goal is to find `x*` to have **maximum** true objective.
 
 In (a), the dash line is the true object function we are looking for. The black solid line is mean of posterior `μ`. The purple region represents confidence intervals and covers upper (`μ+σ`) and lower (`μ-σ`) bounds. The green line denotes a acquisition function. 
 
-(b) shows how we determine next trial observation. We always look up regions which potentially have higher objective. In this example, we can ignore the shaded area. 
+(b) shows how we determine next trial observation. We always look up regions which potentially have higher objective, so in this example, we can ignore the shaded area. 
 
-@t=2, we have two trial observations `(x1, y1)` and `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look up regions where the objective is potentially higher than the right (say `(x2, y2)`), and as well as wide purple area. Other regions can be ignored (c.f. above (b)). This corresponds to the maximum on acquisition function. Suppose we label the third point `x3` by the red triangle.
+@t=2, we have two trial observations `(x1, y1)` and `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look up regions where the objective is potentially higher than the right (say `y2`), and as well as wide purple area.  This corresponds to the maximum on acquisition function. Suppose we label the third point `x3` by the red triangle.
 
 @t=3, the uncertiantity of the objective function nearby `x3` diminishes, so the purple area shrinks. Also the black solid line moves closer to the dash line, and the acquisition function also drops. `y2` still highest objective among the observations, so for next step, we looks for `x > x2` with wide purple area, i.e. maximum on the acquisition function.
 
