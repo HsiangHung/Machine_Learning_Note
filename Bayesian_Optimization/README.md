@@ -26,12 +26,13 @@ P(score|hyperparameters)
 ```
 The probability model is called a **surrogate** for the objective function. Bayesian methods work by finding the next set of hyperparameters to evaluate on the actual objective function by selecting hyperparameters that perform best on the surrogate function. 
 
-The Bayesian optimization process (credit from Nando de Freitas's [UBC machine learning class](https://www.cs.ubc.ca/~nando/540-2013/lectures.html)) is shown below (x-axis denotes values of hyperparameter, and y-axis objective function): 
+The Bayesian optimization process (credit from Nando de Freitas's [UBC machine learning class](https://www.cs.ubc.ca/~nando/540-2013/lectures.html)) is shown below (x-axis denotes values of hyperparameter, and y-axis objective function `f`): 
 
 ![Figure_1](images/bayesian_optimization_process.png)
 
+Our goal is to find `x` to have **maximum** true objective.
 
-In (a), the dash line is the true object function we are looking for. The black solid line is mean of posterior `μ`. The purple region represents confidence intervals and covers upper (`μ+σ`) and lower (`μ-σ`) bounds. The green line denotes a acquisition function. Our goal is to find the **maximum** of the true objective.
+In (a), the dash line is the true object function we are looking for. The black solid line is mean of posterior `μ`. The purple region represents confidence intervals and covers upper (`μ+σ`) and lower (`μ-σ`) bounds. The green line denotes a acquisition function. 
 
 (b) shows how we determine next trial observation. We always look up regions which potentially have higher objective. In this example, we can ignore the shaded area. 
 
