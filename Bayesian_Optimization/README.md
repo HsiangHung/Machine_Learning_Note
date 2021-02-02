@@ -3,12 +3,28 @@
 Bayesian Optimization is useful to help us search optiaml hyperparameters. It is particularly important in machine learnin; sometimes we need to fine tune hyperparameter to find optimal solution. Bayesian Optimization use **historical** information to efficiently find solution rather than grid search and random search.[[Mike Kraus]][Using Bayesian Optimization to reduce the time spent on hyperparameter tuning], [[Martin Krasser]][Bayesian optimization], [[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning], [[Matti Karppanen]][Bayesian Hyperparameter Optimization], [[Apoorv Agnihotri and Nipun Batra]][Exploring Bayesian Optimization].
 
 
-The one-sentence summary of Bayesian hyperparameter optimization is: build a probability model of the objective function and use it to select the most promising hyperparameters to evaluate in the true objective function.
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" title="\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}" /></a>
+The one-sentence summary of Bayesian hyperparameter optimization is: build a probability model of the objective function and use it to select the most promising hyperparameters to evaluate in the true objective function. In the following, we mainly follow [[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning].
 
 
 
+### Hyperparameter Optimization
+
+Hyperparameter optimization is represented
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=x^{*}&space;=&space;\textrm{argmin}_{x&space;\in&space;X}&space;f(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^{*}&space;=&space;\textrm{argmin}_{x&space;\in&space;X}&space;f(x)" title="x^{*} = \textrm{argmin}_{x \in X} f(x)" /></a>
+
+ `f(x)` represents an objective score to minimize, such as RMSE or error rate, evaluated on the validation set; `x*` is the set of hyperparameters that yields the lowest value of the score, and x can take on any value in the hyperparameter space. In simple terms, we want to find the model hyperparameters that yield the best score on the validation set metric.
+
+With a large number of hyperparameters and complex models such as ensembles or deep neural networks, evaluating the objective function to find the score is extremely expensive. Grid and random search are completely uninformed by past evaluations and pay no attention to past results.[[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning]
+
+Bayesian Optimization forms a probabilistic model mapping hyperparameters to a probability of a score on the objective function:
+
+```
+P(score|hyperparameters)
+```
+The probability model is called a “surrogate” for the objective function. Bayesian methods work by finding the next set of hyperparameters to evaluate on the actual objective function by selecting hyperparameters that perform best on the surrogate function. 
+
+![Figure_1](images/Bayesian_optimization_process.png)
 
 
 ## HyperOpt Code Example for LGBM
