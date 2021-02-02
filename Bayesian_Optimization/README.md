@@ -32,7 +32,7 @@ The process is as follows (credit from Nando de Freitas's [UBC machine learning 
 
 The black dash line is the true object function we are looking for. The black solid line is mean of posterior. The purple region covers confidence intervals and defines upper/lower bounds. The green line denotes acquisition function. Our goal is to find the **maximum** of the true objective.
 
-At t=2, we have two trial observation. With these two points, we can use Gaussina process to inference the purple area. Next point is to look for high-mean regions (exploitation) and high-variance regions (exploration). So we only look regions where the objective is higher than the right (and right > left), and also purple area is wide. In this case the acquisition function is given by the two points.
+At t=2, we have two trial observations. With these two points, we can use Gaussina process to infer the purple area. Next point is to look for high-mean regions (exploitation) and high-variance regions (exploration). So we only look regions where the objective is higher than the right (and right > left), and also purple area is wide. In this case the acquisition function is given by the two points.
 
 
 ## HyperOpt Code Example for LGBM
