@@ -30,7 +30,7 @@ The Bayesian optimization process is shown in (a) below (credit from Nando de Fr
 
 ![Figure_1](images/bayesian_optimization_process.png)
 
-The black dash line is the true object function we are looking for. The black solid line is mean of posterior. The purple region covers confidence intervals and defines upper/lower bounds. The green line denotes acquisition function. Our goal is to find the **maximum** of the true objective.
+The dash line is the true object function we are looking for. The black solid line is mean of posterior `μ`. The purple region represents confidence intervals and covers upper (`μ+σ`) and lower (`μ-σ`) bounds. The green line denotes acquisition function. Our goal is to find the **maximum** of the true objective.
 
 @t=2, we have two trial observations `(x1, y1)` and `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look up regions where the objective is potentially higher than the right (say `(x2, y2)`), and as well as wide purple area. Other regions can be ignored (c.f. above (b)). This corresponds to the maximum on acquisition function. Suppose we label the third point `x3` by the red triangle.
 
