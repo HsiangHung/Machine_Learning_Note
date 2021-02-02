@@ -17,14 +17,22 @@ Hyperparameter optimization is represented
 
 With a large number of hyperparameters and complex models such as ensembles or deep neural networks, evaluating the objective function to find the score is extremely expensive. Grid and random search are completely uninformed by past evaluations and pay no attention to past results.[[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning]
 
+### Bayesian Optimization
+
 Bayesian Optimization forms a probabilistic model mapping hyperparameters to a probability of a score on the objective function:
 
 ```
 P(score|hyperparameters)
 ```
-The probability model is called a “surrogate” for the objective function. Bayesian methods work by finding the next set of hyperparameters to evaluate on the actual objective function by selecting hyperparameters that perform best on the surrogate function. 
+The probability model is called a **surrogate** for the objective function. Bayesian methods work by finding the next set of hyperparameters to evaluate on the actual objective function by selecting hyperparameters that perform best on the surrogate function. 
+
+The process is as follows (credit from Nando de Freitas's [UBC machine learning class](https://www.cs.ubc.ca/~nando/540-2013/lectures.html)): 
 
 ![Figure_1](images/bayesian_optimization_process.png)
+
+The black dash line is the true object function we are looking for. The black solid line is mean of posterior. The purple region covers confidence intervals and defines upper/lower bounds. The green line denotes acquisition function. Our goal is to find the **maximum** of the true objective.
+
+At t=2, we have two trial observation. With these two points, we can use Gaussina process to inference the purple area. Next point is to look for high-mean regions (exploitation) and high-variance regions (exploration). So we only look regions where the objective is higher than the right (and right > left), and also purple area is wide. In this case the acquisition function is given by the two points.
 
 
 ## HyperOpt Code Example for LGBM
