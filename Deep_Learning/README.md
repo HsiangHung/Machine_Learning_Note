@@ -74,7 +74,7 @@ In very deep neural networks, we may meet vanishing and exploding gradient issue
 
 ![vanishing_gradients](images/vanishing_gradient.png)
 
-We can see if the multiple parameter `w > 1` in very deep network, the value of y will explode. On the other hand, multiple parameter `w < 1` may lead to vanishing y.
+We can see if the parameter `w > 1` in very deep network, the multiplication of parameters grow exponentially and the value of y will explode. On the other hand, multiplication of parameter `w < 1` may lead to vanishing y. A partial solution to the problems of vanishing and exploding gradients (doesn't solve it entirely but helps a lot) is better or more careful choice of the **random initialization** for your neural network. 
 
 
 
