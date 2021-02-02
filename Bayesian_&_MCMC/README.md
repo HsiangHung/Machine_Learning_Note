@@ -244,6 +244,7 @@ So
 
 Using `B(2,2)`, `θ = 8/10`; `B(1, 1)`, `θ = 7/8`; `B(1, 0.01)`, `θ = 7/7.01`.
 
+The blog [[Suzanna Sia]][Closed form Bayesian Inference for Binomial distributions] has more description on Bayesian inference for binomial distributions with Python code.
 
 ### b. Multinomial outcome
 
@@ -342,7 +343,6 @@ The updating step is a parameter of the Metropolis algorithm and has a significa
 ## Reference
 
 
-
 [MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation]: 
 https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/
 [[Agustinus Kristiadi] MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation](https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/)
@@ -373,3 +373,10 @@ https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/
 
 [What is the difference between Maximum Likelihood (ML) and Maximum a Posteriori (MAP) estimation?]: https://www.quora.com/What-is-the-difference-between-Maximum-Likelihood-ML-and-Maximum-a-Posteriori-MAP-estimation
 [[Quora] What is the difference between Maximum Likelihood (ML) and Maximum a Posteriori (MAP) estimation?](https://www.quora.com/What-is-the-difference-between-Maximum-Likelihood-ML-and-Maximum-a-Posteriori-MAP-estimation)
+
+
+[Closed form Bayesian Inference for Binomial distributions]: https://suzyahyah.github.io/bayesian%20inference/2017/03/01/Closed-Form-Toy-Bayesian-Inference.html
+[[Suzanna Sia] Closed form Bayesian Inference for Binomial distributions](https://suzyahyah.github.io/bayesian%20inference/2017/03/01/Closed-Form-Toy-Bayesian-Inference.html)
+
+
+
