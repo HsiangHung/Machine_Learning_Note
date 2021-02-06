@@ -108,7 +108,7 @@ where
 
 ![batch_normalization](images/batch_norm.png)
 
-The mini-batch gradient descent can also implement batch norm. BN also has other advantages like: enabling the utilization of larger learning rates and reducing the common problem of vanishing gradients [[Manish Chablani]][Batch Normalization], [[Richmond Alake]][Batch Normalization In Neural Networks Explained (Algorithm Breakdown)].
+The mini-batch gradient descent can also implement batch norm. BN also has other advantages like: enabling the utilization of larger learning rates and reducing the common problem of vanishing gradients. BN also has a slight regularization effect. [[Manish Chablani]][Batch Normalization], [[Richmond Alake]][Batch Normalization In Neural Networks Explained (Algorithm Breakdown)].
 
 
 
