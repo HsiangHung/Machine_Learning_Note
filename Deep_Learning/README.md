@@ -84,9 +84,20 @@ We can see if the parameter `w > 1` in very deep network, the multiplication of 
 
 While using gradient descent, one can normalize/standardize data. The advantage for doing this is to make cost function more spatially homogenuous. In this case we have some pictures like
 
-![vanishing_gradients](images/vanishing_gradient.png)
+![input_normalization](images/input_norm.png)
 
 This makes gradient descent faster to converge. 
+
+In DL, we can do the normalization processes, not only data in input layer, but also in hidden layers. This is called batch **normalization**. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
+
+Given an intermediate hidden layer, we first normalize as 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;=&space;\frac{1}{n}\sum^{n}_{i=1}&space;z_i,&space;\&space;\sigma&space;=&space;\frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;=&space;\frac{1}{n}\sum^{n}_{i=1}&space;z_i,&space;\&space;\sigma&space;=&space;\frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" title="\mu = \frac{1}{n}\sum^{n}_{i=1} z_i, \ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" /></a>
+
+where <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;\equiv&space;n^{n[l]},&space;z_i&space;\equiv&space;z^{n[l]}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;\equiv&space;n^{n[l]},&space;z_i&space;\equiv&space;z^{n[l]}_i" title="n \equiv n^{n[l]}, z_i \equiv z^{n[l]}_i" /></a> denote the number of units in the hidden layer `l` and the value on the i-th unit in the hidden layer `l`. For notation simplicity, we drop the layer label `l`. 
+
+![batch_normalization](images/batch_norm.png)
+
 
 
 
