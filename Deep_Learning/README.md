@@ -82,13 +82,13 @@ We can see if the parameter `w > 1` in very deep network, the multiplication of 
 
 ## Batch Normalization
 
-While using gradient descent, one can normalize/standardize data. The advantage for doing this is to make cost function more spatially homogenuous. In this case we have some pictures like
+While using gradient descent, one can normalize/standardize data. The advantage for doing this is to make cost function more spatially homogeneous. In this case we have some pictures like (credit from Andrew Ng's class)
 
 ![input_normalization](images/input_norm.png)
 
-This makes gradient descent faster to converge. 
+to explain gradient descent with data normalization benefiting faster converge. 
 
-In DL, we can do the normalization processes, not only data in input layer, but also in hidden layers. This is called batch **normalization**. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
+In DL, we can do the normalization processes, not only data in input layer, but also in hidden layers. This is called **batch normalization**. Batch norm can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
 
 Given an intermediate hidden layer, we first normalize as 
 
@@ -96,7 +96,19 @@ Given an intermediate hidden layer, we first normalize as
 
 where <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;\equiv&space;n^{n[l]},&space;z_i&space;\equiv&space;z^{n[l]}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;\equiv&space;n^{n[l]},&space;z_i&space;\equiv&space;z^{n[l]}_i" title="n \equiv n^{n[l]}, z_i \equiv z^{n[l]}_i" /></a> denote the number of units in the hidden layer `l` and the value on the i-th unit in the hidden layer `l`. For notation simplicity, we drop the layer label `l`. 
 
+Then we can normalize the values in hiddent units as
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" title="\tilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta" /></a>
+
+where 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" title="z_{i,\textrm{norm}} = \frac{z_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}" /></a>
+
+`β` and `γ` are now parameters and determined by gradient descent. Overall, we have parameters
+
 ![batch_normalization](images/batch_norm.png)
+
+
 
 
 
