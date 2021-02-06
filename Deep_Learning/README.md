@@ -110,7 +110,7 @@ where
 
 BN also has other advantages like: enabling the utilization of larger learning rates and reducing the common problem of vanishing gradients. BN also has a slight regularization effect. [[Manish Chablani]][Batch Normalization], [[Richmond Alake]][Batch Normalization In Neural Networks Explained (Algorithm Breakdown)].
 
-The mini-batch gradient descent can also implement batch norm. If the neural networks are trained by mini-batch, to predict test data, we need to determine the `μ` and `σ` from training data. We can simply use the average `μ` by all mini-batch, or using exponentially weight average (from Andre Ng's class).
+The mini-batch gradient descent can also implement BN. However, if the neural networks are trained by mini-batch, to predict test data, we need to determine the `μ` and `σ` from training data. We can simply use the average `μ` by all mini-batch, or using exponentially weight average (mentioned in Andre Ng's class).
 
 
 
