@@ -98,7 +98,9 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;\equiv&space;n
 
 Then we can normalize the values in hiddent units as
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" title="\tilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta" /></a>  where  <a href="https://www.codecogs.com/eqnedit.php?latex=z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" title="z_{i,\textrm{norm}} = \frac{z_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" title="\tilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta" /></a>  
+
+where  <a href="https://www.codecogs.com/eqnedit.php?latex=z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" title="z_{i,\textrm{norm}} = \frac{z_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}" /></a>
 
 `β` and `γ` are now parameters and determined by gradient descent. Overall, we have parameters
 
