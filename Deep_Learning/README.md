@@ -82,13 +82,13 @@ We can see if the parameter `w > 1` in very deep network, the multiplication of 
 
 ## Batch Normalization
 
-While using gradient descent, one can normalize/standardize data. The advantage for doing this is to make cost function more spatially homogeneous. In this case we have some pictures like (credit from Andrew Ng's class)
+While using gradient descent, one can normalize/standardize input data. The advantage for doing this is to make cost function more spatially homogeneous and speed up model training. In this case we have some pictures like (credit from Andrew Ng's class)
 
 ![input_normalization](images/input_norm.png)
 
 to explain gradient descent with data normalization benefiting faster converge. 
 
-In DL, we can do the normalization processes, not only data in input layer, but also in hidden layers. This is called **batch normalization**. Batch norm can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
+In DL, we can do the normalization processes, not only data in input layer, but also in hidden layers. This is called **batch normalization** (BN) [[Manish Chablani]][Batch Normalization]. BN can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
 
 Given an intermediate hidden layer, we first normalize as 
 
@@ -100,13 +100,15 @@ Then we can normalize the values in hiddent units as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" title="\tilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta" /></a>  
 
-where  <a href="https://www.codecogs.com/eqnedit.php?latex=z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" title="z_{i,\textrm{norm}} = \frac{z_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}" /></a>
+where
 
-`β` and `γ` are now parameters and determined by gradient descent. Overall, we have parameters
+<a href="https://www.codecogs.com/eqnedit.php?latex=z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" title="z_{i,\textrm{norm}} = \frac{z_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}" /></a>
+
+`β` and `γ` are now parameters and can be determined by gradient descent. The overall processes are as follows (credit from Andrew Ng's courser class)
 
 ![batch_normalization](images/batch_norm.png)
 
-
+The mini-batch gradient descent can also implement batch norm. BN also has other advantages like: enabling the utilization of larger learning rates and reducing the common problem of vanishing gradients [[Manish Chablani]][Batch Normalization], [[Richmond Alake]][Batch Normalization In Neural Networks Explained (Algorithm Breakdown)].
 
 
 
@@ -137,4 +139,9 @@ where  <a href="https://www.codecogs.com/eqnedit.php?latex=z_{i,\textrm{norm}}&s
 [[Marco Peixeiro] How to Improve a Neural Network With Regularization](https://towardsdatascience.com/how-to-improve-a-neural-network-with-regularization-8a18ecda9fe3)
 
 
+[Batch Normalization]: https://towardsdatascience.com/batch-normalization-8a2e585775c9
+[[Manish Chablani] Batch Normalization](https://towardsdatascience.com/batch-normalization-8a2e585775c9)
 
+
+[Batch Normalization In Neural Networks Explained (Algorithm Breakdown)]: https://towardsdatascience.com/batch-normalization-explained-algorithm-breakdown-23d2794511c
+[[Richmond Alake] Batch Normalization In Neural Networks Explained (Algorithm Breakdown)](https://towardsdatascience.com/batch-normalization-explained-algorithm-breakdown-23d2794511c)
