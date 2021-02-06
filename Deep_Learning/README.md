@@ -96,7 +96,7 @@ Given an intermediate hidden layer, we first normalize as
 
 where <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;\equiv&space;n^{n[l]},&space;z_i&space;\equiv&space;z^{n[l]}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;\equiv&space;n^{n[l]},&space;z_i&space;\equiv&space;z^{n[l]}_i" title="n \equiv n^{n[l]}, z_i \equiv z^{n[l]}_i" /></a> denote the number of units in the hidden layer `l` and the value on the i-th unit in the hidden layer `l`. For notation simplicity, we drop the layer label `l`. 
 
-Then we can normalize the values in hiddent units as
+Then we can rescale the values in hiddent units with a shift as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" title="\tilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta" /></a>  
 
@@ -110,7 +110,7 @@ where
 
 BN also has other advantages like: enabling the utilization of larger learning rates and reducing the common problem of vanishing gradients. BN also has a slight regularization effect. [[Manish Chablani]][Batch Normalization], [[Richmond Alake]][Batch Normalization In Neural Networks Explained (Algorithm Breakdown)].
 
-The mini-batch gradient descent can also implement BN. However, if the neural networks are trained by mini-batch, to predict test data, we need to determine the `μ` and `σ` from training data. We can simply use the average `μ` by all mini-batch, or using exponentially weight average (mentioned in Andre Ng's class).
+The mini-batch gradient descent can also implement BN. However, if the neural networks are trained by mini-batch, we need to determine `μ` and `σ` from training data and rescale the test data. We can simply use the average `μ` by all mini-batch, or using exponentially weight average (mentioned in Andre Ng's class).
 
 
 
