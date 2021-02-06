@@ -88,7 +88,7 @@ While using gradient descent, one can normalize/standardize input data. The adva
 
 to explain gradient descent with data normalization benefiting faster converge. 
 
-In DL, we can do the normalization processes, not only data in input layer, but also in hidden layers. This is called **batch normalization** (BN) [[Manish Chablani]][Batch Normalization]. BN can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
+In DL, we can do the similar normalization processes, not only data in input layer, but also in hidden layers. This is called **batch normalization** (BN) [[Manish Chablani]][Batch Normalization]. BN can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
 
 Given an intermediate hidden layer, we first normalize as 
 
@@ -108,7 +108,9 @@ where
 
 ![batch_normalization](images/batch_norm.png)
 
-The mini-batch gradient descent can also implement batch norm. BN also has other advantages like: enabling the utilization of larger learning rates and reducing the common problem of vanishing gradients. BN also has a slight regularization effect. [[Manish Chablani]][Batch Normalization], [[Richmond Alake]][Batch Normalization In Neural Networks Explained (Algorithm Breakdown)].
+BN also has other advantages like: enabling the utilization of larger learning rates and reducing the common problem of vanishing gradients. BN also has a slight regularization effect. [[Manish Chablani]][Batch Normalization], [[Richmond Alake]][Batch Normalization In Neural Networks Explained (Algorithm Breakdown)].
+
+The mini-batch gradient descent can also implement batch norm. If the neural networks are trained by mini-batch, to predict test data, we need to determine the `μ` and `σ` from training data. We can simply use the average `μ` by all mini-batch, or using exponentially weight average (from Andre Ng's class).
 
 
 
