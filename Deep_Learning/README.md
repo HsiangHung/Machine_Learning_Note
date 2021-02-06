@@ -4,6 +4,8 @@
 
 Learning rate, number of iteration, number of hidden layers, number of hidden layer units, choice of activation functions, momentum, mini-batch size, regularization.
 
+
+
 ## Bias/Variance
 
 Check training/dev error and compare to **optimal Bayes error**: the lowest possible prediction error that can be achieved and is the same as irreducible error [[Cross Validated: What is Bayes Error in machine learning?]][What is Bayes Error in machine learning?]. Note here in DL, we may high bias & high variance models. As shown below on the right, the classifier only capture linear decision boundary but overfitting on several data instances (credit from Andrew's Ng's **Improve deep neural networks: Tuning, Regularization and Optimization** coursera class).
@@ -78,7 +80,13 @@ We can see if the parameter `w > 1` in very deep network, the multiplication of 
 
 
 
+## Batch Normalization
 
+While using gradient descent, one can normalize/standardize data. The advantage for doing this is to make cost function more spatially homogenuous. In this case we have some pictures like
+
+![vanishing_gradients](images/vanishing_gradient.png)
+
+This makes gradient descent faster to converge. 
 
 
 
