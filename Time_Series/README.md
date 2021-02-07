@@ -36,7 +36,7 @@ After detrending, if the mean, variance, and autocorrelations of the original se
 
 ### Exponentially Weighted Average
 
-Suppose we have time-series data like day 1, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_1" title="\theta_1" /></a>, day 2, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_2" title="\theta_2" /></a> .... etc, we can implement exponentially weighted avergae to fit the time series as follows
+Suppose we have time-series data like day 1, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_1" title="\theta_1" /></a>, day 2, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_2" title="\theta_2" /></a> .... etc, we can implement exponentially weighted avergae to fit the time series as follows (from Andrew Ng's class)
 
 ![exponentially_average](images/exponentially_avg.png)
 
