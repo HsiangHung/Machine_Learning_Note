@@ -36,11 +36,11 @@ After detrending, if the mean, variance, and autocorrelations of the original se
 
 ### Exponentially Weighted Average
 
-Suppose we have time-series data like day 1, <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_1" title="\theta_1" /></a>, day 2, <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_2" title="\theta_2" /></a> .... etc. We have exponentially weight avergae to fit the time series like
+Suppose we have time-series data like day 1, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_1" title="\theta_1" /></a>, day 2, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_2" title="\theta_2" /></a> .... etc, we can implement exponentially weighted avergae to fit the time series as follows
 
 ![exponentially_average](images/exponentially_avg.png)
 
-The value of <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> defines number of days to decay. For example, if <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> = 10, data will decay to 1/e after 10 days. 
+The value of <a href="https://www.codecogs.com/eqnedit.php?latex=1/(1-\beta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/(1-\beta)" title="1/(1-\beta)" /></a> describes number of previous days used for weighted average. For example, if <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> = 0.9, data will decay to 1/e after 10 days; if 0.98 it is 50 days. 
 
 ### AR(p) model
 
