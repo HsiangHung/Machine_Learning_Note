@@ -34,7 +34,7 @@ After detrending, if the mean, variance, and autocorrelations of the original se
 
 ## Time-Series Models
 
-### Exponentially Weight Average
+### Exponentially Weighted Average
 
 ![exponentially_average](images/exponentially_avg.png)
 
