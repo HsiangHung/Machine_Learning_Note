@@ -130,7 +130,7 @@ where
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\rho&space;v_{t-1}&space;&plus;&space;(1-\rho)g^2_t" title="v_{t} = \rho v_{t-1} + (1-\rho)g^2_t" /></a>
 
-The RMSProp also slow down relatively large gradients and speed up relatively small gradients by dividing root square. 
+The RMSProp also slow down relatively large gradients and speed up relatively small gradients by dividing the squared root of the velocity.
 
 
 ### d. Adam (Adaptive Moment Estimation)
