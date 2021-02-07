@@ -64,9 +64,16 @@ If there is no external concern about low TPR or high FPR, one option is to weig
 ## Multi-class Classification Metric
 
 
-For binary classification, a confusion matrix has two rows and two columns. For multi-class classification problem, we need to categorize each sample into 1 of N different classes, and in each class, we can still compute precision and recall on each class [[Boaz Shmueli-1]][Multi-Class Metrics Made Simple, Part I: Precision and Recall].
+For binary classification, a confusion matrix has two rows and two columns. For multi-class classification problem, we categorize each sample into 1 of K classes to make `K x K` confusion matrix. In each class, we can still compute precision and recall on each class [[Boaz Shmueli-1]][Multi-Class Metrics Made Simple, Part I: Precision and Recall].
 
-Given P and R for each class, how can we compare performance on various classifiers? 
+Given P and R for each class, how can we compare performance on various classifiers? [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score] show an example for three classes
+
+```
+     precision | recall | F1 score
+cat    0.308   |  0.667 |  0.421
+fish   0.667   |  0.20  |  0.308
+han    0.667   |  0.667 |  0.667
+```
 
 
 ## Reference
