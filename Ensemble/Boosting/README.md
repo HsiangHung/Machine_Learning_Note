@@ -236,7 +236,7 @@ LightGBM can also handle categorical feature. XGBoost cannot handle categorical 
 
 
 [Gradient Boosting from scratchs]: https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d
-[[Prince Grove-1] Gradient Boosting from scratchs](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
+[[Prince Grover-1] Gradient Boosting from scratchs](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
 
 
 [Gradient boosting simplified]: https://www.kaggle.com/grroverpr/gradient-boosting-simplified/
