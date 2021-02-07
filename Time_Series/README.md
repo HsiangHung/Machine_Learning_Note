@@ -36,7 +36,7 @@ After detrending, if the mean, variance, and autocorrelations of the original se
 
 In a multiple regression model, we forecast the variable of interest using a linear combination of **past values** of the variable. The term autoregression indicates that it is a regression of the variable against itself.
 
-The **AR(p)** mdoel of order p is a multiple regression but with lagged values of `Yt` as predictors:
+The **AR(p)** mdoel of order p is a multiple regression but with lagged values of `Yt` as predictors [[Rob Hyndman: 8.4 Moving average models]][8.4 Moving average models]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Y_t&space;=&space;c&space;&plus;\phi_1&space;Y_{t-1}&space;&plus;&space;\phi_2&space;Y_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y_{t-p}&space;&plus;&space;\epsilon_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y_t&space;=&space;c&space;&plus;\phi_1&space;Y_{t-1}&space;&plus;&space;\phi_2&space;Y_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y_{t-p}&space;&plus;&space;\epsilon_t" title="Y_t = c +\phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + \epsilon_t" /></a>
 
@@ -44,7 +44,7 @@ where the last term is white noise.
 
 ### MA(q) model
 
-Rather than using past values of the forecast variable in a regression, a moving average model uses past forecast errors in a regression-like model
+Rather than using past values of the forecast variable in a regression, a moving average model uses past forecast errors in a regression-like model [[Rob Hyndman: 8.4 Moving average models]][8.4 Moving average models]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Y_t&space;=&space;c&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y_t&space;=&space;c&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y_t = c + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
 
@@ -54,7 +54,7 @@ is referred as an **MA(q)** model, a moving average model of order q. `Yt` can b
 
 By Sunny Mewati [[Quora, 1]][What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?], Box and Jenkins claimed (successfully) [[Box, Jenkins, Reinsel]][Time Series Analysis] that nonstationary data can be made stationary by differencing the series. This series, <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*" title="Y^*" /></a> is the input in Box-Jenkins analysis. 
 
-If we combine **differencing** with autoregression and a moving average model, we obtain a non-seasonal ARIMA model
+If we combine **differencing** with autoregression and a moving average model, we obtain a non-seasonal ARIMA model [[Rob Hyndman: 8.5 Non-seasonal ARIMA models]][8.5 Non-seasonal ARIMA models]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Y^{\prime}_t&space;=&space;c&space;&plus;&space;\phi_1&space;Y^{\prime}_{t-1}&space;&plus;&space;\phi_2&space;Y^{\prime}_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^{\prime}_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y^{\prime}_t&space;=&space;c&space;&plus;&space;\phi_1&space;Y^{\prime}_{t-1}&space;&plus;&space;\phi_2&space;Y^{\prime}_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^{\prime}_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y^{\prime}_t = c + \phi_1 Y^{\prime}_{t-1} + \phi_2 Y^{\prime}_{t-2} + \cdots + \phi_p Y^{\prime}_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
 
@@ -101,6 +101,20 @@ Based on the equation above, there can be four types of time series data:
 
 [What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?]: https://www.quora.com/Whats-the-difference-between-ARMA-ARIMA-and-ARIMAX-in-laymans-terms-What-exactly-do-P-D-Q-mean-and-how-do-you-know-what-to-put-in-for-them-in-say-R-1-0-2-or-2-1-1
 [[Quora, 1] What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?](https://www.quora.com/Whats-the-difference-between-ARMA-ARIMA-and-ARIMAX-in-laymans-terms-What-exactly-do-P-D-Q-mean-and-how-do-you-know-what-to-put-in-for-them-in-say-R-1-0-2-or-2-1-1)
+
+
+
+[8.3 Autoregressive models]: https://otexts.com/fpp2/AR.html
+[[Rob Hyndman: 8.3 Autoregressive models] 8.3 Autoregressive models](https://otexts.com/fpp2/AR.html)
+
+
+[8.4 Moving average models]: https://otexts.com/fpp2/MA.html
+[[Rob Hyndman: 8.4 Moving average models] 8.4 Moving average models](https://otexts.com/fpp2/MA.html)
+
+
+[8.5 Non-seasonal ARIMA models]: https://otexts.com/fpp2/non-seasonal-arima.html
+[[Rob Hyndman: 8.5 Non-seasonal ARIMA models] 8.5 Non-seasonal ARIMA models](https://otexts.com/fpp2/non-seasonal-arima.html)
+
 
 [The ARIMAX model muddle]: https://robjhyndman.com/hyndsight/arimax/
 [[Rob Hyndman] The ARIMAX model muddle](https://robjhyndman.com/hyndsight/arimax/)
