@@ -6,7 +6,7 @@
 
 ## How To Interpret Probability in Tree?
 
-In Prof. Nando de Freitas UBC Machine Learning class, he shows a picture how probability works in a given decision tree:
+In Prof. Nando de Freitas [UBC Machine Learning class](https://www.youtube.com/watch?v=pLzE2Oh9QDI&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=31), he shows a picture how probability works in a given decision tree:
 
 ![decision_tree](images/layer_probability.png)
 
@@ -29,7 +29,7 @@ Then we can calculate **Expected Entropy** (EH) remaining after trying attribute
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=EH(A)&space;=&space;\sum^K_{i=1}&space;H(p_i,&space;n_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EH(A)&space;=&space;\sum^K_{i=1}&space;H(p_i,&space;n_i)" title="EH(A) = \sum^K_{i=1} H(p_i, n_i)" /></a>
 
-The information gain is `H(p,n) - EH(A)` for attribute `A`, where `H(p,n)` is on root. Below is an example
+The information gain is `H(p,n) - EH(A)` for attribute `A`, where `H(p,n)` is on root. Below is an example (from Prof. Nando de Freitas UBC Machine Learning class)
 
 ![example_information_gain](images/example_information_gain.png)
 
