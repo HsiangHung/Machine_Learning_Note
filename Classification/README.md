@@ -56,7 +56,7 @@ Here I just summarize the answers in the post and list in the following:
 
 ### b. If no business concern
 
-If there is no external concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold: (a) median value of probability (2) that maximizes TPR-FPR, (3) choose threshold to have optimal `F1 score` (where P = Precision and R = Recall):
+If there is no external concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]: (a) median value of probability (2) that maximizes TPR-FPR, (3) choose threshold to have optimal `F1 score` (where P = Precision and R = Recall): 
 
  <a href="https://www.codecogs.com/eqnedit.php?latex=F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" title="F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}}" /></a>
 
@@ -64,9 +64,9 @@ If there is no external concern about low TPR or high FPR, one option is to weig
 ## Multi-class Classification Metric
 
 
+For binary classification, a confusion matrix has two rows and two columns. For multi-class classification problem, we need to categorize each sample into 1 of N different classes, and in each class, we can still compute precision and recall on each class [[Boaz Shmueli-1]][Multi-Class Metrics Made Simple, Part I: Precision and Recall].
 
-For binary classification, a confusion matrix has two rows and two columns.
-
+Given P and R for each class, how can we compare performance on various classifiers? 
 
 
 ## Reference
