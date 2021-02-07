@@ -33,7 +33,7 @@ The information gain is `H(p,n) - EH(A)` for attribute `A`, where `H(p,n)` is on
 
 ![example_information_gain](images/example_information_gain.png)
 
-We see using `I(patrons) > I(type)`, so we choose `patrons` to split data (using `type` is not helpful to classification).
+We can see `I(patrons) > I(type)`, so we choose `patrons` to split data for enxt step (using `type` is not helpful to classification).
 
 Later information gain leads to less homogeneity on class distributions. See examples below: 
 
