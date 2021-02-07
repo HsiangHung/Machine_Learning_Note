@@ -32,6 +32,12 @@ Sometimes even de-trending is not sufficient to make the series stationary, howe
 After detrending, if the mean, variance, and autocorrelations of the original series are still not constant in time, we may need to transform the de-trended series into a series of period-to-period and/or season-to-season differences. Such a series is said to be **difference-stationary**.
 
 
+## Time-Series Models
+
+### Exponentially Weight Average
+
+![exponentially_average](images/exponentially_avg.png)
+
 ### AR(p) model
 
 In a multiple regression model, we forecast the variable of interest using a linear combination of **past values** of the variable. The term autoregression indicates that it is a regression of the variable against itself.
