@@ -100,7 +100,7 @@ During optimization, SGD used to oscillate across the slopes of the ravine while
 
 ![SGD_momentum](images/SGD_momentum.png)
 
-Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. Using similar manner in exponentially weighted average, we can define the velocity into gradient descent
+Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. Using the similar manner in [exponentially weighted average](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Time_Series#exponentially-weighted-average) and follow the notation, we can define the velocity and integrate into gradient descent
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\beta&space;v_{t-1}&space;&plus;(1-\beta)&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\beta&space;v_{t-1}&space;&plus;(1-\beta)&space;g_{t}" title="v_{t} = \beta v_{t-1} +(1-\beta) g_{t}" /></a>
 
