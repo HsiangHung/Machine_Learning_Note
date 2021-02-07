@@ -168,7 +168,9 @@ To be continuous, here is the deeper description about LighGBM (best-first) and 
 If you grow the full tree, best-first (leaf-wise) and depth-first (level-wise) will result in the same tree. The difference is in the order in which the tree is expanded. Since we don't normally grow trees to their full depth, order matters: application of early stopping criteria and pruning methods can result in very different trees. Because leaf-wise chooses splits based on their contribution to the global loss and not just the loss along a particular branch, it often (not always) will learn lower-error trees "faster" than level-wise. I.e. for a small number of nodes, leaf-wise will probably out-perform level-wise. As you add more nodes, without stopping or pruning they will converge to the same performance because they will literally build the same tree eventually [[Data Science: Decision trees: leaf-wise (best-first) and level-wise tree traverse]][Decision trees: leaf-wise (best-first) and level-wise tree traverse].
 
 
-Advantages of Light GBM [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!]
+### Advantages of Light GBM:
+
+ [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!]
 
 * Faster training speed and higher efficiency: Light GBM use **histogram based algorithm** i.e it buckets continuous feature values into discrete bins which fasten the training procedure.
 * Lower memory usage: Replaces continuous values to discrete bins which result in lower memory usage.
