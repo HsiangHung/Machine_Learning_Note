@@ -100,7 +100,7 @@ During optimization, SGD used to oscillate across the slopes of the ravine while
 
 ![SGD_momentum](images/SGD_momentum.png)
 
-Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first define the velocity[[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent]
+Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first define the velocity [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\Delta&space;\theta_t&space;=&space;\gamma&space;\Delta&space;\theta_{t-1}&space;-&space;\alpha&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\Delta&space;\theta_t&space;=&space;\gamma&space;\Delta&space;\theta_{t-1}&space;-&space;\alpha&space;g_{t}" title="v_{t} = \Delta \theta_t = \gamma \Delta \theta_{t-1} - \alpha g_{t}" /></a>
 
