@@ -161,6 +161,15 @@ Another good introduction blogs are given by [[Andrich van Wyk]][An Overview of 
 5. `lambda_l1` (`reg_aplha`) and `lambda_L2` (`reg_lambda`): controls L1 and L2 regularization.
 
 
+## 5. Comparison LighGBM vs XGboost
+
+Advantages of Light GBM [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!]
+
+* Faster training speed and higher efficiency: Light GBM use histogram based algorithm i.e it buckets continuous feature values into discrete bins which fasten the training procedure.
+* Lower memory usage: Replaces continuous values to discrete bins which result in lower memory usage.
+* Better accuracy than any other boosting algorithm: It produces much more complex trees by following leaf wise split approach rather than a level-wise approach which is the main factor in achieving higher accuracy. However, it can sometimes lead to overfitting which can be avoided by setting the max_depth parameter.
+* Compatibility with Large Datasets: It is capable of performing equally good with large datasets with a significant reduction in training time as compared to XGBOOST.
+
 
 ## Reference
 
