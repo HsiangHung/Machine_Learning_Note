@@ -100,12 +100,13 @@ During optimization, SGD used to oscillate across the slopes of the ravine while
 
 ![SGD_momentum](images/SGD_momentum.png)
 
-Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. We first define the velocity [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]
+Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. Using similar manner in exponentially weighted average, we can define the velocity into gradient descent
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\beta&space;v_{t-1}&space;&plus;(1-\beta)&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\beta&space;v_{t-1}&space;&plus;(1-\beta)&space;g_{t}" title="v_{t} = \beta v_{t-1} +(1-\beta) g_{t}" /></a>
 
 
-The momentrum term <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> is usually set to 0.9 or a similar value [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Then models are updated as
+The momentrum term <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> is usually set to 0.9 or a similar value [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]
+. Then models are updated as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_t&space;=&space;\theta_t&space;-&space;\alpha&space;v_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_t&space;=&space;\theta_t&space;-&space;\alpha&space;v_{t}" title="\theta_{t+1} = \theta_{t} +\Delta \theta_t = \theta_t - \alpha v_{t}" /></a>
 
