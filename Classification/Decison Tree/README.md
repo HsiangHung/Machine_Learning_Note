@@ -17,7 +17,7 @@ Note even on the leaves, there exists data noise so we still see various class d
 
 ### a. Information gain
 
-Given a split way of features, calculate entropy for root and its childs. The tree split is to maximize reduction of the entropy, which is defined as **information gain**. Given a class, the entropy defines
+Given a split way of features, calculate entropy for root and its childs. The tree split is to **maximize reduction of the entropy**, which is defined as **information gain**. Given a class, the entropy defines
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H(p,n)&space;=&space;-p\log&space;p&space;-n\log&space;n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(p,n)&space;=&space;-p\log&space;p&space;-n\log&space;n" title="H(p,n) = -p\log p -n\log n" /></a>
 
@@ -48,7 +48,7 @@ The Gini index defines (assume use attribute `A` to have K branches)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" title="G(A) = 1- \sum^K_{i=1} (p^2_i + n^2_i)" /></a>
 
-Smaller Gini index means better attribute used to split tree. (Think about if A is perfect to classify positive and negatives, then Gini = 0)
+**Smaller Gini index** means better attribute used to split tree. (Think about if A is perfect to classify positive and negatives, then Gini = 0)
 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
 
