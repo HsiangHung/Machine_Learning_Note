@@ -10,9 +10,9 @@
 
 In most cases, there are no perfect classifiers. A good common question is which metric should we use for model selection, precision or recall? Classifier to have high True Positive Rate (TPR) or False Positive Rate (FPR)? It depends on domain and our business goal.
 
-Recall the definition:
+Recall the **confusion matrix**:
 ```
-             * Truth *
+               Truth
    ------- | Pos | Neg |
   Pred Pos | TP  | FP  |
   Pred Neg | FN  | TN  |
@@ -56,17 +56,16 @@ Here I just summarize the answers in the post and list in the following:
 
 ### b. If no business concern
 
-If there is no external concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold 
-1. median value of probability 
-2. that maximizes TPR-FPT,
-3. choose threshold to have optimal `F1 score` (where P = Precision and R = Recall) <a href="https://www.codecogs.com/eqnedit.php?latex=F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" title="F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}}" /></a>
+If there is no external concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold: (a) median value of probability (2) that maximizes TPR-FPR, (3) choose threshold to have optimal `F1 score` (where P = Precision and R = Recall):
+
+ <a href="https://www.codecogs.com/eqnedit.php?latex=F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" title="F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}}" /></a>
 
 
 ## Multi-class Classification Metric
 
 
 
-
+For binary classification, a confusion matrix has two rows and two columns.
 
 
 
