@@ -77,7 +77,7 @@ However, in (b), we can see the PR curves shift downward. At the same recall, pr
 Meanwhile, the author also shows PR curves is more useful to compare model performance. At different positive rates, all ROC AUC are 0.8 on example A and B. But in PR curves, we can obviously see the behavior between the examples. Thus in the highly-imbalanced case, the PR curve is a better indication.
 
 
-![imbalanced_ROC_PR_model](images/ROC_PR_model_comparison.png)
+![ROC_PR_model](images/ROC_PR_model_comparison.png)
 
 
 
