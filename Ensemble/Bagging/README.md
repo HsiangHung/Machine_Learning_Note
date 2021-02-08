@@ -6,7 +6,7 @@ Suppose our training data set is represented by `D` and suppose data set has `M`
 
     D = {(X1,y1), (X2,y2), ... (Xn, yn)}
 
-and `X(i)` is input vector `{x(i)_1, x(i)_2, ... x(i)_M}`, `y(i)` is the label (or output or class). 
+and `Xi` is an `M`-dimensional input vector `{xi_1, xi_2, ... xi_M}` and `yi` is the label (or output or class). 
 
 
 Random Forests algorithm is a classifier based on primarily two methods - **Bagging** and **Random subspace method**.
@@ -25,7 +25,7 @@ So for each `Di` bootstrap dataset you create a tree `Ti`. If you want to classi
 ## Out-of-Bag Errors
 
 
-After creating the classifiers (`S` trees), for each `(X(i),y(i))` in the original training set i.e. `D`, select all `Dk` which does **NOT** include `(Xi,yi)`. This subset, pay attention, is a set of boostrap datasets which does not contain a particular record from the original dataset. This set is called out-of-bag examples. There are `n` such subsets (one for each data record in original dataset `T`). OOB classifier is the aggregation of votes ONLY over `Dk` such that it does not contain `(X(i),y(i))`.
+After creating the classifiers (`S` trees), for each `(Xi,yi)` in the original training set i.e. `D`, select all `Dk` which does **NOT** include `(Xi,yi)`. This subset, pay attention, is a set of boostrap datasets which does not contain a particular record from the original dataset. This set is called out-of-bag examples. There are `n` such subsets (one for each data record in original dataset `T`). OOB classifier is the aggregation of votes ONLY over `Dk` such that it does not contain `(Xi,yi)`.
 
 Out-of-bag estimate for the generalization error is the error rate of the out-of-bag classifier on the training set (compare it with known `yi`'s).
 
