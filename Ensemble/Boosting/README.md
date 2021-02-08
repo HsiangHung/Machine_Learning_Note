@@ -133,13 +133,15 @@ The comprehensive tutorial on introduction to the model, [Introduction to Booste
 
 Here `f0` is like `F1` in previous discussion [Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#math-intuition-of-gbm), and `f1`, `f2`, ... are like `h1`, `h2`,....
 
-In comparison to boosted tree, the cost function in XGBoost has regularization on the `f` functions, 
+In comparison to boosted tree, the cost function in XGBoost has regularization on the `f` functions at `t`-th iteration, 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=J_m&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^m_i&space;\big)^2&space;&plus;&space;\sum^m_{n=1}&space;\Omega(f_n)&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\hat{y}^m_i&space;)&space;&plus;&space;\sum^m_{n=1}&space;\Omega(f_n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_m&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^m_i&space;\big)^2&space;&plus;&space;\sum^m_{n=1}&space;\Omega(f_n)&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\hat{y}^m_i&space;)&space;&plus;&space;\sum^m_{n=1}&space;\Omega(f_n)" title="J_m = \sum^n_{i=1} \big( y_i - \hat{y}^m_i \big)^2 + \sum^m_{n=1} \Omega(f_n) = \sum^n_{i=1} C( y_i , \hat{y}^m_i ) + \sum^m_{n=1} \Omega(f_n)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_t&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;&plus;&space;\Omega(f_t)&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\hat{y}^t_i&space;)&space;&plus;&space;\Omega(f_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;&plus;&space;\Omega(f_t)&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\hat{y}^t_i&space;)&space;&plus;&space;\Omega(f_t)" title="J_t = \sum^n_{i=1} \big( y_i - \hat{y}^t_i \big)^2 + \Omega(f_t) = \sum^n_{i=1} C( y_i , \hat{y}^t_i ) + \Omega(f_t)" /></a>
+
 
 Note that we can rewrite the cost function as
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=J_m&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\hat{y}^{m-1}_i&space;&plus;&space;f_m(x_i))&space;&plus;&space;\sum^m_{n=1}&space;\Omega(f_n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_m&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\hat{y}^{m-1}_i&space;&plus;&space;f_m(x_i))&space;&plus;&space;\sum^m_{n=1}&space;\Omega(f_n)" title="J_m = \sum^n_{i=1} C( y_i , \hat{y}^{m-1}_i + f_m(x_i)) + \sum^m_{n=1} \Omega(f_n)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_t&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\&space;\hat{y}^{t-1}_i&space;&plus;&space;f_t(x_i))&space;&plus;&space;\Omega(f_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\&space;\hat{y}^{t-1}_i&space;&plus;&space;f_t(x_i))&space;&plus;&space;\Omega(f_t)" title="J_t = \sum^n_{i=1} C( y_i , \ \hat{y}^{t-1}_i + f_t(x_i)) + \Omega(f_t)" /></a>
+
 
 Using Taylor expansion, we can expand the cost function up to the second order:
 
