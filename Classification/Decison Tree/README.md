@@ -15,6 +15,8 @@ Note even on the leaves, there exists data noise so we still see various class d
 
 ## How to Select Feature for Split?
 
+There are two ways: a. Information gain and b. Gini index. Higher information gain and lower Gini index means a better attribute used for split.
+
 ### a. Information gain
 
 Given a split way of features, calculate entropy for root and its childs. The tree split is to **maximize reduction of the entropy**, which is defined as **information gain**. Given a class, the entropy defines
