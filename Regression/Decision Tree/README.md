@@ -20,7 +20,7 @@ For next split, we compute SD using the following formula for each attribute
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=S(X,&space;y)&space;=&space;\sum_{c}P(c)S(c)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S(X,&space;y)&space;=&space;\sum_{c}P(c)S(c)" title="S(X, y) = \sum_{c}P(c)S(c)" /></a>
 
-As a concrete example, if we choose `overlook`, then the SD is given by
+As a concrete example, if we choose `overlook`, there are three categories: "overcast", "rainy", "sunny". Then the SD is given by
 
 ![step_1](images/DTR_1.png)
 
