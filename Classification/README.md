@@ -68,13 +68,13 @@ In the imbalanced cases, how do fraud rates (or downsampling rate) influence the
 Suppose for same amount of positive cases and model performance, lower fraud rate means more negative events. Thus precision may drop and recall keeps the same. The False positive rate doesn't change. Then we can expect 
 ROC curve remains similar, but precision-recall curve will change.
 
-[[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] shows comparison on ROC and PR curves below. The numbers 0.5, 0.1, 0.01 are positive rates, and we can see in (a) ROC behavior is roughly irrespective of the positive rates. 
+[[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] shows comparison on ROC and PR curves at various positive rates: 0.5, 0.1, 0.01 below. We can see in (a) ROC patterns are roughly irrespective of the positive rates. 
 
 ![imbalanced_ROC_PR](images/ROC_PR_comparison.png)
 
-However, in (b), we can see the PR curves shift downward. At the same recall, precision drops. 
+However, in (b), we can see the PR curves show significant difference. When positive rates descrease, the PR curves shift downward. At the same recall, precision drops. This is consistent with our expectation.
 
-Meanwhile, the author also shows PR curves is more useful to compare model performance. At different positive rates, all ROC AUC are 0.8 on example A and B. But in PR curves, we can obviously see the behavior between the examples. Thus in the highly-imbalanced case, the PR curve is a better indication.
+On the other side, the author also shows PR curves is more useful to compare model performance in imbalanced cases. At different positive rates, all ROC AUC are 0.8 on example A and B (see below). But in PR curves, we can obviously see the difference between the examples. Thus in the highly-imbalanced case, the PR curve is a better indication.
 
 
 ![ROC_PR_model](images/ROC_PR_model_comparison.png)
