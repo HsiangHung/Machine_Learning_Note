@@ -62,6 +62,53 @@ Note that there is no reason to use the same feature split on each level. See [[
 
 ### B. Numeric Attribute
 
+For numeric attributes, how do we determine the value to split in the decision tree? As a concrete example, supposed we have a dataset like
+```
+  humidity | play
+   60      | yes
+   80      | yes 
+   63      | no
+   81      | yes
+   92      | no
+   ...     | ...
+```
+For this case, we sort the attribute, the above data become
+```
+  humidity | play
+   54      | yes
+   58      | yes 
+   59      | yes
+   60      | yes
+   60      | yes
+   62      | yes
+   63      | no 
+   80      | yes
+   81      | yes
+   89      | yes
+   90      | no
+   90      | no 
+   90      | no
+   92      | no
+```
+At root, the entropy is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},&space;\frac{5}{14})&space;=&space;-\frac{9}{14}\log&space;\frac{9}{14}-\frac{5}{14}\log&space;\frac{5}{14}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},&space;\frac{5}{14})&space;=&space;-\frac{9}{14}\log&space;\frac{9}{14}-\frac{5}{14}\log&space;\frac{5}{14}" title="H(\frac{9}{14}, \frac{5}{14}) = -\frac{9}{14}\log \frac{9}{14}-\frac{5}{14}\log \frac{5}{14}" /></a>
+
+Suppose we are going to determine the humidity threshold split, and we have two ways:
+
+* **way A**: if humidity > 62 
+* **way B**: if humidity > 89
+
+For **way A**, we if humidity <= 62, all are positive; humidity > 62, 3 positive and 5 negative
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_A&space;=&space;H(\frac{6}{6},&space;0)&space;&plus;&space;H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;0&space;&plus;&space;0.95&space;=&space;0.95" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_A&space;=&space;H(\frac{6}{6},&space;0)&space;&plus;&space;H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;0&space;&plus;&space;0.95&space;=&space;0.95" title="H_A = H(\frac{6}{6}, 0) + H(\frac{3}{8}, \frac{5}{8}) = 0 + 0.95 = 0.95" /></a>
+
+
+For **way B**, we if humidity <= 89, 9 positive and 1 negative; humidity > 89, all negative
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_B&space;=&space;H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;H(0,&space;\frac{4}{4})&space;=&space;0.47&space;&plus;&space;0&space;=&space;0.47" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_B&space;=&space;H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;H(0,&space;\frac{4}{4})&space;=&space;0.47&space;&plus;&space;0&space;=&space;0.47" title="H_B = H(\frac{9}{10}, \frac{1}{10}) + H(0, \frac{4}{4}) = 0.47 + 0 = 0.47" /></a>
+
+We can see `I(B)` > `I(A)`, so we choose humidity=0.89 to split at this step.
 
 ## Decision Tree Regression
 
