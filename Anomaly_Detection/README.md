@@ -63,6 +63,9 @@ A simple way to fix imbalanced data-sets is simply to balance them, either by ov
 
 Undersampling involves randomly removing observations from the majority class. The most common heuristic for doing so is resampling without replacement. Generating centroid based on a clustering method (e.g. K-Means) is a common strategy for this.
 
+You may wonder and worry why downsampling works. Is it realistic if we downsample majority class? The point is that we train a classifier to learn pattern. To predict new data, we determine a threshold value for decision. See [Cross Validated: Why downsample?](https://stats.stackexchange.com/questions/122409/why-downsample)
+
+
 ### 4.2 Oversample: Up-sample Minority Class
 
 Oversampling is the process of randomly duplicating observations from the minority class. We'll resample the minority class **with replacement**, setting the number of samples to match that of the majority class.
