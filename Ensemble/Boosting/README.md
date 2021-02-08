@@ -9,7 +9,7 @@ Boosting is one of ensemble techniques to **sequentially** generate predictors. 
 There are mainly two boosting algorithms: Gradient Boosting (GBM) and Adaptive Boosting (Adaboost). XGBoost is a brand new tool developed by Tianran Chen by optimizing GBM.
 
 
-## 1. Gradient Boosting
+## A. Gradient Boosting
 
 
  A GBM will start with a not very deep tree and will model the original target. Then it takes the errors from the first round of predictions, and passes the errors as a new target to a second tree. The second tree will model the error from the first tree, record the new errors and pass that as a target to the third tree. And so forth. Essentially it focuses on modelling errors from previous trees. It is high bias-low variance algorithm, and aims to decrease bias not variance. An excellent notebook [[Prince Grover-1]][Gradient Boosting from scratchs] demonstrates how a GBM minimizes bias during training (also see [[Prince Grover-2]][Gradient boosting simplified]).
@@ -76,7 +76,7 @@ Terence Parr in a Quora post [[Quora: What is an intuitive explanation of Gradie
 
 
 
-## 2. AdaBoost
+## B. AdaBoost
 
 On the other hand, adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[Quora: What is the difference between gradient boosting and adaboost?]][What is the difference between gradient boosting and adaboost?].
 
@@ -115,7 +115,7 @@ Then we reconstruct data in next forest by the new sample weights. For example, 
 
 
 
-## 3. XGBoost
+## C. XGBoost
 
 XGBoost (Chen) was developed to put this on a more formal footing. Both xgboost and gbm follows the principle of gradient boosting, but in XGBoost the size of the tree and the magnitude of the weights are controlled by standard **regularization** parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
 
@@ -168,7 +168,7 @@ and the complexity of the regularization term as
 
 where `ω` is the vector of scores on leaves, and `T` is the number of leaves. 
 
-## 4. LightGBM
+## D. LightGBM
 
 LightGBM (LGBM) model is a relatively new model. Rather than **level-wise** tree growth in regular decision tree algorithms (credit from [here](https://github.com/Microsoft/LightGBM/blob/master/docs/)), 
 
@@ -189,7 +189,7 @@ Another good introduction blogs are given by [[Andrich van Wyk]][An Overview of 
 5. `lambda_l1` (`reg_aplha`) and `lambda_L2` (`reg_lambda`): controls L1 and L2 regularization.
 
 
-## 5. Comparison LighGBM vs XGboost
+## E. Comparison LighGBM vs XGboost
 
 Here is the deeper description about LighGBM (best-first) and XGboost (depth-fist):
 
