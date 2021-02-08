@@ -135,7 +135,7 @@ Here `f0` is like `F1` in previous discussion [Math Intuition of GBM](https://gi
 
 In comparison to boosted tree, the cost function in XGBoost has regularization on the `f` functions at `t`-th iteration, 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=J_t&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;&plus;&space;\Omega(f_t)&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\hat{y}^t_i&space;)&space;&plus;&space;\Omega(f_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;&plus;&space;\Omega(f_t)&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\hat{y}^t_i&space;)&space;&plus;&space;\Omega(f_t)" title="J_t = \sum^n_{i=1} \big( y_i - \hat{y}^t_i \big)^2 + \Omega(f_t) = \sum^n_{i=1} C( y_i , \hat{y}^t_i ) + \Omega(f_t)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_t&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;&plus;&space;\Omega(f_t)&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\&space;\hat{y}^t_i&space;)&space;&plus;&space;\Omega(f_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t&space;=&space;\sum^n_{i=1}&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;&plus;&space;\Omega(f_t)&space;=&space;\sum^n_{i=1}&space;C(&space;y_i&space;,&space;\&space;\hat{y}^t_i&space;)&space;&plus;&space;\Omega(f_t)" title="J_t = \sum^n_{i=1} \big( y_i - \hat{y}^t_i \big)^2 + \Omega(f_t) = \sum^n_{i=1} C( y_i , \ \hat{y}^t_i ) + \Omega(f_t)" /></a>
 
 
 Note that we can rewrite the cost function as
