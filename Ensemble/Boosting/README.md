@@ -40,11 +40,11 @@ Now we see the `F2(x)` is a better regressor than `F1(x)` to fit the data, and l
 
 and so on. In this case, mathmetically we have an iterative relation
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_m&space;(x)&space;=&space;F_{m-1}(x)&space;&plus;&space;h_{m-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_m&space;(x)&space;=&space;F_{m-1}(x)&space;&plus;&space;h_{m-1}(x)" title="F_m (x) = F_{m-1}(x) + h_{m-1}(x)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;h_{t-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;h_{t-1}(x)" title="F_t (x) = F_{t-1}(x) + h_{t-1}(x)" /></a>
 
 and the residual fitting model is given by   
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=h_m&space;(x)&space;=&space;y&space;-&space;F_m(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_m&space;(x)&space;=&space;y&space;-&space;F_m(x)" title="h_m (x) = y - F_m(x)" /></a>. 
+<a href="https://www.codecogs.com/eqnedit.php?latex=h_t&space;(x)&space;=&space;y&space;-&space;F_t(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_t&space;(x)&space;=&space;y&space;-&space;F_t(x)" title="h_t (x) = y - F_t(x)" /></a>
 
 Prof. Ihler gave a [comprehensive description](http://sli.ics.uci.edu/Classes/2012F-273a?action=download&upname=10-ensembles.pdf) about the boosting steps in his lecture and here we borrow to show below
 ![](images/GBM3.png)
