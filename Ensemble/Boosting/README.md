@@ -147,9 +147,16 @@ Using Taylor expansion, we can approximate the cost function up to the second or
 <a href="https://www.codecogs.com/eqnedit.php?latex=J_t&space;=&space;\sum^n_{i=1}&space;\big[&space;C(&space;y_i&space;,&space;\&space;\hat{y}^{t-1}_i)&space;&plus;&space;g_i&space;f_t(x_i)&space;&plus;&space;\frac{1}{2}h_i&space;f^2_t(x_i)&space;\big]&space;&plus;&space;\Omega(f_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t&space;=&space;\sum^n_{i=1}&space;\big[&space;C(&space;y_i&space;,&space;\&space;\hat{y}^{t-1}_i)&space;&plus;&space;g_i&space;f_t(x_i)&space;&plus;&space;\frac{1}{2}h_i&space;f^2_t(x_i)&space;\big]&space;&plus;&space;\Omega(f_t)" title="J_t = \sum^n_{i=1} \big[ C( y_i , \ \hat{y}^{t-1}_i) + g_i f_t(x_i) + \frac{1}{2}h_i f^2_t(x_i) \big] + \Omega(f_t)" /></a>
 
 
-where the gradients are
+where the first/second order gradients are
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=g_i&space;=&space;\partial_{y^{t-1}_i}C(y_i,&space;\hat{y}^{t-1}_i),&space;\&space;h_i&space;=&space;\partial^2_{y^{t-1}_i}C(y_i,&space;\hat{y}^{t-1}_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_i&space;=&space;\partial_{y^{t-1}_i}C(y_i,&space;\hat{y}^{t-1}_i),&space;\&space;h_i&space;=&space;\partial^2_{y^{t-1}_i}C(y_i,&space;\hat{y}^{t-1}_i)" title="g_i = \partial_{y^{t-1}_i}C(y_i, \hat{y}^{t-1}_i), \ h_i = \partial^2_{y^{t-1}_i}C(y_i, \hat{y}^{t-1}_i)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=g_i&space;=&space;\partial_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i),&space;\&space;h_i&space;=&space;\partial^2_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_i&space;=&space;\partial_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i),&space;\&space;h_i&space;=&space;\partial^2_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i)" title="g_i = \partial_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i), \ h_i = \partial^2_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i)" /></a>
+
+
+Thus the specific objective at step `t` becomes
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\sum^n_{i=1}&space;\big[&space;g_i&space;f_t(x_i)&space;&plus;&space;\frac{1}{2}h_i&space;f^2_t(x_i)&space;\big]&space;&plus;&space;\Omega(f_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum^n_{i=1}&space;\big[&space;g_i&space;f_t(x_i)&space;&plus;&space;\frac{1}{2}h_i&space;f^2_t(x_i)&space;\big]&space;&plus;&space;\Omega(f_t)" title="\sum^n_{i=1} \big[ g_i f_t(x_i) + \frac{1}{2}h_i f^2_t(x_i) \big] + \Omega(f_t)" /></a>
+
+This becomes our optimization goal for the new tree. One important advantage of this definition is that the value of the objective function only depends on `g_i` and `h_i`. This is how XGBoost supports custom loss functions. We can optimize every loss function, including logistic regression and pairwise ranking, using exactly the same solver that takes `g_i` and `h_i` as input!
 
 
 
