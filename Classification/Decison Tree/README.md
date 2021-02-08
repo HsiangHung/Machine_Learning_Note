@@ -92,7 +92,8 @@ For numeric attributes, we sort the attribute by value. Then above data become
 ```
 At root, the entropy (9 positive, 5 negative) is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},&space;\frac{5}{14})&space;=&space;-\frac{9}{14}\log&space;\frac{9}{14}-\frac{5}{14}\log&space;\frac{5}{14}&space;=&space;0.94" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},&space;\frac{5}{14})&space;=&space;-\frac{9}{14}\log&space;\frac{9}{14}-\frac{5}{14}\log&space;\frac{5}{14}&space;=&space;0.94" title="H(\frac{9}{14}, \frac{5}{14}) = -\frac{9}{14}\log \frac{9}{14}-\frac{5}{14}\log \frac{5}{14} = 0.94" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94" title="H(\frac{9}{14},\frac{5}{14})= -\big(\frac{9}{14}\log \frac{9}{14} + \frac{5}{14}\log \frac{5}{14} \big) = 0.94" /></a>
+
 
 Suppose we are going to determine the humidity threshold split, and we have two ways:
 
