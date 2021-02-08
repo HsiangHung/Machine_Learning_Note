@@ -6,6 +6,8 @@ An ensemble is just a **collection of predictors (learners)** which come togethe
 
 Boosting is one of ensemble techniques to **sequentially** generate predictors. The subsequent predictors learn from the mistakes of the previous predictors. Therefore, the observations (data) have an **unequal probability of appearing in subsequent models** and ones with the **highest error appear most**. The predictors can be chosen from a range of models like decision trees, regressors, classifiers etc. One can interpret boosting as trying to **minimize bias** of the overall predictor. So when you use boosting, you’re incentivized to use **low-variance and high-bias estimators** (e.g. shallow decision trees. In LGBM, tree depth > 5 may be too deep). However, it could lead to **overfitting** on training data. 
 
+A larger number of gradient boosting iterations reduces training set errors. Raising the number of gradients boosting iterations too high increases overfitting. Therefore the number of iterations (trees) is a hyperparameter needed to tune ([Gradient Boosting: Gradient Boosting Regularization](https://corporatefinanceinstitute.com/resources/knowledge/other/gradient-boosting/)).
+
 There are mainly two boosting algorithms: Gradient Boosting (GBM) and Adaptive Boosting (Adaboost). XGBoost is a brand new tool developed by Tianran Chen by optimizing GBM.
 
 
