@@ -2,15 +2,26 @@
 # Decision Tree - Regression
 
 
+This article is dedicated to describe how a DT works in regreesion problems, followed by [[Saed Sayad]][Decision Tree - Regression]. 
+
+Suppose we have a dataset like
+
+![dataset](images/dataset.png)
+
+where the target variable is the `hours played`, which can be continuous. Therefore it is a regression problem. We will explain how to create a regression model as shown above (on the right).
+
+## Split Features Using Continuous Targets
+
+Given an attribute, we compute standard deviation (SD) for each class, and choose feature to split with maximal **Standard Deviation Reduction**. 
+
+First, we compute SD for target variables, which is 9.32. 
+
+For next split, we compute SD using the following formula for each attribute
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=S(X,&space;y)&space;=&space;\sum_{c}P(c)S(c)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S(X,&space;y)&space;=&space;\sum_{c}P(c)S(c)" title="S(X, y) = \sum_{c}P(c)S(c)" /></a>
 
 
-## How To Interpret Probability in Tree?
 
-In Prof. Nando de Freitas [UBC Machine Learning class](https://www.youtube.com/watch?v=pLzE2Oh9QDI&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=31), he shows a picture how probability works in a given decision tree:
-
-![decision_tree](images/layer_probability.png)
-
-Note even on the leaves, there exists data noise so we still see various class distribution.
 
 
 ## How to Select Feature for Split?
