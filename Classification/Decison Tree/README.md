@@ -15,9 +15,15 @@ Note even on the leaves, there exists data noise so we still see various class d
 
 ## How to Select Feature for Split?
 
-There are two ways: a. Information gain and b. Gini index. Higher information gain and lower Gini index means a better attribute used for split.
+### A. Categorical Attribute
 
-### a. Information gain
+There are two ways: 
+1. Information gain 
+2. Gini index. 
+
+Higher information gain and lower Gini index means a better attribute used for split.
+
+#### 1. Information gain
 
 Given a split way of features, calculate entropy for root and its childs. The tree split is to **maximize reduction of the entropy**, which is defined as **information gain**. Given a class, the entropy defines
 
@@ -44,7 +50,7 @@ Later information gain leads to less homogeneity on class distributions. See exa
 We can see the larger information gain split makes better classification.
 
 
-### b. Gini Index
+#### 2. Gini Index
 
 The Gini index defines (assume use attribute `A` to have K branches)
 
@@ -53,6 +59,8 @@ The Gini index defines (assume use attribute `A` to have K branches)
 **Smaller Gini index** means better attribute used to split tree. (Think about if A is perfect to classify positive and negatives, then Gini = 0)
 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
+
+### B. Numeric Attribute
 
 
 ## Decision Tree Regression
