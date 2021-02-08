@@ -60,7 +60,7 @@ Previous description assumes all learners in the same weight. Where is the `grad
 
 The boosting process is equivalent to minimizing `Loss` by sequentially generating models `F1(x)`, `F2(x)`, .... Therefore, we can add a superscript on the `Loss` function to represent the `Loss` function in `t`-th iteration
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" title="J_t(y, \ \hat{y}) = \sum_i \big( y_i - \hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2" /></a>\hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" title="J_t(y, \ \hat{y}) = \sum_i \big( y_i - \hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2" /></a>
 
 
 where `t = 1, 2, 3...` From the gradient descent aspect, the `Loss` is minimized as
