@@ -74,7 +74,7 @@ ROC curve remains similar, but precision-recall curve will change.
 
 However, in (b), we can see the PR curves show significant difference. When positive rates descrease, the PR curves shift downward. At the same recall, precision drops. This is consistent with our expectation.
 
-On the other side, the author also shows PR curves is more useful to compare model performance in imbalanced cases. At different positive rates, all ROC AUC are 0.8 on example A and B (see below). But in PR curves, we can obviously see the difference between the examples. Thus in the highly-imbalanced case, the PR curve is a better indication.
+On the other side, the author also shows PR curves is more useful to compare model performance in imbalanced cases. At different positive rates, all ROC AUC are 0.8 on example A and B (see below). But in PR curves, we can obviously see the difference between the examples. Thus in the highly-imbalanced case, the **PR curve** is a better indication.
 
 
 ![ROC_PR_model](images/ROC_PR_model_comparison.png)
