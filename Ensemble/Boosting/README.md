@@ -158,7 +158,7 @@ Thus the specific objective at step `t` becomes
 
 This becomes our optimization goal for the new tree. One important advantage of this definition is that the value of the objective function only depends on `g_i` and `h_i`. This is how XGBoost supports custom loss functions. We can optimize every loss function, including logistic regression and pairwise ranking, using exactly the same solver that takes `g_i` and `h_i` as input!
 
-XGBoost define the tree `f(x)` as
+XGBoost define the tree `f(x)` as [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f_t(x)&space;=&space;\omega_{q(x)},&space;\&space;\omega&space;\in&space;R^T,&space;\&space;q:&space;R^d&space;\to&space;\lbrace&space;1,2,\cdots,&space;T&space;\rbrace" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_t(x)&space;=&space;\omega_{q(x)},&space;\&space;\omega&space;\in&space;R^T,&space;\&space;q:&space;R^d&space;\to&space;\lbrace&space;1,2,\cdots,&space;T&space;\rbrace" title="f_t(x) = \omega_{q(x)}, \ \omega \in R^T, \ q: R^d \to \lbrace 1,2,\cdots, T \rbrace" /></a>
 
