@@ -72,7 +72,7 @@ For numeric attributes, how do we determine the value to split in the decision t
    92      | no
    ...     | ...
 ```
-For this case, we sort the attribute, the above data become
+For numeric attributes, we sort the attribute by value. Then above data become
 ```
   humidity | play
    54      | yes
@@ -90,9 +90,9 @@ For this case, we sort the attribute, the above data become
    90      | no
    92      | no
 ```
-At root, the entropy is
+At root, the entropy (9 positive, 5 negative) is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},&space;\frac{5}{14})&space;=&space;-\frac{9}{14}\log&space;\frac{9}{14}-\frac{5}{14}\log&space;\frac{5}{14}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},&space;\frac{5}{14})&space;=&space;-\frac{9}{14}\log&space;\frac{9}{14}-\frac{5}{14}\log&space;\frac{5}{14}" title="H(\frac{9}{14}, \frac{5}{14}) = -\frac{9}{14}\log \frac{9}{14}-\frac{5}{14}\log \frac{5}{14}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},&space;\frac{5}{14})&space;=&space;-\frac{9}{14}\log&space;\frac{9}{14}-\frac{5}{14}\log&space;\frac{5}{14}&space;=&space;0.94" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},&space;\frac{5}{14})&space;=&space;-\frac{9}{14}\log&space;\frac{9}{14}-\frac{5}{14}\log&space;\frac{5}{14}&space;=&space;0.94" title="H(\frac{9}{14}, \frac{5}{14}) = -\frac{9}{14}\log \frac{9}{14}-\frac{5}{14}\log \frac{5}{14} = 0.94" /></a>
 
 Suppose we are going to determine the humidity threshold split, and we have two ways:
 
@@ -101,12 +101,12 @@ Suppose we are going to determine the humidity threshold split, and we have two 
 
 For **way A**, we if humidity <= 62, all are positive; humidity > 62, 3 positive and 5 negative
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H_A&space;=&space;H(\frac{6}{6},&space;0)&space;&plus;&space;H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;0&space;&plus;&space;0.95&space;=&space;0.95" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_A&space;=&space;H(\frac{6}{6},&space;0)&space;&plus;&space;H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;0&space;&plus;&space;0.95&space;=&space;0.95" title="H_A = H(\frac{6}{6}, 0) + H(\frac{3}{8}, \frac{5}{8}) = 0 + 0.95 = 0.95" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_A&space;=&space;\frac{8}{14}H(\frac{6}{6},&space;0)&space;&plus;&space;\frac{6}{14}H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;\frac{8}{14}&space;\times&space;0&space;&plus;&space;\frac{6}{14}\times&space;0.95&space;=&space;0.54" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_A&space;=&space;\frac{8}{14}H(\frac{6}{6},&space;0)&space;&plus;&space;\frac{6}{14}H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;\frac{8}{14}&space;\times&space;0&space;&plus;&space;\frac{6}{14}\times&space;0.95&space;=&space;0.54" title="H_A = \frac{8}{14}H(\frac{6}{6}, 0) + \frac{6}{14}H(\frac{3}{8}, \frac{5}{8}) = \frac{8}{14} \times 0 + \frac{6}{14}\times 0.95 = 0.54" /></a>
 
 
 For **way B**, we if humidity <= 89, 9 positive and 1 negative; humidity > 89, all negative
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H_B&space;=&space;H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;H(0,&space;\frac{4}{4})&space;=&space;0.47&space;&plus;&space;0&space;=&space;0.47" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_B&space;=&space;H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;H(0,&space;\frac{4}{4})&space;=&space;0.47&space;&plus;&space;0&space;=&space;0.47" title="H_B = H(\frac{9}{10}, \frac{1}{10}) + H(0, \frac{4}{4}) = 0.47 + 0 = 0.47" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_B&space;=&space;\frac{10}{14}H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;\frac{4}{14}H(0,&space;\frac{4}{4})&space;=&space;\frac{10}{14}\times&space;0.47&space;&plus;&space;\frac{4}{14}&space;\times&space;0&space;=&space;0.33" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_B&space;=&space;\frac{10}{14}H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;\frac{4}{14}H(0,&space;\frac{4}{4})&space;=&space;\frac{10}{14}\times&space;0.47&space;&plus;&space;\frac{4}{14}&space;\times&space;0&space;=&space;0.33" title="H_B = \frac{10}{14}H(\frac{9}{10}, \frac{1}{10}) + \frac{4}{14}H(0, \frac{4}{4}) = \frac{10}{14}\times 0.47 + \frac{4}{14} \times 0 = 0.33" /></a>
 
 We can see `I(B)` > `I(A)`, so we choose humidity=0.89 to split at this step.
 
