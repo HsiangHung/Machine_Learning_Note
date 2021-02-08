@@ -2,22 +2,22 @@
 
 
 
-Suppose our training data set is represented by `T` and suppose data set has `M` features (or attributes or variables) [[Stackoverflow: What is out of bag error in Random Forests?]][What is out of bag error in Random Forests?].
+Suppose our training data set is represented by `D` and suppose data set has `M` features (or attributes or variables) [[Stackoverflow: What is out of bag error in Random Forests?]][What is out of bag error in Random Forests?].
 
-    T = {(X1,y1), (X2,y2), ... (Xn, yn)}
+    D = {(X1,y1), (X2,y2), ... (Xn, yn)}
 
-and `Xi` is input vector `{xi_1, xi_2, ... xi_M}`, `yi` is the label (or output or class). 
+and `X(i)` is input vector `{x(i)_1, x(i)_2, ... x(i)_M}`, `y(i)` is the label (or output or class). 
 
 
-Random Forests algorithm is a classifier based on primarily two methods - Bagging and Random subspace method.
+Random Forests algorithm is a classifier based on primarily two methods - **Bagging** and **Random subspace method**.
 
-Suppose we decide to have `S` number of trees in our forest, then we first create `S` datasets of "same size as original" created from random resampling of data in `T` **with-replacement** (`n` times for each dataset). This will result in `{T1, T2, ... TS}` datasets. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset `Ti` can have duplicate data records and `Ti` can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
+Suppose we decide to have `S` number of trees in our forest, then we first create `S` datasets of "same size as original" created from random resampling of data in `D` **with-replacement** (`n` times for each dataset). This will result in `{D1, D2, ... DS}` datasets. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset `Di` can have duplicate data records and `Di` can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
 
 **Bagging** is the process of taking bootstraps & then aggregating the models learned on each bootstrap.
 
 Now, RF creates `S` trees and uses `m (=sqrt(M) or =floor(lnM+1))` random subfeatures out of `M` possible features to create any tree. This is called **random subspace method**.
 
-So for each `Ti` bootstrap dataset you create a tree `Ki`. If you want to classify some input data `D = {x1, x2, ..., xM}`, you let it pass through each tree and produce `S` outputs (one for each tree) which can be denoted by `Y = {y1, y2, ..., ys}`. Final prediction is a majority vote on this set, or mean probability for each class (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33))
+So for each `Di` bootstrap dataset you create a tree `Ti`. If you want to classify some input data `d = {x_1, x_2, ..., x_M}`, you let it pass through each tree and produce `S` outputs (one for each tree) which can be denoted by `Y = {y1, y2, ..., ys}`. Final prediction is a **majority vote** on this set, or **mean probability** for each class (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33))
 
 ![](images/determine_probability.png)
 
@@ -25,7 +25,7 @@ So for each `Ti` bootstrap dataset you create a tree `Ki`. If you want to classi
 ## Out-of-Bag Errors
 
 
-After creating the classifiers (`S` trees), for each `(Xi,yi)` in the original training set i.e. `T`, select all `Tk` which does **NOT** include `(Xi,yi)`. This subset, pay attention, is a set of boostrap datasets which does not contain a particular record from the original dataset. This set is called out-of-bag examples. There are `n` such subsets (one for each data record in original dataset `T`). OOB classifier is the aggregation of votes ONLY over `Tk` such that it does not contain `(xi,yi)`.
+After creating the classifiers (`S` trees), for each `(X(i),y(i))` in the original training set i.e. `D`, select all `Dk` which does **NOT** include `(Xi,yi)`. This subset, pay attention, is a set of boostrap datasets which does not contain a particular record from the original dataset. This set is called out-of-bag examples. There are `n` such subsets (one for each data record in original dataset `T`). OOB classifier is the aggregation of votes ONLY over `Dk` such that it does not contain `(X(i),y(i))`.
 
 Out-of-bag estimate for the generalization error is the error rate of the out-of-bag classifier on the training set (compare it with known `yi`'s).
 
