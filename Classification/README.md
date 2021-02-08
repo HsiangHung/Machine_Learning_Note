@@ -36,7 +36,7 @@ review rate = N(prob > threshold)/N
 ```
 where `N` is the number of data points.
 
-### a. Business concern
+### A. Business concern
 
 Here is the post to list some examples whrn precision is important and when recall is important ? [[Data Science: When is precision more important over recall?]][When is precision more important over recall?] [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]. Depends on whhcih we want to minimize, FP or FN costs more? Note it has been mentioned in the post that you could have 100% recall yet have a useless model: if your model always outputs a positive prediction, it would have 100% recall but be completely uninformative.
 
@@ -54,11 +54,22 @@ Here I just summarize the answers in the post and list in the following:
 
 6. In the case of airport security, where a safety risk is the positive class, we want to make sure that every potential safety risk is investigated. In this case, we will have high **Recall** at the expense of precision (a lot of bags where there are no safety hazards will be investigated).
 
-### b. If no business concern
+### B. If no business concern
 
 If there is no external concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]: (a) median value of probability (2) that maximizes TPR-FPR, (3) choose threshold to have optimal `F1 score` (where P = Precision and R = Recall): 
 
  <a href="https://www.codecogs.com/eqnedit.php?latex=F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" title="F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}}" /></a>
+
+
+### C. Fraud rat to precision, recall, AUC
+
+In the imbalanced cases, how do fraud rates (or downsampling rate) influence the metrics? The post [[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] has very wonderful disucssion about it and we can have intuition as follows. 
+
+Suppose for same amount of positive cases and model performance, lower fraud rate means more negative events. Thus precision may drop and recall keeps the same. The False positive rate doesn't change. Then we can expect 
+ROC curve remains similar, but precision-recall curve will change.
+
+![imbalanced_ROC_PR](images/ROC_PR_comparison.png)
+
 
 
 ## Multi-class Classification Metric
@@ -112,6 +123,11 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 
 [A Tale of Two Macro-F1's]: https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04
 [[Boaz Shmueli-3] A Tale of Two Macro-F1's](https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04)
+
+
+
+[Precision - Recall Curve, a Different View of Imbalanced Classifiers]: https://sinyi-chou.github.io/classification-pr-curve/
+[[Sin-Yi Chou] Precision - Recall Curve, a Different View of Imbalanced Classifiers](https://sinyi-chou.github.io/classification-pr-curve/)
 
 
 
