@@ -129,7 +129,7 @@ The comprehensive tutorial on introduction to the model, [Introduction to Booste
 
 ... Eventually we have the following relation
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^m_i&space;=&space;\hat{y}^{m-1}_i&space;&plus;&space;f_{m}(x_i)&space;=&space;\sum^{m-1}_{n=1}&space;f_n(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^m_i&space;=&space;\hat{y}^{m-1}_i&space;&plus;&space;f_{m}(x_i)&space;=&space;\sum^{m-1}_{n=1}&space;f_n(x_i)" title="\hat{y}^m_i = \hat{y}^{m-1}_i + f_{m}(x_i) = \sum^{m-1}_{n=1} f_n(x_i)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^t_i&space;=&space;\hat{y}^{t-1}_i&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t-1}_{n=1}&space;f_n(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^t_i&space;=&space;\hat{y}^{t-1}_i&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t-1}_{n=1}&space;f_n(x_i)" title="\hat{y}^t_i = \hat{y}^{t-1}_i + f_{t}(x_i) = \sum^{t-1}_{n=1} f_n(x_i)" /></a>
 
 Here `f0` is like `F1` in previous discussion [Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#math-intuition-of-gbm), and `f1`, `f2`, ... are like `h1`, `h2`,....
 
