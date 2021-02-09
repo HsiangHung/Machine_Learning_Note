@@ -125,7 +125,7 @@ To evaluate feature importance, we calculate feature importance for each split, 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" title="FI(A|c) = \frac{N_{c}}{N}\big( \textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l - \frac{N_{c,r}}{N_c}\textrm{impurity}_r \big)" /></a>
 
-where `Nc` means the number of instances on the "current" node or level. We can simply calculate as 
+where `Nc` means the number of instances on the "current" node or level, and `N` is the total number of instances. `l` and `r` denote left and right child nodes. We can simply calculate as 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;N_{c}\big(&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;N_{c}\big(&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r&space;\big)" title="FI(A|c) = N_{c}\big( \textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l - N_{c,r}*\textrm{impurity}_r \big)" /></a>
 
@@ -135,12 +135,12 @@ As a concrete example, suppose we have built the following tree (using C4.5 algo
 
 ![feature_importance](images/feature_importance_tree.png)
 
+Notice that a feature can appear several times in a decision tree as a decision point. For example, the feature outlook appears 2 times in the decision tree in 2nd and 3rd level. sum of those individual decision points will be the feature importance of Outlook.
+
 We follow the procedures from [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]
 
 * 1st level of the decision tree: FI(Humidity|1st level) = 14x0.940 – 7×0.985 – 7×0.591 = 2.121.
-
 * 2nd level of the decision tree: FI(Outlook|2nd level) = 7×0.985 – 4×0.811 = 3.651; FI(Wind|2nd level) = 7×0.591 – 3×0.918 = 1.390
-
 * 3rd level of the decision tree: FI(Wind|3rd level) = 4×0.811 = 3.244, FI(Outlook|3rd level) = 3×0.918 = 2.754
 
 * Results
