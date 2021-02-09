@@ -139,17 +139,13 @@ Notice that a feature can appear several times in a decision tree as a decision 
 
 We follow the procedures from [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]
 
-* 1st level of the decision tree: FI(Humidity|1st level) = 14x0.940 – 7×0.985 – 7×0.591 = 2.121.
-* 2nd level of the decision tree: FI(Outlook|2nd level) = 7×0.985 – 4×0.811 = 3.651; FI(Wind|2nd level) = 7×0.591 – 3×0.918 = 1.390
-* 3rd level of the decision tree: FI(Wind|3rd level) = 4×0.811 = 3.244, FI(Outlook|3rd level) = 3×0.918 = 2.754
+* 1st level of the decision tree: FI(**Humidity**|1st level) = 14x0.940 – 7×0.985 – 7×0.591 = 2.121.
+* 2nd level of the decision tree: FI(**Outlook**|2nd level) = 7×0.985 – 4×0.811 = 3.651; FI(**Wind**|2nd level) = 7×0.591 – 3×0.918 = 1.390
+* 3rd level of the decision tree: FI(**Wind**|3rd level) = 4×0.811 = 3.244, FI(**Outlook**|3rd level) = 3×0.918 = 2.754
+* Results: FI(**Humidity**) = FI(**Humidity**|1st level) = 2.121, FI(**Outlook**) = FI(**Outlook**|2nd level) + FI(**Outlook**|3rd level) = 3.651 + 2.754 = 6.405, FI(**Wind**) = FI(**Wind**|2nd level) + FI(**Wind**|3rd level) = 1.390 + 3.244 = 4.634
 
-* Results
 
-FI(Humidity) = FI(Humidity|1st level) = 2.121
 
-FI(Outlook) = FI(Outlook|2nd level) + FI(Outlook|3rd level) = 3.651 + 2.754 = 6.405
-
-FI(Wind) = FI(Wind|2nd level) + FI(Wind|3rd level) = 1.390 + 3.244 = 4.634
 
 ## Reference
 
