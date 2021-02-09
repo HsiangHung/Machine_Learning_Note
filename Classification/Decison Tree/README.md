@@ -148,7 +148,7 @@ We follow the procedures from [[Sefik Ilkin Serengil]][Feature Importance in Dec
   FI(**Outlook**) = FI(**Outlook**|2nd level) + FI(**Outlook**|3rd level) = 3.651 + 2.754 = 6.405
   FI(**Wind**) = FI(**Wind**|2nd level) + FI(**Wind**|3rd level) = 1.390 + 3.244 = 4.634
 
-Then normalize FI by diving `N=14`. We have feature importance: `**Outlook** > **Wind** > **Humidity**`.
+Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wind" > "Humidity"`.
 
 
 ## Reference
