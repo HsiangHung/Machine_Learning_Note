@@ -124,7 +124,7 @@ Adagrad modifies the general learning rate at each time step `t` for every param
 
 RMSProp improves the latter by including the exponential moving average of the squared gradient. A constant ρ also appears, which is known as the **forgetting factor**:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}&space;\Big)" title="\Delta \theta_{t} = - \alpha \Big( \frac{g_t}{\sqrt{v_t + \epsilon}} \Big)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{s_t}&space;&plus;&space;\epsilon}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{s_t}&space;&plus;&space;\epsilon}&space;\Big)" title="\Delta \theta_{t} = - \alpha \Big( \frac{g_t}{\sqrt{s_t} + \epsilon} \Big)" /></a>
 
 where 
 
