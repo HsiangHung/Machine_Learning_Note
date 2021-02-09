@@ -44,7 +44,7 @@ Here I summarize the cases from the above posts and list in the following:
 
 1. For rare cancer data modeling, a false negative is usually more disastrous than a false positive for preliminary diagnoses. We want to minimize FN to have higher recall. So **Recall** is a better measure than precision.
 
-2. For YouTube recommendations, false-negatives is less of a concern. **Precision** is better here.
+2. For YouTube recommendations, FN is less of a concern. **Precision** is better here (if too many FP, users feel annoyed, so minimize FP).
 
 3. Image a lot of free customers register in our websites every daily. The customer call center team doesn't care to call a guy that is not going to buy (so FP is not important) but for us is very important that all of them with high temperature are always in my selection. That means that a model needs to have a high **Recall**.
 
