@@ -143,9 +143,10 @@ where
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_t&space;=&space;\beta_1&space;v_{t-1}&space;-&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;-&space;(1-\beta_2)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_t&space;=&space;\beta_1&space;v_{t-1}&space;-&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;-&space;(1-\beta_2)g^2_t" title="v_t = \beta_1 v_{t-1} - (1-\beta_1)g_t \textrm{, and } s_t = \beta_2 s_{t-1} - (1-\beta_2)g^2_t" /></a>
 
-and 
+The first is momentum-like, and the second is RMSprop. The supersrcipt "corr" means corrected momentum and RSMprop:
 
-The first is momentum-like, and the second is RMSprop.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=v^{\textrm{corr}}_t&space;=&space;\frac{v_{t}}{(1-\beta^t_1)}&space;\textrm{,&space;and&space;}&space;\&space;s^{\textrm{corr}}_t&space;=&space;\frac{s_t}{(1-\beta^t_{2})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v^{\textrm{corr}}_t&space;=&space;\frac{v_{t}}{(1-\beta^t_1)}&space;\textrm{,&space;and&space;}&space;\&space;s^{\textrm{corr}}_t&space;=&space;\frac{s_t}{(1-\beta^t_{2})}" title="v^{\textrm{corr}}_t = \frac{v_{t}}{(1-\beta^t_1)} \textrm{, and } \ s^{\textrm{corr}}_t = \frac{s_t}{(1-\beta^t_{2})}" /></a>
 
 The proposed default values are `β1 = 0.9`, `β2 = 0.999`, and `ϵ = 10^{-8}`.
 
