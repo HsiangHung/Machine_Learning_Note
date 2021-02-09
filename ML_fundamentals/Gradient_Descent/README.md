@@ -137,11 +137,13 @@ The RMSProp also slow down relatively large gradients and speed up relatively sm
 
 Adam is another method that computes adaptive learning rates for each parameter. In addition to storing an exponentially decaying average of past squared gradients `vt` like Adadelta and RMSprop, Adam also keeps an exponentially decaying average of past gradients `mt`, similar to momentum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms].  In simple words you can consider it to be RMSProp + momentum [[Jaime Durán]][Everything You Need to Know about Gradient Descent Applied to Neural Networks].
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\alpha&space;\Big(&space;\frac{m_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}\Big)&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\alpha&space;\Big(&space;\frac{m_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}\Big)&space;g_{t}" title="\Delta \theta_t = - \alpha \Big( \frac{m_t}{\sqrt{v_t + \epsilon}}\Big) g_{t}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\alpha&space;\Big(&space;\frac{v^{\textrm{corr}}_t}{\sqrt{s^{\textrm{corr}}_t}&space;&plus;&space;\epsilon}\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\alpha&space;\Big(&space;\frac{v^{\textrm{corr}}_t}{\sqrt{s^{\textrm{corr}}_t}&space;&plus;&space;\epsilon}\Big)" title="\Delta \theta_t = - \alpha \Big( \frac{v^{\textrm{corr}}_t}{\sqrt{s^{\textrm{corr}}_t} + \epsilon}\Big)" /></a>
 
 where 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_t&space;=&space;\beta_1&space;v_{t-1}&space;-&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;-&space;(1-\beta_2)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_t&space;=&space;\beta_1&space;v_{t-1}&space;-&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;-&space;(1-\beta_2)g^2_t" title="v_t = \beta_1 v_{t-1} - (1-\beta_1)g_t \textrm{, and } s_t = \beta_2 s_{t-1} - (1-\beta_2)g^2_t" /></a>
+
+and 
 
 The first is momentum-like, and the second is RMSprop.
 
