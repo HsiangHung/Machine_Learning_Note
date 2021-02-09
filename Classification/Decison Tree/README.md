@@ -129,14 +129,15 @@ where `Nc` means the number of instances on the "current" node or level. We can 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;N_{c}\big(&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;N_{c}\big(&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r&space;\big)" title="FI(A|c) = N_{c}\big( \textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l - N_{c,r}*\textrm{impurity}_r \big)" /></a>
 
-and eventually all are divided by `N`. 
+and eventually all are divided by `N`. The "impurity" metric is **entropy** if **C4.5** algorithm adopted. It would be **Gini** if the algorithm were **CART** [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees].
 
-As a concrete example, suppose we have built the following tree:
+As a concrete example, suppose we have built the following tree (using C4.5 algorithm with entropy) (credit from [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]):
 
 ![feature_importance](images/feature_importance_tree.png)
 
+We follow the procedures from [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]
 
-* 1st level of the decision tree: FI(Humidity|1st level) = 14x 0.940 – 7×0.985 – 7×0.591 = 2.121.
+* 1st level of the decision tree: FI(Humidity|1st level) = 14x0.940 – 7×0.985 – 7×0.591 = 2.121.
 
 * 2nd level of the decision tree: FI(Outlook|2nd level) = 7×0.985 – 4×0.811 = 3.651; FI(Wind|2nd level) = 7×0.591 – 3×0.918 = 1.390
 
@@ -159,4 +160,8 @@ FI(Wind) = FI(Wind|2nd level) + FI(Wind|3rd level) = 1.390 + 3.244 = 4.634
 
 [Decision Tree - Regression]: https://www.saedsayad.com/decision_tree_reg.htm#:~:text=Decision%20tree%20builds%20regression%20or,decision%20nodes%20and%20leaf%20nodes.
 [[Saed Sayad] Decision Tree - Regression](https://www.saedsayad.com/decision_tree_reg.htm#:~:text=Decision%20tree%20builds%20regression%20or,decision%20nodes%20and%20leaf%20nodes.)
+
+
+[Feature Importance in Decision Trees]: https://sefiks.com/2020/04/06/feature-importance-in-decision-trees/
+[[Sefik Ilkin Serengil] Feature Importance in Decision Trees](https://sefiks.com/2020/04/06/feature-importance-in-decision-trees/)
 
