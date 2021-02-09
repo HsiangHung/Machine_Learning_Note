@@ -118,6 +118,13 @@ We can see `I(B)` > `I(A)`, so we choose humidity=0.89 to split at this step.
 Detail refer to [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression/Decision%20Tree) and the post [[Saed Sayad]][Decision Tree - Regression].
 
 
+## Feature Importance 
+
+To evaluate feature importance, we calculate feature importance for each split, and sum of them. For attribute A, we look for all splits which use A to split. The invidual feature importance is 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=FI(A,c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A,c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" title="FI(A,c) = \frac{N_{c}}{N}\big( \textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l - \frac{N_{c,r}}{N_c}\textrm{impurity}_r \big)" /></a>
+
+
 ## Reference
 
 
