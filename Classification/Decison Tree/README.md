@@ -124,6 +124,10 @@ To evaluate feature importance, we calculate feature importance for each split, 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A,c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A,c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" title="FI(A,c) = \frac{N_{c}}{N}\big( \textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l - \frac{N_{c,r}}{N_c}\textrm{impurity}_r \big)" /></a>
 
+where `Nc` means the number of instances on the "current" node. As a concrete example, suppose we have built the following tree:
+
+![feature_importance](images/feature_importance_tree.png)
+
 
 ## Reference
 
