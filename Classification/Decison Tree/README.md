@@ -122,12 +122,33 @@ Detail refer to [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/
 
 To evaluate feature importance, we calculate feature importance for each split, and sum of them. For attribute A, we look for all splits which use A to split. The invidual feature importance is 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=FI(A,c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A,c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" title="FI(A,c) = \frac{N_{c}}{N}\big( \textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l - \frac{N_{c,r}}{N_c}\textrm{impurity}_r \big)" /></a>
 
-where `Nc` means the number of instances on the "current" node. As a concrete example, suppose we have built the following tree:
+<a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" title="FI(A|c) = \frac{N_{c}}{N}\big( \textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l - \frac{N_{c,r}}{N_c}\textrm{impurity}_r \big)" /></a>
+
+where `Nc` means the number of instances on the "current" node or level. We can simply calculate as 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;N_{c}\big(&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;N_{c}\big(&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r&space;\big)" title="FI(A|c) = N_{c}\big( \textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l - N_{c,r}*\textrm{impurity}_r \big)" /></a>
+
+and eventually all are divided by `N`. 
+
+As a concrete example, suppose we have built the following tree:
 
 ![feature_importance](images/feature_importance_tree.png)
 
+
+* 1st level of the decision tree: FI(Humidity|1st level) = 14x 0.940 – 7×0.985 – 7×0.591 = 2.121.
+
+* 2nd level of the decision tree: FI(Outlook|2nd level) = 7×0.985 – 4×0.811 = 3.651; FI(Wind|2nd level) = 7×0.591 – 3×0.918 = 1.390
+
+* 3rd level of the decision tree: FI(Wind|3rd level) = 4×0.811 = 3.244, FI(Outlook|3rd level) = 3×0.918 = 2.754
+
+* Results
+
+FI(Humidity) = FI(Humidity|1st level) = 2.121
+
+FI(Outlook) = FI(Outlook|2nd level) + FI(Outlook|3rd level) = 3.651 + 2.754 = 6.405
+
+FI(Wind) = FI(Wind|2nd level) + FI(Wind|3rd level) = 1.390 + 3.244 = 4.634
 
 ## Reference
 
