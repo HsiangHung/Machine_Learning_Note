@@ -120,7 +120,7 @@ Detail refer to [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/
 
 ## Feature Importance 
 
-To evaluate feature importance, we calculate feature importance for each split, and sum of them. For attribute A, we look for all splits which use A to split. The invidual feature importance is 
+To evaluate feature importance, we calculate feature importance for each split, and sum of them. For attribute A, we look for all splits which use A to split. The invidual feature importance is  [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees], [[Stacey Ronaghan]][The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark]
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" title="FI(A|c) = \frac{N_{c}}{N}\big( \textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l - \frac{N_{c,r}}{N_c}\textrm{impurity}_r \big)" /></a>
@@ -147,7 +147,7 @@ We follow the procedures from [[Sefik Ilkin Serengil]][Feature Importance in Dec
   FI(**Humidity**) = FI(**Humidity**|1st level) = 2.121
 
   FI(**Outlook**) = FI(**Outlook**|2nd level) + FI(**Outlook**|3rd level) = 3.651 + 2.754 = 6.405
-  
+
   FI(**Wind**) = FI(**Wind**|2nd level) + FI(**Wind**|3rd level) = 1.390 + 3.244 = 4.634
 
 Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wind" > "Humidity"`.
@@ -167,3 +167,6 @@ Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wi
 [Feature Importance in Decision Trees]: https://sefiks.com/2020/04/06/feature-importance-in-decision-trees/
 [[Sefik Ilkin Serengil] Feature Importance in Decision Trees](https://sefiks.com/2020/04/06/feature-importance-in-decision-trees/)
 
+
+[The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark]: https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3
+[[Stacey Ronaghan] The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark](https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3)
