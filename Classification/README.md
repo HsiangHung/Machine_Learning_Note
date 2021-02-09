@@ -54,6 +54,8 @@ Here I summarize the cases from the above posts and list in the following:
 
 6. In the case of airport security, where a safety risk is the positive class, we want to make sure that every potential safety risk is investigated. In this case, we will have high **Recall** at the expense of precision (a lot of bags where there are no safety hazards will be investigated).
 
+7. Imagine that we want to make sure that our web site blocker for our child only allows 'safe' websites to be shown. In this case, a 'safe' website is the positive class. Here, we want the blocker to be absolutely certain that the website is safe, even if some safe websites are predicted to be part of the negative or unsafe class and are consequently blocked. That is, we want high precision at the expense of recall.
+
 ### B. If no business concern
 
 If there is no external business concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold: (a) is a median value of probability distribution, (2) maximizes `TPR-FPR`, (3) has optimal `F1 score` [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]: 
