@@ -124,11 +124,11 @@ Adagrad modifies the general learning rate at each time step `t` for every param
 
 RMSProp improves the latter by including the exponential moving average of the squared gradient. A constant ρ also appears, which is known as the **forgetting factor**:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\frac{g_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\frac{g_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}" title="\Delta \theta_{t} = - \alpha \frac{g_t}{\sqrt{v_t + \epsilon}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{v_t&space;&plus;&space;\epsilon}}&space;\Big)" title="\Delta \theta_{t} = - \alpha \Big( \frac{g_t}{\sqrt{v_t + \epsilon}} \Big)" /></a>
 
 where 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\beta&space;v_{t-1}&space;&plus;&space;(1-\beta)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\beta&space;v_{t-1}&space;&plus;&space;(1-\beta)g^2_t" title="v_{t} = \beta v_{t-1} + (1-\beta)g^2_t" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=s_{t}&space;=&space;\beta&space;s_{t-1}&space;&plus;&space;(1-\beta)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s_{t}&space;=&space;\beta&space;s_{t-1}&space;&plus;&space;(1-\beta)g^2_t" title="s_{t} = \beta s_{t-1} + (1-\beta)g^2_t" /></a>
 
 The RMSProp also slow down relatively large gradients and speed up relatively small gradients by dividing the squared root of the velocity.
 
