@@ -18,7 +18,7 @@ The most common application of LTR is search engine ranking.
 
 A decent metric that captures this notion of correct order is the count of inversions in your ranking, the number of times a lower-rated result appears above a higher-rated one. 
 
-### Mean reciprocal rank
+### A. Mean reciprocal rank
 
 The mean reciprocal rank is the average of the reciprocal ranks of results for a sample of queries Q [[wiki: Mean reciprocal rank]][Mean reciprocal rank]:
 
@@ -42,6 +42,15 @@ If none of the proposed results are correct, reciprocal rank is 0.[1] Note that 
 
 [Mean reciprocal rank]: https://en.wikipedia.org/wiki/Mean_reciprocal_rank
 [[wiki: Mean reciprocal rank] Mean reciprocal rank](https://en.wikipedia.org/wiki/Mean_reciprocal_rank)
+
+
+### B. Mean average precision
+
+Mean average precision for a set of queries is the mean of the average precision scores for each query.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MAP}&space;=&space;\frac{\sum^Q_{q=1}\textrm{AveP(q)}}{Q}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MAP}&space;=&space;\frac{\sum^Q_{q=1}\textrm{AveP(q)}}{Q}" title="\textrm{MAP} = \frac{\sum^Q_{q=1}\textrm{AveP(q)}}{Q}" /></a>
+
+where Q is the number of queries.
 
 
 
