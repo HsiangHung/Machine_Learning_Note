@@ -10,10 +10,16 @@ Learning to Rank (LTR) is a class of techniques that apply supervised machine le
 
 The most common application of LTR is search engine ranking.
 
-Not all pairwise errors are created equal. Because we use DCG as our scoring function, it is critical that the algorithm gets the top results right.
+## Data to Prepare
 
+Most major search engines have a human-powered relevance measurement system which acts as an oracle for completeness and correctness. It also lets you measure how good you are relative to your competitors [[Nikhil Dandekar]][Quroa: How does Google measure the quality of their search results?]
 
-## Metric
+1. Generate a sample of a few thousand search queries
+2. Issue those search queries on your search engine 
+3. Train a set of human raters to rate the quality of these results. 
+4. Repeat the "extract results - rate results" step 
+
+## Metric to Evaluate 
 
 A decent metric that captures this notion of correct order is the count of inversions in your ranking, the number of times a lower-rated result appears above a higher-rated one. 
 
@@ -90,9 +96,15 @@ At rank 8: No change, wrong prediction.
 
 ### C. Discounted cumulative gain (DCG)
 
+Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs.
+
 One advantage of DCG over other metrics is that it also works if document relevances are a real number. In other words, when each document is not simply relevant/non-relevant (as in the example), but has a relevance score instead [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{DCG@k}&space;=&space;\sum^k_{i=1}&space;\frac{2^{rel_i}-1}{\log(i&plus;1)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{DCG@k}&space;=&space;\sum^k_{i=1}&space;\frac{2^{rel_i}-1}{\log(i&plus;1)}" title="\textrm{DCG@k} = \sum^k_{i=1} \frac{2^{rel_i}-1}{\log(i+1)}" /></a>
+
+
+Not all pairwise errors are created equal. Because we use DCG as our scoring function, it is critical that the algorithm gets the top results right. Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs.
+
 
 DCG **higher** is better [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
 
@@ -142,6 +154,11 @@ Felipe Almeida
 
 [Evaluate your Recommendation Engine using NDCG]: https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1
 [[Pranay Chandekar] Evaluate your Recommendation Engine using NDCG](https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1)
+
+
+[How does Google measure the quality of their search results?]: https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results
+[[Nikhil Dandekar] Quroa: How does Google measure the quality of their search results?](https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results)
+
 
 
 
