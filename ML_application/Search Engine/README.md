@@ -12,7 +12,7 @@ The most common application of LTR is search engine ranking.
 
 ## Data to Prepare
 
-Most major search engines have a human-powered relevance measurement system which acts as an oracle for completeness and correctness. It also lets you measure how good you are relative to your competitors [[Nikhil Dandekar]][Quroa: How does Google measure the quality of their search results?]
+Most major search engines have a human-powered relevance measurement system which acts as an oracle for completeness and correctness. It also lets you measure how good you are relative to your competitors [[Quroa: How does Google measure the quality of their search results?]][How does Google measure the quality of their search results?]
 
 1. Generate a sample of a few thousand search queries
 2. Issue those search queries on your search engine 
@@ -157,9 +157,7 @@ Felipe Almeida
 
 
 [How does Google measure the quality of their search results?]: https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results
-[[Nikhil Dandekar] Quroa: How does Google measure the quality of their search results?](https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results)
-
-
+[[Quroa: How does Google measure the quality of their search results?] How does Google measure the quality of their search results?](https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results)
 
 
 [Mean average precision]: https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision
