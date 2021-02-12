@@ -46,6 +46,10 @@ If none of the proposed results are correct, reciprocal rank is 0.[1] Note that 
 
 ### B. Mean average precision
 
+Given a precision-recall curve, plotting precision `P(r)` as a function of recall `r`, average precision computes the average value of `p(r)` over the interval from `r=0` to `r=1`:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{AveP(q)}&space;=&space;\int^1_0&space;p(r)&space;dr" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{AveP(q)}&space;=&space;\int^1_0&space;p(r)&space;dr" title="\textrm{AveP(q)} = \int^1_0 p(r) dr" /></a>
+
 Mean average precision for a set of queries is the mean of the average precision scores for each query.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MAP}&space;=&space;\frac{\sum^Q_{q=1}\textrm{AveP(q)}}{Q}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MAP}&space;=&space;\frac{\sum^Q_{q=1}\textrm{AveP(q)}}{Q}" title="\textrm{MAP} = \frac{\sum^Q_{q=1}\textrm{AveP(q)}}{Q}" /></a>
