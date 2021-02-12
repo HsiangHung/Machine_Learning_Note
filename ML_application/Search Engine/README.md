@@ -64,8 +64,33 @@ supposed given a query, we have the following rank result:
 
 ![rank_example](images/rank_example.png)
 
-The document labeled with green is relevant to query; we can regard as positives. Red ones regard as negatives.
+The document labeled with green is relevant to query; we can regard as positives. Red ones regard as negatives. Then we have precision and recall are
+```
+Precision @1 = 1/(1+0) = 1; Recall @1 = 1/(1+3) = 0.25.
+Precision @4 = 3/(3+1) = 0.75; Recall @4 = 3/(3+1) = 0.75.
+Precision @8 = 4/(4+4) = 0.5; Recall @8 = 4/(4+0) = 1.
+```
+Average Precision can be computed using
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{AveP(q)}&space;=&space;\sum_K&space;\big(&space;\textrm{Recall}@k&space;-&space;\textrm{Recall}@(k-1)&space;\big)*&space;\textrm{Precision}@k" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{AveP(q)}&space;=&space;\sum_K&space;\big(&space;\textrm{Recall}@k&space;-&space;\textrm{Recall}@(k-1)&space;\big)*&space;\textrm{Precision}@k" title="\textrm{AveP(q)} = \sum_K \big( \textrm{Recall}@k - \textrm{Recall}@(k-1) \big)* \textrm{Precision}@k" /></a>
+
+The article used the algrithm to calculate averge precision:
+```Python
+if document@rank k is relevant:
+    correctPrediction += 1
+    runningSum += correctPrediction/k
+```
+using the above, we have
+```
+At rank 1: RunningSum = 0 + 1/1 = 1; correctPrediciton = 1
+At rank 2: No change. wrong prediction.
+At rank 3: RunningSum = 1 + 2/3 = 1.8; correctPrediciton = 2
+At rank 4: RunningSum = 1.8 + 3/4 = 2.55; correctPrediciton = 3
+At rank 5: No change, wrong prediction.
+At rank 6: RunningSum = 2.55 + 4/6 = 3.22; correctPrediciton = 4
+At rank 7: No change, wrong prediction.
+At rank 8: No change, wrong prediction.
+```
 
 [Mean average precision]: https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision
 [[wiki: Mean average precision] Mean average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision)
