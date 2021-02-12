@@ -90,9 +90,11 @@ At rank 8: No change, wrong prediction.
 
 ### C. Discounted cumulative gain (DCG)
 
-One advantage of DCG over other metrics is that it also works if document relevances are a real number. In other words, when each document is not simply relevant/non-relevant (as in the example), but has a relevance score instead [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples].
+One advantage of DCG over other metrics is that it also works if document relevances are a real number. In other words, when each document is not simply relevant/non-relevant (as in the example), but has a relevance score instead [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{DCG@k}&space;=&space;\sum^k_{i=1}&space;\frac{2^{rel_i}-1}{\log(i&plus;1)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{DCG@k}&space;=&space;\sum^k_{i=1}&space;\frac{2^{rel_i}-1}{\log(i&plus;1)}" title="\textrm{DCG@k} = \sum^k_{i=1} \frac{2^{rel_i}-1}{\log(i+1)}" /></a>
+
+DCG **higher** is better [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
 
 ```
 At rank 1: rel_1 = 1; DCG@1= 1
@@ -107,7 +109,7 @@ At rank 8: No change, wrong prediction.
 
 ### D. Normalized Discounted Cumulative Gain (NDCG)
 
-A way to make comparison across queries fairer is to normalize the DCG score by the maximum possible DCG at each threshold
+A way to make comparison across queries fairer is to normalize the DCG score by the maximum possible DCG at each threshold [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG]
 
 ```
 NDCG@k = DCG@k/IDCG@k
@@ -136,6 +138,10 @@ Felipe Almeida
 
 [Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)]: https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418
 [[Nikhil Dandekar] Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418)
+
+
+[Evaluate your Recommendation Engine using NDCG]: https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1
+[[Pranay Chandekar] Evaluate your Recommendation Engine using NDCG](https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1)
 
 
 
