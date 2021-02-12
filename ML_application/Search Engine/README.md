@@ -60,7 +60,11 @@ where Q is the number of queries.
 
 #### Example
 
+supposed given a query, we have the following rank result:
 
+![rank_example](images/rank_example.png)
+
+The document labeled with green is relevant to query; we can regard as positives. Red ones regard as negatives.
 
 
 [Mean average precision]: https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision
