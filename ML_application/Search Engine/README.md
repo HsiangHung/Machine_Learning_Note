@@ -19,7 +19,7 @@ A decent metric that captures this notion of correct order is the count of inver
 
 ### A. Mean reciprocal rank (MRR)
 
-The mean reciprocal rank is the average of the reciprocal ranks of results for a sample of queries Q [wiki: Mean reciprocal rank](https://en.wikipedia.org/wiki/Mean_reciprocal_rank):
+The mean reciprocal rank is the average of the reciprocal ranks of results for a sample of queries Q [[wiki: Mean reciprocal rank]](https://en.wikipedia.org/wiki/Mean_reciprocal_rank):
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MRR}&space;=&space;\frac{1}{|Q|}\sum^{|Q|}_{i=1}\frac{1}{\textrm{rank}_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MRR}&space;=&space;\frac{1}{|Q|}\sum^{|Q|}_{i=1}\frac{1}{\textrm{rank}_i}" title="\textrm{MRR} = \frac{1}{|Q|}\sum^{|Q|}_{i=1}\frac{1}{\textrm{rank}_i}" /></a>
 
@@ -90,8 +90,32 @@ At rank 8: No change, wrong prediction.
 
 ### C. Discounted cumulative gain (DCG)
 
+One advantage of DCG over other metrics is that it also works if document relevances are a real number. In other words, when each document is not simply relevant/non-relevant (as in the example), but has a relevance score instead [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples].
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{DCG@k}&space;=&space;\sum^k_{i=1}&space;\frac{2^{rel_i}-1}{\log(i&plus;1)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{DCG@k}&space;=&space;\sum^k_{i=1}&space;\frac{2^{rel_i}-1}{\log(i&plus;1)}" title="\textrm{DCG@k} = \sum^k_{i=1} \frac{2^{rel_i}-1}{\log(i+1)}" /></a>
 
+```
+At rank 1: rel_1 = 1; DCG@1= 1
+At rank 2: No change. wrong prediction.
+At rank 3: rel_3 = 1; DCG@3 = DCG@2 + 1/log(1+3) = 1 + 1/2 = 1.5.
+At rank 4: rel_4 = 1; DCG@4 = DCG@3 + 1/log(1+4) = 1.93.
+At rank 5: No change, wrong prediction.
+At rank 6: rel_6 = 1; DCG@6 = DCG@5 + 1/log(1+6) = 2.29.
+At rank 7: No change, wrong prediction.
+At rank 8: No change, wrong prediction.
+```
+
+### D. Normalized Discounted Cumulative Gain (NDCG)
+
+A way to make comparison across queries fairer is to normalize the DCG score by the maximum possible DCG at each threshold
+
+```
+NDCG@k = DCG@k/IDCG@k
+```
+
+Where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. See below table:
+
+![rank_example_NDCG](images/rank_example_NDCG.png)
 
 
 
