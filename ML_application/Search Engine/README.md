@@ -57,6 +57,9 @@ Mean average precision for a set of queries is the mean of the average precision
 where Q is the number of queries.
 
 
+[Mean average precision]: https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision
+[[wiki: Mean average precision] Mean average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision)
+
 
 
 
