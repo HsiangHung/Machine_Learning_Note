@@ -46,6 +46,7 @@ If none of the proposed results are correct, reciprocal rank is 0.[1] Note that 
 
 
 
+
 Not all pairwise errors are created equal. Because we use DCG as our scoring function, it is critical that the algorithm gets the top results right.
 
 
