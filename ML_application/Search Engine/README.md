@@ -33,7 +33,7 @@ For example, suppose we have the following three sample queries for a system tha
 | Query |   Proposed Results   | Correct | Rank | Reciprocal rank
 |  cat  |  catten, cati, cats  |   cats  |   3  |     1/3
 | tori  | torii, tori, toruses |   tori  |   2  |     1/2
-| virus | viruses, virii, viri | viruses |   1
+| virus | viruses, virii, viri | viruses |   1  |      1
 ```
 Given those three samples, we could calculate the mean reciprocal rank as (1/3 + 1/2 + 1)/3 = 11/18 or about 0.61.
 
