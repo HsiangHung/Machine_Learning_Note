@@ -66,7 +66,7 @@ Typically, the n-gram model probabilities are not derived directly from frequenc
 
 
 
-n a bigram (n = 2) language model, the probability of the sentence I saw the red house is approximated as
+If the sentence is "I saw the red house", in a bigram (n = 2) language model, the probability of the sentence is approximated as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;{\text{I}})P({\text{the}}\mid&space;{\text{saw}})P({\text{red}}\mid&space;{\text{the}})P({\text{house}}\mid&space;{\text{red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{house}})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;{\text{I}})P({\text{the}}\mid&space;{\text{saw}})P({\text{red}}\mid&space;{\text{the}})P({\text{house}}\mid&space;{\text{red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{house}})}" title="{\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle )P({\text{saw}}\mid {\text{I}})P({\text{the}}\mid {\text{saw}})P({\text{red}}\mid {\text{the}})P({\text{house}}\mid {\text{red}})P(\langle /s\rangle \mid {\text{house}})}" /></a>
 
