@@ -109,7 +109,7 @@ where `k`, the size of the training context, can be a function of the center wor
 Bag-of-words and skip-gram models are the basis of the **word2vec** program [[wiki: Word2vec]][Word2vec]. As the name implies, word2vec represents each distinct word with a particular list of numbers called a vector. The vectors are chosen carefully such that a simple mathematical function (the **cosine similarity** between the vectors) indicates the level of **semantic similarity** between the words represented by those vectors.
 
 
-Instead of using neural net language models to produce actual probabilities, word2vec instead use the distributed representation encoded in the networks' **hidden** layers as representations of words; each word is then mapped onto an `n`-dimensional real vector called the word embedding, where `n` is the size of the hidden layer just before the output layer. 
+Instead of using neural net language models to produce actual probabilities, word2vec instead uses the distributed representation encoded in the networks' **hidden** layers as representations of words; each word is then mapped onto an `n`-dimensional real vector called the word embedding, where `n` is the size of the hidden layer just before the output layer. 
 
 For example, in some such models, if v is the function that maps a word `w` to its `n`-d vector representation, then
 
