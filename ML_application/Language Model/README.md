@@ -87,11 +87,11 @@ Typically, neural net language models are constructed and trained as **probabili
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P(w_{t}|\mathrm&space;{context}&space;)\,\forall&space;t\in&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P(w_{t}|\mathrm&space;{context}&space;)\,\forall&space;t\in&space;V}" title="{\displaystyle P(w_{t}|\mathrm {context} )\,\forall t\in V}" /></a>
 
-i.e., the network is trained to predict a probability distribution over the vocabulary, given some linguistic context. The network predicts usually predicts from a feature vector representing the previous k words.
+i.e., the network is trained to predict a probability distribution over the vocabulary, given some linguistic context. The network predicts usually predicts a probability from a feature vector representing the **previous** k words.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P(w_{t}|w_{t-k},\dots&space;,w_{t-1})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P(w_{t}|w_{t-k},\dots&space;,w_{t-1})}" title="{\displaystyle P(w_{t}|w_{t-k},\dots ,w_{t-1})}" /></a>
 
-Another option is to use "future" words as well as "past" words as features, so that the estimated probability is
+Another option is to use **future** words as well as **past** words as features, so that the estimated probability is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(w_{t}|w_{{t-k}},\dots&space;,w_{{t-1}},w_{{t&plus;1}},\dots&space;,w_{{t&plus;k}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_{t}|w_{{t-k}},\dots&space;,w_{{t-1}},w_{{t&plus;1}},\dots&space;,w_{{t&plus;k}})" title="P(w_{t}|w_{{t-k}},\dots ,w_{{t-1}},w_{{t+1}},\dots ,w_{{t+k}})" /></a>
 
