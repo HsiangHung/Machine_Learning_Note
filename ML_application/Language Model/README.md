@@ -74,7 +74,7 @@ whereas in a trigram (n = 3) language model, the approximation is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;,\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;\langle&space;s\rangle&space;,I)P({\text{the}}\mid&space;{\text{I,&space;saw}})P({\text{red}}\mid&space;{\text{saw,&space;the}})P({\text{house}}\mid&space;{\text{the,&space;red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{red,&space;house}})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;,\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;\langle&space;s\rangle&space;,I)P({\text{the}}\mid&space;{\text{I,&space;saw}})P({\text{red}}\mid&space;{\text{saw,&space;the}})P({\text{house}}\mid&space;{\text{the,&space;red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{red,&space;house}})}" title="{\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle ,\langle s\rangle )P({\text{saw}}\mid \langle s\rangle ,I)P({\text{the}}\mid {\text{I, saw}})P({\text{red}}\mid {\text{saw, the}})P({\text{house}}\mid {\text{the, red}})P(\langle /s\rangle \mid {\text{red, house}})}" /></a>
 
-Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted <s>.
+Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted `<s>`.
 
 
 
