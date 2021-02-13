@@ -99,9 +99,9 @@ This is called a bag-of-words model.
 
 When the feature vectors for the words in the context are combined by a continuous operation, this model is referred to as the **continuous bag-of-words architecture (CBOW)**.
 
-Instead of using neural net language models to produce actual probabilities, it is common to instead use the distributed representation encoded in the networks' "hidden" layers as representations of words; each word is then mapped onto an n-dimensional real vector called the word embedding, where n is the size of the layer just before the output layer. 
+Instead of using neural net language models to produce actual probabilities, it is common to instead use the distributed representation encoded in the networks' **hidden** layers as representations of words; each word is then mapped onto an `n`-dimensional real vector called the word embedding, where `n` is the size of the hidden layer just before the output layer. 
 
-For example, in some such models, if v is the function that maps a word w to its n-d vector representation, then
+For example, in some such models, if v is the function that maps a word `w` to its `n`-d vector representation, then
 
 ```
 v(king)-v(queen) ~ v(male) - v(female)
