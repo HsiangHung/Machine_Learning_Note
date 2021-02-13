@@ -81,7 +81,31 @@ Note that the context of the first n – 1 n-grams is filled with start-of-sente
 
 Neural language models (or continuous space language models) use continuous representations or **embeddings of words** to make their predictions. 
 
-Continuous space embeddings help to alleviate the **curse of dimensionality** in language modeling: as language models are trained on larger and larger texts, the number of unique words (the vocabulary) increases. The number of possible sequences of words **increases exponentially** with the size of the vocabulary, causing a data sparsity problem because of the exponentially many sequences. Neural networks avoid this problem by representing words in a distributed way, as non-linear combinations of weights in a neural net.
+Continuous space embeddings help to alleviate the **curse of dimensionality** in language modeling: as language models are trained on larger and larger texts, the number of unique words (the vocabulary) increases. The number of possible sequences of words **increases exponentially** with the size of the vocabulary, causing a data sparsity problem because of the exponentially many sequences. Neural networks avoid this problem by **representing words in a distributed way, as non-linear combinations of weights in a neural net**.
+
+Typically, neural net language models are constructed and trained as **probabilistic classifiers** that learn to predict a probability distribution
+
+<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P(w_{t}|\mathrm&space;{context}&space;)\,\forall&space;t\in&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P(w_{t}|\mathrm&space;{context}&space;)\,\forall&space;t\in&space;V}" title="{\displaystyle P(w_{t}|\mathrm {context} )\,\forall t\in V}" /></a>
+
+i.e., the network is trained to predict a probability distribution over the vocabulary, given some linguistic context. The network predicts usually predicts from a feature vector representing the previous k words.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P(w_{t}|w_{t-k},\dots&space;,w_{t-1})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P(w_{t}|w_{t-k},\dots&space;,w_{t-1})}" title="{\displaystyle P(w_{t}|w_{t-k},\dots ,w_{t-1})}" /></a>
+
+Another option is to use "future" words as well as "past" words as features, so that the estimated probability is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(w_{t}|w_{{t-k}},\dots&space;,w_{{t-1}},w_{{t&plus;1}},\dots&space;,w_{{t&plus;k}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_{t}|w_{{t-k}},\dots&space;,w_{{t-1}},w_{{t&plus;1}},\dots&space;,w_{{t&plus;k}})" title="P(w_{t}|w_{{t-k}},\dots ,w_{{t-1}},w_{{t+1}},\dots ,w_{{t+k}})" /></a>
+
+This is called a bag-of-words model. 
+
+When the feature vectors for the words in the context are combined by a continuous operation, this model is referred to as the **continuous bag-of-words architecture (CBOW)**.
+
+Instead of using neural net language models to produce actual probabilities, it is common to instead use the distributed representation encoded in the networks' "hidden" layers as representations of words; each word is then mapped onto an n-dimensional real vector called the word embedding, where n is the size of the layer just before the output layer. 
+
+For example, in some such models, if v is the function that maps a word w to its n-d vector representation, then
+
+```
+v(king)-v(queen) ~ v(male) - v(female)
+```
 
 
 ## Reference
