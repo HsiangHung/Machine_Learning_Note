@@ -64,5 +64,19 @@ The terms bigram and trigram language models denote n-gram models with n = 2 and
 
 Typically, the n-gram model probabilities are not derived directly from frequency counts, because models derived this way have severe problems when confronted with any n-grams that have not been explicitly seen before. Instead, some form of smoothing is necessary, assigning some of the total probability mass to unseen words or n-grams.
 
+
+
+n a bigram (n = 2) language model, the probability of the sentence I saw the red house is approximated as
+
+<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;{\text{I}})P({\text{the}}\mid&space;{\text{saw}})P({\text{red}}\mid&space;{\text{the}})P({\text{house}}\mid&space;{\text{red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{house}})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;{\text{I}})P({\text{the}}\mid&space;{\text{saw}})P({\text{red}}\mid&space;{\text{the}})P({\text{house}}\mid&space;{\text{red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{house}})}" title="{\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle )P({\text{saw}}\mid {\text{I}})P({\text{the}}\mid {\text{saw}})P({\text{red}}\mid {\text{the}})P({\text{house}}\mid {\text{red}})P(\langle /s\rangle \mid {\text{house}})}" /></a>
+
+whereas in a trigram (n = 3) language model, the approximation is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;,\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;\langle&space;s\rangle&space;,I)P({\text{the}}\mid&space;{\text{I,&space;saw}})P({\text{red}}\mid&space;{\text{saw,&space;the}})P({\text{house}}\mid&space;{\text{the,&space;red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{red,&space;house}})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;,\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;\langle&space;s\rangle&space;,I)P({\text{the}}\mid&space;{\text{I,&space;saw}})P({\text{red}}\mid&space;{\text{saw,&space;the}})P({\text{house}}\mid&space;{\text{the,&space;red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{red,&space;house}})}" title="{\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle ,\langle s\rangle )P({\text{saw}}\mid \langle s\rangle ,I)P({\text{the}}\mid {\text{I, saw}})P({\text{red}}\mid {\text{saw, the}})P({\text{house}}\mid {\text{the, red}})P(\langle /s\rangle \mid {\text{red, house}})}" /></a>
+
+Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted <s>.
+
+
+
 [Language model]: https://en.wikipedia.org/wiki/Language_model
 [[wiki: Language model] Language model](https://en.wikipedia.org/wiki/Language_model)
