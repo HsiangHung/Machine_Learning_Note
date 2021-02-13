@@ -40,9 +40,9 @@ Different documents have unigram models, with different hit probabilities of wor
 
 ```
    term   |  a | world | likes |  we  | share | ... 
---------------------------------------------------------------
+------------------------------------------------------
 P in doc1 | 0.1|  0.2  | 0.05  | 0.05 |  0.3  | ...
---------------------------------------------------------------
+------------------------------------------------------
 P in doc2 | 0.3|  0.1  | 0.03  | 0.02 |  0.4  | ...
 ```
 If P in doc2 > P in doc1, then rank doc2 in front of doc1. 
@@ -56,7 +56,13 @@ In an n-gram model, the probability `P(w_1,... ,w_m)` of observing the sentence 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(w_1,\cdots,&space;w_m)&space;=&space;\prod^m_{i=1}P(w_i|w_1,&space;\cdots,&space;w_{i-1})&space;\simeq&space;\prod^m_{i=1}P(w_i|w_{i-(n-1)},&space;\cdots,&space;w_{i-1})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_1,\cdots,&space;w_m)&space;=&space;\prod^m_{i=1}P(w_i|w_1,&space;\cdots,&space;w_{i-1})&space;\simeq&space;\prod^m_{i=1}P(w_i|w_{i-(n-1)},&space;\cdots,&space;w_{i-1})" title="P(w_1,\cdots, w_m) = \prod^m_{i=1}P(w_i|w_1, \cdots, w_{i-1}) \simeq \prod^m_{i=1}P(w_i|w_{i-(n-1)}, \cdots, w_{i-1})" /></a>
 
+The conditional probability can be calculated from n-gram model frequency counts:
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(w_i|w_{i-(n-1)},&space;\cdots,&space;w_{i-1})&space;=&space;\frac{P(w_{i-(n-1)},&space;\cdots,&space;w_{i-1},&space;w_i)}{P(w_{i-(n-1)},&space;\cdots,&space;w_{i-1})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_i|w_{i-(n-1)},&space;\cdots,&space;w_{i-1})&space;=&space;\frac{P(w_{i-(n-1)},&space;\cdots,&space;w_{i-1},&space;w_i)}{P(w_{i-(n-1)},&space;\cdots,&space;w_{i-1})}" title="P(w_i|w_{i-(n-1)}, \cdots, w_{i-1}) = \frac{P(w_{i-(n-1)}, \cdots, w_{i-1}, w_i)}{P(w_{i-(n-1)}, \cdots, w_{i-1})}" /></a>
+
+The terms bigram and trigram language models denote n-gram models with n = 2 and n = 3, respectively.
+
+Typically, the n-gram model probabilities are not derived directly from frequency counts, because models derived this way have severe problems when confronted with any n-grams that have not been explicitly seen before. Instead, some form of smoothing is necessary, assigning some of the total probability mass to unseen words or n-grams.
 
 [Language model]: https://en.wikipedia.org/wiki/Language_model
 [[wiki: Language model] Language model](https://en.wikipedia.org/wiki/Language_model)
