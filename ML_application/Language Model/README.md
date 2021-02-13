@@ -99,7 +99,7 @@ This is called a bag-of-words model.
 
 When the feature vectors for the words in the context are combined by a continuous operation, this model is referred to as the **continuous bag-of-words architecture (CBOW)**.
 
-given a sequence of training words {\displaystyle w_{1},w_{2},w_{3},\dots ,w_{T}}{\displaystyle w_{1},w_{2},w_{3},\dots ,w_{T}}, one maximizes the average log-probability
+given a sequence of training words `w_{1},w_{2},... ,w_{T}`, one maximizes the average log-probability
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\frac&space;{1}{T}}\sum&space;_{t=1}^{T}\sum&space;_{-k\leq&space;j\leq&space;k,j\neq&space;0}\log&space;P(w_{t&plus;j}|w_{t})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\frac&space;{1}{T}}\sum&space;_{t=1}^{T}\sum&space;_{-k\leq&space;j\leq&space;k,j\neq&space;0}\log&space;P(w_{t&plus;j}|w_{t})" title="{\frac {1}{T}}\sum _{t=1}^{T}\sum _{-k\leq j\leq k,j\neq 0}\log P(w_{t+j}|w_{t})" /></a>
 
