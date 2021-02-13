@@ -4,7 +4,7 @@
 
 A statistical language model is a probability distribution over sequences of words. Given such a sequence, say of length m, it assigns a probability `P(w_1,... ,w_m)` to the whole sequence [[wiki: Language model]][Language model].
 
-Data sparsity is a major problem in building language models. Most possible word sequences are not observed in training. One solution is to make the assumption that the probability of a word only depends on the previous `n` words; this is known as an `n`-gram model. When `n=1` it is the unigram model, known as the **bag of words model**.
+**Data sparsity** is a major problem in building language models. Most possible word sequences are not observed in training. One solution is to make the assumption that the probability of a word only depends on the previous `n` words; this is known as an `n`-gram model. When `n=1` it is the unigram model, known as the **bag of words model**.
 
 
 Language models are used in information retrieval in the **query likelihood model**. There, a separate language model is associated with each document in a collection. Documents are ranked based on the probability of the query Q in the document's language model `M` `P(Q|M)`. Commonly, the unigram language model is used for this purpose [[wiki: Language model]][Language model].
@@ -76,6 +76,12 @@ whereas in a trigram (n = 3) language model, the approximation is
 
 Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted `<s>`.
 
+
+## Neural Networks
+
+Neural language models (or continuous space language models) use continuous representations or **embeddings of words** to make their predictions. 
+
+Continuous space embeddings help to alleviate the **curse of dimensionality** in language modeling: as language models are trained on larger and larger texts, the number of unique words (the vocabulary) increases. The number of possible sequences of words **increases exponentially** with the size of the vocabulary, causing a data sparsity problem because of the exponentially many sequences. Neural networks avoid this problem by representing words in a distributed way, as non-linear combinations of weights in a neural net.
 
 
 ## Reference
