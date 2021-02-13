@@ -104,9 +104,9 @@ given a sequence of training words `w_{1},w_{2},... ,w_{T}`, one maximizes the a
 <a href="https://www.codecogs.com/eqnedit.php?latex={\frac&space;{1}{T}}\sum&space;_{t=1}^{T}\sum&space;_{-k\leq&space;j\leq&space;k,j\neq&space;0}\log&space;P(w_{t&plus;j}|w_{t})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\frac&space;{1}{T}}\sum&space;_{t=1}^{T}\sum&space;_{-k\leq&space;j\leq&space;k,j\neq&space;0}\log&space;P(w_{t&plus;j}|w_{t})" title="{\frac {1}{T}}\sum _{t=1}^{T}\sum _{-k\leq j\leq k,j\neq 0}\log P(w_{t+j}|w_{t})" /></a>
 
 
-where k, the size of the training context, can be a function of the center word `wt`. This is called a **skip-gram** language model.
+where `k`, the size of the training context, can be a function of the center word `wt`. This is called a **skip-gram** language model.
 
-Bag-of-words and skip-gram models are the basis of the word2vec program [[wiki: Word2vec] Word2vec]. As the name implies, word2vec represents each distinct word with a particular list of numbers called a vector. The vectors are chosen carefully such that a simple mathematical function (the cosine similarity between the vectors) indicates the level of semantic similarity between the words represented by those vectors.
+Bag-of-words and skip-gram models are the basis of the word2vec program [[wiki: Word2vec]][Word2vec]. As the name implies, word2vec represents each distinct word with a particular list of numbers called a vector. The vectors are chosen carefully such that a simple mathematical function (the cosine similarity between the vectors) indicates the level of semantic similarity between the words represented by those vectors.
 
 
 Instead of using neural net language models to produce actual probabilities, it is common to instead use the distributed representation encoded in the networks' **hidden** layers as representations of words; each word is then mapped onto an `n`-dimensional real vector called the word embedding, where `n` is the size of the hidden layer just before the output layer. 
