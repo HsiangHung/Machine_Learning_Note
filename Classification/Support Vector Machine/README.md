@@ -15,7 +15,7 @@ The support vectors are formed by the data laying along the margin.
 
 In the upper right panel, we classify blue instances as positives 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{+}&space;-b&space;\geq&space;1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_b&space;-b&space;\geq&space;1," title="\vec{w}\cdot \vec{x}_{+} -b \geq 1," /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{+}&space;-b&space;\geq&space;1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_{+}&space;-b&space;\geq&space;1," title="\vec{w}\cdot \vec{x}_{+} -b \geq 1," /></a>
 
 ## Cost Function
 
