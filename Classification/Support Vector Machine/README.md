@@ -11,6 +11,7 @@ Support vectors are data points that are closer to the hyperplane and influence 
 
 ![support_vectors](images/support_vector.png)
 
+The support vectors are formed by the data laying along the margin.
 
 In the upper right panel, we classify blue instances as positives 
 
