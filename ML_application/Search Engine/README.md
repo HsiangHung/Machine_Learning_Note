@@ -135,11 +135,11 @@ Where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the
 
 ## Amazon 
 
+[Daria Sorokina - Amazon Search: The Joy of Ranking Products - MLconf SF 2016](https://www.youtube.com/watch?v=NLrhmn-EZ88&list=PLCsjIud8mFqzb_FAWTL9ewiNWHvNoDigM)
 
 
 ## Reference
 
-Felipe Almeida
 
 [Evaluation Metrics for Ranking problems: Introduction and Examples]: https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples
 [[Felipe Almeida] Evaluation Metrics for Ranking problems: Introduction and Examples](https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples)
