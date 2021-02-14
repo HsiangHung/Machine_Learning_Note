@@ -12,6 +12,10 @@ Support vectors are data points that are closer to the hyperplane and influence 
 ![support_vectors](images/support_vector.png)
 
 
+In the upper right panel, we classify blue instances as positives 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{+}&space;-b&space;\geq&space;1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_b&space;-b&space;\geq&space;1," title="\vec{w}\cdot \vec{x}_{+} -b \geq 1," /></a>
+
 ## Cost Function
 
 The cost function of SVM is very similar to that of Logistic Regression. Looking at it by y = 1 and y = 0 separately in below plot, the black line is the cost function of Logistic Regression, and the red line is for SVM. Please note that the X axis here is the raw model output, θᵀx. 
