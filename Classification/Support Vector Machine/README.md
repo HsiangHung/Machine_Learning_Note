@@ -66,7 +66,7 @@ Since it turns to the data size as number of features, SVM is probably not suita
 Many SVM packages have built in multi-class classification. Otherwise use one-vs-all method. For `K` classes, train `K` SVMs, each identifies if y = 1 for class {1,2,...K}. We pick class i for largest θᵀx_i.
 
 
-The main differences between SVM and Logistic regression (LR) [[Georgios Drakos][Support Vector Machine vs Logistic Regression]:
+The main differences between SVM and Logistic regression (LR) [[Georgios Drakos]][Support Vector Machine vs Logistic Regression]:
 
 * SVM try to maximize the margin between the closest support vectors while LR optimizes the posterior class probability (log likelihood function). Thus, SVM find a solution which is as fare as possible for the two categories while LR has not this property.
 * LR is more sensitive to outliers than SVM because the cost function of LR diverges faster than those of SVM.
