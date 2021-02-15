@@ -187,8 +187,8 @@ As we discussed earlier, the size of the improvement target determines how long 
 
 A talk from A9 search team by [Daria Sorokina - Amazon Search: The Joy of Ranking Products](https://www.youtube.com/watch?v=NLrhmn-EZ88&list=PLCsjIud8mFqzb_FAWTL9ewiNWHvNoDigM) in MLconf SF 2016 conference.
 
-Set up your products for visibility and sales in Amazon wesbite search [[George Nguyen]][Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility]:
-* Product detail page copy - keyword research is harvesting your advertising.
+Set up your products for visibility and sales in Amazon wesbite search [[George Nguyen]][Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility], [[Chris Dunne]][Everything You Need To Know About Amazon’s A9 Algorithm]:
+* Product detail page - keyword research is harvesting your advertising; include as many keywords as possible in product listing (namely, the title and bullet points).
 * Product images & video -  Show your product from different angles and have a high enough resolution that shoppers can zoom in to thoroughly examine it.
 * EBC/A+ EMC content - content formats may increase your sales by as much as 10%
 * Price
@@ -205,9 +205,12 @@ Set up your products for visibility and sales in Amazon wesbite search [[George 
 [[George Nguyen] Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility](https://searchengineland.com/amazons-a9-product-ranking-algorithm-beginners-guide-329801)
 
 
+[Everything You Need To Know About Amazon’s A9 Algorithm]: https://www.repricerexpress.com/amazons-algorithm-a9/
+[[Chris Dunne] Everything You Need To Know About Amazon’s A9 Algorithm](https://www.repricerexpress.com/amazons-algorithm-a9/)
+
+
 [How Does Amazon's Search Algorithm Work?]: https://www.omniaretail.com/blog/how-does-amazons-search-algorithm-work
 [[Grace Baldwin] How Does Amazon's Search Algorithm Work?](https://www.omniaretail.com/blog/how-does-amazons-search-algorithm-work)
-
 
 
 
