@@ -185,7 +185,24 @@ As we discussed earlier, the size of the improvement target determines how long 
 
 ## Amazon 
 
-[Daria Sorokina - Amazon Search: The Joy of Ranking Products - MLconf SF 2016](https://www.youtube.com/watch?v=NLrhmn-EZ88&list=PLCsjIud8mFqzb_FAWTL9ewiNWHvNoDigM)
+A talk from A9 search team by [Daria Sorokina - Amazon Search: The Joy of Ranking Products](https://www.youtube.com/watch?v=NLrhmn-EZ88&list=PLCsjIud8mFqzb_FAWTL9ewiNWHvNoDigM) in MLconf SF 2016 conference.
+
+Set up your products for visibility and sales in Amazon wesbite search :
+* Product detail page copy - keyword research is harvesting your advertising.
+* Product images & video -  Show your product from different angles and have a high enough resolution that shoppers can zoom in to thoroughly examine it.
+* EBC/A+ EMC content - content formats may increase your sales by as much as 10%
+* Price
+* Availability
+* Ratings and reviews - take care customer's bad reviews if needed. Amazon also rewards sellers that prioritize customer service
+* Advertisements - Buying ads will not inherently boost your organic rankings. However, paid placements take up prime slots on the search results page, which can increase traffic to a product listing and drive sales
+* Fulfillment method - If you have late or missed shipments, cancellations, etc., each thing dings your seller score
+
+
+### Reference
+
+
+[Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility]: https://searchengineland.com/amazons-a9-product-ranking-algorithm-beginners-guide-329801
+[[George Nguyen] Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility](https://searchengineland.com/amazons-a9-product-ranking-algorithm-beginners-guide-329801)
 
 
 [How Does Amazon's Search Algorithm Work?]: https://www.omniaretail.com/blog/how-does-amazons-search-algorithm-work
