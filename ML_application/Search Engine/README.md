@@ -187,7 +187,7 @@ As we discussed earlier, the size of the improvement target determines how long 
 
 A talk from A9 search team by [Daria Sorokina - Amazon Search: The Joy of Ranking Products](https://www.youtube.com/watch?v=NLrhmn-EZ88&list=PLCsjIud8mFqzb_FAWTL9ewiNWHvNoDigM) in MLconf SF 2016 conference.
 
-Set up your products for visibility and sales in Amazon wesbite search :
+Set up your products for visibility and sales in Amazon wesbite search [[George Nguyen]][Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility]:
 * Product detail page copy - keyword research is harvesting your advertising.
 * Product images & video -  Show your product from different angles and have a high enough resolution that shoppers can zoom in to thoroughly examine it.
 * EBC/A+ EMC content - content formats may increase your sales by as much as 10%
