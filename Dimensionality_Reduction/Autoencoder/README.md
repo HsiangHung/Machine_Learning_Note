@@ -41,7 +41,7 @@ The second is the regularization term to **penalize the activations** of hidden 
 
    <a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;&plus;&space;\sum_{h}\sum_i&space;|a^{(h)}_i|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;&plus;&space;\sum_{h}\sum_i&space;|a^{(h)}_i|" title="C(x,\hat{x}) + \sum_{h}\sum_i |a^{(h)}_i|" /></a>
 
-2. KL-Divergence: In essence, KL-divergence is a measure of the difference between two probability distributions. Suppose we will write a(2)j(x) to denote the activation of this hidden unit when the network is given a specific input x,
+2. KL-Divergence: In essence, KL-divergence is a measure of the difference between two probability distributions. Suppose we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a>  to denote the activation of the `j`-th hidden unit of hidden layer `h`, when the network is given a specific input x, then
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;[a^{(h)}_j(x^{(i)})]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;[a^{(h)}_j(x^{(i)})]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} [a^{(h)}_j(x^{(i)})]" /></a>
 
