@@ -47,7 +47,7 @@ or KL-Divergence: In essence, KL-divergence is a measure of the difference betwe
 
 be the average activation of hidden unit j (averaged over the training set). We would like to (approximately) enforce the constraint 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\rho" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\rho" title="\hat{\rho}_j = \rho" /></a>.
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x^{(i)})&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x^{(i)})&space;\big]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x^{(i)}) \big]" /></a>
 
 where `ρ` is a ”‘sparsity parameter”’, typically a small value close to zero (say ρ=0.05). In other words, we would like the average activation of each hidden neuron j to be close to 0.05 (say). 
 
