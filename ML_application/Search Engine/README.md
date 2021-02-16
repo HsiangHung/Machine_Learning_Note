@@ -41,7 +41,7 @@ The mean reciprocal rank is the average of the reciprocal ranks of results for a
 where `rank_i` refers to the rank position of the **first** relevant document for the i-th query.
 
 #### Example
-For example, suppose we have the following three sample queries for a system that tries to translate English words to their plurals. In each case, the system makes three guesses, with the first one being the one it thinks is most likely correct:
+For example, suppose we have the following three sample queries for a system that tries to translate English words to their plurals. In each case, the system makes three guesses, with the first one being the one it thinks is most likely correct  [[wiki: Mean reciprocal rank]](https://en.wikipedia.org/wiki/Mean_reciprocal_rank):
 
 ```
 | Query |   Proposed Results   | Correct | Rank | Reciprocal rank
@@ -49,9 +49,20 @@ For example, suppose we have the following three sample queries for a system tha
 | tori  | torii, tori, toruses |   tori  |   2  |     1/2
 | virus | viruses, virii, viri | viruses |   1  |      1
 ```
-Given those three samples, we could calculate the mean reciprocal rank as (1/3 + 1/2 + 1)/3 = 11/18 or about 0.61.
+Given those three samples, we could calculate the MRR as (1/3 + 1/2 + 1)/3 = 11/18 or about 0.61.
 
-If none of the proposed results are correct, reciprocal rank is 0.[1] Note that only the rank of the first relevant answer is considered, possible further relevant answers are ignored. If users are interested also in further relevant items, **mean average precision** is a potential alternative metric.
+If our search engine works perfectly, we will have 
+```
+| Query |   Proposed Results   | Correct | Rank | Reciprocal rank
+|  cat  |  cats, catten, cati  |   cats  |   1  |      1
+| tori  | tori, torii, toruses |   tori  |   1  |      1
+| virus | viruses, virii, viri | viruses |   1  |      1
+```
+then the MRR = (1 + 1 + 1)/3 = 1. 
+
+Therefore, larger MRR better SEO, and if none of the proposed results are correct, reciprocal rank is 0. 
+
+Note that only the rank of the **first relevant answer** is considered, possible further relevant answers are ignored. If users are interested also in further relevant items, **mean average precision** is a potential alternative metric.
 
 
 ### B. Mean average precision (MAP)
