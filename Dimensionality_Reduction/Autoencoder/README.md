@@ -45,16 +45,18 @@ or KL-Divergence: In essence, KL-divergence is a measure of the difference betwe
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;[a^{(h)}_j(x^{(i)})]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;[a^{(h)}_j(x^{(i)})]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} [a^{(h)}_j(x^{(i)})]" /></a> 
 
-be the average activation of hidden unit j (averaged over the training set). We would like to (approximately) enforce the constraint
+be the average activation of hidden unit j (averaged over the training set). We would like to (approximately) enforce the constraint 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\rho" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\rho" title="\hat{\rho}_j = \rho" /></a>.
 
-where ρ is a ”‘sparsity parameter”’, typically a small value close to zero (say ρ=0.05). In other words, we would like the average activation of each hidden neuron j to be close to 0.05 (say). penalty term to our optimization objective that penalizes ρ̂ j deviating significantly from ρ, which is
+where `ρ` is a ”‘sparsity parameter”’, typically a small value close to zero (say ρ=0.05). In other words, we would like the average activation of each hidden neuron j to be close to 0.05 (say). 
 
+Therefore the penalty term to our optimization objective that penalizes <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> deviating significantly from ρ  is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{regularization}&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\Big(&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{regularization}&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\Big(&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}&space;\Big)" title="\textrm{regularization} = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \textrm{KL}(\rho || \hat{\rho}_j) = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \Big( \rho \log\frac{\rho}{\hat{\rho_j}} + (1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}} \Big)" /></a>
 
 
-KL is the Kullback-Leibler (KL) divergence between a Bernoulli random variable with mean ρ and a Bernoulli random variable with mean ρ̂_j. KL-divergence is a standard function for measuring how different two different distributions are.
+
 
 
 
