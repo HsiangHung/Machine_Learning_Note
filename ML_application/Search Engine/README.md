@@ -60,7 +60,7 @@ If our search engine works perfectly, we will have
 ```
 then the MRR = (1 + 1 + 1)/3 = 1. 
 
-Therefore, larger MRR better SEO, and if none of the proposed results are correct, reciprocal rank is 0. 
+Therefore, **larger MRR better SEO**, and if none of the proposed results are correct, reciprocal rank is 0. 
 
 Note that only the rank of the **first relevant answer** is considered, possible further relevant answers are ignored. If users are interested also in further relevant items, **mean average precision** is a potential alternative metric.
 
@@ -81,15 +81,16 @@ where Q is the number of queries.
 
 #### Example
 
-supposed given a query, we have the following rank result:
+supposed given a query, we have the following rank result (credit from [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples]):
 
 ![rank_example](images/rank_example.png)
 
 The document labeled with green is relevant to query; we can regard as positives. Red ones regard as negatives. Then we have precision and recall are
 ```
-Precision @1 = 1/(1+0) = 1; Recall @1 = 1/(1+3) = 0.25.
+Precision @1 = 1/(1+0) = 1;    Recall @1 = 1/(1+3) = 0.25.
+Precision @3 = 2/(2+1) = 0.66; Recall @3 = 2/(2+2) = 0.5.
 Precision @4 = 3/(3+1) = 0.75; Recall @4 = 3/(3+1) = 0.75.
-Precision @8 = 4/(4+4) = 0.5; Recall @8 = 4/(4+0) = 1.
+Precision @8 = 4/(4+4) = 0.5;  Recall @8 = 4/(4+0) = 1.
 ```
 Average Precision can be computed using
 
@@ -100,18 +101,36 @@ The article [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduc
 if document@rank k is relevant:
     correctPrediction += 1
     runningSum += correctPrediction/k
+
+AP@k = runnungSum@k/CorrectPrediction@k
 ```
 using the above, we have
 ```
-At rank 1: RunningSum = 0 + 1/1 = 1; correctPrediciton = 1
-At rank 2: No change. wrong prediction.
-At rank 3: RunningSum = 1 + 2/3 = 1.8; correctPrediciton = 2
-At rank 4: RunningSum = 1.8 + 3/4 = 2.55; correctPrediciton = 3
+At rank 1: RunningSum = 0 + 1/1 = 1; correctPrediciton = 1; AP@1 = 1
+At rank 2: No change. wrong prediction.           
+At rank 3: RunningSum = 1 + 2/3 = 1.8; correctPrediciton = 2; AP@3 = 1.8/2 = 0.9
+At rank 4: RunningSum = 1.8 + 3/4 = 2.55; correctPrediciton = 3; AP@4 = 2.55/3 = 0.83
 At rank 5: No change, wrong prediction.
-At rank 6: RunningSum = 2.55 + 4/6 = 3.22; correctPrediciton = 4
+At rank 6: RunningSum = 2.55 + 4/6 = 3.22; correctPrediciton = 4; AP@6 = 3.22/4 = 0.8
 At rank 7: No change, wrong prediction.
 At rank 8: No change, wrong prediction.
 ```
+AP (Average Precision) is a metric that tells you how a single sorted prediction compares with the ground truth. MAP is to evaluate on a whole validation set, and defines as the sum the AP value for each example in a validation dataset and then divide by the number of examples (1 + 1 + 0.9 + 0.83 + 0.83 + 0.8 + ..)/8.
+
+
+
+Suppose our SEO is perfect, i.e. all relevant documents rank the top 4, then we have 
+```
+At rank 1: RunningSum = 0 + 1/1 = 1; correctPrediciton = 1; AP@1 = 1
+At rank 2: RunningSum = 1 + 2/2 = 2; correctPrediciton = 2; AP@2 = 1
+At rank 3: RunningSum = 2 + 3/3 = 3; correctPrediciton = 3; AP@3 = 1
+At rank 4: RunningSum = 3 + 4/4 = 4; correctPrediciton = 4; AP@4 = 1
+At rank 5: No change, wrong prediction.
+At rank 6: No change, wrong prediction.
+At rank 7: No change, wrong prediction.
+At rank 8: No change, wrong prediction.
+```
+then the MAP is given by 1.
 
 
 ### C. Discounted cumulative gain (DCG)
