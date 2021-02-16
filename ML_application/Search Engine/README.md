@@ -40,7 +40,12 @@ The mean reciprocal rank is the average of the reciprocal ranks of results for a
 
 where `rank_i` refers to the rank position of the **first** relevant document for the i-th query.
 
-#### Example
+**Larger MRR better SEO**, and if none of the proposed results are correct, reciprocal rank is 0. 
+
+Note that only the rank of the **first relevant answer** is considered, possible further relevant answers are ignored. If users are interested also in further relevant items, **mean average precision** is a potential alternative metric.
+
+#### Example 1
+
 For example, suppose we have the following three sample queries for a system that tries to translate English words to their plurals. In each case, the system makes three guesses, with the first one being the one it thinks is most likely correct  [[wiki: Mean reciprocal rank]](https://en.wikipedia.org/wiki/Mean_reciprocal_rank):
 
 ```
@@ -51,6 +56,8 @@ For example, suppose we have the following three sample queries for a system tha
 ```
 Given those three samples, we could calculate the MRR as (1/3 + 1/2 + 1)/3 = 11/18 or about 0.61.
 
+#### Example 2
+
 If our search engine works perfectly, we will have 
 ```
 | Query |   Proposed Results   | Correct | Rank | Reciprocal rank
@@ -60,9 +67,6 @@ If our search engine works perfectly, we will have
 ```
 then the MRR = (1 + 1 + 1)/3 = 1. 
 
-Therefore, **larger MRR better SEO**, and if none of the proposed results are correct, reciprocal rank is 0. 
-
-Note that only the rank of the **first relevant answer** is considered, possible further relevant answers are ignored. If users are interested also in further relevant items, **mean average precision** is a potential alternative metric.
 
 
 ### B. Mean average precision (MAP)
@@ -79,7 +83,7 @@ Mean average precision for a set of queries is the mean of the average precision
 
 where Q is the number of queries.
 
-#### Example
+#### Example 1
 
 supposed given a query, we have the following rank result (credit from [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples]):
 
@@ -115,9 +119,9 @@ At rank 6: RunningSum = 2.55 + 4/6 = 3.22; correctPrediciton = 4; AP@6 = 3.22/4 
 At rank 7: No change, wrong prediction.
 At rank 8: No change, wrong prediction.
 ```
-AP (Average Precision) is a metric that tells you how a single sorted prediction compares with the ground truth. MAP is to evaluate on a whole validation set, and defines as the sum the AP value for each example in a validation dataset and then divide by the number of examples (1 + 1 + 0.9 + 0.83 + 0.83 + 0.8 + ..)/8.
+AP (Average Precision) is a metric that tells you how a single sorted prediction compares with the ground truth. MAP is to evaluate on a whole validation set, and defines as the sum the AP value for each example in a validation dataset and then divide by the number of examples (1 + 1 + 0.9 + 0.83 + 0.83 + 0.8 + ..)/8=0.97.
 
-
+#### Example 2
 
 Suppose our SEO is perfect, i.e. all relevant documents rank the top 4, then we have 
 ```
