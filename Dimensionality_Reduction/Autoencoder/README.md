@@ -33,9 +33,17 @@ Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders
 
 The first term comes the reconstruction cost `C(x,x̂)`, which is the same as the cost function in [supervised neural networks](http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/). If followed Andrew Ng's Machine Learning class's notation, it reads
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;=&space;J(\Theta)=&space;\Big(&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2&space;\Big)&space;&plus;&space;\frac{\lambda}{2}\sum^{n_l-1}_{l=1}\sum^{s_l}_{i=1}\sum^{s_{l&plus;1}}_{j=1}&space;(\theta^l_{ji})^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;=&space;J(\Theta)=&space;\Big(&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2&space;\Big)&space;&plus;&space;\frac{\lambda}{2}\sum^{n_l-1}_{l=1}\sum^{s_l}_{i=1}\sum^{s_{l&plus;1}}_{j=1}&space;(\theta^l_{ji})^2" title="C(x,\hat{x}) = J(\Theta)= \Big( \frac{1}{m}\sum^m_{i=1} \frac{1}{2}|| h_{\Theta}(x_i) -y_i ||^2 \Big) + \frac{\lambda}{2}\sum^{n_l-1}_{l=1}\sum^{s_l}_{i=1}\sum^{s_{l+1}}_{j=1} (\theta^l_{ji})^2" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" title="C(x,\hat{x}) = J(\Theta)= \frac{1}{m}\sum^m_{i=1} \frac{1}{2}|| h_{\Theta}(x_i) -y_i ||^2" /></a>
 
-The second is the regularization term to penalize the activations of hidden units
+The second is the regularization term to **penalize the activations** of hidden units. There are two main ways to penalize the activation:
+
+1. L1 Regularization:
+
+   <a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;&plus;&space;\sum_{h}\sum_i&space;|a^{(h)}_i|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;&plus;&space;\sum_{h}\sum_i&space;|a^{(h)}_i|" title="C(x,\hat{x}) + \sum_{h}\sum_i |a^{(h)}_i|" /></a>
+
+2. KL-Divergence: In essence, KL-divergence is a measure of the difference between two probability distributions. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;[a^{(h)}_j(x^{(i)})]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;[a^{(h)}_j(x^{(i)})]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} [a^{(h)}_j(x^{(i)})]" /></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{regularization}&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\Big(&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{regularization}&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\Big(&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}&space;\Big)" title="\textrm{regularization} = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \textrm{KL}(\rho || \hat{\rho}_j) = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \Big( \rho \log\frac{\rho}{\hat{\rho_j}} + (1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}} \Big)" /></a>
 
