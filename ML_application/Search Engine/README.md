@@ -171,6 +171,7 @@ Where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the
 ![rank_example_NDCG](images/rank_example_NDCG.png)
 
 
+**Note that in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p producing an nDCG = 1.0.**
 
 ### Reference
 
