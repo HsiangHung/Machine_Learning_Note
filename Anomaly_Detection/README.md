@@ -139,9 +139,18 @@ One of approaches to solving the imbalance problem is to discard the minority ex
 
 Isolation forest’s basic principle is that outliers are few and far from the rest of the observations. For prediction, it compares an observation against that splitting value in a “node”, that node will have two node children on which another **random** comparisons will be made.  In these trees, partitions are created by first **randomly selecting a feature** and then **selecting a random split** value between the minimum and maximum value of the selected feature. 
 
-The number of “splittings” made by the algorithm for an instance is named: “path length”. As expected, outliers will have shorter path lengths than the rest of the observations. Also see the [notebook example](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Anomaly_Detection/outlier_methods_sklearn.ipynb).
+In the isolation forest method, an outlier score can computed for each observation (from [wiki](https://en.wikipedia.org/wiki/Isolation_forest)):
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=s(x,&space;n)&space;=&space;2^{-\frac{E(h(x))}{c(n)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s(x,&space;n)&space;=&space;2^{-\frac{E(h(x))}{c(n)}}" title="s(x, n) = 2^{-\frac{E(h(x))}{c(n)}}" /></a>
+
+where `E(h(x))` is the average value of `h(x)` from a collection of iTrees; `h(x)` is the "path length" of the sample `x`, and `c(n)` is the ‘unsuccessful length search’ of a binary tree (the maximum path length of a binary tree from root to external node) `n` is the number of external nodes. 
+
+
+“path length” is defined as the number of “splittings” made by the algorithm for an instance. As shown below, outliers will have shorter path lengths than the rest of the observations. Also see the [notebook example](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Anomaly_Detection/outlier_methods_sklearn.ipynb).
 
 ![isolation_forest](images/isolation_forest.png)
+
+If score `s(x,n)` is close to 1, then `x` is very likely to be an anomaly. On the other hand, if the score is smaller than 0.5, then `x` is likely to be a normal value. The determination threshold can be specified, i.e. 0.55 or 0.60, not just at 0.5.
 
 The cons of isolation forest include that visualizing results is complicated, and if not correctly optimized, training time can be very long and computationally expensive [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
@@ -212,6 +221,9 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 [Fraud Detection Under Extreme Class Imbalance]: https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c
 [[Syed Sadat Nazrul] Fraud Detection Under Extreme Class Imbalance](https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c)
+
+
+
 
 
 
