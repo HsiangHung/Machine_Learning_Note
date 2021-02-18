@@ -150,7 +150,9 @@ where `E(h(x))` is the average value of `h(x)` from a collection of iTrees; `h(x
 
 ![isolation_forest](images/isolation_forest.png)
 
-If score `s(x,n)` is close to 1, then `x` is very likely to be an anomaly. On the other hand, if the score is smaller than 0.5, then `x` is likely to be a normal value. The determination threshold can be specified, i.e. 0.55 or 0.60, not just at 0.5.
+If the outlier score `s(x,n)` is close to 1, then `x` is very likely to be an anomaly. On the other hand, if the score is smaller than 0.5, then `x` is likely to be a normal value. Thus smaller `E(h(x))` (shorter path length) and larger `c(n)` cause a larger outleir score. 
+
+The determination threshold can be specified, i.e. 0.55 or 0.60, not just at 0.5.
 
 The cons of isolation forest include that visualizing results is complicated, and if not correctly optimized, training time can be very long and computationally expensive [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
