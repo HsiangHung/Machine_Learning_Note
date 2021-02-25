@@ -126,6 +126,13 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 
 ### A. Cross-entropy 
 
+The cross-entropy of the generic form is 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-\sum_x&space;\sum_c&space;p_c(x)&space;\log&space;q_c(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-\sum_x&space;\sum_c&space;p_c(x)&space;\log&space;q_c(x)" title="L = -\sum_x \sum_c p_c(x) \log q_c(x)" /></a>
+
+where `x` is data records, and `c` denotes class labels.
+
+For binary classification, using one-hot representation to 
 
 
 
