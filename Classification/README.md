@@ -126,13 +126,19 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 
 ### A. Cross-entropy 
 
-The cross-entropy of the generic form is 
+The cross-entropy of the generic form given a data record is 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-\sum_x&space;\sum_c&space;p_c(x)&space;\log&space;q_c(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-\sum_x&space;\sum_c&space;p_c(x)&space;\log&space;q_c(x)" title="L = -\sum_x \sum_c p_c(x) \log q_c(x)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="L = -\sum_c p_c \log q_c" /></a>
 
 where `x` is data records, and `c` denotes class labels.
 
-For binary classification, using one-hot representation to 
+For binary classification, if using one-hot representation to `p`, 
+```
+p = [1 0] for y = 1; p = [0 1] for y = 0
+```
+and `q` is sigmoid function, it arrives at the commonly-seen cross-entropy 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-&space;\big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-&space;\big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\big]" title="L = - \big[ y \log \Big(\frac{1}{1+e^{-\theta^T \bold{x}}} \Big) + (1-y) \log \Big(1- \frac{1}{1+e^{-\theta^T \bold{x}}} \Big) \big]" /></a>
 
 
 
