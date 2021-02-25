@@ -127,15 +127,15 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 
 The cross-entropy of the generic form given a data record is 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="L = -\sum_c p_c \log q_c" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="\textrm{Cross-Entropy} = -\sum_c p_c \log q_c" /></a>
 
-where `x` is data records, and `c` denotes class labels. `p` is 
+where `c` denotes class labels. `p` is the probability of target = c, and `q` is the probability of prediction = c.
 
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, 
 ```
 p = [1 0] for y = 1; p = [0 1] for y = 0
 ```
-and `q` is sigmoid function, it arrives at the commonly-seen cross-entropy 
+and prediction `q` is a sigmoid function, it arrives at the commonly-seen cross-entropy 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\big]" title="L(\theta, \bold{x}) = - \big[ y \log \Big(\frac{1}{1+e^{-\theta^T \bold{x}}} \Big) + (1-y) \log \Big(1- \frac{1}{1+e^{-\theta^T \bold{x}}} \Big) \big]" /></a>
 
