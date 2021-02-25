@@ -2,10 +2,11 @@
 # Softmax Regression
 
 
-Softmax regression (or multinomial logistic regression) is a generalization of logistic regression to the case where we want to handle multiple classes. In logistic regression we assumed that the labels were binary: y(i)∈{0,1}. We used such a classifier to distinguish between two kinds of hand-written digits. Softmax regression allows us to handle y(i)∈{1,…,K} where K is the number of classes.
+Softmax regression (or multinomial logistic regression) is a generalization of logistic regression to the case where we want to handle multiple classes. In logistic regression we assumed that the labels were binary: y(i)∈{0,1}. We used such a classifier to distinguish between two kinds of hand-written digits. Softmax regression allows us to handle y(i)∈{1,…,K} where K is the number of classes, i.e. multi-class classification.
 
-The followins are from [[UFLDL Tutorial]][Softmax Regression]
+The following content are from [[UFLDL Tutorial]][Softmax Regression].
 
+## Binary Classification
 
 For binary case, the hypothesis in logistic regression is
 
@@ -16,6 +17,8 @@ The cost fucntion is cross entropy
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\Big[&space;y_i&space;\log&space;h_{\theta}(x_i)&space;&plus;&space;(1-y_i)&space;\log&space;(1-h_{\theta}(x_i))&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\Big[&space;y_i&space;\log&space;h_{\theta}(x_i)&space;&plus;&space;(1-y_i)&space;\log&space;(1-h_{\theta}(x_i))&space;\Big]" title="C(\theta) = - \sum^m_{i=1} \Big[ y_i \log h_{\theta}(x_i) + (1-y_i) \log (1-h_{\theta}(x_i)) \Big]" /></a>
 
+
+## Multiclass Classification
 
 In the softmax regression setting, the hypothesis hθ(x) takes the following form:
 
