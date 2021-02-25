@@ -32,8 +32,9 @@ Now `θ` is a n-by-K matrix (`n` features and `K` classes) obtained by
 
 The cost function is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}\bold{I}(y_i=j)\log\big(&space;h_{\theta}(x_i)&space;\big)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}&space;\bold{I}(y_i=j)\log\big(&space;\frac{\exp{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}\exp{\theta^{(j)T}\bold{x}_i}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}\bold{I}(y_i=j)\log\big(&space;h_{\theta}(x_i)&space;\big)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}&space;\bold{I}(y_i=j)\log\big(&space;\frac{\exp{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}\exp{\theta^{(j)T}\bold{x}_i}}&space;\big)" title="C(\theta) = - \sum^m_{i=1} \sum^K_{j=1}\bold{I}(y_i=j)\log\big( h_{\theta}(x_i) \big) = - \sum^m_{i=1} \sum^K_{j=1} \bold{I}(y_i=j)\log\big( \frac{\exp{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}\exp{\theta^{(j)T}\bold{x}_i}} \big)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}\bold{I}(y_i=j)\log\big(&space;h_{\theta}(x_i)&space;\big)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}&space;\bold{I}(y_i=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}_i}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}\bold{I}(y_i=j)\log\big(&space;h_{\theta}(x_i)&space;\big)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}&space;\bold{I}(y_i=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}_i}}&space;\big)" title="C(\theta) = - \sum^m_{i=1} \sum^K_{j=1}\bold{I}(y_i=j)\log\big( h_{\theta}(x_i) \big) = - \sum^m_{i=1} \sum^K_{j=1} \bold{I}(y_i=j)\log\big( \frac{e^{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}_i}} \big)" /></a>
 
+where `I = 1` for y = j; otherwise `I=0`. 
 
 
 
