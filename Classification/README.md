@@ -129,7 +129,7 @@ The cross-entropy of the generic form given a data record is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="\textrm{Cross-Entropy} = -\sum_c p_c \log q_c" /></a>
 
-where `c` denotes class labels. `p` is the probability of target = c, and `q` is the probability of prediction = c.
+where `c` denotes class labels. `p` is the probability of target having class = c, and `q` is the probability of prediction as class = c.
 
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, 
 ```
