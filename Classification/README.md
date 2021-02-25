@@ -122,23 +122,27 @@ Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465, Macro-precision = (0.31 + 0.67 +
 There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-average precision is 12/(12+13)= 0.48. In the example, we can see total FN = FP. Therefore micro-averaged recall is the same as micro-averaged precision [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score]. 
 
 
-## Cost Function
+## Loss Function: Cross-Entropy
 
-### A. Cross-entropy 
 
 The cross-entropy of the generic form given a data record is 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="L = -\sum_c p_c \log q_c" /></a>
 
-where `x` is data records, and `c` denotes class labels.
+where `x` is data records, and `c` denotes class labels. `p` is 
 
-For binary classification, if using one-hot representation to `p`, 
+For binary classification `c = {0, 1}`, if using one-hot representation to `p`, 
 ```
 p = [1 0] for y = 1; p = [0 1] for y = 0
 ```
 and `q` is sigmoid function, it arrives at the commonly-seen cross-entropy 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-&space;\big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-&space;\big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\big]" title="L = - \big[ y \log \Big(\frac{1}{1+e^{-\theta^T \bold{x}}} \Big) + (1-y) \log \Big(1- \frac{1}{1+e^{-\theta^T \bold{x}}} \Big) \big]" /></a>
+
+For multiclass, `c = {1, ...K}`, `p = [1 0 ... 0]` for y = K,... `p = [0 0 ... 1]` for y = 1..., we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}\bold{I}(y_i=j)\log\big(&space;h_{\theta}(x_i)&space;\big)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}&space;\bold{I}(y_i=j)\log\big(&space;\frac{\exp{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}\exp{\theta^{(j)T}\bold{x}_i}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}\bold{I}(y_i=j)\log\big(&space;h_{\theta}(x_i)&space;\big)&space;=&space;-&space;\sum^m_{i=1}&space;\sum^K_{j=1}&space;\bold{I}(y_i=j)\log\big(&space;\frac{\exp{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}\exp{\theta^{(j)T}\bold{x}_i}}&space;\big)" title="C(\theta) = - \sum^m_{i=1} \sum^K_{j=1}\bold{I}(y_i=j)\log\big( h_{\theta}(x_i) \big) = - \sum^m_{i=1} \sum^K_{j=1} \bold{I}(y_i=j)\log\big( \frac{\exp{\theta^{(j)T}\bold{x}_i}}{\sum^K_{j=1}\exp{\theta^{(j)T}\bold{x}_i}} \big)" /></a>
+
 
 
 
@@ -169,5 +173,9 @@ and `q` is sigmoid function, it arrives at the commonly-seen cross-entropy
 
 [When is precision more important over recall?]: https://datascience.stackexchange.com/questions/30881/when-is-precision-more-important-over-recall
 [[Data Science: When is precision more important over recall?] When is precision more important over recall?](https://datascience.stackexchange.com/questions/30881/when-is-precision-more-important-over-recall)
+
+
+[Softmax Regression]: http://deeplearning.stanford.edu/tutorial/supervised/SoftmaxRegression/support-vector-machines-in-machine-learning
+[[UFLDL Tutorial] Softmax Regression](http://deeplearning.stanford.edu/tutorial/supervised/SoftmaxRegression/)
 
 
