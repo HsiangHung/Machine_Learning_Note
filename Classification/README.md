@@ -143,6 +143,9 @@ For multiclass, `c = {1, ...K}`, `p = [1 0 ... 0]` for y = K,... `p = [0 0 ... 1
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" title="C(\theta, \bold{x}) = - \sum^K_{j=1}\bold{I}(y=j)\log\big( h_{\theta}(\bold{x}) \big) = - \sum^K_{j=1} \bold{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}} \big)" /></a>
 
+where `I = 1` for y = j; otherwise `I=0`. 
+
+
 
 
 
