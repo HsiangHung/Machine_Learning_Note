@@ -225,7 +225,12 @@ LightGBM uses a novel technique of Gradient-based One-Side Sampling (GOSS) to fi
 
 LightGBM can also handle categorical feature. XGBoost cannot handle categorical features by itself, it only accepts numerical values similar to Random Forest [[Alvira Swalin]][CatBoost vs. Light GBM vs. XGBoost]. 
 
+### Handling Missing Values
 
+LightGBM and XGBoost Libraries can handle missing values [[Data Science: Which models can handle null values?]][Which models can handle null values?]
+
+* `LightGBM`: will ignore missing values during a split, then allocate them to whichever side reduces the loss the most
+* `XGBoost`: the instance is classified into a default direction (the optimal default directions are learnt from the data somehow)
 
 ## Reference
 
@@ -250,9 +255,12 @@ LightGBM can also handle categorical feature. XGBoost cannot handle categorical 
 [[Data Science: Decision trees: leaf-wise (best-first) and level-wise tree traverse] Decision trees: leaf-wise (best-first) and level-wise tree traverse](https://datascience.stackexchange.com/questions/26699/decision-trees-leaf-wise-best-first-and-level-wise-tree-traverse)
 
 
-
 [GBM vs XGBOOST? Key differences?]: https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences
 [[Data Science: GBM vs XGBOOST? Key differences?] GBM vs XGBOOST? Key differences?](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences)
+
+[Which models can handle null values?]: https://datascience.stackexchange.com/questions/67167/which-models-can-handle-null-values
+[[Data Science: Which models can handle null values?] Which models can handle null values?](https://datascience.stackexchange.com/questions/67167/which-models-can-handle-null-values)
+
 
 
 [Gradient Boosting and XGBoost]: https://medium.com/@gabrieltseng/gradient-boosting-and-xgboost-c306c1bcfaf5
