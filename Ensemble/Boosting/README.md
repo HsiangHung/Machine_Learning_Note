@@ -229,8 +229,8 @@ LightGBM can also handle categorical feature. XGBoost cannot handle categorical 
 
 LightGBM and XGBoost Libraries can handle missing values [[Data Science: Which models can handle null values?]][Which models can handle null values?]
 
-* `LightGBM`: will ignore missing values during a split, then allocate them to whichever side reduces the loss the most
-* `XGBoost`: the instance is classified into a default direction (the optimal default directions are learnt from the data somehow)
+* `LightGBM`: will ignore missing values during a split, then allocate them to whichever side reduces the loss the most. LightGBM can also handles null values by setting them to zero, `zero_as_missing=true`.
+* `XGBoost`: the instance is classified into a default direction (the optimal default directions are learnt from the data somehow).
 
 ## Reference
 
