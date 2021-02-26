@@ -202,7 +202,7 @@ If you grow the full tree, best-first (leaf-wise) and depth-first (level-wise) w
 
  [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!]
 
-* Faster training speed and higher efficiency: Light GBM use **histogram based algorithm** i.e it buckets continuous feature values into discrete bins which fasten the training procedure.
+* Faster training speed and higher efficiency: Light GBM use **histogram based algorithm** i.e it **buckets continuous** feature values into **discrete bins** which fasten the training procedure.
 * Lower memory usage: Replaces continuous values to discrete bins which result in lower memory usage.
 * Better accuracy than any other boosting algorithm: It produces much **more complex trees** by following leaf wise split approach rather than a level-wise approach which is the main factor in achieving higher accuracy. However, it can sometimes lead to overfitting which can be avoided by setting the max_depth parameter.
 * Compatibility with Large Datasets: It is capable of performing equally good with large datasets with a significant reduction in training time as compared to XGBOOST.
