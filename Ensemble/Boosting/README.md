@@ -182,13 +182,24 @@ LGBM is **leaf-wise** tree growth,
 
 which shows faster performance [[Analytics Vidhya]][Which algorithm takes the crown: Light GBM vs XGBOOST?], [[Harry Moreno]][Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)], [[Aman Cyberia]][Good summary of XGBoost vs CatBoost vs LightGBM], [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!], [[Alvira Swalin]][CatBoost vs. Light GBM vs. XGBoost], [[Jason Brownlee]][Gradient Boosting with Scikit-Learn, XGBoost, LightGBM, and CatBoost], [[Github]][Github: LGBM]. Leaf-wise algorithms tend to achieve lower loss than level-wise algorithms. However, Leaf-wise may cause over-fitting when the data size is small, so LightGBM includes the max_depth parameter to limit tree depth. 
 
-Another good introduction blogs are given by [[Andrich van Wyk]][An Overview of LightGBM] and [[Neptune.ai]][Understanding LightGBM Parameters (and How to Tune Them)]. The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Python-Intro.html) as well as [the model hyperparameter list](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The guide page and [[Andrich van Wyk] An Overview of LightGBM] show how to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html). The summary includes:
+Another good introduction blogs are given by [[Andrich van Wyk]][An Overview of LightGBM] and [[Neptune.ai]][Understanding LightGBM Parameters (and How to Tune Them)]. The model API can be found [here](https://lightgbm.readthedocs.io/en/latest/Python-Intro.html) as well as [the model hyperparameter list](https://lightgbm.readthedocs.io/en/latest/Parameters.html). How to avoid overfitting in LGBM? The guide page and [[Andrich van Wyk]][An Overview of LightGBM] show how to [tune hyperparameter](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html). The summary includes:
 
-1. `max_bin`: the maximum numbers bins that feature values are bucketed in. A `smaller` max_bin reduces overfitting.
-2. `min_child_weight`: the minimum sum hessian for a leaf. In conjuction with min_child_samples, `larger` values reduce overfitting.
-3. `bagging_fraction` and `bagging_freq`: enables bagging (subsampling) of the training data. Both values need to be set for bagging to be used. The frequency controls how often (iteration) bagging is used. `Smaller` fractions and frequencies reduce overfitting.
-4. `feature_fraction`: controls the subsampling of features used for training (as opposed to subsampling the actual training data in the case of bagging). `Smaller fractions` reduce overfitting.
-5. `lambda_l1` (`reg_aplha`) and `lambda_L2` (`reg_lambda`): controls L1 and L2 regularization.
+
+1. `num_leaves`: This is the main parameter to control the complexity of the tree model. Theoretically, we can set `num_leaves = 2^(max_depth)` to obtain the same number of leaves as depth-wise tree. However, this simple conversion is not good in practice. The reason is that a leaf-wise tree is typically much deeper than a depth-wise tree for a fixed number of leaves. Unconstrained depth can induce over-fitting. Thus, when trying to tune the num_leaves, we should let it be **smaller than** `2^(max_depth)`. For example, when the max_depth=7 the depth-wise tree can get good accuracy, but setting num_leaves to 127 may cause over-fitting, and setting it to 70 or 80 may get better accuracy than depth-wise.
+2. `min_data_in_leaf`: This is a very important parameter to prevent over-fitting in a leaf-wise tree. Its optimal value depends on the number of training samples and num_leaves. Setting it to a `large` value can avoid growing too deep a tree, but may cause under-fitting. In practice, setting it to hundreds or thousands is enough for a large dataset.
+3. `max_depth`: You also can use max_depth to limit the tree depth explicitly.
+
+
+4. `max_bin`: the maximum numbers bins that feature values are bucketed in. A `smaller` max_bin reduces overfitting.
+5. `min_child_weight`: the minimum sum hessian for a leaf. In conjuction with min_child_samples, `larger` values reduce overfitting.
+6. `bagging_fraction` and `bagging_freq`: enables bagging (subsampling) of the training data. Both values need to be set for bagging to be used. The frequency controls how often (iteration) bagging is used. `Smaller` fractions and frequencies reduce overfitting.
+7. `feature_fraction`: controls the subsampling of features used for training (as opposed to subsampling the actual training data in the case of bagging). `Smaller fractions` reduce overfitting.
+8. `lambda_l1` (`reg_aplha`) and `lambda_L2` (`reg_lambda`): controls L1 and L2 regularization.
+
+
+#### Use Early Stopping
+
+If early stopping is enabled and the model’s accuracy fails to improve for some number of consecutive rounds, LightGBM stops the training process. That “number of consecutive rounds” is controlled by the parameter `early_stopping_rounds`. See [here](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html#use-early-stopping).
 
 
 ## E. Comparison LighGBM vs XGboost
@@ -196,6 +207,8 @@ Another good introduction blogs are given by [[Andrich van Wyk]][An Overview of 
 Here is the deeper description about LighGBM (best-first) and XGboost (depth-fist):
 
 If you grow the full tree, best-first (leaf-wise) and depth-first (level-wise) will result in the same tree. The difference is in the order in which the tree is expanded. Since we don't normally grow trees to their full depth, order matters: application of early stopping criteria and pruning methods can result in very different trees. Because leaf-wise chooses splits based on their contribution to the global loss and not just the loss along a particular branch, it often (not always) will learn lower-error trees "faster" than level-wise. I.e. for a small number of nodes, leaf-wise will probably out-perform level-wise. As you add more nodes, without stopping or pruning they will converge to the same performance because they will literally build the same tree eventually [[Data Science: Decision trees: leaf-wise (best-first) and level-wise tree traverse]][Decision trees: leaf-wise (best-first) and level-wise tree traverse].
+
+**LightGBM grows trees leaf-wise (best-first). It will choose the leaf with max delta loss to grow. Holding number of leaf fixed, leaf-wise algorithms tend to achieve lower loss than level-wise algorithms. However, the leaf-wise growth may be over-fitting if not used with the appropriate parameters.** [[Tao Lin]][Light GBM model vs XGBoost Model Parameter Tuning and Examples]
 
 
 ### Advantages of Light GBM:
@@ -207,7 +220,7 @@ If you grow the full tree, best-first (leaf-wise) and depth-first (level-wise) w
 * Better accuracy than any other boosting algorithm: It produces much **more complex trees** by following leaf wise split approach rather than a level-wise approach which is the main factor in achieving higher accuracy. However, it can sometimes lead to overfitting which can be avoided by setting the max_depth parameter.
 * Compatibility with Large Datasets: It is capable of performing equally good with large datasets with a significant reduction in training time as compared to XGBOOST.
 
-LightGBM uses a novel technique of Gradient-based One-Side Sampling (GOSS) to filter out the data instances for finding a split value while XGBoost uses pre-sorted algorithm & Histogram-based algorithm for computing the best split. In a nutshell, GOSS retains instances with large gradients while performing random sampling on instances with small gradients [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!].
+LightGBM uses a novel technique of Gradient-based One-Side Sampling (GOSS) to filter out the data instances for finding a split value while **XGBoost uses pre-sorted algorithm** & Histogram-based algorithm for computing the best split. In a nutshell, GOSS retains instances with large gradients while performing random sampling on instances with small gradients [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!].
 
 LightGBM can also handle categorical feature. XGBoost cannot handle categorical features by itself, it only accepts numerical values similar to Random Forest [[Alvira Swalin]][CatBoost vs. Light GBM vs. XGBoost]. 
 
@@ -259,6 +272,10 @@ LightGBM can also handle categorical feature. XGBoost cannot handle categorical 
 
 [A Kaggle Master Explains Gradient Boosting]: http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/
 [[Kaggle] A Kaggle Master Explains Gradient Boosting](http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/)
+
+
+[Light GBM model vs XGBoost Model Parameter Tuning and Examples]: https://pyligent.github.io/2019-08-20-lightGBM_XGBoost/
+[[Tao Lin] Light GBM model vs XGBoost Model Parameter Tuning and Examples](https://pyligent.github.io/2019-08-20-lightGBM_XGBoost/)
 
 
 [Understanding LightGBM Parameters (and How to Tune Them)]: https://neptune.ai/blog/lightgbm-parameters-guide
