@@ -170,6 +170,8 @@ and the complexity of the regularization term as
 
 where `ω` is the vector of scores on leaves, and `T` is the number of leaves. 
 
+Here is the article: [Light GBM model vs XGBoost Model Parameter Tuning and Examples](https://pyligent.github.io/2019-08-20-lightGBM_XGBoost/) to show hyperparameters in XGBoost.
+
 ## D. LightGBM
 
 LightGBM (LGBM) model is a relatively new model. Rather than **level-wise** tree growth in regular decision tree algorithms (credit from [here](https://github.com/Microsoft/LightGBM/blob/master/docs/)), 
@@ -231,6 +233,7 @@ LightGBM and XGBoost Libraries can handle missing values [[Data Science: Which m
 
 * `LightGBM`: will ignore missing values during a split, then allocate them to whichever side reduces the loss the most. LightGBM can also handles null values by setting them to zero, `zero_as_missing=true`.
 * `XGBoost`: the instance is classified into a default direction (the optimal default directions are learnt from the data somehow).
+
 
 ## Reference
 
