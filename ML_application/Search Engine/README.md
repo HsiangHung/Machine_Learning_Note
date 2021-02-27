@@ -142,12 +142,12 @@ The average precision given a query q @k items can be also written as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{AveP(q)}&space;=&space;\frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times&space;r_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{AveP(q)}&space;=&space;\frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times&space;r_i" title="\textrm{AveP(q)} = \frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times r_i" /></a>
 
-Assuming we have two queries and have following rank by model:
+Assuming we have two queries q1, q2 and have the following rank by model:
 
 * q1 -> d1, d2
 * q2 -> d3, d4, d5
 
-only d2,d3,d5 are relevant document given their corresponding query. Then MAP is 
+and assuming only d2,d3,d5 are relevant document given their corresponding query. Then MAP is 
 
 * AP of query 1: (1/1) × ((0/1)×0 + (1/2)×1)=1/2
 * AP of query 2: (1/2) × ((1/1)×1 + (1/2)×0 + (2/3)×1)=5/6
