@@ -41,9 +41,9 @@ The gradient is the derivative of the cost function with respect to parameters:
 During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients (`λ`) of the cost with respect to the model score [[Educative.io-1]][What is Lambda rank?]. 
 
 ### B. LambdaRank
-Two important enhancements have been achieved from RankNet to LambdaRank, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet):
+Two important enhancements have been achieved from RankNet to LambdaRank (see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet)):
 
-1. Training speed-up thanks to factorization of gradient calculation:
+1. Training speed-up thanks to factorization of gradient calculation (lambda is the component of gradient):
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\lambda_{ij}\big(\frac{\partial&space;s_i}{\partial&space;w_k}&space;-&space;\frac{\partial&space;s_j}{\partial&space;w_k}&space;\big)&space;=&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\lambda_{ij}\big(\frac{\partial&space;s_i}{\partial&space;w_k}&space;-&space;\frac{\partial&space;s_j}{\partial&space;w_k}&space;\big)&space;=&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" title="\frac{\partial C}{\partial w_k} = \lambda_{ij}\big(\frac{\partial s_i}{\partial w_k} - \frac{\partial s_j}{\partial w_k} \big) = \sum_i \lambda_i \frac{\partial s_i}{\partial w_k}{}" /></a>
 
