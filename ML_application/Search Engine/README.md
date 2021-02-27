@@ -28,7 +28,7 @@ By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/pr
 
 where P_ij is the **learned** probability of document di ranks higher than document dj, and \bar{P}_ij is the **known** probability di should be ranked higher than dj from training data.
 
-During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients (`λ`) of the cost with respect to the model score [[Educative-1]][What is Lambda rank?]. 
+During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients (`λ`) of the cost with respect to the model score [[Educative.io-1]][What is Lambda rank?]. 
 
 ### B. LambdaRank
 Two important enhancements have been achieved from RankNet to LambdaRank, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet):
@@ -41,20 +41,11 @@ Two important enhancements have been achieved from RankNet to LambdaRank, see [K
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" title="\lambda_{ij} = \frac{\partial C(s_i, s_j)}{\partial s_i} = \frac{-\sigma}{1+e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" /></a>
 
-Therefore, LambdaRank uses the idea of a new cost function for training a RankNet. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets [[Educative-1]][What is Lambda rank?].
+Therefore, LambdaRank uses the idea of a new cost function for training a RankNet. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets [[Educative.io-1]][What is Lambda rank?].
 
 ### C. LambdaMART
-LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet); MART points to Multiple Additive Regression Trees, which uses gradient boosted decision trees for prediction tasks [[Educative-2]][What is LambdaMART?].
+LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet); MART points to Multiple Additive Regression Trees, which uses gradient boosted decision trees for prediction tasks [[Educative.io-2]][What is LambdaMART?].
 
-
-[What is Lambda rank?]: https://www.educative.io/edpresso/what-is-lambda-rank
-[[Educative-1] What is Lambda rank?](https://www.educative.io/edpresso/what-is-lambda-rank)
-
-[What is LambdaMART?]: https://www.educative.io/edpresso/what-is-lambdamart
-[[Educative-2] What is LambdaMART?](https://www.educative.io/edpresso/what-is-lambdamart)
-
-[Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)]: https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418
-[[Nikhil Dandekar] Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418)
 
 
 ## Data to Prepare
@@ -66,12 +57,6 @@ Most major search engines have a human-powered relevance measurement system whic
 3. Train a set of human raters to rate the quality of these results. 
 4. Repeat the "extract results - rate results" step 
 
-[Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)]: https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418
-[[Nikhil Dandekar] Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418)
-
-
-[How does Google measure the quality of their search results?]: https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results
-[[Quroa: How does Google measure the quality of their search results?] How does Google measure the quality of their search results?](https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results)
 
 
 ## Metric to Evaluate 
@@ -272,31 +257,6 @@ NDCG of q2:
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\frac{2^1-1}{\log_2{2}}&plus;0&plus;\frac{2^1-1}{\log_2{4}}}{\frac{2^1-1}{\log_2{2}}&plus;\frac{2^1-1}{\log_2{3}}&plus;0}&space;=&space;\frac{1.5}{1&plus;\frac{1}{\log_2{3}}}&space;=&space;0.92" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\frac{2^1-1}{\log_2{2}}&plus;0&plus;\frac{2^1-1}{\log_2{4}}}{\frac{2^1-1}{\log_2{2}}&plus;\frac{2^1-1}{\log_2{3}}&plus;0}&space;=&space;\frac{1.5}{1&plus;\frac{1}{\log_2{3}}}&space;=&space;0.92" title="\frac{\frac{2^1-1}{\log_2{2}}+0+\frac{2^1-1}{\log_2{4}}}{\frac{2^1-1}{\log_2{2}}+\frac{2^1-1}{\log_2{3}}+0} = \frac{1.5}{1+\frac{1}{\log_2{3}}} = 0.92" /></a>
 
 
-### Reference
-
-[Evaluation Metrics for Ranking problems: Introduction and Examples]: https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples
-[[Felipe Almeida] Evaluation Metrics for Ranking problems: Introduction and Examples](https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples)
-
-
-
-[Introduction to Learning to Rank]: https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#A-Digression:-What-is-Machine-Learning?
-[[Kyle Chung] Introduction to Learning to Rank](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#A-Digression:-What-is-Machine-Learning?)
-
-
-
-[Evaluate your Recommendation Engine using NDCG]: https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1
-[[Pranay Chandekar] Evaluate your Recommendation Engine using NDCG](https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1)
-
-
-[Mean average precision]: https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision
-[[wiki: Mean average precision] Mean average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision)
-
-
-[Mean reciprocal rank]: https://en.wikipedia.org/wiki/Mean_reciprocal_rank
-[[wiki: Mean reciprocal rank] Mean reciprocal rank](https://en.wikipedia.org/wiki/Mean_reciprocal_rank)
-
-
-
 
 
 ## A/B Testing for Search
@@ -312,10 +272,6 @@ As we discussed earlier, the size of the improvement target determines how long 
 
 
 
-### Reference
-
-[A/B Testing for Search is Different]: https://dtunkelang.medium.com/a-b-testing-for-search-is-different-f6b0f6f4d0f5
-[[Daniel Tunkelang] A/B Testing for Search is Different](https://dtunkelang.medium.com/a-b-testing-for-search-is-different-f6b0f6f4d0f5)
 
 
 
@@ -334,19 +290,58 @@ Set up your products for visibility and sales in Amazon wesbite search [[George 
 * Fulfillment method - If you have late or missed shipments, cancellations, etc., each thing dings your seller score
 
 
-### Reference
+## Reference
 
-
-[Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility]: https://searchengineland.com/amazons-a9-product-ranking-algorithm-beginners-guide-329801
-[[George Nguyen] Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility](https://searchengineland.com/amazons-a9-product-ranking-algorithm-beginners-guide-329801)
 
 
 [Everything You Need To Know About Amazon’s A9 Algorithm]: https://www.repricerexpress.com/amazons-algorithm-a9/
 [[Chris Dunne] Everything You Need To Know About Amazon’s A9 Algorithm](https://www.repricerexpress.com/amazons-algorithm-a9/)
 
 
+[A/B Testing for Search is Different]: https://dtunkelang.medium.com/a-b-testing-for-search-is-different-f6b0f6f4d0f5
+[[Daniel Tunkelang] A/B Testing for Search is Different](https://dtunkelang.medium.com/a-b-testing-for-search-is-different-f6b0f6f4d0f5)
+
+
+[What is Lambda rank?]: https://www.educative.io/edpresso/what-is-lambda-rank
+[[Educative.io-1] What is Lambda rank?](https://www.educative.io/edpresso/what-is-lambda-rank)
+
+[What is LambdaMART?]: https://www.educative.io/edpresso/what-is-lambdamart
+[[Educative.io-2] What is LambdaMART?](https://www.educative.io/edpresso/what-is-lambdamart)
+
+
+[Evaluation Metrics for Ranking problems: Introduction and Examples]: https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples
+[[Felipe Almeida] Evaluation Metrics for Ranking problems: Introduction and Examples](https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples)
+
+
+[Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility]: https://searchengineland.com/amazons-a9-product-ranking-algorithm-beginners-guide-329801
+[[George Nguyen] Amazon’s A9 product ranking algorithm: Your guide to Amazon SEO for maximum visibility](https://searchengineland.com/amazons-a9-product-ranking-algorithm-beginners-guide-329801)
+
+
 [How Does Amazon's Search Algorithm Work?]: https://www.omniaretail.com/blog/how-does-amazons-search-algorithm-work
 [[Grace Baldwin] How Does Amazon's Search Algorithm Work?](https://www.omniaretail.com/blog/how-does-amazons-search-algorithm-work)
 
+
+[Introduction to Learning to Rank]: https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#A-Digression:-What-is-Machine-Learning?
+[[Kyle Chung] Introduction to Learning to Rank](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#A-Digression:-What-is-Machine-Learning?)
+
+
+[Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)]: https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418
+[[Nikhil Dandekar] Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418)
+
+
+[Evaluate your Recommendation Engine using NDCG]: https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1
+[[Pranay Chandekar] Evaluate your Recommendation Engine using NDCG](https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1)
+
+
+[How does Google measure the quality of their search results?]: https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results
+[[Quroa: How does Google measure the quality of their search results?] How does Google measure the quality of their search results?](https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results)
+
+
+[Mean average precision]: https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision
+[[wiki: Mean average precision] Mean average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision)
+
+
+[Mean reciprocal rank]: https://en.wikipedia.org/wiki/Mean_reciprocal_rank
+[[wiki: Mean reciprocal rank] Mean reciprocal rank](https://en.wikipedia.org/wiki/Mean_reciprocal_rank)
 
 
