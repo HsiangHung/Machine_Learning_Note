@@ -3,7 +3,7 @@
 
 ## Learning to Rank
 
-Learning to Rank (LTR) is a class of techniques that apply supervised machine learning (ML) to solve ranking problems. The main difference between LTR and traditional supervised ML is explained by [Nikhil Dandekar](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418):
+Learning to Rank (LTR) is a class of techniques that apply supervised machine learning (ML) to solve ranking problems. The main difference between LTR and traditional supervised ML is explained by [[Nikhil Dandekar]][Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)]:
 
 * Traditional ML solves a prediction problem (classification or regression) on a single instance at a time. E.g. if you are doing spam detection on email, you will look at all the features associated with that email and classify it as spam or not. The aim of traditional ML is to come up with a class (spam or no-spam) or a single numerical score for that instance.
 * LTR solves a ranking problem on a list of items. The aim of LTR is to come up with optimal ordering of those items. As such, LTR doesn't care much about the exact score that each item gets, but cares more about the relative ordering among all the items.
@@ -17,7 +17,7 @@ The most common application of LTR is search engine ranking.
 
 The LTR models can be categorized as Pointwise, Pairwise and Listwise. 
 
-In RankNet, LambdaRank and LambdaMART, ranking is transformed into a pairwise classification or regression problem.
+In RankNet, LambdaRank and LambdaMART, ranking is transformed into a **pairwise** **classification** or **regression** problem [[Nikhil Dandekar]][Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)].
 
 
 ### A. RankNet
@@ -53,6 +53,8 @@ LambdaMART is simply a LambdaRank but replaces the underlying neural network mod
 [What is LambdaMART?]: https://www.educative.io/edpresso/what-is-lambdamart
 [[Educative-2] What is LambdaMART?](https://www.educative.io/edpresso/what-is-lambdamart)
 
+[Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)]: https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418
+[[Nikhil Dandekar] Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418)
 
 
 ## Data to Prepare
