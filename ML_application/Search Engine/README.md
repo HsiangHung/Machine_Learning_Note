@@ -15,7 +15,9 @@ The most common application of LTR is search engine ranking.
 
 ## LTR Models
 
-The LTR models can be categorized as Pointwise, Pairwise and Listwise.
+The LTR models can be categorized as Pointwise, Pairwise and Listwise. 
+
+In RankNet, LambdaRank and LambdaMART, ranking is transformed into a pairwise classification or regression problem.
 
 
 ### A. RankNet
