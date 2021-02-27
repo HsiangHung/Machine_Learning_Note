@@ -42,7 +42,7 @@ Two important enhancements have been achieved from RankNet to LambdaRank, see [K
 Therefore, LambdaRank uses the idea of a new cost function for training a RankNet. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets [[Educative-1]][What is Lambda rank?].
 
 ### C. LambdaMART
-LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet); MART points to Multiple Additive Regression Trees [[Educative-2]][What is LambdaMART?].
+LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet); MART points to Multiple Additive Regression Trees, which uses gradient boosted decision trees for prediction tasks [[Educative-2]][What is LambdaMART?].
 
 
 [What is Lambda rank?]: https://www.educative.io/edpresso/what-is-lambda-rank
