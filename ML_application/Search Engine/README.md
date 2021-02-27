@@ -14,6 +14,9 @@ The most common application of LTR is search engine ranking.
 [[Nikhil Dandekar] Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418)
 
 
+![workflow](images/workflow.png)
+
+
 
 ## Data to Prepare
 
