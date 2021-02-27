@@ -26,7 +26,7 @@ By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/pr
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" title="C = -\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" /></a>
 
-where P_ij is the **learned** probability of document di ranks higher than document dj, 
+where <a href="https://www.codecogs.com/eqnedit.php?latex=P_{ij}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P_{ij}" title="P_{ij}" /></a> is the **learned** probability of document <a href="https://www.codecogs.com/eqnedit.php?latex=d_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d_i" title="d_i" /></a> ranks higher than document a href="https://www.codecogs.com/eqnedit.php?latex=d_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d_j" title="d_j" /></a>, 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P_{ij}&space;=&space;\frac{1}{1&plus;e^{-\sigma(s_i&space;-s_j)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P_{ij}&space;=&space;\frac{1}{1&plus;e^{-\sigma(s_i&space;-s_j)}}" title="P_{ij} = \frac{1}{1+e^{-\sigma(s_i -s_j)}}" /></a>
 
