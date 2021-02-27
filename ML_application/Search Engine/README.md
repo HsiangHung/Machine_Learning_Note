@@ -17,21 +17,22 @@ There are Pointwise, Pairwise and Listwide LTR.
 
 ## LTR Models
 
-### RankNet
+### A. RankNet
 
 By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf), ranknet is a model to optimize the following cross entropy:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" title="C = -\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" /></a>
 
-### LambdaNet
+where P_ij is the **learned** probability of document di ranks higher than document dj, and \bar{P}_ij is the **known** probability di should be ranked higher than dj from training data.
+
+### B. LambdaNet
 Two important enhancements have been achieved from RankNet to LambdaNet, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet):
 
 1. Training speed-up thanks to factorization of gradient calculation
 2. Optimization towards a ranking metric
 
-### LambdaMART
+### C. LambdaMART
 LambdaMART is simply a LambdaNet but replaces the underlying neural network model with gradient boosting regression trees, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet).
-
 
 
 
