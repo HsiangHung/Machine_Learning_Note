@@ -83,7 +83,7 @@ Mean average precision for a set of queries is the mean of the average precision
 
 where Q is the number of queries.
 
-#### Example 1
+#### Example B.1
 
 supposed given a query, we have the following rank result (credit from [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples]):
 
@@ -121,7 +121,7 @@ At rank 8: No change, wrong prediction.
 ```
 AP (Average Precision) is a metric that tells you how a single sorted prediction compares with the ground truth. MAP is to evaluate on a whole validation set, and defines as the sum the AP value for each example in a validation dataset and then divide by the number of examples (1 + 1 + 0.9 + 0.83 + 0.83 + 0.8 + ..)/8=0.97.
 
-#### Example 2
+#### Example B.2
 
 Suppose our SEO is perfect, i.e. all relevant documents rank the top 4, then we have 
 ```
@@ -136,6 +136,20 @@ At rank 8: No change, wrong prediction.
 ```
 then the MAP is given by 1.
 
+#### Example B.3
+
+The average precision given a query q @k items can be also written as
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{AveP(q)}&space;=&space;\frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times&space;r_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{AveP(q)}&space;=&space;\frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times&space;r_i" title="\textrm{AveP(q)} = \frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times r_i" /></a>
+
+* q1 -> d1, d2
+* q2 -> d3, d4, d5
+
+Assuming only d2,d3,d5 are relevant document given their corresponding query and the rank are by model:
+
+* AP of query 1: (1/1) × ((0/1)×0 + (1/2)×1)=1/2
+* AP of query 2: (1/2) × ((1/1)×1 + (1/2)×0 + (2/3)×1)=5/6
+* MAP: (1/2+5/6)/2≈67%
 
 ### C. Discounted cumulative gain (DCG)
 
@@ -185,7 +199,7 @@ Where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the
 ![rank_example_NDCG](images/rank_example_NDCG.png)
 
 
-The IDCG are (by perfect ranking):
+The IDCG@k are (by perfect ranking):
 ```
 At rank 1: rel_1 = 1; IDCG@1 = 1
 At rank 2: rel_2 = 1; IDCG@2 = IDCG@1 + 1/log(1+2) = 1 + 0.63 = 1.63
