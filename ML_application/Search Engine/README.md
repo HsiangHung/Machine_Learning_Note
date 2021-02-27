@@ -149,10 +149,14 @@ One advantage of DCG over other metrics is that it also works if document releva
 Not all pairwise errors are created equal. Because we use DCG as our scoring function, it is critical that the algorithm gets the top results right. Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs.
 
 
-DCG **higher** is better [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
+**Higher** DCG, better IR. [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
+
+#### Example 
+
+![rank_example_NDCG](images/rank_example_NDCG.png)
 
 ```
-At rank 1: rel_1 = 1; DCG@1= 1
+At rank 1: rel_1 = 1; DCG@1 = 1
 At rank 2: No change. wrong prediction.
 At rank 3: rel_3 = 1; DCG@3 = DCG@2 + 1/log(1+3) = 1 + 1/2 = 1.5.
 At rank 4: rel_4 = 1; DCG@4 = DCG@3 + 1/log(1+4) = 1.93.
@@ -170,12 +174,27 @@ A way to make comparison across queries fairer is to normalize the DCG score by 
 NDCG@k = DCG@k/IDCG@k
 ```
 
-Where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. See below table:
+
+
+Where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. 
+
+**Note that in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p producing an nDCG = 1.0.**
+
+#### Example 1
 
 ![rank_example_NDCG](images/rank_example_NDCG.png)
 
 
-**Note that in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p producing an nDCG = 1.0.**
+The IDCG are (by perfect ranking):
+```
+At rank 1: rel_1 = 1; IDCG@1 = 1
+At rank 2: rel_2 = 1; IDCG@2 = IDCG@1 + 1/log(1+2) = 1 + 0.63 = 1.63
+At rank 3: rel_3 = 1; IDCG@3 = IDCG@2 + 1/log(1+3) = 1.63 + 1/2 = 2.13
+At rank 4: rel_4 = 1; IDCG@4 = IDCG@3 + 1/log(1+4) = 2.13 + 0.431 = 2.561
+rank 5- rank 8: IDCG are same
+```
+
+
 
 ### Reference
 
