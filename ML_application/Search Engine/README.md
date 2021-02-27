@@ -3,18 +3,36 @@
 
 ## Learning to Rank
 
-Learning to Rank (LTR) is a class of techniques that apply supervised machine learning (ML) to solve ranking problems. The main difference between LTR and traditional supervised ML is this [[Nikhil Dandekar]][Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)]:
+Learning to Rank (LTR) is a class of techniques that apply supervised machine learning (ML) to solve ranking problems. The main difference between LTR and traditional supervised ML is explained by [Nikhil Dandekar](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418):
 
 * Traditional ML solves a prediction problem (classification or regression) on a single instance at a time. E.g. if you are doing spam detection on email, you will look at all the features associated with that email and classify it as spam or not. The aim of traditional ML is to come up with a class (spam or no-spam) or a single numerical score for that instance.
 * LTR solves a ranking problem on a list of items. The aim of LTR is to come up with optimal ordering of those items. As such, LTR doesn't care much about the exact score that each item gets, but cares more about the relative ordering among all the items.
 
-The most common application of LTR is search engine ranking.
-
-[Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)]: https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418
-[[Nikhil Dandekar] Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)](https://medium.com/@nikhilbd/intuitive-explanation-of-learning-to-rank-and-ranknet-lambdarank-and-lambdamart-fe1e17fac418)
+The most common application of LTR is search engine ranking. 
 
 
 ![workflow](images/workflow.png)
+
+There are Pointwise, Pairwise and Listwide LTR.
+
+## LTR Models
+
+### RankNet
+
+By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf), ranknet is a model to optimize the following cross entropy:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" title="C = -\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" /></a>
+
+### LambdaNet
+Two important enhancements have been achieved from RankNet to LambdaNet, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet):
+
+1. Training speed-up thanks to factorization of gradient calculation
+2. Optimization towards a ranking metric
+
+### LambdaMART
+LambdaMART is simply a LambdaNet but replaces the underlying neural network model with gradient boosting regression trees, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet).
+
+
 
 
 
