@@ -138,7 +138,7 @@ then the MAP is given by 1.
 
 #### Example B.3
 
-The average precision given a query q @k items can be also written as
+The average precision given a query q @k items can be also written as [[Kyle Chung]][Introduction to Learning to Rank]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{AveP(q)}&space;=&space;\frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times&space;r_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{AveP(q)}&space;=&space;\frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times&space;r_i" title="\textrm{AveP(q)} = \frac{1}{\sum^k_{i=1}r_i}\sum^k_{i=1}\textrm{Precision}@i(q)\times r_i" /></a>
 
@@ -214,7 +214,7 @@ rank 5- rank 8: IDCG are same since the perfect rank is that top 4 rank document
 * q1 -> d1, d2
 * q2 -> d3, d4, d5
  
-Assuming only d2,d3,d5 are relevant document given their corresponding query, and the document ranks are by model:
+Assuming only d2,d3,d5 are relevant document given their corresponding query, and the document ranks are by model [[Kyle Chung]][Introduction to Learning to Rank]:
 
 NDCG of q1:
 
@@ -230,6 +230,12 @@ NDCG of q2:
 
 [Evaluation Metrics for Ranking problems: Introduction and Examples]: https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples
 [[Felipe Almeida] Evaluation Metrics for Ranking problems: Introduction and Examples](https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples)
+
+
+
+[Introduction to Learning to Rank]: https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#A-Digression:-What-is-Machine-Learning?
+[[Kyle Chung] Introduction to Learning to Rank](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#A-Digression:-What-is-Machine-Learning?)
+
 
 
 [Evaluate your Recommendation Engine using NDCG]: https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1
