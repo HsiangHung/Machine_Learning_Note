@@ -37,14 +37,15 @@ Two important enhancements have been achieved from RankNet to LambdaRank, see [K
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k;&space;\&space;\delta&space;w_k&space;=&space;-\alpha&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k;&space;\&space;\delta&space;w_k&space;=&space;-\alpha&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" title="w_k \to w_k +\delta w_k; \ \delta w_k = -\alpha \sum_i \lambda_i \frac{\partial s_i}{\partial w_k}{}" /></a>
 
-2. Optimization towards a ranking metric (using NDCG):
+2. Optimization towards a ranking metric (scaling the gradients by the change in NDCG):
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" title="\lambda_{ij} = \frac{\partial C(s_i, s_j)}{\partial s_i} = \frac{-\sigma}{1+e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" /></a>
 
 Therefore, LambdaRank uses the idea of optimizing NDCG, which empirically yield better overall results. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets [[Educative.io-1]][What is Lambda rank?].
 
 ### C. LambdaMART
-LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet); MART points to Multiple Additive Regression Trees, which uses gradient boosted decision trees for prediction tasks [[Educative.io-2]][What is LambdaMART?].
+
+LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet); MART points to Multiple Additive Regression Trees, which uses gradient boosted decision trees for prediction tasks [[Educative.io-2]][What is LambdaMART?]. LambdaMART uses gradient boosted decision trees using a cost function derived from LambdaRank for solving a ranking task.
 
 
 
