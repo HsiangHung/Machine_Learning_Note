@@ -20,11 +20,13 @@ The LTR models can be categorized as Pointwise, Pairwise and Listwise.
 
 ### A. RankNet
 
-By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf), ranknet is a [neural network model](https://www.educative.io/edpresso/what-is-lambda-rank) to optimize the following cross entropy:
+By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf), ranknet is a neural network model to optimize the following cross entropy:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" title="C = -\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" /></a>
 
 where P_ij is the **learned** probability of document di ranks higher than document dj, and \bar{P}_ij is the **known** probability di should be ranked higher than dj from training data.
+
+During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients (`λ`) of the cost with respect to the model score [[Educative-1]][What is Lambda rank?]. 
 
 ### B. LambdaNet
 Two important enhancements have been achieved from RankNet to LambdaNet, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet):
@@ -33,14 +35,21 @@ Two important enhancements have been achieved from RankNet to LambdaNet, see [no
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k;&space;\&space;\delta&space;w_k&space;=&space;-\alpha&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k;&space;\&space;\delta&space;w_k&space;=&space;-\alpha&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" title="w_k \to w_k +\delta w_k; \ \delta w_k = -\alpha \sum_i \lambda_i \frac{\partial s_i}{\partial w_k}{}" /></a>
 
-2. Optimization towards a ranking metric:
+2. Optimization towards a ranking metric (using NDCG):
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" title="\lambda_{ij} = \frac{\partial C(s_i, s_j)}{\partial s_i} = \frac{-\sigma}{1+e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" /></a>
 
+Therefore, LambdaRank uses the idea of a new cost function for training a RankNet. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets[[Educative-1]][What is Lambda rank?].
 
 ### C. LambdaMART
-LambdaMART is simply a LambdaNet but replaces the underlying neural network model with gradient boosting regression trees, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet).
+LambdaMART is simply a LambdaNet but replaces the underlying neural network model with gradient boosting regression trees, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet). [[Educative-2]][What is LambdaMART?]
 
+
+[What is Lambda rank?]: https://www.educative.io/edpresso/what-is-lambda-rank
+[[Educative-1] What is Lambda rank?](https://www.educative.io/edpresso/what-is-lambda-rank)
+
+[What is LambdaMART?]: https://www.educative.io/edpresso/what-is-lambdamart
+[[Educative-2] What is LambdaMART?](https://www.educative.io/edpresso/what-is-lambdamart)
 
 
 
