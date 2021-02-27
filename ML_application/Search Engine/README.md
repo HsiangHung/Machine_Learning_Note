@@ -17,7 +17,7 @@ The most common application of LTR is search engine ranking.
 
 The LTR models can be categorized as Pointwise, Pairwise and Listwise. 
 
-In RankNet, LambdaRank and LambdaMART, ranking is transformed into a **pairwise** **classification** or **regression** problem [[Nikhil Dandekar]][Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)].
+In RankNet, LambdaRank and LambdaMART, ranking is transformed into a **pairwise** classification or regression problem [[Nikhil Dandekar]][Intuitive explanation of Learning to Rank (and RankNet, LambdaRank and LambdaMART)].
 
 
 ### A. RankNet
