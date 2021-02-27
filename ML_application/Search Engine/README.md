@@ -38,7 +38,7 @@ The gradient is the derivative of the cost function with respect to parameters:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\frac{\partial&space;C}{\partial&space;s_i}\frac{\partial&space;s_i}{\partial&space;w_k}&space;&plus;&space;\frac{\partial&space;C}{\partial&space;s_j}\frac{\partial&space;s_j}{\partial&space;w_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\frac{\partial&space;C}{\partial&space;s_i}\frac{\partial&space;s_i}{\partial&space;w_k}&space;&plus;&space;\frac{\partial&space;C}{\partial&space;s_j}\frac{\partial&space;s_j}{\partial&space;w_k}" title="\frac{\partial C}{\partial w_k} = \frac{\partial C}{\partial s_i}\frac{\partial s_i}{\partial w_k} + \frac{\partial C}{\partial s_j}\frac{\partial s_j}{\partial w_k}" /></a>
 
-During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients (`λ`) of the cost with respect to the model score [[Educative.io-1]][What is Lambda rank?]. 
+During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients ($λ$) of the cost with respect to the model score [[Educative.io-1]][What is Lambda rank?]. 
 
 ### B. LambdaRank
 Two important enhancements have been achieved from RankNet to LambdaRank (see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet)):
