@@ -10,12 +10,13 @@ Learning to Rank (LTR) is a class of techniques that apply supervised machine le
 
 The most common application of LTR is search engine ranking. 
 
-
 ![workflow](images/workflow.png)
 
-There are Pointwise, Pairwise and Listwide LTR.
 
 ## LTR Models
+
+The LTR models can be categorized as Pointwise, Pairwise and Listwise.
+
 
 ### A. RankNet
 
