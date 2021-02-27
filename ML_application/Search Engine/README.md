@@ -28,8 +28,8 @@ where P_ij is the **learned** probability of document di ranks higher than docum
 
 During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients (`λ`) of the cost with respect to the model score [[Educative-1]][What is Lambda rank?]. 
 
-### B. LambdaNet
-Two important enhancements have been achieved from RankNet to LambdaNet, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet):
+### B. LambdaRank
+Two important enhancements have been achieved from RankNet to LambdaRank, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet):
 
 1. Training speed-up thanks to factorization of gradient calculation:
 
@@ -39,10 +39,10 @@ Two important enhancements have been achieved from RankNet to LambdaNet, see [no
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" title="\lambda_{ij} = \frac{\partial C(s_i, s_j)}{\partial s_i} = \frac{-\sigma}{1+e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" /></a>
 
-Therefore, LambdaRank uses the idea of a new cost function for training a RankNet. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets[[Educative-1]][What is Lambda rank?].
+Therefore, LambdaRank uses the idea of a new cost function for training a RankNet. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets [[Educative-1]][What is Lambda rank?].
 
 ### C. LambdaMART
-LambdaMART is simply a LambdaNet but replaces the underlying neural network model with gradient boosting regression trees, see [note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet). [[Educative-2]][What is LambdaMART?]
+LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet) and [[Educative-2]][What is LambdaMART?].
 
 
 [What is Lambda rank?]: https://www.educative.io/edpresso/what-is-lambda-rank
