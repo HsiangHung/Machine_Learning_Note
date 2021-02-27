@@ -201,10 +201,12 @@ rank 5- rank 8: IDCG are same since the perfect rank is that top 4 rank document
 Assuming only d2,d3,d5 are relevant document given their corresponding query, and the document ranks are by model:
 
 NDCG of q1:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{0&plus;\frac{2^1-1}{\log_2{3}}}{\frac{2^1-1}{\log_2{2}}&plus;0}&space;=&space;\frac{1}{\log_2{3}}&space;=&space;0.631" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{0&plus;\frac{2^1-1}{\log_2{3}}}{\frac{2^1-1}{\log_2{2}}&plus;0}&space;=&space;\frac{1}{\log_2{3}}&space;=&space;0.631" title="\frac{0+\frac{2^1-1}{\log_2{3}}}{\frac{2^1-1}{\log_2{2}}+0} = \frac{1}{\log_2{3}} = 0.631" /></a>
 
 
 NDCG of q2:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\frac{2^1-1}{\log_2{2}}&plus;0&plus;\frac{2^1-1}{\log_2{4}}}{\frac{2^1-1}{\log_2{2}}&plus;\frac{2^1-1}{\log_2{3}}&plus;0}&space;=&space;\frac{1.5}{1&plus;\frac{1}{\log_2{3}}}&space;=&space;0.92" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\frac{2^1-1}{\log_2{2}}&plus;0&plus;\frac{2^1-1}{\log_2{4}}}{\frac{2^1-1}{\log_2{2}}&plus;\frac{2^1-1}{\log_2{3}}&plus;0}&space;=&space;\frac{1.5}{1&plus;\frac{1}{\log_2{3}}}&space;=&space;0.92" title="\frac{\frac{2^1-1}{\log_2{2}}+0+\frac{2^1-1}{\log_2{4}}}{\frac{2^1-1}{\log_2{2}}+\frac{2^1-1}{\log_2{3}}+0} = \frac{1.5}{1+\frac{1}{\log_2{3}}} = 0.92" /></a>
 
 
