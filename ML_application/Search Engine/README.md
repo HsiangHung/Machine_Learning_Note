@@ -180,7 +180,7 @@ Where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the
 
 **Note that in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p producing an nDCG = 1.0.**
 
-#### Example 1
+#### Example D.1
 
 ![rank_example_NDCG](images/rank_example_NDCG.png)
 
@@ -190,10 +190,17 @@ The IDCG are (by perfect ranking):
 At rank 1: rel_1 = 1; IDCG@1 = 1
 At rank 2: rel_2 = 1; IDCG@2 = IDCG@1 + 1/log(1+2) = 1 + 0.63 = 1.63
 At rank 3: rel_3 = 1; IDCG@3 = IDCG@2 + 1/log(1+3) = 1.63 + 1/2 = 2.13
-At rank 4: rel_4 = 1; IDCG@4 = IDCG@3 + 1/log(1+4) = 2.13 + 0.431 = 2.561
+At rank 4: rel_4 = 1; IDCG@4 = IDCG@3 + 1/log(1+4) = 2.13 + 0.43 = 2.56
 rank 5- rank 8: IDCG are same
 ```
+#### Example D.2
 
+* q1 -> d1, d2
+* q2 -> d3, d4, d5
+ 
+Assuming only d2,d3,d5 are relevant document given their corresponding query, and the document ranks are by model:
+
+NDCG of q1 :<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{0&plus;\frac{2^1-1}{\log_2{3}}}{\frac{2^1-1}{\log_2{2}}&plus;0}&space;=&space;\frac{1}{\log_2{3}}&space;=&space;0.631" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{0&plus;\frac{2^1-1}{\log_2{3}}}{\frac{2^1-1}{\log_2{2}}&plus;0}&space;=&space;\frac{1}{\log_2{3}}&space;=&space;0.631" title="\frac{0+\frac{2^1-1}{\log_2{3}}}{\frac{2^1-1}{\log_2{2}}+0} = \frac{1}{\log_2{3}} = 0.631" /></a>
 
 
 ### Reference
