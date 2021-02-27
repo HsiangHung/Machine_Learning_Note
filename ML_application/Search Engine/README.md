@@ -26,7 +26,7 @@ By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/pr
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" title="C = -\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" /></a>
 
-![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}) 
+![C = -\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij}](https://latex.codecogs.com/gif.latex?C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})) 
 
 
 where <a href="https://www.codecogs.com/eqnedit.php?latex=P_{ij}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P_{ij}" title="P_{ij}" /></a> is the **learned** probability of document <a href="https://www.codecogs.com/eqnedit.php?latex=d_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d_i" title="d_i" /></a> ranks higher than document a href="https://www.codecogs.com/eqnedit.php?latex=d_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d_j" title="d_j" /></a>, 
