@@ -34,6 +34,8 @@ and \bar{P}_ij is the **known** probability di should be ranked higher than dj f
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k&space;=&space;w_k&space;-\alpha&space;\frac{\partial&space;C}{\partial&space;w_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k&space;=&space;w_k&space;-\alpha&space;\frac{\partial&space;C}{\partial&space;w_k}" title="w_k \to w_k +\delta w_k = w_k -\alpha \frac{\partial C}{\partial w_k}" /></a>
 
+The gradient is the derivative of the cost function with respect to parameters:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\frac{\partial&space;C}{\partial&space;s_i}\frac{\partial&space;s_i}{\partial&space;w_k}&space;&plus;&space;\frac{\partial&space;C}{\partial&space;s_j}\frac{\partial&space;s_j}{\partial&space;w_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\frac{\partial&space;C}{\partial&space;s_i}\frac{\partial&space;s_i}{\partial&space;w_k}&space;&plus;&space;\frac{\partial&space;C}{\partial&space;s_j}\frac{\partial&space;s_j}{\partial&space;w_k}" title="\frac{\partial C}{\partial w_k} = \frac{\partial C}{\partial s_i}\frac{\partial s_i}{\partial w_k} + \frac{\partial C}{\partial s_j}\frac{\partial s_j}{\partial w_k}" /></a>
 
 During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients (`λ`) of the cost with respect to the model score [[Educative.io-1]][What is Lambda rank?]. 
@@ -43,7 +45,7 @@ Two important enhancements have been achieved from RankNet to LambdaRank, see [K
 
 1. Training speed-up thanks to factorization of gradient calculation:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k;&space;\&space;\delta&space;w_k&space;=&space;-\alpha&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k;&space;\&space;\delta&space;w_k&space;=&space;-\alpha&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" title="w_k \to w_k +\delta w_k; \ \delta w_k = -\alpha \sum_i \lambda_i \frac{\partial s_i}{\partial w_k}{}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\lambda_{ij}\big(\frac{\partial&space;s_i}{\partial&space;w_k}&space;-&space;\frac{\partial&space;s_j}{\partial&space;w_k}&space;\big)&space;=&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\lambda_{ij}\big(\frac{\partial&space;s_i}{\partial&space;w_k}&space;-&space;\frac{\partial&space;s_j}{\partial&space;w_k}&space;\big)&space;=&space;\sum_i&space;\lambda_i&space;\frac{\partial&space;s_i}{\partial&space;w_k}{}" title="\frac{\partial C}{\partial w_k} = \lambda_{ij}\big(\frac{\partial s_i}{\partial w_k} - \frac{\partial s_j}{\partial w_k} \big) = \sum_i \lambda_i \frac{\partial s_i}{\partial w_k}{}" /></a>
 
 2. Optimization towards a ranking metric (scaling the gradients by the change in NDCG):
 
