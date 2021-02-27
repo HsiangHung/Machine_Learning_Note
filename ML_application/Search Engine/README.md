@@ -26,7 +26,15 @@ By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/pr
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" title="C = -\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" /></a>
 
-where P_ij is the **learned** probability of document di ranks higher than document dj, and \bar{P}_ij is the **known** probability di should be ranked higher than dj from training data.
+where P_ij is the **learned** probability of document di ranks higher than document dj, 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P_{ij}&space;=&space;\frac{1}{1&plus;e^{-\sigma(s_i&space;-s_j)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P_{ij}&space;=&space;\frac{1}{1&plus;e^{-\sigma(s_i&space;-s_j)}}" title="P_{ij} = \frac{1}{1+e^{-\sigma(s_i -s_j)}}" /></a>
+
+and \bar{P}_ij is the **known** probability di should be ranked higher than dj from training data. The model parameters are updated 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k&space;=&space;w_k&space;-\alpha&space;\frac{\partial&space;C}{\partial&space;w_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_k&space;\to&space;w_k&space;&plus;\delta&space;w_k&space;=&space;w_k&space;-\alpha&space;\frac{\partial&space;C}{\partial&space;w_k}" title="w_k \to w_k +\delta w_k = w_k -\alpha \frac{\partial C}{\partial w_k}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\frac{\partial&space;C}{\partial&space;s_i}\frac{\partial&space;s_i}{\partial&space;w_k}&space;&plus;&space;\frac{\partial&space;C}{\partial&space;s_j}\frac{\partial&space;s_j}{\partial&space;w_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;w_k}&space;=&space;\frac{\partial&space;C}{\partial&space;s_i}\frac{\partial&space;s_i}{\partial&space;w_k}&space;&plus;&space;\frac{\partial&space;C}{\partial&space;s_j}\frac{\partial&space;s_j}{\partial&space;w_k}" title="\frac{\partial C}{\partial w_k} = \frac{\partial C}{\partial s_i}\frac{\partial s_i}{\partial w_k} + \frac{\partial C}{\partial s_j}\frac{\partial s_j}{\partial w_k}" /></a>
 
 During the RankNet training procedure, it was discovered that costs are not required to perform ranking. The only major requirement is the gradients (`λ`) of the cost with respect to the model score [[Educative.io-1]][What is Lambda rank?]. 
 
