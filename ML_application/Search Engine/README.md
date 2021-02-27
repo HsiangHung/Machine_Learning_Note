@@ -59,6 +59,10 @@ Therefore, LambdaRank uses the idea of optimizing NDCG, which empirically yield 
 LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, using a cost function derived from LambdaRank for solving a ranking task (see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet)). MART points to Multiple Additive Regression Trees, which uses gradient boosted decision trees for prediction tasks [[Educative.io-2]][What is LambdaMART?].
 
 
+### D. LighGBM 
+
+In order to use LightGBM for ranking, we use lambdarank as an objective function. The idea of lambdarank is to use the gradient of cost with respect to model score instead of cost [[Raghav Bhutani]][Gradient Boosting Ranking Algorithm: LightGBM], [[Tamara Alexandra Cucumides]][Learning-to-rank with LightGBM (Code example in python)].
+
 
 ## Data to Prepare
 
@@ -347,6 +351,14 @@ Set up your products for visibility and sales in Amazon wesbite search [[George 
 
 [How does Google measure the quality of their search results?]: https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results
 [[Quroa: How does Google measure the quality of their search results?] How does Google measure the quality of their search results?](https://www.quora.com/How-does-Google-measure-the-quality-of-their-search-results)
+
+
+[Gradient Boosting Ranking Algorithm: LightGBM]: https://medium.com/@raghavbhutani41/gradient-boosting-ranking-algorithm-lightgbm-667050dddaaf
+[[Raghav Bhutani] Gradient Boosting Ranking Algorithm: LightGBM](https://medium.com/@raghavbhutani41/gradient-boosting-ranking-algorithm-lightgbm-667050dddaaf)
+
+
+[Learning-to-rank with LightGBM (Code example in python)]: https://medium.com/@tacucumides/learning-to-rank-with-lightgbm-code-example-in-python-843bd7b44574
+[[Tamara Alexandra Cucumides] Learning-to-rank with LightGBM (Code example in python)](https://medium.com/@tacucumides/learning-to-rank-with-lightgbm-code-example-in-python-843bd7b44574)
 
 
 [Mean average precision]: https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision
