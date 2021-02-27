@@ -22,7 +22,7 @@ In RankNet, LambdaRank and LambdaMART, ranking is transformed into a **pairwise*
 
 ### A. RankNet
 
-By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf), ranknet is a neural network model to optimize the following cross entropy:
+By the [Chris Burges' paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf), ranknet is **neural nets** to optimize the following cross entropy:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;-\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" title="C = -\bar{P}_{ij}\log{P_{ij}}-(1-\bar{P}_{ij})\log(1-P_{ij})" /></a>
 
@@ -41,7 +41,7 @@ Two important enhancements have been achieved from RankNet to LambdaRank, see [K
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda_{ij}&space;=&space;\frac{\partial&space;C(s_i,&space;s_j)}{\partial&space;s_i}&space;=&space;\frac{-\sigma}{1&plus;e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" title="\lambda_{ij} = \frac{\partial C(s_i, s_j)}{\partial s_i} = \frac{-\sigma}{1+e^{\sigma(s_i-s_j)}}|\Delta_{\textrm{NDCG}}|" /></a>
 
-Therefore, LambdaRank uses the idea of a new cost function for training a RankNet. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets [[Educative.io-1]][What is Lambda rank?].
+Therefore, LambdaRank uses the idea of optimizing NDCG, which empirically yield better overall results. This improves the RankNet by increasing the speed and accuracy of RankNet over experimental datasets [[Educative.io-1]][What is Lambda rank?].
 
 ### C. LambdaMART
 LambdaMART is simply a LambdaRank but replaces the underlying neural network model with gradient boosting regression trees, see [Kyle Chung's note](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html#RankNet); MART points to Multiple Additive Regression Trees, which uses gradient boosted decision trees for prediction tasks [[Educative.io-2]][What is LambdaMART?].
