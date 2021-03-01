@@ -88,11 +88,10 @@ Tne boosting regression trees can be extended to classification and even ranking
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{fit&space;}&space;\epsilon_2&space;=&space;f_3(x);&space;\&space;\hat{\epsilon}_2&space;=&space;f_3(x),&space;\&space;\hat{y}^{(3)}&space;=&space;\hat{y}_1&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2,&space;\&space;\textrm{residual&space;}&space;\epsilon_3&space;=&space;y-\hat{y}^{(3)}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{fit&space;}&space;\epsilon_2&space;=&space;f_3(x);&space;\&space;\hat{\epsilon}_2&space;=&space;f_3(x),&space;\&space;\hat{y}^{(3)}&space;=&space;\hat{y}_1&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2,&space;\&space;\textrm{residual&space;}&space;\epsilon_3&space;=&space;y-\hat{y}^{(3)}," title="\textrm{fit } \epsilon_2 = f_3(x); \ \hat{\epsilon}_2 = f_3(x), \ \hat{y}^{(3)} = \hat{y}_1 + \hat{\epsilon}_1 + \hat{\epsilon}_2, \ \textrm{residual } \epsilon_3 = y-\hat{y}^{(3)}," /></a>
 
-...
+....
 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^{(n)}&space;=&space;\hat{y}_1&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2&space;\cdots&space;&plus;&space;\hat{\epsilon}_n&space;=&space;\hat{y}^{(n-1)}&space;&plus;&space;f_n(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^{(n)}&space;=&space;\hat{y}_1&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2&space;\cdots&space;&plus;&space;\hat{\epsilon}_n&space;=&space;\hat{y}^{(n-1)}&space;&plus;&space;f_n(x)" title="\hat{y}^{(n)} = \hat{y}_1 + \hat{\epsilon}_1 + \hat{\epsilon}_2 \cdots + \hat{\epsilon}_n = \hat{y}^{(n-1)} + f_n(x)" /></a>
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^{(n)}&space;=&space;\hat{y}_1&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2&space;\cdots&space;&plus;&space;\hat{\epsilon}_{n-1}&space;=&space;\hat{y}^{(n-1)}&space;&plus;&space;f_n(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^{(n)}&space;=&space;\hat{y}_1&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2&space;\cdots&space;&plus;&space;\hat{\epsilon}_{n-1}&space;=&space;\hat{y}^{(n-1)}&space;&plus;&space;f_n(x)" title="\hat{y}^{(n)} = \hat{y}_1 + \hat{\epsilon}_1 + \hat{\epsilon}_2 \cdots + \hat{\epsilon}_{n-1} = \hat{y}^{(n-1)} + f_n(x)" /></a>
 
 
 
