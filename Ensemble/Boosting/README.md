@@ -77,6 +77,15 @@ Terence Parr in a Quora post [[Quora: What is an intuitive explanation of Gradie
 ![](images/golf.png)
 
 
+### MART 
+
+Tne boosting regression trees can be extended to classification and even ranking problems. The procedures of building a boosting regression tree are summarize below (given (`x`, `y`))
+
+1. <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{fit&space;}&space;y&space;=&space;f_1(x);&space;\&space;\hat{y}_1&space;=&space;f_1(x),&space;\&space;\textrm{residual&space;}&space;\epsilon_1&space;=&space;y-\hat{y},&space;\&space;\hat{y}^{(1)}&space;=&space;\hat{y}_1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{fit&space;}&space;y&space;=&space;f_1(x);&space;\&space;\hat{y}_1&space;=&space;f_1(x),&space;\&space;\textrm{residual&space;}&space;\epsilon_1&space;=&space;y-\hat{y},&space;\&space;\hat{y}^{(1)}&space;=&space;\hat{y}_1," title="\textrm{fit } y = f_1(x); \ \hat{y}_1 = f_1(x), \ \textrm{residual } \epsilon_1 = y-\hat{y}, \ \hat{y}^{(1)} = \hat{y}_1," /></a>
+
+
+
+
 
 ## B. AdaBoost
 
