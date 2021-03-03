@@ -1,8 +1,10 @@
+
 # Gradient Boosting Extension - MART
 
 
 Tne idea of boosting regression trees can be mapping to classification and ranking problems. It is called MART(Multiple Additive Regression Trees), where the output of the model is a linear combination of the outputs of a set of regression trees.
 
+The following content follows Chris Burge's review paper: [From RankNet to LambdaRank to LambdaMART: An Overview](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf). The LambdaMART is particularly designed as MART + LambdaRank.
 
 ## Boosting regression
 
@@ -24,7 +26,7 @@ The following picture provides a good intuition about the gradient boosting proc
 
 ![](images/golf.png)
 
-and each tree `f1`, `f2`, .... provides approaching results toward to the true target.
+and each tree `f1`, `f2`, .... provides approaching results toward to the true target. The collection of the trees forms an ensemble.
 
 Note the cost function for regression is 
 
