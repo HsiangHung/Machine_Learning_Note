@@ -1,8 +1,8 @@
-# Gradient Boosting Extendsion - MART
+# Gradient Boosting Extension - MART
 
 
+Tne idea of boosting regression trees can be mapping to classification and ranking problems. It is called MART(Multiple Additive Regression Trees), where the output of the model is a linear combination of the outputs of a set of regression trees.
 
-Tne boosting regression trees can be extended to classification and even ranking problems. 
 
 ## Boosting regression
 
