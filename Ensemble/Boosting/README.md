@@ -79,9 +79,7 @@ Terence Parr in a Quora post [[Quora: What is an intuitive explanation of Gradie
 
 ### MART 
 
-Tne boosting regression trees can be extended to classification and even ranking problems. 
-
-
+The boosting regression trees can be extended to classification and even ranking problems. See the [page](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting/MART) and Chris Burges' [paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf) for detail.
 
 
 
