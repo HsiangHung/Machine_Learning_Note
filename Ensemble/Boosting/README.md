@@ -15,7 +15,9 @@ There are mainly two boosting algorithms: (A) Adaptive Boosting (Adaboost), (B) 
 
 Adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[Quora: What is the difference between gradient boosting and adaboost?]][What is the difference between gradient boosting and adaboost?].
 
-On the other hand, gradient boosting doesn’t modify the sample distribution. 
+
+We first train a decision tree in which each observation is assigned an equal weight. After evaluating the first tree, we increase the weights of those observations which have significant calssificstion errors. The second tree is therefore grown on this weighted data. Our new model is therefore Tree 1 + Tree 2. We then compute the classification error from this new 2-tree **ensemble** model and grow a third tree to predict the revised residuals. Predictions of the final ensemble model is therefore the weighted sum of the predictions made by the previous tree models [[Harshdeep Singh]][Understanding Gradient Boosting Machines].
+
 
 As a concrete example, we follow Josh Starmer's video lecture: [Adaboost, clearly explained](https://www.youtube.com/watch?v=LsK-xG1cLYA) below. Suppose we have data if patients have heart disease as follows (**chest** = if chest pain,**weight** = patient weight, **disease** = heart disease and **sample weight**):
 ```
@@ -57,7 +59,9 @@ Then we reconstruct data in next forest by the new sample weights. For example, 
 ## B. Gradient Boosting
 
 
-Adaboost was the original implementation of boosting with a single cost function, but wasn’t that efficient. Gradient Boosting (Breiman, Friedman) can be used for different cost functions [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?].
+Adaboost was the original implementation of boosting with a single cost function, but wasn’t that efficient.
+
+On the other hand, gradient boosting doesn’t modify the sample distribution, and it can be used for different cost functions [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?].
 
 A GBM will start with a not very deep tree and will model the original target. Then it takes the errors from the first round of predictions, and passes the errors as a new target to a second tree. The second tree will model the error from the first tree, record the new errors and pass that as a target to the third tree. And so forth. Essentially it focuses on modelling errors from previous trees. It is high bias-low variance algorithm, and aims to decrease bias not variance. An excellent notebook [[Prince Grover-1]][Gradient Boosting from scratchs] demonstrates how a GBM minimizes bias during training (also see [[Prince Grover-2]][Gradient boosting simplified]).
    
@@ -219,6 +223,12 @@ Below is the summary:
 
 If early stopping is enabled and the model’s accuracy fails to improve for some number of consecutive rounds, LightGBM stops the training process. That “number of consecutive rounds” is controlled by the parameter `early_stopping_rounds`. See [here](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html#use-early-stopping).
 
+Early stopping can be based either on an out of **bag sample set (“OOB”)** or **cross-validation (“cv”)**. Like mentioned above, the ideal time to stop training the model is when the validation error has decreased and started to stabilise before it starts increasing due to overfitting [[Harshdeep Singh]][Understanding Gradient Boosting Machines].
+
+In the [blog](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab), the author showed two plots indicating the optimum number of trees based on the respective technique used. The graph on the left indicates the error on test (green line) and train data set (black line). The blue dotted line points the optimum number of iterations. One can also clearly observe that the beyond a certain a point (169 iterations for the “cv” method), the error on the test data appears to increase because of overfitting. Hence, our model will stop the training procedure on the given optimum number of iterations.
+
+![early_stop](images/early_stop.png)
+
 
 ## E. Comparison LighGBM vs XGboost
 
@@ -291,6 +301,11 @@ LightGBM and XGBoost Libraries can handle missing values [[Data Science: Which m
 
 [Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)]: https://medium.com/kaggle-nyc/gradient-boosting-decision-trees-xgboost-vs-lightgbm-and-catboost-72df6979e0bb#:~:text=In%20summary%2C%20LightGBM%20improves%20on,fraction%20of%20the%20whole%20dataset.
 [[Harry Moreno] Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)](https://medium.com/kaggle-nyc/gradient-boosting-decision-trees-xgboost-vs-lightgbm-and-catboost-72df6979e0bb#:~:text=In%20summary%2C%20LightGBM%20improves%20on,fraction%20of%20the%20whole%20dataset.)
+
+
+[Understanding Gradient Boosting Machines]: https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab
+[[Harshdeep Singh] Understanding Gradient Boosting Machines](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab)
+
 
 
 [Gradient Boosting with Scikit-Learn, XGBoost, LightGBM, and CatBoost]: https://machinelearningmastery.com/gradient-boosting-with-scikit-learn-xgboost-lightgbm-and-catboost/
