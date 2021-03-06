@@ -8,15 +8,63 @@ Boosting is one of ensemble techniques to **sequentially** generate predictors. 
 
 A larger number of gradient boosting iterations reduces training set errors. Raising the number of gradients boosting iterations too high increases overfitting. Therefore the number of iterations (trees) is a hyperparameter needed to tune ([Gradient Boosting: Gradient Boosting Regularization](https://corporatefinanceinstitute.com/resources/knowledge/other/gradient-boosting/)).
 
-There are mainly two boosting algorithms: Gradient Boosting (GBM) and Adaptive Boosting (Adaboost). XGBoost is a brand new tool developed by Tianran Chen by optimizing GBM.
+There are mainly two boosting algorithms: (A) Adaptive Boosting (Adaboost), (B) Gradient Boosting (GBM). (C)[XGBoost](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) (Tianran Chen by optimizing GBM) and (D) LightGBM are brand new GBM-extension tools developed more recently.
 
 
-## A. Gradient Boosting
+## A. AdaBoost
+
+Adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[Quora: What is the difference between gradient boosting and adaboost?]][What is the difference between gradient boosting and adaboost?].
+
+On the other hand, gradient boosting doesn’t modify the sample distribution. 
+
+As a concrete example, we follow Josh Starmer's video lecture: [Adaboost, clearly explained](https://www.youtube.com/watch?v=LsK-xG1cLYA) below. Suppose we have data if patients have heart disease as follows (**chest** = if chest pain,**weight** = patient weight, **disease** = heart disease and **sample weight**):
+```
+ # | chest | weight | disease | sample weight|
+--------------------------------------------
+ 1 |  Yes  |  205   |   Yes   |  1/8  |
+ 2 |  No   |  180   |   Yes   |  1/8  |
+ 3 |  Yes  |  210   |   Yes   |  1/8  |
+ 4 |  Yes  |  167   |   Yes   |  1/8  |
+ 5 |  No   |  156   |   No    |  1/8  |
+ 6 |  No   |  125   |   No    |  1/8  |
+ 7 |  Yes  |  168   |   No    |  1/8  |
+ 8 |  Yes  |  172   |   No    |  1/8  |
+```
+At the beginning each data has same sample weight = 1/8.
+
+Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` and patients' weight < as `No`.
+For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 incorrect (#4). Then next step we reweigh #4 data with higher sample weight than others since it is misclassified
+```
+ # | chest | weight | disease | new sample weight|
+--------------------------------------------
+ 1 |  Yes  |  205   |   Yes   |  0.07  |
+ 2 |  No   |  180   |   Yes   |  0.07  |
+ 3 |  Yes  |  210   |   Yes   |  0.07  |
+ 4 |  Yes  |  167   |   Yes   |  0.49  |
+ 5 |  No   |  156   |   No    |  0.07  |
+ 6 |  No   |  125   |   No    |  0.07  |
+ 7 |  Yes  |  168   |   No    |  0.07  |
+ 8 |  Yes  |  172   |   No    |  0.07  |
+```
+Then we reconstruct data in next forest by the new sample weights. For example, given random numbers r: if r < 0.07 we pick #1, if 0.07 <= r < 0.14 we pick #2,..., if 0.21 <= r < 0.7 pick #4,.... As a result, we will have more #4 than others in the new constructed data.
 
 
- A GBM will start with a not very deep tree and will model the original target. Then it takes the errors from the first round of predictions, and passes the errors as a new target to a second tree. The second tree will model the error from the first tree, record the new errors and pass that as a target to the third tree. And so forth. Essentially it focuses on modelling errors from previous trees. It is high bias-low variance algorithm, and aims to decrease bias not variance. An excellent notebook [[Prince Grover-1]][Gradient Boosting from scratchs] demonstrates how a GBM minimizes bias during training (also see [[Prince Grover-2]][Gradient boosting simplified]).
+
+
+
+
+
+## B. Gradient Boosting
+
+
+Adaboost was the original implementation of boosting with a single cost function, but wasn’t that efficient. Gradient Boosting (Breiman, Friedman) can be used for different cost functions [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?].
+
+A GBM will start with a not very deep tree and will model the original target. Then it takes the errors from the first round of predictions, and passes the errors as a new target to a second tree. The second tree will model the error from the first tree, record the new errors and pass that as a target to the third tree. And so forth. Essentially it focuses on modelling errors from previous trees. It is high bias-low variance algorithm, and aims to decrease bias not variance. An excellent notebook [[Prince Grover-1]][Gradient Boosting from scratchs] demonstrates how a GBM minimizes bias during training (also see [[Prince Grover-2]][Gradient boosting simplified]).
    
 In the following, we explain the boosting pictures using the figures depicted from [Prof. Ihler's lecture slides](http://sli.ics.uci.edu/Classes/2012F-273a?action=download&upname=10-ensembles.pdf) (also the [lecture video](https://www.youtube.com/watch?v=sRktKszFmSk)). Ben Gorman, a Kaggle master also provided a comprehensive description to interpret the math behind GBM in [[3]][A Kaggle Master Explains Gradient Boosting]. 
+
+
+
 
 
 ### Boosting steps in GBM
@@ -79,53 +127,14 @@ Terence Parr in a Quora post [[Quora: What is an intuitive explanation of Gradie
 
 ### MART 
 
-The boosting regression trees can be extended to classification and even ranking problems. See the [page](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting/MART) and Chris Burges' [paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf) for detail.
+The boosting regression trees can be extended to classification and even ranking problems. See more detail on the [Github page](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting/MART) and Chris Burges' [paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf) for detail.
 
-
-
-
-## B. AdaBoost
-
-On the other hand, adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[Quora: What is the difference between gradient boosting and adaboost?]][What is the difference between gradient boosting and adaboost?].
-
-On the other hand, gradient boosting doesn’t modify the sample distribution. 
-
-As a concrete example, we follow Josh Starmer's video lecture: [Adaboost, clearly explained](https://www.youtube.com/watch?v=LsK-xG1cLYA) below. Suppose we have data if patients have heart disease as follows (**chest** = if chest pain,**weight** = patient weight, **disease** = heart disease and **sample weight**):
-```
- # | chest | weight | disease | sample weight|
---------------------------------------------
- 1 |  Yes  |  205   |   Yes   |  1/8  |
- 2 |  No   |  180   |   Yes   |  1/8  |
- 3 |  Yes  |  210   |   Yes   |  1/8  |
- 4 |  Yes  |  167   |   Yes   |  1/8  |
- 5 |  No   |  156   |   No    |  1/8  |
- 6 |  No   |  125   |   No    |  1/8  |
- 7 |  Yes  |  168   |   No    |  1/8  |
- 8 |  Yes  |  172   |   No    |  1/8  |
-```
-At the beginning each data has same sample weight = 1/8.
-
-Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` and patients' weight < as `No`.
-For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 incorrect (#4). Then next step we reweigh #4 data with higher sample weight than others since it is misclassified
-```
- # | chest | weight | disease | new sample weight|
---------------------------------------------
- 1 |  Yes  |  205   |   Yes   |  0.07  |
- 2 |  No   |  180   |   Yes   |  0.07  |
- 3 |  Yes  |  210   |   Yes   |  0.07  |
- 4 |  Yes  |  167   |   Yes   |  0.49  |
- 5 |  No   |  156   |   No    |  0.07  |
- 6 |  No   |  125   |   No    |  0.07  |
- 7 |  Yes  |  168   |   No    |  0.07  |
- 8 |  Yes  |  172   |   No    |  0.07  |
-```
-Then we reconstruct data in next forest by the new sample weights. For example, given random numbers r: if r < 0.07 we pick #1, if 0.07 <= r < 0.14 we pick #2,..., if 0.21 <= r < 0.7 pick #4,.... As a result, we will have more #4 than others in the new constructed data.
 
 
 
 ## C. XGBoost
 
-XGBoost (Chen) was developed to put this on a more formal footing. Both xgboost and gbm follows the principle of gradient boosting, but in XGBoost the size of the tree and the magnitude of the weights are controlled by standard **regularization** parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
+XGBoost (Chen) was developed to put this on a more formal footing. Both xgboost and gbm follows the principle of gradient boosting, but in XGBoost the **size of the tree** and the magnitude of the weights are controlled by standard **regularization** parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
 
 The comprehensive tutorial on introduction to the model, [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) explained more detailed [[Data Science: GBM vs XGBOOST? Key differences?]][GBM vs XGBOOST? Key differences?]. Suppose we have
 
