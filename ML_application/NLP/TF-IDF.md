@@ -36,9 +36,20 @@ and we are doing a search on these documents with query: **Data Scientists**.
 |  3  | large      | 1/6 = 0.167| log(3/1) = 1.585 | 0.265 | 
 |  3  | dataset    | 1/6 = 0.167| log(3/1) = 1.585 | 0.265 | 
 
+The Vector Space Representation for the documents are:
 
+* Doc1: {"Ben": 0.227, "study": 0.227, "computer": 0.453, "study": 0.227}
+* Doc2: {"Steve": 0.317, "teach": 0.317, "Brown": 0.317, "university": 0.317}
+* Doc3: {"data": 0.265, "scientist": 0.265, "work": 0.265, "large": 0.265, "dataset": 0.265}
 
+## TF-IDF Score Match
 
+Use similarity measures (eg, Cosine Similarity method) to find the similarity between the query and each document. If query = d = {"data": 0.265, "scientist": 0.265}, the dot product of d and Doc are 0.265+0.265 = 0.53.
+
+| ter | Doc1 | Doc2 | Doc3 | 
+| --- | --- | --- | --- | 
+| data  |  0  | 0 | 0.265 | 
+| scientist | 0 | 0 | 0.265 |
 
 
 
