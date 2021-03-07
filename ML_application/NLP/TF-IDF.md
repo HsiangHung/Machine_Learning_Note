@@ -60,8 +60,10 @@ Use similarity measures (eg, Cosine Similarity method) to find the similarity be
 [[geeksforgeeks] tf-idf Model for Page Ranking](https://www.geeksforgeeks.org/tf-idf-model-for-page-ranking/#:~:text=tf%2Didf%20is%20a%20weighting,considered%20to%20be%20more%20important.&text=Let's%20us%20take%203%20documents%20to%20show%20how%20this%20works.)
 
 
-
 [TF-IDF for Similarity Scores]: https://medium.datadriveninvestor.com/tf-idf-for-similarity-scores-391c3c8788e8
 [[Nishant Sethi] TF-IDF for Similarity Scores](https://medium.datadriveninvestor.com/tf-idf-for-similarity-scores-391c3c8788e8)
 
+
+[tf–idf]: https://en.wikipedia.org/wiki/Tf%E2%80%93idf
+[[wiki: tf-idf] tf–idf](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
 
