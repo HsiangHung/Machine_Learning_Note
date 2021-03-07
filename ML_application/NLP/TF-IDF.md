@@ -44,25 +44,22 @@ The Vector Space Representation for the documents are:
 
 ## TF-IDF Score Match
 
-Use similarity measures (eg, Cosine Similarity method) to find the similarity between the query and each document. If query = d = {"data": 0.265, "scientist": 0.265}, the dot product of d and Doc are 0.265+0.265 = 0.53.
+Use similarity measures (eg, Cosine Similarity method) to find the similarity between the query and each document [[geeksforgeeks]][tf-idf Model for Page Ranking]. If query = d = {"data": 0.265, "scientist": 0.265}, the dot product of d and Doc are 0.265+0.265 = 0.53.
 
-| ter | Doc1 | Doc2 | Doc3 | 
+| term | Doc1 | Doc2 | Doc3 | 
 | --- | --- | --- | --- | 
 | data  |  0  | 0 | 0.265 | 
 | scientist | 0 | 0 | 0.265 |
 
 
 
-
-
-
-
-
-
-
-
-
 ## Reference
+
+
+[tf-idf Model for Page Ranking]: https://www.geeksforgeeks.org/tf-idf-model-for-page-ranking/#:~:text=tf%2Didf%20is%20a%20weighting,considered%20to%20be%20more%20important.&text=Let's%20us%20take%203%20documents%20to%20show%20how%20this%20works.
+[[geeksforgeeks] tf-idf Model for Page Ranking](https://www.geeksforgeeks.org/tf-idf-model-for-page-ranking/#:~:text=tf%2Didf%20is%20a%20weighting,considered%20to%20be%20more%20important.&text=Let's%20us%20take%203%20documents%20to%20show%20how%20this%20works.)
+
+
 
 [TF-IDF for Similarity Scores]: https://medium.datadriveninvestor.com/tf-idf-for-similarity-scores-391c3c8788e8
 [[Nishant Sethi] TF-IDF for Similarity Scores](https://medium.datadriveninvestor.com/tf-idf-for-similarity-scores-391c3c8788e8)
