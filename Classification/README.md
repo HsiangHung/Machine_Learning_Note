@@ -12,10 +12,10 @@ In most cases, there are no perfect classifiers. A good common question is which
 
 Recall the **confusion matrix**:
 
-| \ | actual pos | actual neg | 
+| predicted \ actual |  positive |  negative | 
 | --- | --- | --- | 
-| pred pos | TP | FP | 
-| pred neg | FP | TN | 
+|  positive | TP | FP | 
+|  negative | FP | TN | 
 
 ```
              - Truth -
