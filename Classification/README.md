@@ -17,12 +17,7 @@ Recall the **confusion matrix**:
 |  positive | TP | FP | 
 |  negative | FP | TN | 
 
-```
-             - Truth -
-   ------- | Pos | Neg |
-  Pred Pos | TP  | FP  |
-  Pred Neg | FN  | TN  |
-```
+
 The relevant metrics are 
 ```
 precision = TP/(TP+FP), recall = TP/(TP+FN)
