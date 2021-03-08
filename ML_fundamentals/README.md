@@ -13,7 +13,7 @@ Some recommended summary:
 
 ## Data Sparsity
 
-**Rakshith Gowda Kodihalli** [Quora: What is data sparsity?]][What is data sparsity?]: Any data which as very large zero value and very little no zero value then it is called sparse data. And the way in which data is saved is sparse matrix. The example is like:
+**Rakshith Gowda Kodihalli** [[Quora: What is data sparsity?]][What is data sparsity?]: Any data which as very large zero value and very little no zero value then it is called sparse data. And the way in which data is saved is sparse matrix. The example is like:
 
 | c1 | c2 | c3 | c4 | c5 |
 | --- | --- | --- | --- | --- |
