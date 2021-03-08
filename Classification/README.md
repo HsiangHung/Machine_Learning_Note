@@ -11,6 +11,12 @@
 In most cases, there are no perfect classifiers. A good common question is which metric should we use for model selection, precision or recall? Classifier to have high True Positive Rate (TPR) or False Positive Rate (FPR)? It depends on domain and our business goal.
 
 Recall the **confusion matrix**:
+
+| \ | actual pos | actual neg | 
+| --- | --- | --- | 
+| pred pos | TP | FP | 
+| pred neg | FP | TN | 
+
 ```
              - Truth -
    ------- | Pos | Neg |
