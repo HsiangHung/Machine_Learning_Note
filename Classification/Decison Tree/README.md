@@ -157,6 +157,10 @@ Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wi
 
 There are several methods used by various decision trees. Simply ignoring the missing values (like ID3 and other old algorithms does) or treating the missing values as another category (in case of a nominal feature) are not real handling missing values [[StackExchange: How do decision tree learning algorithms deal with missing values]][How do decision tree learning algorithms deal with missing values]. 
 
+By Towfik Alrazihi [[Quora: In simple language, how does C4.5 deal with missing values?]][In simple language, how does C4.5 deal with missing values?], the missing values:
+* goes to the node which already has the biggest number of instances.
+* goes to all children with diminished weights.
+* Goes randomly to only single chlid node.
 
 ## Reference
 
@@ -164,6 +168,9 @@ There are several methods used by various decision trees. Simply ignoring the mi
 [Does decision tree need to use the same feature to split in the same layer?]: https://stats.stackexchange.com/questions/354030/does-decision-tree-need-to-use-the-same-feature-to-split-in-the-same-layer/451780#451780
 [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?] Does decision tree need to use the same feature to split in the same layer?](https://stats.stackexchange.com/questions/354030/does-decision-tree-need-to-use-the-same-feature-to-split-in-the-same-layer/451780#451780)
 
+
+[In simple language, how does C4.5 deal with missing values?]: https://www.quora.com/In-simple-language-how-does-C4-5-deal-with-missing-values
+[[Quora: In simple language, how does C4.5 deal with missing values?] In simple language, how does C4.5 deal with missing values?](https://www.quora.com/In-simple-language-how-does-C4-5-deal-with-missing-values)
 
 [Decision Tree - Regression]: https://www.saedsayad.com/decision_tree_reg.htm#:~:text=Decision%20tree%20builds%20regression%20or,decision%20nodes%20and%20leaf%20nodes.
 [[Saed Sayad] Decision Tree - Regression](https://www.saedsayad.com/decision_tree_reg.htm#:~:text=Decision%20tree%20builds%20regression%20or,decision%20nodes%20and%20leaf%20nodes.)
