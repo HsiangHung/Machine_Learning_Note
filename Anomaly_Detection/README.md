@@ -154,6 +154,11 @@ If the outlier score `s(x,n)` is close to 1, then `x` is very likely to be an an
 
 The determination threshold can be specified, i.e. 0.55 or 0.60, not just at 0.5.
 
+In [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html), the method `predict(X)` predicts if a `X` is an outlier or not `{1,-1}`. `score_samples(X)` gives **opposite** of the anomaly score defined in the original paper: the lower, the more abnormal.
+
+The anomaly score of an input sample is computed as the mean anomaly score of the trees in the forest.
+
+
 The cons of isolation forest include that visualizing results is complicated, and if not correctly optimized, training time can be very long and computationally expensive [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
 
