@@ -88,7 +88,7 @@ However, Marco, brought up a great point about the risks of using SMOTE without 
 
 ## 5. Anomaly Detection Techniques
 
-According to the [KDD article](https://www.kdnuggets.com/2017/01/3-methods-deal-outliers.html), 3 different methods are used to find outliers:
+According to the [KDD article: 3 methods to deal with outliers](https://www.kdnuggets.com/2017/01/3-methods-deal-outliers.html), 3 different methods are used to find outliers:
 
 * **Univariate method**: One of the simplest methods for detecting outliers is the use of **box plots**, below (a); then clean it from the data set.
 * **Multivariate method**:  solve that by building a **model using all the data**, below (b); then clean it from the data set.
