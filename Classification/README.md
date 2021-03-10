@@ -1,17 +1,24 @@
 
 # Classification 
 
-## Models
+## Binary Models
 
 
 | model |  bias |  variance | 
 | --- | --- | --- | 
 | [Naive bayes](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Naive%20Bayes)  | high | low | 
-| [Logistic regression]| high | low|
+| Logistic regression| high | low|
 | [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | low | high |
 | [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | low | high |
 
+### Logistic Regression (LR) versus Decision Trees (DT)
 
+*  **Decision boundaries**: DT bisect the space into smaller and smaller regions [below (a)]. LR provides a single linear boundary [below (b)]; for higher-dimensional data, these lines would generalize to planes and hyperplanes. However, when classes are not well-separated, trees are susceptible to overfitting the training data (c), so that Logistic Regression’s simple linear boundary generalizes better (d). Below credit from [Logistic Regression versus Decision Trees](https://blog.bigml.com/2016/09/28/logistic-regression-versus-decision-trees/#:~:text=Decision%20Boundaries&text=Decision%20Trees%20bisect%20the%20space,the%20space%20exactly%20into%20two.&text=A%20single%20linear%20boundary%20can%20sometimes%20be%20limiting%20for%20Logistic%20Regression.)
+
+![LR_vs_DT](images/LR_vs_DT.png)
+
+
+*  **On-line learning**: In LR, the SGD can be easier to use on real-time learning. 
 
 
 ## Binary Classification Metric
