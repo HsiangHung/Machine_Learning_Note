@@ -18,7 +18,7 @@ Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree
 
 |  |  Logistic Regression |  Decision Tree | 
 | --- | --- | --- | 
-| decision boundary  | linear, works well if classes are not well-separated | non-linear | 
+| decision boundary  | linear (b, d), works well if classes are not well-separated | non-linear (a,c) | 
 | categorical data | need to Enumeration or OHE | Yes |
 | data skewed | need to increase weight to the minority class or balance. |  |
 | outlier | change decision boundary | at the initial stage, won't be affected |
