@@ -22,7 +22,7 @@ Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree
 | categorical data | need to Enumeration or OHE | Yes |
 | data skewed | need to increase weight to the minority class or balance. |  |
 | outlier | change decision boundary | at the initial stage, won't be affected |
-| missing value | need to impute by mean, mode, and median | works with missing values |
+| missing value | need to impute by mean, mode, and median | [Yes](https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo) |
 | online learning | Use SGD| No|
 
 Comparison can be visualized below (credit from [Logistic Regression versus Decision Trees](https://blog.bigml.com/2016/09/28/logistic-regression-versus-decision-trees/#:~:text=Decision%20Boundaries&text=Decision%20Trees%20bisect%20the%20space,the%20space%20exactly%20into%20two.&text=A%20single%20linear%20boundary%20can%20sometimes%20be%20limiting%20for%20Logistic%20Regression.))
