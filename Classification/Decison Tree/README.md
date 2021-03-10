@@ -153,6 +153,11 @@ We follow the procedures from [[Sefik Ilkin Serengil]][Feature Importance in Dec
 Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wind" > "Humidity"`.
 
 
+## How To Deal with Missing Values
+
+There are several methods used by various decision trees. Simply ignoring the missing values (like ID3 and other old algorithms does) or treating the missing values as another category (in case of a nominal feature) are not real handling missing values [[StackExchange: How do decision tree learning algorithms deal with missing values]][How do decision tree learning algorithms deal with missing values]. 
+
+
 ## Reference
 
 
@@ -170,3 +175,7 @@ Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wi
 
 [The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark]: https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3
 [[Stacey Ronaghan] The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark](https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3)
+
+
+[How do decision tree learning algorithms deal with missing values]: https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo
+[[StackExchange: How do decision tree learning algorithms deal with missing values] How do decision tree learning algorithms deal with missing values](https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo)
