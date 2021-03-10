@@ -20,7 +20,7 @@ Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree
 | --- | --- | --- | 
 | decision boundary  | linear (b, d), works well if classes are not well-separated | non-linear (a,c) | 
 | categorical data | need to Enumeration or OHE | Yes |
-| data skewed | need to increase weight to the minority class or balance. |  |
+| data skewed | need to increase weight to the minority class or balance. | geow full tree |
 | outlier | change decision boundary | at the initial stage, won't be affected |
 | missing value | need to impute by mean, mode, and median | [Yes](https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo) |
 | online learning | Use SGD| No|
