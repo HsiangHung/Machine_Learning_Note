@@ -153,6 +153,11 @@ We follow the procedures from [[Sefik Ilkin Serengil]][Feature Importance in Dec
 Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wind" > "Humidity"`.
 
 
+**NOTE** [[Tim Bock]][Decision Trees Are Usually Better Than Logistic Regression]: decision trees have their own potential for misinterpretation, with many people incorrectly assuming that the order with which predictors appear in a tree tells you something about their importance. Unfortunately, this is often not the case. For example, if you have two highly correlated predictors, only one of them may appear in the tree and which one it is will be a bit of a fluke.
+
+The consequence of all of these strengths of logistic regression is that if you are doing an academic study and wanting to make conclusions about what **causes** what, logistic regression is often much better than a decision tree. However, if instead the goal is to either make a prediction, or describe the data, then logistic regression is often a poor choice .
+
+
 ## How To Deal with Missing Values
 
 There are several methods used by various decision trees. Simply ignoring the missing values (like ID3 and other old algorithms does) or treating the missing values as another category (in case of a nominal feature) are not real handling missing values [[StackExchange: How do decision tree learning algorithms deal with missing values]][How do decision tree learning algorithms deal with missing values]. 
@@ -186,3 +191,7 @@ By Towfik Alrazihi [[Quora: In simple language, how does C4.5 deal with missing 
 
 [How do decision tree learning algorithms deal with missing values]: https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo
 [[StackExchange: How do decision tree learning algorithms deal with missing values] How do decision tree learning algorithms deal with missing values](https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo)
+
+
+[Decision Trees Are Usually Better Than Logistic Regression]: https://www.displayr.com/decision-trees-are-usually-better-than-logistic-regression/
+[[Tim Bock] Decision Trees Are Usually Better Than Logistic Regression](https://www.displayr.com/decision-trees-are-usually-better-than-logistic-regression/)
