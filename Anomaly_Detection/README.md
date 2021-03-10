@@ -88,6 +88,14 @@ However, Marco, brought up a great point about the risks of using SMOTE without 
 
 ## 5. Anomaly Detection Techniques
 
+According to the [KDD article](https://www.kdnuggets.com/2017/01/3-methods-deal-outliers.html), 3 different methods to use and clean it from the data set:
+
+* **Univariate method**: One of the simplest methods for detecting outliers is the use of box plots, below (a).
+* **Multivariate method**:  solve that by building a model using all the data available, below (b).
+* **Minkowski error**: Unlike the univariate and multivariate methods, it doesn’t detect and clean the outliers. Instead, it reduces the impact that outliers will have in the model, i.e. reduces the contribution of outliers to the total error.
+
+ ![univariate_vs_multivariate](images/univariate_vs_multivariate.png)
+
 
 ### 5.1 Inference: Z score and Modified Z score
 The z-score or standard score of an observation is a metric that indicates how many standard deviations a data point is from the sample’s mean, assuming a gaussian distribution [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]. The z-score of any data point can be calculated as
