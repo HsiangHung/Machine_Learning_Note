@@ -88,10 +88,10 @@ However, Marco, brought up a great point about the risks of using SMOTE without 
 
 ## 5. Anomaly Detection Techniques
 
-According to the [KDD article](https://www.kdnuggets.com/2017/01/3-methods-deal-outliers.html), 3 different methods to use and clean it from the data set:
+According to the [KDD article](https://www.kdnuggets.com/2017/01/3-methods-deal-outliers.html), 3 different methods are used to find outliers:
 
-* **Univariate method**: One of the simplest methods for detecting outliers is the use of box plots, below (a).
-* **Multivariate method**:  solve that by building a model using all the data available, below (b).
+* **Univariate method**: One of the simplest methods for detecting outliers is the use of **box plots**, below (a); then clean it from the data set.
+* **Multivariate method**:  solve that by building a model using all the data available, below (b); then clean it from the data set.
 * **Minkowski error**: Unlike the univariate and multivariate methods, it doesn’t detect and clean the outliers. Instead, it reduces the impact that outliers will have in the model, i.e. reduces the contribution of outliers to the total error.
 
  ![univariate_vs_multivariate](images/univariate_vs_multivariate.png)
