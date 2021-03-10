@@ -1,6 +1,16 @@
 
 # Classification 
 
+## Models
+
+
+| model |  bias |  variance | 
+| --- | --- | --- | 
+| [Naive bayes](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Naive%20Bayes)  | high | low | 
+| [Logistic regression]| high | low|
+| [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | low | high |
+| [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | low | high |
+
 
 
 
