@@ -173,7 +173,7 @@ What it means is that, the likelihood is now weighted with some weight coming fr
 
 ### Prior plays a role as regularization
 
-Instead, if we implement Gaussian distribution to the prior `P(θ)`, 
+Instead, if we implement <span color="red">red</span> Gaussian distribution to the prior `P(θ)`, 
 
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" title="\log P(\theta) \sim \log \Big( \exp{\frac{(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = \frac{1}{2\sigma^2} (\theta - \mu_{\theta})^2" /></a>
