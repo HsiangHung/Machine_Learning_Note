@@ -50,9 +50,9 @@ Thus, it is just the **average distance of datapoints from their centroid**. K-m
 
 ## C. Some Notes
 
-It’s important to preprocess your data before performing K-Means. You would have to convert your dataset into numerical values if it is not already, so that calculations can be performed. Also, applying feature reduction techniques would speed up the process, and also improve the results. These steps are important to follow because **K-Means is sensitive to outliers**, just like every other algo that uses average/mean values. Following these steps alleviate these issues.
+It’s important to **preprocess** your data before performing K-Means. You would have to convert your dataset into numerical values if it is not already, so that calculations can be performed. Also, applying feature reduction techniques would speed up the process, and also improve the results. These steps are important to follow because **K-Means is sensitive to outliers**, just like every other algo that uses average/mean values. Following these steps alleviate these issues.
 
-Since clustering algorithms including kmeans use distance-based measurements to determine the similarity between data points, it’s recommended to standardize the data.
+Since clustering algorithms including kmeans use distance-based measurements to determine the similarity between data points, it’s recommended to **standardize** the data.
 
 ### Chooseing the value of K
 Elbow method (credit from Andrew Ng's ML class)
