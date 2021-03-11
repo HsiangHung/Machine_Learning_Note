@@ -183,7 +183,7 @@ which can be identify to a **regularization term** (if <a href="http://www.codec
 
 On the other hand, Lasso is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. Below (credit from book: **An Introduction to Statistical Learning**), Left: Gaussian prior (for ridge). Right: double-exponential prior (for lasso).
 
-![regularization_prior](images/lasso_ridge_regularization.png)
+![regularization_prior](images/lasso_ridge_prior.png)
 
 
 
