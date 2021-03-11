@@ -42,7 +42,7 @@ The cost function in K-means is also called **distortion** function. The distort
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=J(c^{(1)},\cdots&space;,&space;c^{(m)},&space;\mu_1,&space;\cdots&space;,&space;\mu_K)&space;=&space;\frac{1}{m}\sum^m_{i=1}&space;||x^{(i)}-\mu_{c^{(i)}}||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J(c^{(1)},\cdots&space;,&space;c^{(m)},&space;\mu_1,&space;\cdots&space;,&space;\mu_K)&space;=&space;\frac{1}{m}\sum^m_{i=1}&space;||x^{(i)}-\mu_{c^{(i)}}||^2" title="J(c^{(1)},\cdots , c^{(m)}, \mu_1, \cdots , \mu_K) = \frac{1}{m}\sum^m_{i=1} ||x^{(i)}-\mu_{c^{(i)}}||^2" /></a>
 
-K-means is an algorithm to minimize `J(..)`:
+Thus, it is just the average distance of datapoints from their centroid. K-means is an algorithm to minimize `J(..)`:
 
 * The above procedure a is the cluster assignment step, to minimize `J(..)` by updating c(1), c(2),.. ,c(m).
 * The above procedure b is the move centroid step, to minimize `J(..)` by updating μ1, μ2,... μK.
