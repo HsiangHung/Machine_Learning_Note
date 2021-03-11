@@ -85,6 +85,7 @@ Google [develope sites](https://developers.google.com/machine-learning/clusterin
 * Truble for clustering outliers.
 * Scaling with number of dimensions.
 
+Also check this: [Cross Validate: How to understand the drawbacks of K-means](https://stats.stackexchange.com/questions/133656/how-to-understand-the-drawbacks-of-k-means)
 
 ## D. K-Means++
 K-Means++ is a smart centroid initialization technique and the rest of the algorithm is the same as that of K-Means [[Satyam Kumar]][Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]. The coursera course: [Machine Learning: Clustering & Retrieval](https://www.coursera.org/lecture/ml-clustering-and-retrieval/smart-initialization-via-k-means-T9ZaG) has better explanation about the procedures:
@@ -112,6 +113,7 @@ KMeans(n_clusters=3, init='k-means++')
 
 [K-Means Clustering: From A to Z]: https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a
 [[Azika Amelia] K-Means Clustering: From A to Z](https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a)
+
 
 
 [K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks]: https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a#:~:text=Since%20clustering%20algorithms%20including%20kmeans,units%20of%20measurements%20such%20as
