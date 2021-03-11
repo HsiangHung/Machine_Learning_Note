@@ -173,12 +173,19 @@ What it means is that, the likelihood is now weighted with some weight coming fr
 
 ### Prior plays a role as regularization
 
-Instead, if we implement [#f03c15] Gaussian distribution to the prior `P(θ)`, 
+Instead, if we implement **Gaussian distribution** to the prior `P(θ)`, 
 
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" title="\log P(\theta) \sim \log \Big( \exp{\frac{(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = \frac{1}{2\sigma^2} (\theta - \mu_{\theta})^2" /></a>
 
 which can be identify to a **regularization term** (if <a href="http://www.codecogs.com/eqnedit.php?latex=\mu_{\theta}=0" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mu_{\theta}=0" title="\mu_{\theta}=0" /></a> ) commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
+
+
+On the other hand, Lasso is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. Below (credit from book: **An Introduction to Statistical Learning**), Left: Gaussian prior (for ridge). Right: double-exponential prior (for lasso).
+
+![regularization_prior](images/lasso_ridge_regularization.png)
+
+
 
 
 MLE is that it overfits the data, meaning that the variance of the parameter estimates is high, or put another way, that the outcome of the parameter estimate is sensitive to random variations in data (by James McInerney, [[Quora]][What is the difference between Maximum Likelihood (ML) and Maximum a Posteriori (MAP) estimation?]). Maximizing MAP can be regarded as adding regularisation to MLE. 
@@ -373,6 +380,12 @@ https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/
 
 [What is the difference between Maximum Likelihood (ML) and Maximum a Posteriori (MAP) estimation?]: https://www.quora.com/What-is-the-difference-between-Maximum-Likelihood-ML-and-Maximum-a-Posteriori-MAP-estimation
 [[Quora] What is the difference between Maximum Likelihood (ML) and Maximum a Posteriori (MAP) estimation?](https://www.quora.com/What-is-the-difference-between-Maximum-Likelihood-ML-and-Maximum-a-Posteriori-MAP-estimation)
+
+
+[Bayesian connection to LASSO and ridge regression]: https://ekamperi.github.io/mathematics/2020/08/02/bayesian-connection-to-lasso-and-ridge-regression.html#:~:text=For%20ridge%20regression%2C%20the%20prior,parameter%20a%20function%20of%20%CE%BB.
+[[Stathis Kamperis] Bayesian connection to LASSO and ridge regression](https://ekamperi.github.io/mathematics/2020/08/02/bayesian-connection-to-lasso-and-ridge-regression.html#:~:text=For%20ridge%20regression%2C%20the%20prior,parameter%20a%20function%20of%20%CE%BB.)
+
+
 
 
 [Closed form Bayesian Inference for Binomial distributions]: https://suzyahyah.github.io/bayesian%20inference/2017/03/01/Closed-Form-Toy-Bayesian-Inference.html
