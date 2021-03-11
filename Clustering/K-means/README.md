@@ -75,7 +75,15 @@ see [[Azika Amelia]][K-Means Clustering: From A to Z] and [[Pulkit Sharma]][The 
 
 ### Drawbacks
 
-Kmeans algorithm is good in capturing structure of the data if clusters have a **spherical-like shape**. It always try to construct a nice spherical shape around the centroid. That means, the minute the clusters have a complicated geometric shapes, kmeans does a poor job in clustering the data. We’ll illustrate three cases where kmeans will not perform well.
+Kmeans algorithm is good in capturing structure of the data if clusters have a **spherical-like shape**. It always try to construct a nice spherical shape around the centroid. That means, if clusters have a complicated geometric shapes, kmeans does a poor job in clustering the data. We’ll illustrate three cases where kmeans will not perform well.
+
+Google [develope sites](https://developers.google.com/machine-learning/clustering/algorithm/advantages-disadvantages#disadvantages-of-k-means) summarizes other disadvantages for k-means:
+
+* Choosing  manually
+* Being dependent on initial values
+* Clustering data of varying sizes and density
+* Truble for clustering outliers.
+* Scaling with number of dimensions.
 
 
 ## D. K-Means++
