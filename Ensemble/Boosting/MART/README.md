@@ -8,7 +8,7 @@ Tne idea of boosting regression trees can be mapping to classification and ranki
 
 The following content follows Chris Burge's review paper: [From RankNet to LambdaRank to LambdaMART: An Overview](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf). The LambdaMART is particularly designed as MART + LambdaRank.
 
-Here is Prof. Tom´aˇs Tunys' lecture slide: [LambdaMART Demystified](https://staff.fnwi.uva.nl/e.kanoulas/wp-content/uploads/Lecture-8-1-LambdaMart-Demystified.pdf)
+Here is Prof. Tom´aˇs Tunys' lecture slide: [LambdaMART Demystified](https://staff.fnwi.uva.nl/e.kanoulas/wp-content/uploads/Lecture-8-1-LambdaMart-Demystified.pdf).
 
 ## Boosting regression
 
