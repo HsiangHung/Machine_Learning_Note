@@ -39,7 +39,7 @@ The silhouette score can be computed using Scikit-learn. [The sklearn page](http
 ![silhouette_n_5](images/silhouette_n5.png)
 ![silhouette_n_6](images/silhouette_n6.png)
 
-and we see the 4 clusters (execpet for 2 clusters) certainly gives the highest silhouette score from the page.
+and we see the 4 clusters (execpet for 2 clusters) certainly gives the highest silhouette score from the page, and 4 clusters certianly looks like an optimal result.
 ```
 For n_clusters = 2 The average silhouette_score is : 0.7049787496083262 
 For n_clusters = 3 The average silhouette_score is : 0.5882004012129721
