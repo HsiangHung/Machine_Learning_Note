@@ -197,11 +197,11 @@ The prior beliefs about the parameters determine what this random process looks 
 
 ### a. Binomial outcome
 
-First let's come back to the coin-flip problem; the outcome is either head or tail. The likelihood of each sample is a Bernoulli distribution (or entire dataset is a binomial distribution) [[Barnabás Póczos & Aarti Singh]][MLE, MAP, Bayes classifications]
+First let's come back to the coin-flip problem; the outcome is either head or tail. The likelihood of each sample is a Bernoulli distribution (or entire dataset is a binomial distribution) [[Barnabás Póczos & Aarti Singh]][MLE, MAP, Bayes classifications], [[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?]][How to derive the likelihood function for binomial distribution for parameter estimation?]
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" title="P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}" /></a>
 
-Now suppose we observed data `X = {1,1,1,1,1,1}` and the sample comes from iid Bernoulli distribution, what is a good guess of `θ`?
+**Question**: suppose we observed data `X = {1,1,1,1,1,1}` and the sample comes from iid Bernoulli distribution, what is a good guess of `θ`?
 
 #### MLE
 
@@ -361,6 +361,11 @@ https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/
 
 [A Zero-Math Introduction to Markov Chain Monte Carlo Methods]: https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50
 [[Ben Shaver] A Zero-Math Introduction to Markov Chain Monte Carlo Methods](https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50)
+
+
+[How to derive the likelihood function for binomial distribution for parameter estimation?]: https://stats.stackexchange.com/questions/181035/how-to-derive-the-likelihood-function-for-binomial-distribution-for-parameter-es
+[[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?] How to derive the likelihood function for binomial distribution for parameter estimation?](https://stats.stackexchange.com/questions/181035/how-to-derive-the-likelihood-function-for-binomial-distribution-for-parameter-es)
+
 
 
 [MLE, MAP, AND NAIVE BAYES]: https://www.cs.cmu.edu/~tom/10601_sp08/slides/recitation-mle-nb.pdf
