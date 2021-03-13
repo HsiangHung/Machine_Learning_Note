@@ -22,11 +22,16 @@ to
 
 In this model, the probability of each word only depends on that word's own probability in the document, so we only have one-state finite automata as units.  The following is an illustration of a unigram model of a document [[wiki: Language model]][Language model]
 
-```
+
+| term | a | world | likes | we | share | ....|
+| --- | --- | --- | --- | --- | --- | ---- |
+| Probability in doc | 0.1 |  0.2  | 0.05  | 0.05 | 0.3 | ...|
+
+<!-- ```
 term               | a	| world | likes |  we  | share | ... 
 --------------------------------------------------------------
 Probability in doc | 0.1|  0.2  | 0.05  | 0.05 |  0.3  | ...
-```
+``` -->
 
 The automaton itself has a probability distribution over the entire vocabulary of the model, summing to 1
 
@@ -38,13 +43,20 @@ The probability generated for a specific query is calculated as
 
 Different documents have unigram models, with different hit probabilities of words in it. The probability distributions from different documents are used to generate hit probabilities for each query. Documents can be ranked for a query according to the probabilities. Example of unigram models of two documents:
 
-```
+
+| term | a | world | likes | we | share | ....|
+| --- | --- | --- | --- | --- | --- | ---- |
+| p in doc1 | 0.1 |  0.2  | 0.05  | 0.05 | 0.3 | ...|
+| p in doc2 | 0.3 |  0.1  | 0.03  | 0.02 | 0.4 | ...|
+
+
+<!-- ```
    term   |  a | world | likes |  we  | share | ... 
 ------------------------------------------------------
 P in doc1 | 0.1|  0.2  | 0.05  | 0.05 |  0.3  | ...
 ------------------------------------------------------
 P in doc2 | 0.3|  0.1  | 0.03  | 0.02 |  0.4  | ...
-```
+``` -->
 If P in doc2 > P in doc1, then rank doc2 in front of doc1. 
 
 In information retrieval contexts, unigram language models are often smoothed to avoid instances where P(term) = 0. A common approach is to generate a maximum-likelihood model for the entire collection and linearly interpolate the collection model with a maximum-likelihood model for each document to smooth the model.
