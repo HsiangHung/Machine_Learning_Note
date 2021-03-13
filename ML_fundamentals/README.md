@@ -85,7 +85,7 @@ The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatasc
 ## Newton Method
 
 
-It is a method for finding the root of a function, rather than its maxima or minima. This means that, if the problem satisfies the constraints of Newton’s method, we can find `x` for which `f(x)=0`. **NOT** `f'(x)=0`, as was the case for gradient descent. Therefore, we, apply Newton’s method on the **derivative** `f'(x)` of the cost function (`f''(x)`, second-order derivatives), not on the cost function itself [[Gabriele De Luca]][Gradient Descent vs. Newton’s Gradient Descent].
+It is a method for finding the root of a function, rather than its maxima or minima. This means that, if the problem satisfies the constraints of Newton’s method, we can find `x` for which `f(x)=0`. **NOT** `f'(x)=0`, as was the case for gradient descent. Therefore, we, apply Newton’s method on the **derivative** `f'(x)` of the cost function (`f''(x)`, second-order derivatives), not on the cost function itself [[Gabriele De Luca]][Gradient Descent vs. Newton’s Gradient Descent], [[Stack overflow: What is the difference between Gradient Descent and Newton's Gradient Descent?]][What is the difference between Gradient Descent and Newton's Gradient Descent?].
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;&plus;&space;\frac{f^{\prime}(x_n)}{f^{\prime&space;\prime}(x_n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;&plus;&space;\frac{f^{\prime}(x_n)}{f^{\prime&space;\prime}(x_n)}" title="x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}" /></a>
 
@@ -120,3 +120,6 @@ you see how the Newton method led you to the saddle point at `x = y = 0`. In con
 
 [Gradient Descent vs. Newton’s Gradient Descent]: https://www.baeldung.com/cs/gradient-descent-vs-newtons-gradient-descent
 [[Gabriele De Luca] Gradient Descent vs. Newton’s Gradient Descent](https://www.baeldung.com/cs/gradient-descent-vs-newtons-gradient-descent)
+
+[What is the difference between Gradient Descent and Newton's Gradient Descent?]: https://stackoverflow.com/questions/12066761/what-is-the-difference-between-gradient-descent-and-newtons-gradient-descent
+[[Stack overflow: What is the difference between Gradient Descent and Newton's Gradient Descent?] What is the difference between Gradient Descent and Newton's Gradient Descent?](https://stackoverflow.com/questions/12066761/what-is-the-difference-between-gradient-descent-and-newtons-gradient-descent)
