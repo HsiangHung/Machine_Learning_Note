@@ -104,7 +104,7 @@ For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross 
 
 ### b. Why is Newton's method not widely used in machine learning?
 
-The analytic expression for the second derivative is often complicated or intractable, requiring a lot of computation. Numerical methods for computing the second derivative also require a lot of computation.
+The analytic expression for the second derivative is often complicated or intractable, requiring a lot of computation. Numerical methods for computing the second derivative also require a lot of computation, `O(N^2)`, where `N` is the number of features. On the other hand, computing the gradient is only `O(N)`. But the next step to invert Hessian, which is `O(N^3)`. So while computing the Hessian is expensive, inverting it or solving least squares is often even worse.
 
 Newton method attracts to saddle points and saddle points are common in machine learning. As an example in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], if 
 
