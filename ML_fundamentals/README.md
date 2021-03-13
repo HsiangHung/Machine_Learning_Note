@@ -89,7 +89,7 @@ It is a method for finding the root of a function, rather than its maxima or min
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;&plus;&space;\frac{f^{\prime}(x_n)}{f^{\prime&space;\prime}(x_n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;&plus;&space;\frac{f^{\prime}(x_n)}{f^{\prime&space;\prime}(x_n)}" title="x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}" /></a>
 
-For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross Validate: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], assume <a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)" title="f = f(x,y)" /></a>, then
+For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], assume <a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)" title="f = f(x,y)" /></a>, then
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" title="x_{n+1} = x_n - [\bold H f]^{-1}f^{\prime}(x_n)" /></a>
 
@@ -106,7 +106,7 @@ For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross 
 
 The analytic expression for the second derivative is often complicated or intractable, requiring a lot of computation. Numerical methods for computing the second derivative also require a lot of computation.
 
-Newton method attracts to saddle points and saddle points are common in machine learning. As an example in [[Cross Validate: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], if 
+Newton method attracts to saddle points and saddle points are common in machine learning. As an example in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], if 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)&space;=&space;x^2-y^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)&space;=&space;x^2-y^2" title="f = f(x,y) = x^2-y^2" /></a>
 
@@ -116,7 +116,7 @@ you see how the Newton method led you to the saddle point at `x = y = 0`. In con
 
 
 [Why is Newton's method not widely used in machine learning?: https://stats.stackexchange.com/questions/253632/why-is-newtons-method-not-widely-used-in-machine-learning
-[[Cross Validate: Why is Newton's method not widely used in machine learning?] Why is Newton's method not widely used in machine learning?](https://stats.stackexchange.com/questions/253632/why-is-newtons-method-not-widely-used-in-machine-learning)
+[[Cross Validated: Why is Newton's method not widely used in machine learning?] Why is Newton's method not widely used in machine learning?](https://stats.stackexchange.com/questions/253632/why-is-newtons-method-not-widely-used-in-machine-learning)
 
 [Gradient Descent vs. Newton’s Gradient Descent]: https://www.baeldung.com/cs/gradient-descent-vs-newtons-gradient-descent
 [[Gabriele De Luca] Gradient Descent vs. Newton’s Gradient Descent](https://www.baeldung.com/cs/gradient-descent-vs-newtons-gradient-descent)
