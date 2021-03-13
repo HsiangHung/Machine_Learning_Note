@@ -44,10 +44,10 @@ The probability generated for a specific query is calculated as
 Different documents have unigram models, with different hit probabilities of words in it. The probability distributions from different documents are used to generate hit probabilities for each query. Documents can be ranked for a query according to the probabilities. Example of unigram models of two documents:
 
 
-| term | a | world | likes | we | share | ....|
+| term (w) | a | world | likes | we | share | ....|
 | --- | --- | --- | --- | --- | --- | ---- |
-| p in doc1 | 0.1 |  0.2  | 0.05  | 0.05 | 0.3 | ...|
-| p in doc2 | 0.3 |  0.1  | 0.03  | 0.02 | 0.4 | ...|
+| p(w) in doc1 | 0.1 |  0.2  | 0.05  | 0.05 | 0.3 | ...|
+| p(w) in doc2 | 0.3 |  0.1  | 0.03  | 0.02 | 0.4 | ...|
 
 
 <!-- ```
