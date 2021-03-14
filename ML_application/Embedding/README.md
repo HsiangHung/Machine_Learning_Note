@@ -72,7 +72,7 @@ We can clearly see groupings of books belonging to the same genre. It’s not pe
 
 For business application, Twitter can build an embedding for their users based on their **organic feed interactions** and then use the embeddings **for ads serving.** Organic interactions are generally much greater in volume compared to ads interactions. This allows Twitter to learn user interests by organic feed interaction, capture it as embedding, and use it to **serve more relevant ads**. 
 
-### Word Embedding
+### a. Word Embedding
 
 
 Word embeddings (like Word2vec), include 
@@ -95,8 +95,19 @@ One simple way of doing this is to represent the user by taking the mean of the 
 
 Another way to accomplish this task is to simply pass the user and the document embedding vector to a neural network to help with the learning task.
 
+### b. Context-based embedding
 
+Context-based embeddings look at neighboring terms at embedding generation time. This means that we have to provide contextual information (neighboring terms) to fetch embeddings for a term. In the Word2vec case, we don’t need any context information at the embeddings.
 
+Two popular architectures used to generate word context-based embedding are:
+
+1. Embeddings from **Language Models** (ELMo). The idea behind ELMO is to use the bi-directional LSTM model to capture the words that appear before and after the current word.
+
+2. Bidirectional Encoder Representations from **Transformers (BERT)**. BERT uses an attention mechanism and is able to see all the words in the context.
+ 
+### c. Visual embedding
+
+Auto-encoders use neural networks consisting of both an encoder and a decoder; encoder learns to compress the raw image pixel data to a small dimension, whereas decoders decompresses it via a decoder to re-generate the same input image.
 
 
 ## Reference
