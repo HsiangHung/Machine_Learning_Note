@@ -17,9 +17,10 @@ Neural network embeddings have 3 primary purposes:
 
 For another example, if we have a vocabulary of 50,000 words used in a collection of movie reviews, we could learn **100**-dimensional embeddings for each word trained to predict the sentimentality of the reviews. Words in the vocabulary that are associated with positive reviews such as “brilliant” or “excellent” will come out closer in the embedding space because the network has learned these are both associated with positive reviews.
 
+
 Figuring out how to create the supervised task to produce relevant representations is the toughest part of making embeddings. 
 
-## An example 
+### An example 
 
 In the Wikipedia book project [[Will Koehrsen]][Neural Network Embeddings Explained], the supervised learning task is set as predicting whether a given link to a Wikipedia page appears in the article for a book. 
 
@@ -69,6 +70,9 @@ Mapping 50-dimensions embeddings onto 2 dimensions using TSNE, we can visualize 
 We can clearly see groupings of books belonging to the same genre. It’s not perfect, but it’s still impressive that we can represent all books on Wikipedia using just 2 numbers that still capture the variability between genres.
 
 
+### Other examples
+
+Twitter can build an embedding for their users based on their **organic feed interactions** and then use the embeddings **for ads serving.** Organic interactions are generally much greater in volume compared to ads interactions. This allows Twitter to learn user interests by organic feed interaction, capture it as embedding, and use it to **serve more relevant ads**. 
 
 
 
