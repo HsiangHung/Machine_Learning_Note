@@ -84,7 +84,7 @@ The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatasc
 
 ## Convex Function
 
-The strict definition of a convert function is
+The strict definition (from [wiki](https://en.wikipedia.org/wiki/Convex_function)) of a convert function is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f(tx_1&space;&plus;&space;(1-t)x_2)&space;\le&space;tf(x_1)&space;&plus;&space;(1-t)f(x_2),&space;\&space;0&space;<&space;t&space;<&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(tx_1&space;&plus;&space;(1-t)x_2)&space;\le&space;tf(x_1)&space;&plus;&space;(1-t)f(x_2),&space;\&space;0&space;<&space;t&space;<&space;1" title="f(tx_1 + (1-t)x_2) \le tf(x_1) + (1-t)f(x_2), \ 0 < t < 1" /></a>
 
