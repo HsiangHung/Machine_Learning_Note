@@ -1,9 +1,9 @@
 
 # Embedding 
 
-One notably successful use of deep learning is embedding, a method used to represent discrete variables as continuous vectors, rather than using one-hot encoding [[Will Koehrsen]][Neural Network Embeddings Explained]. The main issue with one-hot encoding is that the transformation does not rely on any supervision. We can greatly improve embeddings by learning them using a neural network on a **supervised** task. 
+One notably successful use of deep learning is embedding, a method used to represent categorical variables as continuous vectors, rather than using one-hot encoding and label encoding [[Will Koehrsen]][Neural Network Embeddings Explained], [[Matias Aravena Gamboa]][Learning embeddings for your machine learning model]. 
 
-[Google cloud: Overview: Extracting and serving feature embeddings for machine learning](https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning)
+The main issue with one-hot encoding is that the transformation does not rely on any supervision and cause huge dimensions. The problem with LabelEncoding is that sometimes can bring a natural order on the different classes. We can greatly improve embeddings by learning them using a neural network on a **supervised** task. 
 
 
 
@@ -75,6 +75,11 @@ We can clearly see groupings of books belonging to the same genre. It’s not pe
 
 
 ## Reference
+
+
+[Learning embeddings for your machine learning model]: https://medium.com/spikelab/learning-embeddings-for-your-machine-learning-model-a6cb4bc6542e
+[[Matias Aravena Gamboa] Learning embeddings for your machine learning model](https://medium.com/spikelab/learning-embeddings-for-your-machine-learning-model-a6cb4bc6542e)
+
 
 
 [Neural Network Embeddings Explained]: https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526
