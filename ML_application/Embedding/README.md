@@ -57,18 +57,15 @@ model.compile(optimizer = 'Adam', loss = 'binary_crossentropy', metrics = ['accu
 
 In the embedding model, what we want is the embedding weights, the representation of the books and links as continuous vectors. The embeddings by themselves are not that interesting: they are simply vectors of numbers. However, we can query a book's vector and find the dot product of all the other books' to compute similarity.
 
+One of the coolest parts about embeddings are that they can be used to visualize using dimension reduction technique to get the dimensions to 2 or 3, i.e. t-Distributed Stochastic Neighbor Embedding (TSNE).
+
+Mapping 50-dimensions embeddings onto 2 dimensions using TSNE, we can visualize 37,000 books as 
+
+![tsne_books](images/tsne_book_embedding.png)
 
 
+We can clearly see groupings of books belonging to the same genre. It’s not perfect, but it’s still impressive that we can represent all books on Wikipedia using just 2 numbers that still capture the variability between genres.
 
-
-
-
-
-The probability generated for a specific query is calculated as
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(Q)&space;=&space;\prod_{\textrm{word&space;in&space;query&space;Q}}&space;P(w)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(Q)&space;=&space;\prod_{\textrm{word&space;in&space;query&space;Q}}&space;P(w)" title="P(Q) = \prod_{\textrm{word in query Q}} P(w)" /></a>
-
-Different documents have unigram models, with different hit probabilities of words in it. The probability distributions from different documents are used to generate hit probabilities for each query. Documents can be ranked for a query according to the probabilities. Example of unigram models of two documents:
 
 
 
@@ -77,8 +74,6 @@ Different documents have unigram models, with different hit probabilities of wor
 
 ## Reference
 
-[Language model]: https://en.wikipedia.org/wiki/Language_model
-[[wiki: Language model] Language model](https://en.wikipedia.org/wiki/Language_model)
 
 [Neural Network Embeddings Explained]: https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526
 [[Will Koehrsen] Neural Network Embeddings Explained](https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526)
