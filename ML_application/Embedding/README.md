@@ -70,18 +70,28 @@ Mapping 50-dimensions embeddings onto 2 dimensions using TSNE, we can visualize 
 We can clearly see groupings of books belonging to the same genre. It’s not perfect, but it’s still impressive that we can represent all books on Wikipedia using just 2 numbers that still capture the variability between genres.
 
 
-### Other examples
+For business application, Twitter can build an embedding for their users based on their **organic feed interactions** and then use the embeddings **for ads serving.** Organic interactions are generally much greater in volume compared to ads interactions. This allows Twitter to learn user interests by organic feed interaction, capture it as embedding, and use it to **serve more relevant ads**. 
 
-Twitter can build an embedding for their users based on their **organic feed interactions** and then use the embeddings **for ads serving.** Organic interactions are generally much greater in volume compared to ads interactions. This allows Twitter to learn user interests by organic feed interaction, capture it as embedding, and use it to **serve more relevant ads**. 
+### Word Embedding
+
 
 Word embeddings (like Word2vec), include 
 
 1. CBOW: Continuous bag of words (CBOW) tries to predict the current word from its surrounding words by optimizing 
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_t|w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n})&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_t|w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n})&space;\big)" title="\textrm{Loss} = - \log \big(p(w_t|w_{t-n}, \cdots, w_{t-1}, w_{t+1}, \cdots, w_{t+n}) \big)" /></a>
+
 2. Skipgram: In this architecture, we try to predict surrounding words from the current word by optimizing 
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n}|w_t)&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n}|w_t)&space;\big)" title="\textrm{Loss} = - \log \big(p(w_{t-n}, \cdots, w_{t-1}, w_{t+1}, \cdots, w_{t+n}|w_t) \big)" /></a>
 
+![word_embedding](images/word_embedding.png)
 
+One of the application is that we want to predict whether a user is interested in a particular document given the documents that they have previously read. 
+
+One simple way of doing this is to represent the user by taking the mean of the Word2vec embeddings of document titles that they haved engaged with. Similarly, we can represent the document by the mean of its title term embeddings. We can simply take the dot product of these two vectors and use that in our ML model.
+
+Another way to accomplish this task is to simply pass the user and the document embedding vector to a neural network to help with the learning task.
 
 
 
