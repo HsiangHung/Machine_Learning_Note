@@ -85,6 +85,8 @@ Word embeddings (like Word2vec), include
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n}|w_t)&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n}|w_t)&space;\big)" title="\textrm{Loss} = - \log \big(p(w_{t-n}, \cdots, w_{t-1}, w_{t+1}, \cdots, w_{t+n}|w_t) \big)" /></a>
 
+The architectures look like (credit from [Grokking the Machine Learning Interview: Embedding](https://www.educative.io/courses/grokking-the-machine-learning-interview/B8xpO2XGxXo))
+
 ![word_embedding](images/word_embedding.png)
 
 One of the application is that we want to predict whether a user is interested in a particular document given the documents that they have previously read. 
