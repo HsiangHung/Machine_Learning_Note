@@ -25,7 +25,7 @@ Figuring out how to create the supervised task to produce relevant representatio
 In the Wikipedia book project [[Will Koehrsen]][Neural Network Embeddings Explained], the supervised learning task is set as predicting whether a given link to a Wikipedia page appears in the article for a book. 
 
 
-The network Will used has **two** parallel embedding layers that **map the book and wikilink** to separate 50-dimensional vectors and a **dot product layer** that combines the embeddings into a single number for a prediction. The embeddings are the parameters, or weights, of the network that are adjusted during training to minimize the loss on the supervised task. The [code](https://github.com/HsiangHung/wikipedia-data-science/blob/master/notebooks/Book%20Recommendation%20System.ipynb) looks like
+In the network (**two-tower** neural network model), Will used has **two** parallel embedding layers that **map the book and wikilink** to separate 50-dimensional vectors and a **dot product layer** that combines the embeddings into a single number for a prediction. The embeddings are the parameters, or weights, of the network that are adjusted during training to minimize the loss on the supervised task. The [code](https://github.com/HsiangHung/wikipedia-data-science/blob/master/notebooks/Book%20Recommendation%20System.ipynb) looks like
 
 ```Python
 # Both inputs are 1-dimensional
@@ -107,8 +107,23 @@ Two popular architectures used to generate word context-based embedding are:
  
 ### c. Visual embedding
 
-Auto-encoders use neural networks consisting of both an encoder and a decoder; encoder learns to compress the raw image pixel data to a small dimension, whereas decoders decompresses it via a decoder to re-generate the same input image.
+**Auto-encoders** use neural networks consisting of both an encoder and a decoder; encoder learns to compress the raw image pixel data to a small dimension, whereas decoders decompresses it via a decoder to re-generate the same input image. Once we have trained the model, we only use the encoder (first N network layers) to generate embeddings for images.
 
+CNN builds neural networks using a set of convolution, pooling, and fully connected layers to the softmax layer for the final classification task. It is supervised learning tasks for image classification. We can use the **penultimate layer** value (before softmax captures all image information in a vector) of a pre-trained model as our image embedding.
+
+Applications of image embedding include finding images similar to a given image, or an image search problem where we want to find the best images for given text terms.
+
+### d. Network/Relationship-based embedding
+
+Embedding interactions as relationships in a graph or resulting in pairs. The previous books in wiki and links use the embedding. Other examples are: 
+
+* (User, Pin) for Pinterest
+* (User, Video) for YouTube
+* (User, Tweet) for Twitter
+* (Query, Webpage) for Search
+* (Searcher, Webpage) for Search
+
+These embedding tasks can vastly help in the retrieval and ranking tasks of recommendation, search, feed-based, and many other ML systems.
 
 ## Reference
 
