@@ -74,6 +74,15 @@ We can clearly see groupings of books belonging to the same genre. It’s not pe
 
 Twitter can build an embedding for their users based on their **organic feed interactions** and then use the embeddings **for ads serving.** Organic interactions are generally much greater in volume compared to ads interactions. This allows Twitter to learn user interests by organic feed interaction, capture it as embedding, and use it to **serve more relevant ads**. 
 
+Word embeddings (like Word2vec), include 
+
+1. CBOW: Continuous bag of words (CBOW) tries to predict the current word from its surrounding words by optimizing 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_t|w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n})&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_t|w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n})&space;\big)" title="\textrm{Loss} = - \log \big(p(w_t|w_{t-n}, \cdots, w_{t-1}, w_{t+1}, \cdots, w_{t+n}) \big)" /></a>
+2. Skipgram: In this architecture, we try to predict surrounding words from the current word by optimizing 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n}|w_t)&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;-&space;\log&space;\big(p(w_{t-n},&space;\cdots,&space;w_{t-1},&space;w_{t&plus;1},&space;\cdots,&space;w_{t&plus;n}|w_t)&space;\big)" title="\textrm{Loss} = - \log \big(p(w_{t-n}, \cdots, w_{t-1}, w_{t+1}, \cdots, w_{t+n}|w_t) \big)" /></a>
+
+
+
 
 
 
