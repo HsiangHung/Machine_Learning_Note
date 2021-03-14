@@ -48,7 +48,7 @@ The `Lq` norms with q < 1 is not convex, so difficult to optimize [Cross Validat
 
 ## Entropy, Cross-Entropy, and KL-Divergence 
 
-### Entropy
+### a. Entropy
 
 Given probability distribution p, it tells us how unpredictable the probability distribution is.
 
@@ -56,7 +56,7 @@ Given probability distribution p, it tells us how unpredictable the probability 
 
 Say, a fair coin, `p(H) = p(T) = 1/2`, then `H = log2`. But if `p(H) = 0.99`, then `H ~ 0`, i.e. less uncertainty.
 
-### Cross-Entropy
+### b. Cross-Entropy
 
 Cross-Entropy is a function of both true probability distribution `p` and predicted probability distribution `q`:
 
@@ -66,7 +66,7 @@ If our predictions are perfect, that is the predicted distribution is equal to t
 
 
 
-### KL-Divergence
+### c. KL-Divergence
 
 Kullback-Leibler Divergence measures information lost.
 
@@ -81,6 +81,14 @@ The [blog: Kullback-Leibler Divergence Explained](https://www.countbayesie.com/b
 
 The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-understanding-kl-divergence-2b382ca2b2a8) shows an example using KL-divergence to interpret approximation to a true distribution with the bionomial and uniform distribition.
 
+
+## Convex Function
+
+The strict definition of a convert function is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=f(tx_1&space;&plus;&space;(1-t)x_2)&space;\le&space;tf(x_1)&space;&plus;&space;(1-t)f(x_2),&space;\&space;0&space;<&space;t&space;<&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(tx_1&space;&plus;&space;(1-t)x_2)&space;\le&space;tf(x_1)&space;&plus;&space;(1-t)f(x_2),&space;\&space;0&space;<&space;t&space;<&space;1" title="f(tx_1 + (1-t)x_2) \le tf(x_1) + (1-t)f(x_2), \ 0 < t < 1" /></a>
+
+Note, in a convex function, the local minimum global minimum. See the [proof](https://planetmath.org/localminimumofconvexfunctionisnecessarilyglobal).
 
 ## Newton Method
 
@@ -112,8 +120,6 @@ Newton method attracts to saddle points and saddle points are common in machine 
 
 you see how the Newton method led you to the saddle point at `x = y = 0`. In contrast, the gradient descent method will not lead to the saddle point. The gradient is zero at the saddle point, but a tiny step out would pull the optimization away as you can see from the gradient above - its gradient on y-variable is negative.
 
-
-Note, in a convex function, the local minimum global minimum. See the [proof](https://planetmath.org/localminimumofconvexfunctionisnecessarilyglobal).
 
 
 [Why is Newton's method not widely used in machine learning?]: https://stats.stackexchange.com/questions/253632/why-is-newtons-method-not-widely-used-in-machine-learning
