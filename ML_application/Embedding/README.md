@@ -22,6 +22,8 @@ Figuring out how to create the supervised task to produce relevant representatio
 In the Wikipedia book project [[Will Koehrsen]][Neural Network Embeddings Explained], the supervised learning task is set as predicting whether a given link to a Wikipedia page appears in the article for a book. 
 
 
+The network Will used has **two** parallel embedding layers that **map the book and wikilink** to separate 50-dimensional vectors and a **dot product layer** that combines the embeddings into a single number for a prediction. The embeddings are the parameters, or weights, of the network that are adjusted during training to minimize the loss on the supervised task.
+
 ```Python
 # Both inputs are 1-dimensional
 book = Input(name = 'book', shape = [1])
@@ -53,8 +55,7 @@ model = Model(inputs = [book, link], outputs = out)
 model.compile(optimizer = 'Adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 ```
 
-
-A statistical language model is a probability distribution over sequences of words. Given such a sequence, say of length m, it assigns a probability `P(w_1,... ,w_m)` to the whole sequence [[wiki: Language model]][Language model].
+In the embedding model, what we want is the embedding weights, the representation of the books and links as continuous vectors. The embeddings by themselves are not that interesting: they are simply vectors of numbers. However, we can query a book's vector and find the dot product of all the other books' to compute similarity.
 
 
 
