@@ -1,14 +1,16 @@
 
 # Embedding 
 
-One notably successful use of deep learning is embedding, a method used to represent discrete variables as continuous vectors, rather than using one-hot encoding [[Will Koehrsen]][Neural Network Embeddings Explained]. The main issue with one-hot encoding is that the transformation does not rely on any supervision. We can greatly improve embeddings by learning them using a neural network on a **supervised** task. The embeddings form the parameters — weights — of the network which are adjusted to minimize loss on the task.
+One notably successful use of deep learning is embedding, a method used to represent discrete variables as continuous vectors, rather than using one-hot encoding [[Will Koehrsen]][Neural Network Embeddings Explained]. The main issue with one-hot encoding is that the transformation does not rely on any supervision. We can greatly improve embeddings by learning them using a neural network on a **supervised** task. 
+
+[Google cloud: Overview: Extracting and serving feature embeddings for machine learning](https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning)
 
 
 
 Neural network embeddings have 3 primary purposes:
 
 1. Finding nearest neighbors in the embedding space. These can be used to make recommendations based on user interests or cluster categories.
-2. As input to a machine learning model for a supervised task.
+2. As input to a machine learning model for a supervised task. see an article from Google cloud [Overview: Extracting and serving feature embeddings for machine learning](https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning).
 3. For visualization of concepts and relations between categories.
 
 [[Will Koehrsen]][Neural Network Embeddings Explained]'s article described taking all 37,000 book articles on Wikipedia and represent each one using only 50 numbers in a vector by neural network embeddings. 
@@ -22,7 +24,7 @@ Figuring out how to create the supervised task to produce relevant representatio
 In the Wikipedia book project [[Will Koehrsen]][Neural Network Embeddings Explained], the supervised learning task is set as predicting whether a given link to a Wikipedia page appears in the article for a book. 
 
 
-The network Will used has **two** parallel embedding layers that **map the book and wikilink** to separate 50-dimensional vectors and a **dot product layer** that combines the embeddings into a single number for a prediction. The embeddings are the parameters, or weights, of the network that are adjusted during training to minimize the loss on the supervised task.
+The network Will used has **two** parallel embedding layers that **map the book and wikilink** to separate 50-dimensional vectors and a **dot product layer** that combines the embeddings into a single number for a prediction. The embeddings are the parameters, or weights, of the network that are adjusted during training to minimize the loss on the supervised task. The [code](https://github.com/HsiangHung/wikipedia-data-science/blob/master/notebooks/Book%20Recommendation%20System.ipynb) looks like
 
 ```Python
 # Both inputs are 1-dimensional
