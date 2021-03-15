@@ -80,7 +80,7 @@ Gradients of neural networks are found using backpropagation. Simply put, backpr
 
 However, when `n` hidden layers use an activation like the **sigmoid function**, `n` small derivatives are multiplied together. Thus, the gradient decreases exponentially as we propagate down to the initial layers.
 
-The solutions include using Relu activation, random initialization on parameters, and batch normalization. 
+The solutions include using **Relu activation**, **random initialization on parameters**, and **batch normalization**. 
 see [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#solution-to-vanishing-gradients).
 
 
