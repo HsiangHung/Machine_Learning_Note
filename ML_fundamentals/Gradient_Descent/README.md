@@ -158,7 +158,7 @@ The proposed default values are `β1 = 0.9`, `β2 = 0.999`, and `ϵ = 10^{-8}`.
 
 Thought the Adam optimizer seems to works better than others; SGD is a better generalized adapter than ADAM [[Data Science: Why not always use the ADAM optimization technique?]][Why not always use the ADAM optimization technique?].
 
-There is often a value to using more than one method (an ensemble), because every method has a weakness. See the performance comparison below (credit from [[SALu]][SGD > Adam?? Which One Is The Best Optimizer: Dogs-VS-Cats Toy Experiment])
+There is often a value to using more than one method (an ensemble), because every method has a weakness. See the performance experiments below (credit from [[SALu]][SGD > Adam?? Which One Is The Best Optimizer: Dogs-VS-Cats Toy Experiment])
 
 `val`: validation, `trn`: training.
 
