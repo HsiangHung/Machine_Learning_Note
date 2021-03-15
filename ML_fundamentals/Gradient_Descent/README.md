@@ -144,7 +144,7 @@ Adam is another method that computes adaptive learning rates for each parameter.
 
 where 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=v_t&space;=&space;\beta_1&space;v_{t-1}&space;-&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;-&space;(1-\beta_2)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_t&space;=&space;\beta_1&space;v_{t-1}&space;-&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;-&space;(1-\beta_2)g^2_t" title="v_t = \beta_1 v_{t-1} - (1-\beta_1)g_t \textrm{, and } s_t = \beta_2 s_{t-1} - (1-\beta_2)g^2_t" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=v_t&space;=&space;\beta_1&space;v_{t-1}&space;&plus;&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_t&space;=&space;\beta_1&space;v_{t-1}&space;&plus;&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" title="v_t = \beta_1 v_{t-1} + (1-\beta_1)g_t \textrm{, and } s_t = \beta_2 s_{t-1} + (1-\beta_2)g^2_t" /></a>
 
 The first is momentum-like, and the second is RMSprop. The supersrcipt "corr" represents "corrected" momentum and RSMprop:
 
