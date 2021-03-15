@@ -223,7 +223,7 @@ Below is the summary:
 
 If early stopping is enabled and the model’s accuracy fails to improve for some number of consecutive rounds, LightGBM stops the training process. That “number of consecutive rounds” is controlled by the parameter `early_stopping_rounds`. See [here](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html#use-early-stopping).
 
-Early stopping can be based either on an out of **bag sample set (“OOB”)** or **cross-validation (“cv”)**. Like mentioned above, the ideal time to stop training the model is when the validation error is decreasing yet started to stabilise before it starts increasing due to overfitting [[Harshdeep Singh]][Understanding Gradient Boosting Machines].
+Early stopping can be based either on an **out of bag** sample set (“OOB”) or **cross-validation (“cv”)**. Like mentioned above, the ideal time to stop training the model is when the validation error is decreasing yet started to stabilise before it starts increasing due to overfitting [[Harshdeep Singh]][Understanding Gradient Boosting Machines].
 
 In the [blog](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab), the author showed two plots indicating the optimum number of trees based on the respective technique used. The graph on the left indicates the error on test (green line) and train data set (black line). The blue dotted line points the optimum number of iterations. One can also clearly observe that the beyond a certain a point (169 iterations for the “cv” method), the error on the test data appears to increase because of overfitting. Hence, our model will stop the training procedure on the given optimum number of iterations.
 
