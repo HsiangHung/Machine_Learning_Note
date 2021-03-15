@@ -27,7 +27,7 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=\epsilon^2" target="_b
 
 For classificastion, output layer uses sigmoid activation; for regression, uses linear activation.
 
-However, if using linear activation in hidden layers, the neural network is equivalent to logisitc regression. Therefore it is critical for deep learning using non-linear activation functions.
+However, if **only** using linear activation in hidden layers, the neural network is equivalent to logisitc regression. Therefore it is critical for deep learning using non-linear activation functions.
 
 
 ## Dropout Regularization
