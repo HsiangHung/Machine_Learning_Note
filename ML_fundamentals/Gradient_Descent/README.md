@@ -118,14 +118,14 @@ Note the blog [[Sebastian Ruder]][An overview of gradient descent optimization a
 
 ### b. Adagrad (Adaptive Gradient Algorithm)
 
-Adagrad modifies the general learning rate at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
+Adagrad **modifies the general learning rate** at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\Delta \theta_t = - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
 
 
 ### c. RMSProp (Root Mean Square Propagation)
 
-RMSProp improves the latter by including the exponential moving average of the squared gradient. A constant ρ also appears, which is known as the **forgetting factor**:
+RMSProp improves the latter by including the exponential moving average of the **squared gradient**. A constant ρ also appears, which is known as the **forgetting factor**:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{s_t}&space;&plus;&space;\epsilon}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{s_t}&space;&plus;&space;\epsilon}&space;\Big)" title="\Delta \theta_{t} = - \alpha \Big( \frac{g_t}{\sqrt{s_t} + \epsilon} \Big)" /></a>
 
