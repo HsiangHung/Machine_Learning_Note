@@ -6,7 +6,7 @@
 Once you have discovered which model and model hyperparameters result in the best skill on your dataset, you’re ready to prepare a final model.
 A final model is trained on all available data, e.g. the training and the test sets.
 
-It is the model that you will use to make predictions on new data were you do not know the outcome. A problem with most final models is that they suffer variance in their predictions.
+It is the model that you will use to make predictions on new data where you do not know the outcome. A problem with most final models is that they suffer variance in their predictions.
 
 The bias-variance trade-off is a conceptual idea in applied machine learning to help understand the sources of error in models. 
 
@@ -53,7 +53,7 @@ Both training test erros are high. More training data is not helpful to improve 
 ![andrew-underfit](images/Andrew-underfit.png)
 
 ### c) Overfitting (High Variance)
-Training error is low but test erro is high. More training data could be not helpful to improve performance.
+Training error is low but test erro is high. More training data could be helpful to improve performance.
 ![nando-overfit](images/Nando-overfit.png)
 ![andrew-overfit](images/Andrew-overfit.png)
 
