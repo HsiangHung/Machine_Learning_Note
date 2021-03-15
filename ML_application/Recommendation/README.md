@@ -9,7 +9,7 @@ We considered a recommendation problem as a **supervised** machine learning task
 
 * User-based collaborative filtering
 * Item-based collaborative filtering
-* Matrix decompositions
+* Matrix factorization
 
 We can also apply **unsupervised** methods to solve the recommendation problem.
 
