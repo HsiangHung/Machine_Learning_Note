@@ -34,9 +34,9 @@ However, if **only** using linear activation in hidden layers, the neural networ
 
 Dropout is used to prevent over-fitting in deep learning.
 
-It involves going over all the layers in a neural network and setting probability of keeping a certain nodes or not. (Of course, the input layer and the output layer are kept the same.)[[Marco Peixeiro]][How to Improve a Neural Network With Regularization] and [[Jaime Durán]][A Quick Guide on Basic Regularization Methods for Neural Networks]
+It involves going over all the layers in a neural network and setting probability of keeping certain nodes or not. (Of course, the input layer and the output layer are kept the same.)[[Marco Peixeiro]][How to Improve a Neural Network With Regularization] and [[Jaime Durán]][A Quick Guide on Basic Regularization Methods for Neural Networks]
 
-The probability of keeping each node is set **at random**. You only decide of the threshold: a value that will determine if the node is kept or not. For example, if you set the threshold to 0.7, then there is a probability of 30% that a node will be removed from the network.
+The probability of keeping each node is set **at random**. You only decide the **threshold**: a value that will determine if the node is kept or not. For example, if you set the threshold = 0.7, then there is a probability of 30% that a node will be removed from the network.
 
 Therefore, this will result in a much smaller and simpler neural network, as shown below.
 
@@ -61,7 +61,7 @@ From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 
 Dropout is used in computer vision field to prevent overfitting if there is no enough data. 
 
-Meanwhile, the hyperparameter, the probability to keep neurons trigger, **keep_prob**, could be layer-dependent. 
+Meanwhile, the hyperparameter, the probability threshold to keep neurons trigger, **keep_prob**, could be layer-dependent. 
 
 As a concrete example, suppose we have a neural netwrok below. The second hidden layer has more parameters (7 times 7), and we can assign smaller **keep_prob**, and larger **keep_prob** in other layers. 
 
