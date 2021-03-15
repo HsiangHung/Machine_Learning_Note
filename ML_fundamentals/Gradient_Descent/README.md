@@ -86,9 +86,9 @@ see [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_
 
 ## Other Variants of Gradient Descent
 
-There are many variants of SGD (stochastic gradient descent). We will briefly introduce them in the following discussion and explain with the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms] and [[Jaime Durán]][Everything You Need to Know about Gradient Descent Applied to Neural Networks]. [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning] also provide good introduction.
+There are many variants of SGD. We will briefly introduce them in the following discussion and explain with the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms] and [[Jaime Durán]][Everything You Need to Know about Gradient Descent Applied to Neural Networks]. [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning] also provide good introduction.
 
-In the following, we designate the graident as
+In the following, we designate the graident as (if `J` is the cost function)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=g_{t}&space;=&space;\frac{\partial&space;J(\theta_{t})}{\partial&space;\theta_{t}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t}&space;=&space;\frac{\partial&space;J(\theta_{t})}{\partial&space;\theta_{t}}" title="g_{t} = \frac{\partial J(\theta_{t})}{\partial \theta_{t}}" /></a>
 
