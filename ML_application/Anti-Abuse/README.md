@@ -11,6 +11,8 @@ In social media, fake profiles can be used to carry out many different types of 
 * someone asking you to contact them outside of social media network.
 
 
+A set of human-curated words and phrases that violated Terms of Service and Community Guidelines. Cons and solution see here.
+
 
 ## Feature Design:
 
@@ -20,9 +22,12 @@ Duplicate accounts, inaccurate information, fake profiles.
 
 
 
-A set of human-curated words and phrases that violated Terms of Service and Community Guidelines — to identify and remove potentially fraudulent accounts. 
+A set of human-curated words and phrases that violated Terms of Service and Community Guidelines — to identify and remove potentially fraudulent accounts. However, the list tended to handle context works rather poorly. For instance, while the word “escort” was sometimes associated with prostitution, it was also used in contexts like a “security escort” or “medical escort.”. Blocklists only grow larger over time as more phrases are identified.
 
-However, the list tended to handle context works rather poorly. For instance, while the word “escort” was sometimes associated with prostitution, it was also used in contexts like a “security escort” or “medical escort.”. Linkedin identified problematic words responsible for high levels of **false positives** and sampled appropriate accounts from the member base containing these words. The accounts were then manually labeled and added to the training set, after which the model was trained and deployed in production.
+Linkedin [[Daniel Gorham]][Keeping LinkedIn professional by detecting and removing inappropriate profiles] identified problematic words responsible for high levels of **false positives** and sampled appropriate accounts from the member base containing these words. The accounts were then manually labeled and added to the training set, after which the model was trained and deployed in production. 
+
+LinkedIn downsampled from the entire member base (660+ million) in order to obtain our “appropriate” labeled accounts to train text classifier. They used CNN to capture data that has “spatial” properties. For example, a CNN can easily learn that while the word “escort” may often be associated with inappropriate content, its meaning changes entirely when it is used in contexts like “security escort” or “medical escort.”
+
 
 
 
@@ -32,6 +37,7 @@ However, the list tended to handle context works rather poorly. For instance, wh
 ### 2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph)
 
 
+A set of human-curated words and phrases that violated Terms of Service and Community Guidelines.
 
 
 ### LinkedIn
@@ -40,12 +46,12 @@ Over 660 million users, 303 million of whom are active monthly [source](https://
 
 
 [Keeping LinkedIn professional by detecting and removing inappropriate profiles]: https://engineering.linkedin.com/blog/2020/keeping-linkedin-professional
-[[Daniel Gorham ] Keeping LinkedIn professional by detecting and removing inappropriate profiles](https://engineering.linkedin.com/blog/2020/keeping-linkedin-professional)
+[[Daniel Gorham] Keeping LinkedIn professional by detecting and removing inappropriate profiles](https://engineering.linkedin.com/blog/2020/keeping-linkedin-professional)
 
 [Automated Fake Account Detection at LinkedIn]: https://engineering.linkedin.com/blog/2018/09/automated-fake-account-detection-at-linkedin
 [[Jenelle Bray] Automated Fake Account Detection at LinkedIn](https://engineering.linkedin.com/blog/2018/09/automated-fake-account-detection-at-linkedin)
 
-
+#### Fake account funnel
 
 ![](images/fake_account_funnel.png)
 
@@ -58,8 +64,13 @@ Over 660 million users, 303 million of whom are active monthly [source](https://
 4. **Human element**: Members' reports and manual review investigation.
 
 
+#### Other notes
 
+A set of human-curated words and phrases that violated Terms of Service and Community Guidelines — to identify and remove potentially fraudulent accounts. However, the list tended to handle context works rather poorly. For instance, while the word “escort” was sometimes associated with prostitution, it was also used in contexts like a “security escort” or “medical escort.”. Blocklists only grow larger over time as more phrases are identified.
 
+Linkedin [[Daniel Gorham]][Keeping LinkedIn professional by detecting and removing inappropriate profiles] identified problematic words responsible for high levels of **false positives** and sampled appropriate accounts from the member base containing these words. The accounts were then manually labeled and added to the training set, after which the model was trained and deployed in production. 
+
+LinkedIn downsampled from the entire member base (660+ million) in order to obtain our “appropriate” labeled accounts to train text classifier. They used CNN to capture data that has “spatial” properties. For example, a CNN can easily learn that while the word “escort” may often be associated with inappropriate content, its meaning changes entirely when it is used in contexts like “security escort” or “medical escort.”
 
 
 
