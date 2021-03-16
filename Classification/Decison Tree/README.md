@@ -2,7 +2,15 @@
 # Decision Tree 
 
 
+## Tree algorithms: ID3, C4.5 and CART
 
+Decision tree algorithms [[synergy37AI]][Tree algorithms: ID3, C4.5, C5.0 and CART]:
+
+* **ID3 (Iterative Dichotomiser 3)** creates a multiway tree, finding for each node (i.e. in a greedy manner) the categorical feature that will yield the largest information gain for **categorical** targets.
+
+* **C4.5** is the successor to ID3 and removed the restriction that features must be categorical by dynamically defining a discrete attribute (based on **numerical** variables) that partitions the continuous attribute value into a discrete set of intervals.
+
+* **CART (Classification and Regression Trees)** is very similar to C4.5, but it differs in that it supports numerical target variables (regression) and does not compute rule sets. CART constructs binary trees using the feature and threshold that yields the largest information gain at each node.
 
 ## How To Interpret Probability in Tree?
 
@@ -191,6 +199,10 @@ By Towfik Alrazihi [[Quora: In simple language, how does C4.5 deal with missing 
 
 [How do decision tree learning algorithms deal with missing values]: https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo
 [[StackExchange: How do decision tree learning algorithms deal with missing values] How do decision tree learning algorithms deal with missing values](https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo)
+
+
+[Tree algorithms: ID3, C4.5, C5.0 and CART]: https://medium.datadriveninvestor.com/tree-algorithms-id3-c4-5-c5-0-and-cart-413387342164
+[[synergy37AI] Tree algorithms: ID3, C4.5, C5.0 and CART](https://medium.datadriveninvestor.com/tree-algorithms-id3-c4-5-c5-0-and-cart-413387342164)
 
 
 [Decision Trees Are Usually Better Than Logistic Regression]: https://www.displayr.com/decision-trees-are-usually-better-than-logistic-regression/
