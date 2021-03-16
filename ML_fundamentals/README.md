@@ -37,6 +37,7 @@ In this we can only save key ,value, location only for non zero elements:
 [How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?]: https://www.quora.com/How-do-you-deal-with-training-data-with-high-sparsity-and-large-number-of-features-1k-in-machine-learning
 [[Quora: How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?] How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?](https://www.quora.com/How-do-you-deal-with-training-data-with-high-sparsity-and-large-number-of-features-1k-in-machine-learning)
 
+
 ## Why only L1 and L2 regularization but not other norms?
 
 The `Lq` norms with q < 1 is not convex, so difficult to optimize [Cross Validated: Why do we only see L1 and L2 regularization but not other norms?
@@ -44,6 +45,15 @@ The `Lq` norms with q < 1 is not convex, so difficult to optimize [Cross Validat
 
 
 ![Lq_regularization](images/Lq_regularization.png)
+
+
+## L1/L2 regularization distribution
+
+L1, L2 regularizations correspond to the priors of MAP in Bayesian. See [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Bayesian_%26_MCMC#22-map). L2 regularization is equivalent to Gaussian prior [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?]][Why is the L2 regularization equivalent to Gaussian prior?], whereas L1 to [Laplace prior](https://en.wikipedia.org/wiki/Laplace_distribution) (double exponential distribution)
+
+[Why is the L2 regularization equivalent to Gaussian prior?]: https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior
+[[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?] Why is the L2 regularization equivalent to Gaussian prior?](https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior)
+
 
 
 ## Entropy, Cross-Entropy, and KL-Divergence 
