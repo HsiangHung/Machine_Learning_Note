@@ -16,15 +16,12 @@ A set of human-curated words and phrases that violated Terms of Service and Comm
 
 ## Feature Design:
 
-### 1. Attributes present at or around registration time — **Profile** Features
+1. Attributes present at or around registration time — **Profile** Features
 
 Duplicate accounts, inaccurate information, fake profiles.
 
 
-
-
-
-### 2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph)
+2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph)
 
 
 A set of human-curated words and phrases that violated Terms of Service and Community Guidelines.
