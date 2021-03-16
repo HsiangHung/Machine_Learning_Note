@@ -68,7 +68,7 @@ You may wonder and worry why downsampling works. Is it realistic if we downsampl
 
 ### 4.2 Oversample: Up-sample Minority Class
 
-Oversampling is the process of randomly **duplicating** observations from the minority class. We'll resample the minority class **with replacement**, setting the number of samples to match that of the majority class.
+Oversampling is the process of randomly **duplicating** observations from the minority class. We'll resample the minority class **with replacement (boostrapping)**, setting the number of samples to match that of the majority class.
 
 Note both oversample and undersample changes data distribution [[Silicon Valley Data Science]][Learning from Imbalanced Classe]. Oversample makes variables appear to have lower variance than they do. Conversely, undersampling can make the independent variables look like they have a higher variance than they do. 
 
