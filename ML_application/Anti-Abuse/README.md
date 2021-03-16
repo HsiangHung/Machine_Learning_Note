@@ -3,6 +3,11 @@
 
 In social media, fake profiles can be used to carry out many different types of abuse: scraping, spamming, fraud, and phishing, among others. By preventing or promptly removing fake accounts on the site, we ensure that legitimate users are protected.
 
+**Feature Design**:
+
+1. Attributes present at or around registration time — **Profile** Features
+2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph)
+
 ### LinkedIn
 
 [Automated Fake Account Detection at LinkedIn]: https://engineering.linkedin.com/blog/2018/09/automated-fake-account-detection-at-linkedin
@@ -12,7 +17,7 @@ In social media, fake profiles can be used to carry out many different types of 
 
 1. **Registration scoring**: For many types of abuse, attackers require a **large** number of fake accounts for the attack to be financially feasible. Every new user registration attempt is evaluated by a machine-learned model that gives an abuse risk score. Signup attempts with a low abuse risk score are allowed to register right away, while attempts with a high abuse risk score are prevented from creating an account. Attempts with **medium** risk scores are **challenged by our security measures to verify** that they are real people.
 
-2. **Clustering**: create clusters of accounts by grouping them based on shared attributes, and then find account clusters that show a statistically abnormal distribution of data, which is indicative of being created or controlled by a single bad actor. These are supervised machine learning models that **use features per cluster** instead of per member. The models score the clusters, then propagate the cluster label to individual accounts. This cluster approach allows us to catch more fake accounts quickly, faster than we could if we wait for them to start taking abusive actions on the site (see here for more details).
+2. **Clustering**: create clusters of accounts by grouping them based on shared attributes, and then find account clusters that show a statistically abnormal distribution of data, which is indicative of being created or controlled by a single bad actor. These are supervised machine learning models that **use features per cluster** instead of per member. The models score the clusters, then propagate the cluster label to individual accounts. This cluster approach allows us to catch more fake accounts quickly, faster than we could if we wait for them to start taking abusive actions on the site (see [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_application/Anti-Abuse#clustering) for more details).
 
 
 
@@ -22,9 +27,6 @@ In social media, fake profiles can be used to carry out many different types of 
 
 
 
-**Feature Design**:
-1. Attributes present at or around registration time — **Profile** Features
-2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph)
 
 
 
