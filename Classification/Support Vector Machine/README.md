@@ -19,11 +19,12 @@ In the upper right panel, we classify blue instances as positives
 
 and green instances as negatives 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{-}&space;-b&space;\leq&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_{-}&space;-b&space;\leq&space;1" title="\vec{w}\cdot \vec{x}_{-} -b \leq 1" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{-}&space;-b&space;\leq&space;-1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_{-}&space;-b&space;\leq&space;-1" title="\vec{w}\cdot \vec{x}_{-} -b \leq -1" /></a>
+
 
 The margin width is given
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b))}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b))}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" title="(\vec{x}_+ - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b))}{||\vec{w}||} = \frac{2}{||\vec{w}||}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b)}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b)}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" title="(\vec{x}_+ - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}" /></a>
 
 Maximize the margin width is equalivent to minimize <a href="https://www.codecogs.com/eqnedit.php?latex=||\vec{w}||" target="_blank"><img src="https://latex.codecogs.com/gif.latex?||\vec{w}||" title="||\vec{w}||" /></a>.
 
