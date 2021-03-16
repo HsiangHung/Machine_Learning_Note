@@ -16,15 +16,15 @@ A set of human-curated words and phrases that violated Terms of Service and Comm
 
 ## Feature Design:
 
-1. Attributes present at or around registration time — **Profile** Features
+refer to [here](https://www.linkedin.com/pulse/how-easily-spot-fake-linkedin-accounts-melonie-dodaro/):
 
-Duplicate accounts, inaccurate information, fake profiles.
+1. Attributes present at or around registration time — **Profile** Features: duplicate accounts, inaccurate information, fake profiles. e.g. fake photos, incomplete profiles and job titles, connections to all the same or all opposite gender people with fake looking profile pictures, fake name, poor spelling & grammar, suspicious work history. 
 
-
-2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph)
+2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph): suspect connection requests, lack of engagement.
 
 
 A set of human-curated words and phrases that violated Terms of Service and Community Guidelines.
+
 
 
 ### LinkedIn
