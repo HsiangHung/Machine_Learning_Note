@@ -124,8 +124,11 @@ BN also has other advantages like: enabling the utilization of larger learning r
 The mini-batch gradient descent can also implement BN. However, if the neural networks are trained by mini-batch and we perform prediction on test dataset, we need to determine `μ` and `σ` from training data, and then rescale the test data. We can simply compute the average `μ` from all mini-batch, or using exponentially weight average (mentioned in Andre Ng's class).
 
 
+## Data augmentation
 
+From [wiki](https://en.wikipedia.org/wiki/Data_augmentation): data augmentation in data analysis are techniques used to increase the amount of data by adding slightly **modified copies** of already existing data or newly created synthetic data from existing data. It acts as a regularizer and helps reduce overfitting when training a machine learning model. It is closely related to **oversampling** in data analysis.
 
+A convolutional neural network (CNN) that can robustly classify objects even if its placed in different orientations is said to have the property called invariance. More specifically, a CNN can be invariant to translation, viewpoint, size or illumination. We account for these situations by training our neural network with additional synthetically modified data. This essentially is the premise of data augmentation [[Arun Gandhi]][Data Augmentation | How to use Deep Learning when you have Limited Data — Part 2].
 
 
 
@@ -137,6 +140,11 @@ The mini-batch gradient descent can also implement BN. However, if the neural ne
 
 [Dropout in (Deep) Machine learning]: https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5
 [[Amar Budhiraja] Dropout in (Deep) Machine learning](https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5)
+
+
+[Data Augmentation | How to use Deep Learning when you have Limited Data — Part 2]: https://nanonets.com/blog/data-augmentation-how-to-use-deep-learning-when-you-have-limited-data-part-2/
+[[Arun Gandhi] Data Augmentation | How to use Deep Learning when you have Limited Data — Part 2](https://nanonets.com/blog/data-augmentation-how-to-use-deep-learning-when-you-have-limited-data-part-2/)
+
 
 
 [The Vanishing Gradient Problem]: https://towardsdatascience.com/optimizers-be-deeps-appetizers-511f3706aa67
