@@ -19,14 +19,6 @@ At the start of a business, there is a lack of previous users’ grades, and clu
 
 
 
-One notably successful use of deep learning is embedding, a method used to represent categorical variables as continuous vectors, rather than using one-hot encoding and label encoding [[Will Koehrsen]][Neural Network Embeddings Explained], [[Matias Aravena Gamboa]][Learning embeddings for your machine learning model]. 
-
-The main issue with one-hot encoding is that the transformation does not rely on any supervision and cause huge dimensions. The problem with LabelEncoding is that sometimes can bring a natural order on the different classes. We can greatly improve embeddings by learning them using a neural network on a **supervised** task. 
-
-
-
-
-
 <!-- ![word_embedding](images/word_embedding.png) -->
 
 
