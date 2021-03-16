@@ -87,7 +87,7 @@ We can see if the parameter `w > 1` in very deep network, the multiplication of 
 
     It’s because the gradient or **slope** of **RELU activation** is **0 or 1**. Sigmoid derivative has a maximum slope of .25, which means that during the backward pass, you are multiplying gradients with values less than 1, and if you have more and more layers, you are multiplying it with values less than 1, making gradients smaller and smaller. RELU activation solves this by having a gradient slope of 1, so during backpropagation, there isn’t gradients passed back that are progressively getting smaller and smaller. but instead they are staying the same, which is how RELU solves the vanishing gradient problem.
 
-3. Batch normalization. Batch normalization reduces this problem by simply normalizing the input so the gradient has less chance to reach the outer edges of the sigmoid function [[Chi-Feng Wang]][The Vanishing Gradient Problem]. 
+3. **Batch normalization**. Batch normalization reduces this problem by simply normalizing the input so the gradient has less chance to reach the outer edges of the sigmoid function [[Chi-Feng Wang]][The Vanishing Gradient Problem]. 
 
 
 
@@ -99,7 +99,7 @@ While using gradient descent, one can normalize/standardize input data. The adva
 
 to explain gradient descent with data normalization benefiting faster converge. 
 
-In DL, we can do the similar normalization processes, not only data in input layer, but also in hidden layers. This is called **batch normalization** (BN) [[Manish Chablani]][Batch Normalization]. BN can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
+In DL, we can do the similar normalization processes, not only data in input layer, but also in **hidden layers**. This is called **batch normalization** (BN) [[Manish Chablani]][Batch Normalization]. BN can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
 
 Given an intermediate hidden layer, we first normalize as 
 
