@@ -11,7 +11,7 @@
 
 ## Clustering 
 
-The blog [[Preeti Hemant]][Detecting Suspicious Accounts in Online Social Networks] implements clustering method to create features, and use the clustering results to labeled individual account. The cluster detection pipeline is as follows:
+The blog [[Preeti Hemant]][Detecting Suspicious Accounts in Online Social Networks] implements clustering method to create features, and use the clustering results to labeled individual account. The cluster detection pipeline is as follows (credit from [[Preeti Hemant]][Detecting Suspicious Accounts in Online Social Networks]):
 
 ![](images/cluster_detection_pipeline.png)
 
