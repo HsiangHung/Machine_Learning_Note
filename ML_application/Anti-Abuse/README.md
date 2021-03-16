@@ -13,10 +13,15 @@
 
 The blog [[Preeti Hemant]][Detecting Suspicious Accounts in Online Social Networks] implements clustering method to create features, and use the clustering results to labeled individual account. The cluster detection pipeline is as follows:
 
-
 ![](images/cluster_detection_pipeline.png)
 
+1. **Cluster Builder**: this component takes the raw list of accounts and builds clusters of accounts along with their raw features. Then each individual account can be identified clusters.
 
+2. **Profile Featurizer**: this module converts raw data for each cluster into a single numerical vector representing the cluster, extracting information from the raw features. The features could be
+
+* Basic distribution features — Statistical measures for each column. Mean or quartiles for numerical features, number of unique values for categorial features
+* Pattern features — Mapping of user-generated text to a categorical space (e.g. patterns in email addresses)
+* Frequency features — Frequency of each feature value over all the individual accounts and their distribution over these frequencies. Clusters of legitimate accounts have some high-frequency and some low-frequency data, clusters of **malicious accounts** however, show **less variance** in their data frequencies.
 
 
 
