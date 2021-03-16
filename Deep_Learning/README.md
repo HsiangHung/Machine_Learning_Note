@@ -76,7 +76,7 @@ In very deep neural networks, we may meet vanishing and exploding gradient issue
 
 ![vanishing_gradients](images/vanishing_gradient.png)
 
-We can see if the parameter `w > 1` in very deep network, the multiplication of parameters grow exponentially and the value of y will explode. On the other hand, multiplication of parameter `w < 1` may lead to vanishing y. 
+We can see if the parameter `w > 1` in very deep network, the multiplication of parameters grow exponentially and the value of `y` will explode. On the other hand, multiplication of parameter `w < 1` may lead to vanishing `y`. 
 
 ### Solution to vanishing gradients
  
@@ -85,7 +85,7 @@ We can see if the parameter `w > 1` in very deep network, the multiplication of 
 
 2. Another simple solution is to use other activation functions, such as **ReLU**, which doesn’t cause a small derivative. See Joe Liu's explanation in [Quora: How does the ReLu solve the vanishing gradient problem?](https://www.quora.com/How-does-the-ReLu-solve-the-vanishing-gradient-problem): 
 
-    It’s because the gradient or slope of RELU activation if it’s over 0, is 1. Sigmoid derivative has a maximum slope of .25, which means that during the backward pass, you are multiplying gradients with values less than 1, and if you have more and more layers, you are multiplying it with values less than 1, making gradients smaller and smaller. RELU activation solves this by having a gradient slope of 1, so during backpropagation, there isn’t gradients passed back that are progressively getting smaller and smaller. but instead they are staying the same, which is how RELU solves the vanishing gradient problem.
+    It’s because the gradient or **slope** of **RELU activation** is **0 or 1**. Sigmoid derivative has a maximum slope of .25, which means that during the backward pass, you are multiplying gradients with values less than 1, and if you have more and more layers, you are multiplying it with values less than 1, making gradients smaller and smaller. RELU activation solves this by having a gradient slope of 1, so during backpropagation, there isn’t gradients passed back that are progressively getting smaller and smaller. but instead they are staying the same, which is how RELU solves the vanishing gradient problem.
 
 3. Batch normalization. Batch normalization reduces this problem by simply normalizing the input so the gradient has less chance to reach the outer edges of the sigmoid function [[Chi-Feng Wang]][The Vanishing Gradient Problem]. 
 
