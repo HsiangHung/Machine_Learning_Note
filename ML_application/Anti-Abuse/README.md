@@ -3,13 +3,21 @@
 
 In social media, fake profiles can be used to carry out many different types of abuse: scraping, spamming, fraud, and phishing, among others. By preventing or promptly removing fake accounts on the site, we ensure that legitimate users are protected.
 
+[**Spam example**](https://safety.linkedin.com/identifying-abuse): 
+* Unsolicited commercial messages that are irrelevant or appear to have been sent out to a large group of people
+* asked to click on an unrecognizable or suspicious link
+* ask you for your login information
+* a post on the homepage feed, which asks for personal information to get paid or win an item
+* someone asking you to contact them outside of social media network.
+
+
+
 ## Feature Design:
 
 ### 1. Attributes present at or around registration time — **Profile** Features
 
 Duplicate accounts, inaccurate information, fake profiles.
 
-[**Spam example**](https://safety.linkedin.com/identifying-abuse): Unsolicited commercial messages that are irrelevant or appear to have been sent out to a large group of people; asked to click on an unrecognizable or suspicious link; ask you for your login information; a post on the homepage feed, which asks for personal information to get paid or win an item;  someone asking you to contact them outside of social media network.
 
 
 A set of human-curated words and phrases that violated Terms of Service and Community Guidelines — to identify and remove potentially fraudulent accounts. 
@@ -23,12 +31,21 @@ However, the list tended to handle context works rather poorly. For instance, wh
 
 ### 2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph)
 
+
+
+
 ### LinkedIn
 
 Over 660 million users, 303 million of whom are active monthly [source](https://venturebeat.com/2020/01/16/linkedin-is-using-ai-to-spot-and-remove-inappropriate-user-accounts/).
 
+
+[Keeping LinkedIn professional by detecting and removing inappropriate profiles]: https://engineering.linkedin.com/blog/2020/keeping-linkedin-professional
+[[Daniel Gorham ] Keeping LinkedIn professional by detecting and removing inappropriate profiles](https://engineering.linkedin.com/blog/2020/keeping-linkedin-professional)
+
 [Automated Fake Account Detection at LinkedIn]: https://engineering.linkedin.com/blog/2018/09/automated-fake-account-detection-at-linkedin
 [[Jenelle Bray] Automated Fake Account Detection at LinkedIn](https://engineering.linkedin.com/blog/2018/09/automated-fake-account-detection-at-linkedin)
+
+
 
 ![](images/fake_account_funnel.png)
 
