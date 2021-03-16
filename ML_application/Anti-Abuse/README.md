@@ -3,7 +3,7 @@
 
 In social media, fake profiles can be used to carry out many different types of abuse: scraping, spamming, fraud, and phishing, among others. By preventing or promptly removing fake accounts on the site, we ensure that legitimate users are protected.
 
-**Feature Design**:
+## Feature Design:
 
 1. Attributes present at or around registration time — **Profile** Features
 
