@@ -27,11 +27,11 @@ The main issue with one-hot encoding is that the transformation does not rely on
 
 
 
-![word_embedding](images/word_embedding.png)
+<!-- ![word_embedding](images/word_embedding.png) -->
 
 
 
-**Auto-encoders** use neural networks consisting of both an encoder and a decoder; encoder learns to compress the raw image pixel data to a small dimension, whereas decoders decompresses it via a decoder to re-generate the same input image. Once we have trained the model, we only use the encoder (first N network layers) to generate embeddings for images.
+
 
 
 
