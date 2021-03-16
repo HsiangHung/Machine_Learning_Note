@@ -22,20 +22,20 @@ So for each `Di` bootstrap dataset you create a tree `Ti`. If you want to classi
 ![](images/determine_probability.png)
 
 
-## Out-of-Bag Errors
+## Out-of-Bag (OOB) Sample and Errors
 
 
 After creating the classifiers (`S` trees), for each `(Xi,yi)` in the original training set i.e. `D`, select all `Dk` which does **NOT** include `(Xi,yi)`. This subset, pay attention, is a set of boostrap datasets which does not contain a particular record from the original dataset. This set is called out-of-bag examples. There are `n` such subsets (one for each data record in original dataset `T`). OOB classifier is the aggregation of votes ONLY over `Dk` such that it does not contain `(Xi,yi)`.
 
 
 
-Let’s take a concrete example. Assume there are five trees in the random forest ensemble labeled from 1 to 5. For simplicity, suppose we have a simple original training data set as below (credit from [[Navnina Bhatia]][What is Out of Bag (OOB) score in Random Forest?]).
+Let’s take a concrete example. Assume there are five trees in the random forest ensemble labeled from 1 to 5. For simplicity, suppose we have a simple original training data set as below (credit from [[Navnina Bhatia]][What is Out of Bag (OOB) score in Random Forest?]):
 
 ![](images/OOB_example.png)
 
-Now the tree `T1` used the first three rows (green box below) as the bootstrap sample. Then the last row that is “left out” (row in the red box) is known as Out of Bag sample. After the RF was trained, the OOB sample is unseen data to the `T1`.
+Now the tree `T1` used the first three rows (green box below) as the bootstrap sample. Then the last row that is “left out” (row in the red box) is known as OOB sample. After the RF was trained, the OOB sample (leftout row) is unseen in `T1`.
 
-Let’s assume that apart from `T1`, `T3` and `T5` also did not have this row in their bootstrap training data. The preidctions of the OOB sample on the trees are `y=1`, `0`, `1`. By majority vote, for the OOB smaple `y =1`. Therefore, we have a correct prediction.
+Let’s assume that apart from `T1`, `T3` and `T5` also did not have this row in their bootstrap training data. The preidctions of the OOB sample on the trees are `y=1`, `0`, `1`, respectively. By majority vote, for the OOB smaple `y =1`. Therefore, we have a correct prediction.
 
 
 The **OOB score** is computed as the number of correctly predicted rows from the out of bag sample. Out-of-bag estimate for the generalization error is the error rate of the out-of-bag classifier on the training set (compare it with known `yi`'s).
