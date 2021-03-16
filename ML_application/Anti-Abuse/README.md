@@ -7,6 +7,8 @@ In social media, fake profiles can be used to carry out many different types of 
 
 ### 1. Attributes present at or around registration time — **Profile** Features
 
+Duplicate accounts, inaccurate information, fake profiles.
+
 A set of human-curated words and phrases that violated Terms of Service and Community Guidelines — to identify and remove potentially fraudulent accounts. 
 
 However, the list tended to handle context works rather poorly. For instance, while the word “escort” was sometimes associated with prostitution, it was also used in contexts like a “security escort” or “medical escort.”. Linkedin identified problematic words responsible for high levels of **false positives** and sampled appropriate accounts from the member base containing these words. The accounts were then manually labeled and added to the training set, after which the model was trained and deployed in production.
