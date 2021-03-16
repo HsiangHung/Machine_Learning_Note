@@ -23,7 +23,7 @@ The blog [[Preeti Hemant]][Detecting Suspicious Accounts in Online Social Networ
 * Pattern features — Mapping of user-generated text to a categorical space (e.g. patterns in email addresses)
 * Frequency features — Frequency of each feature value over all the individual accounts and their distribution over these frequencies. Clusters of legitimate accounts have some high-frequency and some low-frequency data, clusters of **malicious accounts** however, show **less variance** in their data frequencies.
 
-
+3. **Account Scorer**: this component assigns the clustering aggregated features to individual account. We then used the generated features plus raw features to train the models and evaluate their performance on previously unseen data.
 
 
 
