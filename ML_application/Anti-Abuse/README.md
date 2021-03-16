@@ -64,7 +64,7 @@ Over 660 million users, 303 million of whom are active monthly [source](https://
 4. **Human element**: Members' reports and manual review investigation.
 
 
-#### Other notes
+#### Blacklist of words and phrases
 
 A set of human-curated words and phrases that violated Terms of Service and Community Guidelines — to identify and remove potentially fraudulent accounts. However, the list tended to handle context works rather poorly. For instance, while the word “escort” was sometimes associated with prostitution, it was also used in contexts like a “security escort” or “medical escort.”. Blocklists only grow larger over time as more phrases are identified.
 
