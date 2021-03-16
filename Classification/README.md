@@ -11,7 +11,7 @@
 | [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | low | high |
 | [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | low | high |
 
-### Logistic Regression (LR) versus Decision Trees (DT)
+#### Logistic regression (LR) versus Decision Trees (DT)
 
 
 Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree](https://dzone.com/articles/logistic-regression-vs-decision-tree))
@@ -30,6 +30,12 @@ Comparison can be visualized below (credit from [Logistic Regression versus Deci
 
 ![LR_vs_DT](images/LR_vs_DT.png)
 
+#### Other comparison
+
+
+* For “relatively” very small dataset sizes, compare the performance of a discriminative Logistic Regression model to a related Naive Bayes classifier (a generative model) or SVMs, which may be less susceptible to noise and outlier points [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw).
+* Logistic regression can be regarded as a one layer neural network [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw).
+* One of the nice properties of logistic regression is that the logistic cost function (or max-entropy) is convex, and thus we are guaranteed to find the global cost minimum [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw).
 
 
 ## Binary Classification Metric
