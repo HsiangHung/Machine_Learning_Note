@@ -64,7 +64,7 @@ Since it turns to the data size as number of features, SVM is probably not suita
 
 ## SVM vs Logistic Regression
 
-Many SVM packages have built in multi-class classification. Otherwise use one-vs-all method. For `K` classes, train `K` SVMs, each identifies if y = 1 for class {1,2,...K}. We pick class i for largest θᵀx_i.
+Many SVM packages have built in **multi-class classification**. Otherwise use **one-vs-all** method. For `K` classes, train `K` SVMs, each identifies if `y = 1` for class {1,2,...K}. We pick class i for largest θᵀx_i.
 
 
 The main differences between SVM and Logistic regression (LR) [[Georgios Drakos]][Support Vector Machine vs Logistic Regression]:
@@ -74,7 +74,7 @@ The main differences between SVM and Logistic regression (LR) [[Georgios Drakos]
 * Logistic Regression produces probabilistic values while SVM produces 1 or 0.
 
 
-Try logistic regression first and see how you do with that simpler model. If logistic regression fails and you have reason to believe your data won’t be linearly separable, try an SVM with a non-linear kernel like a Radial Basis Function (RBF). See the comparison provided by Andrew's Ng's Machine learning coursera class
+Try logistic regression first and see how you do with that simpler model. If logistic regression fails and you have reason to believe your data won’t be linearly separable, try an SVM with a non-linear kernel like a **Radial Basis Function** (RBF). See the comparison provided by Andrew's Ng's Machine learning coursera class
 
 ![LR_vs_SVM](images/LR_vs_SVM.png)
 
