@@ -6,9 +6,21 @@ In social media, fake profiles can be used to carry out many different types of 
 **Feature Design**:
 
 1. Attributes present at or around registration time — **Profile** Features
+
+A set of human-curated words and phrases that violated Terms of Service and Community Guidelines — to identify and remove potentially fraudulent accounts. 
+
+However, the list tended to handle context works rather poorly. For instance, while the word “escort” was sometimes associated with prostitution, it was also used in contexts like a “security escort” or “medical escort.”. Linkedin identified problematic words responsible for high levels of false positives and sampled appropriate accounts from the member base containing these words. The accounts were then manually labeled and added to the training set, after which the model was trained and deployed in production.
+
+Convolutional neural network — a class of algorithm commonly applied to imagery analysis
+
+
+
+
 2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph)
 
 ### LinkedIn
+
+Over 660 million users, 303 million of whom are active monthly [source](https://venturebeat.com/2020/01/16/linkedin-is-using-ai-to-spot-and-remove-inappropriate-user-accounts/).
 
 [Automated Fake Account Detection at LinkedIn]: https://engineering.linkedin.com/blog/2018/09/automated-fake-account-detection-at-linkedin
 [[Jenelle Bray] Automated Fake Account Detection at LinkedIn](https://engineering.linkedin.com/blog/2018/09/automated-fake-account-detection-at-linkedin)
