@@ -62,7 +62,7 @@ In the embedding model, what we want is the embedding weights, the representatio
 
 One of the coolest parts about embeddings are that they can be used to visualize using dimension reduction technique to get the dimensions to 2 or 3, i.e. t-Distributed Stochastic Neighbor Embedding (TSNE).
 
-Mapping 50-dimensions embeddings onto 2 dimensions using TSNE, we can visualize 37,000 books as 
+Mapping 50-dimensions embeddings onto 2 dimensions using TSNE, we can visualize 37,000 books as (credit from [[Will Koehrsen]][Neural Network Embeddings Explained])
 
 ![tsne_books](images/tsne_book_embedding.png)
 
@@ -125,7 +125,8 @@ Embedding interactions as relationships in a graph or resulting in pairs. The pr
 
 Having an embedding model these users and documents in the **same embedding space** can vastly help in the retrieval and ranking tasks of recommendation, search, feed-based, and many other ML systems.
 
-The two-tower neural network model embeds interaction of the above-discussed entity pairs in the same space and encodes each item using their raw features. The model optimizes the inner product loss such that positive pairs from entity interactions have a higher score and random pairs have a lower score.
+The **two-tower neural network model** embeds interaction of the above-discussed entity pairs in the same space and encodes each item using their raw features. The model optimizes the inner product loss such that positive pairs from entity interactions have a higher score and random pairs have a lower score (credit from [Grokking the Machine Learning Interview: Embedding](https://www.educative.io/courses/grokking-the-machine-learning-interview/B8xpO2XGxXo)):
+
 
 
 ![](images/two_tower_NN.png)
