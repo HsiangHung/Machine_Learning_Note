@@ -127,9 +127,12 @@ Having an embedding model these users and documents in the **same embedding spac
 
 The **two-tower neural network model** embeds interaction of the above-discussed entity pairs in the same space and encodes each item using their raw features. The model optimizes the inner product loss such that positive pairs from entity interactions have a higher score and random pairs have a lower score (credit from [Grokking the Machine Learning Interview: Embedding](https://www.educative.io/courses/grokking-the-machine-learning-interview/B8xpO2XGxXo)):
 
-
-
 ![](images/two_tower_NN.png)
+
+Or, if the user(u)-item(v) pairs has actual lable, like positive/negative lable, the two-tower NN model can be trained to minimize the difference dot product (u,v) minus the lable, like:
+
+![](images/two_tower_NN2.png)
+
 
 
 ## Reference
