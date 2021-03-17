@@ -129,7 +129,7 @@ The **two-tower neural network model** embeds interaction of the above-discussed
 
 ![](images/two_tower_NN.png)
 
-Or, if the user(u)-item(v) pairs has actual lable, like positive/negative lable, the two-tower NN model can be trained to minimize the difference dot product (u,v) minus the lable, like:
+Or, if the user(u)-item(v) pairs has actual lable, like positive/negative lable, the two-tower NN model can be trained to minimize the difference dot product (u,v) minus the lable, like (credit from [Grokking the Machine Learning Interview: Recommendation System](https://www.educative.io/courses/grokking-the-machine-learning-interview/YQZR9pOMXJ9)):
 
 ![](images/two_tower_NN2.png)
 
