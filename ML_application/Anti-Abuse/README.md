@@ -23,9 +23,6 @@ refer to [here](https://www.linkedin.com/pulse/how-easily-spot-fake-linkedin-acc
 2. Attributes that develop over time — Connections with other users in the network, activity or **behaviour** patterns (graph): suspect connection requests, lack of engagement.
 
 
-A set of human-curated words and phrases that violated Terms of Service and Community Guidelines.
-
-
 
 ### LinkedIn
 
