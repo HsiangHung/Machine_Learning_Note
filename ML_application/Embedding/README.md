@@ -20,7 +20,7 @@ For another example, if we have a vocabulary of 50,000 words used in a collectio
 
 Figuring out how to create the supervised task to produce relevant representations is the toughest part of making embeddings. 
 
-### An example 
+### An embedding example - interaction between Wiki pages and books
 
 In the Wikipedia book project [[Will Koehrsen]][Neural Network Embeddings Explained], the supervised learning task is set as predicting whether a given link to a Wikipedia page appears in the article for a book. 
 
@@ -115,7 +115,7 @@ Applications of image embedding include finding images similar to a given image,
 
 ### d. Network/Relationship-based embedding
 
-Embedding interactions as relationships in a graph or resulting in pairs. The previous books in wiki and links use the embedding. Other examples are: 
+Embedding interactions as relationships in a graph or resulting in pairs. The previous example embeds the interaction between books and Wiki pages. Other interaction examples are: 
 
 * (User, Pin) for Pinterest
 * (User, Video) for YouTube
@@ -123,7 +123,13 @@ Embedding interactions as relationships in a graph or resulting in pairs. The pr
 * (Query, Webpage) for Search
 * (Searcher, Webpage) for Search
 
-These embedding tasks can vastly help in the retrieval and ranking tasks of recommendation, search, feed-based, and many other ML systems.
+Having an embedding model these users and documents in the **same embedding space** can vastly help in the retrieval and ranking tasks of recommendation, search, feed-based, and many other ML systems.
+
+The two-tower neural network model embeds interaction of the above-discussed entity pairs in the same space and encodes each item using their raw features. The model optimizes the inner product loss such that positive pairs from entity interactions have a higher score and random pairs have a lower score.
+
+
+![](images/two_tower_NN.png)
+
 
 ## Reference
 
