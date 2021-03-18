@@ -158,6 +158,10 @@ where `E(h(x))` is the average value of `h(x)` from a collection of iTrees; `h(x
 
 ![isolation_forest](images/isolation_forest.png)
 
+
+In the above picture, (a) indicates how the isolation forest splits a normal data, whereas (b) splits an outlier. The isolation forest builds a tree and splits until a data point is isolated. An outlier spent less splits. The [first part talk](https://www.youtube.com/watch?v=sFRrFWYNAUI) from James Verbus has clear explanation about how it works. 
+
+
 If the outlier score `s(x,n)` is close to 1, then `x` is very likely to be an anomaly. On the other hand, if the score is smaller than 0.5, then `x` is likely to be a normal value. Thus smaller `E(h(x))` (shorter path length) and larger `c(n)` cause a larger outleir score. 
 
 The determination threshold can be specified, i.e. 0.55 or 0.60, not just at 0.5.
