@@ -1,5 +1,5 @@
 
-# Tf-Idf and Match Score 
+# TF-IDF and Match Score 
 
 
 Assume we have 3 documents in the corpus:
