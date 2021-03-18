@@ -36,7 +36,8 @@ Option to fix labels (by [Fighting Abuse @ Scale - Jenelle Bray and Carlos Faham
 #### online
 
 * time-to-restrict
-* number of user reports
+* number of user reports (long-term)
+* downstream users' impact (less user dwell time)
 
 
 ## Feature Design
