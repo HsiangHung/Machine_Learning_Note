@@ -3,6 +3,9 @@
 
 In social media, fake profiles can be used to carry out many different types of abuse: scraping, spamming, fraud, and phishing, among others. By preventing or promptly removing fake accounts on the site, we ensure that legitimate users are protected.
 
+The challenges are: label, adversarial, trade-off between need to confidently block bad guys as soon as possible, but need more evidence. 
+
+
 [**Spam example**](https://safety.linkedin.com/identifying-abuse): 
 * Unsolicited commercial messages that are irrelevant or appear to have been sent out to a large group of people
 * asked to click on an unrecognizable or suspicious link
@@ -16,9 +19,25 @@ A set of human-curated words and phrases that violated Terms of Service and Comm
 
 ## Metric
 
+by [Fighting Abuse @ Scale - Jenelle Bray and Carlos Faham, LinkedIn](https://www.facebook.com/atscaleevents/videos/2078887542384339):
+
 Online models, online rules, offline models that push restriction, manual restriction
 
+#### offline
+
 Deploy many models -> each high precision (don't block good people) -> overall high recall
+
+Option to fix labels (by [Fighting Abuse @ Scale - Jenelle Bray and Carlos Faham, LinkedIn](https://www.facebook.com/atscaleevents/videos/2078887542384339)):
+* fix labels manually (not scale)
+* fix labels automatically, semi-supervised learning (not trivial, miss new undetected attach pattern)
+* fix labels manually in a targetd fashion (review false positive only)
+
+
+#### online
+
+* time-to-restrict
+* number of user reports
+
 
 ## Feature Design
 
