@@ -14,7 +14,13 @@ In social media, fake profiles can be used to carry out many different types of 
 A set of human-curated words and phrases that violated Terms of Service and Community Guidelines. Cons and solution see [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_application/Anti-Abuse#blacklist-of-words-and-phrases).
 
 
-## Feature Design:
+## Metric
+
+Online models, online rules, offline models that push restriction, manual restriction
+
+Deploy many models -> each high precision (don't block good people) -> overall high recall
+
+## Feature Design
 
 refer to [here](https://www.linkedin.com/pulse/how-easily-spot-fake-linkedin-accounts-melonie-dodaro/):
 
