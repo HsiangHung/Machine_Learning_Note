@@ -71,7 +71,20 @@ review rate = N(prob > threshold)/N
 ```
 where `N` is the number of data points.
 
-### A. Business concern
+### AUC
+
+AUC stands for "Area under the ROC Curve." That is, AUC measures the entire two-dimensional area underneath the entire ROC curve (think integral calculus) from (0,0) to (1,1).
+
+AUC provides an **aggregate** measure of performance across all possible classification thresholds. One way of interpreting AUC is as the probability that the model ranks a random positive example more highly than a random negative example. For example, given the following examples, which are arranged from left to right in ascending order of logistic regression predictions (from [Classification: ROC Curve and AUC](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)]):
+
+![](images/AUC_explanation.png)
+
+**AUC represents the probability that a random positive (green) example is positioned to the right of a random negative (red) example.**
+
+
+### Selection of metrics
+
+#### a. Business concern
 
 Below there are some examples to ask: when precision is important and when recall is important ? [[Data Science: When is precision more important over recall?]][When is precision more important over recall?] [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]. The answer depends on which we want to minimize, FP or FN costs more? Note it has been mentioned in the post that you could have 100% recall yet have a useless model: if your model always outputs a positive prediction, it would have 100% recall but be completely uninformative.
 
@@ -91,7 +104,7 @@ Here I summarize the cases from the above posts and list in the following:
 
 7. Imagine that we want to make sure that our web site blocker for our child only allows 'safe' websites to be shown. In this case, a 'safe' website is the positive class. Here, we want the blocker to be absolutely certain that the website is safe, even if some safe websites are predicted to be part of the negative or unsafe class and are consequently blocked. That is, we want high precision at the expense of recall.
 
-### B. If no business concern
+#### b. If no business concern
 
 If there is no external business concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold: (a) is a `median value` of probability distribution, (2) maximizes `TPR-FPR`, (3) has optimal `F1 score` [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]: 
 
@@ -99,7 +112,7 @@ If there is no external business concern about low TPR or high FPR, one option i
 
 where P = Precision and R = Recall.
 
-### C. Fraud rat to precision, recall, AUC
+#### c. Fraud rate to precision, recall, AUC
 
 In the imbalanced cases, how do fraud rates (or downsampling rate) influence the metrics? The post [[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] has very wonderful disucssion about it and we can have intuition as follows. 
 
