@@ -17,23 +17,29 @@ The challenges are: label, adversarial, trade-off between need to confidently bl
 A set of human-curated words and phrases that violated Terms of Service and Community Guidelines. Cons and solution see [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_application/Anti-Abuse#blacklist-of-words-and-phrases).
 
 
+## Labeling
+
+Options to fix labels (by [Fighting Abuse @ Scale - Jenelle Bray and Carlos Faham, LinkedIn](https://www.facebook.com/atscaleevents/videos/2078887542384339)):
+* fix labels manually (not scale)
+* fix labels automatically, semi-supervised learning (not trivial, miss new undetected attach pattern)
+* fix labels manually in a targetd fashion (review false positive only)
+
+A talk by [Deep Entity Classification: An abusive account detection framework](https://engineering.fb.com/2019/12/13/security/fighting-abuse-scale-2019/):
+Use low-precision label to train embedding, and then with high-precision (by human) to train NN or GBDT.
+
+
 ## Metric
 
 by [Fighting Abuse @ Scale - Jenelle Bray and Carlos Faham, LinkedIn](https://www.facebook.com/atscaleevents/videos/2078887542384339):
 
 Online models, online rules, offline models that push restriction, manual restriction
 
-#### offline
+### a. offline
 
 Deploy many models -> each high precision (don't block good people) -> overall high recall
 
-Option to fix labels (by [Fighting Abuse @ Scale - Jenelle Bray and Carlos Faham, LinkedIn](https://www.facebook.com/atscaleevents/videos/2078887542384339)):
-* fix labels manually (not scale)
-* fix labels automatically, semi-supervised learning (not trivial, miss new undetected attach pattern)
-* fix labels manually in a targetd fashion (review false positive only)
 
-
-#### online
+### b. online
 
 * fake account remove percentage
 * time-to-restrict
