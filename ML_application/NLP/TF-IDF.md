@@ -1,6 +1,8 @@
 
-# TF-IDF and Match Score 
+# TF-IDF and TF-IDF Match Score
 
+
+The TF-IDF match score can also be an important relevance signal for the model. It is a similarity score based on a text match between the query terms and the document. 
 
 Assume we have 3 documents in the corpus:
 
