@@ -42,6 +42,8 @@ TSS-RSS gives us how much variation in `y` is explained by our model. R-squared 
 
 `RSS/TSS` is the variance in `y` **NOT** explained by the model.
 
+R-squared value always lies between 0 and 1. If this value is 0.7, then it means that the independent variables explain 70% of the variation in the target variable. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa.
+
 
 #### Adjusted R-squared
 
