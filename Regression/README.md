@@ -20,6 +20,7 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}_i&space;=&spac
 
 The lower the value of RSS, the better is the model predictions. The optimization objective is to minimize the cost function (RSS). 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" title="\textrm{RSS} = \sum_i (y_i - \hat{y}_i)^2" /></a>
 
 ## Metric
 
@@ -28,6 +29,13 @@ A simple evaludation for regression models is MSE, mean saured errors.
 #### R-squared
 
 R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]
+
+Total Sum of Squares is 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" title="\textrm{TSS} = \sum_i (y_i - \bar{y})^2" /></a>
+
+TSS or Total sum of squares gives the total variation in target variable `y`. 
+
 
 #### Adjusted R-squared
 
