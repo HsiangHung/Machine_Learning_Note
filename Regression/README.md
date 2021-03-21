@@ -31,7 +31,7 @@ For R-sqaured, we need RSS and TSS. **Residual sum of squares (RSS)** is equal t
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" title="\textrm{RSS} = \sum_i (y_i - \hat{y}_i)^2" /></a>
 
-The lower the value of RSS, the better is the model predictions. The optimization objective is to minimize the cost function (RSS). **Total Sum of Squares (TSS)** is 
+The lower the value of RSS, the better is the model predictions. **Total Sum of Squares (TSS)** is 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" title="\textrm{TSS} = \sum_i (y_i - \bar{y})^2" /></a>
 
@@ -50,7 +50,7 @@ TSS-RSS gives us how much variation in `y` is explained by our model. R-squared 
 
 A major problem is that R-sqaured is related to the number of variables we add to our regression model. That is, even if we are adding redundant variables to the data, the value of R-squared does not decrease. This clearly does not make sense because some of the independent variables might not be useful in determining the target variable. 
 
-Adjusted R-squared deals with this issue [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]:
+The adjusted R-squared compares the descriptive power of regression models that include diverse numbers of predictors. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Adjusted&space;R}^2&space;=&space;1-&space;\frac{(1-R^2)(n-1)}{(m-p-1)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Adjusted&space;R}^2&space;=&space;1-&space;\frac{(1-R^2)(n-1)}{(m-p-1)}" title="\textrm{Adjusted R}^2 = 1- \frac{(1-R^2)(n-1)}{(m-p-1)}" /></a>
 
@@ -67,6 +67,13 @@ The linear regression has a generic form
 
 
 ### Assumption 
+
+There are four assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression]:
+
+* Linearity: The relationship between X and the mean of Y is linear.
+* Homoscedasticity: The variance of residual is the same for any value of X.
+* Independence: Observations are independent of each other.
+* Normality: For any fixed value of X, Y is normally distributed.
 
 
 ### Maximum Likelihood Estimate
@@ -85,31 +92,11 @@ The likelihood of given model and data `D` is
 
 
 
-#### b. If no business concern
-
-If there is no external business concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold: (a) is a `median value` of probability distribution, (2) maximizes `TPR-FPR`, (3) has optimal `F1 score` [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]: 
-
- <a href="https://www.codecogs.com/eqnedit.php?latex=F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" title="F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}}" /></a>
-
-where P = Precision and R = Recall.
 
 
 
 
 
-
-
-
-## Loss Function: Cross-Entropy
-
-
-The cross-entropy of the generic form given a data record is 
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="\textrm{Cross-Entropy} = -\sum_c p_c \log q_c" /></a>
-
-where `c` denotes class labels. `p` is the probability of target having class = c, and `q` is the probability of prediction as class = c. In classification, cross-entropy is used to be loss to optimize.
-
-The cross-entropy can be used as loss to optimize using gradient descent in classification.
 
 
 
@@ -126,5 +113,13 @@ The cross-entropy can be used as loss to optimize using gradient descent in clas
 
 [Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]: https://www.analyticsvidhya.com/blog/2020/07/difference-between-r-squared-and-adjusted-r-squared/
 [[Aniruddha Bhandari] Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis](https://www.analyticsvidhya.com/blog/2020/07/difference-between-r-squared-and-adjusted-r-squared/)
+
+
+[QSimple Linear Regression]: https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/R5_Correlation-Regression4.html
+[[BUMC] Simple Linear Regression](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/R5_Correlation-Regression4.html)
+
+
+[Quroa: What is the difference between R-squared and Adjusted R-squared?]: https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared
+[[Quora: What is the difference between R-squared and Adjusted R-squared?] Quora: What is the difference between R-squared and Adjusted R-squared?](https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared)
 
 
