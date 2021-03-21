@@ -1,9 +1,12 @@
 
 # Regression 
 
-Generally form
+Regression is to models when the target variable `y` is numeric, continuous
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;=&space;\bold{x}&space;\theta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;=&space;\bold{x}&space;\theta" title="\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 +\cdots = \bold{x} \theta" /></a>
+```
+y = f(x)
+```
+
 
 The cost function reads
 
@@ -13,12 +16,17 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}_i&space;=&spac
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=e_i&space;=&space;\hat{y}_i&space;-&space;y_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e_i&space;=&space;\hat{y}_i&space;-&space;y_i" title="e_i = \hat{y}_i - y_i" /></a>
 
+**Residual sum of squares** or **RSS** is equal to the cost function.
+
+The lower the value of RSS, the better is the model predictions. The optimization objective is to minimize the cost function (RSS). 
+
+
 ## Metric
 
-
-#### MSE
+A simple evaludation for regression models is MSE, mean saured errors.
 
 #### R-squared
+
 
 #### Adjusted R-squared
 
@@ -28,6 +36,15 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}_i&space;=&spac
 | Logistic regression| high | low|
 | [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | low | high |
 | [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | low | high |
+
+
+## Linear Regression
+
+The linear regression has a generic form
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;=&space;\bold{x}&space;\theta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;=&space;\bold{x}&space;\theta" title="\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 +\cdots = \bold{x} \theta" /></a>
+
+
 
 ## Assumption 
 
