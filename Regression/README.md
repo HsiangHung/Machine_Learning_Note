@@ -27,14 +27,10 @@ A simple evaludation for regression models is MSE, mean saured errors. There are
 
 R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]
 
-**Residual sum of squares (RSS)** is equal to the cost function.
-
-The lower the value of RSS, the better is the model predictions. The optimization objective is to minimize the cost function (RSS). 
-
+For R-sqaured, we need RSS and TSS. **Residual sum of squares (RSS)** is equal to the cost function:
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" title="\textrm{RSS} = \sum_i (y_i - \hat{y}_i)^2" /></a>
 
-
-Total Sum of Squares is 
+The lower the value of RSS, the better is the model predictions. The optimization objective is to minimize the cost function (RSS). **Total Sum of Squares (TSS)** is 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" title="\textrm{TSS} = \sum_i (y_i - \bar{y})^2" /></a>
 
