@@ -21,6 +21,8 @@ So for each `Di` bootstrap dataset you create a tree `Ti`. If you want to classi
 
 ![](images/determine_probability.png)
 
+Or the predictive probability can be computed by counting individual class assignments from the trees of the forest and then normalize by dividing by the total number of trees. (see Olivier Grisel's answer on the [Quora: What are some proved methods to get probability values from Random Forests?](https://www.quora.com/What-are-some-proved-methods-to-get-probability-values-from-Random-Forests))
+
 
 ## Out-of-Bag (OOB) Sample and Errors
 
