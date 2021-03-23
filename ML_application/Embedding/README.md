@@ -133,6 +133,9 @@ Or, if the user(u)-item(v) pairs has actual lable, like positive/negative lable,
 
 ![](images/two_tower_NN2.png)
 
+There is an absolute value on the differenc between dot-product and the actual value. The network learns the user and media embeddings in such a way that their distance will be minimized if the user would like this media and maximized if the user would not like the media.
+
+
 
 
 ## Reference
