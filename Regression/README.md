@@ -70,10 +70,16 @@ The linear regression has a generic form
 
 There are four assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression]:
 
-* Linearity: The relationship between X and the mean of Y is linear.
-* Homoscedasticity: The variance of residual is the same for any value of X.
-* Independence: Observations are independent of each other.
-* Normality: For any fixed value of X, Y is normally distributed.
+* **Independence**: Observations are independent of each other.
+
+* **Linearity**: The relationship between X and the mean of Y is linear. Look for **residual vs fitted value** plots. To fix this, you can include polynomial terms (`X`, `X^2`, `X^3`) or interaction terms in your model to capture the non-linear effect.
+
+![](images/non_linear_effect.png)
+
+
+* **Homoscedasticity**: The variance of residual is the same for any value of X, i.e. error terms must have constant variance.
+
+* **Normality**: For any fixed value of X, Y is normally distributed.
 
 
 ### Maximum Likelihood Estimate
