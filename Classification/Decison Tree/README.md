@@ -102,7 +102,7 @@ For numeric attributes, we sort the attribute by value. Then above data become
 ```
 At root, the entropy (9 positive, 5 negative) is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94" title="H(\frac{9}{14},\frac{5}{14})= -\big(\frac{9}{14}\log \frac{9}{14} + \frac{5}{14}\log \frac{5}{14} \big) = 0.94" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94&space;\&space;\textrm{bits}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94&space;\&space;\textrm{bits}" title="H(\frac{9}{14},\frac{5}{14})= -\big(\frac{9}{14}\log \frac{9}{14} + \frac{5}{14}\log \frac{5}{14} \big) = 0.94 \ \textrm{bits}" /></a>
 
 
 Suppose we are going to determine the humidity threshold split, and we have two ways:
@@ -112,7 +112,7 @@ Suppose we are going to determine the humidity threshold split, and we have two 
 
 For **way A**, if humidity <= 62, 6 positive; humidity > 62, 3 positive and 5 negative
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H_A&space;=&space;\frac{6}{14}H(\frac{6}{6},&space;0)&space;&plus;&space;\frac{8}{14}H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;\frac{6}{14}&space;\times&space;0&space;&plus;&space;\frac{8}{14}\times&space;0.95&space;=&space;0.54" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_A&space;=&space;\frac{6}{14}H(\frac{6}{6},&space;0)&space;&plus;&space;\frac{8}{14}H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;\frac{6}{14}&space;\times&space;0&space;&plus;&space;\frac{8}{14}\times&space;0.95&space;=&space;0.54" title="H_A = \frac{6}{14}H(\frac{6}{6}, 0) + \frac{8}{14}H(\frac{3}{8}, \frac{5}{8}) = \frac{6}{14} \times 0 + \frac{8}{14}\times 0.95 = 0.54" /></a> bits
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_A&space;=&space;\frac{6}{14}H(\frac{6}{6},&space;0)&space;&plus;&space;\frac{8}{14}H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;\frac{6}{14}&space;\times&space;0&space;&plus;&space;\frac{8}{14}\times&space;0.95&space;=&space;0.54" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_A&space;=&space;\frac{6}{14}H(\frac{6}{6},&space;0)&space;&plus;&space;\frac{8}{14}H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;\frac{6}{14}&space;\times&space;0&space;&plus;&space;\frac{8}{14}\times&space;0.95&space;=&space;0.54" title="H_A = \frac{6}{14}H(\frac{6}{6}, 0) + \frac{8}{14}H(\frac{3}{8}, \frac{5}{8}) = \frac{6}{14} \times 0 + \frac{8}{14}\times 0.95 = 0.54" /></a> 
 
 
 For **way B**, if humidity <= 89, 9 positive and 1 negative; humidity > 89, 4 negative
