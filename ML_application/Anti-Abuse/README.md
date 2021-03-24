@@ -6,7 +6,8 @@ In social media, fake profiles can be used to carry out many different types of 
 The challenges are: label, adversarial, trade-off between need to confidently block bad guys as soon as possible, but need more evidence. 
 
 
-[**Spam example**](https://safety.linkedin.com/identifying-abuse): 
+Spam [examples@LinkedIn](https://safety.linkedin.com/identifying-abuse): 
+
 * Unsolicited commercial messages that are irrelevant or appear to have been sent out to a large group of people
 * asked to click on an unrecognizable or suspicious link
 * ask you for your login information
