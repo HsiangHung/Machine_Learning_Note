@@ -28,6 +28,7 @@ Options to fix labels (by [Fighting Abuse @ Scale - Jenelle Bray and Carlos Faha
 A talk by [Deep Entity Classification: An abusive account detection framework](https://engineering.fb.com/2019/12/13/security/fighting-abuse-scale-2019/):
 Use low-precision label to train embedding, and then with high-precision (by human) to train NN or GBDT.
 
+GAN or sythentize data (data augmentation) is also helpful to generate fraud data.
 
 ## Metric
 
