@@ -166,7 +166,7 @@ Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wi
 
 **NOTE** [[Tim Bock]][Decision Trees Are Usually Better Than Logistic Regression]: decision trees have their own potential for misinterpretation, with many people incorrectly assuming that the order with which predictors appear in a tree tells you something about their importance. Unfortunately, this is often not the case. For example, if you have two highly correlated predictors, only one of them may appear in the tree and which one it is will be a bit of a fluke.
 
-The consequence of all of these strengths of logistic regression is that if you are doing an academic study and wanting to make conclusions about what **causes** what, logistic regression is often much better than a decision tree. However, if instead the goal is to either make a prediction, or describe the data, then logistic regression is often a poor choice .
+The consequence of all of these strengths of logistic regression is that if you are doing an academic study and wanting to make conclusions about what **causes** what, logistic regression is often much better than a decision tree. However, if instead the goal is to either make a prediction, or describe the data, then logistic regression is often a poor choice.
 
 
 ## How To Deal with Missing Values
