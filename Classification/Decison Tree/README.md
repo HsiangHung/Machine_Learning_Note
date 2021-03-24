@@ -138,7 +138,9 @@ where `Nc` means the number of instances on the "current" node or level, and `N`
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;N_{c}\big(&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;N_{c}\big(&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r&space;\big)" title="FI(A|c) = N_{c}\big( \textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l - N_{c,r}*\textrm{impurity}_r \big)" /></a>
 
-and eventually all are divided by `N`. The `impurity` metric is **entropy** if **C4.5** algorithm adopted. It would be **Gini** if the algorithm were **CART** [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]. Keep in mind for lower impurity (say, the majority is positive), both entropy and Gini index are lower. If attribute A works well to split, parent has higher impurity whereas child has lower impurity, then higher `FI(A|c)`.  
+and eventually all are divided by `N`. The `impurity` metric is **entropy** if **C4.5** algorithm adopted. It would be **Gini** if the algorithm were **CART** [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]. 
+
+Keep in mind for lower impurity (say, the majority is positive), both entropy and Gini index are lower. If attribute A works well to split, parent has higher impurity whereas child has lower impurity, then higher `FI(A|c)`.  
 
 As a concrete example, suppose we have built the following tree (using C4.5 algorithm with entropy) (credit from [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]):
 
