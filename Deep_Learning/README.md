@@ -30,6 +30,20 @@ For classificastion, output layer uses sigmoid activation; for regression, uses 
 However, if **only** using linear activation in hidden layers, the neural network is equivalent to logisitc regression. Therefore it is critical for deep learning using non-linear activation functions.
 
 
+### ReLu and Leaky ReLu
+
+Due to this leak, the problem of dead neurons is avoided. Further, a research has found that Leaky ReLU activation functions outperformed the ReLU activation function. Further, Leaky ReLU activation functions with a higher value of leak perform better than those with lower value of leak.
+
+#### Pros
+* Performs better as compared to traditionally used activation functions such as Sigmoid and Hyperbolic-Tangent functions and even ReLU.
+* It is fast and easy to calculate. The same applies to it’s derivative which is calculated during the backpropagation.
+* It does not saturate for positive values of input and hence does not run into problems related to exploding/vanishing gradients during Gradient Descent.
+* Does not suffer from dying ReLU problem.
+
+#### Cons
+* Though the function is continuous at all points, it is not differentiable at the point x=0, i.e, at the point x=0, the slope of the graph changes abruptly as can be seen in the graph. Due to this, during the gradient descent its value will ‘bounce around’. Despite this fact, Leaky ReLU works very well in practice.
+* Unlike the Parameterised ReLU or PReLU, the value of α is defined prior to the training and hence cannot be adjusted during the training time. The value of α hence chosen might not be the most optimal value.
+
 ## Dropout Regularization
 
 Dropout is used to prevent over-fitting in deep learning.
