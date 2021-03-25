@@ -158,6 +158,10 @@ By [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, Detection, 
 [[Jim Frost] Multicollinearity in Regression Analysis: Problems, Detection, and Solutions](https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/)
 
 
+[10.7 - Detecting Multicollinearity Using Variance Inflation Factors]: https://online.stat.psu.edu/stat462/node/180/
+[[Penn stat: STAT 462 - Applied Regression Analysis] 10.7 - Detecting Multicollinearity Using Variance Inflation Factors](https://online.stat.psu.edu/stat462/node/180/)
+
+
 [Quroa: What is the difference between R-squared and Adjusted R-squared?]: https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared
 [[Quora: What is the difference between R-squared and Adjusted R-squared?] Quora: What is the difference between R-squared and Adjusted R-squared?](https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared)
 
