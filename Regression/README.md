@@ -104,10 +104,15 @@ Multicollinearity causes the following two basic types of problems:
 1. The coefficient estimates can swing wildly based on which other independent variables are in the model. The coefficients become very sensitive to small changes in the model.
 2. Multicollinearity reduces the precision of the estimate coefficients, which weakens the statistical power of your regression model. You might not be able to trust the p-values to identify independent variables that are statistically significant.
 
+
 ### How to test Multicollinearity?
 
 1. Correlation matrix / Correlation plot
-2. Variation Inflation Factor (VIF): identifies correlation between independent variables and the strength of that correlation.
+2. Variation Inflation Factor (VIF): identifies correlation between independent variables and the strength of that correlation. The VIF for the `j`-th predictor is:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{VIF}_j&space;=&space;\frac{1}{1-R^2_j}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{VIF}_j&space;=&space;\frac{1}{1-R^2_j}" title="\textrm{VIF}_j = \frac{1}{1-R^2_j}" /></a>
+
+where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R^2_j" title="R^2_j" /></a> is the R-sqaured value obtained by regressing the `j`-th predictor on the remaining predictors.
 
 * VIF = 1 → No correlation
 * VIF = 1 to 5 Moderate correlation
