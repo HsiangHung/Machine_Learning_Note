@@ -23,7 +23,7 @@ The optimization objective is to minimize the cost function.
 
 A simple evaludation for regression models is MSE, mean saured errors. There are others:
 
-#### R-squared
+### 1. R-squared
 
 R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]
 
@@ -46,7 +46,7 @@ TSS-RSS gives us how much variation in `y` is explained by our model. R-squared 
 0 <= R-squared <= 1. If this value is 0.7, it means that the independent variables explain 70% of the variation in the target variable. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
 
 
-#### Adjusted R-squared
+### 2. Adjusted R-squared
 
 A major problem is that R-sqaured is related to the number of variables we add to our regression model. That is, even if we are adding redundant variables to the data, the value of R-squared does not decrease. This clearly does not make sense because some of the independent variables might not be useful in determining the target variable. 
 
@@ -96,10 +96,19 @@ Thus the total likelidhood for entire data set `D` is
 ![](images/gaussian_likelihood.png)
 
 
+## Multicollinearity
+
+### How to test Multicollinearity?
+
+1. Correlation matrix / Correlation plot
+2. Variation Inflation Factor (VIF): 
+
+* VIF = 1 → No correlation
+* VIF = 1 to 5 Moderate correlation
+* VIF >10 → High correlation
 
 
-
-
+To fix Multicollinearity we can combine variables [[Sushmitha Pulagam]][How to detect and deal with Multicollinearity]. 
 
 
 
@@ -129,5 +138,11 @@ Thus the total likelidhood for entire data set `D` is
 
 [Quroa: What is the difference between R-squared and Adjusted R-squared?]: https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared
 [[Quora: What is the difference between R-squared and Adjusted R-squared?] Quora: What is the difference between R-squared and Adjusted R-squared?](https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared)
+
+
+[How to detect and deal with Multicollinearity]: https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1
+[[Sushmitha Pulagam] How to detect and deal with Multicollinearity](https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1)
+
+
 
 
