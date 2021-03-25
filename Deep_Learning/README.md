@@ -32,7 +32,7 @@ However, if **only** using linear activation in hidden layers, the neural networ
 
 ### ReLu and Leaky ReLu
 
-Due to this leak, the problem of dead neurons is avoided. Further, a research has found that Leaky ReLU activation functions outperformed the ReLU activation function. Further, Leaky ReLU activation functions with a higher value of leak perform better than those with lower value of leak.
+Due to this leak, the problem of dead neurons is avoided. Further, a research has found that Leaky ReLU activation functions outperformed the ReLU activation function. Further, Leaky ReLU activation functions with a higher value of leak perform better than those with lower value of leak [[Saurabh Singh]][Leaky ReLU as an Activation Function in Neural Networks].
 
 #### Pros
 * Performs better as compared to traditionally used activation functions such as Sigmoid and Hyperbolic-Tangent functions and even ReLU.
@@ -43,6 +43,12 @@ Due to this leak, the problem of dead neurons is avoided. Further, a research ha
 #### Cons
 * Though the function is continuous at all points, it is not differentiable at the point x=0, i.e, at the point x=0, the slope of the graph changes abruptly as can be seen in the graph. Due to this, during the gradient descent its value will ‘bounce around’. Despite this fact, Leaky ReLU works very well in practice.
 * Unlike the Parameterised ReLU or PReLU, the value of α is defined prior to the training and hence cannot be adjusted during the training time. The value of α hence chosen might not be the most optimal value.
+
+
+[Leaky ReLU as an Activation Function in Neural Networks]: https://deeplearninguniversity.com/leaky-relu-as-an-activation-function-in-neural-networks/#:~:text=Cons,value%20will%20'bounce%20around'.
+[[Saurabh Singh] Leaky ReLU as an Activation Function in Neural Networks](https://deeplearninguniversity.com/leaky-relu-as-an-activation-function-in-neural-networks/#:~:text=Cons,value%20will%20'bounce%20around'.)
+
+
 
 ## Dropout Regularization
 
