@@ -108,7 +108,9 @@ Multicollinearity causes the following two basic types of problems:
 ### How to test Multicollinearity?
 
 1. Correlation matrix / Correlation plot
-2. Variation Inflation Factor (VIF): identifies correlation between independent variables and the strength of that correlation. The VIF for the `j`-th predictor is:
+2. Variation Inflation Factor (VIF): identifies correlation between independent variables and the strength of that correlation. 
+
+The VIF for the `j`-th predictor is:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{VIF}_j&space;=&space;\frac{1}{1-R^2_j}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{VIF}_j&space;=&space;\frac{1}{1-R^2_j}" title="\textrm{VIF}_j = \frac{1}{1-R^2_j}" /></a>
 
