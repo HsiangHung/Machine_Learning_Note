@@ -98,19 +98,30 @@ Thus the total likelidhood for entire data set `D` is
 
 ## Multicollinearity
 
+
+Multicollinearity causes the following two basic types of problems:
+
+1. The coefficient estimates can swing wildly based on which other independent variables are in the model. The coefficients become very sensitive to small changes in the model.
+2. Multicollinearity reduces the precision of the estimate coefficients, which weakens the statistical power of your regression model. You might not be able to trust the p-values to identify independent variables that are statistically significant.
+
 ### How to test Multicollinearity?
 
 1. Correlation matrix / Correlation plot
-2. Variation Inflation Factor (VIF): 
+2. Variation Inflation Factor (VIF): identifies correlation between independent variables and the strength of that correlation.
 
 * VIF = 1 → No correlation
 * VIF = 1 to 5 Moderate correlation
 * VIF >10 → High correlation
 
+### How to deal with Multicollinearity
 
-To fix Multicollinearity we can combine variables [[Sushmitha Pulagam]][How to detect and deal with Multicollinearity]. 
+By [[Sushmitha Pulagam]][How to detect and deal with Multicollinearity], to fix Multicollinearity we can combine variables. 
 
+By [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, Detection, and Solutions]:
 
+1. The severity of the problems increases with the degree of the multicollinearity. Therefore, if you have only moderate multicollinearity, you may not need to resolve it.
+2. Multicollinearity affects only the specific independent variables that are correlated. Therefore, if multicollinearity is not present for the independent variables that you are particularly interested in, you may not need to resolve it. Suppose your model contains the experimental variables of interest and some control variables. If high multicollinearity exists for the control variables but not the experimental variables, then you can interpret the experimental variables without problems.
+3. Multicollinearity affects the coefficients and p-values, but it does not influence the predictions, precision of the predictions, and the goodness-of-fit statistics. **If your primary goal is to make predictions, and you don’t need to understand the role of each independent variable, you don’t need to reduce severe multicollinearity**.
 
 
 
@@ -134,6 +145,10 @@ To fix Multicollinearity we can combine variables [[Sushmitha Pulagam]][How to d
 
 [QSimple Linear Regression]: https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/R5_Correlation-Regression4.html
 [[BUMC] Simple Linear Regression](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/R5_Correlation-Regression4.html)
+
+
+[Multicollinearity in Regression Analysis: Problems, Detection, and Solutions]: https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/
+[[Jim Frost] Multicollinearity in Regression Analysis: Problems, Detection, and Solutions](https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/)
 
 
 [Quroa: What is the difference between R-squared and Adjusted R-squared?]: https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared
