@@ -38,7 +38,7 @@ Comparison can be visualized below (credit from [Logistic Regression versus Deci
 
 ## Binary Classification Metric
 
-### Precision and Recall
+### A. Precision and Recall
 
 In most cases, there are no perfect classifiers. A good common question is which metric should we use for model selection, precision or recall? Classifier to have high True Positive Rate (TPR) or False Positive Rate (FPR)? It depends on domain and our business goal.
 
@@ -69,15 +69,16 @@ review rate = N(prob > threshold)/N
 ```
 where `N` is the number of data points.
 
-### AUC
+### B. AUC
 
 AUC stands for "Area under the ROC Curve." That is, AUC measures the entire two-dimensional area underneath the entire ROC curve (think integral calculus) from (0,0) to (1,1).
+
+Interpretation: **AUC represents the probability that a random positive (green) example is positioned to the right of a random negative (red) example.**
 
 AUC provides an **aggregate** measure of performance across all possible classification thresholds. One way of interpreting AUC is as the probability that the model ranks a random positive example more highly than a random negative example. For example, given the following examples, which are arranged from left to right in ascending order of logistic regression predictions (from [Classification: ROC Curve and AUC](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)):
 
 ![](images/AUC_explanation.png)
 
-**AUC represents the probability that a random positive (green) example is positioned to the right of a random negative (red) example.**
 
 
 ### Selection of metrics
