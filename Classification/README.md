@@ -11,10 +11,7 @@
 | [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | low | high |
 | [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | low | high |
 
-#### Logistic regression (LR) vs Decision Trees (DT)
-
-
-Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree](https://dzone.com/articles/logistic-regression-vs-decision-tree))
+* Logistic regression (LR) vs Decision Trees (DT): Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree](https://dzone.com/articles/logistic-regression-vs-decision-tree))
 
 |  |  Logistic Regression |  Decision Tree | 
 | --- | --- | --- | 
