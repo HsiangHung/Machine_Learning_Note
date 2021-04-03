@@ -180,13 +180,24 @@ where `c` denotes class labels. `p` is the probability of target having class = 
 
 The cross-entropy can be used as loss to optimize using gradient descent in classification.
 
-### a. binary 
+### A. binary 
 
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, i.e. `p = [1 0]` for y = 1; `p = [0 1]` for y = 0, and prediction `q` is a sigmoid function, it arrives at the commonly-seen cross-entropy 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\big]" title="L(\theta, \bold{x}) = - \big[ y \log \Big(\frac{1}{1+e^{-\theta^T \bold{x}}} \Big) + (1-y) \log \Big(1- \frac{1}{1+e^{-\theta^T \bold{x}}} \Big) \big]" /></a>
 
-### b. multiclass
+Note that the loss function of logistic regression model is convex. The followings are some detailed discussion:
+
+* [Why is the error function minimized in logistic regression convex?](http://mathgotchas.blogspot.com/2011/10/why-is-error-function-minimized-in.html#:~:text=is%20essentially%20a%20linear%2Dcombination,of%20logistic%20regression%20is%20convex.)
+
+* [Logistic regression - Prove That the Cost Function Is Convex](https://math.stackexchange.com/questions/1582452/logistic-regression-prove-that-the-cost-function-is-convex?newreg=f747e67287724e7eb4ea0fa8deab128c)
+
+* [Quora: Is logistic regression cost function convex?](https://www.quora.com/Is-logistic-regression-cost-function-convex)
+
+In short, we can roighly argue that the second derivatives of the loss are positive semi-definite, and the linear-combination of two or more convex functions (`log(h)` and `log(1-h)`) is also convex.
+
+
+### B. multiclass
 
 For multiclass, `c = {1, ...K}`, `p = [1 0 ... 0]` for y = K,... `p = [0 0 ... 1]` for y = 1..., we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
 
