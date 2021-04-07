@@ -19,7 +19,7 @@ Assume we have data like below (N=3):
 
 
 
-### A. One vs. All (One-vs-Rest)
+### 1 One vs. All (One-vs-Rest)
 
 For the N-class instances dataset, we have to generate the N-binary classifier models (credit from [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]).
 
@@ -34,7 +34,7 @@ As an example on Green-blue-red calss, if we have a test case with a probability
 
 The biggest issue with one-vs-all classification is **Class Imbalance**. Consider we have 5 classes, and even number of samples of each class i.e. each class makes up 20% of the data. When you do a one-vs-all classification, you convert the problem into 5 binary classification problems, and in each of the 5 cases you end up with a 20-80 distribution. See the [Quora post: What are the issues with one vs all classification approach?](https://www.quora.com/What-are-the-issues-with-one-vs-all-classification-approach).
 
-### B. One vs. One (OvO)
+### 2 One vs. One (OvO)
 
 In One-vs-One classification, for the N-class instances dataset, we have to generate the `N(N-1)/2` binary classifier models. 
 
@@ -46,14 +46,16 @@ Taking the above example, we divide this problem into N* (N-1)/2 = 3 binary clas
 Each binary classifier predicts one class label. When we input the test data to the classifier, then the model with the **majority counts** is concluded as a result.
 
 
-### C. A Multi-class classifier 
+### 3 A Single Multi-Class Classifier 
+
+The [comparison](https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier) between multiple classifiers is:
 
 | One-vs-All classifiers |  Multi-class classifiers |  
 | --- | --- | 
 | usually faster to converge | usually slower than binary classifiers | 
 | hard to deal with when many classes | great when many classes | 
 | class imbalances that introduce bias |  For high-dimensional problems it is pretty slow | 
-| SVMs, ensemble methods, Tree-based | neural networks, Tree-based|
+| SVMs, ensemble methods, Tree-based | neural networks ([softmax](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Softmax%20Regression)), Tree-based, Naive Bayes|
 
 
 
