@@ -10,24 +10,21 @@ The summary [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One
 | 2 x 2 Confusion Matrix | N x N Confusion matrix  | 
 
 
+Assume we have data like below:
 
-
-
-
-The Confusion matrix is easy to derive but complex to understand.
-Example:- Check whether the fruit is apple, banana, or orange.
+![](images/data-example.png)
 
 
 ## One vs. All (One-vs-Rest)
 
-For the N-class instances dataset, we have to generate the N-binary classifier models.
+For the N-class instances dataset, we have to generate the N-binary classifier models (credit from [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]).
 
 ![](images/one-vs-all.png)
 
 
 ![](images/one-vs-all-pipeline.png)
 
-By analyzing the probability scores, we predict the result as the class index having a maximum probability score.
+By analyzing the probability scores, we predict the result as the class index having a maximum probability score [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One].
 
 
 ## Multi-class Classification Metric
