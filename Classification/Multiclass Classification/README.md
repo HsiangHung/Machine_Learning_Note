@@ -57,6 +57,7 @@ The [comparison](https://stats.stackexchange.com/questions/318520/many-binary-cl
 | class imbalances that introduce bias |  For high-dimensional problems it is pretty slow | 
 | SVMs, ensemble methods, Tree-based | neural networks ([softmax](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Softmax%20Regression)), Tree-based, Naive Bayes|
 
+The decision boundaries between multiple binary classifier models and a multinomial classifier which learns directly all the classes: 
 
 ![](images/multiclass-classifier.png)
 
