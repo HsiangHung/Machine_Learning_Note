@@ -25,7 +25,9 @@ For the N-class instances dataset, we have to generate the N-binary classifier m
 ![](images/one-vs-all.png)
 
 
+![](images/one-vs-all-pipeline.png)
 
+By analyzing the probability scores, we predict the result as the class index having a maximum probability score.
 
 
 ## Multi-class Classification Metric
