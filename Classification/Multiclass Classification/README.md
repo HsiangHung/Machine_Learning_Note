@@ -28,6 +28,8 @@ By analyzing the probability scores, we predict the result as the class index ha
 
 As an example on Green-blue-red calss, if we have a test case with a probability score of (0.9) from the Green class classifier, probability score of (0.4) from the Blue classifier, but a negative classification score from the remaining Red classifier. Based on the probability scores, we predict the test input belongs to the Green class.
 
+The biggest issue with one-vs-all classification is **Class Imbalance**. Consider we have 5 classes, and even number of samples of each class i.e. each class makes up 20% of the data. When you do a one-vs-all classification, you convert the problem into 5 binary classification problems, and in each of the 5 cases you end up with a 20-80 distribution. See the [Quora post: What are the issues with one vs all classification approach?](https://www.quora.com/What-are-the-issues-with-one-vs-all-classification-approach).
+
 ## One vs. One (OvO)
 
 In One-vs-One classification, for the N-class instances dataset, we have to generate the `N(N-1)/2` binary classifier models. 
@@ -101,4 +103,5 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 
 [A Tale of Two Macro-F1's]: https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04
 [[Boaz Shmueli-3] A Tale of Two Macro-F1's](https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04)
+
 
