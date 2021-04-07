@@ -10,12 +10,16 @@ The summary [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One
 | `2 x 2` Confusion Matrix | `N x N` Confusion matrix  | 
 
 
+## Classification Models
+
 Assume we have data like below (N=3):
 
 ![](images/data-example.png)
 
 
-## One vs. All (One-vs-Rest)
+
+
+### A. One vs. All (One-vs-Rest)
 
 For the N-class instances dataset, we have to generate the N-binary classifier models (credit from [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]).
 
@@ -30,7 +34,7 @@ As an example on Green-blue-red calss, if we have a test case with a probability
 
 The biggest issue with one-vs-all classification is **Class Imbalance**. Consider we have 5 classes, and even number of samples of each class i.e. each class makes up 20% of the data. When you do a one-vs-all classification, you convert the problem into 5 binary classification problems, and in each of the 5 cases you end up with a 20-80 distribution. See the [Quora post: What are the issues with one vs all classification approach?](https://www.quora.com/What-are-the-issues-with-one-vs-all-classification-approach).
 
-## One vs. One (OvO)
+### B. One vs. One (OvO)
 
 In One-vs-One classification, for the N-class instances dataset, we have to generate the `N(N-1)/2` binary classifier models. 
 
@@ -40,6 +44,19 @@ Taking the above example, we divide this problem into N* (N-1)/2 = 3 binary clas
 * Classifier 3: Blue vs. Red
 
 Each binary classifier predicts one class label. When we input the test data to the classifier, then the model with the **majority counts** is concluded as a result.
+
+
+### C. A Multi-class classifier 
+
+| One-vs-All classifiers |  Multi-class classifiers |  
+| --- | --- | 
+| usually faster to converge | usually slower than binary classifiers | 
+| hard to deal with when many classes | great when many classes | 
+| class imbalances that introduce bias |   | 
+| SVMs, ensemble methods, Tree-based | neural networks, Tree-based|
+
+
+
 
 ## Multi-class Classification Metric
 
