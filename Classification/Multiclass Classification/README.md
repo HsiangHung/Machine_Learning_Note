@@ -1,20 +1,18 @@
 
 # Multiclass Classification 
 
+The summary [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]
+
 | Binary Classification |  Multi-class Classification |  
 | --- | --- | 
 | two class | Multiple class | 
-| one classifier | One vs. All and One vs. One | 
-| Confusion Matrix is easy to derive and understand |The Confusion matrix is easy to derive but complex to understand | 
+| one classifier | One vs. All: N classifier; One vs. One: N(N-1)/2 classifier | 
+| 2 x 2 Confusion Matrix | N x N Confusion matrix  | 
 
 
 
 
 
-[[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]
-
-* One vs. All: N-class instances then N binary classifier models
-* One vs. One: N-class instances then N* (N-1)/2 binary classifier models
 
 The Confusion matrix is easy to derive but complex to understand.
 Example:- Check whether the fruit is apple, banana, or orange.
@@ -25,18 +23,6 @@ Example:- Check whether the fruit is apple, banana, or orange.
 For the N-class instances dataset, we have to generate the N-binary classifier models.
 
 ![](images/one-vs-all.png)
-
-
-
-## Binary Classification Models
-
-
-| model |  bias |  variance | 
-| --- | --- | --- | 
-| [Naive bayes](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Naive%20Bayes)  | high | low | 
-| Logistic regression| high | low|
-| [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | low | high |
-| [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | low | high |
 
 
 
