@@ -58,6 +58,7 @@ The [comparison](https://stats.stackexchange.com/questions/318520/many-binary-cl
 | SVMs, ensemble methods, Tree-based | neural networks ([softmax](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Softmax%20Regression)), Tree-based, Naive Bayes|
 
 
+![](images/multiclass-classifier.png)
 
 
 ## Multi-class Classification Metric
