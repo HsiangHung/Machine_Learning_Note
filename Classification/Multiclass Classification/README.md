@@ -126,3 +126,6 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 [[Boaz Shmueli-3] A Tale of Two Macro-F1's](https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04)
 
 
+[Many binary classifiers vs. single multiclass classifier]: https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier
+[[Cross Validated: Many binary classifiers vs. single multiclass classifier] Many binary classifiers vs. single multiclass classifier](https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier)
+
