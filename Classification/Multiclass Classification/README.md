@@ -6,8 +6,8 @@ The summary [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One
 | Binary Classification |  Multi-class Classification |  
 | --- | --- | 
 | two class | Multiple class | 
-| one classifier | One vs. All: N classifier; One vs. One: N(N-1)/2 classifier | 
-| 2 x 2 Confusion Matrix | N x N Confusion matrix  | 
+| one classifier | One vs. All: `N` classifier; One vs. One: `N(N-1)/2` classifier | 
+| `2 x 2` Confusion Matrix | `N x N` Confusion matrix  | 
 
 
 Assume we have data like below (N=3):
@@ -28,6 +28,16 @@ By analyzing the probability scores, we predict the result as the class index ha
 
 As an example on Green-blue-red calss, if we have a test case with a probability score of (0.9) from the Green class classifier, probability score of (0.4) from the Blue classifier, but a negative classification score from the remaining Red classifier. Based on the probability scores, we predict the test input belongs to the Green class.
 
+## One vs. One (OvO)
+
+In One-vs-One classification, for the N-class instances dataset, we have to generate the `N(N-1)/2` binary classifier models. 
+
+Taking the above example, we divide this problem into N* (N-1)/2 = 3 binary classifier problems:
+* Classifier 1: Green vs. Blue
+* Classifier 2: Green vs. Red
+* Classifier 3: Blue vs. Red
+
+Each binary classifier predicts one class label. When we input the test data to the classifier, then the model with the **majority counts** is concluded as a result.
 
 ## Multi-class Classification Metric
 
