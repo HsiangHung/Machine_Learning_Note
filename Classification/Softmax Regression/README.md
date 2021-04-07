@@ -36,6 +36,7 @@ The cost function is
 
 where `I = 1` for y = j; otherwise `I=0`. 
 
+The high-level workflow of logisitc and softmax regressions are summarized below (credit from [[KDNuggets]][What is Softmax Regression and How is it Related to Logistic Regression?])
 
 ![](workflow.png)
 
