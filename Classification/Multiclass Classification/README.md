@@ -10,7 +10,7 @@ The summary [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One
 | 2 x 2 Confusion Matrix | N x N Confusion matrix  | 
 
 
-Assume we have data like below:
+Assume we have data like below (N=3):
 
 ![](images/data-example.png)
 
@@ -24,7 +24,9 @@ For the N-class instances dataset, we have to generate the N-binary classifier m
 
 ![](images/one-vs-all-pipeline.png)
 
-By analyzing the probability scores, we predict the result as the class index having a maximum probability score [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One].
+By analyzing the probability scores, we predict the result as the class index having a **maximum** probability score [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]. 
+
+As an example on Green-blue-red calss, if we have a test case with a probability score of (0.9) from the Green class classifier, probability score of (0.4) from the Blue classifier, but a negative classification score from the remaining Red classifier. Based on the probability scores, we predict the test input belongs to the Green class.
 
 
 ## Multi-class Classification Metric
