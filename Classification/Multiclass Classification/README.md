@@ -52,7 +52,7 @@ Each binary classifier predicts one class label. When we input the test data to 
 | --- | --- | 
 | usually faster to converge | usually slower than binary classifiers | 
 | hard to deal with when many classes | great when many classes | 
-| class imbalances that introduce bias |   | 
+| class imbalances that introduce bias |  For high-dimensional problems it is pretty slow | 
 | SVMs, ensemble methods, Tree-based | neural networks, Tree-based|
 
 
