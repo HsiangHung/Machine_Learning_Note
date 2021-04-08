@@ -106,6 +106,8 @@ Multicollinearity causes the following two basic types of problems:
 2. Multicollinearity reduces the precision of the estimate coefficients, which weakens the statistical power of your regression model. You might not be able to trust the p-values to identify independent variables that are statistically significant.
 
 
+Severe multicollinearity is a major problem, because it increases the variance of the regression coefficients, making them unstable. The more variance they have, the **more difficult it is to interpret the coefficients**.
+
 ### How to test Multicollinearity?
 
 1. Correlation matrix / Correlation plot
@@ -123,7 +125,9 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"
 
 ### How to deal with Multicollinearity
 
-By [[Sushmitha Pulagam]][How to detect and deal with Multicollinearity], to fix Multicollinearity we can combine variables. 
+* **Remove highly correlated predictors from the model**: If you have two or more factors with a high VIF, remove one from the model. Consider using stepwise regression, best subsets regression, or specialized knowledge of the data set to remove these variables. Select the model that has the highest R-squared value [[Minitab Blog]][Enough Is Enough! Handling Multicollinearity in Regression Analysis]. 
+
+* **combine variables**: Use Partial Least Squares Regression (PLS) or **Principal Components Analysis**, regression methods that cut the number of predictors to a smaller set of uncorrelated components [[Minitab Blog]][Enough Is Enough! Handling Multicollinearity in Regression Analysis], [[Sushmitha Pulagam]][How to detect and deal with Multicollinearity].
 
 By [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, Detection, and Solutions]:
 
@@ -157,6 +161,10 @@ By [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, Detection, 
 
 [Multicollinearity in Regression Analysis: Problems, Detection, and Solutions]: https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/
 [[Jim Frost] Multicollinearity in Regression Analysis: Problems, Detection, and Solutions](https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/)
+
+
+[Enough Is Enough! Handling Multicollinearity in Regression Analysis]: https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis
+[[Minitab Blog] Enough Is Enough! Handling Multicollinearity in Regression Analysis](https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis)
 
 
 [10.7 - Detecting Multicollinearity Using Variance Inflation Factors]: https://online.stat.psu.edu/stat462/node/180/
