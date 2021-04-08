@@ -62,6 +62,11 @@ The decision boundaries between multiple binary classifier models and a multinom
 ![](images/multiclass-classifier.png)
 
 
+The softmax function creates a probability distribution over K classes, and produces an output vector of length K. Each element of the vector is the probability that the input belongs to the corresponding class. The most likely class is chosen by selecting the index of that vector having the highest probability [[Algorithmia]][Multiclass classification in machine learning].
+
+In the Naive Bayes classifier, we use Bayes’ Theorem to break down the joint probability of membership in a class into a series of conditional probabilities [[Algorithmia]][Multiclass classification in machine learning]. 
+
+
 ## Multi-class Classification Metric
 
 
@@ -109,6 +114,10 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 
 
 ## Reference
+
+
+[Multiclass classification in machine learning]: https://algorithmia.com/blog/multiclass-classification-in-machine-learning
+[[Algorithmia] Multiclass classification in machine learning](https://algorithmia.com/blog/multiclass-classification-in-machine-learning)
 
 
 [Multi-class Classification — One-vs-All & One-vs-One]: https://towardsdatascience.com/multi-class-classification-one-vs-all-one-vs-one-94daed32a87b
