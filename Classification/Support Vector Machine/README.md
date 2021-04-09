@@ -34,6 +34,7 @@ Maximize the margin width is equivalent to minimize <a href="https://www.codecog
 
 SVM is used as a linear or non-linear classifier based on the kernel used. If we use a linear kernel, then the classifier and hence the prediction boundary are linear. SVMs learn from the support vectors, unlike other machine learning models that learn from the correct and incorrect data. For example, suppose we have two classes – apples and oranges. In that case, SVM learns those examples which are rightmost in apples (an apple resembling an orange) and leftmost in oranges (an orange resembling an apple); that is, they look at the extreme cases. Therefore, they perform better most of the time.
 
+Kernel SVM is particularly useful when the data is not linearly separable. Therefore, we take our non – linearly separable dataset, map it to a higher dimension, get a linearly separable dataset, invoke SVM classifier, build a decision boundary for the data [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models].
 
 ## Cost Function
 
