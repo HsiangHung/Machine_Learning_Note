@@ -28,9 +28,11 @@ The margin width is given
 
 Maximize the margin width is equivalent to minimize <a href="https://www.codecogs.com/eqnedit.php?latex=||\vec{w}||" target="_blank"><img src="https://latex.codecogs.com/gif.latex?||\vec{w}||" title="||\vec{w}||" /></a>.
 
-## SVM
+## SVM Classifier
 
-SVM is used as a linear or non-linear classifier based on the kernel used. If we use a linear kernel, then the classifier and hence the prediction boundary are linear. **Best explanation I heard so far** [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models]: SVMs learn from the support vectors, unlike other machine learning models that learn from the correct and incorrect data. For example, suppose we have two classes – apples and oranges. In that case, SVM learns those examples which are rightmost in apples (an apple resembling an orange) and leftmost in oranges (an orange resembling an apple); that is, they look at the extreme cases. Therefore, they perform better most of the time.
+**The following is the best description for SVM I heard** so far from [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models]:
+
+SVM is used as a linear or non-linear classifier based on the kernel used. If we use a linear kernel, then the classifier and hence the prediction boundary are linear. SVMs learn from the support vectors, unlike other machine learning models that learn from the correct and incorrect data. For example, suppose we have two classes – apples and oranges. In that case, SVM learns those examples which are rightmost in apples (an apple resembling an orange) and leftmost in oranges (an orange resembling an apple); that is, they look at the extreme cases. Therefore, they perform better most of the time.
 
 
 ## Cost Function
@@ -57,7 +59,7 @@ The non-linear boundary problem can be solved if we introduce a kernel [[Priyank
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \bold{f}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \bold{f}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
 
-where `f` is **Kernel Function**. In Andrew's Ng's Machine learning class, they are described as similarity function: `f1 = Similarity(x, l_1)`, `f2 = Similarity(x, l2)` and so on, where `l` are landmarks. He used **Gaussian Kernel** to describe proximity. In Scikit-learn SVM package, Gaussian Kernel is mapped to ‘rbf’ , Radial Basis Function Kernel, the only
+where `f` is **Kernel Function**. In Andrew's Ng's Machine learning class, they are described as similarity function: `f1 = Similarity(x, l_1)`, `f2 = Similarity(x, l2)` and so on, where `l` are landmarks. He used **Gaussian Kernel** to describe proximity. In Scikit-learn SVM package, Gaussian Kernel is mapped to ‘rbf’ , **Radial Basis Function** Kernel, the only
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f_j&space;=&space;\textrm{similarity}(x,&space;l^{(j)})&space;=&space;\exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2}&space;\Big)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_j&space;=&space;\textrm{similarity}(x,&space;l^{(j)})&space;=&space;\exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2}&space;\Big)}" title="f_j = \textrm{similarity}(x, l^{(j)}) = \exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2} \Big)}" /></a>
 
@@ -65,6 +67,7 @@ where `f` is **Kernel Function**. In Andrew's Ng's Machine learning class, they 
 We can map model as each data point represents a landmark. In this case, we turn `n` features to `m` features.
 Since it turns to the data size as number of features, SVM is probably not suitable for large size data.
 
+We also have **Sigmoid Kernel**, **Polynomial Kernel**.
 
 
 ## SVM vs Logistic Regression
