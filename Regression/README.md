@@ -88,7 +88,7 @@ Given a model `θ`, the likelihood of having a data point `(xi, yi)` is a normal
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;\propto&space;e^{-(y_i-\hat{y}_i)^2/2\sigma^2}&space;=&space;e^{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2/2\sigma^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;\propto&space;e^{-(y_i-\hat{y}_i)^2/2\sigma^2}&space;=&space;e^{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2/2\sigma^2}" title="P(\bold{x}_i, y_i|\theta) \propto e^{-(y_i-\hat{y}_i)^2/2\sigma^2} = e^{-(y_i-\bold{\theta}^T \bold{x}_i)^2/2\sigma^2}" /></a>
 
-Thus the total likelihood of having the entire dataset `D` is
+Thus the total likelihood of having the entire dataset `D={(x1, y1), (x2, y2),..}` is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\bold{\theta})&space;=&space;P(\bold{D}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\bold{\theta})&space;=&space;P(\bold{D}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="L(\bold{\theta}) = P(\bold{D}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
 
