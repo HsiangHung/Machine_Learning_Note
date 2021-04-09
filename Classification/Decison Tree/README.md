@@ -18,7 +18,9 @@ In Prof. Nando de Freitas [UBC Machine Learning class](https://www.youtube.com/w
 
 ![decision_tree](images/layer_probability.png)
 
-Note even on the leaves, there exists data noise so we still see various class distribution.
+**NOTE**: 
+1. This picture explicitly describes tree-based algorithm is available multi-class classification.
+2. Even on the leaves, there exists data noise so we still see various class distribution.
 
 
 ## How to Select Feature for Split?
