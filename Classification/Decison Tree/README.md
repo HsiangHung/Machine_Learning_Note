@@ -19,7 +19,7 @@ In Prof. Nando de Freitas [UBC Machine Learning class](https://www.youtube.com/w
 ![decision_tree](images/layer_probability.png)
 
 **NOTE**: 
-1. This picture explicitly describes tree-based algorithm is available multi-class classification.
+1. The above picture explicitly describes that tree-based algorithm is available **multi-class classification**.
 2. Even on the leaves, there exists data noise so we still see various class distribution.
 
 
