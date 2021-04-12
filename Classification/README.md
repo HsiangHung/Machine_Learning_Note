@@ -3,7 +3,7 @@
 
 ## Binary Classification Models
 
-
+The summary of Advantages and Disadvantages of different Classification Models [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models]:
 
 | model | linear? | bias |  variance | pro | con |
 | --- | --- | --- | --- | --- | --- | 
@@ -207,6 +207,10 @@ where `I = 1` for y = j; otherwise `I=0`.
 
 [When is precision more important over recall?]: https://datascience.stackexchange.com/questions/30881/when-is-precision-more-important-over-recall
 [[Data Science: When is precision more important over recall?] When is precision more important over recall?](https://datascience.stackexchange.com/questions/30881/when-is-precision-more-important-over-recall)
+
+
+[Advantages and Disadvantages of different Classification Models]: https://www.geeksforgeeks.org/advantages-and-disadvantages-of-different-classification-models/
+[[GeeksForGeeks] Advantages and Disadvantages of different Classification Models](https://www.geeksforgeeks.org/advantages-and-disadvantages-of-different-classification-models/)
 
 
 [Softmax Regression]: http://deeplearning.stanford.edu/tutorial/supervised/SoftmaxRegression/support-vector-machines-in-machine-learning
