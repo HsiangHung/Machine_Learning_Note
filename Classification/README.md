@@ -4,13 +4,14 @@
 ## Binary Classification Models
 
 
-| model | linear? | bias |  variance | 
-| --- | --- | --- | --- | 
-| [Naive bayes](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Naive%20Bayes) | | high | low | 
-| Logistic regression | linear| high | low|
-| [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | nonlinear | low | high |
-| [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | nonlinear | low | high |
-| kNN | nonlinear | low | high |
+
+| model | linear? | bias |  variance | pro | con |
+| --- | --- | --- | --- | --- | --- | 
+| Logistic regression | linear| high | low | probabilistic approach | assume linear decision boundary | 
+| [Naive bayes](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Naive%20Bayes) | nonlinear | high | low | probabilistic approach, efficient, not biased by outliers, also works for nonlinear problems | assume no interaction between features|
+| [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | nonlinear | low | high | | |
+| [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | by kernel | low | high | not biased by outliers, not sensitive to overfitting | Not the best choice for large number of features and size  |
+| kNN | nonlinear | low | high | |  |
 
 
 #### A. Logistic regression (LR) vs Decision Trees (DT)
