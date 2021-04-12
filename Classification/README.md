@@ -9,9 +9,10 @@ The summary of Advantages and Disadvantages of different Classification Models [
 | --- | --- | --- | --- | --- | --- | 
 | Logistic regression | linear| high | low | probabilistic approach | assume linear decision boundary | 
 | [Naive bayes](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Naive%20Bayes) | nonlinear | high | low | probabilistic approach, efficient, not biased by outliers, also works for nonlinear problems | assume no interaction between features|
-| [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | nonlinear | low | high | | |
-| [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | by kernel | low | high | not biased by outliers, not sensitive to overfitting | Not the best choice for large number of features and size  |
-| kNN | nonlinear | low | high | |  |
+| [Tree](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree) | nonlinear | low | high | Interpretability, no need for feature scaling. | Poor results on very small datasets, overfitting can easily occur. |
+| [SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine) | by kernel | low | high | not biased by outliers, not sensitive to overfitting | Not good choice for large number of features and size  |
+| kNN | nonlinear | low | high | Simple to understand, fast and efficient. | tune the number of neighbours ‘k’ |
+| Emsemble | nonlinear | low | high | Powerful and accurate, good performance. |  No interpretability, overfitting can easily occur, need hyperparameter tuning|
 
 
 #### A. Logistic regression (LR) vs Decision Trees (DT)
