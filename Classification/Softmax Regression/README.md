@@ -40,7 +40,6 @@ The high-level workflow of logisitc and softmax regressions are summarized below
 
 ![](workflow.png)
 
-
 ## Reference
 
 
