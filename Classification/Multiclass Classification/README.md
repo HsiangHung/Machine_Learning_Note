@@ -84,6 +84,15 @@ and micro-averged Precision defines as
 
 
 [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score] show an example for three classes. The confusion matrix is 
+
+
+|  |  True cat |  True fish | True han |
+| --- | --- | --- | --- |
+| pred cat | 4 | 6 | 3 | 
+| pred fish | 1 | 2 | 0 | 
+| pred han | 1 | 2 | 6 | 
+
+
 ```
               --  True  --
           | cat | fish | han |
