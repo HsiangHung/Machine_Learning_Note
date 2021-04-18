@@ -62,9 +62,13 @@ The decision boundaries between multiple binary classifier models and a multinom
 ![](images/multiclass-classifier.png)
 
 
-The softmax function creates a probability distribution over K classes, and produces an output vector of length K. Each element of the vector is the probability that the input belongs to the corresponding class. The most likely class is chosen by selecting the index of that vector having the highest probability [[Algorithmia]][Multiclass classification in machine learning].
+The softmax function creates a probability distribution over K classes, and produces an output vector of length K. Each element of the vector is the probability that the input belongs to the corresponding class (see [here](https://stats.stackexchange.com/questions/108236/softmax-regression-or-k-binary-logistic-regression)). The most likely class is chosen by selecting the index of that vector having the highest probability [[Algorithmia]][Multiclass classification in machine learning].
 
-In the Naive Bayes classifier, we use Bayes’ Theorem to break down the joint probability of membership in a class into a series of conditional probabilities [[Algorithmia]][Multiclass classification in machine learning]. 
+
+In the Naive Bayes classifier, we use Bayes’ theorem to break down the joint probability of membership in a class into a series of conditional probabilities [[Algorithmia]][Multiclass classification in machine learning]. 
+
+
+SVMs are inherently two-class classifiers. In the multiclass SVM, if it is built as one-versus-rest classifiers, choose the class which classifies the test datum with greatest margin. If built as one-vs-one classifiers, still choose the class that is selected by the most classifiers [[Stanford NLP]][Multiclass SVMs].
 
 
 ## Multi-class Classification Metric
@@ -148,4 +152,8 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 
 [Many binary classifiers vs. single multiclass classifier]: https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier
 [[Cross Validated: Many binary classifiers vs. single multiclass classifier] Many binary classifiers vs. single multiclass classifier](https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier)
+
+
+[Multiclass SVMs]: https://nlp.stanford.edu/IR-book/html/htmledition/multiclass-svms-1.html
+[[Stanford NLP] Multiclass SVMs](https://nlp.stanford.edu/IR-book/html/htmledition/multiclass-svms-1.htmlr)
 
