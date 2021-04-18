@@ -102,6 +102,13 @@ For each class, we can have precision, recall and F1 score like
 | han | 0.667 | 0.667 | 0.667 | 
 
 
+|  |  precision |  recall | F1 score |
+| --- | --- | --- | --- |
+| Macro | 0.547 | 0.511 | 0.465 | 
+| Micro | 0.48 | 0.48 |  | 
+
+
+
 
 Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465, Macro-precision = (0.31 + 0.67 + 0.67) / 3 = 0.547, Macro-recall = (0.67 + 0.20 + 0.67) / 3 = 0.511.
 
