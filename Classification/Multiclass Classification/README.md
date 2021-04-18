@@ -108,9 +108,9 @@ For each class, we can have precision, recall and F1 score like
 | Micro | 0.48 | 0.48 |  | 
 
 
-
-
-Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465, Macro-precision = (0.31 + 0.67 + 0.67) / 3 = 0.547, Macro-recall = (0.67 + 0.20 + 0.67) / 3 = 0.511.
+* Macro-precision = (0.31 + 0.67 + 0.67) / 3 = 0.547.
+* Macro-recall = (0.67 + 0.20 + 0.67) / 3 = 0.511.
+* Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465.
 
 
 There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-average precision is 12/(12+13)= 0.48. In the example, we can see total FN = FP. Therefore micro-averaged recall is the same as micro-averaged precision [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score]. 
