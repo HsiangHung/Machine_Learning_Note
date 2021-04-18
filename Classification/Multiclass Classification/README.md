@@ -82,9 +82,9 @@ and micro-averged Precision defines as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Micro-P}&space;=&space;\frac{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K}{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K&space;&plus;&space;\textrm{FP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{FP}_K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Micro-P}&space;=&space;\frac{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K}{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K&space;&plus;&space;\textrm{FP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{FP}_K}" title="\textrm{Micro-P} = \frac{\textrm{TP}_1 +\cdots + \textrm{TP}_K}{\textrm{TP}_1 +\cdots + \textrm{TP}_K + \textrm{FP}_1 +\cdots + \textrm{FP}_K}" /></a>
 
+#### Example
 
-[[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score] show an example for three classes. The confusion matrix is 
-
+[[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score] show an example for three classes. The 3 x 3 confusion matrix is 
 
 |  |  True cat |  True fish | True han |
 | --- | --- | --- | --- |
@@ -93,20 +93,15 @@ and micro-averged Precision defines as
 | pred han | 1 | 2 | 6 | 
 
 
-```
-              --  True  --
-          | cat | fish | han |
-pred cat  |  4  |   6  |  3  |
-pred fish |  1  |   2  |  0  |
-pred han  |  1  |   2  |  6  |
-```
 For each class, we can have precision, recall and F1 score like
-```
-     precision | recall | F1 score
-cat    0.308   |  0.667 |  0.421
-fish   0.667   |  0.20  |  0.308
-han    0.667   |  0.667 |  0.667
-```
+
+|  |  precision |  recall | F1 score |
+| --- | --- | --- | --- |
+| cat | 0.308 | 0.667 | 0.421 | 
+| fish | 0.667 | 0.20 | 0.308 | 
+| han | 0.667 | 0.667 | 0.667 | 
+
+
 
 Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465, Macro-precision = (0.31 + 0.67 + 0.67) / 3 = 0.547, Macro-recall = (0.67 + 0.20 + 0.67) / 3 = 0.511.
 
