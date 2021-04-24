@@ -1,9 +1,16 @@
 
 # Gradient Descent 
 
+Parameters in gradient descent are updated as 
+
 ```
 parameter = parameter - learning_rate * gradient
 ```
+
+The content:
+
+1. [Batch, Stochastic, Mini-Batch](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#batch-stochastic-mini-batch)
+
 
 ## Batch, Stochastic, Mini-Batch 
 
