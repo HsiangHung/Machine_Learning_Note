@@ -1,7 +1,8 @@
 # Deep Learning
 
 Contents:
-* [Hyperparameter in DL]()
+
+* [Hyperparameter in DL](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#hyperparameter-in-dl)
 * [Bias/Variance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#biasvariance)
 * [Activation Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#activation-function)
 * [Dropout Regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#dropout-regularization)
