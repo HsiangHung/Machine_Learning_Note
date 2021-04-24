@@ -9,7 +9,11 @@ parameter = parameter - learning_rate * gradient
 
 The content:
 
-1. [Batch, Stochastic, Mini-Batch](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#batch-stochastic-mini-batch)
+* [Batch, Stochastic, Mini-Batch](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#batch-stochastic-mini-batch)
+
+* [The Termination Condition For Gradient Descent?]()
+
+* [Variants of Gradient Descent]()
 
 
 ## Batch, Stochastic, Mini-Batch 
@@ -91,7 +95,7 @@ The solutions include using **Relu activation**, **random initialization on para
 see [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#solution-to-vanishing-gradients).
 
 
-## Other Variants of Gradient Descent
+## Variants of Gradient Descent
 
 There are many variants of SGD. We will briefly introduce them in the following discussion and explain with the same notation in [[Sebastian Ruder]][An overview of gradient descent optimization algorithms] and [[Jaime Durán]][Everything You Need to Know about Gradient Descent Applied to Neural Networks]. [[Sushant Patrikar]][Batch, Mini Batch & Stochastic Gradient Descent], [[Priyankur Sarkar]][What is Gradient Descent For Machine Learning] also provide good introduction.
 
