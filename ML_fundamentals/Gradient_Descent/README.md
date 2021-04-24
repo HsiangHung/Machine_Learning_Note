@@ -7,7 +7,7 @@ Parameters in gradient descent are updated as
 parameter = parameter - learning_rate * gradient
 ```
 
-The content:
+Contents:
 
 * [Batch, Stochastic, Mini-Batch](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#batch-stochastic-mini-batch)
 * [The Termination Condition For Gradient Descent?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#the-termination-condition-for-gradient-descent)
@@ -78,6 +78,10 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 
 1. Shuffle the training set before each epoch (or iteration in the "standard" variant)
 2. Use an adaptive learning rate to "anneal" closer to the global minimum
+
+
+However, stochastic gradient descent is more able to avoid local minimum because the landscape of batch loss function is different than the loss function of whole dataset. See the post: [How to get out of local minimums on stochastic gradient descent?](https://datascience.stackexchange.com/questions/44324/how-to-get-out-of-local-minimums-on-stochastic-gradient-descent)
+
 
 
 ## Vanishing Gradient in Neural Networks
