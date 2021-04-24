@@ -1,6 +1,15 @@
 # Deep Learning
 
-## Hyperparameter
+Contents:
+* [Hyperparameter in DL]()
+* [Bias/Variance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#biasvariance)
+* [Activation Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#activation-function)
+* [Dropout Regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#dropout-regularization)
+* [Vanishing/Exploding Gradients](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#vanishingexploding-gradients)
+* [Batch Normalization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#batch-normalization)
+* [Data Augmentation](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#data-augmentation)
+
+## Hyperparameter in DL
 
 Learning rate, number of iteration, number of hidden layers, number of hidden layer units, choice of activation functions, momentum, mini-batch size, regularization.
 
