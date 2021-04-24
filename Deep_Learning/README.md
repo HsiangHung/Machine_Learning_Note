@@ -1,5 +1,7 @@
 # Deep Learning
 
+A nice tutorial with math description about deep learning: [[UFLDL Tutorial]][Multi-Layer Neural Network]
+
 Contents:
 
 * [Hyperparameter in DL](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#hyperparameter-in-dl)
@@ -202,3 +204,7 @@ A convolutional neural network (CNN) that can robustly classify objects even if 
 
 [Batch Normalization In Neural Networks Explained (Algorithm Breakdown)]: https://towardsdatascience.com/batch-normalization-explained-algorithm-breakdown-23d2794511c
 [[Richmond Alake] Batch Normalization In Neural Networks Explained (Algorithm Breakdown)](https://towardsdatascience.com/batch-normalization-explained-algorithm-breakdown-23d2794511c)
+
+
+[Multi-Layer Neural Network]: http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/
+[[UFLDL Tutorial] Multi-Layer Neural Network](http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/)
