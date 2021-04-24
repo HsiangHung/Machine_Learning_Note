@@ -23,24 +23,24 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=\epsilon^2" target="_b
 
 ![activation](images/activation.png)
 
-### Linear activation
+### A. Linear activation
 
 For classificastion, output layer uses sigmoid activation; for regression, uses linear activation.
 
 However, if **only** using linear activation in hidden layers, the neural network is equivalent to logisitc regression. Therefore it is critical for deep learning using non-linear activation functions.
 
 
-### ReLu and Leaky ReLu
+### B. ReLu and Leaky ReLu
 
 Due to this leak, the problem of dead neurons is avoided. Further, a research has found that Leaky ReLU activation functions outperformed the ReLU activation function. Further, Leaky ReLU activation functions with a higher value of leak perform better than those with lower value of leak [[Saurabh Singh]][Leaky ReLU as an Activation Function in Neural Networks].
 
-#### Pros
+#### Pros to use ReLu and Leaky ReLu
 * Performs better as compared to traditionally used activation functions such as Sigmoid and Hyperbolic-Tangent functions and even ReLU.
 * It is fast and easy to calculate. The same applies to it’s derivative which is calculated during the backpropagation.
 * It does not saturate for positive values of input and hence does not run into problems related to exploding/vanishing gradients during Gradient Descent.
 * Does not suffer from dying ReLU problem.
 
-#### Cons
+#### Cons to use ReLu and Leaky ReLu
 * Though the function is continuous at all points, it is not differentiable at the point x=0, i.e, at the point x=0, the slope of the graph changes abruptly as can be seen in the graph. Due to this, during the gradient descent its value will ‘bounce around’. Despite this fact, Leaky ReLU works very well in practice.
 * Unlike the Parameterised ReLU or PReLU, the value of α is defined prior to the training and hence cannot be adjusted during the training time. The value of α hence chosen might not be the most optimal value.
 
@@ -144,7 +144,7 @@ BN also has other advantages like: enabling the utilization of larger learning r
 The mini-batch gradient descent can also implement BN. However, if the neural networks are trained by mini-batch and we perform prediction on test dataset, we need to determine `μ` and `σ` from training data, and then rescale the test data. We can simply compute the average `μ` from all mini-batch, or using exponentially weight average (mentioned in Andre Ng's class).
 
 
-## Data augmentation
+## Data Augmentation
 
 From [wiki](https://en.wikipedia.org/wiki/Data_augmentation): data augmentation in data analysis are techniques used to increase the amount of data by adding slightly **modified copies** of already existing data or newly created synthetic data from existing data. It acts as a regularizer and helps reduce overfitting when training a machine learning model. It is closely related to **oversampling** in data analysis.
 
