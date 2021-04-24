@@ -11,6 +11,7 @@ Contents:
 * [Vanishing/Exploding Gradients](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#vanishingexploding-gradients)
 * [Batch Normalization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#batch-normalization)
 * [Data Augmentation](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#data-augmentation)
+* [Early Stop in DL]()
 
 ## Hyperparameter in DL
 
@@ -166,7 +167,9 @@ A convolutional neural network (CNN) that can robustly classify objects even if 
 
 
 
+## Early Stop in DL
 
+Early is used when the validation error saturates. Since your validation set much smaller than your training set, it will not slow down the training much. See [How to use early stopping properly for training deep neural network?](https://stats.stackexchange.com/questions/231061/how-to-use-early-stopping-properly-for-training-deep-neural-network)
 
 
 
