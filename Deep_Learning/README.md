@@ -11,7 +11,7 @@ Contents:
 * [Vanishing/Exploding Gradients](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#vanishingexploding-gradients)
 * [Batch Normalization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#batch-normalization)
 * [Data Augmentation](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#data-augmentation)
-* [Early Stop in DL]()
+* [Early Stop in DL](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#early-stop-in-dl)
 
 ## Hyperparameter in DL
 
