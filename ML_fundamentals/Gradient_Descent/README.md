@@ -11,9 +11,14 @@ The content:
 
 * [Batch, Stochastic, Mini-Batch](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#batch-stochastic-mini-batch)
 
-* [The Termination Condition For Gradient Descent?]()
+* [The Termination Condition For Gradient Descent?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#the-termination-condition-for-gradient-descent)
 
-* [Variants of Gradient Descent]()
+* [Local Minimum Trap](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#local-minimum-trap)
+
+* [Vanishing Gradient in Neural Networks](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#vanishing-gradient-in-neural-networks)
+
+* [Variants of Gradient Descent](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#variants-of-gradient-descent)
+
 
 
 ## Batch, Stochastic, Mini-Batch 
@@ -108,7 +113,7 @@ For each step `t`, the model parameter is updated as
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;&space;\Delta&space;\theta_{t},&space;\textrm{&space;here&space;}&space;\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;&space;\Delta&space;\theta_{t},&space;\textrm{&space;here&space;}&space;\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;g_{t}" title="\theta_{t+1} = \theta_{t} + \Delta \theta_{t}, \textrm{ here } \Delta \theta_{t} = - \alpha g_{t}" /></a>
 
 
-### a. Momentum
+### A. Momentum
 
 During optimization, SGD used to oscillate across the slopes of the ravine while only making hesitant progress along the bottom towards the local optimum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Look the left image below (credit from [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]). 
 
@@ -127,14 +132,14 @@ The momentrum term <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" ta
 Note the blog [[Sebastian Ruder]][An overview of gradient descent optimization algorithms] implemented <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\gamma&space;v_{t-1}&space;&plus;&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\gamma&space;v_{t-1}&space;&plus;&space;g_{t}" title="v_{t} = \gamma v_{t-1} + g_{t}" /></a> for momentum, and it is ok. But the Anrew's Ng's notation gaives more intuition. 
 
 
-### b. Adagrad (Adaptive Gradient Algorithm)
+### B. Adagrad (Adaptive Gradient Algorithm)
 
 Adagrad **modifies the general learning rate** at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\Delta \theta_t = - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
 
 
-### c. RMSProp (Root Mean Square Propagation)
+### C. RMSProp (Root Mean Square Propagation)
 
 RMSProp improves the latter by including the exponential moving average of the **squared gradient**:
 
@@ -147,7 +152,7 @@ where
 The RMSProp also slow down relatively large gradients and speed up relatively small gradients by dividing the squared root of the velocity.
 
 
-### d. Adam (Adaptive Moment Estimation)
+### D. Adam (Adaptive Moment Estimation)
 
 Adam is another method that computes adaptive learning rates for each parameter. In addition to storing an exponentially decaying average of past squared gradients `vt` like Adadelta and RMSprop, Adam also keeps an exponentially decaying average of past gradients `mt`, similar to momentum [[Sebastian Ruder]][An overview of gradient descent optimization algorithms].  In simple words you can consider it to be RMSProp + momentum [[Jaime Durán]][Everything You Need to Know about Gradient Descent Applied to Neural Networks].
 
@@ -165,7 +170,7 @@ The first is momentum-like, and the second is RMSprop. The supersrcipt "corr" re
 The proposed default values are `β1 = 0.9`, `β2 = 0.999`, and `ϵ = 10^{-8}`.
 
 
-### e. Comparison Between Optimizers
+### E. Comparison Between Optimizers
 
 Thought the Adam optimizer seems to works better than others; SGD is a better generalized adapter than ADAM [[Data Science: Why not always use the ADAM optimization technique?]][Why not always use the ADAM optimization technique?].
 
@@ -176,7 +181,6 @@ There is often a value to using more than one method (an ensemble), because ever
 ![comparison_optimizer](images/comparison_optimizer.png)
 
 
-## Local Minimum Traping Issue
 
 
 
