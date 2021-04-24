@@ -10,13 +10,9 @@ parameter = parameter - learning_rate * gradient
 The content:
 
 * [Batch, Stochastic, Mini-Batch](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#batch-stochastic-mini-batch)
-
 * [The Termination Condition For Gradient Descent?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#the-termination-condition-for-gradient-descent)
-
 * [Local Minimum Trap](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#local-minimum-trap)
-
 * [Vanishing Gradient in Neural Networks](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#vanishing-gradient-in-neural-networks)
-
 * [Variants of Gradient Descent](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#variants-of-gradient-descent)
 
 
