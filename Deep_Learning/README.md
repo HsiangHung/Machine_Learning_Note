@@ -97,7 +97,9 @@ As a concrete example, suppose we have a neural netwrok below. There are 7 x 7 +
 
 ![dropout_2](images/dropout_2.png)
 
-The drawback for dropout is difficult to define cost function. **While doing prediction on test datasets, don't use dropout**. Meanwhile, there is a StackExchange Data Science post to discuss dropout during testing: [How does dropout work during testing in neural network?](https://datascience.stackexchange.com/questions/44293/how-does-dropout-work-during-testing-in-neural-network)
+The drawback for dropout is difficult to define cost function. **While doing prediction on test datasets, don't use dropout (by Andrew Ng)**. 
+
+However, there is a StackExchange Data Science post to discuss dropout during testing: [How does dropout work during testing in neural network?](https://datascience.stackexchange.com/questions/44293/how-does-dropout-work-during-testing-in-neural-network)
 
 
 ## Vanishing/Exploding Gradients
