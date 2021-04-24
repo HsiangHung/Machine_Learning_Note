@@ -83,6 +83,12 @@ Stochastic gradient descent has a much noisier error surface since you are evalu
 However, stochastic gradient descent is more able to avoid local minimum because the landscape of batch loss function is different than the loss function of whole dataset. See the post: [How to get out of local minimums on stochastic gradient descent?](https://datascience.stackexchange.com/questions/44324/how-to-get-out-of-local-minimums-on-stochastic-gradient-descent)
 
 
+Also, from [How to avoid falling into the “local minima” trap?](https://ai.stackexchange.com/questions/1362/how-to-avoid-falling-into-the-local-minima-trap), NietzscheanAI mentioned techniques to try and move a search out of the basin of attraction of local optima:
+
+1. Probabalistically accepting worse solutions in the hope that this will jump out of the current basin (like Metropolis-Hastings acceptance in Simulated Annealing).
+2. Maintaining a list of recently-encountered states (or attributes thereof) and not returning to a recently-encountered one (like Tabu Search).
+3. Performing a random walk of a length determined by the current state of the search (an explicit 'Diversification strategy', e.g. as used in 'Reactive Tabu Search').
+
 
 ## Vanishing Gradient in Neural Networks
 
