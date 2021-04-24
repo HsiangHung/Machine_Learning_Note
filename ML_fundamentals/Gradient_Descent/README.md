@@ -164,6 +164,11 @@ There is often a value to using more than one method (an ensemble), because ever
 
 ![comparison_optimizer](images/comparison_optimizer.png)
 
+
+## Local Minimum Traping Issue
+
+
+
 ## Reference
 
 
