@@ -94,7 +94,7 @@ From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 2. Dropout roughly doubles the number of iterations required to converge. However, training time for each epoch is less.
 3. With `H` hidden units, each of which can be dropped, we have `2^H` possible models. In testing phase, the entire network is considered and each activation is reduced by a factor p.
 
-### C. Note from Andrew Ng's class
+### B. Note from Andrew Ng's class
 
 Dropout is used in computer vision field to prevent overfitting if there is no enough data. 
 
