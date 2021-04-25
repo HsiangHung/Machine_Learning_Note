@@ -7,7 +7,7 @@ Parameters in gradient descent are updated as
 parameter = parameter - learning_rate * gradient
 ```
 
-Contents:
+Table of Contents:
 
 * [Batch, Stochastic, Mini-Batch](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#batch-stochastic-mini-batch)
 * [The Termination Condition For Gradient Descent?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#the-termination-condition-for-gradient-descent)
