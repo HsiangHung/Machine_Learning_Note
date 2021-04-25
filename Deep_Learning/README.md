@@ -7,7 +7,12 @@ Contents:
 * [Hyperparameter in DL](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#hyperparameter-in-dl)
 * [Bias/Variance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#biasvariance)
 * [Activation Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#activation-function)
+     * [A. Linear activation]()
+     * [B. ReLu and Leaky ReLu]()
 * [Dropout Regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#dropout-regularization)
+     * [A. Why randomly removing nodes from a neural network works?]()
+     * [B. Some observations using dropout]()
+     * [C. Note from Andrew Ng's class]()
 * [Vanishing/Exploding Gradients](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#vanishingexploding-gradients)
 * [Batch Normalization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#batch-normalization)
 * [Data Augmentation](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#data-augmentation)
@@ -75,14 +80,14 @@ Therefore, this will result in a much smaller and simpler neural network, as sho
 
 ![dropout](images/dropout.png)
 
-### Why randomly removing nodes from a neural network works?
+### A. Why randomly removing nodes from a neural network works?
 
 Dropout is a widely used method and it was proven to greatly improve the performance of neural network.
 
 It means that the neural network cannot rely on any input node, since each have a random probability of being removed. Therefore, the neural network will be reluctant to give high weights to certain features, because they might disappear [[Marco Peixeiro]][How to Improve a Neural Network With Regularization].
 Consequently, the weights are spread across all features, making them smaller. This effectively shrinks the model and regularizes it.
 
-#### Some observations using dropout:
+#### B. Some observations using dropout
 
 From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 
@@ -90,7 +95,7 @@ From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
 2. Dropout roughly doubles the number of iterations required to converge. However, training time for each epoch is less.
 3. With `H` hidden units, each of which can be dropped, we have `2^H` possible models. In testing phase, the entire network is considered and each activation is reduced by a factor p.
 
-### Note from Andrew Ng's class
+### C. Note from Andrew Ng's class
 
 Dropout is used in computer vision field to prevent overfitting if there is no enough data. 
 
