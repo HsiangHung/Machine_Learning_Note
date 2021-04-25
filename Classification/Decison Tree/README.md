@@ -1,12 +1,14 @@
 
 # Decision Tree 
 
-Content:
+Table of Contents:
 
 * [Tree algorithms: ID3, C4.5 and CART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#tree-algorithms-id3-c45-and-cart)
 * [How To Interpret Probability in Tree?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-interpret-probability-in-tree)
 * [How to Select Feature for Split?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-select-feature-for-split)
-     * aaaaa
+     * [A. Information gain]()
+     * [B. Gini index]()
+     * [C. Numeric Attribute]()
 * [Decision Tree Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#decision-tree-regression)
 * [Feature Importance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#feature-importance)
 * [How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-deal-with-missing-values)
@@ -45,7 +47,7 @@ Higher information gain (entropy reduction) and lower Gini index means a better 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
 
 
-### 1. Information gain
+### A. Information gain
 
 Given a split way of features, calculate entropy for root and its childs. The tree split is to **maximize reduction of the entropy**, which is defined as **information gain**. Given a class, the entropy defines
 
@@ -72,7 +74,7 @@ Later information gain leads to less homogeneity on class distributions. See exa
 We can see the larger information gain split makes better classification.
 
 
-### 2. Gini Index
+### B. Gini index
 
 The Gini index defines (assume use attribute `A` to have K branches)
 
@@ -82,7 +84,7 @@ The Gini index defines (assume use attribute `A` to have K branches)
 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
 
-### 3. Numeric Attribute
+### C. Numeric Attribute
 
 For numeric attributes, how do we determine the value to split in the decision tree? As a concrete example, supposed we have a dataset like
 ```
