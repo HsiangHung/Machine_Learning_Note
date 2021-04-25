@@ -14,6 +14,11 @@ Table of Contents:
 * [Local Minimum Trap](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#local-minimum-trap)
 * [Vanishing Gradient in Neural Networks](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#vanishing-gradient-in-neural-networks)
 * [Variants of Gradient Descent](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#variants-of-gradient-descent)
+    * [A. Momentum](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#a-momentum)
+    * [B. Adagrad (Adaptive Gradient Algorithm)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#b-adagrad-adaptive-gradient-algorithm)
+    * [C. RMSProp (Root Mean Square Propagation)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#c-rmsprop-root-mean-square-propagation)
+    * [D. Adam (Adaptive Moment Estimation)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#d-adam-adaptive-moment-estimation)
+    * [E. Comparison Between Optimizers](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Gradient_Descent#e-comparison-between-optimizers)
 
 
 
