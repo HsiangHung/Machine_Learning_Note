@@ -24,6 +24,10 @@ Decision tree algorithms [[synergy37AI]][Tree algorithms: ID3, C4.5, C5.0 and CA
 
 * **CART (Classification and Regression Trees)** is very similar to C4.5, but it differs in that it supports numerical target variables (regression) and does not compute rule sets. CART constructs binary trees using the feature and threshold that yields the largest information gain at each node.
 
+
+Nearly every decision tree example I've come across happens to be a binary tree. There seems an exception, CHAID, is not limited to binary trees. The reason is mainly a technical issue: if you don't restrict to binary choices, there are simply too many possibilities for the next split in the tree. 
+
+
 ## How To Interpret Probability in Tree?
 
 In Prof. Nando de Freitas [UBC Machine Learning class](https://www.youtube.com/watch?v=pLzE2Oh9QDI&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=31), he shows a picture how probability works in a given decision tree:
@@ -185,7 +189,7 @@ The consequence of all of these strengths of logistic regression is that if you 
 
 ## How To Deal with Missing Values
 
-There are several methods used by various decision trees. Simply ignoring the missing values (like ID3 and other old algorithms does) or treating the missing values as another category (in case of a nominal feature) are not real handling missing values [[StackExchange: How do decision tree learning algorithms deal with missing values]][How do decision tree learning algorithms deal with missing values]. 
+There are several methods used by various decision trees. Simply ignoring the missing values (like ID3 and other old algorithms does) or treating the missing values as another category (in case of a nominal feature) are not real handling missing values [[Cross Validated: How do decision tree learning algorithms deal with missing values]][How do decision tree learning algorithms deal with missing values]. 
 
 By Towfik Alrazihi [[Quora: In simple language, how does C4.5 deal with missing values?]][In simple language, how does C4.5 deal with missing values?], the missing values:
 * goes to the node which already has the biggest number of instances.
@@ -195,8 +199,18 @@ By Towfik Alrazihi [[Quora: In simple language, how does C4.5 deal with missing 
 ## Reference
 
 
+[Are decision trees almost always binary trees?]: https://stats.stackexchange.com/questions/12187/are-decision-trees-almost-always-binary-trees#:~:text=Nearly%20every%20decision%20tree%20example,to%20be%20a%20binary%20tree.&text=From%20what%20I%20gather%2C%20CHAID,a%20single%20three%2Dway%20split.
+[[Cross Validated: Are decision trees almost always binary trees?] Are decision trees almost always binary trees?](https://stats.stackexchange.com/questions/12187/are-decision-trees-almost-always-binary-trees#:~:text=Nearly%20every%20decision%20tree%20example,to%20be%20a%20binary%20tree.&text=From%20what%20I%20gather%2C%20CHAID,a%20single%20three%2Dway%20split.)
+
+
 [Does decision tree need to use the same feature to split in the same layer?]: https://stats.stackexchange.com/questions/354030/does-decision-tree-need-to-use-the-same-feature-to-split-in-the-same-layer/451780#451780
 [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?] Does decision tree need to use the same feature to split in the same layer?](https://stats.stackexchange.com/questions/354030/does-decision-tree-need-to-use-the-same-feature-to-split-in-the-same-layer/451780#451780)
+
+
+[How do decision tree learning algorithms deal with missing values]: https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo
+[[Cross Validated: How do decision tree learning algorithms deal with missing values] How do decision tree learning algorithms deal with missing values](https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo)
+
+
 
 
 [In simple language, how does C4.5 deal with missing values?]: https://www.quora.com/In-simple-language-how-does-C4-5-deal-with-missing-values
@@ -212,10 +226,6 @@ By Towfik Alrazihi [[Quora: In simple language, how does C4.5 deal with missing 
 
 [The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark]: https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3
 [[Stacey Ronaghan] The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark](https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3)
-
-
-[How do decision tree learning algorithms deal with missing values]: https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo
-[[StackExchange: How do decision tree learning algorithms deal with missing values] How do decision tree learning algorithms deal with missing values](https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo)
 
 
 [Tree algorithms: ID3, C4.5, C5.0 and CART]: https://medium.datadriveninvestor.com/tree-algorithms-id3-c4-5-c5-0-and-cart-413387342164
