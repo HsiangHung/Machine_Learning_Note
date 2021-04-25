@@ -11,7 +11,7 @@ Contents:
      * [B. ReLu and Leaky ReLu](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#b-relu-and-leaky-relu)
 * [Dropout Regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#dropout-regularization)
      * [A. Why randomly removing nodes from a neural network works?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#a-why-randomly-removing-nodes-from-a-neural-network-works)
-     * [B. Note from Andrew Ng's class]()
+     * [B. Note from Andrew Ng's class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#b-note-from-andrew-ngs-class)
 * [Vanishing/Exploding Gradients](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#vanishingexploding-gradients)
 * [Batch Normalization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#batch-normalization)
 * [Data Augmentation](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Deep_Learning#data-augmentation)
@@ -86,9 +86,8 @@ Dropout is a widely used method and it was proven to greatly improve the perform
 It means that the neural network cannot rely on any input node, since each have a random probability of being removed. Therefore, the neural network will be reluctant to give high weights to certain features, because they might disappear [[Marco Peixeiro]][How to Improve a Neural Network With Regularization].
 Consequently, the weights are spread across all features, making them smaller. This effectively shrinks the model and regularizes it.
 
-#### B. Some observations using dropout
 
-From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning]:
+From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning], there are some observations using dropout:
 
 1. Dropout forces a neural network to learn more robust features that are useful in conjunction with many different random subsets of the other neurons.
 2. Dropout roughly doubles the number of iterations required to converge. However, training time for each epoch is less.
