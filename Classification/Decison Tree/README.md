@@ -25,7 +25,7 @@ Decision tree algorithms [[synergy37AI]][Tree algorithms: ID3, C4.5, C5.0 and CA
 * **CART (Classification and Regression Trees)** is very similar to C4.5, but it differs in that it supports numerical target variables (regression) and does not compute rule sets. CART constructs binary trees using the feature and threshold that yields the largest information gain at each node.
 
 
-Nearly every decision tree example I've come across happens to be a binary tree. There seems an exception, CHAID, is not limited to binary trees. The reason is mainly a technical issue: if you don't restrict to binary choices, there are simply too many possibilities for the next split in the tree. 
+Nearly every decision tree example I've come across happens to be a binary tree. There seems an exception, CHAID, is not limited to binary trees. The reason is mainly a technical issue: if you don't restrict to binary choices, there are simply too many possibilities for the next split in the tree [[Cross Validated: Are decision trees almost always binary trees?]][Are decision trees almost always binary trees?].
 
 
 ## How To Interpret Probability in Tree?
