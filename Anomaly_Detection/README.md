@@ -162,7 +162,7 @@ The cons of Dbscan are that selecting the optimal parameters eps, MinPts and met
 
 One of approaches to solving the imbalance problem is to discard the minority examples and treat it as a single-class (or anomaly detection) problem. Isolation forest implemented the concept.
 
-Isolation forest’s basic principle is that outliers are few and far from the rest of the observations. For prediction, it compares an observation against that splitting value in a “node”, that node will have two node children on which another **random** comparisons will be made.  In these trees, partitions are created by first **randomly selecting a feature** and then **selecting a random split** value between the minimum and maximum value of the selected feature (by [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)). 
+Isolation forest’s basic principle is that outliers are few and far from the rest of the observations. For prediction, it compares an observation against that splitting value in a “node”, that node will have two node children on which another **random** comparisons will be made.  In these trees, recursive partitions are created by first **randomly selecting a feature** and then **selecting a random split** value between the minimum and maximum value of the selected feature (by [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)). 
 
 In the isolation forest method, an outlier score can computed for each observation (from [wiki](https://en.wikipedia.org/wiki/Isolation_forest)):
 
@@ -171,7 +171,7 @@ In the isolation forest method, an outlier score can computed for each observati
 where `E(h(x))` is the average value of `h(x)` from a collection of iTrees; `h(x)` is the **`path length`** of the sample `x`, and `c(n)` is the ‘unsuccessful length search’ of a binary tree (the maximum path length of a binary tree from root to external node) `n` is the number of external nodes. 
 
 
-**`path length`** is defined as the number of “splittings” made by the algorithm for an instance. As shown below, outliers will have shorter path lengths than the rest of the observations (pictures from [wiki](https://en.wikipedia.org/wiki/Isolation_forest) and [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]). Also see [my notebook example](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Anomaly_Detection/outlier_methods_sklearn.ipynb).
+**`path length`** is defined as the number of “splittings” made by the algorithm for an instance; the number of splittings required to isolate a sample is equivalent to the path length from the root node to the terminating node. As shown below, outliers will have shorter path lengths than the rest of the observations (pictures from [wiki](https://en.wikipedia.org/wiki/Isolation_forest) and [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]). Also see [my notebook example](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Anomaly_Detection/outlier_methods_sklearn.ipynb).
 
 ![isolation_forest](images/isolation_forest.png)
 
