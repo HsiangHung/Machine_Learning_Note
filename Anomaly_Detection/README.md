@@ -114,7 +114,7 @@ The cons for the Z scores are that it is only convenient to use in a low dimensi
 
 Generally, the class imbalance is solved using an ensemble built by resampling data many times.  The idea is to first create new datasets by taking **all anomalous data points** and **adding a subset of normal data points** (e.g. as 4 times as anomalous data points). Then a classifier is built for each data set using SVM or Random Forest, and those classifiers are combined using ensemble learning. This approach has worked well and produced very good results [[Srinath Perera]][Introduction to Anomaly Detection: Concepts and Techniques].
 
-#### 5.2.1 Use Tree-Based Algorithms
+#### 5.2.1 Tree-Based Algorithms
 We can also consider tree-based algorithms. Decision trees often perform well on imbalanced datasets because their hierarchical structure allows them to learn signals from both classes. In modern applied machine learning, tree ensembles (Random Forests, Gradient Boosted Trees, etc.) almost always outperform singular decision trees [[Elite Data Science]][How to Handle Imbalanced Classes in Machine Learning].
 
 #### 5.2.2 Penalize Algorithms (Cost-Sensitive Training)
