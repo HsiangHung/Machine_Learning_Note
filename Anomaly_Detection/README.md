@@ -150,7 +150,7 @@ If your training data does not have label, using unsupervised learning and semi-
 
 #### 5.3.1 Dbscan (Density Based Spatial Clustering) [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
 
-Dbscan is a density based clustering algorithm, focusing on finding neighbors by density (MinPts) on an `n-dimensional sphere` with radius ɛ. A cluster can be defined as the maximal set of ‘density connected points’ in the feature space. The complexity of dbscan is of O(n log n). Outliers (noise) will be assigned to the -1 cluster. 
+Dbscan is a density based clustering algorithm, focusing on finding neighbors by density (MinPts) on an `n-dimensional sphere` with radius `ɛ`. A cluster can be defined as the maximal set of ‘density connected points’ in the feature space. The complexity of dbscan is of O(n log n). Outliers (noise) will be assigned to the -1 cluster. 
 
 After **rescaling (standardize)** the features, choose the spatial metric on which dbscan will perform the clustering. The metric must be chosen depending on the problem, an euclidean metric works well for 2 or 3 dimensions, the manhattan metric can also be useful when dealing with higher dimensional feature spaces 4 or more dimensions.
 
