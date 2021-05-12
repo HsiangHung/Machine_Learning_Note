@@ -41,7 +41,9 @@ Maximize the margin width is equivalent to minimize <a href="https://www.codecog
 
 **The following is the best description for SVM I heard** so far from [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models]:
 
-`SVM is used as a linear or non-linear classifier based on the kernel used. If we use a linear kernel, then the classifier and hence the prediction boundary are linear. SVMs **learn from the support vectors**, unlike other machine learning models that learn from the correct and incorrect data. For example, suppose we have two classes – apples and oranges. In that case, SVM learns those examples which are rightmost in apples (an apple resembling an orange) and leftmost in oranges (an orange resembling an apple); that is, they look at the extreme cases.`
+```
+SVM is used as a linear or non-linear classifier based on the kernel used. If we use a linear kernel, then the classifier and hence the prediction boundary are linear. SVMs **learn from the support vectors**, unlike other machine learning models that learn from the correct and incorrect data. For example, suppose we have two classes – apples and oranges. In that case, SVM learns those examples which are rightmost in apples (an apple resembling an orange) and leftmost in oranges (an orange resembling an apple); that is, they look at the extreme cases.
+```
 
 Therefore, they perform better most of the time. Therefore, SVM is less biased by outliers, and not sensitive to overfitting [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models].
 
