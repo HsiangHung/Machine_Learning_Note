@@ -47,7 +47,7 @@ The following is the best description for SVM I heard so far (from [[GeeksForGee
 
 Therefore, they perform better most of the time. Therefore, SVM is `less biased by outliers`, and less sensitive to overfitting [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models].
 
-Kernel SVM is particularly useful when the data is not linearly separable. Therefore, we take our non – linearly separable dataset, map it to a higher dimension, get a linearly separable dataset, invoke SVM classifier, build a decision boundary for the data [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models].
+Kernel SVM is particularly useful when the data is not linearly separable. Therefore, we take our non–linearly separable dataset, map it to a higher dimension, get a linearly separable dataset, invoke SVM classifier, build a decision boundary for the data [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models].
 
 ## 2. Cost Function
 
