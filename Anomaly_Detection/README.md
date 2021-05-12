@@ -3,18 +3,18 @@
 
 Table of Contents:
 
-* [1. Is it not just Classification?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#tree-algorithms-id3-c45-and-cart)
-* [2. Three types of Anomalies or outliers](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-interpret-probability-in-tree)
-* [3. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-select-feature-for-split)
-* [4. Data Preprocess](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#decision-tree-regression)
-     * [4.1 Undersample: Down-sample Majority Class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#a-information-gain) 
-     * [4.2 Oversample: Up-sample Minority Class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#b-gini-index)
-     * [4.3 Synthesize Minor Samples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#c-numeric-attribute)
-* [5. Anomaly Detection Techniques](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#feature-importance)
-     * [5.1 Inference: Z score and Modified Z score](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#a-information-gain) 
-     * [5.2 Supervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#b-gini-index)
-     * [5.3 Unsupervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#c-numeric-attribute)
-* [6. Time-Series Anomaly Detection](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-deal-with-missing-values)
+* [1. Is it not just Classification?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#1-is-it-not-just-classification)
+* [2. Three types of Anomalies or outliers](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#2-three-types-of-anomalies-or-outliers)
+* [3. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#3-metrics)
+* [4. Data Preprocess](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#4-data-preprocess)
+     * [4.1 Undersample: Down-sample Majority Class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#41-undersample-down-sample-majority-class) 
+     * [4.2 Oversample: Up-sample Minority Class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#42-oversample-up-sample-minority-class)
+     * [4.3 Synthesize Minor Samples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#43-synthesize-minor-samples)
+* [5. Anomaly Detection Techniques](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#5-anomaly-detection-techniques)
+     * [5.1 Inference: Z score and Modified Z score](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#51-inference-z-score-and-modified-z-score) 
+     * [5.2 Supervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#52-supervised-learning)
+     * [5.3 Unsupervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#53-unsupervised-learning)
+* [6. Time-Series Anomaly Detection](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#6-time-series-anomaly-detection)
 
 
 ## 1. Is it not just Classification? 
