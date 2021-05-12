@@ -3,18 +3,18 @@
 
 Table of Contents:
 
-* [Tree algorithms: ID3, C4.5 and CART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#tree-algorithms-id3-c45-and-cart)
-* [How To Interpret Probability in Tree?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-interpret-probability-in-tree)
-* [How to Select Feature for Split?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-select-feature-for-split)
-     * [A. Information gain](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#a-information-gain)
-     * [B. Gini index](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#b-gini-index)
-     * [C. Numeric Attribute](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#c-numeric-attribute)
-* [Decision Tree Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#decision-tree-regression)
-* [Feature Importance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#feature-importance)
-* [How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-deal-with-missing-values)
+* [1. Tree algorithms: ID3, C4.5 and CART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#1.tree-algorithms-id3-c45-and-cart)
+* [2. How To Interpret Probability in Tree?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#2.how-to-interpret-probability-in-tree)
+* [3. How to Select Feature for Split?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3.how-to-select-feature-for-split)
+     * [3.A Information gain](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#a-information-gain)
+     * [3.B Gini index](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#b-gini-index)
+     * [3.C Numeric Attribute](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#c-numeric-attribute)
+* [4. Decision Tree Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#4.decision-tree-regression)
+* [5. Feature Importance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#5.feature-importance)
+* [6. How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#6.how-to-deal-with-missing-values)
 
 
-## Tree algorithms: ID3, C4.5 and CART
+## 1. Tree algorithms: ID3, C4.5 and CART
 
 Decision tree algorithms [[synergy37AI]][Tree algorithms: ID3, C4.5, C5.0 and CART]:
 
@@ -28,7 +28,7 @@ Decision tree algorithms [[synergy37AI]][Tree algorithms: ID3, C4.5, C5.0 and CA
 Nearly every decision tree example I've come across happens to be a binary tree. There seems an exception, CHAID, is not limited to binary trees. The reason is mainly a technical issue: if you don't restrict to binary choices, there are simply too many possibilities for the next split in the tree [[Cross Validated: Are decision trees almost always binary trees?]][Are decision trees almost always binary trees?].
 
 
-## How To Interpret Probability in Tree?
+## 2. How To Interpret Probability in Tree?
 
 In Prof. Nando de Freitas [UBC Machine Learning class](https://www.youtube.com/watch?v=pLzE2Oh9QDI&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=31), he shows a picture how probability works in a given decision tree:
 
@@ -39,7 +39,7 @@ In Prof. Nando de Freitas [UBC Machine Learning class](https://www.youtube.com/w
 2. Even on the leaves, there exists data noise so we still see various class distribution.
 
 
-## How to Select Feature for Split?
+## 3. How to Select Feature for Split?
 
 Each time when we need to split, we need to choose an optimal attribute which can perform best. There are two ways to select optimal attributes:
 
@@ -51,7 +51,7 @@ Higher information gain (entropy reduction) and lower Gini index means a better 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
 
 
-### A. Information gain
+### 3.A Information gain
 
 Given a split way of features, calculate entropy for root and its childs. The tree split is to **maximize reduction of the entropy**, which is defined as **information gain**. Given a class, the entropy defines
 
@@ -78,7 +78,7 @@ Later information gain leads to less homogeneity on class distributions. See exa
 We can see the larger information gain split makes better classification.
 
 
-### B. Gini index
+### 3.B Gini index
 
 The Gini index defines (assume use attribute `A` to have K branches)
 
@@ -88,7 +88,7 @@ The Gini index defines (assume use attribute `A` to have K branches)
 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
 
-### C. Numeric Attribute
+### 3.C Numeric Attribute
 
 For numeric attributes, how do we determine the value to split in the decision tree? As a concrete example, supposed we have a dataset like
 
@@ -101,9 +101,7 @@ For numeric attributes, how do we determine the value to split in the decision t
 | 92  | no  |
 | ... | ... |
 
-
 For numeric attributes, we sort the attribute by value. Then above data become
-
 
 | humidity | play|
 | --- | --- |
@@ -122,23 +120,7 @@ For numeric attributes, we sort the attribute by value. Then above data become
 |  90 | no  |
 |  92 | no  |
 
-```
-  humidity | play
-   54      | yes
-   58      | yes 
-   59      | yes
-   60      | yes
-   60      | yes
-   62      | yes
-   63      | no 
-   80      | yes
-   81      | yes
-   89      | yes
-   90      | no
-   90      | no 
-   90      | no
-   92      | no
-```
+
 At root, the entropy (9 positive, 5 negative) is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94&space;\&space;\textrm{bits}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94&space;\&space;\textrm{bits}" title="H(\frac{9}{14},\frac{5}{14})= -\big(\frac{9}{14}\log \frac{9}{14} + \frac{5}{14}\log \frac{5}{14} \big) = 0.94 \ \textrm{bits}" /></a>
@@ -161,12 +143,12 @@ For **way B**, if humidity <= 89, 9 positive and 1 negative; humidity > 89, 4 ne
 
 We can see `I(B)` > `I(A)`, so we choose humidity=0.89 to split at this step.
 
-## Decision Tree Regression
+## 4. Decision Tree Regression
 
 Detail refer to [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression/Decision%20Tree) and the post [[Saed Sayad]][Decision Tree - Regression].
 
 
-## Feature Importance 
+## 5. Feature Importance 
 
 To evaluate feature importance, we calculate feature importance for each split, and sum of them. For `attribute A`, we look for all splits which use `A` to split. The invidual feature importance is  [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees], [[Stacey Ronaghan]][The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark]
 
@@ -208,7 +190,7 @@ Then normalize FI by diving `N=14`. We have feature importance: `"Outlook" > "Wi
 The consequence of all of these strengths of logistic regression is that if you are doing an academic study and wanting to make conclusions about what **causes** what, logistic regression is often much better than a decision tree. However, if instead the goal is to either make a prediction, or describe the data, then logistic regression is often a poor choice.
 
 
-## How To Deal with Missing Values
+## 6. How To Deal with Missing Values
 
 There are several methods used by various decision trees. Simply ignoring the missing values (like ID3 and other old algorithms does) or treating the missing values as another category (in case of a nominal feature) are not real handling missing values [[Cross Validated: How do decision tree learning algorithms deal with missing values]][How do decision tree learning algorithms deal with missing values]. 
 
