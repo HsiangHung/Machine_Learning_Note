@@ -65,7 +65,12 @@ Then we can calculate **Expected Entropy** (EH) remaining after trying attribute
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=EH(A)&space;=&space;\sum^K_{i=1}&space;H(p_i,&space;n_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EH(A)&space;=&space;\sum^K_{i=1}&space;H(p_i,&space;n_i)" title="EH(A) = \sum^K_{i=1} H(p_i, n_i)" /></a>
 
-The information gain is `H(p,n) - EH(A)` for attribute `A`, where `H(p,n)` is on root. Below is an example (from Prof. Nando de Freitas UBC Machine Learning class). From the root to next level, which attribute should we use? `patrons` or food `type`?
+The information gain is `H(p,n) - EH(A)` for attribute `A`, where `H(p,n)` is on root. 
+
+
+#### Example
+
+Below is an example (from Prof. Nando de Freitas UBC Machine Learning class). From the root to next level, which attribute should we use? `patrons` or food `type`?
 
 ![example_information_gain](images/example_information_gain.png)
 
@@ -87,6 +92,15 @@ The Gini index defines (assume use attribute `A` to have K branches)
 **Smaller Gini index** means better attribute used to split tree. (Think about if A is perfect to classify positive and negatives, then `G(A)=0`.)
 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
+
+#### Example
+
+Here is an example followed [Gini Index For Decision Trees](https://blog.quantinsti.com/gini-index/) by Shagufta Tahsildar. Assume we have data:
+
+![](images/example_gini_index.png)
+
+
+
 
 ### 3.C Numeric Attribute
 
