@@ -124,7 +124,7 @@ In regular learning, we treat all misclassifications equally, which causes issue
 
 Cost-sensitive learning allows us to **penalize misclassifications of the minority class** more heavily than we do with misclassifications of the majority class, in hopes that this increases the true positive rate. A common scheme for this is to have the cost equal to the inverse of the proportion of the data-set that the class makes up. This increases the penalization as the class size decreases.
 
-A popular algorithm for this technique is Penalized-SVM, During training, we can use the argument `class_weight='balanced'` to penalize mistakes on the minority class by an amount proportional to how under-represented it is. Another penalized algorithms is penalized-LDA [[Syed Sadat Nazrul]][Fraud Detection Under Extreme Class Imbalance].
+A popular algorithm for this technique is **Penalized-SVM**, During training, we can use the argument `class_weight='balanced'` to penalize mistakes on the minority class by an amount proportional to how under-represented it is. Another penalized algorithms is **penalized-LDA** [[Syed Sadat Nazrul]][Fraud Detection Under Extreme Class Imbalance].
 
 
 ### 5.3 Unsupervised Learning
