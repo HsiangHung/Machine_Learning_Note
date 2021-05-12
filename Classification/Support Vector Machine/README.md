@@ -3,12 +3,12 @@
 
 Table of Contents:
 
-* [1. What are Support Vectors?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#tree-algorithms-id3-c45-and-cart)
-* [2. SVM Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-interpret-probability-in-tree)
-* [3. Cost Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-select-feature-for-split)
-* [4. Non-Linear SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#decision-tree-regression)
-* [5. SVM vs Logistic Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#feature-importance)
-* [How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-deal-with-missing-values)
+* [1. What are Support Vectors?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#1-what-are-support-vectors)
+* [2. SVM Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#2-svm-classifier)
+* [3. Cost Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#3-cost-function)
+* [4. Non-Linear SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#4-non-linear-svm)
+* [5. SVM vs Logistic Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#5-svm-vs-logistic-regression)
+
 
 
 ## 1. What are Support Vectors?
