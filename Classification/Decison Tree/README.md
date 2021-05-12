@@ -91,6 +91,11 @@ Note that there is no reason to use the same feature split on each level. See [[
 ### C. Numeric Attribute
 
 For numeric attributes, how do we determine the value to split in the decision tree? As a concrete example, supposed we have a dataset like
+
+| LC# | Title | Category | Difficulty | GitHub |
+| --- | --- | --- | --- | --- |
+| 2 | Add Two Numbers | linked list | medium | [link](https://github.com/HsiangHung/Code-Challenges/blob/master/leetcode_solution/link%20list/%232.Add_Two_Numbers.py) |
+
 ```
   humidity | play
    60      | yes
