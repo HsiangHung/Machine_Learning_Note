@@ -1,7 +1,23 @@
-# ANOMALY DETECTION STUDY NOTE (AND BLOGS)
+# Anomaly Detection Study Note (And Blogs)
 
 
-## 1. Is it not just Classification?
+Table of Contents:
+
+* [1. Is it not just Classification?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#tree-algorithms-id3-c45-and-cart)
+* [2. Three types of Anomalies or outliers](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-interpret-probability-in-tree)
+* [3. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-select-feature-for-split)
+* [4. Data Preprocess](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#decision-tree-regression)
+     * [4.1 Undersample: Down-sample Majority Class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#a-information-gain) 
+     * [4.2 Oversample: Up-sample Minority Class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#b-gini-index)
+     * [4.3 Synthesize Minor Samples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#c-numeric-attribute)
+* [5. Anomaly Detection Techniques](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#feature-importance)
+     * [5.1 Inference: Z score and Modified Z score](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#a-information-gain) 
+     * [5.2 Supervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#b-gini-index)
+     * [5.3 Unsupervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#c-numeric-attribute)
+* [6. Time-Series Anomaly Detection](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-deal-with-missing-values)
+
+
+## 1. Is it not just Classification? 
 
 The answer is yes if the following three conditions are met. See [Introduction to Anomaly Detection: Concepts and Techniques][Introduction to Anomaly Detection: Concepts and Techniques].
 
@@ -10,6 +26,7 @@ The answer is yes if the following three conditions are met. See [Introduction t
  3. Data is not autocorrelated. (Data point does not depend on earlier data points. Often breaks in time series data).
      
 If all of above is true, we can just use an algorithm like Random Forests or Support Vector Machines (SVM). However, most anomaly problems have anomaly-normality 1:1000 to 1:10^6 where classes are highly imbalanced.
+
 
 ## 2. Three types of Anomalies or outliers
 
