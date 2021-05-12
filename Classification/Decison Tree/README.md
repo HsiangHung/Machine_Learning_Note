@@ -101,16 +101,27 @@ For numeric attributes, how do we determine the value to split in the decision t
 | 92  | no  |
 | ... | ... |
 
-```
-  humidity | play
-   60      | yes
-   80      | yes 
-   63      | no
-   81      | yes
-   92      | no
-   ...     | ...
-```
+
 For numeric attributes, we sort the attribute by value. Then above data become
+
+
+| humidity | play|
+| --- | --- |
+|  54 | yes |
+|  58 | yes |
+|  59 | yes |
+|  60 | yes |
+|  60 | yes |
+|  62 | yes |
+|  63 | no  |
+|  80 | yes |
+|  81 | yes |
+|  89 | yes |
+|  90 | no  |
+|  90 | no  |
+|  90 | no  |
+|  92 | no  |
+
 ```
   humidity | play
    54      | yes
