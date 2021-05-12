@@ -1,8 +1,17 @@
 
 # Support Vector Machine
 
+Table of Contents:
 
-## What are Support Vectors?
+* [1. What are Support Vectors?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#tree-algorithms-id3-c45-and-cart)
+* [2. SVM Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-interpret-probability-in-tree)
+* [3. Cost Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-select-feature-for-split)
+* [4. Non-Linear SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#decision-tree-regression)
+* [5. SVM vs Logistic Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#feature-importance)
+* [How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#how-to-deal-with-missing-values)
+
+
+## 1. What are Support Vectors?
 
 
 **Support vectors** are data points that are closer to the hyperplane and influence the position and orientation of the hyperplane. Using these support vectors, we maximize the margin of the classifier. The boundary to separate classes is called **maximum margin**. Deleting the support vectors will change the position of the hyperplane. These are the points that help us build our SVM [[Rohith Gandhi]][Support Vector Machine — Introduction to Machine Learning Algorithms], [[Shuyu Luo]][Loss Function(Part III): Support Vector Machine], [[Priyankur Sarkar]][Support Vector Machines in Machine Learning]
@@ -28,7 +37,7 @@ The margin width is given
 
 Maximize the margin width is equivalent to minimize <a href="https://www.codecogs.com/eqnedit.php?latex=||\vec{w}||" target="_blank"><img src="https://latex.codecogs.com/gif.latex?||\vec{w}||" title="||\vec{w}||" /></a>.
 
-## SVM Classifier
+## 2. SVM Classifier
 
 **The following is the best description for SVM I heard** so far from [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models]:
 
@@ -38,7 +47,7 @@ Therefore, they perform better most of the time. Therefore, SVM is less biased b
 
 Kernel SVM is particularly useful when the data is not linearly separable. Therefore, we take our non – linearly separable dataset, map it to a higher dimension, get a linearly separable dataset, invoke SVM classifier, build a decision boundary for the data [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models].
 
-## Cost Function
+## 3. Cost Function
 
 The cost function of SVM is very similar to that of Logistic Regression. Looking at it by `y = 1` and `y = 0` separately in below plot (credit from [[Shuyu Luo]][Loss Function(Part III): Support Vector Machine]), the black line is the cost function of Logistic Regression, and the red line is for SVM. Please note that the X axis here is the raw model output, θᵀx. 
 
@@ -56,7 +65,7 @@ What is the hypothesis for SVM? It’s simple and straightforward. When θᵀx �
 With a very large value of C (similar to no regularization), this large margin classifier will be very sensitive to outliers. On the other hand, When C is small, we start to allow misclassified staying in the margin. We called it **Soft-margin**.
 
 
-## Non-Linear SVM
+## 4. Non-Linear SVM
 
 The non-linear boundary problem can be solved if we introduce a kernel [[Priyankur Sarkar]][Support Vector Machines in Machine Learning]. The cost function turns to 
 
@@ -73,7 +82,7 @@ Since it turns to the data size as number of features, SVM is probably not suita
 We also have **Sigmoid Kernel**, **Polynomial Kernel**.
 
 
-## SVM vs Logistic Regression
+## 5. SVM vs Logistic Regression
 
 Many SVM packages have built in **multi-class classification**. Otherwise use **one-vs-all** method. For `K` classes, train `K` SVMs, each identifies if `y = 1` for class {1,2,...K}. We pick class i for largest θᵀx_i.
 
