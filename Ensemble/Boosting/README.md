@@ -10,8 +10,20 @@ A larger number of gradient boosting iterations reduces training set errors. Rai
 
 There are mainly two boosting algorithms: (A) Adaptive Boosting (Adaboost), (B) Gradient Boosting (GBM). (C)[XGBoost](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) (Tianran Chen by optimizing GBM) and (D) LightGBM are brand new GBM-extension tools developed more recently.
 
+Table of Contents:
 
-## A. AdaBoost
+* [1. AdaBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#1-tree-algorithms-id3-c45-and-cart)
+* [2. Gradient Boosting](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#2-how-to-interpret-probability-in-tree)
+* [3. XGBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
+     * [3.A Information gain](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
+     * [3.B Gini index](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
+     * [3.C Numeric Attribute](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
+* [4. LightGBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
+* [5. Comparison LighGBM vs XGboost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
+
+
+
+## 1. AdaBoost
 
 Adaptive boosting **changes sample distribution** by **modifying the weights** attached to each of the instances at each iteration. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances [[Quora: What is the difference between gradient boosting and adaboost?]][What is the difference between gradient boosting and adaboost?].
 
@@ -53,10 +65,7 @@ Then we reconstruct data in next forest by the new sample weights. For example, 
 
 
 
-
-
-
-## B. Gradient Boosting
+## 2. Gradient Boosting
 
 
 Adaboost was the original implementation of boosting with a single cost function, but wasn’t that efficient.
@@ -136,7 +145,7 @@ The boosting regression trees can be extended to classification and even ranking
 
 
 
-## C. XGBoost
+## 3. XGBoost
 
 XGBoost (Chen) was developed to put this on a more formal footing. Both xgboost and gbm follows the principle of gradient boosting, but in XGBoost the **size of the tree** and the magnitude of the weights are controlled by standard **regularization** parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
 
@@ -191,7 +200,7 @@ where `ω` is the vector of scores on leaves, and `T` is the number of leaves.
 
 Here is the article: [Light GBM model vs XGBoost Model Parameter Tuning and Examples](https://pyligent.github.io/2019-08-20-lightGBM_XGBoost/) to show hyperparameters in XGBoost.
 
-## D. LightGBM
+## 4. LightGBM
 
 LightGBM (LGBM) model is a relatively new model. Rather than **level-wise** tree growth in regular decision tree algorithms (credit from [here](https://github.com/Microsoft/LightGBM/blob/master/docs/)), 
 
@@ -230,7 +239,7 @@ In the [blog](https://towardsdatascience.com/understanding-gradient-boosting-mac
 ![early_stop](images/early_stop.png)
 
 
-## E. Comparison LighGBM vs XGboost
+## 5. Comparison LighGBM vs XGboost
 
 Here is the deeper description about LighGBM (best-first) and XGboost (depth-first):
 
