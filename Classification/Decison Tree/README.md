@@ -102,13 +102,7 @@ Here is an example followed the post: [Gini Index For Decision Trees](https://bl
 In this example, we can regard return = up/down as p/n.
 
 
-First use attribute `Past Trend` to split. P(Past Trend=Positive): 6/10, P(Past Trend=Negative): 4/10.
-
-P(Past Trend = Positive, Return = Up) = 4/6, P(Past Trend = Positive & Return = Down) = 2/6, then Gini index = 1 - ((4/6)^2 + (2/6)^2) = 0.45.
-
-P(Past Trend = Negative & Return = Up) = 0, P(Past Trend = Negative & Return = Down) = 4/4, then Gini index = 1 - ((0)^2 + (4/4)^2) = 0.
-
-Gini Index for Past Trend is the weighted sum of the Gini Indices: (6/10)0.45 + (4/10)0 = 0.27.
+* attribute `Past Trend` to split. P(Past Trend=Positive): 6/10, P(Past Trend=Negative): 4/10. P(Past Trend = Positive, Return = Up) = 4/6, P(Past Trend = Positive & Return = Down) = 2/6, then Gini index = 1 - ((4/6)^2 + (2/6)^2) = 0.45. P(Past Trend = Negative & Return = Up) = 0, P(Past Trend = Negative & Return = Down) = 4/4, then Gini index = 1 - ((0)^2 + (4/4)^2) = 0. Gini Index for Past Trend is the weighted sum of the Gini Indices: (6/10)0.45 + (4/10)0 = 0.27.
 
 
 
