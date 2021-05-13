@@ -14,9 +14,9 @@ Table of Contents:
 
 * [1. AdaBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#1-adaboost)
 * [2. Gradient Boosting](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2-gradient-boosting)
-     * [2.A Boosting steps in GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
-     * [2.B Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
-     * [2.C MART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
+     * [2.A Boosting steps in GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2a-boosting-steps-in-gbm)
+     * [2.B Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2b-math-intuition-of-gbm)
+     * [2.C MART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2c-mart)
 * [3. XGBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#3-xgboost)
 * [4. LightGBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#4-lightgbm)
 * [5. Comparison LighGBM vs XGboost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#5-comparison-lighgbm-vs-xgboost)
