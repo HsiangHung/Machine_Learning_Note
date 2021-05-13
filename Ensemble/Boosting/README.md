@@ -12,14 +12,14 @@ There are mainly two boosting algorithms: (1) Adaptive Boosting (Adaboost), (2) 
 
 Table of Contents:
 
-* [1. AdaBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#1-tree-algorithms-id3-c45-and-cart)
-* [2. Gradient Boosting](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#2-how-to-interpret-probability-in-tree)
-* [3. XGBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
+* [1. AdaBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#1-adaboost)
+* [2. Gradient Boosting](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2-gradient-boosting)
+* [3. XGBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#3-xgboost)
      * [3.A Information gain](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
      * [3.B Gini index](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
      * [3.C Numeric Attribute](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
-* [4. LightGBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
-* [5. Comparison LighGBM vs XGboost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
+* [4. LightGBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#4-lightgbm)
+* [5. Comparison LighGBM vs XGboost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#5-comparison-lighgbm-vs-xgboost)
 
 
 
@@ -155,7 +155,7 @@ The comprehensive tutorial on introduction to the model, [Introduction to Booste
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^1_i&space;=&space;\hat{y}^0_i&space;&plus;&space;f_1(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^1_i&space;=&space;\hat{y}^0_i&space;&plus;&space;f_1(x_i)" title="\hat{y}^1_i = \hat{y}^0_i + f_1(x_i)" /></a>
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="\hat{y}^2_i = \hat{y}^1_i + f_2(x_i) = f_1(x_i) + f_2(x_i)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="\hat{y}^2_i = \hat{y}^1_i + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)" /></a>
 
 ... Eventually we have the following relation
 
