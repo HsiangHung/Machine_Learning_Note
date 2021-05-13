@@ -14,10 +14,10 @@ Table of Contents:
 
 * [1. AdaBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#1-adaboost)
 * [2. Gradient Boosting](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2-gradient-boosting)
+     * [2.A Boosting steps in GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
+     * [2.B Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
+     * [2.C MART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
 * [3. XGBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#3-xgboost)
-     * [3.A Information gain](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
-     * [3.B Gini index](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
-     * [3.C Numeric Attribute](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
 * [4. LightGBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#4-lightgbm)
 * [5. Comparison LighGBM vs XGboost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#5-comparison-lighgbm-vs-xgboost)
 
@@ -117,13 +117,13 @@ Upper panel shows data and fitting models `F0(x)`, `F1(x)`, `F2(x)`, ....`Fm(x)`
 
 
 
-### Math Intuition of GBM
+### 2.B Math Intuition of GBM
 
 Previous description assumes all learners in the same weight. Where is the `gradient`? A GBM creates a set of predictors `F(x)`, and for a regression problem, the loss function is given by  
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;J(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}_i&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;J(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}_i&space;\big)^2" title="\textrm{Loss} = J(y, \hat{y}) = \sum_i \big( y_i - \hat{y}_i \big)^2" /></a>
 
-The boosting process is equivalent to minimizing `Loss` by sequentially generating models `F1(x)`, `F2(x)`, .... Therefore, we can add a superscript on the `Loss` function to represent the `Loss` function in `t`-th iteration
+The boosting process is equivalent to minimizing `Loss` by sequentially generating models `F0(x)`, `F1(x)`, .... Therefore, we can add a superscript on the `Loss` function to represent the `Loss` function in `t`-th iteration
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" title="J_t(y, \ \hat{y}) = \sum_i \big( y_i - \hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2" /></a>
 
@@ -140,7 +140,7 @@ Terence Parr in a Quora post [[Quora: What is an intuitive explanation of Gradie
 ![](images/golf.png)
 
 
-### MART 
+### 2.C MART 
 
 The boosting regression trees can be extended to classification and even ranking problems. See more detail on the [Github page](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting/MART) and Chris Burges' [paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf) for detail.
 
