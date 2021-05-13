@@ -99,7 +99,7 @@ Here is an example followed the post: [Gini Index For Decision Trees](https://bl
 
 ![](images/example_gini_index.png)
 
-In this example, we can regard return = `up`/`down` as `p`/`n`. We need to calculate gini indices for using `Past Trend`, `Open Interest`, `Trading Volume`.
+In this example, we can regard return = `up`/`down` as `p`/`n`. We need to calculate gini indices if using `Past Trend`, `Open Interest`, `Trading Volume` to split node.
 
 
 * First use attribute `Past Trend` to split:
