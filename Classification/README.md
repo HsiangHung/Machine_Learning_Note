@@ -1,7 +1,21 @@
 
 # Classification 
 
-## Binary Classification Models
+Table of Contents:
+
+* [1. Binary Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#1-tree-algorithms-id3-c45-and-cart)
+     * [1.A Logistic regression (LR) vs Decision Trees (DT)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
+     * [1.B Other model comparisons](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
+* [2. Binary Classification Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#2-how-to-interpret-probability-in-tree)
+     * [2.A Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
+     * [2.B AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
+     * [2.C Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
+* [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
+     * [3.A Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
+     * [3.B Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
+     
+
+## 1. Binary Classification Models
 
 The summary of Advantages and Disadvantages of different Classification Models [[GeeksForGeeks]][Advantages and Disadvantages of different Classification Models]:
 
@@ -15,7 +29,7 @@ The summary of Advantages and Disadvantages of different Classification Models [
 | Emsemble | nonlinear | low | high | Powerful and accurate, good performance. |  No interpretability, overfitting can easily occur, need hyperparameter tuning|
 
 
-#### A. Logistic regression (LR) vs Decision Trees (DT)
+#### 1.A Logistic regression (LR) vs Decision Trees (DT)
 
 Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree](https://dzone.com/articles/logistic-regression-vs-decision-tree))
 
@@ -33,16 +47,16 @@ Comparison can be visualized below (credit from [Logistic Regression versus Deci
 
 ![LR_vs_DT](images/LR_vs_DT.png)
 
-#### B. Other model comparisons
+#### 1.B Other model comparisons
 
 * For “relatively” very small dataset sizes, compare the performance of a discriminative Logistic Regression model to a related Naive Bayes classifier (a generative model) or SVMs, which may be less susceptible to noise and outlier points (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 * Logistic regression can be regarded as a one layer neural network (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 * One of the nice properties of logistic regression is that the logistic cost function (or max-entropy) is convex, and thus we are guaranteed to find the global cost minimum (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 
 
-## Binary Classification Metric
+## 2. Binary Classification Metric
 
-### A. Precision and Recall
+### 2.A Precision and Recall
 
 In most cases, there are no perfect classifiers. A good common question is which metric should we use for model selection, precision or recall? Classifier to have high True Positive Rate (TPR) or False Positive Rate (FPR)? It depends on domain and our business goal.
 
@@ -73,7 +87,7 @@ review rate = N(prob > threshold)/N
 ```
 where `N` is the number of data points.
 
-### B. AUC
+### 2.B AUC
 
 AUC stands for "Area under the ROC Curve." That is, AUC measures the entire two-dimensional area underneath the entire ROC curve (think integral calculus) from (0,0) to (1,1).
 
@@ -85,7 +99,7 @@ AUC provides an **aggregate** measure of performance across all possible classif
 
 
 
-### C. Selection of precision or recall
+### 2.C Selection of precision or recall
 
 #### 1. Business concern
 
@@ -136,7 +150,7 @@ On the other side, the author also shows PR curves is more useful to compare mod
 
 
 
-## Loss Function: Cross-Entropy
+## 3. Loss Function: Cross-Entropy
 
 
 The cross-entropy of the generic form given a data record is 
@@ -147,7 +161,7 @@ where `c` denotes class labels. `p` is the probability of target having class = 
 
 The cross-entropy can be used as loss to optimize using gradient descent in classification.
 
-### A. binary 
+### 3.A Binary 
 
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, i.e. `p = [1 0]` for y = 1; `p = [0 1]` for y = 0, and prediction `q` is a sigmoid function, it arrives at the commonly-seen cross-entropy (`h` is the hypothesis function)
 
@@ -168,7 +182,7 @@ Note that the **loss function of logistic regression model is convex**. The foll
 In short, we can roighly argue that the second derivatives of the loss are positive semi-definite, and the linear-combination of two or more convex functions (`log(h)` and `log(1-h)`) is also convex.
 
 
-### B. multiclass
+### 3.B Multiclass
 
 For multiclass, `c = {1, ...K}`, `p = [1 0 ... 0]` for y = K,... `p = [0 0 ... 1]` for y = 1..., we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
 
@@ -184,17 +198,7 @@ where `I = 1` for y = j; otherwise `I=0`.
 ## Reference
 
 
-<!-- [Multi-Class Metrics Made Simple, Part I: Precision and Recall]: https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2
-[[Boaz Shmueli-1] Multi-Class Metrics Made Simple, Part I: Precision and Recall](https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2)
 
-
-[Multi-Class Metrics Made Simple, Part II: the F1-score]: https://towardsdatascience.com/multi-class-metrics-made-simple-part-ii-the-f1-score-ebe8b2c2ca1
-[[Boaz Shmueli-2] Multi-Class Metrics Made Simple, Part II: the F1-score](https://towardsdatascience.com/multi-class-metrics-made-simple-part-ii-the-f1-score-ebe8b2c2ca1)
-
-
-[A Tale of Two Macro-F1's]: https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04
-[[Boaz Shmueli-3] A Tale of Two Macro-F1's](https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04)
- -->
 
 
 [Precision - Recall Curve, a Different View of Imbalanced Classifiers]: https://sinyi-chou.github.io/classification-pr-curve/
