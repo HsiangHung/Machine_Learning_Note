@@ -3,16 +3,14 @@
 
 Table of Contents:
 
-* [1. Binary Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#1-tree-algorithms-id3-c45-and-cart)
-     * [1.A Logistic regression (LR) vs Decision Trees (DT)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
-     * [1.B Other model comparisons](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
-* [2. Binary Classification Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#2-how-to-interpret-probability-in-tree)
-     * [2.A Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
-     * [2.B AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
-     * [2.C Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
-* [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
-     * [3.A Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
-     * [3.B Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
+* [1. Binary Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1-binary-classification-models)
+* [2. Binary Classification Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2-binary-classification-metric)
+     * [2.A Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a-precision-and-recall)
+     * [2.B AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b-auc)
+     * [2.C Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2c-selection-of-precision-or-recall)
+* [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cross-entropy)
+     * [3.A Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3a-binary)
+     * [3.B Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3b-multiclass)
      
 
 ## 1. Binary Classification Models
@@ -29,7 +27,7 @@ The summary of Advantages and Disadvantages of different Classification Models [
 | Emsemble | nonlinear | low | high | Powerful and accurate, good performance. |  No interpretability, overfitting can easily occur, need hyperparameter tuning|
 
 
-#### 1.A Logistic regression (LR) vs Decision Trees (DT)
+#### Logistic regression (LR) vs Decision Trees (DT)
 
 Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree](https://dzone.com/articles/logistic-regression-vs-decision-tree))
 
@@ -47,7 +45,7 @@ Comparison can be visualized below (credit from [Logistic Regression versus Deci
 
 ![LR_vs_DT](images/LR_vs_DT.png)
 
-#### 1.B Other model comparisons
+#### Other model comparisons
 
 * For “relatively” very small dataset sizes, compare the performance of a discriminative Logistic Regression model to a related Naive Bayes classifier (a generative model) or SVMs, which may be less susceptible to noise and outlier points (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 * Logistic regression can be regarded as a one layer neural network (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
