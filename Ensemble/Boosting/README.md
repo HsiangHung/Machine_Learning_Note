@@ -103,7 +103,7 @@ Now we see the `F1(x)` is a better regressor than `F0(x)` to fit the data, and l
 
 and so on. In this case, mathmetically we have an iterative relation
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;h_{t-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;h_{t-1}(x)" title="F_t (x) = F_{t-1}(x) + h_{t-1}(x)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;h_t(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;h_t(x)" title="F_t (x) = F_{t-1}(x) + h_t(x)" /></a>
 
 and the residual fitting model is given by   
 
