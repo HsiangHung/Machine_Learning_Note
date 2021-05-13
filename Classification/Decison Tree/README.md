@@ -103,7 +103,8 @@ In this example, we can regard return = up/down as p/n.
 
 
 * First use attribute `Past Trend` to split:
-|  | Return = up | Return = down |
+
+| \ | Return = up | Return = down |
 | --- | --- | --- | 
 | Past Trend = Positive | P(pos, up) = 4/6 | P(pos, down) = 2/6 | P(pos) = 6/10 |
 | Past Trend = negative | P(neg, up) = 0 | P(neg, down) = 4/4 | P(neg) = 4/10 |
