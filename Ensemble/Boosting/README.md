@@ -93,11 +93,11 @@ In the above left plot, the black line indicates the `F0(x)` predictor (model). 
 
     h1(x) = e1
 
-Similarly, the black line in the above right plot indicates the `h1(x)` predictor. Now we can combine the predictors `F2(x) = F1(x) + h1(x)` and the resulting predictor is the black line shown in the left hand plot below
+Similarly, the black line in the above right plot indicates the `h1(x)` predictor. Now we can combine the predictors `F1(x) = F0(x) + h1(x)` and the resulting predictor is the black line shown in the left hand plot below
 
 ![](images/GBM2.png)
 
-Now we see the `F2(x)` is a better regressor than `F1(x)` to fit the data, and leave residuals `e2 = y - y2` as shown on the right. Then we still fit the residuals `e2`
+Now we see the `F1(x)` is a better regressor than `F0(x)` to fit the data, and leave residuals `e2 = y - y1` as shown on the right (`y1 = F1(x)`). Then we still fit the residuals `e2`
 
     h2(x) = e2
 
