@@ -132,7 +132,7 @@ Gini Index for `Open Interest` is the weighted sum of the Gini Indices: (4/10)0.
 Gini Index for `Trading Volume` is the weighted sum of the Gini Indices: (7/10)0.49 + (3/10)0 = 0.34.
 
 
-From the above, we observe that ‘Past Trend’ has the lowest Gini Index and hence it will be chosen as the root node for how decision tree works.
+From the above, we observe that **Past Trend** has the lowest Gini Index and hence it will be chosen as the root node for how decision tree works.
 
 
 
