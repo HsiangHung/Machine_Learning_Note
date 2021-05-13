@@ -8,7 +8,7 @@ Boosting is one of ensemble techniques to **sequentially** generate predictors. 
 
 A larger number of gradient boosting iterations reduces training set errors. Raising the number of gradients boosting iterations too high increases overfitting. Therefore the number of iterations (trees) is a hyperparameter needed to tune ([Gradient Boosting: Gradient Boosting Regularization](https://corporatefinanceinstitute.com/resources/knowledge/other/gradient-boosting/)).
 
-There are mainly two boosting algorithms: (A) Adaptive Boosting (Adaboost), (B) Gradient Boosting (GBM). (C)[XGBoost](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) (Tianran Chen by optimizing GBM) and (D) LightGBM are brand new GBM-extension tools developed more recently.
+There are mainly two boosting algorithms: (1) Adaptive Boosting (Adaboost), (2) Gradient Boosting (GBM). [XGBoost](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) (Tianran Chen by optimizing GBM) and LightGBM are brand new GBM-extension tools developed more recently.
 
 Table of Contents:
 
