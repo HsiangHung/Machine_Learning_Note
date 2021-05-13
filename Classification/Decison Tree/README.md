@@ -99,19 +99,40 @@ Here is an example followed the post: [Gini Index For Decision Trees](https://bl
 
 ![](images/example_gini_index.png)
 
-In this example, we can regard return = `up`/`down` as `p`/`n`.
+In this example, we can regard return = `up`/`down` as `p`/`n`. We need to calculate gini indices for using `Past Trend`, `Open Interest`, `Trading Volume`.
 
 
 * First use attribute `Past Trend` to split:
 
 |  | Return = up | Return = down | P(trend) | Gini |
 | --- | --- | --- | --- | --- |
-| Past Trend = Positive | P(pos, up) = 4/6 | P(pos, down) = 2/6 | P(pos) = 6/10 | 1 - ((4/6)^2 + (2/6)^2) = 0.45 |
+| Past Trend = positive | P(pos, up) = 4/6 | P(pos, down) = 2/6 | P(pos) = 6/10 | 1 - ((4/6)^2 + (2/6)^2) = 0.45 |
 | Past Trend = negative | P(neg, up) = 0 | P(neg, down) = 4/4 | P(neg) = 4/10 | 1 - ((0)^2 + (4/4)^2) = 0 |
 
-Gini Index for Past Trend is the weighted sum of the Gini Indices: (6/10)0.45 + (4/10)0 = 0.27.
+Gini Index for `Past Trend` is the weighted sum of the Gini Indices: (6/10)0.45 + (4/10)0 = 0.27.
 
 
+* Second use attribute `Open Interest` to split:
+
+|  | Return = up | Return = down | P(interest) | Gini |
+| --- | --- | --- | --- | --- |
+| Open Interest = high | P(high, up) = 2/4 | P(high, down) = 2/4 | P(high) = 4/10 | 1 - ((2/4)^2 + (2/4)^2) = 0.5 |
+| Open Interest = low | P(low, up) = 2/6 | P(low, down) = 4/6 | P(low) = 6/10 | 1 - ((2/6)^2 + (4/6)^2) = 0.45 |
+
+Gini Index for `Open Interest` is the weighted sum of the Gini Indices: (4/10)0.5 + (6/10)0.45 = 0.47.
+
+
+* Third use attribute `Trading Volume` to split:
+
+|  | Return = up | Return = down | P(volume) | Gini |
+| --- | --- | --- | --- | --- |
+| Trading Volume = high | P(high, up) = 4/7 | P(high, down) = 3/7 | P(high) = 7/10 | 1 - ((4/7)^2 + (3/7)^2) = 0.49 |
+| Trading Volume = low | P(low, up) = 0 | P(low, down) = 3/3 | P(low) = 3/10 | 1 - ((0)^2 + (1)^2) = 0 |
+
+Gini Index for `Trading Volume` is the weighted sum of the Gini Indices: (7/10)0.49 + (3/10)0 = 0.34.
+
+
+From the above, we observe that ‘Past Trend’ has the lowest Gini Index and hence it will be chosen as the root node for how decision tree works.
 
 
 
