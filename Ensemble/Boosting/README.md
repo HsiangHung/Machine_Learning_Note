@@ -107,11 +107,13 @@ and so on. In this case, mathmetically we have an iterative relation
 
 and the residual fitting model is given by   
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=h_t&space;(x)&space;=&space;y&space;-&space;F_t(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_t&space;(x)&space;=&space;y&space;-&space;F_t(x)" title="h_t (x) = y - F_t(x)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=h_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" title="h_t (x) = y - F_{t-1}(x)" /></a>
 
 Prof. Ihler gave a [comprehensive description](http://sli.ics.uci.edu/Classes/2012F-273a?action=download&upname=10-ensembles.pdf) about the boosting steps in his lecture and here we borrow to show below
+
 ![](images/GBM3.png)
-Upper panel shows data and fitting models `F1(x)`, `F2(x)`, ....`Fm(x)` and lower shows the residuals. The first estimator is built on the leftmost, whereas the rightmost shows the last iteration. We can see by boosting, the predictors are becoming more and more complex but fit the data better and better. Meanwhile, the residuals are moving toward to smaller values (if you zoom in).
+
+Upper panel shows data and fitting models `F0(x)`, `F1(x)`, `F2(x)`, ....`Fm(x)` and lower shows the residuals. The first estimator is built on the leftmost, whereas the rightmost shows the last iteration. We can see by boosting, the predictors are becoming more and more complex but fit the data better and better. Meanwhile, the residuals are moving toward to smaller values (if you zoom in).
 
 
 
