@@ -32,21 +32,28 @@ Obviously `A` is the outlier and others are normal.
 
 Next we train 3 isolation trees in the forest:
 ```Python 
-iForest = isolation_forest(X[:5], n_trees=3, max_depth=100)
+iForest = isolation_forest(X, n_trees=3, max_depth=100)
 ```
-We will have three trees:
+After training, we can print out the trees:
 ```
-                    tree-1 
+{'feat1 <= 2.2181214836809806': [{'feat1 <= 1.7389572375053777': [{'feat1 <= 0.18538491015441844': [{'feat2 <= 0.39944974852534676': [-0.04571121291250773, 0.4311043323198237]}, -0.3728472765820943]}, 2.8733315826978525]}, 3.5]}
 
-                     ABCDE
-feat1 < 2.218       /    \
-                   BCDE   A
-feat1 < 1.739     /   \
-                BCD    E
-feat1 < 0.185   / \
-               BD  C
-feat2 < 0.399 / \
-             D  B
+{'feat2 <= 1.587423467387756': [{'feat2 <= 0.31144846892514394': [{'feat2 <= -0.12499170741512142': [-0.3728472765820943, -0.04571121291250773]}, 0.4311043323198237]}, {'feat1 <= 3.248530739825105': [2.8733315826978525, 3.5]}]}
+
+{'feat2 <= 0.1706085041001812': [{'feat1 <= 0.21151501086291638': [-0.04571121291250773, -0.3728472765820943]}, {'feat1 <= 0.3953008359360611': [0.4311043323198237, {'feat1 <= 2.438234497822728': [2.8733315826978525, 3.5]}]}]}
+```
+The trees are illustrated below:
+```
+                  tree-1   |                    tree-2               |                 tree-3
+                   ABCDE   |                    ABCDE                |                 ABCDE
+feat1 < 2.22      /    \   | feat2 < 1.59      /   \                 | feat2 < 0.17   /    \
+                 BCDE   A  |                  BCD    AE              |               CD    ABE
+feat1 < 1.74     /   \     | feat2 < 0.31    / \    / \ feat1 > 3.25 | feat1 < 0.21  /\    / \  feat1 > 0.39           
+                BCD    E   |                 CD  B  E   A            |              D  C  B  AE
+feat1 < 0.19   / \         | feat2 < -0.13  / \                      | feat1 < 2.44          /\
+              BD  C        |                D   C                    |                      E  A
+feat2 < 0.4  / \           |                                         |
+            D   B          |                                         |
 ```
 
 **SMOTE** creates new instances of the minority class by forming convex combinations of neighboring instances. [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] As the graphic below shows (credit: (a) from [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] and (b,c) from [[Jason Brownlee]][SMOTE for Imbalanced Classification with Python]), it effectively draws lines between minority points in the feature space, explained in (a), and samples along these lines. This allows us to balance our data-set without as much overfitting, as we create new synthetic examples rather than using duplicates. 
