@@ -18,19 +18,35 @@ Table of Contents:
 
 The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch].
 
-We used the above code to build an isolation forest. Suppose we have five 2D data instances like
+We show how the isolation forest works step by step using the above code. Suppose we have five 2D data instances like
 
 | | feat1 | feat2|
 |:-:|:-:| :-:|
-|0|  3.300000 | 3.500000 |
-|1| -0.522788 | 0.269247 |
-|2| -0.016005 |-0.028487 |
-|3|  0.056282 |-0.458942 |
-|4| -0.828018 |-1.886786 |
+|A|  3.300000 | 3.500000 |
+|B| -0.397208 | 0.431104 |
+|C|  0.749262 |-0.372847 |
+|D|  0.167278 |-0.045711 |
+|E|  1.752083 | 2.873332 |
 
-and we are training 3 isolation trees in the forest:
+Obviously `A` is the outlier and others are normal.
+
+Next we train 3 isolation trees in the forest:
 ```Python 
 iForest = isolation_forest(X[:5], n_trees=3, max_depth=100)
+```
+We will have three trees:
+```
+                    tree-1 
+
+                     ABCDE
+feat1 < 2.218       /    \
+                   BCDE   A
+feat1 < 1.739     /   \
+                BCD    E
+feat1 < 0.185   / \
+               BD  C
+feat2 < 0.399 / \
+             D  B
 ```
 
 **SMOTE** creates new instances of the minority class by forming convex combinations of neighboring instances. [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] As the graphic below shows (credit: (a) from [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] and (b,c) from [[Jason Brownlee]][SMOTE for Imbalanced Classification with Python]), it effectively draws lines between minority points in the feature space, explained in (a), and samples along these lines. This allows us to balance our data-set without as much overfitting, as we create new synthetic examples rather than using duplicates. 
