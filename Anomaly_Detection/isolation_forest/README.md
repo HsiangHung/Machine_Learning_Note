@@ -18,7 +18,7 @@ Table of Contents:
 
 The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch].
 
-We used the above code to build an isolation forest. Suppose the five input data instances are
+We used the above code to build an isolation forest. Suppose we have five 2D data instances like
 
 | | feat1 | feat2|
 |:-:|:-:| :-:|
@@ -28,8 +28,8 @@ We used the above code to build an isolation forest. Suppose the five input data
 |3|  0.056282 |-0.458942 |
 |4| -0.828018 |-1.886786 |
 
-and we put 3 trees in the forest:
-```
+and we are training 3 isolation trees in the forest:
+```Python 
 iForest = isolation_forest(X[:5], n_trees=3, max_depth=100)
 ```
 
