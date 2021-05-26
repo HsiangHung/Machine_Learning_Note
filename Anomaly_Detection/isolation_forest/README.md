@@ -17,23 +17,27 @@ Table of Contents:
 
 ## Isolation Forest From Scratch
 
-The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch] and [[Isolation Forest Step by Step] Isolation Forest Step by Step].
+The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch] and [[Isolation Forest Step by Step]][Isolation Forest Step by Step].
 
-## isolation tree and forest
+## Isolation tree and forest
 
-1. Step 1 — Subsampling data for training
+This session explains how to build an isolation forest step by step [[Isolation Forest Step by Step]][Isolation Forest Step by Step]
 
-2. Step 2 — Making binary decision tree: Suppose we have two attributes (i.e. Q1 or Q2) as shown below, random choice of an attribute and random choice of a Q1 or Q2 value between its min and max (i.e. Q1’)
+1. **Step 1** — Subsampling data for training
 
-3. Step 3 — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
+2. **Step 2** — Making binary decision tree: Suppose we have two attributes (i.e. Q1 or Q2) as shown below, random choice of an attribute and random choice of a Q1 or Q2 value between its min and max (i.e. Q1’)
+
+3. **Step 3** — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
 
 So far the step 1-3 can be summarized below
 
 ![](images/isolation_tree.png)
 
-Step 4 — Feeding data set and calculating anomaly score.
+4. **Step 4** — Feeding data set and calculating anomaly score, which defines as 
 
-Step 5 - Compute anomaly score: We calculate this anomaly score for each tree and average them out across different trees and get the final anomaly score for an entire forest for a given data point
+<a href="https://www.codecogs.com/eqnedit.php?latex=S&space;=&space;e^{-\frac{E(h)}{c(n)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S&space;=&space;e^{-\frac{E(h)}{c(n)}}" title="S = e^{-\frac{E(h)}{c(n)}}" /></a>
+
+5. **Step 5** - Compute anomaly score: We calculate this anomaly score for each tree and average them out across different trees and get the final anomaly score for an entire forest for a given data point
 
 ### Example
 
