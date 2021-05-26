@@ -159,6 +159,7 @@ California house price prediction from Kaggle:
 
 1. [House-Price-Prediction-Regression-with-Tensorflow-Keras-](https://github.com/Harshita9511/House-Price-Prediction-Regression-with-Tensorflow-Keras-/blob/master/Housing_Price_Prediction_(Regression)_with_Tensorflow_Keras.ipynb)
 2. [Kaggle-California-Housing-Prices](https://github.com/mohitgupta-omg/Kaggle-California-Housing-Prices/blob/master/k%20California%20Housing%20Prices.ipynb)
+3. [My github](https://github.com/HsiangHung/Deep-Learning/blob/master/regression/Regression%20NN.ipynb)
 
 
 
