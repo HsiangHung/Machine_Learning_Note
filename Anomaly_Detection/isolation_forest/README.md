@@ -1,6 +1,7 @@
 # Isolation Forest
 
-This session is dedicated to deep understanding on isolation forest model.
+This session is dedicated to deep understanding on isolation forest model. “Fewer and different” data points are the main idea; outliers ar more isolated than others; in other words, outliers takes less path for them to be isolated.
+
 
 Table of Contents:
 
@@ -16,8 +17,20 @@ Table of Contents:
 
 ## Isolation Forest From Scratch
 
-The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch].
+The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch] and [[Isolation Forest Step by Step] Isolation Forest Step by Step].
 
+## isolation tree and forest
+
+Step 1 — Sampling for Training
+
+Step 2 — Making binary decision tree
+random choice of an attribute (i.e. Q1 or Q2) / random choice of a Q1 or Q2 value between its min and max (i.e. Q1’)
+
+Step 3 — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
+
+Step 4 — Feeding data set and calculating anomaly score.
+
+Step 5 - Compute anomaly score: We calculate this anomaly score for each tree and average them out across different trees and get the final anomaly score for an entire forest for a given data point
 
 ### Example
 
@@ -62,7 +75,11 @@ feat2 < 0.4  / \           |                                         |
 
 ### Compute path length 
 
-**SMOTE** creates new instances of the minority class by forming convex combinations of neighboring instances. [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] As the graphic below shows (credit: (a) from [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] and (b,c) from [[Jason Brownlee]][SMOTE for Imbalanced Classification with Python]), it effectively draws lines between minority points in the feature space, explained in (a), and samples along these lines. This allows us to balance our data-set without as much overfitting, as we create new synthetic examples rather than using duplicates. 
+The path length for `A`: [1,2,3], mean length = 2. Others' mean lengths `B`: [4,2,2], `C`: [3,3,2], `D`: [4,3,2], `E`: [2,2,3] are all larger than 2.
+
+
+
+
 
 ![SMOTE_example](images/SMOTE_example.png)
 
@@ -88,4 +105,16 @@ The modified Z score `M` is defined as [[NIST/SEMATECH e-Handbook of Statistical
 
 [Isolation Forest from Scratch]: https://towardsdatascience.com/isolation-forest-from-scratch-e7e5978e6f4c
 [[Carlos Mougan] Isolation Forest from Scratch](https://towardsdatascience.com/isolation-forest-from-scratch-e7e5978e6f4c)
+
+
+[Outlier Detection with Extended Isolation Forest]: https://towardsdatascience.com/outlier-detection-with-extended-isolation-forest-1e248a3fe97b
+[[Eryk Lewinson] Outlier Detection with Extended Isolation Forest](https://towardsdatascience.com/outlier-detection-with-extended-isolation-forest-1e248a3fe97b)
+
+
+[Isolation Forest Step by Step]: https://hyunsukim-9320.medium.com/isolation-forest-step-by-step-341b82923168
+[[Hyunsu Kim] Isolation Forest Step by Step](https://hyunsukim-9320.medium.com/isolation-forest-step-by-step-341b82923168)
+
+
+[Anomaly Detection Using Isolation Forest Algorithm]: https://medium.com/analytics-vidhya/anomaly-detection-using-isolation-forest-algorithm-8cf36c38d6f7
+[[Saurabh Singh] Anomaly Detection Using Isolation Forest Algorithm](https://medium.com/analytics-vidhya/anomaly-detection-using-isolation-forest-algorithm-8cf36c38d6f7)
 
