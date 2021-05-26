@@ -47,11 +47,11 @@ The trees are illustrated below:
                   tree-1   |                    tree-2               |                 tree-3
                    ABCDE   |                    ABCDE                |                 ABCDE
 feat1 < 2.22      /    \   | feat2 < 1.59      /   \                 | feat2 < 0.17   /    \
-                 BCDE   A  |                  BCD    AE              |               CD    ABE
+                 BCDE   A  |                  BCD   AE               |               CD    ABE
 feat1 < 1.74     /   \     | feat2 < 0.31    / \    / \ feat1 > 3.25 | feat1 < 0.21  /\    / \  feat1 > 0.39           
-                BCD    E   |                 CD  B  E   A            |              D  C  B  AE
+                BCD   E    |                CD  B  E   A             |              D  C  B  AE
 feat1 < 0.19   / \         | feat2 < -0.13  / \                      | feat1 < 2.44          /\
-              BD  C        |                D   C                    |                      E  A
+              BD  C        |               D   C                     |                      E  A
 feat2 < 0.4  / \           |                                         |
             D   B          |                                         |
 ```
