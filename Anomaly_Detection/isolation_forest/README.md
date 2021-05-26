@@ -18,6 +18,9 @@ Table of Contents:
 
 The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch].
 
+
+### Example
+
 We show how the isolation forest works step by step using the above code. Suppose we have five 2D data instances like
 
 | | feat1 | feat2|
@@ -55,6 +58,9 @@ feat1 < 0.19   / \         | feat2 < -0.13  / \                      | feat1 < 2
 feat2 < 0.4  / \           |                                         |
             D   B          |                                         |
 ```
+
+
+### Compute path length 
 
 **SMOTE** creates new instances of the minority class by forming convex combinations of neighboring instances. [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] As the graphic below shows (credit: (a) from [[Devin Soni]][Dealing with Imbalanced Classes in Machine Learning] and (b,c) from [[Jason Brownlee]][SMOTE for Imbalanced Classification with Python]), it effectively draws lines between minority points in the feature space, explained in (a), and samples along these lines. This allows us to balance our data-set without as much overfitting, as we create new synthetic examples rather than using duplicates. 
 
