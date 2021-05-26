@@ -22,16 +22,17 @@ The optimization objective is to minimize the cost function.
 
 Table of Contents:
 
-* [1. Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1-binary-classification-models)
-     * [1.A R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a-precision-and-recall)
-     * [1.B Adjusted R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b-auc)
-* [2. Linear Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2-binary-classification-metric)
-     * [2.A Assumption for linear regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a-precision-and-recall)
-     * [2.B Maximum likelihood estimate](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b-auc)
-     * [2.C Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2c-selection-of-precision-or-recall)
-* [3. Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cross-entropy)
-     * [3.A How to test Multicollinearity?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3a-binary)
-     * [3.B How to deal with Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3b-multiclass)
+* [1. Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#1-metric)
+     * [1.A R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#1a-r-squared)
+     * [1.B Adjusted R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#1b-adjusted-r-squared)
+* [2. Linear Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2-linear-regression)
+     * [2.A Assumption for linear regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2a-assumption-for-linear-regression)
+     * [2.B Maximum likelihood estimate](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2b-maximum-likelihood-estimate)
+* [3. Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3-multicollinearity)
+     * [3.A How to test Multicollinearity?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3a-how-to-test-multicollinearity)
+     * [3.B How to deal with Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3b-how-to-deal-with-multicollinearity)
+* [4. Deep learning for regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#4-deep-learning-for-regression)
+
 
 
 ## 1. Metric
@@ -157,7 +158,6 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 California house price prediction from Kaggle:
 
 1. [House-Price-Prediction-Regression-with-Tensorflow-Keras-](https://github.com/Harshita9511/House-Price-Prediction-Regression-with-Tensorflow-Keras-/blob/master/Housing_Price_Prediction_(Regression)_with_Tensorflow_Keras.ipynb)
-
 2. [Kaggle-California-Housing-Prices](https://github.com/mohitgupta-omg/Kaggle-California-Housing-Prices/blob/master/k%20California%20Housing%20Prices.ipynb)
 
 
