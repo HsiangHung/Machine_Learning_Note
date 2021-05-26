@@ -21,12 +21,13 @@ The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from S
 
 ## isolation tree and forest
 
-Step 1 — Sampling for Training
+1. Step 1 — Subsampling data for training
 
-Step 2 — Making binary decision tree
-random choice of an attribute (i.e. Q1 or Q2) / random choice of a Q1 or Q2 value between its min and max (i.e. Q1’)
+2. Step 2 — Making binary decision tree: Suppose we have two attributes (i.e. Q1 or Q2) as shown below, random choice of an attribute and random choice of a Q1 or Q2 value between its min and max (i.e. Q1’)
 
-Step 3 — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
+3. Step 3 — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
+
+So far the step 1-3 can be summarized below
 
 ![](images/isolation_tree.png)
 
