@@ -1,6 +1,7 @@
 
 # Regression 
 
+
 Regression is to models when the target variable `y` is numeric, continuous
 
 ```
@@ -19,11 +20,25 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}_i&space;=&spac
 The optimization objective is to minimize the cost function. 
 
 
-## Metric
+Table of Contents:
+
+* [1. Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1-binary-classification-models)
+     * [1.A R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a-precision-and-recall)
+     * [1.B Adjusted R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b-auc)
+* [2. Linear Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2-binary-classification-metric)
+     * [2.A Assumption for linear regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a-precision-and-recall)
+     * [2.B Maximum likelihood estimate](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b-auc)
+     * [2.C Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2c-selection-of-precision-or-recall)
+* [3. Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cross-entropy)
+     * [3.A How to test Multicollinearity?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3a-binary)
+     * [3.B How to deal with Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3b-multiclass)
+
+
+## 1. Metric
 
 A simple evaludation for regression models is MSE, mean saured errors. There are others:
 
-### 1. R-squared
+### 1.A R-squared
 
 R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]
 
@@ -46,7 +61,7 @@ TSS-RSS gives us how much variation in `y` is explained by our model. R-squared 
 0 <= R-squared <= 1. If this value is 0.7, it means that the independent variables explain 70% of the variation in the target variable. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
 
 
-### 2. Adjusted R-squared
+### 1.B Adjusted R-squared
 
 A major problem is that R-sqaured is related to the number of variables we add to our regression model. That is, even if we are adding redundant variables to the data, the value of R-squared does not decrease. This clearly does not make sense because some of the independent variables might not be useful in determining the target variable. 
 
@@ -59,14 +74,14 @@ Thus, if R-squared does not increase significantly on the addition of a new inde
 On the other hand, if on adding the new independent variable we see a significant increase in R-squared value, then the Adjusted R-squared value will also increase.
 
 
-## Linear Regression
+## 2. Linear Regression
 
 The linear regression has a generic form
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;&plus;&space;\epsilon&space;=&space;\bold{x}&space;\theta&space;&plus;&space;\epsilon" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;&plus;&space;\epsilon&space;=&space;\bold{x}&space;\theta&space;&plus;&space;\epsilon" title="\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 +\cdots + \epsilon = \bold{x} \theta + \epsilon" /></a>
 
 
-### Assumption 
+### 2.A Assumption for linear regression
 
 There are four assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression]:
 
@@ -82,7 +97,7 @@ There are four assumptions associated with a linear regression model [[BUMC]][Si
 * **Normality**: For any fixed value of X, Y is normally distributed.
 
 
-### Maximum Likelihood Estimate
+### 2.B Maximum likelihood estimate
 
 Given a model `θ`, the likelihood of having a data point `(xi, yi)` is a normal distribution as
 
@@ -97,7 +112,7 @@ The following is the picture, credit from Prof. Nando de Freitas's UBC Machine l
 ![](images/gaussian_likelihood.png)
 
 
-## Multicollinearity
+## 3. Multicollinearity
 
 
 Multicollinearity causes the following two basic types of problems:
@@ -108,7 +123,7 @@ Multicollinearity causes the following two basic types of problems:
 
 Severe multicollinearity is a major problem, because it increases the variance of the regression coefficients, making them unstable. The more variance they have, the **more difficult it is to interpret the coefficients**.
 
-### How to test Multicollinearity?
+### 3.A How to test Multicollinearity?
 
 1. Correlation matrix / Correlation plot
 2. Variation Inflation Factor (VIF): identifies correlation between independent variables and the strength of that correlation. 
@@ -123,7 +138,7 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"
 * VIF = 1 to 5 Moderate correlation
 * VIF >10 → High correlation
 
-### How to deal with Multicollinearity
+### 3.B How to deal with Multicollinearity
 
 * **Remove highly correlated predictors from the model**: If you have two or more factors with a high VIF, remove one from the model. Consider using stepwise regression, best subsets regression, or specialized knowledge of the data set to remove these variables. Select the model that has the highest R-squared value [[Minitab Blog]][Enough Is Enough! Handling Multicollinearity in Regression Analysis]. 
 
@@ -137,16 +152,19 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 
 
 
+## 4. Deep learning for regression
 
+California house price prediction from Kaggle:
+
+1. [House-Price-Prediction-Regression-with-Tensorflow-Keras-](https://github.com/Harshita9511/House-Price-Prediction-Regression-with-Tensorflow-Keras-/blob/master/Housing_Price_Prediction_(Regression)_with_Tensorflow_Keras.ipynb)
+
+2. [Kaggle-California-Housing-Prices](https://github.com/mohitgupta-omg/Kaggle-California-Housing-Prices/blob/master/k%20California%20Housing%20Prices.ipynb)
 
 
 
 
 
 ## Reference
-
-
-
 
 
 
