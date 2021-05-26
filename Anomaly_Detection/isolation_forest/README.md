@@ -28,6 +28,8 @@ random choice of an attribute (i.e. Q1 or Q2) / random choice of a Q1 or Q2 valu
 
 Step 3 — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
 
+![](images/isolation_tree.png)
+
 Step 4 — Feeding data set and calculating anomaly score.
 
 Step 5 - Compute anomaly score: We calculate this anomaly score for each tree and average them out across different trees and get the final anomaly score for an entire forest for a given data point
@@ -75,7 +77,7 @@ feat2 < 0.4  / \           |                                         |
 
 ### Compute path length 
 
-The path length for `A`: [1,2,3], mean length = 2. Others' mean lengths `B`: [4,2,2], `C`: [3,3,2], `D`: [4,3,2], `E`: [2,2,3] are all larger than 2.
+An outlier is more isolated, and have shorter path length. The path length for data `A` on each tree is [1,2,3], meaning avg path length = 2. On the other hand, path lengths `B`: [4,2,2], `C`: [3,3,2], `D`: [4,3,2], `E`: [2,2,3] are all larger than 2, which indicate normal data points.
 
 
 
