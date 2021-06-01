@@ -5,8 +5,10 @@ The comparison summary between binary and mutliclass classification [[Amey Band]
 
 | Binary Classification |  Multiclass Classification |  
 | --- | --- | 
-| two class | Multiple class | 
-| one classifier | 1.     One vs. All: `N` classifier    2.   One vs. One: `N(N-1)/2` classifier | 
+| two class | Multiple classes | 
+| one classifier | 1. One vs. All: `N` classifier |
+|    | 2. One vs. One: `N(N-1)/2` classifier | 
+|    | 3. softmax regression | 
 | `2 x 2` Confusion Matrix | `N x N` Confusion matrix  | 
 
 
