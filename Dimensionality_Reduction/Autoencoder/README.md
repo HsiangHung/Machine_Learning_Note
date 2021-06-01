@@ -35,11 +35,14 @@ The first term comes the reconstruction cost `C(x,x̂)`, which is the same as th
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" title="C(x,\hat{x}) = J(\Theta)= \frac{1}{m}\sum^m_{i=1} \frac{1}{2}|| h_{\Theta}(x_i) -y_i ||^2" /></a>
 
-The second is the regularization term to **penalize the activations** of hidden units. There are two main ways to penalize the activation:
+The second is the regularization term to **penalize the activations** of hidden units. There are two main ways to penalize the activation ([Jermey Jordan](https://www.jeremyjordan.me/autoencoders/) called them `Sparse Autoencoders`):
 
 ### 2.A L1 Regularization:
 
-   <a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;&plus;&space;\sum_{h}\sum_i&space;|a^{(h)}_i|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;&plus;&space;\sum_{h}\sum_i&space;|a^{(h)}_i|" title="C(x,\hat{x}) + \sum_{h}\sum_i |a^{(h)}_i|" /></a>
+L1 regularization adds a term to our loss function that penalizes the absolute value of the vector of activations a in layer h for observation i, scaled by a tuning parameter λ. The resultsing cost function is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" title="C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|" /></a>
+
 
 ### 2.B KL-Divergence: 
 
