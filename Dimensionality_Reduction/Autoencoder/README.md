@@ -19,13 +19,13 @@ But an autocorder is trained as
 
 In other words, we build a model to predict output with the same dimension as input and minimum loss on information [[Elior Cohen]][Reducing Dimensionality from Dimensionality Reduction Techniques]. The values of the parameters in the hidden layers is updated by back-progagation.
 
-## Interpretation of AutoEncoders
+## 1. Interpretation of AutoEncoders
 
 The autoencoder learns an approximation for the identity function, and by placing constraints on the network, such as by limiting the number of hidden units, we can discover interesting structure about the data [[UFLDL Tutorial]][Autoencoders].
 
 As a concrete example, suppose the inputs x are the pixel intensity values from a 10×10 image (100 pixels) so n=100, and there are 50 hidden units in layer L2, and we still have output layer n=100. Since there are only 50 hidden units, the network is forced to learn a ”compressed” representation of the input, i.e. **reconstruct** the 100-pixel input x. If the input were completely random—say, each `x_i` comes from an iid Gaussian independent of the other features—then this compression task would be very difficult. But if there is structure in the data, for example, if some of the input features are correlated, then this algorithm will be able to discover some of those correlations [[UFLDL Tutorial]][Autoencoders].
 
-## Cost (Loss) Function
+## 2. Cost (Loss) Function
 
 Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders][[Jermey Jordan]][Introduction to autoencoders]
 
@@ -37,11 +37,13 @@ The first term comes the reconstruction cost `C(x,x̂)`, which is the same as th
 
 The second is the regularization term to **penalize the activations** of hidden units. There are two main ways to penalize the activation:
 
-L1 Regularization:
+### 2.A L1 Regularization:
 
    <a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;&plus;&space;\sum_{h}\sum_i&space;|a^{(h)}_i|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;&plus;&space;\sum_{h}\sum_i&space;|a^{(h)}_i|" title="C(x,\hat{x}) + \sum_{h}\sum_i |a^{(h)}_i|" /></a>
 
-or KL-Divergence: In essence, KL-divergence is a measure of the difference between two probability distributions. Suppose we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a>  to denote the activation of the `j`-th hidden unit of hidden layer `h`, when the network is given a specific input x, then 
+### 2.B KL-Divergence: 
+
+In essence, KL-divergence is a measure of the difference between two probability distributions. Suppose we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a>  to denote the activation of the `j`-th hidden unit of hidden layer `h`, when the network is given a specific input x, then 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x^{(i)})&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x^{(i)})&space;\big]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x^{(i)}) \big]" /></a>
 
