@@ -51,11 +51,11 @@ L1 regularization adds a term to our loss function that penalizes the absolute v
 
 ### 2.B KL-Divergence: 
 
-In essence, KL-divergence is a measure of the difference between two probability distributions. 
+In essence, KL-divergence is a measure of the difference between two probability distributions. Define 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x^{(i)})&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x^{(i)})&space;\big]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x^{(i)}) \big]" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x_i) \big]" /></a>
 
-be the average activation of hidden unit j (averaged over the training set). We would like to (approximately) enforce the constraint 
+be the average activation of hidden unit `j` (averaged over the training set). We would like to (approximately) enforce the constraint 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\rho" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\rho" title="\hat{\rho}_j = \rho" /></a>
 
