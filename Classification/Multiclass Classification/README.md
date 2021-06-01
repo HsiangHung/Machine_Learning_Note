@@ -10,7 +10,20 @@ The summary [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One
 | `2 x 2` Confusion Matrix | `N x N` Confusion matrix  | 
 
 
-## Classification Models
+Table of Contents:
+
+
+* [1. Multiclass Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
+     * [1.A One vs. All (One-vs-Rest)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
+     * [1.B One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
+     * [1.C A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
+* [2. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#4-decision-tree-regression)
+* [5. Feature Importance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#5-feature-importance)
+* [6. How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#6-how-to-deal-with-missing-values)
+
+
+
+## 1. Multiclass Classification Models
 
 Assume we have data like below (N=3):
 
@@ -19,7 +32,7 @@ Assume we have data like below (N=3):
 
 
 
-### 1 One vs. All (One-vs-Rest)
+### 1.A One vs. All (One-vs-Rest)
 
 For the N-class instances dataset, we have to generate the N-binary classifier models (credit from [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]).
 
@@ -34,7 +47,7 @@ As an example on Green-blue-red calss, if we have a test case with a probability
 
 The biggest issue with one-vs-all classification is **Class Imbalance**. Consider we have 5 classes, and even number of samples of each class i.e. each class makes up 20% of the data. When you do a one-vs-all classification, you convert the problem into 5 binary classification problems, and in each of the 5 cases you end up with a 20-80 distribution. See the [Quora post: What are the issues with one vs all classification approach?](https://www.quora.com/What-are-the-issues-with-one-vs-all-classification-approach).
 
-### 2 One vs. One (OvO)
+### 1.B One vs. One
 
 In One-vs-One classification, for the N-class instances dataset, we have to generate the `N(N-1)/2` binary classifier models. 
 
@@ -46,7 +59,7 @@ Taking the above example, we divide this problem into N* (N-1)/2 = 3 binary clas
 Each binary classifier predicts one class label. When we input the test data to the classifier, then the model with the **majority counts** is concluded as a result.
 
 
-### 3 A Single Multi-Class Classifier 
+### 1.C A Single Multi-Class Classifier 
 
 The [comparison](https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier) between multiple classifiers is:
 
@@ -71,7 +84,7 @@ In the Naive Bayes classifier, we use Bayes’ theorem to break down the joint p
 SVMs are inherently two-class classifiers. In the multiclass SVM, if it is built as one-versus-rest classifiers, choose the class which classifies the test datum with greatest margin. If built as one-vs-one classifiers, still choose the class that is selected by the most classifiers [[Stanford NLP]][Multiclass SVMs].
 
 
-## Multi-class Classification Metric
+## 2. Metrics
 
 
 For binary classification, a confusion matrix has two rows and two columns. For multi-class classification problem, we categorize each sample into 1 of K classes to make `K x K` confusion matrix. In each class, we can still compute precision and recall on each class [[Boaz Shmueli-1]][Multi-Class Metrics Made Simple, Part I: Precision and Recall].
