@@ -39,7 +39,7 @@ The second is the regularization term to **penalize the activations** of hidden 
 
 ### 2.A L1 Regularization:
 
-L1 regularization adds a term to our loss function that penalizes the absolute value of the vector of activations `a` in `j`-th neuron of the layer `h` for observation `i`, scaled by a tuning parameter λ. The resultsing cost function is
+L1 regularization adds a term to our loss function that penalizes the absolute value of the vector of activations `a` in `j`-th neuron of the layer `h` for observation `i`, scaled by a tuning parameter λ [[Jermey Jordan]][Introduction to autoencoders]. The resultsing cost function reads as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" title="C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|" /></a>
 
@@ -105,3 +105,7 @@ Therefore the regularization term to our optimization objective that penalizes <
 
 [Dimensionality reduction using Keras Auto Encoder]: https://www.kaggle.com/saivarunk/dimensionality-reduction-using-keras-auto-encoder
 [[Varun Kruthiventi] Dimensionality reduction using Keras Auto Encoder](https://www.kaggle.com/saivarunk/dimensionality-reduction-using-keras-auto-encoder)
+
+
+[Autoencoder]: https://en.wikipedia.org/wiki/Autoencoder
+[[Wiki] Autoencoder](https://en.wikipedia.org/wiki/Autoencoder)
