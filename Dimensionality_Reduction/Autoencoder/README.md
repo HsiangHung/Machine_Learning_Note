@@ -23,7 +23,7 @@ In other words, we build a model to predict output with the same dimension as in
 
 The autoencoder learns an approximation for the identity function, and by placing constraints on the network, such as by limiting the number of hidden units, we can discover interesting structure about the data [[UFLDL Tutorial]][Autoencoders].
 
-In other words, we implement neural networks for the task of representation learning and the encoding will learn and describe **latent** attributes of the input data. Compared to PCA which attempts to discover a lower dimensional hyperplane which describes the original data, autoencoders are capable of learning nonlinear relation between features. The following illustration describes the idea:
+In other words, we implement neural networks for the task of representation learning and the encoding will learn and describe **latent** attributes of the input data. Compared to PCA which attempts to discover a lower dimensional hyperplane which describes the original data, autoencoders are capable of learning nonlinear relation between features. The following illustration describes the idea (credit by [[Jermey Jordan]][Introduction to autoencoders]):
 
 
 ![](images/PCA_vs_autoencoder.png)
