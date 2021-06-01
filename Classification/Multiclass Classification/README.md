@@ -1,12 +1,12 @@
 
 # Multiclass Classification 
 
-The summary [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]
+The comparison summary between binary and mutliclass classification [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]
 
-| Binary Classification |  Multi-class Classification |  
+| Binary Classification |  Multiclass Classification |  
 | --- | --- | 
 | two class | Multiple class | 
-| one classifier | One vs. All: `N` classifier; One vs. One: `N(N-1)/2` classifier | 
+| one classifier | One vs. All: `N` classifier,  One vs. One: `N(N-1)/2` classifier | 
 | `2 x 2` Confusion Matrix | `N x N` Confusion matrix  | 
 
 
