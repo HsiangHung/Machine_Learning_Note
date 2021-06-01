@@ -35,7 +35,12 @@ The first term comes the reconstruction cost `C(x,x̂)`, which is the same as th
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" title="C(x,\hat{x}) = J(\Theta)= \frac{1}{m}\sum^m_{i=1} \frac{1}{2}|| h_{\Theta}(x_i) -y_i ||^2" /></a>
 
-The second is the regularization term to **penalize the activations** of hidden units. There are two main ways to penalize the activation ([Jermey Jordan](https://www.jeremyjordan.me/autoencoders/) called them `Sparse Autoencoders`): **L1 regularization** and **KL-Divergence**. In the following, we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a>  to denote the activation of the `j`-th hidden unit of hidden layer `h`, when the network is given a specific input x.
+The second is the regularization term to **penalize the activations** of hidden units. There are two main ways to penalize the activation ([Jermey Jordan](https://www.jeremyjordan.me/autoencoders/) called them `Sparse Autoencoders`): 
+
+1. L1 regularization
+2. KL-Divergence 
+
+In the following, we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a>  to denote the activation of the `j`-th hidden unit of hidden layer `h`, when the network is given a specific input x.
 
 ### 2.A L1 Regularization:
 
