@@ -15,13 +15,12 @@ The comparison summary between binary and mutliclass classification [[Amey Band]
 Table of Contents:
 
 
-* [1. Multiclass Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
-     * [1.A One vs. All (One-vs-Rest)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
-     * [1.B One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
-     * [1.C A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
-* [2. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#4-decision-tree-regression)
-* [5. Feature Importance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#5-feature-importance)
-* [6. How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#6-how-to-deal-with-missing-values)
+* [1. Multiclass Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1-multiclass-classification-models)
+     * [1.A One vs. All (One-vs-Rest)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1a-one-vs-all-one-vs-rest)
+     * [1.B One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1b-one-vs-one)
+     * [1.C A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1c-a-single-multi-class-classifier)
+* [2. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2-metrics)
+
 
 
 
