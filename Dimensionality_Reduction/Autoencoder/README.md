@@ -23,6 +23,13 @@ In other words, we build a model to predict output with the same dimension as in
 
 The autoencoder learns an approximation for the identity function, and by placing constraints on the network, such as by limiting the number of hidden units, we can discover interesting structure about the data [[UFLDL Tutorial]][Autoencoders].
 
+In other words, we implement neural networks for the task of representation learning and the encoding will learn and describe **latent** attributes of the input data. Compared to PCA which attempts to discover a lower dimensional hyperplane which describes the original data, autoencoders are capable of learning nonlinear relation between features. The following illustration describes the idea:
+
+
+![](images/PCA_vs_autoencoder.png)
+
+
+
 As a concrete example, suppose the inputs x are the pixel intensity values from a 10×10 image (100 pixels) so n=100, and there are 50 hidden units in layer L2, and we still have output layer n=100. Since there are only 50 hidden units, the network is forced to learn a ”compressed” representation of the input, i.e. **reconstruct** the 100-pixel input x. If the input were completely random—say, each `x_i` comes from an iid Gaussian independent of the other features—then this compression task would be very difficult. But if there is structure in the data, for example, if some of the input features are correlated, then this algorithm will be able to discover some of those correlations [[UFLDL Tutorial]][Autoencoders].
 
 ## 2. Cost (Loss) Function
@@ -55,11 +62,11 @@ In essence, KL-divergence is a measure of the difference between two probability
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x_i) \big]" /></a>
 
-be the average activation of hidden unit `j` (averaged over the training set). We would like to (approximately) enforce the constraint 
+be the **average** activation of hidden unit `j` (averaged over the `m` training set). We would like to (approximately) enforce the constraint 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\rho" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\rho" title="\hat{\rho}_j = \rho" /></a>
 
-where `ρ` is a ”‘sparsity parameter”’, typically a small value close to zero (say ρ=0.05). In other words, we would like the average activation of each hidden neuron j to be close to 0.05 (say). 
+where `ρ` is a ”‘sparsity parameter”’, typically a small value close to zero (say ρ=0.05). In other words, we would like the average activation of each hidden neuron j to be close to 0.05 (say); to satisfy this constraint, the hidden unit’s activations must mostly be near 0 [[UFLDL Tutorial] Autoencoders].
 
 Therefore the regularization term to our optimization objective that penalizes <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> deviating significantly from ρ  is
 
