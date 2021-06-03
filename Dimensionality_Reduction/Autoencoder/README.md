@@ -77,7 +77,7 @@ This penalty function has the property that
 
  <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;0,&space;\&space;\textrm{if&space;}&space;\rho=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;0,&space;\&space;\textrm{if&space;}&space;\rho=\hat{\rho}_j" title="\textrm{KL}(\rho || \hat{\rho}_j) = 0, \ \textrm{if } \rho=\hat{\rho}_j" /></a>
  
- otherwise it increases monotonically as ρ̂ j diverges from ρ. As an example, in the figure below, we have set ρ=0.2, the KL divergence penalty function looks like [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan]][Introduction to autoencoders]:
+ otherwise it increases monotonically as <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> diverges from ρ. As an example, in the figure below, we have set ρ=0.2, the KL divergence penalty function looks like [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan]][Introduction to autoencoders]:
 
 
 ![](images/KL_divergence_penalty.png)
