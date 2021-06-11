@@ -259,13 +259,15 @@ If you grow the full tree, `best-first (leaf-wise)` and `depth-first (level-wise
  [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!]
 
 * Faster training speed and higher efficiency: Light GBM use **histogram based algorithm** i.e it **buckets continuous** feature values into **discrete bins** which fasten the training procedure.
-* Lower memory usage: Replaces continuous values to discrete bins which result in lower memory usage.
+* Lower memory usage: Replaces continuous values to discrete bins which result in lower memory usage. LightGBM is almost 10 times faster than XGBoost based on experiments by [[Sefik Ilkin Serengil]][XGBoost vs LightGBM]).
 * Better accuracy than any other boosting algorithm: It produces much **more complex trees** by following leaf-wise split approach rather than a level-wise approach which is the main factor in achieving higher accuracy. However, it can sometimes lead to overfitting which can be avoided by setting the max_depth parameter.
 * Compatibility with large datasets: It is capable of performing equally good with large datasets with a significant reduction in training time as compared to XGBOOST.
 
 LightGBM uses a novel technique of Gradient-based One-Side Sampling (GOSS) to filter out the data instances for finding a split value while **XGBoost uses pre-sorted algorithm** & Histogram-based algorithm for computing the best split. In a nutshell, GOSS retains instances with large gradients while performing random sampling on instances with small gradients [[Sai Nikhilesh Kasturi]][XGBOOST vs LightGBM: Which algorithm wins the race !!!].
 
-LightGBM can also handle categorical feature. XGBoost cannot handle categorical features by itself, it only accepts numerical values similar to Random Forest [[Alvira Swalin]][CatBoost vs. Light GBM vs. XGBoost]. 
+LightGBM can also handle categorical feature. XGBoost cannot handle categorical features by itself, it only accepts numerical values similar to Random Forest [[Alvira Swalin]][CatBoost vs. Light GBM vs. XGBoost], [[Sefik Ilkin Serengil]][XGBoost vs LightGBM]. 
+
+XGBoost supports on GPU more than LightGBM [[Sefik Ilkin Serengil]][XGBoost vs LightGBM]. 
 
 ### Handling Missing Values
 
@@ -363,3 +365,5 @@ LightGBM and XGBoost Libraries can handle missing values [[Data Science: Which m
 [[Sai Nikhilesh Kasturi] XGBOOST vs LightGBM: Which algorithm wins the race !!!](https://towardsdatascience.com/lightgbm-vs-xgboost-which-algorithm-win-the-race-1ff7dd4917d#:~:text=The%20development%20of%20Boosting%20Machines,because%20it%20is%20extremely%20powerful.)
 
 
+[XGBoost vs LightGBM]: https://sefiks.com/2020/05/13/xgboost-vs-lightgbm/
+[[Sefik Ilkin Serengil] XGBoost vs LightGBM](https://sefiks.com/2020/05/13/xgboost-vs-lightgbm/)
