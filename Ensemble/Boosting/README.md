@@ -208,11 +208,11 @@ Here is the article: [Light GBM model vs XGBoost Model Parameter Tuning and Exam
 
 ## 4. LightGBM
 
-LightGBM (LGBM) model is a relatively new model. Rather than **level-wise** (depth-first) tree growth in regular decision tree algorithms (credit from [here](https://github.com/Microsoft/LightGBM/blob/master/docs/)), 
+LightGBM (LGBM) model is a relatively new model. Rather than **level-wise** (**depth-first**) tree growth in regular decision tree algorithms (credit from [here](https://github.com/Microsoft/LightGBM/blob/master/docs/)), 
 
 ![level_wise](images/level-wise.png)
 
-LGBM is **leaf-wise** (best-first) tree growth, 
+LGBM is **leaf-wise** (**best-first**) tree growth, 
 
 ![leaf_wise](images/leaf-wise.png)
 
@@ -249,7 +249,7 @@ In the [blog](https://towardsdatascience.com/understanding-gradient-boosting-mac
 
 Here is the deeper description about LighGBM (best-first) and XGboost (depth-first):
 
-If you grow the full tree, best-first (leaf-wise) and depth-first (level-wise) will result in the same tree. The difference is in the order in which the tree is expanded. Since we don't normally grow trees to their full depth, order matters: application of early stopping criteria and pruning methods can result in very different trees. Because **leaf-wise** chooses splits based on their contribution to the `global loss` and not just the loss along a particular branch, it often (not always) will learn lower-error trees "faster" than level-wise. i.e. for a small number of nodes, leaf-wise will probably out-perform level-wise. As you add more nodes, without stopping or pruning they will converge to the same performance because they will literally build the same tree eventually [[Data Science: Decision trees: leaf-wise (best-first) and level-wise tree traverse]][Decision trees: leaf-wise (best-first) and level-wise tree traverse].
+If you grow the full tree, `best-first (leaf-wise)` and `depth-first (level-wise)` will result in the same tree. The difference is in the order in which the tree is expanded. Since we don't normally grow trees to their full depth, order matters: application of early stopping criteria and pruning methods can result in very different trees. Because **leaf-wise** chooses splits based on their contribution to the `global loss` and not just the loss along a particular branch, it often (not always) will learn lower-error trees "faster" than level-wise. i.e. for a small number of nodes, leaf-wise will probably out-perform level-wise. As you add more nodes, without stopping or pruning they will converge to the same performance because they will literally build the same tree eventually [[Data Science: Decision trees: leaf-wise (best-first) and level-wise tree traverse]][Decision trees: leaf-wise (best-first) and level-wise tree traverse].
 
 **LightGBM grows trees leaf-wise (best-first). It will choose the leaf with max delta loss to grow. Holding number of leaf fixed, leaf-wise algorithms tend to achieve lower loss than level-wise algorithms. However, the leaf-wise growth may be over-fitting if not used with the appropriate parameters.** [[Tao Lin]][Light GBM model vs XGBoost Model Parameter Tuning and Examples]
 
