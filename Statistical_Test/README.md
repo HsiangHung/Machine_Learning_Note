@@ -40,6 +40,11 @@ where μ1 is the mean for one population, μ2 is the mean for the other populati
 
 These effect sizes estimate the amount of the variance within an experiment that is "explained" or "accounted for" by the experiment's model. Pearson's correlation, often denoted r and introduced by Karl Pearson, is widely used as an effect size when paired quantitative data are available[[wiki]][Wiki-Effect size, Effect size].
 
+| Effect size | r | 
+| :---: | :---: | 
+| Small | 0.1 |
+| Medium | 0.3 |
+| Large | 0.5 |
 
 ## Reference
 
