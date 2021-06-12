@@ -17,11 +17,11 @@ Table of Contents:
 
 ## Isolation Forest From Scratch
 
-The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch] and [[Isolation Forest Step by Step]][Isolation Forest Step by Step].
+The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch] and [[Hyunsu Kim]][Isolation Forest Step by Step].
 
 ## Isolation tree and forest
 
-This session explains how to build an isolation forest step by step [[Isolation Forest Step by Step]][Isolation Forest Step by Step]
+This session explains how to build an isolation forest step by step [[Hyunsu Kim]][Isolation Forest Step by Step]
 
 1. **Step 1** — Subsampling data for training
 
