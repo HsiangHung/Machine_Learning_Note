@@ -30,7 +30,7 @@ Ideally, we wish not only lower <a href="https://www.codecogs.com/eqnedit.php?la
 
 ### A. Effect sizes based on differences between means
 
-The effect size θ based on means usually considers the standardized mean difference between **two** populations [[wiki][Wiki-Effect size, Effect size]:
+The effect size θ based on means usually considers the standardized mean difference between **two** populations [[wiki][Wiki-Effect size, Effect size], [[Merra]][Merra, Power Analysis, Statistical Significance, & Effect Size]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{\sigma}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{\sigma}" title="\theta = \frac{\mu_1 -\mu_2}{\sigma}" /></a>
 
@@ -53,6 +53,10 @@ These effect sizes estimate the amount of the variance within an experiment that
 
 [S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
 [[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
+
+
+[Merra, Power Analysis, Statistical Significance, & Effect Size]: https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.
+[[Merra] Merra, Power Analysis, Statistical Significance, & Effect Size](https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.)
 
 
 [Wiki-Effect size, Effect size]: https://en.wikipedia.org/wiki/Effect_size
