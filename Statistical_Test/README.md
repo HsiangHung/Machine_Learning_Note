@@ -26,12 +26,29 @@ Ideally, we wish not only lower <a href="https://www.codecogs.com/eqnedit.php?la
 
 
 
+## Effect size
+
+### A. Effect sizes based on differences between means
+
+The effect size θ based on means usually considers the standardized mean difference between **two** populations [[wiki][Wiki-Effect size, Effect size]:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{\sigma}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{\sigma}" title="\theta = \frac{\mu_1 -\mu_2}{\sigma}" /></a>
+
+where μ1 is the mean for one population, μ2 is the mean for the other population, and σ is a standard deviation based on either or both populations.
+
+### B. Effect sizes based on "variance explained"
+
+These effect sizes estimate the amount of the variance within an experiment that is "explained" or "accounted for" by the experiment's model. Pearson's correlation, often denoted r and introduced by Karl Pearson, is widely used as an effect size when paired quantitative data are available[[wiki]][Wiki-Effect size, Effect size].
 
 
-
-# Reference
+## Reference
 
 
 
 [S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
 [[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
+
+
+[Wiki-Effect size, Effect size]: https://en.wikipedia.org/wiki/Effect_size
+[[wiki] Wiki-Effect size, Effect size](https://en.wikipedia.org/wiki/Effect_size)
+
