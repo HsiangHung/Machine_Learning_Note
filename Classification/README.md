@@ -60,10 +60,10 @@ In most cases, there are no perfect classifiers. A good common question is which
 
 Recall the **confusion matrix**:
 
-| predicted \ actual |  positive |  negative | 
+| predicted \ actual |  actual positive |  actual negative | 
 | --- | --- | --- | 
-|  **positive** | TP | FP | 
-|  negative | FP | TN | 
+|  **predicted positive** | TP | FP | 
+|  **predicted negative** | FP | TN | 
 
 
 The relevant metrics are 
