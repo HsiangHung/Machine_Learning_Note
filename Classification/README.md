@@ -62,7 +62,7 @@ Recall the **confusion matrix**:
 
 | predicted \ actual |  positive |  negative | 
 | --- | --- | --- | 
-|  positive | TP | FP | 
+|  **positive** | TP | FP | 
 |  negative | FP | TN | 
 
 
