@@ -189,7 +189,7 @@ For **way B**, if humidity <= 89, 9 positive and 1 negative; humidity > 89, 4 ne
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H_B&space;=&space;\frac{10}{14}H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;\frac{4}{14}H(0,&space;\frac{4}{4})&space;=&space;\frac{10}{14}\times&space;0.47&space;&plus;&space;\frac{4}{14}&space;\times&space;0&space;=&space;0.33&space;\&space;\textrm{bits}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_B&space;=&space;\frac{10}{14}H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;\frac{4}{14}H(0,&space;\frac{4}{4})&space;=&space;\frac{10}{14}\times&space;0.47&space;&plus;&space;\frac{4}{14}&space;\times&space;0&space;=&space;0.33&space;\&space;\textrm{bits}" title="H_B = \frac{10}{14}H(\frac{9}{10}, \frac{1}{10}) + \frac{4}{14}H(0, \frac{4}{4}) = \frac{10}{14}\times 0.47 + \frac{4}{14} \times 0 = 0.33 \ \textrm{bits}" /></a>
 
-We can see `I(B) = 0.94 - HB = 0.61` > `I(A) = 0.94 - HA = 0.4`, so we choose humidity=0.89 to split at this step.
+We can see `I(B) = 0.94 - HB = 0.61` > `I(A) = 0.94 - HA = 0.4`, so we choose **way B**, humidity=0.89 to split at this step.
 
 ## 4. Decision Tree Regression
 
