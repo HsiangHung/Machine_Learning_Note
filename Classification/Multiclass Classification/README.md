@@ -115,8 +115,8 @@ For each class, we can have precision, recall and F1 score like
 
 |  |  precision |  recall | F1 score |
 | --- | --- | --- | --- |
-| cat | 0.308 | 0.667 | 0.421 | 
-| fish | 0.667 | 0.20 | 0.308 | 
+| cat | 0.308 (4/13) | 0.667 (4/6) | 0.421 | 
+| fish | 0.667 (2/3)| 0.20 (2/10) | 0.308 | 
 | han | 0.667 | 0.667 | 0.667 | 
 
 
