@@ -72,7 +72,7 @@ In the followings, we show how the hyperparameter influences the performance. Th
 
 ![](images/min_sample_split.png)
 
-5. `min_samples_leaf`: min_samples_leaf is The minimum number of samples required to be at a leaf node. Increasing this value can cause underfitting.
+5. `min_samples_leaf`: min_samples_leaf is the minimum number of samples required to be at a leaf node. Increasing this value can cause underfitting.
 
 ![](images/min_sample_leaf.png)
 
