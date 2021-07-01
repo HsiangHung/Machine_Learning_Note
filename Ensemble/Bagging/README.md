@@ -58,12 +58,11 @@ In the followings, we show how the hyperparameter influences the performance. Th
 
 1. `n_samples`: more sample data for training, better accuracy.
 ![](images/n_sample.png)
-2. `n_estimators`: is the number of trees in the forest. Usually higher the number of trees the better to learn the data.
+2. `n_estimators`: is the number of trees in the forest. Usually higher the number of trees the better to learn the data:
 
 ![](images/n_estimate_1.png)
 
-However, more trees also mean more computational cost.
-In discussion of [[Stackoverflow: Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], after a certain number of trees, the improvement is negligible. Meanwhile, we can also visualize how the "forest" plays the role on classification (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33)).
+However, more trees also mean more computational cost. In discussion of [[Stackoverflow: Random forest tuning - tree depth and number of trees]][Random forest tuning - tree depth and number of trees], after a certain number of trees, the improvement is negligible. Meanwhile, we can also visualize how the "forest" plays the role on classification (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33)).
 
 
 ![](images/effect_numtrees.png)
