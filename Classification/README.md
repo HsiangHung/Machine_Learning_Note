@@ -132,7 +132,7 @@ where P = Precision and R = Recall.
 
 #### 3. Fraud rate to precision, recall, AUC
 
-In the imbalanced cases, how do fraud rates (or downsampling rate) influence the metrics? The post [[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] has very wonderful disucssion about it and we can have intuition as follows. 
+In the imbalanced cases, how do fraud rates (proportion of positive events) influence the metrics? The post [[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] has very wonderful disucssion about it and we can have intuition as follows. 
 
 Suppose for same amount of positive cases and model performance, lower fraud rate means more negative events. Thus precision may drop and recall keeps the same. The False positive rate doesn't change. Then we can expect 
 ROC curve remains similar, but precision-recall curve will change.
