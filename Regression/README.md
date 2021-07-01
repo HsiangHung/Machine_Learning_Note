@@ -127,7 +127,7 @@ Severe multicollinearity is a major problem, because it increases the variance o
 ### 3.A How to test Multicollinearity?
 
 1. Correlation matrix / Correlation plot
-2. Variation Inflation Factor (VIF): identifies correlation between independent variables and the strength of that correlation. 
+2. **Variation Inflation Factor (VIF)**: identifies correlation between independent variables and the strength of that correlation. 
 
 The VIF for the `j`-th predictor is [[Penn stat: STAT 462 - Applied Regression Analysis]][10.7 - Detecting Multicollinearity Using Variance Inflation Factors]:
 
