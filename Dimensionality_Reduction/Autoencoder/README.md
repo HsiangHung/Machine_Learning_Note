@@ -19,6 +19,18 @@ But an autocorder is trained as
 
 In other words, we build a model to predict output with the same dimension as input and minimum loss on information [[Elior Cohen]][Reducing Dimensionality from Dimensionality Reduction Techniques]. The values of the parameters in the hidden layers is updated by back-progagation.
 
+
+Table of Contents:
+
+
+* [1. Interpretation of AutoEncoders](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#1-interpretation-of-autoencoders)
+* [2. Cost (Loss) Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#2-cost-loss-function)
+     * [2.A L1 regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#41-undersample-down-sample-majority-class) 
+     * [2.B KL-divergence](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#42-oversample-up-sample-minority-class)
+     
+
+
+
 ## 1. Interpretation of AutoEncoders
 
 The autoencoder learns an approximation for the identity function, and by placing constraints on the network, such as by limiting the number of hidden units, we can discover interesting structure about the data [[UFLDL Tutorial]][Autoencoders].
@@ -49,14 +61,14 @@ The second is the regularization term to **penalize the activations** of hidden 
 
 In the following, we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a>  to denote the activation of the `j`-th hidden unit of hidden layer `h`, when the network is given a specific input x.
 
-### 2.A L1 regularization:
+### 2.A L1 regularization
 
 L1 regularization adds a term to our loss function that penalizes the absolute value of the vector of activations `a`, scaled by a tuning parameter λ [[Jermey Jordan]][Introduction to autoencoders], [[Wiki]][Autoencoder]. The resultsing cost function reads as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" title="C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|" /></a>
 
 
-### 2.B KL-divergence: 
+### 2.B KL-divergence
 
 In essence, KL-divergence is a measure of the difference between two probability distributions. Define 
 
