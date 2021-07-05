@@ -78,11 +78,13 @@ If our predictions are perfect, that is the predicted distribution is equal to t
 
 ### c. KL-Divergence
 
-Kullback-Leibler Divergence measures information lost.
+Kullback-Leibler Divergence measures information lost. 
 
 ```
 Cross_entropy = Entropy + KL-divergence
 ```
+
+In layman’s terms, the K-L divergence is a measure of how different a specific probability distribution is from a reference distribution [[Christiaan Defaux]][Kullback-Leibler Divergence for Machine Learning]. In the following, D(K-L) is the divergence of q from p:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_{KL}(p||q)&space;=&space;\big(-\sum_i&space;p_i&space;\log&space;q_i&space;\big)&space;-&space;\big(&space;-\sum_i&space;p_i&space;\log&space;p_i&space;\big)&space;=&space;\sum_i&space;p_i&space;\log&space;\Big(&space;\frac{p_i}{q_i}\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{KL}(p||q)&space;=&space;\big(-\sum_i&space;p_i&space;\log&space;q_i&space;\big)&space;-&space;\big(&space;-\sum_i&space;p_i&space;\log&space;p_i&space;\big)&space;=&space;\sum_i&space;p_i&space;\log&space;\Big(&space;\frac{p_i}{q_i}\Big)" title="D_{KL}(p||q) = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)" /></a>
 
@@ -129,6 +131,11 @@ Newton method attracts to saddle points and saddle points are common in machine 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)&space;=&space;x^2-y^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)&space;=&space;x^2-y^2" title="f = f(x,y) = x^2-y^2" /></a>
 
 you see how the Newton method led you to the saddle point at `x = y = 0`. In contrast, the gradient descent method will not lead to the saddle point. The gradient is zero at the saddle point, but a tiny step out would pull the optimization away as you can see from the gradient above - its gradient on y-variable is negative.
+
+
+
+[Kullback-Leibler Divergence for Machine Learning]: https://medium.com/@cdefaux/kullback-leibler-divergence-for-dummies-c3613bc80ad3
+[[Christiaan Defaux] Kullback-Leibler Divergence for Machine Learning](https://medium.com/@cdefaux/kullback-leibler-divergence-for-dummies-c3613bc80ad3)
 
 
 
