@@ -100,6 +100,10 @@ and micro-averged Precision defines as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Micro-P}&space;=&space;\frac{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K}{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K&space;&plus;&space;\textrm{FP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{FP}_K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Micro-P}&space;=&space;\frac{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K}{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K&space;&plus;&space;\textrm{FP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{FP}_K}" title="\textrm{Micro-P} = \frac{\textrm{TP}_1 +\cdots + \textrm{TP}_K}{\textrm{TP}_1 +\cdots + \textrm{TP}_K + \textrm{FP}_1 +\cdots + \textrm{FP}_K}" /></a>
 
+The weight-averaged is defined as [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html#sklearn.metrics.precision_recall_fscore_support)
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Weighted-P}&space;=&space;\frac{n_1*P_1&space;&plus;&space;n_2*P_2&space;&plus;&space;\cdots&space;n_K*P_K}{n_1&space;&plus;&space;n_2&space;&plus;&space;\cdots&space;n_K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Weighted-P}&space;=&space;\frac{n_1*P_1&space;&plus;&space;n_2*P_2&space;&plus;&space;\cdots&space;n_K*P_K}{n_1&space;&plus;&space;n_2&space;&plus;&space;\cdots&space;n_K}" title="\textrm{Weighted-P} = \frac{n_1*P_1 + n_2*P_2 + \cdots n_K*P_K}{n_1 + n_2 + \cdots n_K}" /></a>
+
 #### Example
 
 [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score] show an example for three classes. The 3 x 3 confusion matrix is 
@@ -109,7 +113,7 @@ and micro-averged Precision defines as
 | pred cat | 4 | 6 | 3 | 
 | pred fish | 1 | 2 | 0 | 
 | pred han | 1 | 2 | 6 | 
-| total | 6 | 20 | 9 | 
+| total | 6 | 10 | 9 | 
 
 
 For each class, we can have precision, recall and F1 score like
@@ -119,18 +123,17 @@ For each class, we can have precision, recall and F1 score like
 | cat | 0.308 (4/13) | 0.667 (4/6) | 0.421 (2x0.308x0.667/(0.308+0.667))| 
 | fish | 0.667 (2/3)| 0.20 (2/10) | 0.308 (2x0.667x0.3/(0.667+0.3)) | 
 | han | 0.667 | 0.667 | 0.667 | 
-| Macro | 0.547 | 0.511 | 0.465|
-| Micro | 0.48 | 0.48 | | 
 
 
 |  |  precision |  recall | F1 score |
 | --- | --- | --- | --- |
 | Macro | 0.547 | 0.511 | 0.465 | 
 | Micro | 0.48 | 0.48 |  | 
-
+| Weighted | 0.58 | | |
 
 * Macro-precision = (0.31 + 0.67 + 0.67) / 3 = 0.547.
-* Macro-recall = (0.67 + 0.20 + 0.67) / 3 = 0.511.
+* Micro-precision = (4 + 2 + 6) / (4 + 2 + 6 + 9 + 1 + 3) = 0.48.
+* Weight-precision = (0.31 * 6 + 0.67 * 10 + 0.67 * 9) / (6+10+9) = 0.58.
 * Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465.
 
 
