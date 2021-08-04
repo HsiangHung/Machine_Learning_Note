@@ -109,6 +109,7 @@ and micro-averged Precision defines as
 | pred cat | 4 | 6 | 3 | 
 | pred fish | 1 | 2 | 0 | 
 | pred han | 1 | 2 | 6 | 
+| total | 6 | 20 | 9 | 
 
 
 For each class, we can have precision, recall and F1 score like
@@ -118,6 +119,8 @@ For each class, we can have precision, recall and F1 score like
 | cat | 0.308 (4/13) | 0.667 (4/6) | 0.421 (2x0.308x0.667/(0.308+0.667))| 
 | fish | 0.667 (2/3)| 0.20 (2/10) | 0.308 (2x0.667x0.3/(0.667+0.3)) | 
 | han | 0.667 | 0.667 | 0.667 | 
+| Macro | 0.547 | 0.511 | 0.465|
+| Micro | 0.48 | 0.48 | | 
 
 
 |  |  precision |  recall | F1 score |
