@@ -149,7 +149,7 @@ Jason Brownlee's blog [Cost-Sensitive SVM for Imbalanced Classification](https:/
 weights = {0:0.01, 1:1.0}
 model = SVC(gamma='scale', class_weight=weights)
 ```
-
+by defining weights for majority and minority classes and pass to `class_weight=weights`.
 
 ### 5.3 Unsupervised Learning
 
