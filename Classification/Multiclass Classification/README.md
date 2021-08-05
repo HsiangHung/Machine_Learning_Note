@@ -20,9 +20,9 @@ Table of Contents:
      * [1.B One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1b-one-vs-one)
      * [1.C A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1c-a-single-multi-class-classifier)
 * [2. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2-metrics)
-     * [2.A Macro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1a)-one-vs-all-one-vs-rest)
-     * [2.B Micro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1b)-one-vs-one)
-     * [2.C Weighted-average](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1c-a-single-multi-class-classifier)
+     * [2.A Macro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2a-macro-averged)
+     * [2.B Micro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2b-micro-averged)
+     * [2.C Weighted-average](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2c-weighted-average)
 
 
 
