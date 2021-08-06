@@ -144,8 +144,8 @@ Cost-sensitive learning allows us to **penalize misclassifications of the minori
 A popular algorithm for this technique is **`Penalized-SVM`**, During training, we can use the argument `class_weight='balanced'` to penalize mistakes on the minority class by an amount proportional to how under-represented it is. Another penalized algorithms is **`penalized-LDA`** [[Syed Sadat Nazrul]][Fraud Detection Under Extreme Class Imbalance].
 
 Jason Brownlee's blog [Cost-Sensitive SVM for Imbalanced Classification](https://machinelearningmastery.com/cost-sensitive-svm-for-imbalanced-classification/) has explained how to use cost-sensitive SVM. The code to implment the weight in scikit-learn as 
+
 ```Python
-# define model
 weights = {0:0.01, 1:1.0}
 model = SVC(gamma='scale', class_weight=weights)
 ```
