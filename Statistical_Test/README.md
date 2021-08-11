@@ -49,6 +49,19 @@ These effect sizes estimate the amount of the variance within an experiment that
 | Large | 0.5 |
 
 
+## Novelty Effect
+
+The novelty effect happens: when you give users the chance to try a new feature, at first they might try it out just out of curiosity, even if the feature is not actually better. So, say you run a test for 2 weeks, you are actually capturing in those two weeks the phase in which customers are extensively using your feature just because it is **new** and they are **curious** [[Product Data Science]][Product Data Science, Novelty Effect].
+
+Assume you check your test results and see, for instance, that engagement or time spent on site are way up for test vs control. So you give that feature to all users, but after some time you actually see a steep decline in engagement or time spent on site. This is a really really common issue especially on sites whose main metrics are related to clicks and time spent, like social networks or most businesses that make money via ads.
+
+The problem is how to isolate the effect of the new feature vs the effect of novelty, which is unrelated to the new feature and always happens whenever a user sees something new. For instance, let’s say you run a test giving some users a lower price. How to isolate the effect of the lower price vs the excitement of getting a discount?
+
+
+ 
+
+
+
 ## Reference
 
 
@@ -59,6 +72,10 @@ These effect sizes estimate the amount of the variance within an experiment that
 
 [Merra, Power Analysis, Statistical Significance, & Effect Size]: https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.
 [[Merra] Merra, Power Analysis, Statistical Significance, & Effect Size](https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.)
+
+
+[Product Data Science, Novelty Effect]: https://productds.com/wp-content/uploads/Novelty_Effect.html
+[[Product Data Science] Product Data Science, Novelty Effect](https://productds.com/wp-content/uploads/Novelty_Effect.html)
 
 
 [statisticssolution, Effect Size]: https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/
