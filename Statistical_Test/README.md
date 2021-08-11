@@ -28,13 +28,15 @@ Ideally, we wish not only lower <a href="https://www.codecogs.com/eqnedit.php?la
 
 ## Effect size
 
-### A. Effect sizes based on differences between means
+### A. Difference family: Effect sizes based on differences between means
 
 The effect size θ based on means usually considers the standardized mean difference between **two** populations [[wiki]][Wiki-Effect size, Effect size], [[Merra]][Merra, Power Analysis, Statistical Significance, & Effect Size]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{\sigma}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{\sigma}" title="\theta = \frac{\mu_1 -\mu_2}{\sigma}" /></a>
 
-where μ1 is the mean for one population, μ2 is the mean for the other population, and σ is a standard deviation based on either or both populations.
+where μ1 is the mean for one population, μ2 is the mean for the other population, and σ is a standard deviation based on either or both populations. 
+
+The above form for the effect size resembles the computation for a t-test statistic, except for that t-test statistic includes a factor of <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma/\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma/\sqrt{n}" title="\sigma/\sqrt{n}" /></a>, but here we only use σ. This means that for a given effect size, the significance level increases with the sample size. Unlike the t-test statistic, the effect size aims to estimate a population parameter and is not affected by the sample size.
 
 ### B. Effect sizes based on "variance explained"
 

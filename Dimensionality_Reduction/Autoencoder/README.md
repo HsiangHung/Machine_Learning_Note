@@ -25,8 +25,8 @@ Table of Contents:
 
 * [1. Interpretation of AutoEncoders](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#1-interpretation-of-autoencoders)
 * [2. Cost (Loss) Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#2-cost-loss-function)
-     * [2.A L1 regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#41-undersample-down-sample-majority-class) 
-     * [2.B KL-divergence](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#42-oversample-up-sample-minority-class)
+     * [2.A L1 regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#2a-l1-regularization) 
+     * [2.B KL-divergence](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#2b-kl-divergence)
      
 
 
@@ -99,6 +99,13 @@ which has the minimum at ρ=0.2.
 
 
 
+## 3. AutoEncoder Descents
+
+There are some variations of the autoencoder architecture that allow for regularization and optimization. Examples of these are the **sparse autoencoder**, **denoising autoencoder**, **contractive autoencoder** (all of which are regularized variations of the simple autoencoder. There is also the **variational autoencoder**, which is an example of a generative model [[Christiaan Defaux-1]][Unsupervised Learning: The autoencoder in laymans terms].
+
+### 3.A The Sparse Autoencoder (SAE)
+
+For a deeper understanding please see one of my previous posts on the subject here. By adding the sparsity constraint, we are in effect inducing regularization in our autoencoder, to aid in training and computational efficiency [[Christiaan Defaux-2]][The Sparse Autoencoder (SAE) for Dummies].
 
 
 
@@ -115,6 +122,16 @@ which has the minimum at ρ=0.2.
 
 [Dimension Reduction - Autoencoders]: https://blog.paperspace.com/dimension-reduction-with-autoencoders/
 [[ASHWINI KUMAR PAL] Dimension Reduction - Autoencoders](https://blog.paperspace.com/dimension-reduction-with-autoencoders/)
+
+
+[Unsupervised Learning: The autoencoder in laymans terms]: https://medium.com/@cdefaux/unsupervised-learning-the-autoencoder-in-laymans-terms-5dfdee22e692
+[[Christiaan Defaux-1] Unsupervised Learning: The autoencoder in laymans terms](https://medium.com/@cdefaux/unsupervised-learning-the-autoencoder-in-laymans-terms-5dfdee22e692)
+
+
+[The Sparse Autoencoder (SAE) for Dummies]: https://medium.com/@cdefaux/the-sparse-autoencoder-sae-for-dummies-cb7f170bda86
+[[Christiaan Defaux-2] The Sparse Autoencoder (SAE) for Dummies](https://medium.com/@cdefaux/the-sparse-autoencoder-sae-for-dummies-cb7f170bda86)
+
+
 
 [Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
 [[Elior Cohen] Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
