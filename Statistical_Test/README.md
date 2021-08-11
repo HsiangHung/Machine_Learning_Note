@@ -57,8 +57,13 @@ Assume you check your test results and see, for instance, that engagement or tim
 
 The problem is how to isolate the effect of the new feature vs the effect of novelty, which is unrelated to the new feature and always happens whenever a user sees something new. For instance, let’s say you run a test giving some users a lower price. How to isolate the effect of the lower price vs the excitement of getting a discount?
 
+### change aversion
 
- 
+The opposite to novelty effect also happens. That is, if you give users a new experience, at first they might hate it cause it is not what they are used to and they feel they have to re-learn how to use the product. This is called change aversion. However, in practice, this is a much smaller problem from an A/B testing standpoint because it only affects major product redesigns, which are rarer than small UI tweaks [[Product Data Science]][Product Data Science, Novelty Effect]. 
+
+ ### Solution for novelty effect
+
+ The obvious solution for novelty effect would be to run tests longer, giving test users enough time to get rid of the novelty effect. However, that’s hardly efficient, and the cost of having to run tests for longer would probably outweigh the benefits coming from more reliable results.
 
 
 
