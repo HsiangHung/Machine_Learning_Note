@@ -9,17 +9,17 @@ The conversion matrix of testing is [[Massa]][S. Massa, Kolmogorov Smirnov Test 
 | H0 is True | <a href="https://www.codecogs.com/eqnedit.php?latex=\beta&space;\textrm{&space;(Type&space;II&space;error)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta&space;\textrm{&space;(Type&space;II&space;error)}" title="\beta \textrm{ (Type II error)}" /></a> | <a href="https://www.codecogs.com/eqnedit.php?latex=1-\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1-\alpha" title="1-\alpha" /></a> | 
 
 
-where `Pred` means the statistical testing results. 
+where `Pred` means the statistical testing results. The type-I error 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha&space;=&space;\textrm{Pr}(\textrm{reject&space;H}_0|&space;\textrm{H}_0&space;\textrm{&space;is&space;True})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha&space;=&space;\textrm{Pr}(\textrm{reject&space;H}_0|&space;\textrm{H}_0&space;\textrm{&space;is&space;True})" title="\alpha = \textrm{Pr}(\textrm{reject H}_0| \textrm{H}_0 \textrm{ is True})" /></a> 
 
-is the probability, that given the null hypothesis is true, you reject. 
+is the probability, that given the null hypothesis is true you reject the hypothesis. On the other hand, the type-II error 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\beta&space;=&space;\textrm{Pr}(\textrm{fail&space;to&space;reject&space;H}_0|&space;\textrm{H}_0&space;\textrm{&space;is&space;False})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta&space;=&space;\textrm{Pr}(\textrm{fail&space;to&space;reject&space;H}_0|&space;\textrm{H}_0&space;\textrm{&space;is&space;False})" title="\beta = \textrm{Pr}(\textrm{fail to reject H}_0| \textrm{H}_0 \textrm{ is False})" /></a> 
 
-is the probability, that given the null hypothesis is false, you fail to reject. 
+is the probability, that given the null hypothesis is false you fail to reject the hypothesis. 
 
-Ideally, we wish not only lower <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>, but also lower <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a>.
+Ideally, we want both lower <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>, but also lower <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a>. 
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=1-\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1-\beta" title="1-\beta" /></a> is the power. Higher power has more reliable statistical testing.
@@ -36,9 +36,9 @@ The effect size θ based on means usually considers the standardized mean differ
 
 where μ1 is the mean for one population, μ2 is the mean for the other population, and σ is a standard deviation based on either or both populations. 
 
-The above form for the effect size resembles the computation for a t-test statistic, except for that t-test statistic includes a factor of <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma/\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma/\sqrt{n}" title="\sigma/\sqrt{n}" /></a>, but here we only use σ. This means that for a given effect size, the significance level increases with the sample size. Unlike the t-test statistic, the effect size aims to estimate a population parameter and is not affected by the sample size.
+The above form for the effect size resembles the computation for a t-test statistic, except for that t-test statistic includes a factor of <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma/\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma/\sqrt{n}" title="\sigma/\sqrt{n}" /></a>, which means that for a given effect size, the significance level increases with the sample size. Unlike the t-test statistic, the effect size here aims to estimate a population parameter and is **not** affected by the sample size.
 
-### B. Effect sizes based on "variance explained"
+### B. Correlation family: Effect sizes based on "variance explained"
 
 These effect sizes estimate the amount of the variance within an experiment that is "explained" or "accounted for" by the experiment's model. Pearson's correlation, often denoted r and introduced by Karl Pearson, is widely used as an effect size when paired quantitative data are available[[wiki]][Wiki-Effect size, Effect size], [[statisticssolution]][statisticssolution, Effect Size].
 
