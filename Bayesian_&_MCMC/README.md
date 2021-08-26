@@ -129,7 +129,7 @@ which gives us a distribution of `θ`.
 
 To provide more concrete examples, in linear regression, we make an assumption that the likelihood is a normal distribution (both `θ` and `x` are multi-dimensional)
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;\exp{\frac{(y_i-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;\exp{\frac{(y_i-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="P(\bold{x}_i, y_i|\theta) \sim \exp{\frac{(y_i-\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;e^{\frac{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;e^{\frac{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="P(\bold{x}_i, y_i|\theta) \sim e^{\frac{-(y_i-\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
 
 then the likelihood is 
 
