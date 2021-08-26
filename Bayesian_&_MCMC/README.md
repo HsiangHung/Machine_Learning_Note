@@ -110,7 +110,7 @@ and MAP is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D)" /></a>
 
-## 2.1 MLE
+## 2.1 maximum Likelihood Estimation (MLE)
 
 
 We actually use MLE without knowing it in our common life. For example, when fitting a Gaussian to our dataset, we immediately take the sample mean and sample variance, and use it as the parameter of our Gaussian. This is MLE, as, if we **take the derivative of the Gaussian function with respect to the mean and variance and setting the derivative to zero** [[Agustinus Kristiadi]][MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation]. This step is to maximize the likelihood. Another example is Naive Bayes spam filter. We can comute the likelihood of a specific word appearing in a spam. Thus, given an email, the probability of the email being spam is the naive mulitplication of the individual likelihoods whose words appear in the email. 
@@ -158,7 +158,7 @@ Then similarly, we convert maximizing the log of the likelihood to optimizing th
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\big)&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\big)&space;\Big)" title="C(D) = \sum^n_{i=1} \Big( y_i \log \big( \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}} \big) \Big)" /></a>
 
 
-## 2.2 MAP
+## 2.2 Maximum A Posteriori (MAP)
 
 On the other hand, MAP usually comes up in Bayesian setting. It works on a posterior distribution `P(θ|D)`, not only the likelihood `P(D|θ)`
 
@@ -176,12 +176,18 @@ What it means is that, the likelihood is now weighted with some weight coming fr
 Instead, if we implement **Gaussian distribution** to the prior `P(θ)`, 
 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;\sim&space;e^{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)&space;\sim&space;e^{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}" title="P(\theta) \sim e^{\frac{(\theta - \mu_{\theta})^2}{2\sigma^2}}" /></a>
+
+
+which can be identify to a **L2 (Ridge) regularization** term (if <a href="http://www.codecogs.com/eqnedit.php?latex=\mu_{\theta}=0" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mu_{\theta}=0" title="\mu_{\theta}=0" /></a> ) 
+
 <a href="http://www.codecogs.com/eqnedit.php?latex=\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" title="\log P(\theta) \sim \log \Big( \exp{\frac{(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = \frac{1}{2\sigma^2} (\theta - \mu_{\theta})^2" /></a>
 
-which can be identify to a **regularization term** (if <a href="http://www.codecogs.com/eqnedit.php?latex=\mu_{\theta}=0" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mu_{\theta}=0" title="\mu_{\theta}=0" /></a> ) commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
+
+commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
 
 
-On the other hand, Lasso is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. Below (credit from book: **An Introduction to Statistical Learning**), Left: Gaussian prior (for ridge). Right: double-exponential prior (for lasso).
+On the other hand, **L1 (Lasso)** is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. Below (credit from book: **An Introduction to Statistical Learning**), Left: Gaussian prior (for ridge). Right: double-exponential prior (for lasso).
 
 ![regularization_prior](images/lasso_ridge_prior.png)
 
