@@ -51,7 +51,7 @@ So for this smaller population, all we need are 278 households in our sample; a 
 
 Here is the [calculator](https://www.surveysystem.com/sscalc.htm).
 
-## Sample Size Given a Confidence Level and Width (unknown population standard deviation)
+### Sample size given a confidence level and width (unknown population standard deviation)
 
 Example question: 41% of Jacksonville residents said that they had been in a hurricane. How many adults should be surveyed to estimate the true proportion of adults who have been in a hurricane, with a 95% confidence interval 6% wide?
 
@@ -62,7 +62,7 @@ z-score for 95% confidence interval is 1.96. The margin of error is given by the
 1,033 people to survey.
 
 
-## Sample Size Given a Confidence Level and Width (known population standard deviation)
+### Sample size given a confidence level and width (known population standard deviation)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=&space;\Big(&space;\frac{Z_{\alpha&space;/2}&space;\sigma}{e}&space;\Big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=&space;\Big(&space;\frac{Z_{\alpha&space;/2}&space;\sigma}{e}&space;\Big)^2" title="n = \Big( \frac{Z_{\alpha /2} \sigma}{e} \Big)^2" /></a>
 
