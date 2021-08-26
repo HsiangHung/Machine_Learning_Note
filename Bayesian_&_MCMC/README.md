@@ -181,8 +181,7 @@ Instead, if we implement **Gaussian distribution** to the prior `P(θ)`,
 
 which can be identify to a **L2 (Ridge) regularization** term (if <a href="http://www.codecogs.com/eqnedit.php?latex=\mu_{\theta}=0" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mu_{\theta}=0" title="\mu_{\theta}=0" /></a> ) 
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;\exp{\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;\frac{1}{2\sigma^2}&space;(\theta&space;-&space;\mu_{\theta})^2" title="\log P(\theta) \sim \log \Big( \exp{\frac{(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = \frac{1}{2\sigma^2} (\theta - \mu_{\theta})^2" /></a>
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;-&space;\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;-&space;\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}" title="\log P(\theta) \sim \log \Big( e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = - \frac{(\theta - \mu_{\theta})^2}{2\sigma^2}" /></a>
 
 commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
 
