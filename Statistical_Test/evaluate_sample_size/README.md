@@ -49,6 +49,8 @@ Here n0 is Cochran’s sample size recommendation, **N is the population size**,
 
 So for this smaller population, all we need are 278 households in our sample; a substantially smaller sample size.
 
+This is the size one your variations needs to be. So for your email send, if you have one control and one variation, you'll need to double this number. If you had a control and two variations, you'd triple it. (And so on.) [[Ginny Mineo]][How to Determine Your A/B Testing Sample Size & Time Frame]
+
 Here are the calculators from [survey system](https://www.surveysystem.com/sscalc.htm) and [survey monkey](https://www.surveymonkey.com/mp/sample-size-calculator/).
 
 ### Sample size given a confidence level and width (unknown population standard deviation)
@@ -74,20 +76,9 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 
 
-
-Let's dive into how to actually calculate the sample size and timing you need for your next A/B test in the following examples.
-
-
-
-
-
-
-
-
-
 ## Page View Example, with required power
 
-[Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true). 
+[Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
 Assume the conversion rate is about 10%, and we want to run an A/B test. The minimum **effetc size** (practical significance level) to observe is 2%, such that the confidence interval is 8%-12%. Given significance level 0.05 and statistical power 80%, we can use the [online calculator](https://www.evanmiller.org/ab-testing/sample-size.html), and the interface looks like
 
