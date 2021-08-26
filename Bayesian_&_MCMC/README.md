@@ -140,7 +140,7 @@ Note that maximizing the likelihood functions is equal to maximizing the log of 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}\log&space;\Big(&space;\prod_{i}P(\bold{x}_i,&space;y_i|&space;\theta)&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmin}}&space;\sum_{i}&space;-\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}\log&space;\Big(&space;\prod_{i}P(\bold{x}_i,&space;y_i|&space;\theta)&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmin}}&space;\sum_{i}&space;-\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)" title="\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}}\log \Big( \prod_{i}P(\bold{x}_i, y_i| \theta) \Big) = \underset{\theta}{\textrm{argmax}} \sum_{i} \log P(\bold{x}_i, y_i| \theta) = \underset{\theta}{\textrm{argmin}} \sum_{i} -\log P(\bold{x}_i, y_i| \theta)" /></a>
 
 
-Thus the problem is equivalent to optimizing the cost functions  
+Thus the problem is equivalent to minimizing the cost functions  
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;(y_i&space;-&space;\bold{\theta}^T&space;\bold{x}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;(y_i&space;-&space;\bold{\theta}^T&space;\bold{x}_i)^2" title="C(D) = \sum^n_{i=1} (y_i - \bold{\theta}^T \bold{x}_i)^2" /></a>
 
@@ -173,7 +173,7 @@ What it means is that, the likelihood is now weighted with some weight coming fr
 
 ### Prior plays a role as regularization
 
-Instead, if we implement **Gaussian distribution** to the prior `P(θ)`, 
+Instead, if we implement **Gaussian distribution** to the prior `P(θ)` [[Brian Keng]][A Probabilistic Interpretation of Regularization], 
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;\sim&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)&space;\sim&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}" title="P(\theta) \sim e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}" /></a>
@@ -370,6 +370,11 @@ https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/
 
 [A Zero-Math Introduction to Markov Chain Monte Carlo Methods]: https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50
 [[Ben Shaver] A Zero-Math Introduction to Markov Chain Monte Carlo Methods](https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50)
+
+
+[A Probabilistic Interpretation of Regularization]: https://bjlkeng.github.io/posts/probabilistic-interpretation-of-regularization/
+[[Brian Keng] A Probabilistic Interpretation of Regularization](https://bjlkeng.github.io/posts/probabilistic-interpretation-of-regularization/)
+
 
 
 [How to derive the likelihood function for binomial distribution for parameter estimation?]: https://stats.stackexchange.com/questions/181035/how-to-derive-the-likelihood-function-for-binomial-distribution-for-parameter-es
