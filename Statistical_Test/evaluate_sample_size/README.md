@@ -25,7 +25,7 @@ Then given confidence level and margin of error, reversely the sample size neede
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" title="n_0 = \frac{Z^2 pq}{e^2}" /></a>
 
-Suppose we are doing a study on the inhabitants of a **large** town, and want to find out how many households serve breakfast in the mornings. We don’t have much information on the subject to begin with, so we’re going to assume that half of the families serve breakfast: this gives us **maximum variability. So p = 0.5**. Now let’s say we want 95% confidence, and at least 5 percent—plus or minus—precision [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]. 
+Suppose we are doing a study on the inhabitants of a **large** town, and want to find out how many households serve breakfast in the mornings. We don’t have much information on the subject to begin with, so we’re going to assume that half of the families serve breakfast: this gives us **maximum variability. So p = 0.5**. Now let’s say we want 95% confidence, and at least 5%—plus or minus—precision [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]. 
 
 A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we get
 
@@ -54,12 +54,20 @@ So for this smaller population, all we need are 278 households in our sample; a 
 
 Example question: 41% of Jacksonville residents said that they had been in a hurricane. How many adults should be surveyed to estimate the true proportion of adults who have been in a hurricane, with a 95% confidence interval 6% wide?
 
-z-score for 95% confidence interval is 1.96. The margin of error is given by the half width: 6% / 2 = 0.03.i Gven percentage. p = 41% = 0.41, so q = 1-p = 0.59. If you aren’t given phat, use p = q = 50%. So the 
+z-score for 95% confidence interval is 1.96. The margin of error is given by the half width: 6% / 2 = 0.03. Gven percentage. p = 41% = 0.41, so q = 1-p = 0.59. If you aren’t given phat, use p = q = 50%. So the 
 
      (1.96/0.03) * (1.96/0.03) * 0.40 * 0.59 = 1033
 
 1,033 people to survey.
 
+
+## Sample Size Given a Confidence Level and Width (known population standard deviation)
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=&space;\Big(&space;\frac{Z_{\alpha&space;/2}&space;\sigma}{e}&space;\Big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=&space;\Big(&space;\frac{Z_{\alpha&space;/2}&space;\sigma}{e}&space;\Big)^2" title="n = \Big( \frac{Z_{\alpha /2} \sigma}{e} \Big)^2" /></a>
+
+Example question: Suppose we want to know the average age of an Florida State College student, plus or minus 0.5 years. We’d like to be 99% confident about our result. From a previous study, we know that the standard deviation for the population is 2.9.
+
+      (2.58 * 2.9 / 0.5) * (2.58 * 2.9 / 0.5) = 223
 
 
 
