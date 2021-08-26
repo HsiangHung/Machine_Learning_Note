@@ -38,18 +38,18 @@ So a random sample of 385 households in our target population should be enough t
 
 ### Samll population - modification for the Cochran Formula
 
-If the population we’re studying is small, we can modify the sample size we calculated in the above formula by using this equation:
+If the population we’re studying is **small**, we can modify the sample size we calculated in the above formula by using this equation [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips], [[Survey Monkey]][Sample size calculator]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=\frac{n_0}{1&plus;\frac{n_0-1}{N}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=\frac{n_0}{1&plus;\frac{n_0-1}{N}}" title="n =\frac{n_0}{1+\frac{n_0-1}{N}}" /></a>
 
 
-Here n0 is Cochran’s sample size recommendation, N is the population size, and n is the new, adjusted sample size. In our earlier example, if there were just 1000 households in the target population, we would calculate
+Here n0 is Cochran’s sample size recommendation, **N is the population size**, and n is the new, adjusted sample size. In our earlier example, if there were just 1000 households in the target population, we would calculate
 
     385 / (1 + ( 384 / 1000 )) = 278
 
 So for this smaller population, all we need are 278 households in our sample; a substantially smaller sample size.
 
-Here is the [calculator](https://www.surveysystem.com/sscalc.htm).
+Here are the calculators from [survey system](https://www.surveysystem.com/sscalc.htm) and [survey monkey](https://www.surveymonkey.com/mp/sample-size-calculator/).
 
 ### Sample size given a confidence level and width (unknown population standard deviation)
 
@@ -128,6 +128,9 @@ Note the `absolute` is selected to make 8%-12% confidence interval. The online c
 [How to Determine Your A/B Testing Sample Size & Time Frame]: https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time
 [[Ginny Mineo] How to Determine Your A/B Testing Sample Size & Time Frame](https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time)
 
+
+[Sample size calculator]: https://www.surveymonkey.com/mp/sample-size-calculator/
+[[Survey Monkey] Sample size calculator](https://www.surveymonkey.com/mp/sample-size-calculator/)
 
 [Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]: https://www.statisticshowto.com/probability-and-statistics/find-sample-size/
 [[Statistics How To] Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips](https://www.statisticshowto.com/probability-and-statistics/find-sample-size/)
