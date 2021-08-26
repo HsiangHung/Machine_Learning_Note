@@ -54,7 +54,7 @@ Example question: 41% of Jacksonville residents said that they had been in a hur
 
 z-score for 95% confidence interval is 1.96. The margin of error is given by the half width: 6% / 2 = 0.03.i Gven percentage. p = 41% = 0.41, so q = 1-p = 0.59. If you aren’t given phat, use p = q = 50%. So the 
 
-(1.96/0.03)*(1.96/0.03)*0.40*0.59 = 1033
+     (1.96/0.03) * (1.96/0.03) * 0.40 * 0.59 = 1033
 
 1,033 people to survey.
 
