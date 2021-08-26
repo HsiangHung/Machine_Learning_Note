@@ -55,6 +55,9 @@ L1 and L2 regularization correspond to the priors of MAP in Bayesian. See [here]
 The main intuitive difference between the L1 and L2 regularization is that L1 regularization tries to estimate the **median** while the L2 regularization tries to estimate the **mean** to avoid overfitting [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference]. Here is the intuition explanation: [L1 regression estimates median whereas L2 regression estimates mean?](https://stats.stackexchange.com/questions/34613/l1-regression-estimates-median-whereas-l2-regression-estimates-mean).
 
 
+Another difference between them is that L1 regularization helps in feature selection by eliminating the features that are not important. This is helpful when the number of feature points are large in number [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference].
+
+
 [Why is the L2 regularization equivalent to Gaussian prior?]: https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior
 [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?] Why is the L2 regularization equivalent to Gaussian prior?](https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior)
 
