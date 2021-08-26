@@ -53,7 +53,7 @@ This is the size **one your variations** needs to be. So for your email send, if
 
 Here are the calculators from [survey system](https://www.surveysystem.com/sscalc.htm) and [survey monkey](https://www.surveymonkey.com/mp/sample-size-calculator/).
 
-### Sample size given a confidence level and width (unknown population standard deviation)
+### Given a confidence level and width, unknown population standard deviation
 
 Example question: 41% of Jacksonville residents said that they had been in a hurricane. How many adults should be surveyed to estimate the true proportion of adults who have been in a hurricane, with a 95% confidence interval 6% wide?
 
@@ -64,7 +64,7 @@ z-score for 95% confidence interval is 1.96. The margin of error is given by the
 1,033 people to survey.
 
 
-### Sample size given a confidence level and width (known population standard deviation)
+### Given a confidence level and width, known population standard deviation
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=&space;\Big(&space;\frac{Z_{\alpha&space;/2}&space;\sigma}{e}&space;\Big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=&space;\Big(&space;\frac{Z_{\alpha&space;/2}&space;\sigma}{e}&space;\Big)^2" title="n = \Big( \frac{Z_{\alpha /2} \sigma}{e} \Big)^2" /></a>
 
