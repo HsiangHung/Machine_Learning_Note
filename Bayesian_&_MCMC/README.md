@@ -186,7 +186,11 @@ which can be identify to a **L2 (Ridge) regularization** term (if <a href="http:
 commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
 
 
-On the other hand, **L1 (Lasso)** is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. Below (credit from book: **An Introduction to Statistical Learning**), Left: Gaussian prior (for ridge). Right: double-exponential prior (for lasso).
+On the other hand, **L1 (Lasso)** is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;\sim&space;e^{\frac{-|\theta&space;-&space;\mu_{\theta}|}{\sigma}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)&space;\sim&space;e^{\frac{-|\theta&space;-&space;\mu_{\theta}|}{\sigma}}" title="P(\theta) \sim e^{\frac{-|\theta - \mu_{\theta}|}{\sigma}}" /></a>
+
+Below (credit from book: **An Introduction to Statistical Learning**), Left: Gaussian prior (for ridge). Right: double-exponential prior (for lasso).
 
 ![regularization_prior](images/lasso_ridge_prior.png)
 
