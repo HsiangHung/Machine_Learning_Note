@@ -49,7 +49,7 @@ Here n0 is Cochran’s sample size recommendation, **N is the population size**,
 
 So for this smaller population, all we need are 278 households in our sample; a substantially smaller sample size.
 
-This is the size one your variations needs to be. So for your email send, if you have one control and one variation, you'll need to double this number. If you had a control and two variations, you'd triple it. (And so on.) [[Ginny Mineo]][How to Determine Your A/B Testing Sample Size & Time Frame]
+This is the size **one your variations** needs to be. So for your email send, if you have one control and one variation, you'll need to double this number. If you had a control and two variations, you'd triple it. (And so on.) [[Ginny Mineo]][How to Determine Your A/B Testing Sample Size & Time Frame]
 
 Here are the calculators from [survey system](https://www.surveysystem.com/sscalc.htm) and [survey monkey](https://www.surveymonkey.com/mp/sample-size-calculator/).
 
@@ -74,9 +74,7 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 
 
-
-
-## Page View Example, with required power
+## Page View Example, Required Statistical Power
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
@@ -87,27 +85,6 @@ Assume the conversion rate is about 10%, and we want to run an A/B test. The min
 Note the `absolute` is selected to make 8%-12% confidence interval. The online calculator shows at least we need sample size of 3,623 page views per variation (in each group) to see significant results in the AB test.
 
 
-## Email Example
-
-[[Ginny Mineo]][How to Determine Your A/B Testing Sample Size & Time Frame]
-
-
-
-
-
-| Pred \ Actual | H0 is False | H0 is True | 
-| :---: | :---: | :---: | 
-| H0 is False | <a href="https://www.codecogs.com/eqnedit.php?latex=1&space;-&space;\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1&space;-&space;\beta" title="1 - \beta" /></a> | <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha&space;\textrm{&space;(Type&space;I&space;error)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha&space;\textrm{&space;(Type&space;I&space;error)}" title="\alpha \textrm{ (Type I error)}" /></a> | 
-| H0 is True | <a href="https://www.codecogs.com/eqnedit.php?latex=\beta&space;\textrm{&space;(Type&space;II&space;error)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta&space;\textrm{&space;(Type&space;II&space;error)}" title="\beta \textrm{ (Type II error)}" /></a> | <a href="https://www.codecogs.com/eqnedit.php?latex=1-\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1-\alpha" title="1-\alpha" /></a> | 
-
-
-
-
-| Effect size | r | 
-| :---: | :---: | 
-| Small | 0.1 |
-| Medium | 0.3 |
-| Large | 0.5 |
 
 
 
