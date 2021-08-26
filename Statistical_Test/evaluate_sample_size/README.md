@@ -18,10 +18,9 @@ A sample is a percentage of the total population in statistics. You can use the 
 
 Assume we have large enough populations. The margin of error is give by
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=e&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n}}" title="e = Z \sqrt{\frac{p(1-p)}{n}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=e&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" title="e = Z \sqrt{\frac{pq}{n_0}}" /></a>
 
-
-Then reversely we use cochran formula to estimate sample size needed (given confidence level and margin of error):
+Then given confidence level and margin of error, reversely we use cochran formula to estimate sample size needed, <a href="https://www.codecogs.com/eqnedit.php?latex=n_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_0" title="n_0" /></a>:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" title="n_0 = \frac{Z^2 pq}{e^2}" /></a>
 
