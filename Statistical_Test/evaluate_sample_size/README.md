@@ -78,7 +78,7 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
-Assume the conversion rate is about 10%, and we want to run an A/B test. The minimum **effetc size** (practical significance level) to observe is 2%, such that the confidence interval is 8%-12%. Given significance level 0.05 and statistical power 80%, we can use the [online calculator](https://www.evanmiller.org/ab-testing/sample-size.html), and the interface looks like
+Assume the conversion rate is about 10%, and we want to run an A/B test. The minimum **effetc size** (practical significance level) to observe is 2%, such that the confidence interval is 8%-12%. Given significance level 5% and statistical power 80%, we can use another [online calculator](https://www.evanmiller.org/ab-testing/sample-size.html), and the interface looks like
 
 ![](images/abtest_online_calculator.png)
 
