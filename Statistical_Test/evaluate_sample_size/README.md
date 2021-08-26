@@ -25,11 +25,13 @@ Then given confidence level and margin of error, reversely the sample size neede
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" title="n_0 = \frac{Z^2 pq}{e^2}" /></a>
 
-Suppose we are doing a study on the inhabitants of a **large** town, and want to find out how many households serve breakfast in the mornings. We don’t have much information on the subject to begin with, so we’re going to assume that half of the families serve breakfast: this gives us maximum variability. So p = 0.5. Now let’s say we want 95% confidence, and at least 5 percent—plus or minus—precision [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]. 
+Suppose we are doing a study on the inhabitants of a **large** town, and want to find out how many households serve breakfast in the mornings. We don’t have much information on the subject to begin with, so we’re going to assume that half of the families serve breakfast: this gives us **maximum variability. So p = 0.5**. Now let’s say we want 95% confidence, and at least 5 percent—plus or minus—precision [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]. 
 
 A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we get
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=(1.96)^2(0.5)(0.5)/(0.05)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(1.96)^2(0.5)(0.5)/(0.05)^2" title="(1.96)^2(0.5)(0.5)/(0.05)^2" /></a>
+ 
+     (1.96/0.05) * (1.96/0.05) * 0.5 * 0.5
+
 
 So a random sample of 385 households in our target population should be enough to give us the confidence levels we need.
 
