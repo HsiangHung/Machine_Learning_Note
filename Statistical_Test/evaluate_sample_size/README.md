@@ -21,7 +21,7 @@ Assume we have large enough populations. The margin of error is given by
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=e&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" title="e = Z \sqrt{\frac{p(1-p)}{n_0}} = Z \sqrt{\frac{pq}{n_0}}" /></a>
 
-Then given confidence level and margin of error, reversely the sample size needed per variation can be estimated by cochran formula [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]:
+Then given **confidence level** and **margin of error**, reversely the sample size needed per variation can be estimated by cochran formula [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" title="n_0 = \frac{Z^2 pq}{e^2}" /></a>
 
@@ -49,6 +49,7 @@ Here n0 is Cochran’s sample size recommendation, N is the population size, and
 
 So for this smaller population, all we need are 278 households in our sample; a substantially smaller sample size.
 
+Here is the [calculator](https://www.surveysystem.com/sscalc.htm).
 
 ## Sample Size Given a Confidence Level and Width (unknown population standard deviation)
 
