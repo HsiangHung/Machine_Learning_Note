@@ -15,8 +15,9 @@ When you only survey a **small** sample of the population, uncertainty creeps in
 
 A sample is a percentage of the total population in statistics. You can use the data from a sample to make inferences about a population as a whole. For example, the standard deviation of a sample can be used to approximate the standard deviation of a population. Finding a sample size can be one of the most challenging tasks in statistics and depends upon many factors including the size of your original population.
 
+### Large population
 
-Assume we have large enough populations. The margin of error is give by
+Assume we have large enough populations. The margin of error is given by
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=e&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" title="e = Z \sqrt{\frac{p(1-p)}{n_0}} = Z \sqrt{\frac{pq}{n_0}}" /></a>
 
@@ -24,10 +25,38 @@ Then given confidence level and margin of error, reversely the sample size neede
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" title="n_0 = \frac{Z^2 pq}{e^2}" /></a>
 
+### Samll population - modification for the Cochran Formula
+
+If the population we’re studying is small, we can modify the sample size we calculated in the above formula by using this equation:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=\frac{n_0}{1&plus;\frac{n_0-1}{N}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=\frac{n_0}{1&plus;\frac{n_0-1}{N}}" title="n =\frac{n_0}{1+\frac{n_0-1}{N}}" /></a>
+
+
+Here n0 is Cochran’s sample size recommendation, N is the population size, and n is the new, adjusted sample size. In our earlier example, if there were just 1000 households in the target population, we would calculate
+
+    385 / (1 + ( 384 / 1000 )) = 278
+
+So for this smaller population, all we need are 278 households in our sample; a substantially smaller sample size.
 
 
 
-Let's dive into how to actually calculate the sample size and timing you need for your next A/B test.
+## Large Population Example
+
+Suppose we are doing a study on the inhabitants of a **large** town, and want to find out how many households serve breakfast in the mornings. We don’t have much information on the subject to begin with, so we’re going to assume that half of the families serve breakfast: this gives us maximum variability. So p = 0.5. Now let’s say we want 95% confidence, and at least 5 percent—plus or minus—precision [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]. 
+
+A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we get
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=(1.96)^2(0.5)(0.5)/(0.05)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(1.96)^2(0.5)(0.5)/(0.05)^2" title="(1.96)^2(0.5)(0.5)/(0.05)^2" /></a>
+
+So a random sample of 385 households in our target population should be enough to give us the confidence levels we need.
+
+
+
+
+
+
+
+Let's dive into how to actually calculate the sample size and timing you need for your next A/B test in the following examples.
 
 
 
@@ -37,7 +66,7 @@ Let's dive into how to actually calculate the sample size and timing you need fo
 
 
 
-## Page View Example 
+## Page View Example, with required power
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true). 
 
