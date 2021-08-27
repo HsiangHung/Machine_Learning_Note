@@ -59,7 +59,7 @@ The main intuitive difference between the L1 and L2 regularization is that L1 re
 
 Another difference between them is that L1 regularization helps in **feature selection** by eliminating the features that are not important. This is helpful when the number of feature points are large in number [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference].
 
-We all know why L1 regularization has chance to surpress coefficient. The following gives a better picture and explanation:
+We all know why L1 regularization has chance to surpress coefficient. The following gives a better picture and explanation (credit from [[Terence Parr]][The difference between L1 and L2 regularization]):
 
 ![](images/Lasso_ridge_regularization.png)
 
@@ -79,6 +79,9 @@ In (a), the min cost happens at β2 = 0. But in (b), the min cost at finite β1 
 [L2 and L1 Regularization in Machine Learning]: https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning
 [[Neelam Tyagi] L2 and L1 Regularization in Machine Learning](https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning)
 
+
+[The difference between L1 and L2 regularization]: https://explained.ai/regularization/L1vsL2.html
+[[Terence Parr] The difference between L1 and L2 regularization](https://explained.ai/regularization/L1vsL2.html)
 
 
 ## Entropy, Cross-Entropy, and KL-Divergence 
