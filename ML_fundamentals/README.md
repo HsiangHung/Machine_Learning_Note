@@ -31,6 +31,8 @@ In this we can only save key ,value, location only for non zero elements:
 
 **Tony Petrov**: Dimensionality reduction: PCA and SVD. It could also be the case that you’ve one-hot encoded variables which are better represented by embeddings.  **Information value scores** of each variable is important as high dimensionality data is bound to have a lot of collinear variables which will break most matrix based algorithms, also look at the p-values of each variable and remove the least important ones.
 
+### Reference
+
 [What is data sparsity?]: https://www.quora.com/What-is-data-sparsity
 [[Quora: What is data sparsity?] What is data sparsity?](https://www.quora.com/What-is-data-sparsity)
 
@@ -57,6 +59,7 @@ The main intuitive difference between the L1 and L2 regularization is that L1 re
 
 Another difference between them is that L1 regularization helps in **feature selection** by eliminating the features that are not important. This is helpful when the number of feature points are large in number [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference].
 
+### Reference
 
 [Why is the L2 regularization equivalent to Gaussian prior?]: https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior
 [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?] Why is the L2 regularization equivalent to Gaussian prior?](https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior)
@@ -143,6 +146,7 @@ Newton method attracts to saddle points and saddle points are common in machine 
 you see how the Newton method led you to the saddle point at `x = y = 0`. In contrast, the gradient descent method will not lead to the saddle point. The gradient is zero at the saddle point, but a tiny step out would pull the optimization away as you can see from the gradient above - its gradient on y-variable is negative.
 
 
+### Reference
 
 [Kullback-Leibler Divergence for Machine Learning]: https://medium.com/@cdefaux/kullback-leibler-divergence-for-dummies-c3613bc80ad3
 [[Christiaan Defaux] Kullback-Leibler Divergence for Machine Learning](https://medium.com/@cdefaux/kullback-leibler-divergence-for-dummies-c3613bc80ad3)
