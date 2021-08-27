@@ -61,7 +61,7 @@ Another difference between them is that L1 regularization helps in **feature sel
 
 We all know why L1 regularization has chance to surpress coefficient. The following gives a better picture and explanation:
 
-![](images/Lasso_Ridge_regularization.png)
+![](images/Lasso_ridge_regularization.png)
 
 
 ### Reference
