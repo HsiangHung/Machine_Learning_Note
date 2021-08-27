@@ -54,10 +54,13 @@ The `Lq` norms with q < 1 is not convex, so difficult to optimize [Cross Validat
 L1 and L2 regularization correspond to the priors of MAP in Bayesian. See [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Bayesian_%26_MCMC#22-map). L2 regularization is equivalent to **Gaussian** prior [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?]][Why is the L2 regularization equivalent to Gaussian prior?], whereas L1 corresponds to [Laplace prior](https://en.wikipedia.org/wiki/Laplace_distribution) (double exponential distribution).
 
 
-The main intuitive difference between the L1 and L2 regularization is that L1 regularization tries to estimate the **median** while the L2 regularization tries to estimate the **mean** to avoid overfitting [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference]. Here is the intuition explanation: [L1 regression estimates median whereas L2 regression estimates mean?](https://stats.stackexchange.com/questions/34613/l1-regression-estimates-median-whereas-l2-regression-estimates-mean).
+The main intuitive difference between the L1 and L2 regularization is that L1 regularization tries to estimate the **median** while the L2 regularization tries to estimate the **mean** to avoid overfitting [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference]. Here is the intuition explanation: [L1 regression estimates median whereas L2 regression estimates mean?](https://stats.stackexchange.com/questions/34613/l1-regression-estimates-median-whereas-l2-regression-estimates-mean). The post [[Neelam Tyagi]][L2 and L1 Regularization in Machine Learning] has more comprehensive comparison.
 
 
 Another difference between them is that L1 regularization helps in **feature selection** by eliminating the features that are not important. This is helpful when the number of feature points are large in number [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference].
+
+We all know why L1 regularization has chance to surpress coefficient. The following gives a better picture and explanation:
+
 
 ### Reference
 
@@ -67,6 +70,11 @@ Another difference between them is that L1 regularization helps in **feature sel
 
 [L1 vs L2 Regularization: The intuitive difference]: https://medium.com/analytics-vidhya/l1-vs-l2-regularization-which-is-better-d01068e6658c
 [[Dhaval Taunk] L1 vs L2 Regularization: The intuitive difference](https://medium.com/analytics-vidhya/l1-vs-l2-regularization-which-is-better-d01068e6658c)
+
+
+[L2 and L1 Regularization in Machine Learning]: https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning
+[[Neelam Tyagi] L2 and L1 Regularization in Machine Learning](https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning)
+
 
 
 ## Entropy, Cross-Entropy, and KL-Divergence 
