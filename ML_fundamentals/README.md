@@ -63,6 +63,8 @@ We all know why L1 regularization has chance to surpress coefficient. The follow
 
 ![](images/Lasso_ridge_regularization.png)
 
+In (a), the min cost happens at β2 = 0. But in (b), the min cost at finite β1 and β2.
+
 
 ### Reference
 
