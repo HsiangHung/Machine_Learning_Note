@@ -25,6 +25,12 @@ Ideally, we want both lower <a href="https://www.codecogs.com/eqnedit.php?latex=
 <a href="https://www.codecogs.com/eqnedit.php?latex=1-\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1-\beta" title="1-\beta" /></a> is the power. Higher power has more reliable statistical testing.
 
 
+#### Reference
+
+
+[S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
+[[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
+
 
 ## Effect size
 
@@ -48,6 +54,15 @@ These effect sizes estimate the amount of the variance within an experiment that
 | Medium | 0.3 |
 | Large | 0.5 |
 
+#### Reference
+
+[Merra, Power Analysis, Statistical Significance, & Effect Size]: https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.
+[[Merra] Merra, Power Analysis, Statistical Significance, & Effect Size](https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.)
+
+
+[statisticssolution, Effect Size]: https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/
+[[statisticssolution] statisticssolution, Effect Size](https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/)
+
 
 ## Novelty Effect
 
@@ -69,27 +84,19 @@ Another way is to consider driving traffic for **new users only** to ensure the 
 The opposite to novelty effect also happens. That is, if you give users a new experience, at first they might hate it cause it is not what they are used to and they feel they have to re-learn how to use the product. This is called change aversion. However, in practice, this is a much smaller problem from an A/B testing standpoint because it only affects major product redesigns, which are rarer than small UI tweaks [[Product Data Science]][Product Data Science, Novelty Effect]. 
 
 
-## Reference
+#### Reference
 
 
 [Instapage, 5 Common Threats to Your A/B Test’s Validity]: https://instapage.com/blog/validating-ab-tests
 [[Instapage] Instapage, 5 Common Threats to Your A/B Test’s Validity](https://instapage.com/blog/validating-ab-tests)
 
 
-[S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
-[[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
-
-[Merra, Power Analysis, Statistical Significance, & Effect Size]: https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.
-[[Merra] Merra, Power Analysis, Statistical Significance, & Effect Size](https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.)
 
 
 [Product Data Science, Novelty Effect]: https://productds.com/wp-content/uploads/Novelty_Effect.html
 [[Product Data Science] Product Data Science, Novelty Effect](https://productds.com/wp-content/uploads/Novelty_Effect.html)
 
-
-[statisticssolution, Effect Size]: https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/
-[[statisticssolution] statisticssolution, Effect Size](https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/)
 
 
 [Wiki-Effect size, Effect size]: https://en.wikipedia.org/wiki/Effect_size
