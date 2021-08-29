@@ -31,7 +31,8 @@ Table of Contents:
 * [3. Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3-multicollinearity)
      * [3.A How to test Multicollinearity?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3a-how-to-test-multicollinearity)
      * [3.B How to deal with Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3b-how-to-deal-with-multicollinearity)
-* [4. Deep learning for regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#4-deep-learning-for-regression)
+* [4. Effects of an Outlier on Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#4-effects-of-an-outlier-on-regression)
+* [5. Deep learning for regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#5-deep-learning-for-regression)
 
 
 
