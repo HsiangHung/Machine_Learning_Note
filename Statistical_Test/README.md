@@ -103,17 +103,23 @@ The opposite to novelty effect also happens. That is, if you give users a new ex
 
 Another similar kind of test is the A/B/N test. In this kind of test, (usually, this kind of test is done for web pages) more than two versions are tested, whereas an A/B test only tests two versions against each other. The N in A/B/N stands for "number," meaning the number of versions being tested. A/B/N tests are similar to that of multivariate tests, except multivariate tests involve the testing of all possible combinations of the different **variables** at once, whereas A/B/N, does not. Rather, A/B/N is used to test several different **versions** against each other.
 
+![](images/ABtest.png)
+
 These forms of tests are best used for major layout or design decisions, rather than testing the individual differences between specific elements.
 
-#### Multivariate
+**Limitations** A/B testing is best used to measure the impact of **two to four** variables on interactions with the page. Tests with more variables take longer to run, and A/B testing will not reveal any information about interaction between variables on a single page [[Exponente]][How to Ace A/B Testing Interview Questions].
+
+#### Multivariate testing
 
  A/B tests, as the name suggests, only compare two variables. If too many variables are included in an A/B test, it becomes difficult to discern why one version outperformed the other. When **multiple variables** are needed to be tested, multivariate testing is the way to go.
 
 Multivariate testing is when all possible combinations of versions and all their variables are tested **at once**. This form of test design is best used when several product changes are to be decided. Rather than running dozens of A/B tests **on every single design change**, a multivariate test can be performed in which every possible combination is tested against each other.
 
+![](images/multivariate.png)
+
 For example, a page that includes a sign-up form, some kind of catchy header text, and a footer. To run a multivariate test on this page, rather than creating a radically different design as in A/B testing, you might create **two** different lengths of sign-up forms, **three** different headlines, and **two** footers. Next, you would funnel visitors to all possible combinations of these elements. This is also known as full factorial testing, and is one of the reasons why multivariate testing is often recommended only for sites that have a substantial amount of daily traffic — the more variations that need to be tested, the longer it takes to obtain meaningful data from the test.
 
-**Limitation** The single biggest limitation of multivariate testing is the amount of traffic needed to complete the test. Since all experiments are fully factorial, too many changing elements at once can quickly add up to a very large number of possible combinations that must be tested. Even a site with fairly high traffic might have trouble completing a test with more than 25 combinations in a feasible amount of time.
+**Limitation** The single biggest limitation of multivariate testing is the amount of traffic needed to complete the test. Since all experiments are fully factorial, too many changing elements at once can quickly add up to a very large number of possible combinations that must be tested. Even a site with fairly high traffic might have trouble completing a test with more than 25 combinations in a feasible amount of time [[Exponente]][How to Ace A/B Testing Interview Questions].
 
 #### Reference
 
