@@ -15,6 +15,7 @@ Table of Contents:
      * [5.2 Supervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#52-supervised-learning)
      * [5.3 Unsupervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#53-unsupervised-learning)
 * [6. Time-Series Anomaly Detection](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#6-time-series-anomaly-detection)
+* [7. Effect of An outlier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#7-effect-of-an-outlier)
 
 
 ## 1. Is it not just Classification? 
@@ -203,13 +204,15 @@ The cons of isolation forest include that visualizing results is complicated, an
 [Oracle article: Introduction: Anomaly Detection](https://www.datascience.com/blog/python-anomaly-detection)
 
 
-## 7. Effect of An outlier
+## 7. Effect of An Outlier
 
 **Mean** is affected by outliers. More specifically, the mean will want to move towards the outlier. **Median** more accurately describes data with an outlier. **Mode** is a good measure to use when you have categorical data. The following example shows the effect by an outlier (credit from [here](https://www.cusd80.com/cms/lib6/AZ01001175/Centricity/Domain/3244/Effects%20of%20an%20Outlier.pdf))
 
 ![](images/outlier_effect.png)
 
 An outlier can affect the mean of a data set by skewing the results so that the mean is no longer representative of the data set. We see after removing the outlier, the mean is close to the mean. [How does an outlier affect the mean of a data set?](https://socratic.org/questions/how-does-an-outlier-affect-the-mean-of-a-data-set)
+
+The effect of an outlier in regression is mentioned [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#4-effects-of-an-outlier-on-regression).
 
 ## Reference
 
