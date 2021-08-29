@@ -111,8 +111,9 @@ These forms of tests are best used for major layout or design decisions, rather 
 
 Multivariate testing is when all possible combinations of versions and all their variables are tested **at once**. This form of test design is best used when several product changes are to be decided. Rather than running dozens of A/B tests **on every single design change**, a multivariate test can be performed in which every possible combination is tested against each other.
 
+For example, a page that includes a sign-up form, some kind of catchy header text, and a footer. To run a multivariate test on this page, rather than creating a radically different design as in A/B testing, you might create **two** different lengths of sign-up forms, **three** different headlines, and **two** footers. Next, you would funnel visitors to all possible combinations of these elements. This is also known as full factorial testing, and is one of the reasons why multivariate testing is often recommended only for sites that have a substantial amount of daily traffic — the more variations that need to be tested, the longer it takes to obtain meaningful data from the test.
 
-
+**Limitation** The single biggest limitation of multivariate testing is the amount of traffic needed to complete the test. Since all experiments are fully factorial, too many changing elements at once can quickly add up to a very large number of possible combinations that must be tested. Even a site with fairly high traffic might have trouble completing a test with more than 25 combinations in a feasible amount of time.
 
 #### Reference
 
