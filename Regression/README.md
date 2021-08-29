@@ -60,7 +60,7 @@ TSS-RSS gives us how much variation in `y` is explained by our model. R-squared 
 
 `RSS/TSS` is the variance in `y` **NOT** explained by the model.
 
-0 <= R-squared <= 1. If this value is 0.7, it means that the independent variables explain 70% of the variation in the target variable. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
+0 <= R-squared <= 1. If this value is 0.7, it means that the **independent variables explain 70% of the variation in the target variable**. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
 
 
 ### 1.B Adjusted R-squared
@@ -156,7 +156,7 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 
 ## 4. Effects of an Outlier on Regression
 
-An influential point is an outlier that greatly affects the slope of the regression line. One way to test the influence of an outlier is to compute the regression equation with and without the outlier. The types of analysis are illustrated below.
+An influential point is an outlier that greatly affects the slope of the regression line. One way to test the influence of an outlier is to compute the regression equation with and without the outlier. The types of analysis are illustrated below [[Stat Trek]][Influential Points]:
 
 ### Example A
 
@@ -169,6 +169,14 @@ When the outlier is present, the slope is flatter (-4.10 vs. -3.32); so this out
 ![](images/outlier_regression_2.png)
 
 The slope of the regression line changes greatly, from -2.5 to -1.6; so the outlier would be considered an influential point.
+
+Sometimes, an influential point will cause the coefficient of determination (R-squared) to be bigger; sometimes, smaller. In the first example above, the coefficient of determination is bigger when the influential point is present (0.94 vs. 0.55). In the second example, it is smaller (0.46 vs. 0.52). When the data set is very large, a single outlier may not have a big effect on the regression equation.
+
+
+If your data set includes an influential point, here are some things to consider:
+
+* An influential point may represent bad data, possibly the result of measurement error. If possible, check the validity of the data point.
+* Compare the decisions that would be made based on regression equations defined with and without the influential point. If the equations lead to contrary decisions, use caution.
 
 
 ## 5. Deep Learning for Regression
@@ -210,6 +218,10 @@ California house price prediction from Kaggle:
 
 [Quroa: What is the difference between R-squared and Adjusted R-squared?]: https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared
 [[Quora: What is the difference between R-squared and Adjusted R-squared?] Quora: What is the difference between R-squared and Adjusted R-squared?](https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared)
+
+
+[Influential Points]: https://stattrek.com/regression/influential-points.aspx
+[[Stat Trek] Influential Points](https://stattrek.com/regression/influential-points.aspx)
 
 
 [How to detect and deal with Multicollinearity]: https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1
