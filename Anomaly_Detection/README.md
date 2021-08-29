@@ -202,6 +202,14 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 [Oracle article: Introduction: Anomaly Detection](https://www.datascience.com/blog/python-anomaly-detection)
 
+
+## 7. Effect of An outlier
+
+**Mean** is affected by outliers. More specifically, the mean will want to move towards the outlier. **Median** more accurately describes data with an outlier. **Mode** is a good measure to use when you have categorical data.
+
+![](images/outlier_effect.png)
+
+
 ## Reference
 
 
