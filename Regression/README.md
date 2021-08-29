@@ -153,7 +153,24 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 
 
 
-## 4. Deep learning for regression
+## 4. Effects of an Outlier on Regression
+
+An influential point is an outlier that greatly affects the slope of the regression line. One way to test the influence of an outlier is to compute the regression equation with and without the outlier. The types of analysis are illustrated below.
+
+### Example A
+
+![](images/outlier_regression_1.png)
+
+When the outlier is present, the slope is flatter (-4.10 vs. -3.32); so this outlier would be considered an influential point.
+
+### Example B
+
+![](images/outlier_regression_2.png)
+
+The slope of the regression line changes greatly, from -2.5 to -1.6; so the outlier would be considered an influential point.
+
+
+## 5. Deep Learning for Regression
 
 California house price prediction from Kaggle:
 
