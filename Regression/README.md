@@ -168,12 +168,12 @@ When the outlier is present, the slope is flatter (-4.10 vs. -3.32); so this out
 
 ![](images/outlier_regression_2.png)
 
-The slope of the regression line changes greatly, from -2.5 to -1.6; so the outlier would be considered an influential point.
+The slope of the regression line changes greatly, from -2.5 to -1.6; so the outlier would be considered an influential point too.
 
 Sometimes, an influential point will cause the coefficient of determination (R-squared) to be bigger; sometimes, smaller. In the first example above, the coefficient of determination is bigger when the influential point is present (0.94 vs. 0.55). In the second example, it is smaller (0.46 vs. 0.52). When the data set is very large, a single outlier may not have a big effect on the regression equation.
 
 
-If your data set includes an influential point, here are some things to consider:
+If your data set includes an influential point, here are some things to consider [[Stat Trek]][Influential Points]:
 
 * An influential point may represent bad data, possibly the result of measurement error. If possible, check the validity of the data point.
 * Compare the decisions that would be made based on regression equations defined with and without the influential point. If the equations lead to contrary decisions, use caution.
