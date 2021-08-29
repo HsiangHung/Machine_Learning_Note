@@ -101,15 +101,15 @@ The opposite to novelty effect also happens. That is, if you give users a new ex
 
 #### A/B/N
 
-Another similar kind of test is the A/B/N test. In this kind of test, (usually, this kind of test is done for web pages) more than two versions are tested, whereas an A/B test only tests two versions against each other. The N in A/B/N stands for "number," meaning the number of versions being tested. A/B/N tests are similar to that of multivariate tests, except multivariate tests involve the testing of all possible combinations of the different **variables** at once, whereas A/B/N, does not. Rather, A/B/N is used to test **several different **versions** against each other.
+Another similar kind of test is the A/B/N test. In this kind of test, (usually, this kind of test is done for web pages) more than two versions are tested, whereas an A/B test only tests two versions against each other. The N in A/B/N stands for "number," meaning the number of versions being tested. A/B/N tests are similar to that of multivariate tests, except multivariate tests involve the testing of all possible combinations of the different **variables** at once, whereas A/B/N, does not. Rather, A/B/N is used to test several different **versions** against each other.
 
 These forms of tests are best used for major layout or design decisions, rather than testing the individual differences between specific elements.
 
 #### Multivariate
 
-Each experimental method is different from one another. More often than not, your interviewer will probably ask a question about when to use each and why. A/B tests, as the name suggests, only compare two variables. If too many variables are included in an A/B test, it becomes difficult to discern why one version outperformed the other. When multiple variables are needed to be tested, multivariate testing is the way to go.
+ A/B tests, as the name suggests, only compare two variables. If too many variables are included in an A/B test, it becomes difficult to discern why one version outperformed the other. When **multiple variables** are needed to be tested, multivariate testing is the way to go.
 
-Multivariate testing is when all possible combinations of versions and all their variables are tested at once. This form of test design is best used when several product changes are to be decided. Rather than running dozens of A/B tests **on every single design change**, a multivariate test can be performed in which every possible combination is tested against each other.
+Multivariate testing is when all possible combinations of versions and all their variables are tested **at once**. This form of test design is best used when several product changes are to be decided. Rather than running dozens of A/B tests **on every single design change**, a multivariate test can be performed in which every possible combination is tested against each other.
 
 
 
