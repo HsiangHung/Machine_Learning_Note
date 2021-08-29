@@ -1,8 +1,9 @@
 
 # A Guide to A/B Testing
 
+An A/B test is designed to test the hypothesis in such a way that observed difference between the two groups should be either due to random chance or due to a true difference between the groups.
 
-Before getting deeper into A/B testing, let’s answer the following questions.
+Before getting deeper into A/B testing, let’s answer the following questions [[Idil Ismiguzel]][A Guide to A/B Testing — How to Formulate, Design and Interpret].
 
 1. **What can be tested?** 
 
@@ -19,7 +20,7 @@ Metric selection needs to consider both sensitivity and robustness. Sensitivity 
 In order to consider both sensitivity and robustness in the metric selection, we can apply filtering and segmentation while creating the control and experiment samples. Filtering and segmentation can be based on user demographics (i.e. age, gender), the language of the platform, internet browser, device type (i.e. iOS or Android), cohort and etc.
 
 
-[[Idil Ismiguzel]][A Guide to A/B Testing — How to Formulate, Design and Interpret]
+
 
 | Pred \ Actual | H0 is False | H0 is True | 
 | :---: | :---: | :---: | 
