@@ -205,10 +205,11 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 ## 7. Effect of An outlier
 
-**Mean** is affected by outliers. More specifically, the mean will want to move towards the outlier. **Median** more accurately describes data with an outlier. **Mode** is a good measure to use when you have categorical data.
+**Mean** is affected by outliers. More specifically, the mean will want to move towards the outlier. **Median** more accurately describes data with an outlier. **Mode** is a good measure to use when you have categorical data. The following example shows the effect by an outlier (credit from [here](https://www.cusd80.com/cms/lib6/AZ01001175/Centricity/Domain/3244/Effects%20of%20an%20Outlier.pdf))
 
 ![](images/outlier_effect.png)
 
+An outlier can affect the mean of a data set by skewing the results so that the mean is no longer representative of the data set. We see after removing the outlier, the mean is close to the mean. [How does an outlier affect the mean of a data set?](https://socratic.org/questions/how-does-an-outlier-affect-the-mean-of-a-data-set)
 
 ## Reference
 
