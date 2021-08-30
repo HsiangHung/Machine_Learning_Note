@@ -3,6 +3,12 @@
 
 This is a very awesome virtual explanation for the permutation test by Jared Wilber [[Jared Wilber]][The Permutation Test].
 
+The algorithm comprises the following steps:
+
+1. Determine and calculate the initial test-statistic by control and treatment groups.
+2. Permute the treatment assignment and construct test-statistic distribution.
+3. Calculate the p-value by the initial test-statistic of the permutation distribution.
+
 
 
 ![](images/example_p1.png)
