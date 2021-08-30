@@ -45,7 +45,7 @@ The p-value is 16/200 = 8%. If significance level is 10% (as mentioned in Jared'
 
 
 
-## Other explanation from Idil: 
+## Other words from Idil: 
 
 Permuting means changing the order of a set of values, and what permutation test does is combining results from both groups and testing the null hypothesis by randomly drawing groups (equal to the experiment groups’ sample sizes) from the combined set and analyzing how much they differ from one another.
 
