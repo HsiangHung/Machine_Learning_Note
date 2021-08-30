@@ -26,10 +26,10 @@ Split smaple two groups: in the treatment group alpaca used new shampoo where in
 Calculate initial test statistic from mean difference between control and treatment groups:
 ![](images/example_p4.png)
 
-Reshuffle the treament group. Now in both the treament and control groups, there are alpaca using new and old shampoo. Then for each treatment assignment permutation, we calculate a test statistic:
+Reshuffle the treament group, but have the sample size as same as the initial experiment groups’ sample sizes . Now in both the treament and control groups, there are alpaca using new and old shampoo. Then for each treatment assignment permutation, we calculate a test statistic:
 ![](images/example_p5.png)
 
-More permutations generate more test statistics:
+More permutations (resampling) generate more test statistics:
 ![](images/example_p6.png)
 
 The test statistics generate a test statistic distribution. This distribution describes the test statistics variance if null hypothesis is true (no difference between control and treatment groups).
@@ -38,6 +38,7 @@ The test statistics generate a test statistic distribution. This distribution de
 Then we want to see where the initial test statistic is, and we can compute p-value to know how likely it happens by chance:
 ![](images/example_p8.png)
 
+Assume we resample 200 times:
 ![](images/example_p9.png)
 
 The p-value is 16/200 = 8%. If significance level is 10% (as mentioned in Jared's blog), we can reject the null hypothesis. So the new shampoo is different from the old one.
