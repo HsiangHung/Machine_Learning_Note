@@ -10,9 +10,11 @@ The algorithm comprises the following steps:
 3. Calculate the p-value by the initial test-statistic of the permutation distribution.
 
 
+## Prcoess
 
 ![](images/example_p1.png)
 
+Split smaple two groups: in the treatment group alpaca used new shampoo where in the control group only old shampoo. Note randomization of treatment assignment is very important.
 ![](images/example_p2.png)
 
 ![](images/example_p3.png)
