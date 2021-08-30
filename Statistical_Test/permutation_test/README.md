@@ -1,7 +1,7 @@
 
 # Permutation Test
 
-This is a very awesome virtual explanation for the permutation test by Jared Wilber [[Jared Wilber]][The Permutation Test].
+This is a very awesome virtual explanation for the permutation test by Jared Wilber [[Jared Wilber]][The Permutation Test]. The main idea is that, we want to see how likely the initial test statistic from our A/B test (between control and treatment groups) happens from population variance.
 
 The algorithm comprises the following steps:
 
@@ -25,11 +25,13 @@ Calculate initial test statistic from mean difference between control and treatm
 Reshuffle the treament group. Now in both the treament and control groups, there are alpaca using new and old shampoo. Then for each treatment assignment permutation, we calculate a test statistic:
 ![](images/example_p5.png)
 
-More permutations generate more test statistic
+More permutations generate more test statistics:
 ![](images/example_p6.png)
 
+The test statistics generate a test statistic distribution:
 ![](images/example_p7.png)
 
+Then we want to see where the initial test statistic is, and we can compute p-value to know how likely it happens by chance:
 ![](images/example_p8.png)
 
 ![](images/example_p9.png)
