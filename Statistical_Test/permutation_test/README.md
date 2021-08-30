@@ -5,6 +5,8 @@ This page follows one of Jared Wilber's blog, which is a very awesome virtual ex
 
 The main idea of permutation test (my understanding) is that, we want to see how likely the initial test statistic from our A/B test (between control and treatment groups) happens from test statistic variance within the population (if null hypothesis is true).
 
+Note that a permutation test does not require data to be numeric or binary and sample sizes can be similar or different. Also, assumptions about normally distributed data are not needed [[Idil Ismiguzel]][A Guide to A/B Testing — How to Formulate, Design and Interpret].
+
 The algorithm comprises the following steps:
 
 1. Determine and calculate the initial test-statistic by control and treatment groups.
@@ -49,3 +51,6 @@ The p-value is 16/200 = 8%. If significance level is 10% (as mentioned in Jared'
 
 [The Permutation Test]: https://www.jwilber.me/permutationtest/
 [[Jared Wilber] The Permutation Test](https://www.jwilber.me/permutationtest/)
+
+[A Guide to A/B Testing — How to Formulate, Design and Interpret]: https://towardsdatascience.com/a-guide-to-a-b-testing-how-to-formulate-design-and-interpret-f820cc62e21a
+[[Idil Ismiguzel] A Guide to A/B Testing — How to Formulate, Design and Interpret](https://towardsdatascience.com/a-guide-to-a-b-testing-how-to-formulate-design-and-interpret-f820cc62e21a)
