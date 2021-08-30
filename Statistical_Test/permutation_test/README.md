@@ -22,9 +22,10 @@ Split smaple two groups: in the treatment group alpaca used new shampoo where in
 Calculate initial test statistic from mean difference between control and treatment groups:
 ![](images/example_p4.png)
 
-Reshuffle the treament group. Now there are alpaca both using new and old shampoo in the treament and control groups. Then we calculate another test statistic: 
+Reshuffle the treament group. Now in both the treament and control groups, there are alpaca using new and old shampoo. Then for each treatment assignment permutation, we calculate a test statistic:
 ![](images/example_p5.png)
 
+More permutations generate more test statistic
 ![](images/example_p6.png)
 
 ![](images/example_p7.png)
