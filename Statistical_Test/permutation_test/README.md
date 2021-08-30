@@ -3,7 +3,7 @@
 
 This page follows one of Jared Wilber's blog, which is a very awesome virtual explanation for the permutation test [[Jared Wilber]][The Permutation Test]. 
 
-The main idea of permutation test is that, we want to see how likely the initial test statistic from our A/B test (between control and treatment groups) happens from test statistic variance in the population (if null hypothesis is true).
+The main idea of permutation test (my understanding) is that, we want to see how likely the initial test statistic from our A/B test (between control and treatment groups) happens from test statistic variance within the population (if null hypothesis is true).
 
 The algorithm comprises the following steps:
 
