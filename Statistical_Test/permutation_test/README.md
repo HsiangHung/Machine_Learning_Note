@@ -17,8 +17,10 @@ The algorithm comprises the following steps:
 
 ![](images/example_p3.png)
 
+Calculate initial test statistic from mean difference between control and treatment groups:
 ![](images/example_p4.png)
 
+Reshuffle the treament group. Now there are alpaca both using new and old shampoo in the treament and control groups. Then we calculate another test statistic: 
 ![](images/example_p5.png)
 
 ![](images/example_p6.png)
