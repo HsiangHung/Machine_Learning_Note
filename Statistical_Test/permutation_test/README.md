@@ -45,11 +45,11 @@ The p-value is 16/200 = 8%. If significance level is 10% (as mentioned in Jared'
 
 
 
-Words from Idil: 
+## Other explanation from Idil: 
 
-**Permuting means changing the order of a set of values, and what permutation test does is combining results from both groups and testing the null hypothesis by randomly drawing groups (equal to the experiment groups’ sample sizes) from the combined set and analyzing how much they differ from one another.**
+Permuting means changing the order of a set of values, and what permutation test does is combining results from both groups and testing the null hypothesis by randomly drawing groups (equal to the experiment groups’ sample sizes) from the combined set and analyzing how much they differ from one another.
 
-**The test repeats doing this as much as decided by the user (say 1000 times). In the end, user should compare the observed difference between experiment and control groups with the set of permuted differences. If the observed difference lies within the set of permuted differences, we do not reject the null hypothesis. But if the observed difference lies outside of the most permutation distribution, we reject the null hypothesis and conclude as the A/B test result is statistically significant and not due to chance.**
+The test repeats doing this as much as decided by the user (say 1000 times). In the end, user should compare the observed difference between experiment and control groups with the set of permuted differences. If the observed difference lies within the set of permuted differences, we do not reject the null hypothesis. But if the observed difference lies outside of the most permutation distribution, we reject the null hypothesis and conclude as the A/B test result is statistically significant and not due to chance.
 
 
 #### Reference
