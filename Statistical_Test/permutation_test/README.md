@@ -1,7 +1,9 @@
 
 # Permutation Test
 
-This is a very awesome virtual explanation for the permutation test by Jared Wilber [[Jared Wilber]][The Permutation Test]. The main idea is that, we want to see how likely the initial test statistic from our A/B test (between control and treatment groups) happens from population variance.
+This page follows the blog from Jared Wilber, who provided a very awesome virtual explanation for the permutation test [[Jared Wilber]][The Permutation Test]. 
+
+The main idea of permutation test is that, we want to see how likely the initial test statistic from our A/B test (between control and treatment groups) happens from test statistic variance in the population (if null hypothesis is true).
 
 The algorithm comprises the following steps:
 
@@ -36,13 +38,7 @@ Then we want to see where the initial test statistic is, and we can compute p-va
 
 ![](images/example_p9.png)
 
-
-
-
-
-Usually we want α < 0.05. On the other hand, β is the probability of making type-II error, that given the null hypothesis is false you fail to reject the hypothesis
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\beta&space;=&space;\textrm{Pr}(\textrm{fail&space;to&space;reject&space;H}_0|&space;\textrm{H}_0&space;\textrm{&space;is&space;False})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta&space;=&space;\textrm{Pr}(\textrm{fail&space;to&space;reject&space;H}_0|&space;\textrm{H}_0&space;\textrm{&space;is&space;False})" title="\beta = \textrm{Pr}(\textrm{fail to reject H}_0| \textrm{H}_0 \textrm{ is False})" /></a> 
+The p-value is 16/200 = 8%. If significance level is 10% (as mentioned in Jared's blog), we can reject the null hypothesis. So the new shampoo is different from the old one.
 
 
 
