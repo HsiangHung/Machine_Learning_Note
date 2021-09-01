@@ -100,7 +100,9 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 
 In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author listed another key assumption: 
 
-* **No multicollinearity**, none of input variables are highly positively or negatively correlated with one another. However I don't think multicollinearity does hurt regression model (but does impact to the model interpretation).
+* **No multicollinearity**: none of input variables are highly positively or negatively correlated with one another. 
+
+However I don't think multicollinearity does hurt regression model (but does impact to the model interpretation).
 
 ### 2.B Maximum likelihood estimate
 
