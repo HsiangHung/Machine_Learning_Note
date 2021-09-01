@@ -85,9 +85,9 @@ The linear regression has a generic form
 
 ### 2.A Assumption for linear regression
 
-There are four assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression]:
+There are some assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression], [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]:
 
-* **Independence**: Observations are independent of each other.
+* **Independence**: Observations are independent of each other. Multicollinearity: input variables are highly positively or negatively correlated with one another.
 
 * **Linearity**: The relationship between X and the mean of Y is linear. Look for **residual vs fitted value** plots. To fix this, you can include polynomial terms (`X`, `X^2`, `X^3`) or interaction terms in your model to capture the non-linear effect.
 
@@ -194,6 +194,9 @@ California house price prediction from Kaggle:
 ## Reference
 
 
+[Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]: https://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/
+[[Analytics Vidhya] Going Deeper into Regression Analysis with Assumptions, Plots & Solutions](https://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/)
+
 
 
 [Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]: https://www.analyticsvidhya.com/blog/2020/07/difference-between-r-squared-and-adjusted-r-squared/
@@ -202,6 +205,10 @@ California house price prediction from Kaggle:
 
 [Simple Linear Regression]: https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/R5_Correlation-Regression4.html
 [[BUMC] Simple Linear Regression](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/R5_Correlation-Regression4.html)
+
+
+[The Pitfalls of Linear Regression and How to Avoid Them]: https://medium.com/analytics-vidhya/the-pitfalls-of-linear-regression-and-how-to-avoid-them-b93626e1a020
+[[Genevieve Hayes] The Pitfalls of Linear Regression and How to Avoid Them](https://medium.com/analytics-vidhya/the-pitfalls-of-linear-regression-and-how-to-avoid-them-b93626e1a020)
 
 
 [Multicollinearity in Regression Analysis: Problems, Detection, and Solutions]: https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/
