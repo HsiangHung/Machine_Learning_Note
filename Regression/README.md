@@ -87,7 +87,7 @@ The linear regression has a generic form
 
 There are some assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression], [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]:
 
-* **Independence**: Observations are independent of each other. Multicollinearity: input variables are highly positively or negatively correlated with one another.
+* **Independence**: Observations are independent of each other; That is, there is no **autocorrelation** present in our output variable.
 
 * **Linearity**: The relationship between X and the mean of Y is linear. Look for **residual vs fitted value** plots. To fix this, you can include polynomial terms (`X`, `X^2`, `X^3`) or interaction terms in your model to capture the non-linear effect.
 
@@ -98,6 +98,7 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 
 * **Normality**: For any fixed value of X, Y is normally distributed.
 
+In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author listed another key assumption: **No multicollinearity**, none of input variables are highly positively or negatively correlated with one another. However I don't think multicollinearity does hurt regression model (but does impact to the model interpretation).
 
 ### 2.B Maximum likelihood estimate
 
@@ -116,6 +117,7 @@ The following is the picture, credit from Prof. Nando de Freitas's UBC Machine l
 
 ## 3. Multicollinearity
 
+**Multicollinearity** is when input variables are highly positively or negatively correlated with one another, usually (absolute) correlation coefficient greater than 0.8.
 
 Multicollinearity causes the following two basic types of problems:
 
