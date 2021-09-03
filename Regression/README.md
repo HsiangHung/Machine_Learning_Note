@@ -103,6 +103,10 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 
 ![](images/normal_distribution_residuals.png)
 
+For example, skewed data leads to normality violation (see below (a)). Fitting a linear regression model to this dataset **without** first transforming our output variable, we will have the fitted values vs residual plot as (b):
+
+![](images/skewed_data.png)
+
 
 In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author listed another key assumption: 
 
