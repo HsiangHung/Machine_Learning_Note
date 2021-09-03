@@ -103,7 +103,7 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 
 ![](images/normal_distribution_residuals.png)
 
-For example, skewed data leads to normality violation (see below (a)). Fitting a linear regression model to this dataset **without** first transforming our output variable, we will have the fitted values vs residual plot as (b):
+For example, skewed data leads to normality violation (see below (a)). Fitting a linear regression model to this dataset **without** first transforming our output variable, we will see heteroskedasticity in the fitted values vs residual plot (in (b)). But if we log transform our output variable prior to fitting our model, the residuals show homoskedasticity (in (c)). 
 
 ![](images/skewed_data.png)
 
