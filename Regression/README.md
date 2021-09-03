@@ -96,6 +96,8 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 
 * **Homoscedasticity**: The variance of residual is the same for any value of X, i.e. error terms must have constant variance.
 
+![](images/Heteroskedasticity.png)
+
 * **Normality**: For any fixed value of X, Y is normally distributed.
 
 In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author listed another key assumption: 
