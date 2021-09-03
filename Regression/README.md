@@ -87,7 +87,7 @@ The linear regression has a generic form
 
 There are some assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression], [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]:
 
-* **Independence**: Observations are independent of each other, i.e. no **autocorrelation** in our output variable. The presence of autocorrelation in error terms drastically reduces model’s accuracy, and the estimated standard errors tend to underestimate the true standard error. Autocorrelation can be checked by Durbin – Watson (DW) statistic. If DW = 2, implies no autocorrelation, 0 < DW < 2 implies positive autocorrelation while 2 < DW < 4 indicates negative autocorrelation. Also, you can see residual vs time plot and look for the seasonal or correlated pattern in residual values.
+* **Independence**: Observations are independent of each other, i.e. no **autocorrelation** in our output variable. The presence of autocorrelation in error terms drastically reduces model’s accuracy, and the estimated standard errors tend to underestimate the true standard error. Autocorrelation can be checked by Durbin – Watson (DW) statistic: DW = 2 implies no autocorrelation; 0 < DW < 2  positive autocorrelation; 2 < DW < 4 indicates negative autocorrelation. You can also see residual vs time plot and look for the seasonal or correlated pattern in residual values [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions].
 
 * **Linearity**: The relationship between X and the mean of Y is linear. Look for **residual vs fitted value** plots. To fix this, you can include polynomial terms (`X`, `X^2`, `X^3`) or interaction terms in your model to capture the non-linear effect (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 
@@ -97,6 +97,7 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 * **Homoscedasticity**: The variance of residual is the same for any value of X, i.e. error terms must have constant variance. The presence of non-constant variance in the error terms results in heteroskedasticity (see below) (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 
 ![](images/Heteroskedasticity.png)
+![](images/Heteroskedasticity_2.png)
 
 * **Normality**: For any fixed value of X, Y is normally distributed.  If the data comes from a normal distribution, the plot would show fairly straight line. Absence of normality in the errors can be seen with deviation in the straight line (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 
