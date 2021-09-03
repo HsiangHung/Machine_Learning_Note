@@ -87,14 +87,14 @@ The linear regression has a generic form
 
 There are some assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression], [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]:
 
-* **Independence**: Observations are independent of each other; That is, there is no **autocorrelation** present in our output variable.
+* **Independence**: Observations are independent of each other; That is, there is no **autocorrelation** present in our output variable. The presence of autocorrelation in error terms drastically reduces model’s accuracy, and the estimated standard errors tend to underestimate the true standard error.
 
 * **Linearity**: The relationship between X and the mean of Y is linear. Look for **residual vs fitted value** plots. To fix this, you can include polynomial terms (`X`, `X^2`, `X^3`) or interaction terms in your model to capture the non-linear effect.
 
 ![](images/non_linear_effect.png)
 
 
-* **Homoscedasticity**: The variance of residual is the same for any value of X, i.e. error terms must have constant variance.
+* **Homoscedasticity**: The variance of residual is the same for any value of X, i.e. error terms must have constant variance. The presence of non-constant variance in the error terms results in heteroskedasticity (see below).
 
 ![](images/Heteroskedasticity.png)
 
