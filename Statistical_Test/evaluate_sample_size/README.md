@@ -93,12 +93,9 @@ Note the `absolute` is selected to make 8%-12% confidence interval. The online c
 ## Reference
 
 
-[How to Determine Your A/B Testing Sample Size & Time Frame]: https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time
+* [How to Determine Your A/B Testing Sample Size & Time Frame]: https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time
 [[Ginny Mineo] How to Determine Your A/B Testing Sample Size & Time Frame](https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time)
-
-
-[Sample size calculator]: https://www.surveymonkey.com/mp/sample-size-calculator/
+* [Sample size calculator]: https://www.surveymonkey.com/mp/sample-size-calculator/
 [[Survey Monkey] Sample size calculator](https://www.surveymonkey.com/mp/sample-size-calculator/)
-
-[Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]: https://www.statisticshowto.com/probability-and-statistics/find-sample-size/
+* [Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]: https://www.statisticshowto.com/probability-and-statistics/find-sample-size/
 [[Statistics How To] Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips](https://www.statisticshowto.com/probability-and-statistics/find-sample-size/)
