@@ -49,18 +49,12 @@ Plot your data set values (Step 1) against your normal distribution cut-off poin
 
 
 
-where `Pred` means the statistical testing results. 
-
-Here α is known as the level of statistical significance defining the probability of making type-I error, that given the null hypothesis is true you reject the hypothesis
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\alpha&space;=&space;\textrm{Pr}(\textrm{reject&space;H}_0|&space;\textrm{H}_0&space;\textrm{&space;is&space;True})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha&space;=&space;\textrm{Pr}(\textrm{reject&space;H}_0|&space;\textrm{H}_0&space;\textrm{&space;is&space;True})" title="\alpha = \textrm{Pr}(\textrm{reject H}_0| \textrm{H}_0 \textrm{ is True})" /></a> 
-
 
 
 
 #### Reference
 
-[Q Q Plots: Simple Definition & Example]: https://www.statisticshowto.com/q-q-plots/
+* [Q Q Plots: Simple Definition & Example]: https://www.statisticshowto.com/q-q-plots/
 [[Statistics How To] Q Q Plots: Simple Definition & Example](https://www.statisticshowto.com/q-q-plots/)
 
 
