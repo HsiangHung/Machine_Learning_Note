@@ -85,11 +85,9 @@ The opposite to novelty effect also happens. That is, if you give users a new ex
 
 #### Reference
 
-
-[Instapage, 5 Common Threats to Your A/B Test’s Validity]: https://instapage.com/blog/validating-ab-tests
+* [Instapage, 5 Common Threats to Your A/B Test’s Validity]: https://instapage.com/blog/validating-ab-tests
 [[Instapage] Instapage, 5 Common Threats to Your A/B Test’s Validity](https://instapage.com/blog/validating-ab-tests)
-
-[Product Data Science, Novelty Effect]: https://productds.com/wp-content/uploads/Novelty_Effect.html
+* [Product Data Science, Novelty Effect]: https://productds.com/wp-content/uploads/Novelty_Effect.html
 [[Product Data Science] Product Data Science, Novelty Effect](https://productds.com/wp-content/uploads/Novelty_Effect.html)
 
 
