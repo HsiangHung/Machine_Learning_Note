@@ -101,7 +101,7 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 
 * **Normality**: For any fixed value of X, Y is normally distributed.  If the data comes from a normal distribution, the plot would show fairly straight line. Absence of normality in the errors can be seen with deviation in the straight line (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 ![](images/normal_distribution_residuals.png)
-For example, skewed data leads to normality violation (see below (a)). If we fit a linear regression model to this dataset **without** transforming our output variable, we will see heteroskedasticity in the fitted values vs residual plot (in (b)). But if we **log transform** our output variable prior to fitting our model, the residuals show homoskedasticity (in (c)) [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them]. 
+For example, skewed data leads to normality violation, below (a). If we fit a linear regression model to this dataset **without** transforming our output variable, we will see heteroskedasticity in the fitted values vs residual plot, in (b). But if we **log transform** our output variable prior to fitting our model, the residuals show homoskedasticity, in below (c) [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them]. 
 ![](images/skewed_data.png)
 Alternatively, we can fit a model that is specifically designed for non-normal data, such as a generalized linear model (GLM). I discuss GLMs in detail in my article Beyond Linear Regression: An Introduction to GLMs.
 In the case of positively skewed data, a gamma GLM is typically the best choice.
