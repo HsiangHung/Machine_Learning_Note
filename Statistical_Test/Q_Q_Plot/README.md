@@ -61,7 +61,7 @@ We consider the number of percentiles from the smaller data size. In the above e
 
 ![](images/q_q_two_data_2.png)
 
-If the points lie along a line, we can observe the two dataset came from same distribution.
+If the points in the Q-Q plot lie along a line, we can infer the two dataset came from same distribution.
 
 #### Reference
 
