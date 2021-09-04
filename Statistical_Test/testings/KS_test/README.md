@@ -100,26 +100,20 @@ The null hypothesis is rejected at level α if
 # Reference
 
 
-[Kirkman T. W., Kolmogorov-Smirnov Test]: http://www.physics.csbsju.edu/stats/KS-test.html
+* [Kirkman T. W., Kolmogorov-Smirnov Test]: http://www.physics.csbsju.edu/stats/KS-test.html
 [[Kirkman] Kirkman T. W., Kolmogorov-Smirnov Test](http://www.physics.csbsju.edu/stats/KS-test.html)
-
-
-[Marc-Olivier Arsenault, Kolmogorov-Smirnov Test]: https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d
+* [Marc-Olivier Arsenault, Kolmogorov-Smirnov Test]: https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d
 [[Marc-Olivier Arsenault] Marc-Olivier Arsenault, Kolmogorov-Smirnov Test](https://towardsdatascience.com/kolmogorov-smirnov-test-84c92fb4158d)
 
-
-[S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
+* [S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
 [[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
-
-[MIT course, Kolmogorov-Smirnov Test]: https://ocw.mit.edu/courses/mathematics/18-443-statistics-for-applications-fall-2006/lecture-notes/lecture14.pdf
+* [MIT course, Kolmogorov-Smirnov Test]: https://ocw.mit.edu/courses/mathematics/18-443-statistics-for-applications-fall-2006/lecture-notes/lecture14.pdf
 [[MIT] MIT course, Kolmogorov-Smirnov Test](https://ocw.mit.edu/courses/mathematics/18-443-statistics-for-applications-fall-2006/lecture-notes/lecture14.pdf)
 
-
-[Statistics How To, Kolmogorov-Smirnov Goodness of Fit Test]: https://www.statisticshowto.datasciencecentral.com/kolmogorov-smirnov-test/
+* [Statistics How To, Kolmogorov-Smirnov Goodness of Fit Test]: https://www.statisticshowto.datasciencecentral.com/kolmogorov-smirnov-test/
 [[Statistics How To] Statistics How To, Kolmogorov-Smirnov Goodness of Fit Test](https://www.statisticshowto.datasciencecentral.com/kolmogorov-smirnov-test/)
 
-
-[Wiki, Kolmogorov–Smirnov test]: https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test
+* [Wiki, Kolmogorov–Smirnov test]: https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test
 [[Wiki] Wiki, Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)
 
