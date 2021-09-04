@@ -53,7 +53,7 @@ Now you can plot a line, and check if most points lie along the line. In the abo
 
 ## Q-Q plot on Two Data
 
-What if we want to compare the original data to another dataset? In particular, the size of the second dataset is smaller. The example is shown below (from [[Statistics How To]][Q Q Plots: Simple Definition & Example])
+What if we want to compare the original data to another dataset? In particular, the size of the second dataset is smaller. The example is shown below (from [StatQuest: Quantile-Quantile Plots (QQ plots), Clearly Explained](https://www.youtube.com/watch?v=okjYjClSjOg))
 
 ![](images/q_q_two_data_1.png)
 
