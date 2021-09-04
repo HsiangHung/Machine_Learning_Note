@@ -57,7 +57,7 @@ What if we want to compare the original data to another dataset? In particular, 
 
 ![](images/q_q_two_data_1.png)
 
-We consider the number of percentiles from the smaller data size on both datasets. In the above example, they are 25%, 50%, 75% and 100%, and make Q-Q plot based on 4 data points. The process is as follows:
+We consider the number of percentiles from the smaller data size. In the above example, they are 25%, 50%, 75% and 100%. Then make Q-Q plot based on the values of these 4 percentiles on both datasets. The processes are as follows:
 
 ![](images/q_q_two_data_2.png)
 
