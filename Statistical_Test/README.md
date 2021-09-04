@@ -28,7 +28,7 @@ Ideally, we want both lower <a href="https://www.codecogs.com/eqnedit.php?latex=
 
 #### Reference
 
-[S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
+* [S. Massa, Kolmogorov Smirnov Test & Power of Tests]: http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf
 [[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
 
@@ -122,5 +122,7 @@ For example, a page that includes a sign-up form, some kind of catchy header tex
 
 #### Reference
 
-[How to Ace A/B Testing Interview Questions]: https://blog.tryexponent.com/how-to-ace-ab-testing-interview-questions/
+* [How to Ace A/B Testing Interview Questions]: https://blog.tryexponent.com/how-to-ace-ab-testing-interview-questions/
 [[Exponente] How to Ace A/B Testing Interview Questions](https://blog.tryexponent.com/how-to-ace-ab-testing-interview-questions/)
+* [40 Statistics Interview Problems and Answers for Data Scientists]: https://towardsdatascience.com/40-statistics-interview-problems-and-answers-for-data-scientists-6971a02b7eee
+[[Terence Shin] 40 Statistics Interview Problems and Answers for Data Scientists](https://towardsdatascience.com/40-statistics-interview-problems-and-answers-for-data-scientists-6971a02b7eee)
