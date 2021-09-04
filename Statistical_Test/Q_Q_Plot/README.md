@@ -21,7 +21,7 @@ Order the items from smallest to largest.
     3.77, 4.25, 4.50, 5.19, 5.89, 5.79, 6.31, 6.79, 7.19
 
 ## Step 2
-Draw a **normal distribution** curve. Divide the curve into `n+1` segments, where `n` is the number of the data size. We have 9 values, so divide the curve into 10 equally-sized areas. For this example, each segment is 10% of the area (because 100% / 10 = 10%).
+Draw a **normal distribution** curve. Divide the curve into `n+1` segments, where `n` is the number of the data size. We have 9 values, so divide the curve into 10 **equally-sized** bins. For this example, each segment is 10% of the area (because 100% / 10 = 10%).
 
 ![](images/q_q_plot_step_2.png)
 
