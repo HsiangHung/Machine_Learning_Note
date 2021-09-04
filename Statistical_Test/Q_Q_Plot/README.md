@@ -53,8 +53,11 @@ Now you can plot a line, and check if most points lie along the line. In the abo
 
 ## Q Q plot on Two Data
 
+What if we want to compare the original data to another dataset? In particular, the size of the second dataset is smaller. 
 
-![](images/q_q_plot_two_data_1.png)
+![](images/q_q_two_data_1.png)
+
+We consider the number of percentiles from the smaller data size, 25%, 50%, 75% and 100% on both data.
 
 
 #### Reference
