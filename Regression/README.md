@@ -103,11 +103,10 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 ![](images/normal_distribution_residuals.png)
 For example, skewed data leads to normality violation, below (a). If we fit a linear regression model to this dataset **without** transforming our output variable, we will see heteroskedasticity in the fitted values vs residual plot, in (b). But if we **log transform** our output variable prior to fitting our model, the residuals show homoskedasticity, in below (c) [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them]. 
 ![](images/skewed_data.png)
-Alternatively, we can fit a model that is specifically designed for non-normal data, such as a generalized linear model (GLM). I discuss GLMs in detail in my article Beyond Linear Regression: An Introduction to GLMs.
-In the case of positively skewed data, a gamma GLM is typically the best choice.
+Alternatively, we can fit a model that is specifically designed for non-normal data, such as a **generalized linear model (GLM)**. The blog [Beyond Linear Regression: An Introduction to GLMs](https://towardsdatascience.com/beyond-linear-regression-an-introduction-to-glms-7ae64a8fad9c) discusses GLMs in detail. In the case of positively skewed data, a gamma GLM is typically the best choice.
 
 
-In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author listed another key assumption: 
+In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author additionally listed another key assumption for linear regression: 
 
 * **No multicollinearity**: none of input variables are highly positively or negatively correlated with one another. 
 
