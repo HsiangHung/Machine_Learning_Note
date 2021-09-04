@@ -1,9 +1,9 @@
 
 # Q Q Plot
 
-Q Q Plots (Quantile-Quantile plots) are plots of two quantiles against each other. A quantile is a fraction where certain values fall below that quantile. The purpose of Q Q plots is to find out if two sets of data come from the same distribution. A 45 degree angle is plotted on the Q Q plot; if the two data sets come from a common distribution, the points will fall on that reference line [[Statistics How To]][Q Q Plots: Simple Definition & Example].
+Q Q Plots (Quantile-Quantile plots) are plots of two quantiles against each other. A quantile is a fraction where certain values fall below that quantile (5%, 10%,...99%). The purpose of Q Q plots is to find out if two sets of data come from the same distribution. A 45 degree angle is plotted on the Q Q plot; if the two data sets come from a common distribution, the points will fall on that reference line [[Statistics How To]][Q Q Plots: Simple Definition & Example].
 
- You can use any continuous distribution (not only normal distribitopn) as a comparison, for example, a Weibull distribution, a lognormal distribution or a uniform distribution), as long as you can calculate the quantiles. In fact, a common procedure is to test out several different distributions with the Q Q plot to see if one fits your data well.
+ You can use any continuous distribution (not only limited to **normal** distribitopn) as a comparison, for example, a Weibull distribution, a lognormal distribution or a uniform distribution, as long as you can calculate the quantiles. In fact, a common procedure is to test out several different distributions with the Q Q plot to see if one fits your data well.
 
 ## How to Make a Q Q Plot
 
