@@ -15,24 +15,24 @@ Sample question: Do the following values come from a **normal distribution**?
     7.19, 6.31, 5.89, 4.5, 3.77, 4.25, 5.19, 5.79, 6.79
 
 
-## Step 1 
+### Step 1 
 Order the items from smallest to largest.
 
     3.77, 4.25, 4.50, 5.19, 5.89, 5.79, 6.31, 6.79, 7.19
 
-## Step 2
+### Step 2
 Draw a **normal distribution** curve. Divide the curve into `n+1` segments, where `n` is the number of the data size. We have 9 values, so divide the curve into 10 **equally-sized** bins. For this example, each segment is 10% of the area (because 100% / 10 = 10%).
 
 ![](images/q_q_plot_step_2.png)
 
-## Step 3
+### Step 3
 Find the z-value (cut-off point) for each segment in Step 3. These segments are areas, so refer to a z-table (or use software) to get a z-value for each segment.
 The z-values are:
 
    10% = -1.28, 20% = -0.84, 30% = -0.52, 40% = -0.25, 50% = 0, 
    60% = 0.25, 70% = 0.52, 80% = 0.84, 90% = 1.28, 100% = 3.0
 
-## Step 4
+### Step 4
 Plot your data set values (Step 1) against your normal distribution cut-off points (Step 3); x-axis is the theoretical z-score percentile and y-axis is the percentile on data:
 
 | percentile | Z score | data | 
@@ -49,10 +49,12 @@ Plot your data set values (Step 1) against your normal distribution cut-off poin
 
 ![](images/q_q_plot_step_4.png)
 
+Now you can plot a line, and check if most points lie along the line. In the above example, we can identify the data came from a normal distribution.
+
+## Q Q plot on Two Data
 
 
-
-
+![](images/q_q_plot_two_data_1.png)
 
 
 #### Reference
