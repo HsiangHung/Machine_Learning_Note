@@ -88,6 +88,9 @@ The linear regression has a generic form
 There are some assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression], [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]:
 
 * **Independence**: Observations are independent of each other, i.e. no **autocorrelation** in our output variable. The presence of autocorrelation in error terms drastically reduces model’s accuracy, and the estimated standard errors tend to underestimate the true standard error. Use Durbin – Watson (DW) statistic to check autocorrelation: DW = 2 implies no autocorrelation; 0 < DW < 2  positive autocorrelation; 2 < DW < 4 indicates negative autocorrelation. You can also see residual vs time plot and look for the seasonal or correlated pattern in residual values [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions].
+![](images/autocorrelation.png)
+From the above plot, there is autocorrelation present in this data [in (a)]. If we did try to fit a linear regression model to this data, using Year and Month as our input variables, we would end up with the red line, shown in (b). In order to deal with the autocorrelation, we need to use a model which is specifically designed for dealing with time series, such as an ARIMA model. As the same example in (c), the orange line is fitted by ARIMA(5, 1, 0) shows a good forecast [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them].
+
 
 * **Linearity**: The relationship between X and the mean of Y is linear. Look for **residual vs fitted value** plots. To fix this, you can include polynomial terms (`X`, `X^2`, `X^3`) or interaction terms in your model to capture the non-linear effect (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 
