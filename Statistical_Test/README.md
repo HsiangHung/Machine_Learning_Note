@@ -58,10 +58,8 @@ These effect sizes estimate the amount of the variance within an experiment that
 
 * [Merra, Power Analysis, Statistical Significance, & Effect Size]: https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.
 [[Merra] Merra, Power Analysis, Statistical Significance, & Effect Size](https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.)
-
 * [statisticssolution, Effect Size]: https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/
 [[statisticssolution] statisticssolution, Effect Size](https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/)
-
 * [Wiki-Effect size, Effect size]: https://en.wikipedia.org/wiki/Effect_size
 [[wiki] Wiki-Effect size, Effect size](https://en.wikipedia.org/wiki/Effect_size)
 
