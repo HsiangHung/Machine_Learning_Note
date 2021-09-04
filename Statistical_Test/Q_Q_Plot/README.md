@@ -1,14 +1,14 @@
 
-# Q Q Plot
+# Q-Q Plot
 
-Q Q Plots (Quantile-Quantile plots) are plots of two quantiles against each other. A quantile is a fraction where certain values fall below that quantile (5%, 10%,...99%). The purpose of Q Q plots is to find out if two sets of data come from the same distribution. A 45 degree angle is plotted on the Q Q plot; if the two data sets come from a common distribution, the points will fall on that reference line [[Statistics How To]][Q Q Plots: Simple Definition & Example].
+Q Q Plots (Quantile-Quantile plots) are plots of two quantiles against each other. A quantile is a fraction where certain values fall below that quantile (5%, 10%,...99%). The purpose of Q Q plots is to find out if two sets of data come from the same distribution. A 45 degree angle is plotted on the Q-Q plot; if the two data sets come from a common distribution, the points will fall on that reference line [[Statistics How To]][Q Q Plots: Simple Definition & Example].
 
 You can use any continuous distribution (not only limited to **normal distribitopn**) as a comparison, for example, a Weibull distribution, a lognormal distribution or a uniform distribution, as long as you can calculate the quantiles. In fact, a common procedure is to test out several different distributions with the Q Q plot to see if one fits your data well.
 
 There is a tutorial video: [StatQuest: Quantile-Quantile Plots (QQ plots), Clearly Explained
 ](https://www.youtube.com/watch?v=okjYjClSjOg).
 
-## How to Make a Q Q Plot
+## How to Make a Q-Q Plot
 
 Sample question: Do the following values come from a **normal distribution**?
 
@@ -51,14 +51,17 @@ Plot your data set values (Step 1) against your normal distribution cut-off poin
 
 Now you can plot a line, and check if most points lie along the line. In the above example, we can identify the data came from a normal distribution.
 
-## Q Q plot on Two Data
+## Q-Q plot on Two Data
 
-What if we want to compare the original data to another dataset? In particular, the size of the second dataset is smaller. 
+What if we want to compare the original data to another dataset? In particular, the size of the second dataset is smaller. The example is shown below (from [[Statistics How To]][Q Q Plots: Simple Definition & Example])
 
 ![](images/q_q_two_data_1.png)
 
-We consider the number of percentiles from the smaller data size, 25%, 50%, 75% and 100% on both data.
+We consider the number of percentiles from the smaller data size on both datasets. In the above example, they are 25%, 50%, 75% and 100%, and make Q-Q plot based on 4 data points. The process is as follows:
 
+![](images/q_q_two_data_2.png)
+
+If the points lie along a line, we can observe the two dataset came from same distribution.
 
 #### Reference
 
