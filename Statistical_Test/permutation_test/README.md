@@ -47,17 +47,14 @@ The p-value is 16/200 = 8%. If significance level is 10% (as mentioned in Jared'
 
 ## Other words from Idil: 
 
-[[Idil Ismiguzel]][A Guide to A/B Testing — How to Formulate, Design and Interpret]
-
-Permuting means changing the order of a set of values, and what permutation test does is combining results from both groups and testing the null hypothesis by randomly drawing groups (equal to the experiment groups’ sample sizes) from the combined set and analyzing how much they differ from one another.
+[[Idil Ismiguzel]][A Guide to A/B Testing — How to Formulate, Design and Interpret] Permuting means changing the order of a set of values, and what permutation test does is combining results from both groups and testing the null hypothesis by randomly drawing groups (equal to the experiment groups’ sample sizes) from the combined set and analyzing how much they differ from one another.
 
 The test repeats doing this as much as decided by the user (say 1000 times). In the end, user should compare the observed difference between experiment and control groups with the set of permuted differences. If the observed difference lies within the set of permuted differences, we do not reject the null hypothesis. But if the observed difference lies outside of the most permutation distribution, we reject the null hypothesis and conclude as the A/B test result is statistically significant and not due to chance.
 
 
 #### Reference
 
-[The Permutation Test]: https://www.jwilber.me/permutationtest/
+* [The Permutation Test]: https://www.jwilber.me/permutationtest/
 [[Jared Wilber] The Permutation Test](https://www.jwilber.me/permutationtest/)
-
-[A Guide to A/B Testing — How to Formulate, Design and Interpret]: https://towardsdatascience.com/a-guide-to-a-b-testing-how-to-formulate-design-and-interpret-f820cc62e21a
+* [A Guide to A/B Testing — How to Formulate, Design and Interpret]: https://towardsdatascience.com/a-guide-to-a-b-testing-how-to-formulate-design-and-interpret-f820cc62e21a
 [[Idil Ismiguzel] A Guide to A/B Testing — How to Formulate, Design and Interpret](https://towardsdatascience.com/a-guide-to-a-b-testing-how-to-formulate-design-and-interpret-f820cc62e21a)
