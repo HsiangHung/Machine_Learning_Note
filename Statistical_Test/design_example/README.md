@@ -12,7 +12,7 @@ Visible and invisible changes can be tested with A/B testing. Examples to visibl
 New experiences are not suitable for implementing A/B tests. Because a new experience can show change aversion behavior where users don’t like changes and prefer to stick to the old version, or it can show novelty effect where users feel very excited and want to test out everything
 
 3. **How can we choose the metrics?**
-Metric selection needs to consider both sensitivity and robustness. Sensitivity means that metrics should be able to catch the changes and robustness means that metrics shouldn’t change too much from irrelevant effects. As an example, most of the time if the metric is a “mean”, it is sensitive to outliers but not robust. If the metric is a “median”, it is robust but not sensitive for small group changes.
+Metric selection needs to consider both sensitivity and robustness. Sensitivity means that metrics should be able to catch the changes and robustness means that metrics shouldn’t change too much from irrelevant effects. As an example, most of the time if the metric is a “mean”, it is sensitive to outliers but not robust. If the metric is a “median”, it is robust but not sensitive for small group changes. \n
 In order to consider both sensitivity and robustness in the metric selection, we can apply filtering and segmentation while creating the control and experiment samples. Filtering and segmentation can be based on user demographics (i.e. age, gender), the language of the platform, internet browser, device type (i.e. iOS or Android), cohort and etc.
 
 
