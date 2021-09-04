@@ -20,6 +20,8 @@ Order the items from smallest to largest.
 ## Step 2: 
 Draw a normal distribution curve. Divide the curve into n+1 segments. We have 9 values, so divide the curve into 10 equally-sized areas. For this example, each segment is 10% of the area (because 100% / 10 = 10%).
 
+![](images/q_q_plot_step_2.png)
+
 ## Step 3: 
 Find the z-value (cut-off point) for each segment in Step 3. These segments are areas, so refer to a z-table (or use software) to get a z-value for each segment.
 The z-values are:
@@ -42,7 +44,7 @@ Plot your data set values (Step 1) against your normal distribution cut-off poin
 | 80% | 0.84 | 6.79 |
 | 90% | 1.28 | 7.19 |
 
-![](images/q_q_plot_step.png)
+![](images/q_q_plot_step_4.png)
 
 
 
