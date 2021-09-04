@@ -87,7 +87,7 @@ The linear regression has a generic form
 
 There are some assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression], [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]:
 
-* **Independence**: Observations are independent of each other, i.e. no **autocorrelation** in our output variable. The presence of autocorrelation in error terms drastically reduces model’s accuracy, and the estimated standard errors tend to underestimate the true standard error. Autocorrelation can be checked by Durbin – Watson (DW) statistic: DW = 2 implies no autocorrelation; 0 < DW < 2  positive autocorrelation; 2 < DW < 4 indicates negative autocorrelation. You can also see residual vs time plot and look for the seasonal or correlated pattern in residual values [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions].
+* **Independence**: Observations are independent of each other, i.e. no **autocorrelation** in our output variable. The presence of autocorrelation in error terms drastically reduces model’s accuracy, and the estimated standard errors tend to underestimate the true standard error. Use Durbin – Watson (DW) statistic to check autocorrelation: DW = 2 implies no autocorrelation; 0 < DW < 2  positive autocorrelation; 2 < DW < 4 indicates negative autocorrelation. You can also see residual vs time plot and look for the seasonal or correlated pattern in residual values [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions].
 
 * **Linearity**: The relationship between X and the mean of Y is linear. Look for **residual vs fitted value** plots. To fix this, you can include polynomial terms (`X`, `X^2`, `X^3`) or interaction terms in your model to capture the non-linear effect (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 
@@ -103,16 +103,19 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 
 ![](images/normal_distribution_residuals.png)
 
-For example, skewed data leads to normality violation (see below (a)). If we fit a linear regression model to this dataset **without** transforming our output variable, we will see heteroskedasticity in the fitted values vs residual plot (in (b)). But if we **log transform** our output variable prior to fitting our model, the residuals show homoskedasticity (in (c)). 
+For example, skewed data leads to normality violation (see below (a)). If we fit a linear regression model to this dataset **without** transforming our output variable, we will see heteroskedasticity in the fitted values vs residual plot (in (b)). But if we **log transform** our output variable prior to fitting our model, the residuals show homoskedasticity (in (c)) [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them]. 
 
 ![](images/skewed_data.png)
+
+Alternatively, we can fit a model that is specifically designed for non-normal data, such as a generalized linear model (GLM). I discuss GLMs in detail in my article Beyond Linear Regression: An Introduction to GLMs.
+In the case of positively skewed data, a gamma GLM is typically the best choice.
 
 
 In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author listed another key assumption: 
 
 * **No multicollinearity**: none of input variables are highly positively or negatively correlated with one another. 
 
-However I don't think multicollinearity does hurt regression model (but does impact to the model interpretation).
+However I don't think multicollinearity does hurt regression model (but does impact to the model interpretation). We have more comprehensive discussion in later section.
 
 ### 2.B Maximum likelihood estimate
 
