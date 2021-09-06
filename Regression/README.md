@@ -140,13 +140,13 @@ The following is the picture, credit from Prof. Nando de Freitas's UBC Machine l
 
 ### 2.C Interpret Regression Analysis Results: P-values and Coefficients
 
-The p-value for each term tests the **null hypothesis that the coefficient is equal to zero (no effect)**. A low p-value (< 0.05) indicates that you can reject the null hypothesis. In other words, a predictor that has a low p-value is likely to be a meaningful addition to your model because changes in the predictor's value are related to changes in the response variable.
+The p-value for each term tests the **null hypothesis that the coefficient is equal to zero (no effect)**. A low p-value (< 0.05) indicates that you can reject the null hypothesis. In other words, a predictor that has a low p-value is likely to be a meaningful addition to your model because changes in the predictor's value are related to changes in the response variable [[Minitab Blog-pvalue]][How to Interpret Regression Analysis Results: P-values and Coefficients].
 
 Conversely, a larger (insignificant) p-value suggests that changes in the predictor are not associated with changes in the response.
 
 In the output below, we can see that the predictor variables of South and North are significant because both of their p-values are 0.000. However, the p-value for East (0.092) is greater than the common alpha level of 0.05, which indicates that it is not statistically significant.
 
-Table with regression p-values
+Table with regression p-values [[Minitab Blog-pvalue]][How to Interpret Regression Analysis Results: P-values and Coefficients]
 
 ![](images/linear_regression_pvalue.png)
 
@@ -161,7 +161,8 @@ Typically, you use the coefficient p-values to determine which terms to keep in 
 [[BUMC] Simple Linear Regression](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/R5_Correlation-Regression4.html)
 * [The Pitfalls of Linear Regression and How to Avoid Them]: https://medium.com/analytics-vidhya/the-pitfalls-of-linear-regression-and-how-to-avoid-them-b93626e1a020
 [[Genevieve Hayes] The Pitfalls of Linear Regression and How to Avoid Them](https://medium.com/analytics-vidhya/the-pitfalls-of-linear-regression-and-how-to-avoid-them-b93626e1a020)
-
+* [How to Interpret Regression Analysis Results: P-values and Coefficients]: https://blog.minitab.com/en/adventures-in-statistics-2/how-to-interpret-regression-analysis-results-p-values-and-coefficients
+[[Minitab Blog-pvalue] How to Interpret Regression Analysis Results: P-values and Coefficients](https://blog.minitab.com/en/adventures-in-statistics-2/how-to-interpret-regression-analysis-results-p-values-and-coefficients)
 
 
 ## 3. Multicollinearity
@@ -193,9 +194,9 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"
 
 ### 3.B How to deal with Multicollinearity
 
-* **Remove highly correlated predictors from the model**: If you have two or more factors with a high VIF, remove one from the model. Consider using stepwise regression, best subsets regression, or specialized knowledge of the data set to remove these variables. Select the model that has the highest R-squared value [[Minitab Blog]][Enough Is Enough! Handling Multicollinearity in Regression Analysis]. 
+* **Remove highly correlated predictors from the model**: If you have two or more factors with a high VIF, remove one from the model. Consider using stepwise regression, best subsets regression, or specialized knowledge of the data set to remove these variables. Select the model that has the highest R-squared value [[Minitab Blog-Multicollinearity]][Enough Is Enough! Handling Multicollinearity in Regression Analysis]. 
 
-* **combine variables**: Use Partial Least Squares Regression (PLS) or **Principal Components Analysis**, regression methods that cut the number of predictors to a smaller set of uncorrelated components [[Minitab Blog]][Enough Is Enough! Handling Multicollinearity in Regression Analysis], [[Sushmitha Pulagam]][How to detect and deal with Multicollinearity].
+* **combine variables**: Use Partial Least Squares Regression (PLS) or **Principal Components Analysis**, regression methods that cut the number of predictors to a smaller set of uncorrelated components [[Minitab Blog-Multicollinearity]][Enough Is Enough! Handling Multicollinearity in Regression Analysis], [[Sushmitha Pulagam]][How to detect and deal with Multicollinearity].
 
 Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, Detection, and Solutions]:
 
@@ -211,7 +212,7 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 * [Multicollinearity in Regression Analysis: Problems, Detection, and Solutions]: https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/
 [[Jim Frost] Multicollinearity in Regression Analysis: Problems, Detection, and Solutions](https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/)
 * [Enough Is Enough! Handling Multicollinearity in Regression Analysis]: https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis
-[[Minitab Blog] Enough Is Enough! Handling Multicollinearity in Regression Analysis](https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis)
+[[Minitab Blog-Multicollinearity] Enough Is Enough! Handling Multicollinearity in Regression Analysis](https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis)
 * [How to detect and deal with Multicollinearity]: https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1
 [[Sushmitha Pulagam] How to detect and deal with Multicollinearity](https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1)
 
