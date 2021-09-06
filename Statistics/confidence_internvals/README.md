@@ -42,7 +42,6 @@ When the two independent samples are assumed to be drawn from populations with u
 
 Because there’s so many observations per group, just use the Z quantile instead of the T.
 
-The CI is
 <a href="https://www.codecogs.com/eqnedit.php?latex=\big(&space;4&space;-&space;6&space;\big)&space;\pm&space;z^*&space;\sqrt{\frac{(99*0.5^2&plus;99*2^2)}{200-2}}&space;\sqrt{\frac{2}{100}}&space;=&space;-2\pm&space;1.96*0.20506" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\big(&space;4&space;-&space;6&space;\big)&space;\pm&space;z^*&space;\sqrt{\frac{(99*0.5^2&plus;99*2^2)}{200-2}}&space;\sqrt{\frac{2}{100}}&space;=&space;-2\pm&space;1.96*0.20506" title="\big( 4 - 6 \big) \pm z^* \sqrt{\frac{(99*0.5^2+99*2^2)}{200-2}} \sqrt{\frac{2}{100}} = -2\pm 1.96*0.20506" /></a>
 
 
