@@ -4,6 +4,8 @@
 
 ## Confidence Interval for Two Independent Samples, Continuous Outcome
 
+[[Kent State University]][SPSS TUTORIALS: INDEPENDENT SAMPLES T TEST], [[JMP]][The Two-Sample t-Test], 
+
 ### Equal variance is assumed
 
 When the two independent samples are assumed to be drawn from populations with identical population variances:
@@ -24,7 +26,7 @@ where the pooled standard deviation is
 
 ### Equal variances are not assume
 
-When the two independent samples are assumed to be drawn from populations with unequal variances, the CI is
+When the two independent samples are assumed to be drawn from populations with unequal variances, the CI is  
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\big(&space;\bar{x}_1&space;-&space;\bar{x}_2&space;\big)&space;\pm&space;t&space;\sqrt{\frac{s_1^2}{n_1}&plus;\frac{s_2^2}{n_2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\big(&space;\bar{x}_1&space;-&space;\bar{x}_2&space;\big)&space;\pm&space;t&space;\sqrt{\frac{s_1^2}{n_1}&plus;\frac{s_2^2}{n_2}}" title="\big( \bar{x}_1 - \bar{x}_2 \big) \pm t \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}" /></a> 
 
@@ -52,7 +54,12 @@ Because there’s so many observations per group, just use the Z quantile instea
 
 #### Reference
 
+* [The Two-Sample t-Test]: https://www.jmp.com/en_us/statistics-knowledge-portal/t-test/two-sample-t-test.html
+[[JMP] The Two-Sample t-Test](https://www.jmp.com/en_us/statistics-knowledge-portal/t-test/two-sample-t-test.html)
 * [SPSS TUTORIALS: INDEPENDENT SAMPLES T TEST]: https://libguides.library.kent.edu/spss/independentttest
 [[Kent State University] SPSS TUTORIALS: INDEPENDENT SAMPLES T TEST](https://libguides.library.kent.edu/spss/independentttest)
 * [40 Statistics Interview Problems and Answers for Data Scientists]:https://towardsdatascience.com/40-statistics-interview-problems-and-answers-for-data-scientists-6971a02b7eee
 [[Terence Shin] 40 Statistics Interview Problems and Answers for Data Scientists](https://towardsdatascience.com/40-statistics-interview-problems-and-answers-for-data-scientists-6971a02b7eee)
+* [Two Independent Samples]:https://bolt.mph.ufl.edu/6050-6052/unit-4b/module-13/two-independent-samples/
+[[UF Biostatistics] Two Independent Samples](https://bolt.mph.ufl.edu/6050-6052/unit-4b/module-13/two-independent-samples/)
+
