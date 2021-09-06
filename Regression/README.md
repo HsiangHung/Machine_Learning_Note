@@ -144,6 +144,14 @@ The p-value for each term tests the **null hypothesis that the coefficient is eq
 
 Conversely, a larger (insignificant) p-value suggests that changes in the predictor are not associated with changes in the response.
 
+In the output below, we can see that the predictor variables of South and North are significant because both of their p-values are 0.000. However, the p-value for East (0.092) is greater than the common alpha level of 0.05, which indicates that it is not statistically significant.
+
+Table with regression p-values
+
+![](images/linear_regression_pvalue.png)
+
+Typically, you use the coefficient p-values to determine which terms to keep in the regression model. In the model above, we should consider removing East.
+
 
 ### Reference
 
@@ -213,13 +221,13 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 
 An influential point is an outlier that greatly affects the slope of the regression line. One way to test the influence of an outlier is to compute the regression equation with and without the outlier. The types of analysis are illustrated below [[Stat Trek]][Influential Points]:
 
-### Example A
+#### Example A
 
 ![](images/outlier_regression_1.png)
 
 When the outlier is present, the slope is flatter (-4.10 vs. -3.32); so this outlier would be considered an influential point.
 
-### Example B
+#### Example B
 
 ![](images/outlier_regression_2.png)
 
