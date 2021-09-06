@@ -4,7 +4,7 @@
 
 ## Confidence Interval for Two Independent Samples, Continuous Outcome
 
-[[Kent State University]][SPSS TUTORIALS: INDEPENDENT SAMPLES T TEST], [[JMP]][The Two-Sample t-Test], 
+[[Kent State University]][SPSS TUTORIALS: INDEPENDENT SAMPLES T TEST], [[JMP]][The Two-Sample t-Test], [[UF Biostatistics]][Two Independent Samples]
 
 ### Equal variance is assumed
 
