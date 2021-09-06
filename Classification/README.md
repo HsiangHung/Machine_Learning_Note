@@ -56,7 +56,6 @@ Comparison can be visualized below (credit from [Logistic Regression versus Deci
 [Amazon’s Data Scientist Interview Practice Problems](https://towardsdatascience.com/amazon-data-scientist-interview-practice-problems-15b9b86e86c6) 
 
 **Decision Trees**: a tree-like model used to model decisions based on one or more conditions.
-
 * Pros: easy to implement, intuitive, handles missing values
 * Cons: high variance, inaccurate
 
