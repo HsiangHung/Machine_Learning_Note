@@ -48,7 +48,11 @@ Because there’s so many observations per group, just use the Z quantile instea
 
 
 
+## Confidence Interval for Two Independent Samples, Dichotomous Outcome
 
+The formula for the confidence interval for the difference in proportions is:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\big(&space;\hat{p}_1&space;-&space;\hat{p}_2)&space;\pm&space;z&space;\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}&space;&plus;&space;\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\big(&space;\hat{p}_1&space;-&space;\hat{p}_2)&space;\pm&space;z&space;\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}&space;&plus;&space;\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}" title="\big( \hat{p}_1 - \hat{p}_2) \pm z \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}" /></a>
 
 
 
