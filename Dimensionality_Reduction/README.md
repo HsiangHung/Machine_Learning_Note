@@ -3,6 +3,11 @@
 
 Here is the note I read many blogs or posts about dimensionality reduction methods. There is a comprehensive post about all dimensionality reduction methods. [[Elior Cohen]][Reducing Dimensionality from Dimensionality Reduction Techniques]
 
+[Amazon’s Data Scientist Interview Practice Problems](https://towardsdatascience.com/amazon-data-scientist-interview-practice-problems-15b9b86e86c6) asked: Why is dimension reduction important? Dimensionality reduction is the process of reducing the number of features in a dataset. This is important mainly in the case when you want to reduce variance in your model (overfitting). Wikipedia states four advantages of dimensionality reduction:
+1. It reduces the time and storage space required
+2. Removal of multi-collinearity improves the interpretation of the parameters of the machine learning model
+3. It becomes easier to visualize the data when reduced to very low dimensions such as 2D or 3D
+4. It avoids the curse of dimensionality
 
 ## PCA
 
@@ -73,34 +78,21 @@ An autoencoder is a dimensionality reduction method using nonlinear transformati
 
 
 
-[Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
+* [Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
 [[Arden Dertat] Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
-
-
-[When to use PCA before or after a train-test split?]: https://www.codementor.io/@divyeshaegis/when-to-use-pca-before-or-after-a-train-test-split-vxdrlu6ci
+* [When to use PCA before or after a train-test split?]: https://www.codementor.io/@divyeshaegis/when-to-use-pca-before-or-after-a-train-test-split-vxdrlu6ci
 [[Divyesh Aegis] When to use PCA before or after a train-test split?](https://www.codementor.io/@divyeshaegis/when-to-use-pca-before-or-after-a-train-test-split-vxdrlu6ci)
-
-[Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
+* [Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
 [[Elior Cohen] Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
-
-
-[PCA using Python (scikit-learn)]: https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60
+* [PCA using Python (scikit-learn)]: https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60
 [[Michael Galarnyk] PCA using Python (scikit-learn)](https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60)
-
-
-[What are some of the limitations of principal component analysis?]: https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis
+* [What are some of the limitations of principal component analysis?]: https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis
 [[Quroa] What are some of the limitations of principal component analysis?](https://www.quora.com/What-are-some-of-the-limitations-of-principal-component-analysis)
-
-
-[Limitations of Applying Dimensionality Reduction using PCA]: https://www.robertoreif.com/blog/2018/1/9/pca
+* [Limitations of Applying Dimensionality Reduction using PCA]: https://www.robertoreif.com/blog/2018/1/9/pca
 [[Roberto Reif] Limitations of Applying Dimensionality Reduction using PCA](https://www.robertoreif.com/blog/2018/1/9/pca)
-
-
-[The DOs and DON’Ts of Principal Component Analysis]: https://medium.com/@sadatnazrul/the-dos-and-donts-of-principal-component-analysis-7c2e9dc8cc48
+* [The DOs and DON’Ts of Principal Component Analysis]: https://medium.com/@sadatnazrul/the-dos-and-donts-of-principal-component-analysis-7c2e9dc8cc48
 [[Syed Sadat Nazrul] The DOs and DON’Ts of Principal Component Analysis](https://medium.com/@sadatnazrul/the-dos-and-donts-of-principal-component-analysis-7c2e9dc8cc48)
-
-
-[The Curse of Dimensionality in classification]: http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/
+* [The Curse of Dimensionality in classification]: http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/
 [[Vincent Spruyt] The Curse of Dimensionality in classification](http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/)
 
 
