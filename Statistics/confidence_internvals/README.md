@@ -33,12 +33,17 @@ When the two independent samples are assumed to be drawn from populations with u
 
 [[Terence Shin]][40 Statistics Interview Problems and Answers for Data Scientists] In a study of emergency room waiting times, investigators consider a new and the standard triage systems. To test the systems, administrators selected 20 nights and randomly assigned the new triage system to be used on 10 nights and the standard system on the remaining 10 nights. They calculated the nightly median waiting time (MWT) to see a physician. The average MWT for the new system was 3 hours with a variance of 0.60 while the average MWT for the old system was 5 hours with a variance of 0.68. Consider the 95% confidence interval estimate for the differences of the mean MWT associated with the new system. **Assume a constant variance.** What is the interval? Subtract in this order (New System — Old System).
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\big(&space;3&space;-&space;5&space;\big)&space;\pm&space;t_{18}&space;\sqrt{\frac{(9*0.6^2&plus;9*0.68^2)}{18}}&space;\sqrt{\frac{2}{9}}&space;=&space;-2\pm&space;2.101*0.352" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\big(&space;3&space;-&space;5&space;\big)&space;\pm&space;t_{18}&space;\sqrt{\frac{(9*0.6^2&plus;9*0.68^2)}{18}}&space;\sqrt{\frac{2}{9}}&space;=&space;-2\pm&space;2.101*0.352" title="\big( 3 - 5 \big) \pm t_{18} \sqrt{\frac{(9*0.6^2+9*0.68^2)}{18}} \sqrt{\frac{2}{9}} = -2\pm 2.101*0.352" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\big(&space;3&space;-&space;5&space;\big)&space;\pm&space;t_{18}&space;\sqrt{\frac{(9*0.6^2&plus;9*0.68^2)}{18}}&space;\sqrt{\frac{2}{10}}&space;=&space;-2\pm&space;2.101*0.352" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\big(&space;3&space;-&space;5&space;\big)&space;\pm&space;t_{18}&space;\sqrt{\frac{(9*0.6^2&plus;9*0.68^2)}{18}}&space;\sqrt{\frac{2}{10}}&space;=&space;-2\pm&space;2.101*0.352" title="\big( 3 - 5 \big) \pm t_{18} \sqrt{\frac{(9*0.6^2+9*0.68^2)}{18}} \sqrt{\frac{2}{10}} = -2\pm 2.101*0.352" /></a>
 
 
 ### Example 2
 
-[[Terence Shin]][40 Statistics Interview Problems and Answers for Data Scientists]
+[[Terence Shin]][40 Statistics Interview Problems and Answers for Data Scientists] To further test the hospital triage system, administrators selected 200 nights and randomly assigned a new triage system to be used on 100 nights and a standard system on the remaining 100 nights. They calculated the nightly median waiting time (MWT) to see a physician. The average MWT for the new system was 4 hours with a standard deviation of 0.5 hours while the average MWT for the old system was 6 hours with a standard deviation of 2 hours. Consider the hypothesis of a decrease in the mean MWT associated with the new treatment. What does the 95% independent group confidence interval with unequal variances suggest vis a vis this hypothesis? 
+
+Because there’s so many observations per group, just use the Z quantile instead of the T.
+
+The CI is
+<a href="https://www.codecogs.com/eqnedit.php?latex=\big(&space;4&space;-&space;6&space;\big)&space;\pm&space;z^*&space;\sqrt{\frac{(99*0.5^2&plus;99*2^2)}{200-2}}&space;\sqrt{\frac{2}{100}}&space;=&space;-2\pm&space;1.96*0.20506" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\big(&space;4&space;-&space;6&space;\big)&space;\pm&space;z^*&space;\sqrt{\frac{(99*0.5^2&plus;99*2^2)}{200-2}}&space;\sqrt{\frac{2}{100}}&space;=&space;-2\pm&space;1.96*0.20506" title="\big( 4 - 6 \big) \pm z^* \sqrt{\frac{(99*0.5^2+99*2^2)}{200-2}} \sqrt{\frac{2}{100}} = -2\pm 1.96*0.20506" /></a>
 
 
 
