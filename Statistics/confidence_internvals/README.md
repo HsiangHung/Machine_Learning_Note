@@ -8,9 +8,12 @@
 
 
 * If n1 > 30 or n2 > 30, use the Z-table:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\big(\bar{x}_1&space;-\bar{x}_2\big)&space;\pm&space;z&space;S_p&space;\sqrt{\frac{1}{n_1}&plus;\frac{1}{n_2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\big(\bar{x}_1&space;-\bar{x}_2\big)&space;\pm&space;z&space;S_p&space;\sqrt{\frac{1}{n_1}&plus;\frac{1}{n_2}}" title="\big(\bar{x}_1 -\bar{x}_2\big) \pm z S_p \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}" /></a>
 
+
 * If n1 < 30 or n2 < 30, use the t-table:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\big(\bar{x}_1&space;-\bar{x}_2\big)&space;\pm&space;t_{n_1&plus;n_2-2}&space;S_p&space;\sqrt{\frac{1}{n_1}&plus;\frac{1}{n_2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\big(\bar{x}_1&space;-\bar{x}_2\big)&space;\pm&space;t_{n_1&plus;n_2-2}&space;S_p&space;\sqrt{\frac{1}{n_1}&plus;\frac{1}{n_2}}" title="\big(\bar{x}_1 -\bar{x}_2\big) \pm t_{n_1+n_2-2} S_p \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}" /></a>
 
 
