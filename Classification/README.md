@@ -27,7 +27,7 @@ The summary of Advantages and Disadvantages of different Classification Models [
 | Emsemble | nonlinear | low | high | Powerful and accurate, good performance. |  No interpretability, overfitting can easily occur, need hyperparameter tuning|
 
 
-#### Logistic regression (LR) vs Decision Trees (DT)
+#### 1.A Logistic regression (LR) vs Decision Trees (DT)
 
 Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree](https://dzone.com/articles/logistic-regression-vs-decision-tree))
 
@@ -45,14 +45,14 @@ Comparison can be visualized below (credit from [Logistic Regression versus Deci
 
 ![LR_vs_DT](images/LR_vs_DT.png)
 
-#### Other model comparisons
+#### 1.B Other classification model comparisons
 
 * For “relatively” very small dataset sizes, compare the performance of a discriminative Logistic Regression model to a related Naive Bayes classifier (a generative model) or SVMs, where the later may be less susceptible to noise and outlier points. Even so, logistic regression is a great, robust model for simple classification tasks. (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 * Logistic regression can be regarded as a one layer neural network (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 * One of the nice properties of logistic regression is that the logistic cost function (or max-entropy) is convex, and thus we are guaranteed to find the global cost minimum (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 
 
-#### Q: Describe Tree, SVM and Random forest. Talk about their advantage and disadvantages.
+#### 1.C Q: Describe Tree, SVM and Random forest. Talk about their advantage and disadvantages.
 [Amazon’s Data Scientist Interview Practice Problems](https://towardsdatascience.com/amazon-data-scientist-interview-practice-problems-15b9b86e86c6) 
 
 **Decision Trees**: a tree-like model used to model decisions based on one or more conditions.
