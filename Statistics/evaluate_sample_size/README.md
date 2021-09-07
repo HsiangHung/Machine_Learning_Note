@@ -104,7 +104,7 @@ Note the `absolute` is selected to make 8%-12% confidence interval. The online c
 
 Predicting how many users we need depends on a few factors, such as how big we think the difference will be between variants, how many variants there are, and what the conversion rates are. **The larger the difference between variants, the more confident you can be that the results are statistically significant with fewer samples.**
 
-Here is a table of roughly how many users **per variant** (including baseline) we recommend using at the start of your test:
+Here is a table of roughly how many users **per variant** (including baseline) we recommend using at the start of your test [[Apptimize]][How Many Users Do I Need for My A/B Test? Calculate Sample Size and Run Times]:
 
 | | Low conversion rates (5%) | Medium conversion rates (15%) | High conversion rates (70%) |
 | --- | --- | --- | --- |
@@ -116,7 +116,7 @@ The above numbers are obatined by the [online calculator](https://www.evanmiller
 
 ### Runtimes
 
-you can calculate about how long you will need to run your test to see conclusive results:
+you can calculate about how long you will need to run your test to see conclusive results [[Apptimize]][How Many Users Do I Need for My A/B Test? Calculate Sample Size and Run Times]:
 
      Duration (weeks) = (Nv · Nu ) / (p · M/4 )
 
@@ -132,7 +132,8 @@ For instance, say you have two variants (baseline, plus one other), 100,000 MAUs
 
 ## Reference
 
-
+* [How Many Users Do I Need for My A/B Test? Calculate Sample Size and Run Times]: https://apptimize.com/blog/2014/01/how-many-users-time/
+[[Apptimize] How Many Users Do I Need for My A/B Test? Calculate Sample Size and Run Times](https://apptimize.com/blog/2014/01/how-many-users-time/)
 * [How to Determine Your A/B Testing Sample Size & Time Frame]: https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time
 [[Ginny Mineo] How to Determine Your A/B Testing Sample Size & Time Frame](https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time)
 * [Sample size calculator]: https://www.surveymonkey.com/mp/sample-size-calculator/
