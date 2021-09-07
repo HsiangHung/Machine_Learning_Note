@@ -28,6 +28,7 @@ Table of Contents:
 * [2. Linear Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2-linear-regression)
      * [2.A Assumption for linear regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2a-assumption-for-linear-regression)
      * [2.B Maximum likelihood estimate](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2b-maximum-likelihood-estimate)
+     * [2.C Interpret Regression Analysis Results: P-values and Coefficients](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2c-interpret-regression-analysis-results-p-values-and-coefficients)
 * [3. Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3-multicollinearity)
      * [3.A How to test Multicollinearity?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3a-how-to-test-multicollinearity)
      * [3.B How to deal with Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3b-how-to-deal-with-multicollinearity)
