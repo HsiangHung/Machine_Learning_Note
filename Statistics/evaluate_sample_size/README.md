@@ -30,7 +30,7 @@ Suppose we are doing a study on the inhabitants of a **large** town, and want to
 A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we get
 
  
-     (1.96/0.05) * (1.96/0.05) * 0.5 * 0.5 = 384.16
+     round((1.96/0.05) * (1.96/0.05) * 0.5 * 0.5 ) + 1 = 385
 
 
 So a random sample of 385 households in our target population should be enough to give us the confidence levels we need.
