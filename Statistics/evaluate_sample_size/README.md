@@ -1,21 +1,33 @@
 
 # Determine Sample Size for an A/B Test
 
-## What is a “Sample Size”?
+### What is a “Sample Size”?
 
 [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]
 
 A sample size is a **part of the population** chosen for a survey or experiment. For example, you might take a survey of dog owner’s brand preferences. You won’t want to survey all the millions of dog owners in the country (either because it’s too expensive or time consuming), so you take a sample size. That may be several thousand owners. The sample size is a representation of all dog owner’s brand preferences. If you choose your sample wisely, it will be a good representation.
 
-## When Error can Creep in
+Table of Contents:
+
+* [0. When Error can Creep in](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#1-metric)
+* [1. How to Find a Sample Size in Statistics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2-linear-regression)
+     * [1.A Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2a-assumption-for-linear-regression)
+     * [1.B Samll population - modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2b-maximum-likelihood-estimate)
+     * [1.C Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2b-maximum-likelihood-estimate)
+* [2. Page View Example, Required Statistical Power](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3-multicollinearity)
+* [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#4-effects-of-an-outlier-on-regression)
+
+
+
+## 0. When Error can Creep in
 
 When you only survey a **small** sample of the population, uncertainty creeps in to your statistics. If you can only survey a certain percentage of the true population, you can never be 100% sure that your statistics are a complete and accurate representation of the population. This uncertainty is called sampling error and is usually measured by a confidence interval. For example, you might state that your results are at a **90% confidence level**. That means if you were to **repeat** your survey over and over, **90% of the time your would get the results within the interval**.
 
-## How to Find a Sample Size in Statistics
+## 1. How to Find a Sample Size in Statistics
 
 A sample is a percentage of the total population in statistics. You can use the data from a sample to make inferences about a population as a whole. For example, the standard deviation of a sample can be used to approximate the standard deviation of a population. Finding a sample size can be one of the most challenging tasks in statistics and depends upon many factors including the size of your original population.
 
-### Large population
+### 1.A Large population
 
 Assume we have large enough populations. The margin of error is given by
 
@@ -36,7 +48,7 @@ A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we 
 So a random sample of 385 households in our target population should be enough to give us the confidence levels we need.
 
 
-### Samll population - modification for the Cochran Formula
+### 1.B Samll population - modification for the Cochran Formula
 
 If the population we’re studying is **small**, we can modify the sample size we calculated in the above formula by using this equation [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips], [[Survey Monkey]][Sample size calculator]:
 
@@ -53,7 +65,9 @@ This is the size **one your variations** needs to be. So for your email send, if
 
 Here are the calculators from [survey system](https://www.surveysystem.com/sscalc.htm) and [survey monkey](https://www.surveymonkey.com/mp/sample-size-calculator/).
 
-### Given a confidence level and width, unknown population standard deviation
+### 1.C Examples
+
+#### Given a confidence level and width, unknown population standard deviation
 
 Example question: 41% of Jacksonville residents said that they had been in a hurricane. How many adults should be surveyed to estimate the true proportion of adults who have been in a hurricane, with a 95% confidence interval 6% wide?
 
@@ -64,7 +78,7 @@ z-score for 95% confidence interval is 1.96. The margin of error is given by the
 1,033 people to survey.
 
 
-### Given a confidence level and width, known population standard deviation
+#### Given a confidence level and width, known population standard deviation
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=&space;\Big(&space;\frac{Z_{\alpha&space;/2}&space;\sigma}{e}&space;\Big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=&space;\Big(&space;\frac{Z_{\alpha&space;/2}&space;\sigma}{e}&space;\Big)^2" title="n = \Big( \frac{Z_{\alpha /2} \sigma}{e} \Big)^2" /></a>
 
@@ -74,7 +88,7 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 
 
-## Page View Example, Required Statistical Power
+## 2. Page View Example, Required Statistical Power
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
@@ -84,6 +98,8 @@ Assume the conversion rate is about 10%, and we want to run an A/B test. The min
 
 Note the `absolute` is selected to make 8%-12% confidence interval. The online calculator shows at least we need sample size of 3,623 page views per variation (in each group) to see significant results in the AB test.
 
+
+## 3. Sample Size vs Conversion Rate and Minimum Detectable Effect
 
 
 Predicting how many users we need depends on a few factors, such as how big we think the difference will be between variants, how many variants there are, and what the conversion rates are. **The larger the difference between variants, the more confident you can be that the results are statistically significant with fewer samples.**
