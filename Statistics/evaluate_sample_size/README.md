@@ -86,6 +86,14 @@ Note the `absolute` is selected to make 8%-12% confidence interval. The online c
 
 
 
+Predicting how many users we need depends on a few factors, such as how big we think the difference will be between variants, how many variants there are, and what the conversion rates are. **The larger the difference between variants, the more confident you can be that the results are statistically significant with fewer samples.**
+
+Here is a table of roughly how many users per variant (including baseline) we recommend using at the start of your test:
+
+| | Low conversion rates (5%) | Medium conversion rates (15%) | High conversion rates (70%) |
+| --- | --- | --- | --- | --- |
+| Small difference between variants (10% lift) | 40,000 | 10,000 | 700 | 
+| meidum difference between variants (20% lift) | 8,000 | 2,500 | 150 | 
 
 
 
