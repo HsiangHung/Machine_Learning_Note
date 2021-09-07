@@ -92,8 +92,8 @@ Here is a table of roughly how many users per variant (including baseline) we re
 
 | | Low conversion rates (5%) | Medium conversion rates (15%) | High conversion rates (70%) |
 | --- | --- | --- | --- |
-| Small difference between variants (10% lift) | 40,000 | 10,000 | 700 | 
-| meidum difference between variants (20% lift) | 8,000 | 2,500 | 150 | 
+| 10% lift between variants | 40,000 | 10,000 | 700 | 
+| 20% lift between variants  | 8,000 | 2,500 | 150 | 
 
 
 
