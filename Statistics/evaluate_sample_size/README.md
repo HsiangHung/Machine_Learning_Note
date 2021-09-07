@@ -30,7 +30,7 @@ Suppose we are doing a study on the inhabitants of a **large** town, and want to
 A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we get
 
  
-     (1.96/0.05) * (1.96/0.05) * 0.5 * 0.5
+     (1.96/0.05) * (1.96/0.05) * 0.5 * 0.5 = 384.16
 
 
 So a random sample of 385 households in our target population should be enough to give us the confidence levels we need.
@@ -43,7 +43,7 @@ If the population we’re studying is **small**, we can modify the sample size w
 <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=\frac{n_0}{1&plus;\frac{n_0-1}{N}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=\frac{n_0}{1&plus;\frac{n_0-1}{N}}" title="n =\frac{n_0}{1+\frac{n_0-1}{N}}" /></a>
 
 
-Here n0 is Cochran’s sample size recommendation, **N is the population size**, and n is the new, adjusted sample size. In our earlier example, if there were just 1000 households in the target population, we would calculate
+Here `n0` is Cochran’s sample size recommendation, **N is the population size**, and `n` is the new, adjusted sample size. In our earlier example, `n0=385` and if there were just 1000 households in the target population, we would calculate
 
     385 / (1 + ( 384 / 1000 )) = 278
 
