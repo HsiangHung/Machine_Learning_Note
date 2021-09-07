@@ -111,6 +111,8 @@ The weight-averaged Precision is defined as (using `classification_report` from 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Weighted-P}&space;=&space;\frac{n_1*P_1&space;&plus;&space;n_2*P_2&space;&plus;&space;\cdots&space;n_K*P_K}{n_1&space;&plus;&space;n_2&space;&plus;&space;\cdots&space;n_K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Weighted-P}&space;=&space;\frac{n_1*P_1&space;&plus;&space;n_2*P_2&space;&plus;&space;\cdots&space;n_K*P_K}{n_1&space;&plus;&space;n_2&space;&plus;&space;\cdots&space;n_K}" title="\textrm{Weighted-P} = \frac{n_1*P_1 + n_2*P_2 + \cdots n_K*P_K}{n_1 + n_2 + \cdots n_K}" /></a>
 
+where `ni` is the number of sample size for `i`-th class.
+
 #### Example
 
 [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score] show an example for three classes. The 3 x 3 confusion matrix is 
@@ -129,7 +131,7 @@ For each class, we can have precision, recall and F1 score like
 | --- | --- | --- | --- |
 | cat | 0.308 (4/13) | 0.667 (4/6) | 0.421 (2x0.308x0.667/(0.308+0.667))| 
 | fish | 0.667 (2/3)| 0.20 (2/10) | 0.308 (2x0.667x0.3/(0.667+0.3)) | 
-| han | 0.667 | 0.667 | 0.667 | 
+| han | 0.667 (6/9) | 0.667 (6/9) | 0.667 | 
 
 
 |  |  precision |  recall | F1 score |
