@@ -45,7 +45,7 @@ For the N-class instances dataset, we have to generate the N-binary classifier m
 
 ![](images/one-vs-all-pipeline.png)
 
-By analyzing the probability scores, we predict the result as the class index having a **maximum** probability score [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]. 
+By analyzing the probability scores, we predict the result as the class index having a **Maximum** probability score [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]. 
 
 As an example on Green-blue-red calss, if we have a test case with a probability score of (0.9) from the Green class classifier, probability score of (0.4) from the Blue classifier, but a negative classification score from the remaining Red classifier. Based on the probability scores, we predict the test input belongs to the Green class.
 
@@ -79,13 +79,13 @@ The decision boundaries between multiple binary classifier models and a multinom
 ![](images/multiclass-classifier.png)
 
 
-The softmax function creates a probability distribution over K classes, and produces an output vector of length K. Each element of the vector is the probability that the input belongs to the corresponding class (see [here](https://stats.stackexchange.com/questions/108236/softmax-regression-or-k-binary-logistic-regression)). The most likely class is chosen by selecting the index of that vector having the highest probability [[Algorithmia]][Multiclass classification in machine learning].
+The softmax function creates a probability distribution over K classes, and produces an output vector of length K. Each element of the vector is the probability that the input belongs to the corresponding class (see [here](https://stats.stackexchange.com/questions/108236/softmax-regression-or-k-binary-logistic-regression)). The most likely class is chosen by selecting the index of that vector having the **highest probability** [[Algorithmia]][Multiclass classification in machine learning].
 
 
 In the Naive Bayes classifier, we use Bayes’ theorem to break down the joint probability of membership in a class into a series of conditional probabilities [[Algorithmia]][Multiclass classification in machine learning]. 
 
 
-SVMs are inherently two-class classifiers. In the multiclass SVM, if it is built as one-versus-rest classifiers, choose the class which classifies the test datum with greatest margin. If built as one-vs-one classifiers, still choose the class that is selected by the most classifiers [[Stanford NLP]][Multiclass SVMs].
+SVMs are inherently two-class classifiers. In the **multiclass SVM**, if it is built as **one-versus-rest classifiers**, choose the class which classifies the test datum with **greatest margin**. If built as one-vs-one classifiers, still choose the class that is selected by the most classifiers [[Stanford NLP]][Multiclass SVMs].
 
 
 ## 2. Metrics
@@ -158,29 +158,18 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 ## Reference
 
 
-[Multiclass classification in machine learning]: https://algorithmia.com/blog/multiclass-classification-in-machine-learning
+* [Multiclass classification in machine learning]: https://algorithmia.com/blog/multiclass-classification-in-machine-learning
 [[Algorithmia] Multiclass classification in machine learning](https://algorithmia.com/blog/multiclass-classification-in-machine-learning)
-
-
-[Multi-class Classification — One-vs-All & One-vs-One]: https://towardsdatascience.com/multi-class-classification-one-vs-all-one-vs-one-94daed32a87b
+* [Multi-class Classification — One-vs-All & One-vs-One]: https://towardsdatascience.com/multi-class-classification-one-vs-all-one-vs-one-94daed32a87b
 [[Amey Band] Multi-class Classification — One-vs-All & One-vs-One](https://towardsdatascience.com/multi-class-classification-one-vs-all-one-vs-one-94daed32a87b)
-
-[Multi-Class Metrics Made Simple, Part I: Precision and Recall]: https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2
+* [Multi-Class Metrics Made Simple, Part I: Precision and Recall]: https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2
 [[Boaz Shmueli-1] Multi-Class Metrics Made Simple, Part I: Precision and Recall](https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2)
-
-
-[Multi-Class Metrics Made Simple, Part II: the F1-score]: https://towardsdatascience.com/multi-class-metrics-made-simple-part-ii-the-f1-score-ebe8b2c2ca1
+* [Multi-Class Metrics Made Simple, Part II: the F1-score]: https://towardsdatascience.com/multi-class-metrics-made-simple-part-ii-the-f1-score-ebe8b2c2ca1
 [[Boaz Shmueli-2] Multi-Class Metrics Made Simple, Part II: the F1-score](https://towardsdatascience.com/multi-class-metrics-made-simple-part-ii-the-f1-score-ebe8b2c2ca1)
-
-
-[A Tale of Two Macro-F1's]: https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04
+* [A Tale of Two Macro-F1's]: https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04
 [[Boaz Shmueli-3] A Tale of Two Macro-F1's](https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04)
-
-
-[Many binary classifiers vs. single multiclass classifier]: https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier
+* [Many binary classifiers vs. single multiclass classifier]: https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier
 [[Cross Validated: Many binary classifiers vs. single multiclass classifier] Many binary classifiers vs. single multiclass classifier](https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier)
-
-
-[Multiclass SVMs]: https://nlp.stanford.edu/IR-book/html/htmledition/multiclass-svms-1.html
+* [Multiclass SVMs]: https://nlp.stanford.edu/IR-book/html/htmledition/multiclass-svms-1.html
 [[Stanford NLP] Multiclass SVMs](https://nlp.stanford.edu/IR-book/html/htmledition/multiclass-svms-1.htmlr)
 
