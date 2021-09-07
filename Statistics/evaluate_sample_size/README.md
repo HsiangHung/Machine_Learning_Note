@@ -9,13 +9,13 @@ A sample size is a **part of the population** chosen for a survey or experiment.
 
 Table of Contents:
 
-* [0. When Error can Creep in](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#1-metric)
+* [0. When Error can Creep in](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#0-when-error-can-creep-in)
 * [1. How to Find a Sample Size in Statistics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2-linear-regression)
-     * [1.A Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2a-assumption-for-linear-regression)
-     * [1.B Samll population - modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2b-maximum-likelihood-estimate)
-     * [1.C Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2b-maximum-likelihood-estimate)
-* [2. Page View Example, Required Statistical Power](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3-multicollinearity)
-* [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#4-effects-of-an-outlier-on-regression)
+     * [1.A Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a-large-population)
+     * [1.B Samll population - modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b-samll-population---modification-for-the-cochran-formula)
+     * [1.C Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c-examples)
+* [2. Page View Example, Required Statistical Power](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#2-page-view-example-required-statistical-power)
+* [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#3-sample-size-vs-conversion-rate-and-minimum-detectable-effect)
 
 
 
@@ -104,7 +104,7 @@ Note the `absolute` is selected to make 8%-12% confidence interval. The online c
 
 Predicting how many users we need depends on a few factors, such as how big we think the difference will be between variants, how many variants there are, and what the conversion rates are. **The larger the difference between variants, the more confident you can be that the results are statistically significant with fewer samples.**
 
-Here is a table of roughly how many users per variant (including baseline) we recommend using at the start of your test:
+Here is a table of roughly how many users **per variant** (including baseline) we recommend using at the start of your test:
 
 | | Low conversion rates (5%) | Medium conversion rates (15%) | High conversion rates (70%) |
 | --- | --- | --- | --- |
@@ -113,6 +113,20 @@ Here is a table of roughly how many users per variant (including baseline) we re
 | 50% lift between variants | 1,273| 375 |  |
 
 The above numbers are obatined by the [online calculator](https://www.evanmiller.org/ab-testing/sample-size.html) setting 80% power and 5% significance level, and `Relative` in Minimum Detectable Effect.
+
+### Runtimes
+
+you can calculate about how long you will need to run your test to see conclusive results:
+
+     Duration (weeks) = (Nv · Nu ) / (p · M/4 )
+
+* Nv = number of variants
+* Nu = number of users needed per variant (from the above table)
+* p = fraction of users in this test (e.g., if this test runs on 5% of users, p = 0.05)
+* M = MAU (monthly active users)
+
+For instance, say you have two variants (baseline, plus one other), 100,000 MAUs, a current conversion rate of 10%, and an expected effect size of 20% (you expect the conversion rate of the new variant to be 12%). Then, if you run the test on 20% of your users, you will probably see conclusive results in about a week and a half.
+
 
 
 
