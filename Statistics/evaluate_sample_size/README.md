@@ -94,6 +94,7 @@ Here is a table of roughly how many users per variant (including baseline) we re
 | --- | --- | --- | --- |
 | 10% lift between variants | 30,244 | 9,002 | 684 | 
 | 20% lift between variants | 7,663 | 2,276 | 173 | 
+| 50% lift between variants | 1,273| 375 |  |
 
 The above numbers are obatined by the [online calculator](https://www.evanmiller.org/ab-testing/sample-size.html) setting 80% power and 5% significance level, and `Relative` in Minimum Detectable Effect.
 
