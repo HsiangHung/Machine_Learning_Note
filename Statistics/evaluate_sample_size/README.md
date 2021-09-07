@@ -92,9 +92,10 @@ Here is a table of roughly how many users per variant (including baseline) we re
 
 | | Low conversion rates (5%) | Medium conversion rates (15%) | High conversion rates (70%) |
 | --- | --- | --- | --- |
-| 10% lift between variants | 40,000 | 10,000 | 700 | 
-| 20% lift between variants  | 8,000 | 2,500 | 150 | 
+| 10% lift between variants | 30,244 | 9,002 | 684 | 
+| 20% lift between variants | 7,663 | 2,276 | 173 | 
 
+The above numbers are obatined by the [online calculator](https://www.evanmiller.org/ab-testing/sample-size.html) setting 80% power and 5% significance level, and `Relative` in Minimum Detectable Effect.
 
 
 
