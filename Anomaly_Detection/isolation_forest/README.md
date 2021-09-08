@@ -19,21 +19,23 @@ Table of Contents:
 
 The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from Scratch] and [[Hyunsu Kim]][Isolation Forest Step by Step].
 
-## Isolation tree and forest
+## 1. Isolation tree and forest
+
+### 1.A Algorithm
 
 This session explains how to build an isolation forest step by step [[Hyunsu Kim]][Isolation Forest Step by Step]
 
-1. **Step 1** — Subsampling data for training
+* **Step 1** — Subsampling data for training
 
-2. **Step 2** — Making binary decision tree: Suppose we have two attributes (i.e. Q1 or Q2) as shown below, random choice of an attribute and random choice of a Q1 or Q2 value between its min and max (i.e. Q1’)
+* **Step 2** — Making binary decision tree: Suppose we have two attributes (i.e. Q1 or Q2) as shown below, random choice of an attribute and random choice of a Q1 or Q2 value between its min and max (i.e. Q1’)
 
-3. **Step 3** — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
+* **Step 3** — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
 
 So far the step 1-3 can be summarized below
 
 ![](images/isolation_tree.png)
 
-4. **Step 4** — Feeding data set and calculating anomaly score, which defines as 
+* **Step 4** — Feeding data set and calculating anomaly score, which defines as 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=S(d)&space;=&space;e^{-\frac{E(h)}{c(n)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S(d)&space;=&space;e^{-\frac{E(h)}{c(n)}}" title="S(d) = e^{-\frac{E(h)}{c(n)}}" /></a>
 
@@ -42,7 +44,7 @@ Given a data point, we have an anomaly score for each tree and get the final ano
 
 5. **Step 5** - Compute anomaly score: We calculate this anomaly score for each tree and average them out across different trees and get the final anomaly score for an entire forest for a given data point
 
-### Example
+### 1.B Interpretation
 
 We show how the isolation forest works step by step using the above code. Suppose we have five 2D data instances like
 
@@ -92,26 +94,43 @@ An outlier is more isolated, and have shorter path length. The path length for d
 
 
    
+## 3. Algorithm main points/summary
 
+The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now] provided a grossly simplified summary of the 10 page paper with the following overview:
+
+1. Most other outlier detection (OD) algorithms seek to build a profile of “normal” instances then flag instances that don’t fit that profile of normality. iForest explicitly isolates anomalous records by taking advantage of inherent properties of anomalies: they have unusual values for the set of covariates.
+
+2. Existing methods are constrained to low dimensional data and small data size due to computational expense. Case in point: ever try sklearn.neighbor.KNeighborsClassifier on big data? :)
+
+3. Additionally, iForest has “a low constant and low memory requirement” i.e. low overhead. Specifics: the number of external nodes is n since each observation, n, is isolated by itself. The total number of internal nodes is clearly n-1, and the total number nodes is 2n-1. Hence, we see why the memory requirement is bounded and grows linearly with n.
+
+4. Isolation tree node definition: T is either a childless external node or an internal node with one test and exactly two daughter nodes (Tₗ, Tᵣ). To build an iTree, we recursively divide X by randomly selecting an attribute q and a split value p until either: (i) the tree reaches a height limit, (ii) all observations are isolated at their own external node, or (iii) all data have the same values for all attributes.
+
+5. Path length. The path length h(x) of an observation x is measured by the number of edges x traverses an iTree from the root node until transversal is terminated at an external node. E(h(x)) is the average of h(x) from a collection of isolation trees. An anomaly score, s(x, n), can be derived from the average path length, E(h(x)): s(x, n) = 2^[− E(h(x)) / c(n)]. Basically, there is a monotonic relationship between s and E(h(x)) (see appendix at end for details and a helpful figure illustrating their relationship). I won’t get into the term c(n) so I can keep this brief but it is a constant for any given, static data set.
+
+6. Only requires user to set two variables: the number of trees to build and the sub-sampling size. The authors present experiments with generated Gaussian distribution data that show how convergence for mean path length is achieved relatively quickly with few trees and small subsamples.
+
+7. Small subsampling (sample of a sample) size addresses swamping and masking issues. Swamping and masking are caused by input data that is too large for the purposes of anomaly detection. Swamping is when an “normal” observation is mistaken for an “anomalous” one because it is surrounded by anomalies and masking is the opposite. In other words, when a tree is fed a sample consisting of a majority of anomalies, a normal data point might look anomalous. The authors present examples of this phenomenon with mammography data.
+
+8. Small subsamples allows each isolation tree to be specialized, as each sub-sample includes a different set of anomalies or even no anomaly
+
+9. iForest doesn’t depend on any distance or density-based measures to identify anomalies so it is fast and computationally inexpensive, which leads to the next point
+
+10. Linear time complexity, O(n). Informally, this means that the running time increases at most linearly with the size of the input. This is pretty good:
 
 
 
 
 ## Reference
 
-
-[Isolation Forest from Scratch]: https://towardsdatascience.com/isolation-forest-from-scratch-e7e5978e6f4c
+* [Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now]: https://towardsdatascience.com/isolation-forest-is-the-best-anomaly-detection-algorithm-for-big-data-right-now-e1a18ec0f94f
+[[Andrew Young] Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now](https://towardsdatascience.com/isolation-forest-is-the-best-anomaly-detection-algorithm-for-big-data-right-now-e1a18ec0f94f)
+* [Isolation Forest from Scratch]: https://towardsdatascience.com/isolation-forest-from-scratch-e7e5978e6f4c
 [[Carlos Mougan] Isolation Forest from Scratch](https://towardsdatascience.com/isolation-forest-from-scratch-e7e5978e6f4c)
-
-
-[Outlier Detection with Extended Isolation Forest]: https://towardsdatascience.com/outlier-detection-with-extended-isolation-forest-1e248a3fe97b
+* [Outlier Detection with Extended Isolation Forest]: https://towardsdatascience.com/outlier-detection-with-extended-isolation-forest-1e248a3fe97b
 [[Eryk Lewinson] Outlier Detection with Extended Isolation Forest](https://towardsdatascience.com/outlier-detection-with-extended-isolation-forest-1e248a3fe97b)
-
-
-[Isolation Forest Step by Step]: https://hyunsukim-9320.medium.com/isolation-forest-step-by-step-341b82923168
+* [Isolation Forest Step by Step]: https://hyunsukim-9320.medium.com/isolation-forest-step-by-step-341b82923168
 [[Hyunsu Kim] Isolation Forest Step by Step](https://hyunsukim-9320.medium.com/isolation-forest-step-by-step-341b82923168)
-
-
-[Anomaly Detection Using Isolation Forest Algorithm]: https://medium.com/analytics-vidhya/anomaly-detection-using-isolation-forest-algorithm-8cf36c38d6f7
+* [Anomaly Detection Using Isolation Forest Algorithm]: https://medium.com/analytics-vidhya/anomaly-detection-using-isolation-forest-algorithm-8cf36c38d6f7
 [[Saurabh Singh] Anomaly Detection Using Isolation Forest Algorithm](https://medium.com/analytics-vidhya/anomaly-detection-using-isolation-forest-algorithm-8cf36c38d6f7)
 
