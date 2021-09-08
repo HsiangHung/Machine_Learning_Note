@@ -86,7 +86,7 @@ feat2 < 0.4  / \           |                                         |
 
 **An outlier is more isolated, and have shorter path length**. The path length for data `A` on each tree is [1,2,3], meaning avg path length = 2. On the other hand, path lengths `B`: [4,2,2], `C`: [3,3,2], `D`: [4,3,2], `E`: [2,2,3] are all larger than 2, which indicate normal data points.
 
-
+![](images/isolation_forest.png)
 
 
 
