@@ -102,9 +102,9 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
 3. Additionally, iForest has “a low constant and low memory requirement” i.e. low overhead. Specifics: the number of external nodes is n since each observation, n, is isolated by itself. The total number of internal nodes is clearly n-1, and the total number nodes is 2n-1. Hence, we see why the **memory requirement** is bounded and **grows linearly with n**.
 
 4. Isolation tree node definition: T is either a childless external node or an internal node with one test and exactly two daughter nodes (Tₗ, Tᵣ). To build an iTree, we recursively divide X by randomly selecting an attribute q and a split value p until either: 
-   *   (i) the tree reaches a height limit
-   *   (ii) all observations are isolated at their own external node
-   *   (iii) all data have the same values for all attributes.
+   *  the tree reaches a height limit
+   *  all observations are isolated at their own external node
+   *  all data have the same values for all attributes.
 
 5. Path length. The path length h(x) of an observation x is measured by the number of edges x traverses an iTree from the root node until transversal is terminated at an external node. E(h(x)) is the average of h(x) from a collection of isolation trees. An anomaly score, s(x, n), can be derived from the average path length, E(h(x)): s(x, n) = 2^[− E(h(x)) / c(n)]. Basically, there is a monotonic relationship between s and E(h(x)) (see appendix at end for details and a helpful figure illustrating their relationship). I won’t get into the term c(n) so I can keep this brief but it is a constant for any given, static data set.
 
