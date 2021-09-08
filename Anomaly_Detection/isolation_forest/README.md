@@ -5,11 +5,10 @@ This session is dedicated to deep understanding on isolation forest model. “Fe
 
 Table of Contents:
 
-
-* [1. Isolation tree and forest](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#3-metrics)
-     * [1.A The algorithm](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#41-undersample-down-sample-majority-class) 
-     * [1.B Interpretation](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#42-oversample-up-sample-minority-class)
-* [2. Algorithm main points/summary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#4-data-preprocess)
+* [1. Isolation tree and forest](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection/isolation_forest#1-isolation-tree-and-forest)
+     * [1.A The algorithm](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection/isolation_forest#1a-the-algorithm) 
+     * [1.B Interpretation](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection/isolation_forest#1b-interpretation)
+* [2. Algorithm main points/summary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection/isolation_forest#2-algorithm-main-pointssummary)
      
 
 
@@ -96,13 +95,13 @@ feat2 < 0.4  / \           |                                         |
 
 The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now] provided a grossly simplified summary of the 10 page paper with the following overview:
 
-1. Most other outlier detection (OD) algorithms seek to build a profile of “normal” instances then flag instances that don’t fit that profile of normality. iForest explicitly isolates anomalous records by taking advantage of inherent properties of anomalies: they have unusual values for the set of covariates.
+1. Most other outlier detection (OD) algorithms seek to **build a profile of “normal” instances then flag instances** that don’t fit that profile of normality. iForest explicitly isolates anomalous records by taking advantage of inherent properties of anomalies: they have unusual values for the set of covariates.
 
 2. Existing methods are constrained to low dimensional data and small data size due to computational expense. Case in point: ever try sklearn.neighbor.KNeighborsClassifier on big data? :)
 
 3. Additionally, iForest has “a low constant and low memory requirement” i.e. low overhead. Specifics: the number of external nodes is n since each observation, n, is isolated by itself. The total number of internal nodes is clearly n-1, and the total number nodes is 2n-1. Hence, we see why the memory requirement is bounded and grows linearly with n.
 
-4. Isolation tree node definition: T is either a childless external node or an internal node with one test and exactly two daughter nodes (Tₗ, Tᵣ). To build an iTree, we recursively divide X by randomly selecting an attribute q and a split value p until either: (i) the tree reaches a height limit, (ii) all observations are isolated at their own external node, or (iii) all data have the same values for all attributes.
+4. Isolation tree node definition: T is either a childless external node or an internal node with one test and exactly two daughter nodes (Tₗ, Tᵣ). To build an iTree, we recursively divide X by randomly selecting an attribute q and a split value p until either: (i) the tree reaches a height limit, (ii) all observations are isolated at their own external node or (iii) all data have the same values for all attributes.
 
 5. Path length. The path length h(x) of an observation x is measured by the number of edges x traverses an iTree from the root node until transversal is terminated at an external node. E(h(x)) is the average of h(x) from a collection of isolation trees. An anomaly score, s(x, n), can be derived from the average path length, E(h(x)): s(x, n) = 2^[− E(h(x)) / c(n)]. Basically, there is a monotonic relationship between s and E(h(x)) (see appendix at end for details and a helpful figure illustrating their relationship). I won’t get into the term c(n) so I can keep this brief but it is a constant for any given, static data set.
 
