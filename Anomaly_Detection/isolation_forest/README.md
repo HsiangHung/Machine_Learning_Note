@@ -6,11 +6,11 @@ This session is dedicated to deep understanding on isolation forest model. “Fe
 Table of Contents:
 
 
-* [3. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#3-metrics)
-* [4. Data Preprocess](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#4-data-preprocess)
-     * [4.1 Undersample: Down-sample Majority Class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#41-undersample-down-sample-majority-class) 
-     * [4.2 Oversample: Up-sample Minority Class](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#42-oversample-up-sample-minority-class)
-     * [4.3 Synthesize Minor Samples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#43-synthesize-minor-samples)
+* [1. Isolation tree and forest](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#3-metrics)
+     * [1.A The algorithm](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#41-undersample-down-sample-majority-class) 
+     * [1.B Interpretation](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#42-oversample-up-sample-minority-class)
+* [2. Algorithm main points/summary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#4-data-preprocess)
+     
 
 
 
@@ -21,7 +21,7 @@ The following Python follows the blog: [[Carlos Mougan]][Isolation Forest from S
 
 ## 1. Isolation tree and forest
 
-### 1.A Algorithm
+### 1.A The algorithm
 
 This session explains how to build an isolation forest step by step [[Hyunsu Kim]][Isolation Forest Step by Step]
 
@@ -85,16 +85,14 @@ feat2 < 0.4  / \           |                                         |
 ```
 
 
-### Compute path length 
-
-An outlier is more isolated, and have shorter path length. The path length for data `A` on each tree is [1,2,3], meaning avg path length = 2. On the other hand, path lengths `B`: [4,2,2], `C`: [3,3,2], `D`: [4,3,2], `E`: [2,2,3] are all larger than 2, which indicate normal data points.
+**An outlier is more isolated, and have shorter path length**. The path length for data `A` on each tree is [1,2,3], meaning avg path length = 2. On the other hand, path lengths `B`: [4,2,2], `C`: [3,3,2], `D`: [4,3,2], `E`: [2,2,3] are all larger than 2, which indicate normal data points.
 
 
 
 
 
    
-## 3. Algorithm main points/summary
+## 2. Algorithm main points/summary
 
 The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now] provided a grossly simplified summary of the 10 page paper with the following overview:
 
