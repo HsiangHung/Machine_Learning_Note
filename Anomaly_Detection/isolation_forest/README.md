@@ -97,7 +97,7 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
 
 1. Most other outlier detection (OD) algorithms seek to **build a profile of “normal” instances then flag instances** that don’t fit that profile of normality. iForest explicitly isolates anomalous records by taking advantage of inherent properties of anomalies: they have unusual values for the set of covariates.
 
-2. Existing methods are constrained to low dimensional data and small data size due to computational expense. Case in point: ever try sklearn.neighbor.KNeighborsClassifier on big data? :)
+2. Existing methods are constrained to low dimensional data and small data size due to computational expense.
 
 3. Additionally, iForest has “a low constant and low memory requirement” i.e. low overhead. Specifics: the number of external nodes is n since each observation, n, is isolated by itself. The total number of internal nodes is clearly n-1, and the total number nodes is 2n-1. Hence, we see why the **memory requirement** is bounded and **grows linearly with n**.
 
@@ -106,17 +106,17 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
    *  all observations are isolated at their own external node
    *  all data have the same values for all attributes.
 
-5. Path length. The path length h(x) of an observation x is measured by the number of edges x traverses an iTree from the root node until transversal is terminated at an external node. `E(h(x)) `is the average of `h(x)` from a collection of isolation trees. An anomaly score, s(x, n), can be derived from the **average** path length, `E(h(x)): s(x, n) = 2^[− E(h(x)) / c(n)]`. Basically, there is a monotonic relationship between `s(x,n)` and `E(h(x))` (see appendix at end for details and a helpful figure illustrating their relationship). I won’t get into the term c(n) so I can keep this brief but it is a constant for any given, static data set.
+5. Path length. The path length h(x) of an observation x is measured by the number of edges x traverses an iTree from the root node until transversal is terminated at an external node. `E(h(x)) `is the average of `h(x)` from a collection of isolation trees. An anomaly score, s(x, n), can be derived from the **average** path length, `E(h(x)): s(x, n) = 2^[− E(h(x)) / c(n)]`. Basically, there is a monotonic relationship between `s(x,n)` and `E(h(x))` The term `c(n)` is a constant for any given, static data set.
 
-6. Only requires user to set two variables in isolation forest: **the number of trees** to build and the **sub-sampling size**. The authors present experiments with generated Gaussian distribution data that show how convergence for mean path length is achieved relatively quickly with few trees and small subsamples.
+6. Only requires user to set two variables in isolation forest: **the number of trees** to build and the **sub-sampling size**. 
 
-7. Small subsampling (sample of a sample) size addresses swamping and masking issues. Swamping and masking are caused by input data that is too large for the purposes of anomaly detection. Swamping is when an “normal” observation is mistaken for an “anomalous” one because it is surrounded by anomalies and masking is the opposite. In other words, when a tree is fed a sample consisting of a majority of anomalies, a normal data point might look anomalous. The authors present examples of this phenomenon with mammography data.
+7. Small subsampling (sample of a sample) size addresses swamping and masking issues. Swamping and masking are caused by input data that is too large for the purposes of anomaly detection. Swamping is when an “normal” observation is mistaken for an “anomalous” one because it is surrounded by anomalies and masking is the opposite. In other words, when a tree is fed a sample consisting of a majority of anomalies, a normal data point might look anomalous. 
 
-8. Small subsamples allows each isolation tree to be specialized, as each sub-sample includes a different set of anomalies or even no anomaly
+8. **Small subsamples** allows each isolation tree to be specialized, as each sub-sample includes a different set of anomalies or even no anomaly
 
-9. iForest doesn’t depend on any distance or density-based measures to identify anomalies so it is fast and computationally inexpensive, which leads to the next point
+9. iForest does **NOT** depend on any **distance** or **density-based** measures to identify anomalies so it is fast and computationally inexpensive, which leads to the next point
 
-10. Linear time complexity, O(n). Informally, this means that the running time increases at most linearly with the size of the input. This is pretty good:
+10. **Linear time complexity, O(n)**. Informally, this means that the running time increases at most linearly with the size of the input. 
 
 
 
