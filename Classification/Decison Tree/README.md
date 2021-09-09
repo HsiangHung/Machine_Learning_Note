@@ -250,38 +250,21 @@ By Towfik Alrazihi [[Quora: In simple language, how does C4.5 deal with missing 
 ## Reference
 
 
-[Are decision trees almost always binary trees?]: https://stats.stackexchange.com/questions/12187/are-decision-trees-almost-always-binary-trees#:~:text=Nearly%20every%20decision%20tree%20example,to%20be%20a%20binary%20tree.&text=From%20what%20I%20gather%2C%20CHAID,a%20single%20three%2Dway%20split.
+* [Are decision trees almost always binary trees?]: https://stats.stackexchange.com/questions/12187/are-decision-trees-almost-always-binary-trees#:~:text=Nearly%20every%20decision%20tree%20example,to%20be%20a%20binary%20tree.&text=From%20what%20I%20gather%2C%20CHAID,a%20single%20three%2Dway%20split.
 [[Cross Validated: Are decision trees almost always binary trees?] Are decision trees almost always binary trees?](https://stats.stackexchange.com/questions/12187/are-decision-trees-almost-always-binary-trees#:~:text=Nearly%20every%20decision%20tree%20example,to%20be%20a%20binary%20tree.&text=From%20what%20I%20gather%2C%20CHAID,a%20single%20three%2Dway%20split.)
-
-
-[Does decision tree need to use the same feature to split in the same layer?]: https://stats.stackexchange.com/questions/354030/does-decision-tree-need-to-use-the-same-feature-to-split-in-the-same-layer/451780#451780
+* [Does decision tree need to use the same feature to split in the same layer?]: https://stats.stackexchange.com/questions/354030/does-decision-tree-need-to-use-the-same-feature-to-split-in-the-same-layer/451780#451780
 [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?] Does decision tree need to use the same feature to split in the same layer?](https://stats.stackexchange.com/questions/354030/does-decision-tree-need-to-use-the-same-feature-to-split-in-the-same-layer/451780#451780)
-
-
-[How do decision tree learning algorithms deal with missing values]: https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo
+* [How do decision tree learning algorithms deal with missing values]: https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo
 [[Cross Validated: How do decision tree learning algorithms deal with missing values] How do decision tree learning algorithms deal with missing values](https://stats.stackexchange.com/questions/96025/how-do-decision-tree-learning-algorithms-deal-with-missing-values-under-the-hoo)
-
-
-
-
-[In simple language, how does C4.5 deal with missing values?]: https://www.quora.com/In-simple-language-how-does-C4-5-deal-with-missing-values
+* [In simple language, how does C4.5 deal with missing values?]: https://www.quora.com/In-simple-language-how-does-C4-5-deal-with-missing-values
 [[Quora: In simple language, how does C4.5 deal with missing values?] In simple language, how does C4.5 deal with missing values?](https://www.quora.com/In-simple-language-how-does-C4-5-deal-with-missing-values)
-
-[Decision Tree - Regression]: https://www.saedsayad.com/decision_tree_reg.htm#:~:text=Decision%20tree%20builds%20regression%20or,decision%20nodes%20and%20leaf%20nodes.
+* [Decision Tree - Regression]: https://www.saedsayad.com/decision_tree_reg.htm#:~:text=Decision%20tree%20builds%20regression%20or,decision%20nodes%20and%20leaf%20nodes.
 [[Saed Sayad] Decision Tree - Regression](https://www.saedsayad.com/decision_tree_reg.htm#:~:text=Decision%20tree%20builds%20regression%20or,decision%20nodes%20and%20leaf%20nodes.)
-
-
-[Feature Importance in Decision Trees]: https://sefiks.com/2020/04/06/feature-importance-in-decision-trees/
+* [Feature Importance in Decision Trees]: https://sefiks.com/2020/04/06/feature-importance-in-decision-trees/
 [[Sefik Ilkin Serengil] Feature Importance in Decision Trees](https://sefiks.com/2020/04/06/feature-importance-in-decision-trees/)
-
-
-[The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark]: https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3
+* [The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark]: https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3
 [[Stacey Ronaghan] The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark](https://towardsdatascience.com/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3)
-
-
-[Tree algorithms: ID3, C4.5, C5.0 and CART]: https://medium.datadriveninvestor.com/tree-algorithms-id3-c4-5-c5-0-and-cart-413387342164
+* [Tree algorithms: ID3, C4.5, C5.0 and CART]: https://medium.datadriveninvestor.com/tree-algorithms-id3-c4-5-c5-0-and-cart-413387342164
 [[synergy37AI] Tree algorithms: ID3, C4.5, C5.0 and CART](https://medium.datadriveninvestor.com/tree-algorithms-id3-c4-5-c5-0-and-cart-413387342164)
-
-
-[Decision Trees Are Usually Better Than Logistic Regression]: https://www.displayr.com/decision-trees-are-usually-better-than-logistic-regression/
+* [Decision Trees Are Usually Better Than Logistic Regression]: https://www.displayr.com/decision-trees-are-usually-better-than-logistic-regression/
 [[Tim Bock] Decision Trees Are Usually Better Than Logistic Regression](https://www.displayr.com/decision-trees-are-usually-better-than-logistic-regression/)
