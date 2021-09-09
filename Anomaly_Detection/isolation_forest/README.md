@@ -119,8 +119,20 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
 10. **Linear time complexity, O(n)**. Informally, this means that the running time increases at most linearly with the size of the input. 
 
 
-## 3. Algorithm main points/summary
+## 3. Outlier Detection Algorithm Comparison
 
+The blog author [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now] compare some outlier detection (OD) algorithms across a variety of datasets, based on ROC performance and Precision. He took benchmark data from the authors of the Python Outlier Detection package (PyOD; [original paper](https://www.jmlr.org/papers/volume20/19-011/19-011.pdf)) and applied row-wise green-red gradient conditional formatting in Excel. 
+
+Dark **green** indicates the best performing algorithm for a dataset and dark **red** indicates the worst performing.
+
+For ROC performances:
+![](images/ROC_performance.png)
+
+For precision @ N performances:
+![](images/precision_performance.png)
+
+iForest is the fastest performing algorithm for its performance. PCA and Histogram-based Outlier Score (HBOS; paper, poster) are expectedly faster across all datasets. k-nearest-neighbors (KNN) is much slower and scales terribly with more observations, N:
+![](images/timespent_comparison.png)
 
 ### Reference
 
