@@ -6,10 +6,9 @@ Note that imputation does not necessarily give better results, so we have to be 
 
 Table of Contents:
 
-* [1. Reasons For Missing Data](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#1-what-are-support-vectors-and-svm-classifier)
-* [2. Handling Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#3-cost-function)
-* [3. Non-Linear SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#4-non-linear-svm)
-* [4. SVM vs Logistic Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#5-svm-vs-logistic-regression)
+* [1. Reasons For Missing Data](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Missing_Data#1-reasons-for-missing-data)
+* [2. Handling Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Missing_Data#2-handling-missing-values)
+
 
 
 ## 1. Reasons For Missing Data
@@ -28,6 +27,8 @@ In the first two cases, it is safe to remove the data with missing values depend
 
 
 ## 2. Handling Missing Values
+
+It is always better to keep data than to discard it. Sometimes you can drop variables if the data is missing for more than 60% observations but only if that variable is insignificant. Having said that, imputation is always a preferred choice over dropping variables.
 
 ### 2.A Deletion
 
@@ -58,6 +59,16 @@ In an **iterative process**, values for the missing variable are inserted and th
 
 It “theoretically” provides good estimates for missing values. However, there are several disadvantages of this model which tend to outweigh the advantages. First, because the replaced values were predicted from other variables they tend to fit together “too well” and so standard error is deflated. One must also assume that there is a linear relationship between the variables used in the regression equation when there may not be one.
 
+### KNN (K Nearest Neighbors)
+
+There are other machine learning techniques like XGBoost and Random Forest for data imputation but we will be discussing KNN as it is widely used. In this method, k neighbors are chosen based on some distance measure and their average is used as an imputation estimate. The method requires the selection of the number of nearest neighbors, and a distance metric. KNN can predict both discrete attributes (the most frequent value among the k nearest neighbors) and continuous attributes (the mean among the k nearest neighbors)
+The distance metric varies according to the type of data:
+
+1. Continuous Data: The commonly used distance metrics for continuous data are Euclidean, Manhattan and Cosine
+
+2. Categorical Data: Hamming distance is generally used in this case. It takes all the categorical attributes and for each, count one if the value is not the same between two points. The Hamming distance is then equal to the number of attributes for which the value was different.
+One of the most attractive features of the KNN algorithm is that it is simple to understand and easy to implement. The non-parametric nature of KNN gives it an edge in certain settings where the data may be highly “unusual”.
+One of the obvious drawbacks of the KNN algorithm is that it becomes time-consuming when analyzing large datasets because it searches for similar instances through the entire dataset. Furthermore, the accuracy of KNN can be severely degraded with high-dimensional data because there is little difference between the nearest and farthest neighbor.
 
 
 
