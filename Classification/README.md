@@ -8,7 +8,7 @@ Table of Contents:
      * [2.A Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a-precision-and-recall)
      * [2.B AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b-auc)
      * [2.C Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2c-selection-of-precision-or-recall)
-* [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cross-entropy)
+* [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cost-function-cross-entropy)
      * [3.A Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3a-binary)
      * [3.B Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3b-multiclass)
      
