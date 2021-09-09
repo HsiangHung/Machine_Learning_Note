@@ -33,10 +33,9 @@ In this we can only save key ,value, location only for non zero elements:
 
 ### Reference
 
-[What is data sparsity?]: https://www.quora.com/What-is-data-sparsity
+* [What is data sparsity?]: https://www.quora.com/What-is-data-sparsity
 [[Quora: What is data sparsity?] What is data sparsity?](https://www.quora.com/What-is-data-sparsity)
-
-[How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?]: https://www.quora.com/How-do-you-deal-with-training-data-with-high-sparsity-and-large-number-of-features-1k-in-machine-learning
+* [How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?]: https://www.quora.com/How-do-you-deal-with-training-data-with-high-sparsity-and-large-number-of-features-1k-in-machine-learning
 [[Quora: How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?] How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?](https://www.quora.com/How-do-you-deal-with-training-data-with-high-sparsity-and-large-number-of-features-1k-in-machine-learning)
 
 
@@ -68,19 +67,13 @@ In (a), the min cost happens at β2 = 0. But in (b), the min cost at finite β1 
 
 ### Reference
 
-[Why is the L2 regularization equivalent to Gaussian prior?]: https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior
+* [Why is the L2 regularization equivalent to Gaussian prior?]: https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior
 [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?] Why is the L2 regularization equivalent to Gaussian prior?](https://stats.stackexchange.com/questions/163388/why-is-the-l2-regularization-equivalent-to-gaussian-prior)
-
-
-[L1 vs L2 Regularization: The intuitive difference]: https://medium.com/analytics-vidhya/l1-vs-l2-regularization-which-is-better-d01068e6658c
+* [L1 vs L2 Regularization: The intuitive difference]: https://medium.com/analytics-vidhya/l1-vs-l2-regularization-which-is-better-d01068e6658c
 [[Dhaval Taunk] L1 vs L2 Regularization: The intuitive difference](https://medium.com/analytics-vidhya/l1-vs-l2-regularization-which-is-better-d01068e6658c)
-
-
-[L2 and L1 Regularization in Machine Learning]: https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning
+* [L2 and L1 Regularization in Machine Learning]: https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning
 [[Neelam Tyagi] L2 and L1 Regularization in Machine Learning](https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning)
-
-
-[The difference between L1 and L2 regularization]: https://explained.ai/regularization/L1vsL2.html
+* [The difference between L1 and L2 regularization]: https://explained.ai/regularization/L1vsL2.html
 [[Terence Parr] The difference between L1 and L2 regularization](https://explained.ai/regularization/L1vsL2.html)
 
 
@@ -163,16 +156,11 @@ you see how the Newton method led you to the saddle point at `x = y = 0`. In con
 
 ### Reference
 
-[Kullback-Leibler Divergence for Machine Learning]: https://medium.com/@cdefaux/kullback-leibler-divergence-for-dummies-c3613bc80ad3
+* [Kullback-Leibler Divergence for Machine Learning]: https://medium.com/@cdefaux/kullback-leibler-divergence-for-dummies-c3613bc80ad3
 [[Christiaan Defaux] Kullback-Leibler Divergence for Machine Learning](https://medium.com/@cdefaux/kullback-leibler-divergence-for-dummies-c3613bc80ad3)
-
-
-
-[Why is Newton's method not widely used in machine learning?]: https://stats.stackexchange.com/questions/253632/why-is-newtons-method-not-widely-used-in-machine-learning
+* [Why is Newton's method not widely used in machine learning?]: https://stats.stackexchange.com/questions/253632/why-is-newtons-method-not-widely-used-in-machine-learning
 [[Cross Validated: Why is Newton's method not widely used in machine learning?] Why is Newton's method not widely used in machine learning?](https://stats.stackexchange.com/questions/253632/why-is-newtons-method-not-widely-used-in-machine-learning)
-
-[Gradient Descent vs. Newton’s Gradient Descent]: https://www.baeldung.com/cs/gradient-descent-vs-newtons-gradient-descent
+* [Gradient Descent vs. Newton’s Gradient Descent]: https://www.baeldung.com/cs/gradient-descent-vs-newtons-gradient-descent
 [[Gabriele De Luca] Gradient Descent vs. Newton’s Gradient Descent](https://www.baeldung.com/cs/gradient-descent-vs-newtons-gradient-descent)
-
-[What is the difference between Gradient Descent and Newton's Gradient Descent?]: https://stackoverflow.com/questions/12066761/what-is-the-difference-between-gradient-descent-and-newtons-gradient-descent
+* [What is the difference between Gradient Descent and Newton's Gradient Descent?]: https://stackoverflow.com/questions/12066761/what-is-the-difference-between-gradient-descent-and-newtons-gradient-descent
 [[Stack overflow: What is the difference between Gradient Descent and Newton's Gradient Descent?] What is the difference between Gradient Descent and Newton's Gradient Descent?](https://stackoverflow.com/questions/12066761/what-is-the-difference-between-gradient-descent-and-newtons-gradient-descent)
