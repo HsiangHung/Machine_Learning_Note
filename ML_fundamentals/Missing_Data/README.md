@@ -65,9 +65,9 @@ There are other machine learning techniques like XGBoost and Random Forest for d
 
 The **distance** metric varies according to the type of data:
 
-1. Continuous Data: The commonly used distance metrics for continuous data are **Euclidean**, **Manhattan** and **Cosine**.
+1. **Continuous Data**: The commonly used distance metrics for continuous data are **Euclidean**, **Manhattan** and **Cosine**.
 
-2. Categorical Data: Hamming distance is generally used in this case. It takes all the categorical attributes and for each, count one if the value is not the same between two points. The Hamming distance is then equal to the number of attributes for which the value was different.
+2. **Categorical Data**: Hamming distance is generally used in this case. It takes all the categorical attributes and for each, count one if the value is not the same between two points. The Hamming distance is then equal to the number of attributes for which the value was different.
 One of the most attractive features of the KNN algorithm is that it is simple to understand and easy to implement. The non-parametric nature of KNN gives it an edge in certain settings where the data may be highly “unusual”.
 
 ```Python
