@@ -119,9 +119,10 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
 10. **Linear time complexity, O(n)**. Informally, this means that the running time increases at most linearly with the size of the input. 
 
 
+## 3. Algorithm main points/summary
 
 
-## Reference
+### Reference
 
 * [Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now]: https://towardsdatascience.com/isolation-forest-is-the-best-anomaly-detection-algorithm-for-big-data-right-now-e1a18ec0f94f
 [[Andrew Young] Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now](https://towardsdatascience.com/isolation-forest-is-the-best-anomaly-detection-algorithm-for-big-data-right-now-e1a18ec0f94f)
