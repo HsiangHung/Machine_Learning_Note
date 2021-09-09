@@ -27,7 +27,7 @@ Given `x`, if `y=1` has higher probability than `y=0`, we assign y=1 for the eve
 
 If `x` is categorical, `P(x|y)` is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
 
-![weather_data](images/example_data1.png)
+![](images/example_data1.png)
 
 The data has predictors: `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Windy`, and target `y=Play`. We will have prior `P(y)` like [[Zixuan Zhang]][Naive Bayes Explained]
 
