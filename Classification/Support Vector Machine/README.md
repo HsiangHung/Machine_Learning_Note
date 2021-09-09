@@ -116,24 +116,14 @@ Try logistic regression first and see how you do with that simpler model. If log
 
 ## Reference
 
-
-
-[Support Vector Machine vs Logistic Regression]: https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning
+* [Support Vector Machine vs Logistic Regression]: https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning
 [[Georgios Drakos] Support Vector Machine vs Logistic Regression](https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning)
-
-
-[Advantages and Disadvantages of different Classification Models]: https://www.geeksforgeeks.org/advantages-and-disadvantages-of-different-classification-models/
+* [Advantages and Disadvantages of different Classification Models]: https://www.geeksforgeeks.org/advantages-and-disadvantages-of-different-classification-models/
 [[GeeksForGeeks] Advantages and Disadvantages of different Classification Models](https://www.geeksforgeeks.org/advantages-and-disadvantages-of-different-classification-models/)
-
-
-[Support Vector Machines in Machine Learning]: https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning
+* [Support Vector Machines in Machine Learning]: https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning
 [[Priyankur Sarkar] Support Vector Machines in Machine Learning](https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning)
-
-
-[Support Vector Machine — Introduction to Machine Learning Algorithms]: https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
+* [Support Vector Machine — Introduction to Machine Learning Algorithms]: https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
 [[Rohith Gandhi] Support Vector Machine — Introduction to Machine Learning Algorithms](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47)
-
-
-[Loss Function(Part III): Support Vector Machine]: https://towardsdatascience.com/optimization-loss-function-under-the-hood-part-iii-5dff33fa015d
+* [Loss Function(Part III): Support Vector Machine]: https://towardsdatascience.com/optimization-loss-function-under-the-hood-part-iii-5dff33fa015d
 [[Shuyu Luo] Loss Function(Part III): Support Vector Machine](https://towardsdatascience.com/optimization-loss-function-under-the-hood-part-iii-5dff33fa015d)
 
