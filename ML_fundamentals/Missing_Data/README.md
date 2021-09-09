@@ -70,7 +70,7 @@ The **distance** metric varies according to the type of data:
 2. Categorical Data: Hamming distance is generally used in this case. It takes all the categorical attributes and for each, count one if the value is not the same between two points. The Hamming distance is then equal to the number of attributes for which the value was different.
 One of the most attractive features of the KNN algorithm is that it is simple to understand and easy to implement. The non-parametric nature of KNN gives it an edge in certain settings where the data may be highly “unusual”.
 
-Python```
+```Python
 from fancyimpute import KNN
 knnOutput = KNN(k=5).complete(mydata) # Use 5 nearest rows to fill
 ```
