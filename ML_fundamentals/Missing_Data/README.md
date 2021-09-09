@@ -4,8 +4,15 @@ Data imputation depends on the kind of problem  —  Time series Analysis, M
 
 Note that imputation does not necessarily give better results, so we have to be really careful before removing observations. Without handling properly by the researcher, then he/she may end up drawing an inaccurate inference [[statisticssolutions.com]][Missing Values in Data].
 
+Table of Contents:
 
-## 1. Reasons why data goes missing
+* [1. Reasons For Missing Data](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#1-what-are-support-vectors-and-svm-classifier)
+* [2. Handling Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#3-cost-function)
+* [3. Non-Linear SVM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#4-non-linear-svm)
+* [4. SVM vs Logistic Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Support%20Vector%20Machine#5-svm-vs-logistic-regression)
+
+
+## 1. Reasons For Missing Data
 
 Before jumping to the methods of data imputation, we have to understand the reason why data goes missing [[Alvira Swalin]][How to Handle Missing Data]:
 
