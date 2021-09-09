@@ -240,7 +240,7 @@ The consequence of all of these strengths of logistic regression is that if you 
 
 ## 6. How To Deal with Missing Values
 
-There are several methods used by various decision trees. Simply ignoring the missing values (like ID3 and other old algorithms does) or treating the missing values as another category (in case of a nominal feature) are not real handling missing values [[Cross Validated: How do decision tree learning algorithms deal with missing values]][How do decision tree learning algorithms deal with missing values]. 
+There are several methods used by various decision trees. Simply **ignoring the missing values** (like ID3 and other old algorithms does) or **treating the missing values as another category** (in case of a nominal feature) are not real handling missing values [[Cross Validated: How do decision tree learning algorithms deal with missing values]][How do decision tree learning algorithms deal with missing values]. 
 
 By Towfik Alrazihi [[Quora: In simple language, how does C4.5 deal with missing values?]][In simple language, how does C4.5 deal with missing values?], the missing values:
 * goes to the node which already has the biggest number of instances.
