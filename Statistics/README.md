@@ -1,6 +1,38 @@
 
 # Statistical Testing
 
+The central limit theorem states [[The Role of Probability]][Central Limit Theorem] that 
+
+if you have a population with mean μ and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed (**sample distribution**). This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually `n > 30`). If the population is normal, then the theorem holds true even for samples smaller than 30. 
+
+This also holds true even if the population is binomial, provided that `min(np, n(1-p))> 5`, where `n` is the sample size and p is the probability of success in the population. This means that we can use the normal probability model to quantify uncertainty when making inferences about a population mean based on the sample mean.
+
+For the random samples we take from the population, we can compute the mean of the sample means:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\mu_{\bar{X}}&space;=&space;\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu_{\bar{X}}&space;=&space;\mu" title="\mu_{\bar{X}} = \mu" /></a>
+
+and the standard deviation of the sample means:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\sigma_{\bar{X}}&space;=&space;\frac{\sigma}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma_{\bar{X}}&space;=&space;\frac{\sigma}{\sqrt{n}}" title="\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}" /></a>
+
+
+In the Coursera class, the CLT states:
+
+The distribution of **sample mean** (called sample distribution) is nearly normal, center at the population mean, and with standard deviation equal to population standard deviation divided by squared root of the sample size
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}&space;=&space;\mathbb{N}(\textrm{mean}=\mu,&space;\textrm{SE}=\frac{\sigma}{\sqrt{n}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}&space;=&space;\mathbb{N}(\textrm{mean}=\mu,&space;\textrm{SE}=\frac{\sigma}{\sqrt{n}})" title="\bar{X} = \mathbb{N}(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}})" /></a>
+
+
+
+
+#### Reference
+
+* [Central Limit Theorem]: https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/BS704_Probability12.html
+[[The Role of Probability] Central Limit Theorem](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/BS704_Probability12.html)
+
+
+## Type I and Type II Error
+
 The conversion matrix of testing is [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests]
 
 | Pred \ Actual | H0 is False | H0 is True | 
