@@ -31,8 +31,10 @@ The workflows to determine if using Z-test or T-test? Credits from [slide # 18 f
 
 ![](images/Z_T_test.png)
 
+Even though population is not skewed but if sample size is large (`n > 30`), we can still use t-test due to central limit theorem. However, if small sample size, we can use boostrapping to generate boostrapping distribution and evaluate the confidence interval [Coursera-Bootstrapping](https://www.coursera.org/learn/inferential-statistics-intro/lecture/u3k1n/bootstrapping).
 
-## Chi-Suare or T test?
+
+## Chi-Square or T test?
 
 Select various inference, depending on data type, categorical or numeric and purpose. See the youtube explanation [Choosing a Statistical Test for Your IB Biology IA](https://www.youtube.com/watch?v=ulk_JWckJ78)
 
