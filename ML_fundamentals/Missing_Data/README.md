@@ -30,7 +30,7 @@ In the first two cases, it is safe to remove the data with missing values depend
 
 It is always better to keep data than to discard it. Sometimes you can drop variables if the data is missing for more than 60% observations but only if that variable is insignificant. Having said that, imputation is always a preferred choice over dropping variables.
 
-In blog [40 Statistics Interview Problems and Answers for Data Scientists](https://towardsdatascience.com/40-statistics-interview-problems-and-answers-for-data-scientists-6971a02b7eee) asked: **How do you handle missing data? What imputation techniques do you recommend?** There are several ways to handle missing data by the author:
+In blog [40 Statistics Interview Problems and Answers for Data Scientists](https://towardsdatascience.com/40-statistics-interview-problems-and-answers-for-data-scientists-6971a02b7eee), a question is asked: **How do you handle missing data? What imputation techniques do you recommend?** There are several ways to handle missing data by the author:
 
 * Delete rows with missing data
 * Mean/Median/Mode imputation
