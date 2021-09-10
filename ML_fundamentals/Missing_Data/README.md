@@ -58,6 +58,12 @@ The researcher should keep in mind that if the data are MCAR, then he may choose
 
 Computing the overall mean, median or mode is a very basic imputation method, it is the only tested function that takes no advantage of the time series characteristics or relationship between the variables. It is very fast, but has clear disadvantages. One disadvantage is that mean imputation **reduces variance** in the dataset [[Alvira Swalin]][How to Handle Missing Data].
 
+In pandas, the ways to replace mean, median and modes are [[Ajitesh Kumar]][Python – Replace Missing Values with Mean, Median & Mode]:
+```Python
+df.fillna(df.mean())
+df.fillna(df.median())
+df['salary'] = df['salary'].fillna(df['salary'].mode()[0])
+```
 
 #### Linear Regression
 
@@ -88,6 +94,8 @@ One of the obvious drawbacks of the KNN algorithm is that it becomes time-consum
 
 ## Reference
 
+* [Python – Replace Missing Values with Mean, Median & Mode]: https://vitalflux.com/pandas-impute-missing-values-mean-median-mode/#Impute_Replace_Missing_Values_with_Mean
+[[Ajitesh Kumar] Python – Replace Missing Values with Mean, Median & Mode](https://vitalflux.com/pandas-impute-missing-values-mean-median-mode/#Impute_Replace_Missing_Values_with_Mean)
 * [How to Handle Missing Data]: https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4
 [[Alvira Swalin] How to Handle Missing Data](https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4)
 * [Missing Values in Data]: http://www.statisticssolutions.com/missing-values-in-data/
