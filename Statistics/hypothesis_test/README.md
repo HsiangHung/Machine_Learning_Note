@@ -27,7 +27,7 @@ The p-value < α=0.05. Therefore we reject the null hypothesis; i.e. the student
 
 ## Z Test or T Test?
 
-The workflow from [slide # 18 from S. Massa](http://www.stats.ox.ac.uk/~massa/Lecture%2010.pdf) and [From the Central Limit Theorem to the Z- and t-distributions](https://towardsdatascience.com/introduction-tfrom-the-central-limit-theorem-to-the-z-and-t-distributions-66513defb175).
+The workflows to determine if using Z-test or T-test? Credits from [slide # 18 from S. Massa](http://www.stats.ox.ac.uk/~massa/Lecture%2010.pdf) and [From the Central Limit Theorem to the Z- and t-distributions](https://towardsdatascience.com/introduction-tfrom-the-central-limit-theorem-to-the-z-and-t-distributions-66513defb175).
 
 ![](images/Z_T_test.png)
 
