@@ -38,6 +38,9 @@ Select various inference, depending on data type, categorical or numeric and pur
 
 ![](images/category_test_1.png)
 
+If more than 2 groups to compare, we use ANOVA.
+
+![](images/category_test_2.png)
 
 
 #### Reference
