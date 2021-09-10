@@ -7,13 +7,13 @@ The central limit theorem states that [[The Role of Probability]][Central Limit 
 
 if you have a population with mean μ and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed (**sampling distribution**). This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually `n > 30`). If the population is normal, then the theorem holds true even for samples smaller than 30. 
 
-This also holds true even if the population is binomial, provided that `min(np, n(1-p))> 5`, where `n` is the sample size and p is the probability of success in the population. This means that we can use the normal probability model to quantify uncertainty when making inferences about a population mean based on the sample mean.
+This also holds true even if the population is **binomial**, provided that `min(np, n(1-p))> 5`, where `n` is the sample size and p is the probability of success in the population. This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
 
 For the random samples we take from the population, we can compute the mean of the sample means:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\mu_{\bar{X}}&space;=&space;\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu_{\bar{X}}&space;=&space;\mu" title="\mu_{\bar{X}} = \mu" /></a>
 
-and the standard deviation of the sample means:
+where <a href="https://www.codecogs.com/eqnedit.php?latex=\mu_{\bar{X}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu_{\bar{X}}" title="\mu_{\bar{X}}" /></a> came from the mean of <a href="https://www.codecogs.com/eqnedit.php?latex=\lbrace&space;\bar{X}_1,&space;\bar{X}_2,&space;\cdots,&space;\bar{X}_n&space;\rbrace" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lbrace&space;\bar{X}_1,&space;\bar{X}_2,&space;\cdots,&space;\bar{X}_n&space;\rbrace" title="\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace" /></a>, and the standard deviation of the sample means:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma_{\bar{X}}&space;=&space;\frac{\sigma}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma_{\bar{X}}&space;=&space;\frac{\sigma}{\sqrt{n}}" title="\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}" /></a>
 
