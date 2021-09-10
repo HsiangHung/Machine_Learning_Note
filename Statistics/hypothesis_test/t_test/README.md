@@ -1,5 +1,5 @@
 
-# 1. T Test 
+# 1. T-Test 
 
 t-test is used **when sample size is too small or population standard deviation is unknown**. Note we have assumption the sample is approximate normal distribution.
 
@@ -41,7 +41,8 @@ The workflow to determine using z-test or t-test is as follows [[Massa]][S. Mass
 
 ![](images/t-test_flowchart.png)
 
-
+from [[Javier Fernandez]][From the Central Limit Theorem to the Z- and t-distributions]
+![](images/t-test_flowchart_2.png)
 
 
 ## Paired t-test
@@ -55,7 +56,7 @@ The test statistic is
 
 
 
-## Two independent Sample t-Test
+## Two independent sample t-test
 
 
 The two-sample t-test is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means], [[Plonsky]][M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)]
@@ -91,10 +92,10 @@ This is based on the premise that we are sampling from an infinite population [[
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{SE}&space;=&space;\frac{\sigma}{\sqrt{n}}&space;\sqrt{\frac{N-n}{N-1}}" title="\textrm{SE} = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}" /></a>
 
 
-# 2. Z Test
+# 2. Z-Test
 
 
-## Single Proportion z-test
+## Single proportion z-test
 
 For comparing a sample proportion with the population proportion. Assume <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{p}" title="\hat{p}" /></a> is the sample proportion, like number of clicks divided by number of lands, and <a href="https://www.codecogs.com/eqnedit.php?latex=p_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_0" title="p_0" /></a> is the population proportion. The sample size is still `n`. The null and alternative hypotheses are separately
 
@@ -105,7 +106,7 @@ The test statistic is z-test, defined as [[Stattrek: Hypothesis Test for a Propo
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" title="z = \frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}" /></a>
 
 
-## Two Proportion z-test
+## Two proportion z-test
 
 
 For comparing two independent sample proportions [[Stattrek: Difference Between Proportions]][Stattrek, Hypothesis Test: Difference Between Proportions], [[PSU, 1]][Penn State, Applied Statistic: Comparing Two Population Proportions with Independent Samples], [[PSU, 2]][Penn State, Probability Theory and Mathematical Statistics: Comparing Two Proportions].
@@ -136,6 +137,8 @@ is the sample pool proportion.
 [[Massa] S. Massa, t-Test](http://www.stats.ox.ac.uk/~massa/Lecture%2010.pdf)
 * [NIST, 1.3.5.3. Two-Sample t-Test for Equal Means]: https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm
 [[NIST Two-Sample t-Test] NIST, 1.3.5.3. Two-Sample t-Test for Equal Means](https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm)
+* [From the Central Limit Theorem to the Z- and t-distributions]: https://towardsdatascience.com/introduction-tfrom-the-central-limit-theorem-to-the-z-and-t-distributions-66513defb175
+[[Javier Fernandez] From the Central Limit Theorem to the Z- and t-distributions](https://towardsdatascience.com/introduction-tfrom-the-central-limit-theorem-to-the-z-and-t-distributions-66513defb175)
 * [Penn State, Applied Statistic: Comparing Two Population Proportions with Independent Samples]: https://newonlinecourses.science.psu.edu/stat500/node/55/
 [[PSU, 1] Penn State, Applied Statistic: Comparing Two Population Proportions with Independent Samples](https://newonlinecourses.science.psu.edu/stat500/node/55/)
 * [Penn State, Probability Theory and Mathematical Statistics: Comparing Two Proportions]: https://newonlinecourses.science.psu.edu/stat414/node/268/
