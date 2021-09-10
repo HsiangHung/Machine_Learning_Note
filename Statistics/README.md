@@ -5,7 +5,7 @@
 
 The central limit theorem states that [[The Role of Probability]][Central Limit Theorem]
 
-if you have a population with mean μ and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed (**sample distribution**). This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually `n > 30`). If the population is normal, then the theorem holds true even for samples smaller than 30. 
+if you have a population with mean μ and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed (**sampling distribution**). This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually `n > 30`). If the population is normal, then the theorem holds true even for samples smaller than 30. 
 
 This also holds true even if the population is binomial, provided that `min(np, n(1-p))> 5`, where `n` is the sample size and p is the probability of success in the population. This means that we can use the normal probability model to quantify uncertainty when making inferences about a population mean based on the sample mean.
 
@@ -20,7 +20,7 @@ and the standard deviation of the sample means:
 
 In the Coursera class, the CLT states:
 
-The distribution of **sample mean** (called sample distribution) is nearly normal, center at the population mean, and with standard deviation equal to population standard deviation divided by squared root of the sample size
+The distribution of **sample mean** (sampling distribution) is nearly normal, center at the population mean, and with standard deviation equal to population standard deviation divided by squared root of the sample size
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}&space;=&space;\mathbb{N}(\textrm{mean}=\mu,&space;\textrm{SE}=\frac{\sigma}{\sqrt{n}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}&space;=&space;\mathbb{N}(\textrm{mean}=\mu,&space;\textrm{SE}=\frac{\sigma}{\sqrt{n}})" title="\bar{X} = \mathbb{N}(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}})" /></a>
 
