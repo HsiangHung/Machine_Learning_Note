@@ -32,6 +32,12 @@ The workflows to determine if using Z-test or T-test? Credits from [slide # 18 f
 ![](images/Z_T_test.png)
 
 
+## Chi-Suare or T test?
+
+Select various inference, depending on data type, categorical or numeric and purpose. See the youtube explanation [Choosing a Statistical Test for Your IB Biology IA](https://www.youtube.com/watch?v=ulk_JWckJ78)
+
+![](images/category_test_1.png)
+
 
 
 #### Reference
