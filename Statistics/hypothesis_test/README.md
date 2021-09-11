@@ -45,14 +45,31 @@ If more than 2 groups to compare, we use ANOVA.
 ![](images/category_test_2.png)
 
 
-#### Reference
+## Nonparametric Test
 
+Nonparametric tests do not assume a specific distribution for the population, e.g. normality. These tests can be especially useful when you have a small sample that is skewed or a sample that contains several outliers [[Minitab]][What to do with nonnormal data].
+
+| Test that assumes normality | Nonparametric test equivalents | 
+| --- | --- | 
+| 1-Sample Z, 1-sample-t | 1-Sample Sign, 1-Sample Wilcoxon | 
+| 2-Sample t | Mann-Whitney | 
+| ANOVA | Kruskal-Wallis, Mood's median, Friedman | 
+
+Nonparametric tests are not completely free of assumptions about your data: for example, they still require the data to be an independent random sample.
+
+
+
+
+
+#### Reference
 
 
 * [From the Central Limit Theorem to the Z- and t-distributions]: https://towardsdatascience.com/introduction-tfrom-the-central-limit-theorem-to-the-z-and-t-distributions-66513defb175
 [[Javier Fernandez] From the Central Limit Theorem to the Z- and t-distributions](https://towardsdatascience.com/introduction-tfrom-the-central-limit-theorem-to-the-z-and-t-distributions-66513defb175)
 * [The t-test and robustness to non-normality]: https://thestatsgeek.com/2013/09/28/the-t-test-and-robustness-to-non-normality/
 [[Jonathan Bartlett] The t-test and robustness to non-normality](https://thestatsgeek.com/2013/09/28/the-t-test-and-robustness-to-non-normality/)
+* [What to do with nonnormal data]: https://support.minitab.com/en-us/minitab/19/help-and-how-to/statistics/basic-statistics/supporting-topics/normality/what-to-do-with-nonnormal-data/
+[[Minitab] What to do with nonnormal data](https://support.minitab.com/en-us/minitab/19/help-and-how-to/statistics/basic-statistics/supporting-topics/normality/what-to-do-with-nonnormal-data/)
 * [Hypothesis Testing]: https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/
 [[Statistics How to] Hypothesis Testing](https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/)
 * [Central Limit Theorem]: https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/BS704_Probability12.html
