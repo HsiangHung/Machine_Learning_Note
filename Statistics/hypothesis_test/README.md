@@ -49,7 +49,7 @@ If more than 2 groups to compare, we use ANOVA.
 
 Nonparametric tests do not assume a specific distribution for the population, e.g. normality. These tests can be especially useful when you have a small sample that is skewed or a sample that contains several outliers [[Minitab]][What to do with nonnormal data].
 
-| Test that assumes normality | Nonparametric test equivalents | 
+| Test that assumes normality | Nonparametric test equivalent | 
 | --- | --- | 
 | 1-Sample Z, 1-sample-t | 1-Sample Sign, 1-Sample Wilcoxon | 
 | 2-Sample t | Mann-Whitney | 
