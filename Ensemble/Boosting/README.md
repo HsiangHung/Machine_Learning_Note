@@ -99,17 +99,17 @@ Similarly, the black line in (b) indicates the `f1(x)` predictor. Now we can com
 
 Now we see the `F1(x)` is a better regressor than `F0(x)` to fit the data. 
 
-We compute residuals `e2 = y - y1` from `F1(x)` model, i.e. `y1 = F1(x)`, and show the residuals as green dots in (d). Then we still fit the residuals `e2`
+We then compute residuals `e2 = y - y1` from `F1(x)` model, where `y1 = F1(x)`, and show the residuals as green dots in (d). Then we still fit the residuals `e2`
 
     f2(x) = e2
 
 and so on. In this case, mathmetically we have an iterative relation
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;h_t(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;h_t(x)" title="F_t (x) = F_{t-1}(x) + h_t(x)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;f_t(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;f_t(x)" title="F_t (x) = F_{t-1}(x) + f_t(x)" /></a>
 
 and the residual fitting model is given by   
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=h_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" title="h_t (x) = y - F_{t-1}(x)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=f_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" title="f_t (x) = y - F_{t-1}(x)" /></a>
 
 Prof. Ihler gave a [comprehensive description](http://sli.ics.uci.edu/Classes/2012F-273a?action=download&upname=10-ensembles.pdf) about the boosting steps in his lecture and here we borrow to show below
 
