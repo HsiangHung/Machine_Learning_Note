@@ -89,7 +89,7 @@ We usually start with a very simple estimator, say one-layer decision tree (call
 
 ![](images/GBM1.png)
 
-In the above left plot (a), the black line indicates `F0(x) = f0(x)`, the **first** predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = f0(x)`), shown as green dots on the right hand plot (b). Next we build another regressor model but fit the **residuals** 
+In the above left plot (a), the black line indicates `F0(x) = f0(x)`, the **first** predictor (model). Then we compute the residuals `e1 = y - y0` (where `y0 = f0(x)`), shown as green dots on the right hand plot (b). Next we build another regressor model but fit the **residuals** 
 
     f1(x) = e1
 
@@ -99,7 +99,7 @@ In (b), the black line indicates the `f1(x)` predictor. Now we can combine the p
 
 Now we see the `F1(x)` is a better regressor than `F0(x)` to fit the data. 
 
-We then compute residuals `e2 = y - y1` from `F1(x)` model, where `y1 = F1(x)`, and show the residuals as green dots in (d). Then we still fit the residuals `e2`
+We then compute residuals `e2 = y - y1`, where `y1 = F1(x)`, and denote the residuals as green dots in (d). Then we still fit the residuals `e2`
 
     f2(x) = e2
 
