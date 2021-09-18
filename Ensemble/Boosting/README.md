@@ -123,7 +123,7 @@ Upper panel shows data and fitting models `F0(x)`, `F1(x)`, `F2(x)`, ....`Fm(x)`
 
 Previous description assumes all learners in the same weight. Where is the `gradient`? A GBM creates a set of predictors `F(x)`. The comprehensive tutorial on introduction to the model, [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) explained more detailed steps in math[[Data Science: GBM vs XGBOOST? Key differences?]][GBM vs XGBOOST? Key differences?]:
 
-In the boosted tree, we start with a baseline model `F0(x)` by fitting `f0(x) = y`,
+In the boosting processes, we start with a baseline model `F0(x)` by fitting `f0(x) = y`,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_0(x_i)&space;=&space;0&space;&plus;&space;f_0(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_0(x_i)&space;=&space;0&space;&plus;&space;f_0(x_i)" title="F_0(x_i) = 0 + f_0(x_i)" /></a>
 
