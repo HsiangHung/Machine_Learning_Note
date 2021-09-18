@@ -97,7 +97,9 @@ Similarly, the black line in (b) indicates the `f1(x)` predictor. Now we can com
 
 ![](images/GBM2.png)
 
-Now we see the `F1(x)` is a better regressor than `F0(x)` to fit the data, and leave residuals `e2 = y - y1` as shown on the right (`y1 = F1(x)`). Then we still fit the residuals `e2`
+Now we see the `F1(x)` is a better regressor than `F0(x)` to fit the data. 
+
+We compute residuals `e2 = y - y1` from `F1(x)` model, i.e. `y1 = F1(x)`, and show the residuals as green dots in (d). Then we still fit the residuals `e2`
 
     f2(x) = e2
 
