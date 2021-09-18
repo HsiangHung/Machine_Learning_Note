@@ -85,13 +85,13 @@ We can see the larger information gain split makes better classification.
 
 ### 3.B Gini index
 
-The Gini index defines (assume use attribute `A` to have K branches)
+The Gini index defines in a leaf node:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" title="G(A) = 1- \sum^K_{i=1} (p^2_i + n^2_i)" /></a>
 
 **Smaller Gini index** means better attribute used to split tree. Two extremes to think about:
-* `A` is a perfect attribute such that only positive in the leaf, then `G(A)=0`.
-* `A` is a poor attribute such that the leaf node still has 50 positive - 50 negative. `G(A) = 0.5`.
+* The leaf node only positive events, then `G=0`.
+* The leaf node still has 50 positive - 50 negative. `G = 0.5`.
 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
 
