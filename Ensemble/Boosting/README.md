@@ -89,7 +89,9 @@ We usually start with a very simple estimator, say one-layer decision tree to fi
 
 ![](images/GBM1.png)
 
-In the above left plot, the black line indicates `F0(x) = f0(x)` the **first** predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = f0(x)`) shown as green dots on the right hand plot. Next we build another model to fit the **residuals** 
+In the above left plot, the black line indicates `F0(x) = f0(x)` the **first** predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = f0(x)`) shown as green dots on the right hand plot. 
+
+Next we build another model to fit the **residuals** 
 
     f1(x) = e1
 
