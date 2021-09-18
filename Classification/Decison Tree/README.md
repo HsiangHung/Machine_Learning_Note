@@ -87,9 +87,10 @@ We can see the larger information gain split makes better classification.
 
 The Gini index of a leaf node is defined as:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" title="G = 1- \sum^K_{i=1} (p^2_i + n^2_i)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" title="G(A) = 1- \sum^K_{i=1} p^2_i" /></a>
 
-**Smaller Gini index** means better attribute used to split tree. Two extremes to think about:
+
+**Smaller Gini index** means better attribute used to split tree. For binary classification, two extremes to think about:
 * The leaf node only positive events, then `G = 0`.
 * The leaf node still has 50 positive - 50 negative. `G = 0.5`.
 
