@@ -131,7 +131,7 @@ Then compute residuals `e1 = y - F0(x)`and fit `f1(x) = e1`. Now we have
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_1(x_i)&space;=&space;F_0(x_i)&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1(x_i)&space;=&space;F_0(x_i)&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" title="F_1(x_i) = F_0(x_i) + f_1(x_i) = f_0(x_i) + f_1(x_i)" /></a>
 
-where `F1(x)` is a better model than `F0(x)`. Next step compute residuals `e2 = y - F1(x)`and fit second `f2(x) = e1`:
+where `F1(x)` is a better model than `F0(x)`. Next step compute residuals `e2 = y - F1(x)` and fit the second model `f2(x) = e1`:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="F_2(x_i) = F_1(x_i) + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)" /></a>
 
