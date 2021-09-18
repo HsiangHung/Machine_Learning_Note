@@ -14,9 +14,9 @@ Table of Contents:
 
 * [1. AdaBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#1-adaboost)
 * [2. Gradient Boosting](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2-gradient-boosting)
-     * [2.A - Boosting steps in GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2a-boosting-steps-in-gbm)
-     * [2.B - Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2b-math-intuition-of-gbm)
-     * [2.C - MART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2c-mart)
+     * [2.A - Boosting steps in GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2a---boosting-steps-in-gbm)
+     * [2.B - Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2b---math-intuition-of-gbm)
+     * [2.C - MART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2c---mart)
 * [3. XGBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#3-xgboost)
 * [4. LightGBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#4-lightgbm)
 * [5. Comparison LighGBM vs XGboost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#5-comparison-lighgbm-vs-xgboost)
@@ -89,7 +89,7 @@ We usually start with a very simple estimator, say one-layer decision tree to fi
 
 ![](images/GBM1.png)
 
-In the above left plot, the black line indicates the `F0(x) = f0(x)` predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = f0(x)`) shown as green dots on the right hand plot. Next we build another model to fit the **residuals** 
+In the above left plot, the black line indicates `F0(x) = f0(x)` the **first** predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = f0(x)`) shown as green dots on the right hand plot. Next we build another model to fit the **residuals** 
 
     f1(x) = e1
 
