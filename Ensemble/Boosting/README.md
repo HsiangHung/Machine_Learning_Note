@@ -141,11 +141,7 @@ where `F2(x)` is a better model than `F1(x)`. Keep doing the procedures, eventua
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_t(x_i)&space;=&space;F_{t-1}(x_i)&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t(x_i)&space;=&space;F_{t-1}(x_i)&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" title="F_t(x_i) = F_{t-1}(x_i) + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)" /></a>
 
 
-Here `f0` is like `F0` in previous discussion [Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#math-intuition-of-gbm), a baseline model to fit `y`, and `f1`, `f2`, ... are like `h1`, `h2`,.... to fit residuals. Though each `f(x)` is a weaker learner, the sum of the ensemble {`f0(x)`, `f1(x)`, ...} can gradually approach to true values on `y`.
-
-
-
-for a regression problem, the loss function is given by  
+For a regression problem, the loss function is given by  
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;J(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}_i&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;J(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}_i&space;\big)^2" title="\textrm{Loss} = J(y, \hat{y}) = \sum_i \big( y_i - \hat{y}_i \big)^2" /></a>
 
@@ -178,23 +174,9 @@ The boosting regression trees can be extended to classification and even ranking
 
 XGBoost (Chen) was developed to put this on a more formal footing. Both xgboost and gbm follows the principle of gradient boosting, but in XGBoost the **size of the tree** and the magnitude of the weights are controlled by standard **regularization** parameters. This leads to a ‘mostly’ parameter-free optimization routine. In theory that is, as in practice a plethora of parameters are used, still to control the size and shape of the trees. Regularization did however prove to be very powerful and made the algorithm much more robust [[Quora: What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?]][What is the difference between eXtreme Gradient Boosting (XGBoost), AdaBoost, and Gradient Boosting?], [[Gabriel Tseng]][Gradient Boosting and XGBoost] and [the stackexchange blog](https://datascience.stackexchange.com/questions/16904/gbm-vs-xgboost-key-differences#:~:text=Quote%20from%20the%20author%20of,which%20gives%20it%20better%20performance.).
 
-The comprehensive tutorial on introduction to the model, [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) explained more detailed [[Data Science: GBM vs XGBOOST? Key differences?]][GBM vs XGBOOST? Key differences?]. Suppose we have
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^0_i&space;=&space;0&space;&plus;&space;f_0(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^0_i&space;=&space;0&space;&plus;&space;f_0(x_i)" title="\hat{y}^0_i = 0 + f_0(x_i)" /></a>
+The comprehensive tutorial on introduction to the model, [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) explained more detailed [[Data Science: GBM vs XGBOOST? Key differences?]][GBM vs XGBOOST? Key differences?]. 
 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^1_i&space;=&space;\hat{y}^0_i&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^1_i&space;=&space;\hat{y}^0_i&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" title="\hat{y}^1_i = \hat{y}^0_i + f_1(x_i) = f_0(x_i) + f_1(x_i)" /></a>
-
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^2_i&space;=&space;\hat{y}^1_i&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="\hat{y}^2_i = \hat{y}^1_i + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)" /></a>
-
-... Eventually we have the following relation
-
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^t_i&space;=&space;\hat{y}^{t-1}_i&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^t_i&space;=&space;\hat{y}^{t-1}_i&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" title="\hat{y}^t_i = \hat{y}^{t-1}_i + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)" /></a>
-
-
-Here `f0` is like `F0` in previous discussion [Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#math-intuition-of-gbm), a baseline model to fit `y`, and `f1`, `f2`, ... are like `h1`, `h2`,.... to fit residuals. Though each `f(x)` is a weaker learner, the sum of the ensemble {`f0(x)`, `f1(x)`, ...} can gradually approach to true values on `y`.
 
 In comparison to boosted tree, the cost function in XGBoost has regularization on the `f` functions at `t`-th iteration [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting), 
 
