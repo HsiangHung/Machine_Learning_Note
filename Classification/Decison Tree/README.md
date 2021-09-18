@@ -89,7 +89,9 @@ The Gini index defines (assume use attribute `A` to have K branches)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;(p^2_i&space;&plus;&space;n^2_i)" title="G(A) = 1- \sum^K_{i=1} (p^2_i + n^2_i)" /></a>
 
-**Smaller Gini index** means better attribute used to split tree. (Think about if A is perfect to classify positive and negatives, then `G(A)=0`.)
+**Smaller Gini index** means better attribute used to split tree. Two extremes to think about:
+* `A` is a perfect attribute to classify positive and negatives such only positive in the leaf, then `G(A)=0`.
+* `A` is poor and the leaf node still has 50 positive - 50 negative. `G(A) = 0.5`.
 
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
 
