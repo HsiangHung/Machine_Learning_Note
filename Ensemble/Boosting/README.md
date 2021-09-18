@@ -93,7 +93,7 @@ In the above left plot (a), the black line indicates `F0(x) = f0(x)`, the **firs
 
     f1(x) = e1
 
-Similarly, the black line in (b) indicates the `f1(x)` predictor. Now we can combine the predictors `F1(x) = F0(x) + f1(x)` and the resulting predictor is the black line shown in below left (c)
+In (b), the black line indicates the `f1(x)` predictor. Now we can combine the predictors `F1(x) = F0(x) + f1(x)` and the resulting predictor is the black line shown in below left (c)
 
 ![](images/GBM2.png)
 
