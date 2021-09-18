@@ -87,14 +87,22 @@ We can see the larger information gain split makes better classification.
 
 The Gini index of a leaf node is defined as:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G(A)&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" title="G(A) = 1- \sum^K_{i=1} p^2_i" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" title="G = 1- \sum^K_{i=1} p^2_i" /></a>
 
 
 **Smaller Gini index** means better attribute used to split tree. For binary classification, two extremes to think about:
 * The leaf node only positive events, then `G = 0`.
 * The leaf node still has 50 positive - 50 negative. `G = 0.5`.
 
-Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
+The Gini index calculation for each node is weighted by the total number of instances in the parent node. Therefore, for a split, the Gini index in a binary classification problem is therefore calculated as follows: 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;\frac{n_1}{n}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{n_2}{n}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;\frac{n_1}{n}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{n_2}{n}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" title="G = \frac{n_1}{n} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{n_2}{n} \big( 1 - [(p_2)^2 + (n_2)^2] \big)" /></a>
+
+
+`n1` and `n2` are the total number of instances in leaf node 1 and leaf node 2, and n are the total number of instances from the parent node.
+
+
 
 #### Example
 
