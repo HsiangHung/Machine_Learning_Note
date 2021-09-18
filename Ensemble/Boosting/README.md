@@ -83,13 +83,13 @@ In the following, we explain the boosting pictures using the figures depicted fr
 ### 2.A - Boosting steps in GBM
 
 
-We usually start with a very simple estimator, say one-layer decision tree to fit the data `(x1, y1), (x2, y2),...`. In the following panels, the red points denote the data points and green dots are reisduals. We build the first regressor by fitting 
+We usually start with a very simple estimator, say one-layer decision tree (called a stump) to fit the data `(x1, y1), (x2, y2),...`. In the following panels, the red points denote the data points and green dots are reisduals. We build the first regressor by fitting 
 
     f0(x) = y
 
 ![](images/GBM1.png)
 
-In the above left plot (a), the black line indicates `F0(x) = f0(x)` the **first** predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = f0(x)`) shown as green dots on the right hand plot (b). Next we build another model to fit the **residuals** 
+In the above left plot (a), the black line indicates `F0(x) = f0(x)`, the **first** predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = f0(x)`), shown as green dots on the right hand plot (b). Next we build another regressor model but fit the **residuals** 
 
     f1(x) = e1
 
