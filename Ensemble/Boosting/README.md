@@ -123,20 +123,21 @@ Upper panel shows data and fitting models `F0(x)`, `F1(x)`, `F2(x)`, ....`Fm(x)`
 
 Previous description assumes all learners in the same weight. Where is the `gradient`? A GBM creates a set of predictors `F(x)`. The comprehensive tutorial on introduction to the model, [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) explained more detailed steps in math[[Data Science: GBM vs XGBOOST? Key differences?]][GBM vs XGBOOST? Key differences?]:
 
-In the boosted tree, we start with a baseline model `F0(x)` by fittinf `f0(x) = y`,
+In the boosted tree, we start with a baseline model `F0(x)` by fitting `f0(x) = y`,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_0(x_i)&space;=&space;0&space;&plus;&space;f_0(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_0(x_i)&space;=&space;0&space;&plus;&space;f_0(x_i)" title="F_0(x_i) = 0 + f_0(x_i)" /></a>
 
-Then compute reisuduals `e1 = y - F0(x)`and then fit `f1(x) = e1`. Now `F1(x) = F0(x) + f1(x)` is a better model than `F0(x)`
+Then compute residuals `e1 = y - F0(x)`and fit `f1(x) = e1`. Now we have
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_1(x_i)&space;=&space;F_0(x_i)&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1(x_i)&space;=&space;F_0(x_i)&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" title="F_1(x_i) = F_0(x_i) + f_1(x_i) = f_0(x_i) + f_1(x_i)" /></a>
 
-Then compute reisuduals `e2 = y - F1(x)`and then fit `f2(x) = e1`. Now `F2(x) = F1(x) + f2(x)` is a better model than `F1(x)`
+`F1(x)` is a better model than `F0(x)`. 
+
+Then compute residuals `e2 = y - F1(x)`and fit second `f2(x) = e1`:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="F_2(x_i) = F_1(x_i) + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)" /></a>
 
-
-... Eventually we have the following relation
+`F2(x)` is a better model than `F1(x)`. ... Eventually we have the following relation
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^t_i&space;=&space;\hat{y}^{t-1}_i&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^t_i&space;=&space;\hat{y}^{t-1}_i&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" title="\hat{y}^t_i = \hat{y}^{t-1}_i + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)" /></a>
