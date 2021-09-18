@@ -14,9 +14,9 @@ Table of Contents:
 
 * [1. AdaBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#1-adaboost)
 * [2. Gradient Boosting](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2-gradient-boosting)
-     * [2.A Boosting steps in GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2a-boosting-steps-in-gbm)
-     * [2.B Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2b-math-intuition-of-gbm)
-     * [2.C MART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2c-mart)
+     * [2.A - Boosting steps in GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2a-boosting-steps-in-gbm)
+     * [2.B - Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2b-math-intuition-of-gbm)
+     * [2.C - MART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2c-mart)
 * [3. XGBoost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#3-xgboost)
 * [4. LightGBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#4-lightgbm)
 * [5. Comparison LighGBM vs XGboost](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#5-comparison-lighgbm-vs-xgboost)
@@ -80,26 +80,26 @@ In the following, we explain the boosting pictures using the figures depicted fr
 
 
 
-### 2.A Boosting steps in GBM
+### 2.A - Boosting steps in GBM
 
 
 We usually start with a very simple estimator, say one-layer decision tree to fit the data `(x1, y1), (x2, y2),...`. In the following panels, the red points denote the data points and green dots are reisduals. We build the first regressor by fitting 
 
-    F0(x) = y
+    f0(x) = y
 
 ![](images/GBM1.png)
 
-In the above left plot, the black line indicates the `F0(x)` predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = F0(x)`) shown as green dots on the right hand plot. Next we build another model to fit the **residuals** 
+In the above left plot, the black line indicates the `F0(x) = f0(x)` predictor (model). Then we compute the residuals `e1 = y - y0` (`y0 = f0(x)`) shown as green dots on the right hand plot. Next we build another model to fit the **residuals** 
 
-    h1(x) = e1
+    f1(x) = e1
 
-Similarly, the black line in the above right plot indicates the `h1(x)` predictor. Now we can combine the predictors `F1(x) = F0(x) + h1(x)` and the resulting predictor is the black line shown in the left hand plot below
+Similarly, the black line in the above right plot indicates the `f1(x)` predictor. Now we can combine the predictors `F1(x) = F0(x) + f1(x)` and the resulting predictor is the black line shown in the left hand plot below
 
 ![](images/GBM2.png)
 
 Now we see the `F1(x)` is a better regressor than `F0(x)` to fit the data, and leave residuals `e2 = y - y1` as shown on the right (`y1 = F1(x)`). Then we still fit the residuals `e2`
 
-    h2(x) = e2
+    f2(x) = e2
 
 and so on. In this case, mathmetically we have an iterative relation
 
@@ -117,7 +117,7 @@ Upper panel shows data and fitting models `F0(x)`, `F1(x)`, `F2(x)`, ....`Fm(x)`
 
 
 
-### 2.B Math Intuition of GBM
+### 2.B - Math Intuition of GBM
 
 Previous description assumes all learners in the same weight. Where is the `gradient`? A GBM creates a set of predictors `F(x)`, and for a regression problem, the loss function is given by  
 
@@ -140,7 +140,7 @@ Terence Parr in a Quora post [[Quora: What is an intuitive explanation of Gradie
 ![](images/golf.png)
 
 
-### 2.C MART 
+### 2.C - MART 
 
 The boosting regression trees can be extended to classification and even ranking problems. See more detail on the [Github page](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting/MART) and Chris Burges' [paper](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf) for detail.
 
