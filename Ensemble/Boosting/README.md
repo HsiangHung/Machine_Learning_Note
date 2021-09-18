@@ -135,10 +135,10 @@ where `F1(x)` is a better model than `F0(x)`. Next step compute residuals `e2 = 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="F_2(x_i) = F_1(x_i) + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)" /></a>
 
-`F2(x)` is a better model than `F1(x)`. ... Eventually we have the following relation
+where `F2(x)` is a better model than `F1(x)`. Keep doing the procedures, eventually we have the following relation
 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^t_i&space;=&space;\hat{y}^{t-1}_i&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^t_i&space;=&space;\hat{y}^{t-1}_i&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" title="\hat{y}^t_i = \hat{y}^{t-1}_i + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=F_t(x_i)&space;=&space;F_{t-1}(x_i)&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t(x_i)&space;=&space;F_{t-1}(x_i)&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" title="F_t(x_i) = F_{t-1}(x_i) + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)" /></a>
 
 
 Here `f0` is like `F0` in previous discussion [Math Intuition of GBM](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#math-intuition-of-gbm), a baseline model to fit `y`, and `f1`, `f2`, ... are like `h1`, `h2`,.... to fit residuals. Though each `f(x)` is a weaker learner, the sum of the ensemble {`f0(x)`, `f1(x)`, ...} can gradually approach to true values on `y`.
