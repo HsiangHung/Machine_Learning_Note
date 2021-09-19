@@ -9,6 +9,7 @@ Table of Contents:
      * [3.A - Information gain](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a---information-gain)
      * [3.B - Gini index](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b---gini-index)
      * [3.C - Numeric Attribute](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c---numeric-attribute)
+     * [3.D - Criterion to stop splitting leaf node](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3d---criterion-to-stop-splitting-leaf-node)
 * [4. Decision Tree Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#4-decision-tree-regression)
 * [5. Feature Importance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#5-feature-importance)
 * [6. How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#6-how-to-deal-with-missing-values)
@@ -211,7 +212,7 @@ We can see `I(B) = 0.94 - HB = 0.61` > `I(A) = 0.94 - HA = 0.4`, so we choose **
 
 How do we determine a final leaf nodes on this branch (before using all attributes)? See the graph below (credit from [[Arif R]][Classification in Decision Tree — A Step by Step CART (Classification And Regression Tree)])
 
-
+![](images/example_gini_index-3.png)
 
 If the Gini Impurity before using `sex` to separate patients is lowest, so we don’t separate this node using `sex`. The leaf node circled is concluded as the final node.
 
