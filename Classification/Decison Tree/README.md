@@ -102,7 +102,7 @@ The Gini index calculation for each node is weighted by the total number of inst
 
 where `p1` and `n1` are proportion of positive and negative units; `N1` and `N2` are the total number of instances in leaf node 1 and leaf node 2, and `N` are the total number of instances from the parent node.
 
-The following is from [CART: Classification and Regression Trees for Clean but Powerful Models](https://towardsdatascience.com/cart-classification-and-regression-trees-for-clean-but-powerful-models-cc89e60b7a85)
+The following picture explains how to evaluate the gini impirty in a split (credit from [CART: Classification and Regression Trees for Clean but Powerful Models](https://towardsdatascience.com/cart-classification-and-regression-trees-for-clean-but-powerful-models-cc89e60b7a85)):
 
 ![](images/example_gini_index-2.png)
 
