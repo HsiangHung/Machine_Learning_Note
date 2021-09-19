@@ -34,7 +34,7 @@ The following picture also provide a good interpretation about the gradient boos
 
 ![](images/golf.png)
 
-where each tree `f1`, `f2`, .... provides approaching results toward to the true target. Below shows the idea: the collection of the trees forms an ensemble. Each boosting procedure generated a tree to correct true target, such that the error is reducing: (credit from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide])
+where each tree `f1`, `f2`, .... provides approaching results toward to the true target. Below shows the idea: the collection of the trees forms an ensemble. Each boosting procedure generated a tree to correct prediction approaching toward to true target, such that the error is reducing: (credit from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide])
 
 ![](images/boosting_tree.png)
 
