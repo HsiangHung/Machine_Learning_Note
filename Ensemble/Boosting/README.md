@@ -222,7 +222,7 @@ Since XGBoost is child of GBM, there are many similarities between the algorithm
 * Inclusion of a form of gradient descent in minimizing the loss function
 * Apply a learning rate to the loss function to optimize the path to the minimum loss (this is also known as shrinkage)
 * Include base set of hyper parameters such as:
-*     Minimum sample size of features included in each split
+    *  Minimum sample size of features included in each split
 Minimum sample of size of each leaf
 Max depth of the trees also known as stump size
 Minimum sample size required in each node for splitting
