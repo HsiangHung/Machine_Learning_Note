@@ -207,7 +207,7 @@ and the complexity of the regularization term as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Omega(f)&space;=&space;\gamma&space;T&space;&plus;&space;\frac{1}{2}\lambda&space;\sum^T_{j=1}&space;\omega^2_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Omega(f)&space;=&space;\gamma&space;T&space;&plus;&space;\frac{1}{2}\lambda&space;\sum^T_{j=1}&space;\omega^2_j" title="\Omega(f) = \gamma T + \frac{1}{2}\lambda \sum^T_{j=1} \omega^2_j" /></a>
 
-where `ω` is the vector of scores on leaves, and `T` is the number of leaves. 
+where `ω` is the vector of scores on leaves, and `T` is the number of leaves. XGBoost will use the gamma parameter in its pruning steps. 
 
 Here is the article: [Light GBM model vs XGBoost Model Parameter Tuning and Examples](https://pyligent.github.io/2019-08-20-lightGBM_XGBoost/) to show hyperparameters in XGBoost.
 
@@ -237,6 +237,10 @@ There are more benefits from XGBoost over GBM [[ODSC - Open Data Science]][XGBoo
 * handling of missing values
 * non-greedy tree pruning
 * built-in cross-validation and methods of dropout (DART).
+
+The **parallelized** development of the decision tree ensembles is another enhancement to the XGBoost algorithm. The algorithm is not growing the decision trees in parallel but rather uses pre-sorting and block storage methods in parallel processing to determine what the optimal split point will be. A linear scan can then be employed across the blocks to determine where the optimal split point is for each feature being tested. XGBoost will make use of a balance between in-memory and out-of-memory processes to make the most of the power the current machine has to offer [[ODSC - Open Data Science]][XGBoost: Enhancement Over Gradient Boosting Machines].
+
+The final enhancement I will mention here is the addition of drop out to the boosting algorithm. **Dropout** is another flavor of regularization that is intended to reduce overfitting. Dropout is the process of **removing randomly selected trees from the decision tree ensemble** created in the model building. In the XGBoost algorithm, this process is referred to as Dropout Additive Regression Trees (DART). The percentage of dropout to include is a parameter that can be set in the tuning of the model [[ODSC - Open Data Science]][XGBoost: Enhancement Over Gradient Boosting Machines].
 
 
 ## 4. LightGBM
