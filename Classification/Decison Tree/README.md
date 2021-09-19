@@ -210,7 +210,7 @@ We can see `I(B) = 0.94 - HB = 0.61` > `I(A) = 0.94 - HA = 0.4`, so we choose **
 
 ### 3.D - Criterion to stop splitting leaf node
 
-How do we determine a final leaf nodes on this branch (before using all attributes)? See the graph below (credit from [[Arif R]][Classification in Decision Tree — A Step by Step CART (Classification And Regression Tree)])
+How do we determine a final leaf nodes on this branch (before using all attributes)? See the graph below (credit from [[Arif R]][Classification in Decision Tree — A Step by Step CART (Classification And Regression Tree)]). The leaf node `13/102` does not need further separate:
 
 ![](images/example_gini_index-3.png)
 
