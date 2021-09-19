@@ -214,7 +214,6 @@ Here is the article: [Light GBM model vs XGBoost Model Parameter Tuning and Exam
 
 ### Enhancement of XGBoost Over GBM
 
-#### Similarities of XGBoost and GBM
 
 Since XGBoost is child of GBM, there are many similarities between the algorithms and their tuning parameters. Here is a short list of ways in which both algorithms are similar:
 
@@ -229,6 +228,15 @@ Since XGBoost is child of GBM, there are many similarities between the algorithm
     *  Number of trees to include
     *  Learning rate
     *  The ability to subsample the data for the creation of each tree (this is the stochastic part of stochastic gradient descent)
+
+
+There are more benefits from XGBoost over GBM:
+* Regularization
+* parallel processing
+* flexibility in setting an objective function
+* handling of missing values
+* non-greedy tree pruning
+* built-in cross-validation and methods of dropout (DART).
 
 
 ## 4. LightGBM
