@@ -34,6 +34,8 @@ The following pictures also provide a good interpretation about the gradient boo
 
 ![](images/golf.png)
 
+(credit from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide])
+
 ![](images/boosting_tree.png)
 
 and each tree `f1`, `f2`, .... provides approaching results toward to the true target. The collection of the trees forms an ensemble.
@@ -63,8 +65,6 @@ and responses in the boosting machine are updated as
 
 
 
- 
-
 
 
 
@@ -75,8 +75,13 @@ and responses in the boosting machine are updated as
 
 
 
-[Gradient in Gradient Boosting]: https://stats.stackexchange.com/questions/338658/gradient-in-gradient-boosting/340376#340376
+* [Gradient in Gradient Boosting]: https://stats.stackexchange.com/questions/338658/gradient-in-gradient-boosting/340376#340376
 [[Cross Validated: Gradient in Gradient Boosting] Gradient in Gradient Boosting](https://stats.stackexchange.com/questions/338658/gradient-in-gradient-boosting/340376#340376)
+
+
+* [Gradient Boosting Trees for Classification: A Beginner’s Guide]: https://medium.com/swlh/gradient-boosting-trees-for-classification-a-beginners-guide-596b594a14ea
+[[Aratrika Pal] Gradient Boosting Trees for Classification: A Beginner’s Guide](https://medium.com/swlh/gradient-boosting-trees-for-classification-a-beginners-guide-596b594a14ea)
+
 
 
 
