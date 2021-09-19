@@ -95,12 +95,12 @@ The Gini index of a leaf node is defined as [[Jason Brownlee]][Classification An
 * The leaf node only positive events, then `G = 0`.
 * The leaf node still has 50 positive - 50 negative. `G = 0.5`.
 
-The Gini index calculation for each node is weighted by the total number of instances in the parent node. Therefore, for a split, the Gini index in a binary classification problem is therefore calculated as follows: 
+The Gini index calculation for each node is weighted by the total number of instances in the parent node. Therefore, for a split, the Gini index in a **binary classification** problem is therefore calculated as follows: 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;\frac{n_1}{n}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{n_2}{n}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;\frac{n_1}{n}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{n_2}{n}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" title="G = \frac{n_1}{n} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{n_2}{n} \big( 1 - [(p_2)^2 + (n_2)^2] \big)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;\frac{N_1}{N}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{N_2}{N}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;\frac{N_1}{N}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{N_2}{N}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" title="G = \frac{N_1}{N} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{N_2}{N} \big( 1 - [(p_2)^2 + (n_2)^2] \big)" /></a>
 
 
-`n1` and `n2` are the total number of instances in leaf node 1 and leaf node 2, and n are the total number of instances from the parent node.
+where `p1` and `n1` are proportion of positive and negative units; `N1` and `N2` are the total number of instances in leaf node 1 and leaf node 2, and `N` are the total number of instances from the parent node.
 
 The following is from [CART: Classification and Regression Trees for Clean but Powerful Models](https://towardsdatascience.com/cart-classification-and-regression-trees-for-clean-but-powerful-models-cc89e60b7a85)
 
