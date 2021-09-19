@@ -6,9 +6,9 @@ Table of Contents:
 * [1. Tree algorithms: ID3, C4.5 and CART](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#1-tree-algorithms-id3-c45-and-cart)
 * [2. How To Interpret Probability in Tree?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#2-how-to-interpret-probability-in-tree)
 * [3. How to Select Feature for Split?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3-how-to-select-feature-for-split)
-     * [3.A Information gain](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
-     * [3.B Gini index](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
-     * [3.C Numeric Attribute](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
+     * [3.A - Information gain](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3a-information-gain)
+     * [3.B - Gini index](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3b-gini-index)
+     * [3.C - Numeric Attribute](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#3c-numeric-attribute)
 * [4. Decision Tree Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#4-decision-tree-regression)
 * [5. Feature Importance](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#5-feature-importance)
 * [6. How To Deal with Missing Values](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Decison%20Tree#6-how-to-deal-with-missing-values)
@@ -51,7 +51,7 @@ Each time when we need to split, we need to choose an optimal attribute which ca
 Note that there is no reason to use the same feature split on each level. See [[Cross Validated: Does decision tree need to use the same feature to split in the same layer?]][Does decision tree need to use the same feature to split in the same layer?]
 
 
-### 3.A Information gain
+### 3.A - Information gain
 
 Given a split way of features, calculate entropy for root and its childs. The tree split is to **maximize reduction of the entropy**, which is defined as **information gain**. Given a class, the entropy defines
 
@@ -83,7 +83,7 @@ Later information gain leads to less homogeneity on class distributions. See exa
 We can see the larger information gain split makes better classification.
 
 
-### 3.B Gini index
+### 3.B - Gini index
 
 The Gini index of a leaf node is defined as [[Jason Brownlee]][Classification And Regression Trees for Machine Learning]:
 
@@ -151,7 +151,7 @@ From the above, we observe that **Past Trend** has the lowest Gini Index and hen
 
 
 
-### 3.C Numeric Attribute
+### 3.C - Numeric Attribute
 
 For numeric attributes, how do we determine the value to split in the decision tree? As a concrete example, supposed we have a dataset like
 
