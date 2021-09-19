@@ -211,6 +211,26 @@ where `ω` is the vector of scores on leaves, and `T` is the number of leaves.
 
 Here is the article: [Light GBM model vs XGBoost Model Parameter Tuning and Examples](https://pyligent.github.io/2019-08-20-lightGBM_XGBoost/) to show hyperparameters in XGBoost.
 
+
+### Enhancement of XGBoost Over GBM
+
+#### Similarities of XGBoost and GBM
+
+Since XGBoost is child of GBM, there are many similarities between the algorithms and their tuning parameters. Here is a short list of ways in which both algorithms are similar:
+
+* Offer implementations of Classification and Regression Tree (CART) model framework.
+* Inclusion of a form of gradient descent in minimizing the loss function
+* Apply a learning rate to the loss function to optimize the path to the minimum loss (this is also known as shrinkage)
+* Include base set of hyper parameters such as:
+*     Minimum sample size of features included in each split
+Minimum sample of size of each leaf
+Max depth of the trees also known as stump size
+Minimum sample size required in each node for splitting
+Number of trees to include
+Learning rate
+The ability to subsample the data for the creation of each tree (this is the stochastic part of stochastic gradient descent)
+
+
 ## 4. LightGBM
 
 LightGBM (LGBM) model is a relatively new model. Rather than **level-wise** (**depth-first**) tree growth in regular decision tree algorithms (credit from [here](https://github.com/Microsoft/LightGBM/blob/master/docs/)), 
