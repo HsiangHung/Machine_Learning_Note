@@ -230,7 +230,7 @@ Since XGBoost is child of GBM, there are many similarities between the algorithm
     *  The ability to subsample the data for the creation of each tree (this is the stochastic part of stochastic gradient descent)
 
 
-There are more benefits from XGBoost over GBM:
+There are more benefits from XGBoost over GBM [[ODSC - Open Data Science]][XGBoost: Enhancement Over Gradient Boosting Machines]:
 * Regularization
 * parallel processing
 * flexibility in setting an objective function
