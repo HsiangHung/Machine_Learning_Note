@@ -30,15 +30,15 @@ The procedures of building a boosting regression tree are summarize below (given
 
 As explained by Pulkit Bansal in the [Quora post](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting), we are modeling `F = f0 + f1 + f2  + .. + fn`,  where each of these is a decision tree, and each new tree is a fit on a modified version of the original data set. 
 
-The following pictures also provide a good interpretation about the gradient boosting process:
+The following picture also provide a good interpretation about the gradient boosting process:
 
 ![](images/golf.png)
 
-(credit from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide])
+where each tree `f1`, `f2`, .... provides approaching results toward to the true target. Below shows the idea: the collection of the trees forms an ensemble. Each boosting procedure generated a tree to correct true target, such that the error is reducing: (credit from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide])
 
 ![](images/boosting_tree.png)
 
-and each tree `f1`, `f2`, .... provides approaching results toward to the true target. The collection of the trees forms an ensemble.
+
 
 Note the cost function for regression is 
 
