@@ -16,13 +16,14 @@ Table of Contents:
 
 
 * [1. Multiclass Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1-multiclass-classification-models)
-     * [1.A One vs. All (One-vs-Rest)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1a-one-vs-all-one-vs-rest)
-     * [1.B One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1b-one-vs-one)
-     * [1.C A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1c-a-single-multi-class-classifier)
-* [2. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2-metrics)
-     * [2.A Macro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2a-macro-averged)
-     * [2.B Micro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2b-micro-averged)
-     * [2.C Weighted-average](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2c-weighted-average)
+     * [1.A - One vs. All (One-vs-Rest)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1a-one-vs-all-one-vs-rest)
+     * [1.B - One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1b-one-vs-one)
+     * [1.C - A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1c-a-single-multi-class-classifier)
+* [2. 2. Cost Function: Cross-entropy]()
+* [3. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2-metrics)
+     * [3.A - Macro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2a-macro-averged)
+     * [3.B - Micro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2b-micro-averged)
+     * [3.C - Weighted-average](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2c-weighted-average)
 
 
 
@@ -36,7 +37,7 @@ Assume we have data like below (N=3):
 
 
 
-### 1.A One vs. All (One-vs-Rest)
+### 1.A - One vs. All (One-vs-Rest)
 
 For the N-class instances dataset, we have to generate the N-binary classifier models (credit from [[Amey Band]][Multi-class Classification — One-vs-All & One-vs-One]).
 
@@ -51,7 +52,7 @@ As an example on Green-blue-red calss, if we have a test case with a probability
 
 The biggest issue with one-vs-all classification is **Class Imbalance**. Consider we have 5 classes, and even number of samples of each class i.e. each class makes up 20% of the data. When you do a one-vs-all classification, you convert the problem into 5 binary classification problems, and in each of the 5 cases you end up with a 20-80 distribution. See the [Quora post: What are the issues with one vs all classification approach?](https://www.quora.com/What-are-the-issues-with-one-vs-all-classification-approach).
 
-### 1.B One vs. One
+### 1.B - One vs. One
 
 In One-vs-One classification, for the N-class instances dataset, we have to generate the `N(N-1)/2` binary classifier models. 
 
@@ -63,7 +64,7 @@ Taking the above example, we divide this problem into N* (N-1)/2 = 3 binary clas
 Each binary classifier predicts one class label. When we input the test data to the classifier, then the model with the **majority counts** is concluded as a result.
 
 
-### 1.C A Single Multi-Class Classifier 
+### 1.C - A Single Multi-Class Classifier 
 
 The [comparison](https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier) between multiple classifiers is:
 
@@ -88,24 +89,39 @@ In the Naive Bayes classifier, we use Bayes’ theorem to break down the joint p
 SVMs are inherently two-class classifiers. In the **multiclass SVM**, if it is built as **one-versus-rest classifiers**, choose the class which classifies the test datum with **greatest margin**. If built as one-vs-one classifiers, still choose the class that is selected by the most classifiers [[Stanford NLP]][Multiclass SVMs].
 
 
-## 2. Metrics
+## 2. Cost Function: Cross-entropy
+
+For multiclass, `c = {1, ...K}`, K classes. If our target is a **one-hot** vector, `p = [1 0 ... 0]`, for y = 1,...  and `p = [0 0 ... 1]` for y = K, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" title="L(\theta, \bold{x}) = - \sum^K_{j=1}\bold{I}(y=j)\log\big( h_{\theta}(\bold{x}) \big) = - \sum^K_{j=1} \bold{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}} \big)" /></a>
+
+
+where `I = 1` for y = j; otherwise `I=0`. 
+
+The cross-entropy of an K = 3 example is shown below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
+
+![](images/cross_entropy-3.png)
+![](images/cross_entropy-4.png)
+
+
+## 3. Metrics
 
 
 For binary classification, a confusion matrix has two rows and two columns. For multi-class classification problem, we categorize each sample into 1 of K classes to make `K x K` confusion matrix. In each class, we can still compute precision and recall on each class [[Boaz Shmueli-1]][Multi-Class Metrics Made Simple, Part I: Precision and Recall].
 
 Given P and R for each class, how can we compare performance on various classifiers? We can macro avergae [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score], weighted average [[Boaz Shmueli-3]][A Tale of Two Macro-F1's] and micro average scores.
 
-### 2.A Macro-averged
+### 3.A - Macro-averged
 
 For example, macro-averged Precision defines as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Macro-P}&space;=&space;\frac{P_1&space;&plus;&space;P_2&space;&plus;&space;\cdots&space;P_K}{K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Macro-P}&space;=&space;\frac{P_1&space;&plus;&space;P_2&space;&plus;&space;\cdots&space;P_K}{K}" title="\textrm{Macro-P} = \frac{P_1 + P_2 + \cdots P_K}{K}" /></a>
 
-### 2.B Micro-averged
+### 3.B - Micro-averged
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Micro-P}&space;=&space;\frac{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K}{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K&space;&plus;&space;\textrm{FP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{FP}_K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Micro-P}&space;=&space;\frac{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K}{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K&space;&plus;&space;\textrm{FP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{FP}_K}" title="\textrm{Micro-P} = \frac{\textrm{TP}_1 +\cdots + \textrm{TP}_K}{\textrm{TP}_1 +\cdots + \textrm{TP}_K + \textrm{FP}_1 +\cdots + \textrm{FP}_K}" /></a>
 
-### 2.C Weighted-average
+### 3.C - Weighted-average
 
 The weight-averaged Precision is defined as (using `classification_report` from [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html#sklearn.metrics.precision_recall_fscore_support))
 
