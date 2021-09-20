@@ -179,7 +179,7 @@ The cross-entropy of the generic form given a data record is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="\textrm{Cross-Entropy} = -\sum_c p_c \log q_c" /></a>
 
-where `c` denotes class labels. `p` is the probability of **target** having class = c, and `q` is the probability of **prediction** as class = c. In classification, cross-entropy is used to be loss to optimize.
+where `c` denotes class labels. `p` is the probability of **target** having class = c, and `q` is the probability of **prediction** as class = c. In classification, cross-entropy is used to be loss to optimize. Also see below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
 ![](images/cross_entropy-1.png)
 
@@ -214,9 +214,9 @@ For multiclass, `c = {1, ...K}`, K classes. `p = [1 0 ... 0]` for y = 1,...  and
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" title="L(\theta, \bold{x}) = - \sum^K_{j=1}\bold{I}(y=j)\log\big( h_{\theta}(\bold{x}) \big) = - \sum^K_{j=1} \bold{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}} \big)" /></a>
 
 
-where `I = 1` for y = j; otherwise `I=0`. 
+where `I = 1` for y = j; otherwise `I=0`. See an example below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
-
+![](images/cross_entropy-3.png)
 
 
 
