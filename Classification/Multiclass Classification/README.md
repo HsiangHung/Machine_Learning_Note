@@ -104,7 +104,7 @@ The cross-entropy of an K = 3 example is shown below (credit from [Cross-entropy
 ![](images/cross_entropy-2.png)
 ![](images/cross_entropy-3.png)
 
-#### Multi-label classification
+### Multi-label classification
 
 Cross-entropy can also be used as a loss function for a **multi-label** problem with this simple trick:
 
