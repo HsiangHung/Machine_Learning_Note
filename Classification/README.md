@@ -217,7 +217,7 @@ For multiclass, `c = {1, ...K}`, K classes. `p = [1 0 ... 0]` for y = 1,...  and
 where `I = 1` for y = j; otherwise `I=0`. See an example below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
 ![](images/cross_entropy-3.png)
-
+![](images/cross_entropy-4.png)
 
 
 ## Reference
