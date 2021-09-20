@@ -106,9 +106,13 @@ The cross-entropy of an K = 3 example is shown below (credit from [Cross-entropy
 
 #### Multi-label classification
 
-Cross-entropy can also be used as a loss function for a multi-label problem with this simple trick:
+Cross-entropy can also be used as a loss function for a **multi-label** problem with this simple trick:
+
+![](images/cross_entropy-4.png)
+![](images/cross_entropy-5.png)
 
 Notice our target and prediction are not a probability vector. It’s possible that there are all classes in the image, as well as none of them. We can look at this problem as **multiple binary classification** subtasks.
+
 
 
 ## 3. Metrics
