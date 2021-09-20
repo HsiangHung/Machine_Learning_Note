@@ -4,13 +4,13 @@
 Table of Contents:
 
 * [1. Binary Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1-binary-classification-models)
-     * [1.A - Logistic regression vs decision trees]()
-     * [1.B - Other classification model comparisons]()
-     * [1.C - Compare describe Tree, SVM and random forest]()
+     * [1.A - Logistic regression vs decision trees](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1a---logistic-regression-vs-decision-trees)
+     * [1.B - Other classification model comparisons](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1b---other-classification-model-comparisons)
+     * [1.C - Compare describe Tree, SVM and random forest](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1c---compare-describe-tree-svm-and-random-forest)
 * [2. Binary Classification Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2-binary-classification-metric)
-     * [2.A - Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a-precision-and-recall)
-     * [2.B - AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b-auc)
-     * [2.C - Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2c-selection-of-precision-or-recall)
+     * [2.A - Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a---precision-and-recall)
+     * [2.B - AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b---auc)
+     * [2.C - Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2c---selection-of-precision-or-recall)
 * [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cost-function-cross-entropy)
      * [3.A - Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3a-binary)
      * [3.B - Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3b-multiclass)
@@ -179,7 +179,7 @@ The cross-entropy of the generic form given a data record is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="\textrm{Cross-Entropy} = -\sum_c p_c \log q_c" /></a>
 
-where `c` denotes class labels. `p` is the probability of target having class = c, and `q` is the probability of prediction as class = c. In classification, cross-entropy is used to be loss to optimize.
+where `c` denotes class labels. `p` is the probability of **target** having class = c, and `q` is the probability of **prediction** as class = c. In classification, cross-entropy is used to be loss to optimize.
 
 The cross-entropy can be used as loss to optimize using gradient descent in classification.
 
@@ -188,6 +188,8 @@ The cross-entropy can be used as loss to optimize using gradient descent in clas
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, i.e. `p = [1 0]` for y = 1; `p = [0 1]` for y = 0, and prediction `q` is a sigmoid function, it arrives at the commonly-seen cross-entropy (`h` is the hypothesis function)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-y&space;\big(&space;\log(h_{\theta}(\bold{x}))&space;&plus;&space;(1-y)\log{(1-h_{\theta}(\bold{x}))}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-y&space;\big(&space;\log(h_{\theta}(\bold{x}))&space;&plus;&space;(1-y)\log{(1-h_{\theta}(\bold{x}))}&space;\big)" title="L(\theta, \bold{x}) = -y \big( \log(h_{\theta}(\bold{x})) + (1-y)\log{(1-h_{\theta}(\bold{x}))} \big)" /></a>
+
+![](images/cross_entropy-1.png)
 
 The hypothesis function for binary case is sigmoid:
 
