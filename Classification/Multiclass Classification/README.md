@@ -16,14 +16,14 @@ Table of Contents:
 
 
 * [1. Multiclass Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1-multiclass-classification-models)
-     * [1.A - One vs. All (One-vs-Rest)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1a-one-vs-all-one-vs-rest)
-     * [1.B - One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1b-one-vs-one)
-     * [1.C - A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1c-a-single-multi-class-classifier)
+     * [1.A - One vs. All (One-vs-Rest)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1a---one-vs-all-one-vs-rest)
+     * [1.B - One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1b---one-vs-one)
+     * [1.C - A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1c---a-single-multi-class-classifier)
 * [2. 2. Cost Function: Cross-entropy]()
-* [3. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2-metrics)
-     * [3.A - Macro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2a-macro-averged)
-     * [3.B - Micro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2b-micro-averged)
-     * [3.C - Weighted-average](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2c-weighted-average)
+* [3. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#3-metrics)
+     * [3.A - Macro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#3a---macro-averged)
+     * [3.B - Micro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#3b---micro-averged)
+     * [3.C - Weighted-average](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#3c---weighted-average)
 
 
 
