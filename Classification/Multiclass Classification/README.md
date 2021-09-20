@@ -19,7 +19,7 @@ Table of Contents:
      * [1.A - One vs. All (One-vs-Rest)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1a---one-vs-all-one-vs-rest)
      * [1.B - One vs. One](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1b---one-vs-one)
      * [1.C - A Single Multi-Class Classifier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#1c---a-single-multi-class-classifier)
-* [2. 2. Cost Function: Cross-entropy]()
+* [2. Cost Function: Cross-entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#2-cost-function-cross-entropy)
 * [3. Metrics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#3-metrics)
      * [3.A - Macro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#3a---macro-averged)
      * [3.B - Micro-averged](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification/Multiclass%20Classification#3b---micro-averged)
@@ -100,8 +100,8 @@ where `I = 1` for y = j; otherwise `I=0`.
 
 The cross-entropy of an K = 3 example is shown below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
-![](images/cross_entropy-3.png)
-![](images/cross_entropy-4.png)
+![](images/cross_entropy-1.png)
+![](images/cross_entropy-2.png)
 
 
 ## 3. Metrics
