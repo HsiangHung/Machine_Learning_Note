@@ -114,7 +114,7 @@ Mathmatically, for comparing two means, the power is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(\mu_0&space;-&space;\mu)}{SE}&space;\Big])" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(\mu_0&space;-&space;\mu)}{SE}&space;\Big])" title="\textrm{Power} = P(Z > \Big[ \frac{Z_{1-\alpha} SE_0 + (\mu_0 - \mu)}{SE} \Big])" /></a>
 
-where **μo = 0** is the mean difference under **Ho**; **μ** is the mean difference under **Ha**, difference between means of control and treatment groups. **SEo** and **SE** is the standard error under **Ho** and **Ha**. Usually we use 95% confidence level, significant level is 5%, then <a href="https://www.codecogs.com/eqnedit.php?latex=Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" title="Z_{1-\alpha} = Z_{0.95} = 1.96" /></a>.
+where **μo = 0** is the mean difference under **Ho** (usually we set null hypothesis is **no difference**); **μ** is the mean difference under **Ha**, difference between means of control and treatment groups. **SEo** and **SE** is the standard error under **Ho** and **Ha**. Usually we use 95% confidence level, where significant level is 5%, then <a href="https://www.codecogs.com/eqnedit.php?latex=Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" title="Z_{1-\alpha} = Z_{0.95} = 1.96" /></a>.
 
 For comparing two proportion, the power is
 
@@ -127,6 +127,10 @@ where **po = 0** is the difference in proportion under **Ho**; **p = p1-p2** is 
 
 note <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{p}" title="\bar{p}" /></a> is the mean of **p1** and **p2**; **n1** and **n2** are sample sizes from group 1 and group 2.
 
+#### Example
+
+![](images/example_calculate_power.png)
+
 
 ### 2.2 Power analysis
 
@@ -134,11 +138,11 @@ The simplest controllable factor to determine power is sample size. The sample s
 
 ![](images/sample_size_power.png)
 
-Therefore, to avoid p-hacking, before we run experimentation, we should perform power analysis to determine the minimum sample size. The processes to calculate sample are as follows (credit from Kunchok Dorjee's lecture [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)).
+Therefore, to avoid [p-hacking](https://www.youtube.com/watch?v=HDCOUXE3HMM), before we run experimentation, we should perform power analysis to determine the minimum sample size [[Josh Starmer-2]][Power Analysis, Clearly Explained!!!]. The processes to calculate sample are as follows (credit from Kunchok Dorjee's lecture [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)).
 
 ![](images/process_power_analysis.png)
 
-### 2.3 Udacity page view example
+### 2.2.A - Udacity page view example
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
@@ -147,6 +151,8 @@ Assume the conversion rate is about 10%, and we want to run an A/B test. The min
 ![](images/abtest_online_calculator.png)
 
 Note the `absolute` is selected to make 8%-12% confidence interval. The online calculator shows at least we need sample size of 3,623 page views per variation (in each group) to see significant results in the AB test.
+
+### 2.2.B - Udacity page view example
 
 
 ## 3. Sample Size vs Conversion Rate and Minimum Detectable Effect
@@ -186,6 +192,12 @@ For instance, say you have two variants (baseline, plus one other), 100,000 MAUs
 [[Apptimize] How Many Users Do I Need for My A/B Test? Calculate Sample Size and Run Times](https://apptimize.com/blog/2014/01/how-many-users-time/)
 * [How to Determine Your A/B Testing Sample Size & Time Frame]: https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time
 [[Ginny Mineo] How to Determine Your A/B Testing Sample Size & Time Frame](https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time)
+* [p-hacking: What it is and how to avoid it!]: https://www.youtube.com/watch?v=HDCOUXE3HMM
+[[Josh Starmer-1] p-hacking: What it is and how to avoid it!](https://www.youtube.com/watch?v=HDCOUXE3HMM)
+* [Power Analysis, Clearly Explained!!!]: https://www.youtube.com/watch?v=VX_M3tIyiYk
+[[Josh Starmer-2] Power Analysis, Clearly Explained!!!](https://www.youtube.com/watch?v=VX_M3tIyiYk)
+* [Power and Sample Size Calculation]: https://www.youtube.com/watch?v=iuBbJIeEUwA
+[[Kunchok Dorjee] Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)
 * [Sample size calculator]: https://www.surveymonkey.com/mp/sample-size-calculator/
 [[Survey Monkey] Sample size calculator](https://www.surveymonkey.com/mp/sample-size-calculator/)
 * [Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]: https://www.statisticshowto.com/probability-and-statistics/find-sample-size/
