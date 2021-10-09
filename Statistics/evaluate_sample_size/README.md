@@ -9,8 +9,8 @@ A sample size is a **part of the population** chosen for a survey or experiment.
 
 Table of Contents:
 
-* [0. When Error can Creep in](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#0-when-error-can-creep-in)
-* [1. How to Find a Sample Size in Statistics](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1-how-to-find-a-sample-size-in-statistics)
+
+* [1. Sample Size Calculation for Testing One Population Proportion](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1-how-to-find-a-sample-size-in-statistics)
      * [1.A Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a-large-population)
      * [1.B Samll population - modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b-samll-population---modification-for-the-cochran-formula)
      * [1.C Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c-examples)
@@ -19,19 +19,23 @@ Table of Contents:
 
 
 
-## 0. When Error can Creep in
+## When Error can Creep in
 
 When you only survey a **small** sample of the population, uncertainty creeps in to your statistics. If you can only survey a certain percentage of the true population, you can never be 100% sure that your statistics are a complete and accurate representation of the population. This uncertainty is called sampling error and is usually measured by a confidence interval. For example, you might state that your results are at a **90% confidence level**. That means if you were to **repeat** your survey over and over, **90% of the time your would get the results within the interval**.
 
-## 1. How to Find a Sample Size in Statistics
+## How to Find a Sample Size in Statistics
 
 A sample is a percentage of the total population in statistics. You can use the data from a sample to make inferences about a population as a whole. For example, the standard deviation of a sample can be used to approximate the standard deviation of a population. Finding a sample size can be one of the most challenging tasks in statistics and depends upon many factors including the size of your original population.
 
+The sample size calculation can be conducted in two ways: testing one population and testing difference of two populations.
+
+## 1. Sample Size Calculation for Testing One Population Proportion
+
 ### 1.A Large population
 
-Assume we have large enough populations. The margin of error is given by
+Assume we have large enough populations. The **margin of error** is given by
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=e&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" title="e = Z \sqrt{\frac{p(1-p)}{n_0}} = Z \sqrt{\frac{pq}{n_0}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=MoE&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MoE&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" title="MoE = Z \sqrt{\frac{p(1-p)}{n_0}} = Z \sqrt{\frac{pq}{n_0}}" /></a>
 
 Then given **confidence level** and **margin of error**, reversely the sample size needed per variation can be estimated by cochran formula [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]:
 
@@ -88,7 +92,11 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 
 
-## 2. Page View Example, Required Statistical Power
+## 2. Power Analysis
+
+### 2.1
+
+### 2.2 Udacity page view example
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
