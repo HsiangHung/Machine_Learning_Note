@@ -22,19 +22,19 @@ The sample size calculation can be conducted in two ways: testing one population
 Table of Contents:
 
 * [1. Sample Size Calculation for Testing One Population Proportion](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1-sample-size-calculation-for-testing-one-population-proportion)
-     * [1.A - Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a---large-population)
-     * [1.B - Samll population: modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b---samll-population-modification-for-the-cochran-formula)
-     * [1.C - Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c---examples)
+     * [1.1 - Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#11---large-population)
+     * [1.2 - Samll population: modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#12---samll-population-modification-for-the-cochran-formula)
+     * [1.3 - Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#13---examples)
 * [2. Power Analysis](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#2-power-analysis)
-     * [2.A - ]()
-     * [2.B - Udacity page view example](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#22---udacity-page-view-example)
+     * [2.1 - ]()
+     * [2.3 - Udacity page view example](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#23---udacity-page-view-example)
 * [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#3-sample-size-vs-conversion-rate-and-minimum-detectable-effect)
 
 
 
 ## 1. Sample Size Calculation for Testing One Population Proportion
 
-### 1.A - Large population
+### 1.1 Large population
 
 Assume we have large enough populations. The **margin of error** is given by
 
@@ -55,7 +55,7 @@ A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we 
 So a random sample of 385 households in our target population should be enough to give us the confidence levels we need.
 
 
-### 1.B - Samll population: modification for the Cochran Formula
+### 1.2 Samll population: modification for the Cochran Formula
 
 If the population we’re studying is **small**, we can modify the sample size we calculated in the above formula by using this equation [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips], [[Survey Monkey]][Sample size calculator]:
 
@@ -72,7 +72,7 @@ This is the size **one your variations** needs to be. So for your email send, if
 
 Here are the calculators from [survey system](https://www.surveysystem.com/sscalc.htm) and [survey monkey](https://www.surveymonkey.com/mp/sample-size-calculator/).
 
-### 1.C - Examples
+### 1.3 Examples
 
 #### Given a confidence level and width, unknown population standard deviation
 
@@ -97,13 +97,13 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 ## 2. Power Analysis
 
-### 2.1 - What is power?
+### 2.1 What is power?
 
-### 2.2 - Power analysis process
+### 2.2 Power analysis process
 
 ![](images/process_power_analysis.png)
 
-### 2.2 - Udacity page view example
+### 2.3 Udacity page view example
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
