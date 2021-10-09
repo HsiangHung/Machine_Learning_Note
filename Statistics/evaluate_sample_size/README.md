@@ -7,17 +7,6 @@
 
 A sample size is a **part of the population** chosen for a survey or experiment. For example, you might take a survey of dog owner’s brand preferences. You won’t want to survey all the millions of dog owners in the country (either because it’s too expensive or time consuming), so you take a sample size. That may be several thousand owners. The sample size is a representation of all dog owner’s brand preferences. If you choose your sample wisely, it will be a good representation.
 
-Table of Contents:
-
-
-* [1. Sample Size Calculation for Testing One Population Proportion](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1-how-to-find-a-sample-size-in-statistics)
-     * [1.A Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a-large-population)
-     * [1.B Samll population - modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b-samll-population---modification-for-the-cochran-formula)
-     * [1.C Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c-examples)
-* [2. Page View Example, Required Statistical Power](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#2-page-view-example-required-statistical-power)
-* [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#3-sample-size-vs-conversion-rate-and-minimum-detectable-effect)
-
-
 
 ## When Error can Creep in
 
@@ -29,6 +18,18 @@ A sample is a percentage of the total population in statistics. You can use the 
 
 The sample size calculation can be conducted in two ways: testing one population and testing difference of two populations.
 
+
+Table of Contents:
+
+* [1. Sample Size Calculation for Testing One Population Proportion](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1-how-to-find-a-sample-size-in-statistics)
+     * [1.A Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a-large-population)
+     * [1.B Samll population - modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b-samll-population---modification-for-the-cochran-formula)
+     * [1.C Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c-examples)
+* [2. Page View Example, Required Statistical Power](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#2-page-view-example-required-statistical-power)
+* [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#3-sample-size-vs-conversion-rate-and-minimum-detectable-effect)
+
+
+
 ## 1. Sample Size Calculation for Testing One Population Proportion
 
 ### 1.A Large population
@@ -37,11 +38,11 @@ Assume we have large enough populations. The **margin of error** is given by
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=MoE&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MoE&space;=&space;Z&space;\sqrt{\frac{p(1-p)}{n_0}}&space;=&space;Z&space;\sqrt{\frac{pq}{n_0}}" title="MoE = Z \sqrt{\frac{p(1-p)}{n_0}} = Z \sqrt{\frac{pq}{n_0}}" /></a>
 
-Then given **confidence level** and **margin of error**, reversely the sample size needed per variation can be estimated by cochran formula [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]:
+Then given values of **confidence level** and **margin of error**, reversely the sample size needed per variation can be estimated by cochran formula [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_0&space;=&space;\frac{Z^2&space;pq}{e^2}" title="n_0 = \frac{Z^2 pq}{e^2}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=n_0&space;=&space;\frac{Z^2&space;pq}{(MoE)^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_0&space;=&space;\frac{Z^2&space;pq}{(MoE)^2}" title="n_0 = \frac{Z^2 pq}{(MoE)^2}" /></a>
 
-Suppose we are doing a study on the inhabitants of a **large** town, and want to find out how many households serve breakfast in the mornings. We don’t have much information on the subject to begin with, so we’re going to assume that half of the families serve breakfast: this gives us **maximum variability. So p = 0.5**. Now let’s say we want 95% confidence, and at least 5%—plus or minus—precision [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips]. 
+Suppose we are doing a study on the inhabitants of a **large** town, and want to find out how many households serve breakfast in the mornings. We don’t have much information on the subject to begin with, so we’re going to assume that half of the families serve breakfast: this gives us **maximum variability. So p = 0.5**. Now let’s say we want 95% confidence, and at least 5%—plus or minus—precision [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips], then the confidenece level is 45%-55%.
 
 A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we get
 
