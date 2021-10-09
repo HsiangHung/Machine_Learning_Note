@@ -97,7 +97,11 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 ## 2. Power Analysis
 
-### 2.1
+### 2.1 - What is power?
+
+### 2.2 - Power analysis process
+
+![](images/process_power_analysis.png)
 
 ### 2.2 - Udacity page view example
 
