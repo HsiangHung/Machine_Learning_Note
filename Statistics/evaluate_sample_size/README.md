@@ -155,6 +155,7 @@ Note the `absolute` is selected to make 8%-12% confidence interval. The online c
 
 ### 2.2.B - Udacity page view example
 
+![](images/example_calculate_samplesize_power.png)
 
 ## 3. Sample Size vs Conversion Rate and Minimum Detectable Effect
 
