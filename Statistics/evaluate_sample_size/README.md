@@ -22,9 +22,9 @@ The sample size calculation can be conducted in two ways: testing one population
 Table of Contents:
 
 * [1. Sample Size Calculation for Testing One Population Proportion](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1-sample-size-calculation-for-testing-one-population-proportion)
-     * [1.A Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a-large-population)
-     * [1.B Samll population - modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b-samll-population---modification-for-the-cochran-formula)
-     * [1.C Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c-examples)
+     * [1.A - Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a-large-population)
+     * [1.B - Samll population: modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b-samll-population---modification-for-the-cochran-formula)
+     * [1.C - Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c-examples)
 * [2. Page View Example, Required Statistical Power](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#2-page-view-example-required-statistical-power)
 * [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#3-sample-size-vs-conversion-rate-and-minimum-detectable-effect)
 
@@ -32,7 +32,7 @@ Table of Contents:
 
 ## 1. Sample Size Calculation for Testing One Population Proportion
 
-### 1.A Large population
+### 1.A - Large population
 
 Assume we have large enough populations. The **margin of error** is given by
 
@@ -53,7 +53,7 @@ A 95 % confidence level gives us Z values of 1.96, per the normal tables, so we 
 So a random sample of 385 households in our target population should be enough to give us the confidence levels we need.
 
 
-### 1.B Samll population - modification for the Cochran Formula
+### 1.B - Samll population: modification for the Cochran Formula
 
 If the population we’re studying is **small**, we can modify the sample size we calculated in the above formula by using this equation [[Statistics How To]][Sample Size in Statistics (How to Find it): Excel, Cochran’s Formula, General Tips], [[Survey Monkey]][Sample size calculator]:
 
@@ -70,7 +70,7 @@ This is the size **one your variations** needs to be. So for your email send, if
 
 Here are the calculators from [survey system](https://www.surveysystem.com/sscalc.htm) and [survey monkey](https://www.surveymonkey.com/mp/sample-size-calculator/).
 
-### 1.C Examples
+### 1.C - Examples
 
 #### Given a confidence level and width, unknown population standard deviation
 
