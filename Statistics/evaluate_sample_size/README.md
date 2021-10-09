@@ -114,13 +114,19 @@ Mathmatically, for comparing two means, the power is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(\mu_0&space;-&space;\mu)}{SE}&space;\Big])" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(\mu_0&space;-&space;\mu)}{SE}&space;\Big])" title="\textrm{Power} = P(Z > \Big[ \frac{Z_{1-\alpha} SE_0 + (\mu_0 - \mu)}{SE} \Big])" /></a>
 
-where μo = 0 is the mean difference under **Ho**; μ is the mean difference under **Ha**, difference between means of control and treatment groups. SEo/SE is the standard error under **Ho**/**Ha**. Using 95% significant level, <a href="https://www.codecogs.com/eqnedit.php?latex=Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" title="Z_{1-\alpha} = Z_{0.95} = 1.96" /></a>.
+where **μo = 0** is the mean difference under **Ho**; **μ** is the mean difference under **Ha**, difference between means of control and treatment groups. **SEo** and **SE** is the standard error under **Ho** and **Ha**. Using 95% significant level, <a href="https://www.codecogs.com/eqnedit.php?latex=Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" title="Z_{1-\alpha} = Z_{0.95} = 1.96" /></a>.
 
-and for comparing two proportion, the power is
+For comparing two proportion, the power is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(p_0&space;-&space;p)}{SE}&space;\Big])" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(p_0&space;-&space;p)}{SE}&space;\Big])" title="\textrm{Power} = P(Z > \Big[ \frac{Z_{1-\alpha} SE_0 + (p_0 - p)}{SE} \Big])" /></a>
 
-where po = 0 is the difference in proportion under **Ho**; p = p1-p2 is the difference in proportion under **Ha**, p1 and p2 are proportion of control and treatment groups.
+where **po = 0** is the difference in proportion under **Ho**; **p = p1-p2** is the difference in proportion under **Ha**, p1 and p2 are proportion of control and treatment groups. SEo and SE are 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=SE_0&space;=&space;\sqrt{\frac{\bar{p}(1-\bar{p})}{n_1}&space;&plus;&space;\frac{\bar{p}(1-\bar{p})}{n_2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?SE_0&space;=&space;\sqrt{\frac{\bar{p}(1-\bar{p})}{n_1}&space;&plus;&space;\frac{\bar{p}(1-\bar{p})}{n_2}}" title="SE_0 = \sqrt{\frac{\bar{p}(1-\bar{p})}{n_1} + \frac{\bar{p}(1-\bar{p})}{n_2}}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=SE&space;=&space;\sqrt{\frac{p_1(1-p_1)}{n_1}&space;&plus;&space;\frac{p_2(1-p_2)}{n_2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?SE&space;=&space;\sqrt{\frac{p_1(1-p_1)}{n_1}&space;&plus;&space;\frac{p_2(1-p_2)}{n_2}}" title="SE = \sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}" /></a>
+
+note <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{p}" title="\bar{p}" /></a> is the mean of **p1** and **p2**; **n1** and **n2** are sample sizes from group 1 and group 2.
 
 
 ### 2.2 Power analysis
