@@ -99,19 +99,26 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 ### 2.1 What is power?
 
-Given the null hypothesis Ho and alternative hypothesis Ha, if these distributions have less overlap, the testing is more significant, and power is higher. Power is the probability given Ho is false, we reject Ho. 
+    Power is the probability given Ho is false, we reject Ho. 
+
+Given the null hypothesis Ho and alternative hypothesis Ha, if these distributions have less overlap, the testing is more significant, and power is higher. 
 
 ![](images/explanation_power.png)
 
-The extreme case is zero overlap between Ho and Ha, then power = 100%.
+Therefore we can image an extreme case: without any overlap between Ho and Ha, power = 100%.
 
 
-### 2.2 Power analysis process
+### 2.2 Power analysis
 
 The factors to determine the power are
 
 ![](images/determinant_power.png)
 
+The simplest controllable factor to determine power is sample size. The sample size influence the distribution wide or narrow: larger sample size usually leads to smaller standard errors:
+
+![](images/sample_size_power.png)
+
+Therefore, to avoid p-hacking, before we run experimentation, we should perform power analysis to determine the minimum sample size.
 
 ![](images/process_power_analysis.png)
 
