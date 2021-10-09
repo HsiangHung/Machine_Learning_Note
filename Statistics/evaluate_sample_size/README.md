@@ -101,23 +101,35 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
     Power is the probability given null hypothesis (Ho) is false, we reject Ho. 
 
-Given the null hypothesis **Ho** and alternative hypothesis **Ha**, if these distributions have less overlap, the testing is more significant, and power is higher (credit from Kunchok Dorjee's youtube [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)). 
+Given the null hypothesis **Ho** and alternative hypothesis **Ha**, if these distributions have less overlap, the testing is more significant, and power is higher (credit from Kunchok Dorjee's lecture [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)). 
 
 ![](images/explanation_power.png)
 
-Therefore we can image an extreme case: without any overlap between Ho and Ha, power = 100%. 
-
-The factors to determine the power are (from Kunchok Dorjee's youtube [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA))
+Therefore we can image an extreme case: without any overlap between Ho and Ha, power = 100%. The factors to determine the power are (from Kunchok Dorjee's lecture [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA))
 
 ![](images/determinant_power.png)
 
+
+Mathmatically, for comparing two means, the power is 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(\mu_0&space;-&space;\mu)}{SE}&space;\Big])" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(\mu_0&space;-&space;\mu)}{SE}&space;\Big])" title="\textrm{Power} = P(Z > \Big[ \frac{Z_{1-\alpha} SE_0 + (\mu_0 - \mu)}{SE} \Big])" /></a>
+
+where μo = 0 is the mean difference under **Ho**; μ is the mean difference under **Ha**, difference between means of control and treatment groups. SEo/SE is the standard error under **Ho**/**Ha**. Using 95% significant level, <a href="https://www.codecogs.com/eqnedit.php?latex=Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Z_{1-\alpha}&space;=&space;Z_{0.95}&space;=&space;1.96" title="Z_{1-\alpha} = Z_{0.95} = 1.96" /></a>.
+
+and for comparing two proportion, the power is
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(p_0&space;-&space;p)}{SE}&space;\Big])" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Power}&space;=&space;P(Z&space;>&space;\Big[&space;\frac{Z_{1-\alpha}&space;SE_0&space;&plus;&space;(p_0&space;-&space;p)}{SE}&space;\Big])" title="\textrm{Power} = P(Z > \Big[ \frac{Z_{1-\alpha} SE_0 + (p_0 - p)}{SE} \Big])" /></a>
+
+where po = 0 is the difference in proportion under **Ho**; p = p1-p2 is the difference in proportion under **Ha**, p1 and p2 are proportion of control and treatment groups.
+
+
 ### 2.2 Power analysis
 
-The simplest controllable factor to determine power is sample size. The sample size influence the distribution wide or narrow: larger sample size usually leads to smaller standard errors (credit from Kunchok Dorjee's youtube [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)):
+The simplest controllable factor to determine power is sample size. The sample size influence the distribution wide or narrow: larger sample size usually leads to smaller standard errors (credit from Kunchok Dorjee's lecture [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)):
 
 ![](images/sample_size_power.png)
 
-Therefore, to avoid p-hacking, before we run experimentation, we should perform power analysis to determine the minimum sample size (credit from Kunchok Dorjee's youtube [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)).
+Therefore, to avoid p-hacking, before we run experimentation, we should perform power analysis to determine the minimum sample size. The processes to calculate sample are as follows (credit from Kunchok Dorjee's lecture [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)).
 
 ![](images/process_power_analysis.png)
 
