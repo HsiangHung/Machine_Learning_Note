@@ -99,25 +99,25 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 ### 2.1 What is power?
 
-    Power is the probability given null hypothesis **Ho** is false, we reject Ho. 
+    Power is the probability given null hypothesis (Ho) is false, we reject Ho. 
 
-Given the null hypothesis **Ho** and alternative hypothesis **Ha**, if these distributions have less overlap, the testing is more significant, and power is higher. 
+Given the null hypothesis **Ho** and alternative hypothesis **Ha**, if these distributions have less overlap, the testing is more significant, and power is higher (credit from Kunchok Dorjee's youtube [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)). 
 
 ![](images/explanation_power.png)
 
 Therefore we can image an extreme case: without any overlap between Ho and Ha, power = 100%. 
 
-The factors to determine the power are
+The factors to determine the power are (from Kunchok Dorjee's youtube [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA))
 
 ![](images/determinant_power.png)
 
 ### 2.2 Power analysis
 
-The simplest controllable factor to determine power is sample size. The sample size influence the distribution wide or narrow: larger sample size usually leads to smaller standard errors:
+The simplest controllable factor to determine power is sample size. The sample size influence the distribution wide or narrow: larger sample size usually leads to smaller standard errors (credit from Kunchok Dorjee's youtube [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)):
 
 ![](images/sample_size_power.png)
 
-Therefore, to avoid p-hacking, before we run experimentation, we should perform power analysis to determine the minimum sample size.
+Therefore, to avoid p-hacking, before we run experimentation, we should perform power analysis to determine the minimum sample size (credit from Kunchok Dorjee's youtube [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)).
 
 ![](images/process_power_analysis.png)
 
