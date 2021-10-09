@@ -101,13 +101,17 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 Given the null hypothesis Ho and alternative hypothesis Ha, if these distributions have less overlap, the testing is more significant, and power is higher. Power is the probability given Ho is false, we reject Ho. 
 
-
 ![](images/explanation_power.png)
 
 The extreme case is zero overlap between Ho and Ha, then power = 100%.
 
 
 ### 2.2 Power analysis process
+
+The factors to determine the power are
+
+![](images/determinant_power.png)
+
 
 ![](images/process_power_analysis.png)
 
