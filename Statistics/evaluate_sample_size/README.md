@@ -22,10 +22,12 @@ The sample size calculation can be conducted in two ways: testing one population
 Table of Contents:
 
 * [1. Sample Size Calculation for Testing One Population Proportion](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1-sample-size-calculation-for-testing-one-population-proportion)
-     * [1.A - Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a-large-population)
-     * [1.B - Samll population: modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b-samll-population---modification-for-the-cochran-formula)
-     * [1.C - Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c-examples)
-* [2. Page View Example, Required Statistical Power](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#2-page-view-example-required-statistical-power)
+     * [1.A - Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a---large-population)
+     * [1.B - Samll population: modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b---samll-population-modification-for-the-cochran-formula)
+     * [1.C - Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1c---examples)
+* [2. Power Analysis](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#2-power-analysis)
+     * [2.A - ](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1a---large-population)
+     * [2.B - Udacity page view example](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1b---samll-population-modification-for-the-cochran-formula)
 * [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#3-sample-size-vs-conversion-rate-and-minimum-detectable-effect)
 
 
@@ -97,7 +99,7 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 ### 2.1
 
-### 2.2 Udacity page view example
+### 2.2 - Udacity page view example
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
