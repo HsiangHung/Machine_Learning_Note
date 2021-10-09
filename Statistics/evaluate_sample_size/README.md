@@ -22,12 +22,12 @@ The sample size calculation can be conducted in two ways: testing one population
 Table of Contents:
 
 * [1. Sample Size Calculation for Testing One Population Proportion](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#1-sample-size-calculation-for-testing-one-population-proportion)
-     * [1.1 - Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#11---large-population)
-     * [1.2 - Samll population: modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#12---samll-population-modification-for-the-cochran-formula)
-     * [1.3 - Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#13---examples)
+     * [1.1 Large population](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#11-large-population)
+     * [1.2 Samll population: modification for the Cochran Formula](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#12-samll-population-modification-for-the-cochran-formula)
+     * [1.3 Examples](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#13-examples)
 * [2. Power Analysis](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#2-power-analysis)
-     * [2.1 - ]()
-     * [2.3 - Udacity page view example](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#23---udacity-page-view-example)
+     * [2.1 ]()
+     * [2.3 Udacity page view example](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#23-udacity-page-view-example)
 * [3. Sample Size vs Conversion Rate and Minimum Detectable Effect](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Statistics/evaluate_sample_size#3-sample-size-vs-conversion-rate-and-minimum-detectable-effect)
 
 
