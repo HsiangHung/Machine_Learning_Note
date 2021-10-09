@@ -99,9 +99,9 @@ Example question: Suppose we want to know the average age of an Florida State Co
 
 ### 2.1 What is power?
 
-    Power is the probability given Ho is false, we reject Ho. 
+    Power is the probability given null hypothesis **Ho** is false, we reject Ho. 
 
-Given the null hypothesis Ho and alternative hypothesis Ha, if these distributions have less overlap, the testing is more significant, and power is higher. 
+Given the null hypothesis **Ho** and alternative hypothesis **Ha**, if these distributions have less overlap, the testing is more significant, and power is higher. 
 
 ![](images/explanation_power.png)
 
