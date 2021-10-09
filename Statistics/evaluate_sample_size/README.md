@@ -105,14 +105,13 @@ Given the null hypothesis Ho and alternative hypothesis Ha, if these distributio
 
 ![](images/explanation_power.png)
 
-Therefore we can image an extreme case: without any overlap between Ho and Ha, power = 100%.
-
-
-### 2.2 Power analysis
+Therefore we can image an extreme case: without any overlap between Ho and Ha, power = 100%. 
 
 The factors to determine the power are
 
 ![](images/determinant_power.png)
+
+### 2.2 Power analysis
 
 The simplest controllable factor to determine power is sample size. The sample size influence the distribution wide or narrow: larger sample size usually leads to smaller standard errors:
 
