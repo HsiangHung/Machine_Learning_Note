@@ -83,7 +83,7 @@ if two populations have the same sizes, the pooled standard deviation is simply 
 <a href="https://www.codecogs.com/eqnedit.php?latex=s&space;=&space;\sqrt{\frac{s^2_1&plus;s^2_2}{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s&space;=&space;\sqrt{\frac{s^2_1&plus;s^2_2}{2}}" title="s = \sqrt{\frac{s^2_1+s^2_2}{2}}" /></a>
 
 
-The above form for the effect size resembles the computation for a t-test statistic, except for that t-test statistic includes a factor of <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma/\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma/\sqrt{n}" title="\sigma/\sqrt{n}" /></a>,
+The above form for the effect size resembles the computation for a t-test statistic, except for that t-test statistic includes a factor of <a href="https://www.codecogs.com/eqnedit.php?latex=1/\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/\sqrt{n}" title="1/\sqrt{n}" /></a>,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=&space;\frac{\mu_1&space;-\mu_2}{SE}&space;=&space;\frac{\mu_1&space;-\mu_2}{\big(\frac{SD}{\sqrt{n}}&space;\big)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=&space;\frac{\mu_1&space;-\mu_2}{SE}&space;=&space;\frac{\mu_1&space;-\mu_2}{\big(\frac{SD}{\sqrt{n}}&space;\big)}" title="t = \frac{\mu_1 -\mu_2}{SE} = \frac{\mu_1 -\mu_2}{\big(\frac{SD}{\sqrt{n}} \big)}" /></a>
 
