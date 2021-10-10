@@ -103,6 +103,8 @@ These effect sizes estimate the amount of the variance within an experiment that
 
 ### C. Other effect sizes
 
+From [[Courtney Donovan]][Power & Effect Size] lecture:
+
 ![](images/effect_sizes.png)
 
 #### Reference
