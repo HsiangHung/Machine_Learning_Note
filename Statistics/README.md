@@ -91,7 +91,15 @@ The form for the effect size d resembles the computation for a t-test statistic,
 
 which means that for a given effect size, the significance level increases with the sample size. Unlike the t-test statistic, the effect size here aims to estimate a population parameter and is **not** affected by the sample size.
 
-### B. Correlation family: Effect sizes based on "variance explained"
+### B. Effect sizes for difference in proportion
+
+From [[Kunchok Dorjee]][Power and Sample Size Calculation]:
+
+![](images/effect_sizes_proportion.png)
+
+Also, in the Kunchok Dorjee's video, @ 20th min there are more information.
+
+### C. Correlation family: Effect sizes based on "variance explained"
 
 These effect sizes estimate the amount of the variance within an experiment that is "explained" or "accounted for" by the experiment's model. Pearson's correlation, often denoted r and introduced by Karl Pearson, is widely used as an effect size when paired quantitative data are available[[wiki]][Wiki-Effect size, Effect size], [[statisticssolution]][statisticssolution, Effect Size].
 
@@ -101,7 +109,7 @@ These effect sizes estimate the amount of the variance within an experiment that
 | Medium | 0.3 |
 | Large | 0.5 |
 
-### C. Other effect sizes
+### D. Other effect sizes
 
 From [[Courtney Donovan]][Power & Effect Size] lecture:
 
@@ -113,6 +121,8 @@ From [[Courtney Donovan]][Power & Effect Size] lecture:
 [[Courtney Donovan] Power & Effect Size](https://www.youtube.com/watch?v=9LVD9oLg1A0)
 * [Power Analysis, Clearly Explained!!!]: https://www.youtube.com/watch?v=VX_M3tIyiYk
 [[Josh Starmer] Power Analysis, Clearly Explained!!!](https://www.youtube.com/watch?v=VX_M3tIyiYk)
+* [Power and Sample Size Calculation]: https://www.youtube.com/watch?v=iuBbJIeEUwA
+[[Kunchok Dorjee] Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)
 * [Merra, Power Analysis, Statistical Significance, & Effect Size]: https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.
 [[Merra] Merra, Power Analysis, Statistical Significance, & Effect Size](https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.)
 * [statisticssolution, Effect Size]: https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/
