@@ -68,9 +68,11 @@ Ideally, we want both lower <a href="https://www.codecogs.com/eqnedit.php?latex=
 
 ## Effect size
 
+The larger the effect size, the larger the power and the smaller the probability of making type II error [[Courtney Donovan]][Power & Effect Size].
+
 ### A. Difference family: Effect sizes based on differences between means (Cohen's D)
 
-The effect size Cohen's d based on means usually considers the standardized mean difference between **two** populations [[wiki]][Wiki-Effect size, Effect size], [[Merra]][Merra, Power Analysis, Statistical Significance, & Effect Size]:
+The effect size, Cohen's d, based on means usually considers the standardized mean difference between **two** populations [[wiki]][Wiki-Effect size, Effect size], [[Merra]][Merra, Power Analysis, Statistical Significance, & Effect Size]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=d&space;=&space;\frac{\mu_1&space;-\mu_2}{s}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d&space;=&space;\frac{\mu_1&space;-\mu_2}{s}" title="d = \frac{\mu_1 -\mu_2}{s}" /></a>
 
@@ -83,7 +85,7 @@ if two populations have the same sizes, the pooled standard deviation is simply 
 <a href="https://www.codecogs.com/eqnedit.php?latex=s&space;=&space;\sqrt{\frac{s^2_1&plus;s^2_2}{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s&space;=&space;\sqrt{\frac{s^2_1&plus;s^2_2}{2}}" title="s = \sqrt{\frac{s^2_1+s^2_2}{2}}" /></a>
 
 
-The above form for the effect size resembles the computation for a t-test statistic, except for that t-test statistic includes a factor of <a href="https://www.codecogs.com/eqnedit.php?latex=1/\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/\sqrt{n}" title="1/\sqrt{n}" /></a>,
+The form for the effect size d resembles the computation for a t-test statistic, except for that t-test statistic includes a factor of <a href="https://www.codecogs.com/eqnedit.php?latex=1/\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/\sqrt{n}" title="1/\sqrt{n}" /></a>,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;=&space;\frac{\mu_1&space;-\mu_2}{SE}&space;=&space;\frac{\mu_1&space;-\mu_2}{\big(\frac{SD}{\sqrt{n}}&space;\big)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;=&space;\frac{\mu_1&space;-\mu_2}{SE}&space;=&space;\frac{\mu_1&space;-\mu_2}{\big(\frac{SD}{\sqrt{n}}&space;\big)}" title="t = \frac{\mu_1 -\mu_2}{SE} = \frac{\mu_1 -\mu_2}{\big(\frac{SD}{\sqrt{n}} \big)}" /></a>
 
@@ -101,6 +103,8 @@ These effect sizes estimate the amount of the variance within an experiment that
 
 #### Reference
 
+* [Power & Effect Size]: https://www.youtube.com/watch?v=9LVD9oLg1A0
+[[Courtney Donovan] Power & Effect Size](https://www.youtube.com/watch?v=9LVD9oLg1A0)
 * [Power Analysis, Clearly Explained!!!]: https://www.youtube.com/watch?v=VX_M3tIyiYk
 [[Josh Starmer] Power Analysis, Clearly Explained!!!](https://www.youtube.com/watch?v=VX_M3tIyiYk)
 * [Merra, Power Analysis, Statistical Significance, & Effect Size]: https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.
