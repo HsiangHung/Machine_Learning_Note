@@ -101,6 +101,10 @@ These effect sizes estimate the amount of the variance within an experiment that
 | Medium | 0.3 |
 | Large | 0.5 |
 
+### C. Other effect sizes
+
+![](images/effect_sizes.png)
+
 #### Reference
 
 * [Power & Effect Size]: https://www.youtube.com/watch?v=9LVD9oLg1A0
