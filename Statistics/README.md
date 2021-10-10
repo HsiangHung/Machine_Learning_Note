@@ -68,13 +68,20 @@ Ideally, we want both lower <a href="https://www.codecogs.com/eqnedit.php?latex=
 
 ## Effect size
 
-### A. Difference family: Effect sizes based on differences between means
+### A. Difference family: Effect sizes based on differences between means (Cohen's D)
 
 The effect size θ based on means usually considers the standardized mean difference between **two** populations [[wiki]][Wiki-Effect size, Effect size], [[Merra]][Merra, Power Analysis, Statistical Significance, & Effect Size]:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{\sigma}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{\sigma}" title="\theta = \frac{\mu_1 -\mu_2}{\sigma}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{s}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=&space;\frac{\mu_1&space;-\mu_2}{s}" title="\theta = \frac{\mu_1 -\mu_2}{s}" /></a>
 
-where μ1 is the mean for one population, μ2 is the mean for the other population, and σ is a standard deviation based on either or both populations. 
+where μ1 is the mean for one population, μ2 is the mean for the other population, and s is the pooled standard deviation [[wiki]][Wiki-Effect size, Effect size]:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=s&space;=&space;\sqrt{\frac{(n_1-1)^2s^2_1&plus;(n_2-1)^2s^2_2}{n_1&plus;n_2-2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s&space;=&space;\sqrt{\frac{(n_1-1)^2s^2_1&plus;(n_2-1)^2s^2_2}{n_1&plus;n_2-2}}" title="s = \sqrt{\frac{(n_1-1)^2s^2_1+(n_2-1)^2s^2_2}{n_1+n_2-2}}" /></a>
+
+if two populations have the same sizes, the pooled standard deviation is simply as [[Josh Starmer]][Power Analysis, Clearly Explained!!!]
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=s&space;=&space;\sqrt{\frac{s^2_1&plus;s^2_2}{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s&space;=&space;\sqrt{\frac{s^2_1&plus;s^2_2}{2}}" title="s = \sqrt{\frac{s^2_1+s^2_2}{2}}" /></a>
+
 
 The above form for the effect size resembles the computation for a t-test statistic, except for that t-test statistic includes a factor of <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma/\sqrt{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma/\sqrt{n}" title="\sigma/\sqrt{n}" /></a>, which means that for a given effect size, the significance level increases with the sample size. Unlike the t-test statistic, the effect size here aims to estimate a population parameter and is **not** affected by the sample size.
 
@@ -90,6 +97,8 @@ These effect sizes estimate the amount of the variance within an experiment that
 
 #### Reference
 
+* [Power Analysis, Clearly Explained!!!]: https://www.youtube.com/watch?v=VX_M3tIyiYk
+[[Josh Starmer] Power Analysis, Clearly Explained!!!](https://www.youtube.com/watch?v=VX_M3tIyiYk)
 * [Merra, Power Analysis, Statistical Significance, & Effect Size]: https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.
 [[Merra] Merra, Power Analysis, Statistical Significance, & Effect Size](https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size#:~:text=Generally%2C%20effect%20size%20is%20calculated,of%20one%20of%20the%20groups.)
 * [statisticssolution, Effect Size]: https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/effect-size/

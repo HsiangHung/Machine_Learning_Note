@@ -128,7 +128,7 @@ where **po = 0** is the difference in proportion under **Ho**; **p = p1-p2** is 
 
 note <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{p}" title="\bar{p}" /></a> is the mean of **p1** and **p2**; **n1** and **n2** are sample sizes from group 1 and group 2.
 
-#### Example
+#### Kunchok Dorjee's Example
 
 ![](images/example_calculate_power.png)
 
@@ -139,7 +139,7 @@ The simplest controllable factor to determine power is sample size. The sample s
 
 ![](images/sample_size_power.png)
 
-Therefore, to avoid [p-hacking](https://www.youtube.com/watch?v=HDCOUXE3HMM), before we run experimentation, we should perform power analysis to determine the minimum sample size [[Josh Starmer-2]][Power Analysis, Clearly Explained!!!]. The processes to calculate sample are as follows (credit from Kunchok Dorjee's lecture [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)).
+Therefore, to avoid [p-hacking](https://www.youtube.com/watch?v=HDCOUXE3HMM), **before** we run experimentation, we should perform power analysis to determine the minimum sample size [[Josh Starmer-2]][Power Analysis, Clearly Explained!!!]. The processes to calculate sample are as follows (credit from Kunchok Dorjee's lecture [Power and Sample Size Calculation](https://www.youtube.com/watch?v=iuBbJIeEUwA)).
 
 ![](images/process_power_analysis.png)
 
@@ -153,7 +153,9 @@ Assume the conversion rate is about 10%, and we want to run an A/B test. The min
 
 Note the `absolute` is selected to make 8%-12% confidence interval. The online calculator shows at least we need sample size of 3,623 page views per variation (in each group) to see significant results in the AB test.
 
-### 2.2.B - Udacity page view example
+### 2.2.B - Kunchok Dorjee's Example
+
+Followed the previous example, p1=0.8, p2= 0.7
 
 ![](images/example_calculate_samplesize_power.png)
 
