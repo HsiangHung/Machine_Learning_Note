@@ -97,7 +97,7 @@ From [[Kunchok Dorjee]][Power and Sample Size Calculation]:
 
 ![](images/effect_sizes_proportion.png)
 
-Also, in the Kunchok Dorjee's video, @ 20th min there are more information.
+Also, in the Kunchok Dorjee's video, @20:00 min the slides shows more information.
 
 ### C. Correlation family: Effect sizes based on "variance explained"
 
