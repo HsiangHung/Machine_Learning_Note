@@ -32,9 +32,9 @@ Sometimes even de-trending is not sufficient to make the series stationary, howe
 After detrending, if the mean, variance, and autocorrelations of the original series are still not constant in time, we may need to transform the de-trended series into a series of period-to-period and/or season-to-season differences. Such a series is said to be **difference-stationary**.
 
 
-## Time-Series Models
+## 1. Time-Series Models
 
-### Exponentially Weighted Average
+### 1.1 Exponentially Weighted Average
 
 Suppose we have time-series data like day 1, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_1" title="\theta_1" /></a>, day 2, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_2" title="\theta_2" /></a> .... etc, we can implement exponentially weighted avergae to fit the time series as follows (from Andrew Ng's class)
 
@@ -42,7 +42,7 @@ Suppose we have time-series data like day 1, temperature <a href="https://www.co
 
 The value of <a href="https://www.codecogs.com/eqnedit.php?latex=1/(1-\beta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/(1-\beta)" title="1/(1-\beta)" /></a> describes number of previous days used for weighted average. For example, if <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> = 0.9, data will decay to 1/e after 10 days; if 0.98 it is 50 days. 
 
-### AR(p) model
+### 1.2 AR(p) model
 
 In a multiple regression model, we forecast the variable of interest using a linear combination of **past values** of the variable. The term autoregression indicates that it is a regression of the variable against itself.
 
@@ -52,7 +52,7 @@ The **AR(p)** mdoel of order p is a multiple regression but with lagged values o
 
 where the last term is white noise.
 
-### MA(q) model
+### 1.3 MA(q) model
 
 Rather than using past values of the forecast variable in a regression, a moving average model uses past forecast errors in a regression-like model [[Rob Hyndman: 8.4 Moving average models]][8.4 Moving average models]
 
@@ -60,7 +60,7 @@ Rather than using past values of the forecast variable in a regression, a moving
 
 is referred as an **MA(q)** model, a moving average model of order q. `Yt` can be thought of as a weighted moving average of the past few forecast errors.
 
-### ARIMA(p,d,q) model
+### 1.4 ARIMA(p,d,q) model
 
 By Sunny Mewati [[Quora, 1]][What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?], Box and Jenkins claimed (successfully) [[Box, Jenkins, Reinsel]][Time Series Analysis] that nonstationary data can be made stationary by differencing the series. This series, <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*" title="Y^*" /></a> is the input in Box-Jenkins analysis. 
 
@@ -77,14 +77,17 @@ This model is called **Autoregressive Integrated Moving Average** or `ARIMA(p,d,
 The term **integrated** implies that in order to obtain a forecast of Y, we have to sum up (or **integrate over**) the values of <a href="http://www.codecogs.com/eqnedit.php?latex=Y^{\prime}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^{\prime}" title="Y^{\prime}" /></a> because <a href="http://www.codecogs.com/eqnedit.php?latex=Y^{\prime}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^{\prime}" title="Y^{\prime}" /></a> are the differenced values of the original series Y. If no differencing is involved, this model is called an Autoregressive Moving Average, i.e. `ARMA(p,q)`.
 
 
-### ARIMAX model
+### 1.5 ARIMAX model
 
 Econometricians developed another class of models that incorporated auroregressive and moving average components of Box-Jenkins approach with the ‘explanatory variables’ approach of standard econometrics [[Rob Hyndman]][The ARIMAX model muddle]. The simplest of such models is the ARIMAX which is just an ARIMA with additional explanatory variables, written as
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y^*_t = \beta x_t + \phi_1 Y^*_{t-1} + \phi_2 Y^*_{t-2} + \cdots + \phi_p Y^*_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
 
 
-## Handling Missing Values in Time Series
+### 1.6 Other models
+
+
+## 2. Handling Missing Values in Time Series
 
 In time series data, if there are missing values, there are two ways to deal with the incomplete data:
 
@@ -106,38 +109,23 @@ Based on the equation above, there can be four types of time series data:
 # Reference
 
 
-[Time Series Analysis]: https://onlinelibrary.wiley.com/doi/book/10.1002/9781118619193
+* [Time Series Analysis]: https://onlinelibrary.wiley.com/doi/book/10.1002/9781118619193
 [[Box, Jenkins, Reinsel] Time Series Analysis](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118619193)
-
-[What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?]: https://www.quora.com/Whats-the-difference-between-ARMA-ARIMA-and-ARIMAX-in-laymans-terms-What-exactly-do-P-D-Q-mean-and-how-do-you-know-what-to-put-in-for-them-in-say-R-1-0-2-or-2-1-1
+* [What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?]: https://www.quora.com/Whats-the-difference-between-ARMA-ARIMA-and-ARIMAX-in-laymans-terms-What-exactly-do-P-D-Q-mean-and-how-do-you-know-what-to-put-in-for-them-in-say-R-1-0-2-or-2-1-1
 [[Quora, 1] What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?](https://www.quora.com/Whats-the-difference-between-ARMA-ARIMA-and-ARIMAX-in-laymans-terms-What-exactly-do-P-D-Q-mean-and-how-do-you-know-what-to-put-in-for-them-in-say-R-1-0-2-or-2-1-1)
-
-
-
-[8.3 Autoregressive models]: https://otexts.com/fpp2/AR.html
+* [8.3 Autoregressive models]: https://otexts.com/fpp2/AR.html
 [[Rob Hyndman: 8.3 Autoregressive models] 8.3 Autoregressive models](https://otexts.com/fpp2/AR.html)
-
-
-[8.4 Moving average models]: https://otexts.com/fpp2/MA.html
+* [8.4 Moving average models]: https://otexts.com/fpp2/MA.html
 [[Rob Hyndman: 8.4 Moving average models] 8.4 Moving average models](https://otexts.com/fpp2/MA.html)
-
-
-[8.5 Non-seasonal ARIMA models]: https://otexts.com/fpp2/non-seasonal-arima.html
+* [8.5 Non-seasonal ARIMA models]: https://otexts.com/fpp2/non-seasonal-arima.html
 [[Rob Hyndman: 8.5 Non-seasonal ARIMA models] 8.5 Non-seasonal ARIMA models](https://otexts.com/fpp2/non-seasonal-arima.html)
-
-
-[The ARIMAX model muddle]: https://robjhyndman.com/hyndsight/arimax/
+* [The ARIMAX model muddle]: https://robjhyndman.com/hyndsight/arimax/
 [[Rob Hyndman] The ARIMAX model muddle](https://robjhyndman.com/hyndsight/arimax/)
-
-[Stationarity and differencing]: https://people.duke.edu/~rnau/411diff.htm
+* [Stationarity and differencing]: https://people.duke.edu/~rnau/411diff.htm
 [[Robert Nau, Stationarity and differencing] Stationarity and differencing](https://people.duke.edu/~rnau/411diff.htm)
-
-[ARIMA models for time series forecasting]: https://people.duke.edu/~rnau/411arim.htm
+* [ARIMA models for time series forecasting]: https://people.duke.edu/~rnau/411arim.htm
 [[Robert Nau, ARIMA] ARIMA models for time series forecasting](https://people.duke.edu/~rnau/411arim.htm)
-
-[Why does a time series have to be stationary?]: https://stats.stackexchange.com/questions/19715/why-does-a-time-series-have-to-be-stationary
+* [Why does a time series have to be stationary?]: https://stats.stackexchange.com/questions/19715/why-does-a-time-series-have-to-be-stationary
 [[StackExchange, 1] Why does a time series have to be stationary?](https://stats.stackexchange.com/questions/19715/why-does-a-time-series-have-to-be-stationary)
-
-
-[Handle Missing Values in Time Series For Beginners]: https://www.kaggle.com/juejuewang/handle-missing-values-in-time-series-for-beginners
+* [Handle Missing Values in Time Series For Beginners]: https://www.kaggle.com/juejuewang/handle-missing-values-in-time-series-for-beginners
 [[Kaggle: jingjuewang] Handle Missing Values in Time Series For Beginners](https://www.kaggle.com/juejuewang/handle-missing-values-in-time-series-for-beginners)
