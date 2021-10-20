@@ -86,6 +86,8 @@ Econometricians developed another class of models that incorporated auroregressi
 
 ### 1.6 Other models
 
+FFT model and Seq2Seq: [Two Effective Algorithms for Time Series Forecasting](https://www.youtube.com/watch?v=VYpAodcdFfA)
+
 
 ## 2. Handling Missing Values in Time Series
 
