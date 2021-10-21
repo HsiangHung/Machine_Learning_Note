@@ -41,7 +41,7 @@ Table of Contents:
 
 A simple evaludation for regression models is MSE, mean saured errors. There are others:
 
-### 1.A R-squared
+### 1.1 R-squared
 
 R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]
 
@@ -64,7 +64,7 @@ TSS-RSS gives us how much variation in `y` is explained by our model. R-squared 
 0 <= R-squared <= 1. If this value is 0.7, it means that the **independent variables explain 70% of the variation in the target variable**. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
 
 
-### 1.B Adjusted R-squared
+### 1.2 Adjusted R-squared
 
 A major problem is that R-sqaured is related to the number of variables we add to our regression model. That is, even if we are adding redundant variables to the data, the value of R-squared does not decrease. This clearly does not make sense because some of the independent variables might not be useful in determining the target variable. 
 
@@ -92,7 +92,7 @@ The linear regression has a generic form
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;&plus;&space;\epsilon&space;=&space;\bold{x}&space;\theta&space;&plus;&space;\epsilon" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;&plus;&space;\epsilon&space;=&space;\bold{x}&space;\theta&space;&plus;&space;\epsilon" title="\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 +\cdots + \epsilon = \bold{x} \theta + \epsilon" /></a>
 
 
-### 2.A Assumption for linear regression
+### 2.1 Assumption for linear regression
 
 There are some assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression], [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]:
 
@@ -124,7 +124,7 @@ In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them],
 
 However I don't think multicollinearity does hurt regression model (but does impact to the model interpretation). We have more comprehensive discussion in later section.
 
-### 2.B Maximum likelihood estimate
+### 2.2 Maximum likelihood estimate
 
 Given a model `θ`, the likelihood of having a data point `(xi, yi)` is a normal distribution as
 
@@ -139,7 +139,7 @@ The following is the picture, credit from Prof. Nando de Freitas's UBC Machine l
 ![](images/gaussian_likelihood.png)
 
 
-### 2.C Interpret Regression Analysis Results: P-values and Coefficients
+### 2.3 Interpret Regression Analysis Results: P-values and Coefficients
 
 The p-value for each term tests the **null hypothesis that the coefficient is equal to zero (no effect)**. A low p-value (< 0.05) indicates that you can reject the null hypothesis. In other words, a predictor that has a low p-value is likely to be a meaningful addition to your model because changes in the predictor's value are related to changes in the response variable [[Minitab Blog-pvalue]][How to Interpret Regression Analysis Results: P-values and Coefficients].
 
@@ -178,7 +178,7 @@ Multicollinearity causes the following two basic types of problems:
 
 Severe multicollinearity is a major problem, because it increases the variance of the regression coefficients, making them unstable. The more variance they have, the **more difficult it is to interpret the coefficients**.
 
-### 3.A How to test Multicollinearity?
+### 3.1 How to test Multicollinearity?
 
 1. Correlation matrix / Correlation plot
 2. **Variation Inflation Factor (VIF)**: identifies correlation between independent variables and the strength of that correlation. 
@@ -193,7 +193,7 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"
 * VIF = 1 to 5 Moderate correlation
 * VIF >10 → High correlation
 
-### 3.B How to deal with Multicollinearity
+### 3.2 How to deal with Multicollinearity
 
 * **Remove highly correlated predictors from the model**: If you have two or more factors with a high VIF, remove one from the model. Consider using stepwise regression, best subsets regression, or specialized knowledge of the data set to remove these variables. Select the model that has the highest R-squared value [[Minitab Blog-Multicollinearity]][Enough Is Enough! Handling Multicollinearity in Regression Analysis]. 
 
@@ -223,13 +223,13 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 
 An influential point is an outlier that greatly affects the slope of the regression line. One way to test the influence of an outlier is to compute the regression equation with and without the outlier. The types of analysis are illustrated below [[Stat Trek]][Influential Points]:
 
-#### Example A
+### 4.1 Example A
 
 ![](images/outlier_regression_1.png)
 
 When the outlier is present, the slope is flatter (-4.10 vs. -3.32); so this outlier would be considered an influential point.
 
-#### Example B
+#### 4.2 Example B
 
 ![](images/outlier_regression_2.png)
 
