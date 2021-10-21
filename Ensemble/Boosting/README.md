@@ -48,18 +48,18 @@ At the beginning each data has same sample weight = 1/8.
 
 Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` and patients' weight < as `No`.
 For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 incorrect (#4). Then next step we reweigh #4 data with higher sample weight than others since it is misclassified
-```
- # | chest | weight | disease | new sample weight|
---------------------------------------------
- 1 |  Yes  |  205   |   Yes   |  0.07  |
- 2 |  No   |  180   |   Yes   |  0.07  |
- 3 |  Yes  |  210   |   Yes   |  0.07  |
- 4 |  Yes  |  167   |   Yes   |  0.49  |
- 5 |  No   |  156   |   No    |  0.07  |
- 6 |  No   |  125   |   No    |  0.07  |
- 7 |  Yes  |  168   |   No    |  0.07  |
- 8 |  Yes  |  172   |   No    |  0.07  |
-```
+
+| # | chest | weight | disease | new sample weight|
+| --- | --- | --- | --- | --- | 
+| 1 |  Yes  |  205   |   Yes   |  0.07  |
+| 2 |  No   |  180   |   Yes   |  0.07  |
+| 3 |  Yes  |  210   |   Yes   |  0.07  |
+| 4 |  Yes  |  167   |   Yes   |  0.49  |
+| 5 |  No   |  156   |   No    |  0.07  |
+| 6 |  No   |  125   |   No    |  0.07  |
+| 7 |  Yes  |  168   |   No    |  0.07  |
+| 8 |  Yes  |  172   |   No    |  0.07  |
+
 Then we reconstruct data in next forest by the new sample weights. For example, given random numbers r: if r < 0.07 we pick #1, if 0.07 <= r < 0.14 we pick #2,..., if 0.21 <= r < 0.7 pick #4,.... As a result, we will have more #4 than others in the new constructed data.
 
 
