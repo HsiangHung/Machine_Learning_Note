@@ -203,9 +203,9 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 [Oracle article: Introduction: Anomaly Detection](https://www.datascience.com/blog/python-anomaly-detection)
 
-[Time Series of Price Anomaly Detection with LSTM](https://towardsdatascience.com/time-series-of-price-anomaly-detection-with-lstm-11a12ba4f6d9)
+[Susan Li, Time Series of Price Anomaly Detection with LSTM](https://towardsdatascience.com/time-series-of-price-anomaly-detection-with-lstm-11a12ba4f6d9)
 
-[LSTM Autoencoder for Anomaly Detection](https://towardsdatascience.com/lstm-autoencoder-for-anomaly-detection-e1f4f2ee7ccf)
+[Brent Larzalere, LSTM Autoencoder for Anomaly Detection](https://towardsdatascience.com/lstm-autoencoder-for-anomaly-detection-e1f4f2ee7ccf)
 
 
 ## 7. Effect of An Outlier
