@@ -10,7 +10,7 @@ The following content follows Chris Burge's review paper: [From RankNet to Lambd
 
 Here is Prof. Tom´aˇs Tunys' lecture slide: [LambdaMART Demystified](https://staff.fnwi.uva.nl/e.kanoulas/wp-content/uploads/Lecture-8-1-LambdaMart-Demystified.pdf).
 
-## Boosting regression
+## 1. Boosting regression
 
 The procedures of building a boosting regression tree are summarize below (given (`x`, `y`))
 
@@ -53,8 +53,22 @@ and responses in the boosting machine are updated as
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;\to&space;y&space;-&space;\alpha&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;\to&space;y&space;-&space;\alpha&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" title="y \to y - \alpha \frac{\partial C}{\partial \hat{y}}" /></a>
 
 
-### Binary classification using MART
+## 2. MART for Binary Classification
 
+For classification, this will be equal to **log(odds)** of the **dependent variable** (Similar to logisitic regreesion, which fits linear functions on log(odds)).
+
+Suppose we have the following dataset
+
+```
+ # | chest pain | good blood circulation | blocked arteries | heart disease|
+--------------------------------------------
+ 1 |  No  |  No   |   No   |  No  |
+ 2 |  Yes   |  Yes   |   Yes   |  Yes  |
+ 3 |  Yes  |  Yes   |   No  |  Yes  |
+ 4 |  Yes  |  No   |   No   |  Yes  |
+ 5 |  Yes   |  No   |   Yes    |  Yes  |
+ 6 |  No   |  Yes   |   No    |  No  |
+```
 
 
 
