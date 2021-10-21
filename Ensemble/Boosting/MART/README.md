@@ -55,7 +55,7 @@ and responses in the boosting machine are updated as
 
 ## 2. MART for Binary Classification
 
-For classification, this will be equal to **log(odds)** of the **dependent variable** (Similar to logisitic regreesion, which fits linear functions on log(odds)).
+For classification, this will be equal to **log(odds)** of the **dependent variable** (Similar to logisitic regreesion, which fits linear functions on log(odds)). In the following, we follow the discussion from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide].
 
 Suppose we have the following dataset
 
@@ -70,7 +70,9 @@ Suppose we have the following dataset
 | 6 |  No   |  Yes   |   No    |  No  |
 
 
+There are 4 people with and 2 without heart disease. log(odds) is equal to 
 
+    log(odds) = log(p/1-p) = log(4/2) = 0.6931 ~ 0.7
 
 
 
