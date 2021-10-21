@@ -32,18 +32,18 @@ We first train a decision tree in which each observation is assigned an equal we
 
 
 As a concrete example, we follow Josh Starmer's video lecture: [Adaboost, clearly explained](https://www.youtube.com/watch?v=LsK-xG1cLYA) below. Suppose we have data if patients have heart disease as follows (**chest** = if chest pain,**weight** = patient weight, **disease** = heart disease and **sample weight**):
-```
- # | chest | weight | disease | sample weight|
---------------------------------------------
- 1 |  Yes  |  205   |   Yes   |  1/8  |
- 2 |  No   |  180   |   Yes   |  1/8  |
- 3 |  Yes  |  210   |   Yes   |  1/8  |
- 4 |  Yes  |  167   |   Yes   |  1/8  |
- 5 |  No   |  156   |   No    |  1/8  |
- 6 |  No   |  125   |   No    |  1/8  |
- 7 |  Yes  |  168   |   No    |  1/8  |
- 8 |  Yes  |  172   |   No    |  1/8  |
-```
+
+| # | chest | weight | disease | sample weight|
+| --- | --- | --- | --- | --- |
+| 1 |  Yes  |  205   |   Yes   |  1/8  |
+| 2 |  No   |  180   |   Yes   |  1/8  |
+| 3 |  Yes  |  210   |   Yes   |  1/8  |
+| 4 |  Yes  |  167   |   Yes   |  1/8  |
+| 5 |  No   |  156   |   No    |  1/8  |
+| 6 |  No   |  125   |   No    |  1/8  |
+| 7 |  Yes  |  168   |   No    |  1/8  |
+| 8 |  Yes  |  172   |   No    |  1/8  |
+
 At the beginning each data has same sample weight = 1/8.
 
 Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` and patients' weight < as `No`.
