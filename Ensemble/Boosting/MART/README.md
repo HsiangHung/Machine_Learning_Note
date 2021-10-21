@@ -59,7 +59,7 @@ For classification, this will be equal to **log(odds)** of the **dependent varia
 
 Suppose we have the following dataset
 
-```
+
 | # | chest pain | good blood circulation | blocked arteries | heart disease|
 | --- | --- | --- | --- | --- | 
 | 1 |  No  |  No   |   No   |  No  |
@@ -68,7 +68,7 @@ Suppose we have the following dataset
 | 4 |  Yes  |  No   |   No   |  Yes  |
 | 5 |  Yes   |  No   |   Yes    |  Yes  |
 | 6 |  No   |  Yes   |   No    |  No  |
-```
+
 
 
 
