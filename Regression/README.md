@@ -23,15 +23,15 @@ The optimization objective is to minimize the cost function.
 Table of Contents:
 
 * [1. Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#1-metric)
-     * [1.A R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#11-r-squared)
-     * [1.B Adjusted R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#12-adjusted-r-squared)
+     * [1.1 R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#11-r-squared)
+     * [1.2 Adjusted R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#12-adjusted-r-squared)
 * [2. Linear Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2-linear-regression)
-     * [2.A Assumption for linear regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#21-assumption-for-linear-regression)
-     * [2.B Maximum likelihood estimate](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#22-maximum-likelihood-estimate)
-     * [2.C Interpret Regression Analysis Results: P-values and Coefficients](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#23-interpret-regression-analysis-results-p-values-and-coefficients)
+     * [2.1 Assumption for linear regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#21-assumption-for-linear-regression)
+     * [2.2 Maximum likelihood estimate](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#22-maximum-likelihood-estimate)
+     * [2.3 Interpret Regression Analysis Results: P-values and Coefficients](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#23-interpret-regression-analysis-results-p-values-and-coefficients)
 * [3. Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#3-multicollinearity)
-     * [3.A How to test Multicollinearity?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#31-how-to-test-multicollinearity)
-     * [3.B How to deal with Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#32-how-to-deal-with-multicollinearity)
+     * [3.1 How to test Multicollinearity?](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#31-how-to-test-multicollinearity)
+     * [3.2 How to deal with Multicollinearity](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#32-how-to-deal-with-multicollinearity)
 * [4. Effects of an Outlier on Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#4-effects-of-an-outlier-on-regression)
 * [5. Deep learning for regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#5-deep-learning-for-regression)
 
