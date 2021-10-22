@@ -4,7 +4,7 @@
 
  Boosting is a method of converting weak learners into strong learners. 
 
-Tne idea of boosting regression trees can be mapping to classification and ranking problems. It is called MART(Multiple Additive Regression Trees), where the output of the model is a linear combination of the outputs of a set of regression trees.
+The idea of boosting regression trees can be mapping to classification and ranking problems. It is called MART(Multiple Additive Regression Trees), where the output of the model is a linear combination of the outputs of a set of regression trees.
 
 The following content follows Chris Burge's review paper: [From RankNet to LambdaRank to LambdaMART: An Overview](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf). The LambdaMART is particularly designed as MART + LambdaRank.
 
@@ -71,7 +71,7 @@ Suppose we have the following dataset
 
 ### 2.1 Initial classifier
 
-The first tree is simply a classifier giving prediction by `log(odds)`. There are 4 people with and 2 without heart disease. log(odds) is equal to 
+The first tree is simply a classifier giving prediction by `log(odds)`. In the above dataset, there are 4 people with and 2 without heart disease, so `log(odds)` is equal to 
 
     log(odds) = log(p/1-p) = log(4/2) = 0.6931 ~ 0.7
 
@@ -81,8 +81,10 @@ Next, we convert this to a probability using the Logistic Function,
 
 If we consider the probability threshold as 0.5, this means that our initial prediction is that all the individuals have Heart Disease.
 
-Next we will now calculate the residuals for each observation by using the following formula,
+Next we calculate the residuals for each observation by using the following formula,
+
      Residual = Actual value — Predicted value
+     
 where Actual value= 1 if the person has Heart Disease and 0 if not and Predicted value = 0.7,
 
 
