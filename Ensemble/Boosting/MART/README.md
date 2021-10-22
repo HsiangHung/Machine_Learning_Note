@@ -8,7 +8,7 @@ Tne idea of boosting regression trees can be mapping to classification and ranki
 
 The following content follows Chris Burge's review paper: [From RankNet to LambdaRank to LambdaMART: An Overview](https://www.microsoft.com/en-us/research/uploads/prod/2016/02/MSR-TR-2010-82.pdf). The LambdaMART is particularly designed as MART + LambdaRank.
 
-Here is Prof. Tom´aˇs Tunys' lecture slide: [LambdaMART Demystified](https://staff.fnwi.uva.nl/e.kanoulas/wp-content/uploads/Lecture-8-1-LambdaMart-Demystified.pdf).
+Here is Prof. Tomas Tunys' lecture slide: [LambdaMART Demystified](https://staff.fnwi.uva.nl/e.kanoulas/wp-content/uploads/Lecture-8-1-LambdaMart-Demystified.pdf).
 
 ## 1. Boosting regression
 
@@ -69,13 +69,31 @@ Suppose we have the following dataset
 | 5 |  Yes   |  No   |   Yes    |  Yes  |
 | 6 |  No   |  Yes   |   No    |  No  |
 
+### 2.1 Initial classifier
 
-There are 4 people with and 2 without heart disease. log(odds) is equal to 
+The first tree is simply a classifier giving prediction by `log(odds)`. There are 4 people with and 2 without heart disease. log(odds) is equal to 
 
     log(odds) = log(p/1-p) = log(4/2) = 0.6931 ~ 0.7
 
+Next, we convert this to a probability using the Logistic Function,
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=p&space;=&space;\frac{e^{\textrm{log(odds)}}}{1&plus;e^{\textrm{log(odds)}}}&space;=&space;\frac{1}{1&plus;e^{-\textrm{log(odds)}}}&space;=&space;0.6667&space;\sim&space;0.7" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p&space;=&space;\frac{e^{\textrm{log(odds)}}}{1&plus;e^{\textrm{log(odds)}}}&space;=&space;\frac{1}{1&plus;e^{-\textrm{log(odds)}}}&space;=&space;0.6667&space;\sim&space;0.7" title="p = \frac{e^{\textrm{log(odds)}}}{1+e^{\textrm{log(odds)}}} = \frac{1}{1+e^{-\textrm{log(odds)}}} = 0.6667 \sim 0.7" /></a>
+
+If we consider the probability threshold as 0.5, this means that our initial prediction is that all the individuals have Heart Disease.
+
+Next we will now calculate the residuals for each observation by using the following formula,
+     Residual = Actual value — Predicted value
+where Actual value= 1 if the person has Heart Disease and 0 if not and Predicted value = 0.7,
 
 
+| # | chest pain | good blood circulation | blocked arteries | heart disease| actual | 1st | residual |
+| --- | --- | --- | --- | --- | --- | --- | --- | 
+| 1 |  No  |  No   |   No   |  No  | 0 |  0.7 | -0.7 |
+| 2 |  Yes   |  Yes   |   Yes   |  Yes  | 1 | 0.7 | 0.3 |
+| 3 |  Yes  |  Yes   |   No  |  Yes  | 1 | 0.7 | 0.3 |
+| 4 |  Yes  |  No   |   No   |  Yes  | 1 | 0.7 | 0.3 |
+| 5 |  Yes   |  No   |   Yes    |  Yes  | 1 | 0.7 | 0.3 |
+| 6 |  No   |  Yes   |   No    |  No  | 0 | 0.7 | -0.7 |
 
 
 
