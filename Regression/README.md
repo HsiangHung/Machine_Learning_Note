@@ -47,13 +47,15 @@ There are other measurements to evaluate regression models.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MSE}&space;=&space;\frac{1}{N}\sum_i&space;(\hat{y}_i-y_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MSE}&space;=&space;\frac{1}{N}\sum_i&space;(\hat{y}_i-y_i)^2" title="\textrm{MSE} = \frac{1}{N}\sum_i (\hat{y}_i-y_i)^2" /></a>
 
+MSE and RMSE penalizes the large prediction errors vi-a-vis Mean Absolute Error (MAE). RMSE is widely used than MSE to evaluate the performance of the regression model with other random models as it has the same units as the dependent variable [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?].
 
+MSE is a differentiable function that makes it easy to perform mathematical operations in comparison to a non-differentiable function like MAE [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?].
 
 ### 1.2 MAE (Mean absolute error)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MAE}&space;=&space;\frac{1}{N}\sum_i&space;|\hat{y}_i-y_i|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MAE}&space;=&space;\frac{1}{N}\sum_i&space;|\hat{y}_i-y_i|" title="\textrm{MAE} = \frac{1}{N}\sum_i |\hat{y}_i-y_i|" /></a>
 
-MAE is more robust to data with outliers.
+MAE is more robust to data with outliers [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?].
 
 ### 1.3 R-squared
 
@@ -86,13 +88,15 @@ The adjusted R-squared compares the descriptive power of regression models that 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Adjusted&space;R}^2&space;=&space;1-&space;\frac{(1-R^2)(n-1)}{(m-p-1)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Adjusted&space;R}^2&space;=&space;1-&space;\frac{(1-R^2)(n-1)}{(m-p-1)}" title="\textrm{Adjusted R}^2 = 1- \frac{(1-R^2)(n-1)}{(m-p-1)}" /></a>
 
-Thus, if R-squared does not increase significantly on the addition of a new independent variable (higher `p`), then `1/(m-p-1)` increases and Adjusted R-squared will actually decrease.
+Thus, if R-squared does not increase significantly on the addition of a new independent variable (higher `p`), then `1/(m-p-1)` increases and Adjusted R-squared will actually decrease. In other words, adjusted R squared takes into account the number of predictor variables.
 
 On the other hand, if on adding the new independent variable we see a significant increase in R-squared value, then the Adjusted R-squared value will also increase.
 
 
 ### Reference
 
+* [MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?]: https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e
+[[Akshita Chugh] MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?](https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e)
 * [Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]: https://www.analyticsvidhya.com/blog/2020/07/difference-between-r-squared-and-adjusted-r-squared/
 [[Aniruddha Bhandari] Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis](https://www.analyticsvidhya.com/blog/2020/07/difference-between-r-squared-and-adjusted-r-squared/)
 * [Quroa: What is the difference between R-squared and Adjusted R-squared?]: https://www.quora.com/What-is-the-difference-between-R-squared-and-Adjusted-R-squared
