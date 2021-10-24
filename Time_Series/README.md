@@ -93,6 +93,12 @@ Econometricians developed another class of models that incorporated auroregressi
 
 
 
+* [Time Series Prediction with LSTM Recurrent Neural Networks in Python with Keras]: https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
+[[Jason Brownlee-2] Time Series Prediction with LSTM Recurrent Neural Networks in Python with Keras](https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/)
+
+
+
+
 
 ### 1.7 Other models
 
