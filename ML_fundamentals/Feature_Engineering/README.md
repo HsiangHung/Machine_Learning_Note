@@ -128,6 +128,8 @@ Suppose we are given a data in which one column is the age and the output is the
    
 [Introducing TensorFlow Feature Columns](https://developers.googleblog.com/2017/11/introducing-tensorflow-feature-columns.html)
 
+[Introduction to TensorFlow Datasets and Estimators](https://developers.googleblog.com/2017/09/introducing-tensorflow-datasets.html)
+
 [Overview: Extracting and serving feature embeddings for machine learning](https://cloud.google.com/architecture/overview-extracting-and-serving-feature-embeddings-for-machine-learning)
 
 
