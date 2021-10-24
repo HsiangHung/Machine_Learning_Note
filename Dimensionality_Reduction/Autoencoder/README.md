@@ -25,8 +25,8 @@ Table of Contents:
 
 * [1. Interpretation of AutoEncoders](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#1-interpretation-of-autoencoders)
 * [2. Cost (Loss) Function](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#2-cost-loss-function)
-     * [2.A L1 regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#2a-l1-regularization) 
-     * [2.B KL-divergence](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#2b-kl-divergence)
+     * [2.1 L1 regularization](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#21-l1-regularization) 
+     * [2.1 KL-divergence](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder#22-kl-divergence)
      
 
 
@@ -35,7 +35,7 @@ Table of Contents:
 
 The autoencoder learns an approximation for the identity function, and by placing constraints on the network, such as by limiting the number of hidden units, we can discover interesting structure about the data [[UFLDL Tutorial]][Autoencoders].
 
-In other words, we implement neural networks for the task of representation learning and the encoding will learn and describe **latent** attributes of the input data. Compared to PCA which attempts to discover a lower dimensional hyperplane which describes the original data, autoencoders are capable of learning nonlinear relation between features. The following illustration describes the idea (credit by [[Jermey Jordan]][Introduction to autoencoders]):
+In other words, we implement neural networks for the task of representation learning and the encoding will learn and describe **latent** attributes of the input data. Compared to PCA which attempts to discover a lower dimensional hyperplane which describes the original data, autoencoders are capable of learning nonlinear relation between features. The following illustration describes the idea (credit by [[Jermey Jordan-1]][Introduction to autoencoders]):
 
 
 ![](images/PCA_vs_autoencoder.png)
@@ -46,7 +46,7 @@ As a concrete example, suppose the inputs x are the pixel intensity values from 
 
 ## 2. Cost (Loss) Function
 
-Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders][[Jermey Jordan]][Introduction to autoencoders]
+Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders][[Jermey Jordan-1]][Introduction to autoencoders]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" title="C = C(x, \hat{x}) + \textrm{regularization}" /></a>
 
@@ -61,14 +61,14 @@ The second is the regularization term to **penalize the activations** of hidden 
 
 In the following, we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a>  to denote the activation of the `j`-th hidden unit of hidden layer `h`, when the network is given a specific input x.
 
-### 2.A L1 regularization
+### 2.1 L1 regularization
 
-L1 regularization adds a term to our loss function that penalizes the absolute value of the vector of activations `a`, scaled by a tuning parameter λ [[Jermey Jordan]][Introduction to autoencoders], [[Wiki]][Autoencoder]. The resultsing cost function reads as
+L1 regularization adds a term to our loss function that penalizes the absolute value of the vector of activations `a`, scaled by a tuning parameter λ [[Jermey Jordan-1]][Introduction to autoencoders], [[Wiki]][Autoencoder]. The resultsing cost function reads as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" title="C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|" /></a>
 
 
-### 2.B KL-divergence
+### 2.2 KL-divergence
 
 In essence, KL-divergence is a measure of the difference between two probability distributions. Define 
 
@@ -89,7 +89,7 @@ This penalty function has the property that
 
  <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;0,&space;\&space;\textrm{if&space;}&space;\rho=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;0,&space;\&space;\textrm{if&space;}&space;\rho=\hat{\rho}_j" title="\textrm{KL}(\rho || \hat{\rho}_j) = 0, \ \textrm{if } \rho=\hat{\rho}_j" /></a>
  
- otherwise it increases monotonically as <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> diverges from ρ. As an example, in the figure below, we have set ρ=0.2, the KL divergence penalty function looks like [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan]][Introduction to autoencoders]:
+ otherwise it increases monotonically as <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> diverges from ρ. As an example, in the figure below, we have set ρ=0.2, the KL divergence penalty function looks like [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan-1]][Introduction to autoencoders]:
 
 
 ![](images/KL_divergence_penalty.png)
@@ -103,55 +103,41 @@ which has the minimum at ρ=0.2.
 
 There are some variations of the autoencoder architecture that allow for regularization and optimization. Examples of these are the **sparse autoencoder**, **denoising autoencoder**, **contractive autoencoder** (all of which are regularized variations of the simple autoencoder. There is also the **variational autoencoder**, which is an example of a generative model [[Christiaan Defaux-1]][Unsupervised Learning: The autoencoder in laymans terms].
 
-### 3.A The Sparse Autoencoder (SAE)
+### 3.1 The Sparse Autoencoder (SAE)
 
 For a deeper understanding please see one of my previous posts on the subject here. By adding the sparsity constraint, we are in effect inducing regularization in our autoencoder, to aid in training and computational efficiency [[Christiaan Defaux-2]][The Sparse Autoencoder (SAE) for Dummies].
 
+
+### 3.2 Variational autoencoders
+
+[[Jermey Jordan-2]][Variational autoencoders]
 
 
 
 ## Reference
 
 
-[Building Autoencoders in Keras]: https://blog.keras.io/building-autoencoders-in-keras.html
+* [Building Autoencoders in Keras]: https://blog.keras.io/building-autoencoders-in-keras.html
 [Building Autoencoders in Keras](https://blog.keras.io/building-autoencoders-in-keras.html)
-
-[Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
+* [Applied Deep Learning - Part 3: Autoencoders]: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
 [[Arden Dertat] Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
-
-
-[Dimension Reduction - Autoencoders]: https://blog.paperspace.com/dimension-reduction-with-autoencoders/
+* [Dimension Reduction - Autoencoders]: https://blog.paperspace.com/dimension-reduction-with-autoencoders/
 [[ASHWINI KUMAR PAL] Dimension Reduction - Autoencoders](https://blog.paperspace.com/dimension-reduction-with-autoencoders/)
-
-
-[Unsupervised Learning: The autoencoder in laymans terms]: https://medium.com/@cdefaux/unsupervised-learning-the-autoencoder-in-laymans-terms-5dfdee22e692
+* [Unsupervised Learning: The autoencoder in laymans terms]: https://medium.com/@cdefaux/unsupervised-learning-the-autoencoder-in-laymans-terms-5dfdee22e692
 [[Christiaan Defaux-1] Unsupervised Learning: The autoencoder in laymans terms](https://medium.com/@cdefaux/unsupervised-learning-the-autoencoder-in-laymans-terms-5dfdee22e692)
-
-
-[The Sparse Autoencoder (SAE) for Dummies]: https://medium.com/@cdefaux/the-sparse-autoencoder-sae-for-dummies-cb7f170bda86
+* [The Sparse Autoencoder (SAE) for Dummies]: https://medium.com/@cdefaux/the-sparse-autoencoder-sae-for-dummies-cb7f170bda86
 [[Christiaan Defaux-2] The Sparse Autoencoder (SAE) for Dummies](https://medium.com/@cdefaux/the-sparse-autoencoder-sae-for-dummies-cb7f170bda86)
-
-
-
-[Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
+* [Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
 [[Elior Cohen] Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
-
-
-[Introduction to autoencoders]: https://www.jeremyjordan.me/autoencoders/
-[[Jermey Jordan] Introduction to autoencoders](https://www.jeremyjordan.me/autoencoders/)
-
-
-[How to autoencode your Pokémon]: https://hackernoon.com/how-to-autoencode-your-pokémon-6b0f5c7b7d97
+* [Introduction to autoencoders]: https://www.jeremyjordan.me/autoencoders/
+[[Jermey Jordan-1] Introduction to autoencoders](https://www.jeremyjordan.me/autoencoders/)
+* [Variational autoencoders]: https://www.jeremyjordan.me/variational-autoencoders/
+[[Jermey Jordan-2] Variational autoencoders](https://www.jeremyjordan.me/variational-autoencoders/)
+* [How to autoencode your Pokémon]: https://hackernoon.com/how-to-autoencode-your-pokémon-6b0f5c7b7d97
 [[Niyas Mohammed] How to autoencode your Pokémon](https://hackernoon.com/how-to-autoencode-your-pokémon-6b0f5c7b7d97)
-
-
-[Autoencoders]: http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/
+* [Autoencoders]: http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/
 [[UFLDL Tutorial] Autoencoders](http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/)
-
-
-[Dimensionality reduction using Keras Auto Encoder]: https://www.kaggle.com/saivarunk/dimensionality-reduction-using-keras-auto-encoder
+* [Dimensionality reduction using Keras Auto Encoder]: https://www.kaggle.com/saivarunk/dimensionality-reduction-using-keras-auto-encoder
 [[Varun Kruthiventi] Dimensionality reduction using Keras Auto Encoder](https://www.kaggle.com/saivarunk/dimensionality-reduction-using-keras-auto-encoder)
-
-
-[Autoencoder]: https://en.wikipedia.org/wiki/Autoencoder
+* [Autoencoder]: https://en.wikipedia.org/wiki/Autoencoder
 [[Wiki] Autoencoder](https://en.wikipedia.org/wiki/Autoencoder)
