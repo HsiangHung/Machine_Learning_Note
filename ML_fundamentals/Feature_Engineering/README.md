@@ -104,19 +104,19 @@ Finding out the coefficients with respect to features using logistic regression 
 
 ## 2. Other Feature Engineering
 
-Standardization, log transformation, one-hot encoding, 
+In addition to standardization, log transformation, one-hot encoding data, we have other procedures [[Emre Rençberoğlu]][Fundamental Techniques of Feature Engineering for Machine Learning]: 
 
 ### 2.1 Missing value imputation
 
-[Github: Missing_Data](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Missing_Data)
+[Github: Deal with Missing Data](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Missing_Data)
 
 ### 2.2 Handling outliers
 
-Cap outliers intead of dropping.
+Cap outliers intead of dropping [[Emre Rençberoğlu]][Fundamental Techniques of Feature Engineering for Machine Learning].
 
 ### 2.3 Binning
 
-Sometimes, we use the **bucketized column** feature engineering [[Amit Shekhar]][What Is Feature Engineering for Machine Learning?]. 
+Sometimes, we use the **bucketized column** feature engineering [[Amit Shekhar]][What Is Feature Engineering for Machine Learning?], [[Emre Rençberoğlu]][Fundamental Techniques of Feature Engineering for Machine Learning]. 
 
 Suppose we are given a data in which one column is the age and the output is the classification(X, Y, Z). By seeing the data, we realized that the output(X, Y, Z) is dependent on the age-range like 11–20 years age-range output to X, 21–40 years output to Y, 41–70 years output to Z. Here, we will create 3 buckets for the age-range 11–20, 21–40 and 41–70. We will create the new feature which is the bucketized column “Age_Range” having the numerical values 1, 2 and 3 where 1 is mapped to the bucket 1, 2 is mapped to the bucket 2 and 3 is mapped to the bucket 3.
 
