@@ -7,7 +7,7 @@ The one-sentence summary of Bayesian hyperparameter optimization is: build a pro
 
 
 
-### Hyperparameter Optimization
+## 1. Hyperparameter Optimization
 
 Hyperparameter optimization is represented
 
@@ -17,7 +17,7 @@ Hyperparameter optimization is represented
 
 With a large number of hyperparameters and complex models such as ensembles or deep neural networks, evaluating the objective function to find the score is extremely expensive. Grid and random search are completely uninformed by past evaluations and pay no attention to past results.[[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning]
 
-### Bayesian Optimization
+## 2. Bayesian Optimization
 
 Bayesian Optimization forms a probabilistic model mapping hyperparameters to a probability of a score on the objective function:
 
@@ -42,7 +42,7 @@ In (a), the dash line is the true object function we are looking for. The black 
 
 @t=4, now we can see the mean of posterior is close to the true objective line.
 
-## HyperOpt Code Example for LGBM
+## 3. HyperOpt Code Example for LGBM
 
 There are [code examples](https://www.programcreek.com/python/example/98788/hyperopt.Trials) showing how to use hyperopt. Also an introduction [Jupyter Notebook](https://github.com/WillKoehrsen/hyperparameter-optimization/blob/master/Introduction%20to%20Bayesian%20Optimization%20with%20Hyperopt.ipynb)  (by Will Koehrsen). 
 
@@ -111,30 +111,18 @@ def hyperopt_lightgbm(X: pd.DataFrame, y: pd.Series, params: Dict, config: Confi
 
 
 
-
-
-
-
 ## Reference
 
 
-[Exploring Bayesian Optimization]: https://distill.pub/2020/bayesian-optimization/
+* [Exploring Bayesian Optimization]: https://distill.pub/2020/bayesian-optimization/
 [[Apoorv Agnihotri and Nipun Batra] Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/)
-
-
-[Bayesian optimization]: http://krasserm.github.io/2018/03/21/bayesian-optimization/
+* [Bayesian optimization]: http://krasserm.github.io/2018/03/21/bayesian-optimization/
 [[Martin Krasser] Bayesian optimization](http://krasserm.github.io/2018/03/21/bayesian-optimization/)
-
-
-[Bayesian Hyperparameter Optimization]: https://towardsdatascience.com/bayesian-hyperparameter-optimization-17dc5834112d
+* [Bayesian Hyperparameter Optimization]: https://towardsdatascience.com/bayesian-hyperparameter-optimization-17dc5834112d
 [[Matti Karppanen] Bayesian Hyperparameter Optimization](https://towardsdatascience.com/bayesian-hyperparameter-optimization-17dc5834112d)
-
-
-[Using Bayesian Optimization to reduce the time spent on hyperparameter tuning]: https://medium.com/vantageai/bringing-back-the-time-spent-on-hyperparameter-tuning-with-bayesian-optimisation-2e21a3198afb
+* [Using Bayesian Optimization to reduce the time spent on hyperparameter tuning]: https://medium.com/vantageai/bringing-back-the-time-spent-on-hyperparameter-tuning-with-bayesian-optimisation-2e21a3198afb
 [[Mike Kraus] Using Bayesian Optimization to reduce the time spent on hyperparameter tuning](https://medium.com/vantageai/bringing-back-the-time-spent-on-hyperparameter-tuning-with-bayesian-optimisation-2e21a3198afb)
-
-
-[A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning]: https://towardsdatascience.com/a-conceptual-explanation-of-bayesian-model-based-hyperparameter-optimization-for-machine-learning-b8172278050f
+* [A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning]: https://towardsdatascience.com/a-conceptual-explanation-of-bayesian-model-based-hyperparameter-optimization-for-machine-learning-b8172278050f
 [[Will Koehrsen] A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning](https://towardsdatascience.com/a-conceptual-explanation-of-bayesian-model-based-hyperparameter-optimization-for-machine-learning-b8172278050f)
 
 
