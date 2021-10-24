@@ -4,16 +4,16 @@
 Table of Contents:
 
 * [1. Binary Classification Models](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1-binary-classification-models)
-     * [1.A - Logistic regression vs decision trees](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1a---logistic-regression-vs-decision-trees)
-     * [1.B - Other classification model comparisons](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1b---other-classification-model-comparisons)
-     * [1.C - Compare describe Tree, SVM and random forest](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#1c---compare-describe-tree-svm-and-random-forest)
+     * [1.1 Logistic regression vs decision trees](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#11--logistic-regression-vs-decision-trees)
+     * [1.2 Other classification model comparisons](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#12--other-classification-model-comparisons)
+     * [1.3 Compare describe Tree, SVM and random forest](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#13--compare-describe-tree-svm-and-random-forest)
 * [2. Binary Classification Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2-binary-classification-metric)
-     * [2.A - Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2a---precision-and-recall)
-     * [2.B - AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2b---auc)
-     * [2.C - Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#2c---selection-of-precision-or-recall)
+     * [2.1 Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#21--precision-and-recall)
+     * [2.2 AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#22--auc)
+     * [2.3 Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#23--selection-of-precision-or-recall)
 * [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cost-function-cross-entropy)
-     * [3.A - Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3a-binary)
-     * [3.B - Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3b-multiclass)
+     * [3.1 Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#31-binary)
+     * [3.2 Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#32-multiclass)
      
 
 ## 1. Binary Classification Models
@@ -30,7 +30,7 @@ The summary of Advantages and Disadvantages of different Classification Models [
 | Emsemble | nonlinear | low | high | Powerful and accurate, good performance. |  No interpretability, overfitting can easily occur, need hyperparameter tuning|
 
 
-### 1.A - Logistic regression vs decision trees
+### 1.1 Logistic regression vs decision trees
 
 Summarize as follows (from [Big Data Zone: Logistic Regression vs. Decision Tree](https://dzone.com/articles/logistic-regression-vs-decision-tree))
 
@@ -48,14 +48,14 @@ Comparison can be visualized below (credit from [Logistic Regression versus Deci
 
 ![LR_vs_DT](images/LR_vs_DT.png)
 
-### 1.B - Other classification model comparisons
+### 1.2 Other classification model comparisons
 
 * For “relatively” very small dataset sizes, compare the performance of a discriminative Logistic Regression model to a related Naive Bayes classifier (a generative model) or SVMs, where the later may be less susceptible to noise and outlier points. Even so, logistic regression is a great, robust model for simple classification tasks. (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 * Logistic regression can be regarded as a one layer neural network (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 * One of the nice properties of logistic regression is that the logistic cost function (or max-entropy) is convex, and thus we are guaranteed to find the global cost minimum (by [Sebastian Raschka](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html#what-is-the-relation-between-logistic-regression-and-neural-netw)).
 
 
-### 1.C - Compare describe Tree, SVM and random forest
+### 1.3 Compare describe Tree, SVM and random forest
 [Amazon’s Data Scientist Interview Practice Problems](https://towardsdatascience.com/amazon-data-scientist-interview-practice-problems-15b9b86e86c6) 
 
 **Decision Trees**: a tree-like model used to model decisions based on one or more conditions.
@@ -75,7 +75,7 @@ Comparison can be visualized below (credit from [Logistic Regression versus Deci
 
 ## 2. Binary Classification Metric
 
-### 2.A - Precision and Recall
+### 2.1 Precision and Recall
 
 In most cases, there are no perfect classifiers. A good common question is which metric should we use for model selection, precision or recall? Classifier to have high True Positive Rate (TPR) or False Positive Rate (FPR)? It depends on domain and our business goal.
 
@@ -106,7 +106,7 @@ review rate = N(prob > threshold)/N
 ```
 where `N` is the number of data points.
 
-### 2.B - AUC
+### 2.2 AUC
 
 AUC stands for "Area under the ROC Curve." That is, AUC measures the entire two-dimensional area underneath the entire ROC curve (think integral calculus) from (0,0) to (1,1).
 
@@ -118,9 +118,9 @@ AUC provides an **aggregate** measure of performance across all possible classif
 
 
 
-### 2.C - Selection of precision or recall
+### 2.3 - Selection of precision or recall
 
-#### 2.C.1 Business concern
+#### 2.3.1 Business concern
 
 Below there are some examples to ask: when precision is important and when recall is important ? [[Data Science: When is precision more important over recall?]][When is precision more important over recall?] [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]. The answer depends on which we want to minimize, FP or FN costs more? Note it has been mentioned in the post that you could have 100% recall yet have a useless model: if your model always outputs a positive prediction, it would have 100% recall but be completely uninformative.
 
@@ -140,7 +140,7 @@ Here I summarize the cases from the above posts and list in the following:
 
 7. Imagine that we want to make sure that our web site blocker for our child only allows 'safe' websites to be shown. In this case, a 'safe' website is the positive class. Here, we want the blocker to be absolutely certain that the website is safe, even if some safe websites are predicted to be part of the negative or unsafe class and are consequently blocked. That is, we want high precision at the expense of recall.
 
-#### 2.C.2 If no business concern
+#### 2.3.2 If no business concern
 
 If there is no external business concern about low TPR or high FPR, one option is to weight them equally by choosing the threshold: 
 * which is a `median value` of probability distribution, 
@@ -151,7 +151,7 @@ If there is no external business concern about low TPR or high FPR, one option i
 
 where P = Precision and R = Recall.
 
-#### 3. Fraud rate to precision, recall, AUC
+#### 2.3 Fraud rate to precision, recall, AUC
 
 In the imbalanced cases, how do fraud rates (proportion of positive events) influence the metrics? The post [[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] has very wonderful disucssion about it and we can have intuition as follows. 
 
@@ -171,7 +171,6 @@ On the other side, the author also shows PR curves is more useful to compare mod
 
 
 
-
 ## 3. Loss Function (Cost Function): Cross-Entropy
 
 
@@ -185,7 +184,7 @@ where `c` denotes class labels. `p` is the probability of **target** having clas
 
 The cross-entropy can be used as loss to optimize using gradient descent in classification.
 
-### 3.A - Binary 
+### 3.1 Binary 
 
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, i.e. `p = [1 0]` for y = 1; `p = [0 1]` for y = 0, and prediction `q` is a sigmoid function, it arrives at the commonly-seen cross-entropy (`h` is the hypothesis function)
 
@@ -211,7 +210,7 @@ Note that the **loss function of logistic regression model is convex**. The foll
 In short, we can roighly argue that the second derivatives of the loss are positive semi-definite, and the linear-combination of two or more convex functions (`log(h)` and `log(1-h)`) is also convex.
 
 
-### 3.B - Multiclass
+### 3.2 Multiclass
 
 For multiclass, `c = {1, ...K}`, K classes. If our target is a **one-hot** vector, `p = [1 0 ... 0]`, for y = 1,...  and `p = [0 0 ... 1]` for y = K, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
 
