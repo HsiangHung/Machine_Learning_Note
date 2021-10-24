@@ -101,7 +101,20 @@ A feature with IV < 0.02 suggests it is a useless preditor. [[Roopam Upadhyay]][
 
 Finding out the coefficients with respect to features using logistic regression or with `L1 regularization` (Lasso). Remove those features which have low coefficients. 
 
-## 2. Other Feature engineering
+
+## 2. Other Feature Engineering
+
+Standardization, log transformation, one-hot encoding, 
+
+### 2.1 Missing value imputation
+
+[Github: Missing_Data](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/ML_fundamentals/Missing_Data)
+
+### 2.2 Handling outliers
+
+Cap outliers intead of dropping.
+
+### 2.3 Binning
 
 Sometimes, we use the **bucketized column** feature engineering [[Amit Shekhar]][What Is Feature Engineering for Machine Learning?]. 
 
@@ -109,7 +122,7 @@ Suppose we are given a data in which one column is the age and the output is the
 
 [Tensorflow](https://developers.googleblog.com/2017/11/introducing-tensorflow-feature-columns.html) can help us to bucketize numeric columns.
 
-### 6. Embedding ID or PII 
+## 3. Embedding ID/PII 
 
 [How to use "IDs" as an input variable to a ML model?](https://stats.stackexchange.com/questions/312336/how-to-use-ids-as-an-input-variable-to-a-ml-model/312343)
    
@@ -140,6 +153,8 @@ Suppose we are given a data in which one column is the age and the output is the
 [[Ashish Bansal] Need for Feature Engineering in Machine Learning](https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6)
 * [Weight of evidence (WOE) and information value (IV) explained]: https://www.listendata.com/2015/03/weight-of-evidence-woe-and-information.html
 [[Deepanshu Bhalla] Weight of evidence (WOE) and information value (IV) explained](https://www.listendata.com/2015/03/weight-of-evidence-woe-and-information.html)
+* [Fundamental Techniques of Feature Engineering for Machine Learning]: https://towardsdatascience.com/feature-engineering-for-machine-learning-3a5e293a5114
+[[Emre Rençberoğlu] Fundamental Techniques of Feature Engineering for Machine Learning](https://towardsdatascience.com/feature-engineering-for-machine-learning-3a5e293a5114)
 * [Spearman's Rank-Order Correlation]: https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.
 [[Laerd] Spearman's Rank-Order Correlation](https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.)
 * [An overview of correlation measures between categorical and continuous variables]: https://medium.com/@outside2SDs/an-overview-of-correlation-measures-between-categorical-and-continuous-variables-4c7f85610365
