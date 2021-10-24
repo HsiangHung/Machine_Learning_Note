@@ -46,7 +46,7 @@ As a concrete example, suppose the inputs x are the pixel intensity values from 
 
 ## 2. Cost (Loss) Function
 
-Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders][[Jermey Jordan-1]][Introduction to autoencoders], [[Cross Validated]][Loss function for autoencoders]:
+Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan-1]][Introduction to autoencoders], [[Cross Validated]][Loss function for autoencoders]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" title="C = C(x, \hat{x}) + \textrm{regularization}" /></a>
 
