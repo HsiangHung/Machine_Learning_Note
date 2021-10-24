@@ -6,7 +6,7 @@
 
 Most statistical forecasting methods are based on the assumption that the time series can be rendered approximately stationary (i.e., "stationarized") through the use of mathematical transformations. Thus, finding the sequence of transformations to stationarize a time-series often provides important clues in the search for an appropriate forecasting model. 
 
-It turns out that a lot of data becomes stationary after certain transformation. [ARIMA](https://people.duke.edu/~rnau/411arim.htm) model is a model for non-stationarity, by stationarizing a time-series through **differencing** (assumes that the data becomes stationary after differencing). If a series is stationary, we can just implement ARMA model (by mpiktas [[StackExchange, 1]][Why does a time series have to be stationary?] and Rob Hyndman [[Rob Hyndman]][The ARIMAX model muddle]). 
+It turns out that a lot of data becomes stationary after certain transformation. [ARIMA](https://people.duke.edu/~rnau/411arim.htm) model is a model for non-stationarity, by stationarizing a time-series through **differencing** (assumes that the data becomes stationary after differencing). If a series is stationary, we can just implement ARMA model (by mpiktas [[StackExchange, 1]][Why does a time series have to be stationary?] and ARIMAX model [[Rob Hyndman, ARIMAX]][The ARIMAX model muddle]). 
 
 
 ## Why time-series data needs to be stationary?
@@ -79,7 +79,7 @@ The term **integrated** implies that in order to obtain a forecast of Y, we have
 
 ### 1.5 ARIMAX model
 
-Econometricians developed another class of models that incorporated auroregressive and moving average components of Box-Jenkins approach with the ‘explanatory variables’ approach of standard econometrics [[Rob Hyndman]][The ARIMAX model muddle]. The simplest of such models is the ARIMAX which is just an ARIMA with additional explanatory variables, written as
+Econometricians developed another class of models that incorporated auroregressive and moving average components of Box-Jenkins approach with the ‘explanatory variables’ approach of standard econometrics [[Rob Hyndman, ARIMAX]][The ARIMAX model muddle]. The simplest of such models is the ARIMAX which is just an ARIMA with additional explanatory variables, written as
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y^*_t = \beta x_t + \phi_1 Y^*_{t-1} + \phi_2 Y^*_{t-2} + \cdots + \phi_p Y^*_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
 
@@ -90,7 +90,7 @@ Econometricians developed another class of models that incorporated auroregressi
 
 ### 1.7 Other models
 
-FFT model and [Seq2Seq](https://google.github.io/seq2seq/): [Two Effective Algorithms for Time Series Forecasting](https://www.youtube.com/watch?v=VYpAodcdFfA)
+FFT model and [Seq2Seq](https://google.github.io/seq2seq/). A talk in Youtube: [Two Effective Algorithms for Time Series Forecasting](https://www.youtube.com/watch?v=VYpAodcdFfA)
 
 Code examples in [SARIMAX Introduction](https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_stata.html): Stata ARIMA time series in statmodel in Python.
 
@@ -120,6 +120,9 @@ Based on the equation above, there can be four types of time series data:
 
 ![](images/cross_validation_time_series.png)
 
+[[Rob Hyndman, Cross-validation]][Cross-validation for time series]
+
+
 
 # Reference
 
@@ -136,8 +139,10 @@ Based on the equation above, there can be four types of time series data:
 [[Rob Hyndman: 8.4 Moving average models] 8.4 Moving average models](https://otexts.com/fpp2/MA.html)
 * [8.5 Non-seasonal ARIMA models]: https://otexts.com/fpp2/non-seasonal-arima.html
 [[Rob Hyndman: 8.5 Non-seasonal ARIMA models] 8.5 Non-seasonal ARIMA models](https://otexts.com/fpp2/non-seasonal-arima.html)
+* [Cross-validation for time series]: https://robjhyndman.com/hyndsight/tscv/
+[[Rob Hyndman, Cross-validation] Cross-validation for time series](https://robjhyndman.com/hyndsight/tscv/)
 * [The ARIMAX model muddle]: https://robjhyndman.com/hyndsight/arimax/
-[[Rob Hyndman] The ARIMAX model muddle](https://robjhyndman.com/hyndsight/arimax/)
+[[Rob Hyndman, ARIMAX] The ARIMAX model muddle](https://robjhyndman.com/hyndsight/arimax/)
 * [Stationarity and differencing]: https://people.duke.edu/~rnau/411diff.htm
 [[Robert Nau, Stationarity and differencing] Stationarity and differencing](https://people.duke.edu/~rnau/411diff.htm)
 * [ARIMA models for time series forecasting]: https://people.duke.edu/~rnau/411arim.htm
