@@ -122,11 +122,13 @@ Based on the equation above, there can be four types of time series data:
 
 [[Rob Hyndman, Cross-validation]][Cross-validation for time series]
 
+[[Alexandra Amidon]][Don’t Use K-fold Validation for Time Series Forecasting]
 
 
 # Reference
 
-
+* [Don’t Use K-fold Validation for Time Series Forecasting]: https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64
+[[Alexandra Amidon] Don’t Use K-fold Validation for Time Series Forecasting](https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64)
 * [Time Series Analysis]: https://onlinelibrary.wiley.com/doi/book/10.1002/9781118619193
 [[Box, Jenkins, Reinsel] Time Series Analysis](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118619193)
 * [Handle Missing Values in Time Series For Beginners]: https://www.kaggle.com/juejuewang/handle-missing-values-in-time-series-for-beginners
