@@ -88,6 +88,12 @@ Econometricians developed another class of models that incorporated auroregressi
 
 
 
+* [Time Series Forecasting with the Long Short-Term Memory Network in Python]: https://machinelearningmastery.com/time-series-forecasting-long-short-term-memory-network-python/
+[[Jason Brownlee-1] Time Series Forecasting with the Long Short-Term Memory Network in Python](https://machinelearningmastery.com/time-series-forecasting-long-short-term-memory-network-python/)
+
+
+
+
 ### 1.7 Other models
 
 FFT model and [Seq2Seq](https://google.github.io/seq2seq/). A talk in Youtube: [Two Effective Algorithms for Time Series Forecasting](https://www.youtube.com/watch?v=VYpAodcdFfA)
