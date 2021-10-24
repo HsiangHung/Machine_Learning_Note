@@ -226,6 +226,10 @@ The cross-entropy of an K = 3 example is shown below (credit from [Cross-entropy
 ![](images/cross_entropy-4.png)
 
 
+## 4. Label Smoothing
+
+When using deep learning models for classification tasks, we usually encounter the following problems: overfitting, and overconfidence. Overfitting is well studied and can be tackled with early stopping, dropout, weight regularization etc. **Label smoothing** is a **regularization** technique that addresses both problems [[Wanshun Wong]][What is Label Smoothing?].
+
 ## Reference
 
 
@@ -242,5 +246,7 @@ The cross-entropy of an K = 3 example is shown below (credit from [Cross-entropy
 [[GeeksForGeeks] Advantages and Disadvantages of different Classification Models](https://www.geeksforgeeks.org/advantages-and-disadvantages-of-different-classification-models/)
 * [Softmax Regression]: http://deeplearning.stanford.edu/tutorial/supervised/SoftmaxRegression/support-vector-machines-in-machine-learning
 [[UFLDL Tutorial] Softmax Regression](http://deeplearning.stanford.edu/tutorial/supervised/SoftmaxRegression/)
+* [What is Label Smoothing?]: https://towardsdatascience.com/what-is-label-smoothing-108debd7ef06
+[[Wanshun Wong] What is Label Smoothing?](https://towardsdatascience.com/what-is-label-smoothing-108debd7ef06)
 
 
