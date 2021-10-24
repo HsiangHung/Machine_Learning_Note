@@ -100,6 +100,9 @@ Econometricians developed another class of models that incorporated auroregressi
 * [Crash Course in Recurrent Neural Networks for Deep Learning]: https://machinelearningmastery.com/crash-course-recurrent-neural-networks-deep-learning/
 [[Jason Brownlee-4] Crash Course in Recurrent Neural Networks for Deep Learning](https://machinelearningmastery.com/crash-course-recurrent-neural-networks-deep-learning/)
 
+* [Mini-Course on Long Short-Term Memory Recurrent Neural Networks with Keras]: https://machinelearningmastery.com/long-short-term-memory-recurrent-neural-networks-mini-course/
+[[Jason Brownlee-5] Mini-Course on Long Short-Term Memory Recurrent Neural Networks with Keras](https://machinelearningmastery.com/long-short-term-memory-recurrent-neural-networks-mini-course/)
+
 
 
 
