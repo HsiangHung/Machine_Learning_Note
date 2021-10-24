@@ -90,7 +90,7 @@ FFT model and Seq2Seq: [Two Effective Algorithms for Time Series Forecasting](ht
 
 Code examples in [SARIMAX Introduction](https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_stata.html): Stata ARIMA time series in statmodel in Python.
 
-[Jose Marcial Portilla, Using Python and Auto ARIMA to Forecast Seasonal Time Series](https://medium.com/@josemarcialportilla/using-python-and-auto-arima-to-forecast-seasonal-time-series-90877adff03c)
+Jose Marcial Portilla, [Using Python and Auto ARIMA to Forecast Seasonal Time Series](https://medium.com/@josemarcialportilla/using-python-and-auto-arima-to-forecast-seasonal-time-series-90877adff03c)
 
 ## 2. Handling Missing Values in Time Series
 
