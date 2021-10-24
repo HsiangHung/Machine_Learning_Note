@@ -112,6 +112,8 @@ For a deeper understanding please see one of my previous posts on the subject he
 
 [[Jermey Jordan-2]][Variational autoencoders]
 
+[[Irhum Shafkat]][Intuitively Understanding Variational Autoencoders]
+
 
 
 ## Reference
@@ -129,6 +131,8 @@ For a deeper understanding please see one of my previous posts on the subject he
 [[Christiaan Defaux-2] The Sparse Autoencoder (SAE) for Dummies](https://medium.com/@cdefaux/the-sparse-autoencoder-sae-for-dummies-cb7f170bda86)
 * [Reducing Dimensionality from Dimensionality Reduction Techniques]: https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
 [[Elior Cohen] Reducing Dimensionality from Dimensionality Reduction Techniques](https://towardsdatascience.com/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe)
+* [Intuitively Understanding Variational Autoencoders]: https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf
+[[Irhum Shafkat] Intuitively Understanding Variational Autoencoders](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
 * [Introduction to autoencoders]: https://www.jeremyjordan.me/autoencoders/
 [[Jermey Jordan-1] Introduction to autoencoders](https://www.jeremyjordan.me/autoencoders/)
 * [Variational autoencoders]: https://www.jeremyjordan.me/variational-autoencoders/
