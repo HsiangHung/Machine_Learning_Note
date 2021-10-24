@@ -101,10 +101,13 @@ Finding out the coefficients with respect to features using logistic regression 
 
 
 
-   
-   
+### 6. Embedding ID or PII 
 
+[How to use "IDs" as an input variable to a ML model?](https://stats.stackexchange.com/questions/312336/how-to-use-ids-as-an-input-variable-to-a-ml-model/312343)
+   
+[Introducing TensorFlow Feature Columns](https://developers.googleblog.com/2017/11/introducing-tensorflow-feature-columns.html)
 
+[Overview: Extracting and serving feature embeddings for machine learning](https://cloud.google.com/architecture/overview-extracting-and-serving-feature-embeddings-for-machine-learning)
 
 
 ## Summary
@@ -123,39 +126,22 @@ Finding out the coefficients with respect to features using logistic regression 
 
 ## Reference
 
-[Need for Feature Engineering in Machine Learning]: https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6
+* [Need for Feature Engineering in Machine Learning]: https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6
 [[Ashish Bansal] Need for Feature Engineering in Machine Learning](https://towardsdatascience.com/need-for-feature-engineering-in-machine-learning-897df2ed00e6)
-
-
-[Weight of evidence (WOE) and information value (IV) explained]: https://www.listendata.com/2015/03/weight-of-evidence-woe-and-information.html
+* [Weight of evidence (WOE) and information value (IV) explained]: https://www.listendata.com/2015/03/weight-of-evidence-woe-and-information.html
 [[Deepanshu Bhalla] Weight of evidence (WOE) and information value (IV) explained](https://www.listendata.com/2015/03/weight-of-evidence-woe-and-information.html)
-
-
-[Spearman's Rank-Order Correlation]: https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.
+* [Spearman's Rank-Order Correlation]: https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.
 [[Laerd] Spearman's Rank-Order Correlation](https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php#:~:text=The%20Spearman's%20rank%2Dorder%20correlation%20is%20the%20nonparametric%20version%20of,association%20between%20two%20ranked%20variables.)
-
-
-[An overview of correlation measures between categorical and continuous variables]: https://medium.com/@outside2SDs/an-overview-of-correlation-measures-between-categorical-and-continuous-variables-4c7f85610365
+* [An overview of correlation measures between categorical and continuous variables]: https://medium.com/@outside2SDs/an-overview-of-correlation-measures-between-categorical-and-continuous-variables-4c7f85610365
 [[Outside Two Standard Deviations] An overview of correlation measures between categorical and continuous variables](https://medium.com/@outside2SDs/an-overview-of-correlation-measures-between-categorical-and-continuous-variables-4c7f85610365)
-
-
-[How to handle correlated Features?]: https://www.kaggle.com/reisel/how-to-handle-correlated-features
+* [How to handle correlated Features?]: https://www.kaggle.com/reisel/how-to-handle-correlated-features
 [[Reinhard Sellmair] Kaggle: How to handle correlated Features?](https://www.kaggle.com/reisel/how-to-handle-correlated-features)
-
-
-[Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)]: http://ucanalytics.com/blogs/information-value-and-weight-of-evidencebanking-case/
+* [Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)]: http://ucanalytics.com/blogs/information-value-and-weight-of-evidencebanking-case/
 [[Roopam Upadhyay] Information Value (IV) and Weight of Evidence (WOE) – A Case Study from Banking (Part 4)](http://ucanalytics.com/blogs/information-value-and-weight-of-evidencebanking-case/)
-
-
-
-[The Search for Categorical Correlation]: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
+* [The Search for Categorical Correlation]: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
 [[Shaked Zychlinski] The Search for Categorical Correlation](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
-
-
-[Weight of evidence and Information Value using Python]: https://medium.com/@sundarstyles89/weight-of-evidence-and-information-value-using-python-6f05072e83eb
+* [Weight of evidence and Information Value using Python]: https://medium.com/@sundarstyles89/weight-of-evidence-and-information-value-using-python-6f05072e83eb
 [[Sundar Krishnan] Weight of evidence and Information Value using Python](https://medium.com/@sundarstyles89/weight-of-evidence-and-information-value-using-python-6f05072e83eb)
-
-
-[Why Feature Correlation Matters.. A Lot!]: https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4
+* [Why Feature Correlation Matters.. A Lot!]: https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4
 [[Will Badr] Why Feature Correlation Matters.. A Lot!](https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4)
 
