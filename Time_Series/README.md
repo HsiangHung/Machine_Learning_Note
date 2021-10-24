@@ -91,13 +91,14 @@ Econometricians developed another class of models that incorporated auroregressi
 * [Time Series Forecasting with the Long Short-Term Memory Network in Python]: https://machinelearningmastery.com/time-series-forecasting-long-short-term-memory-network-python/
 [[Jason Brownlee-1] Time Series Forecasting with the Long Short-Term Memory Network in Python](https://machinelearningmastery.com/time-series-forecasting-long-short-term-memory-network-python/)
 
-
-
 * [Time Series Prediction with LSTM Recurrent Neural Networks in Python with Keras]: https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
 [[Jason Brownlee-2] Time Series Prediction with LSTM Recurrent Neural Networks in Python with Keras](https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/)
 
 * [Gentle Introduction to Models for Sequence Prediction with RNNs]: https://machinelearningmastery.com/models-sequence-prediction-recurrent-neural-networks/
 [[Jason Brownlee-3] Gentle Introduction to Models for Sequence Prediction with RNNs](https://machinelearningmastery.com/models-sequence-prediction-recurrent-neural-networks/)
+
+* [Crash Course in Recurrent Neural Networks for Deep Learning]: https://machinelearningmastery.com/crash-course-recurrent-neural-networks-deep-learning/
+[[Jason Brownlee-4] Crash Course in Recurrent Neural Networks for Deep Learning](https://machinelearningmastery.com/crash-course-recurrent-neural-networks-deep-learning/)
 
 
 
