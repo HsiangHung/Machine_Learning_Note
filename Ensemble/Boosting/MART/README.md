@@ -69,9 +69,9 @@ Suppose we have the following dataset
 | 5 |  Yes   |  No   |   Yes    |  Yes  |
 | 6 |  No   |  Yes   |   No    |  No  |
 
-### 2.1 Initial classifier
+### 2.1 Initial tree
 
-The first tree is simply a classifier giving prediction by `log(odds)`. In the above dataset, there are 4 people with and 2 without heart disease, so `log(odds)` is equal to 
+The first tree is simply a classifier (tree) giving prediction by `log(odds)`. In the above dataset, there are 4 people with and 2 without heart disease, so `log(odds)` is equal to 
 
     log(odds) = log(p/1-p) = log(4/2) = 0.6931 ~ 0.7
 
@@ -84,7 +84,7 @@ If we consider the probability threshold as 0.5, this means that our initial pre
 Next we calculate the residuals for each observation by using the following formula,
 
      Residual = Actual value — Predicted value
-     
+
 where Actual value= 1 if the person has Heart Disease and 0 if not and Predicted value = 0.7,
 
 
@@ -98,7 +98,11 @@ where Actual value= 1 if the person has Heart Disease and 0 if not and Predicted
 | 6 |  No   |  Yes   |   No    |  No  | 0 | 0.7 | -0.7 |
 
 
+### 2.2 Second tree
 
+Next step is to build a Decision Tree to predict the residuals using Chest Pain, Good Blood Circulation and Blocked Arteries. Assumed we have the following sample tree:
+
+![](images/tree-1.png)
 
 
 
