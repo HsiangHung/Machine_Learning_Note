@@ -23,8 +23,8 @@ The optimization objective is to minimize the cost function.
 Table of Contents:
 
 * [1. Metric](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#1-metric)
-     * [1.1 R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#11-r-squared)
-     * [1.2 Adjusted R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#12-adjusted-r-squared)
+     * [1.2 R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#11-r-squared)
+     * [1.3 Adjusted R-squared](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#12-adjusted-r-squared)
 * [2. Linear Regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#2-linear-regression)
      * [2.1 Assumption for linear regression](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#21-assumption-for-linear-regression)
      * [2.2 Maximum likelihood estimate](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#22-maximum-likelihood-estimate)
@@ -39,9 +39,17 @@ Table of Contents:
 
 ## 1. Metric
 
-A simple evaludation for regression models is MSE, mean saured errors. There are others:
+A simple evaludation for regression models is MSE (mean squared errors) and RMSE (squared-rooted MSE) 
 
-### 1.1 R-squared
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MSE}&space;=&space;\frac{1}{N}\sum_i&space;(\hat{y}_i-y_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MSE}&space;=&space;\frac{1}{N}\sum_i&space;(\hat{y}_i-y_i)^2" title="\textrm{MSE} = \frac{1}{N}\sum_i (\hat{y}_i-y_i)^2" /></a>
+
+There are others:
+
+### 1.1 MAE (Mean absolute error)
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MAE}&space;=&space;\frac{1}{N}\sum_i&space;|\hat{y}_i-y_i|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MAE}&space;=&space;\frac{1}{N}\sum_i&space;|\hat{y}_i-y_i|" title="\textrm{MAE} = \frac{1}{N}\sum_i |\hat{y}_i-y_i|" /></a>
+
+### 1.2 R-squared
 
 R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]
 
@@ -64,7 +72,7 @@ TSS-RSS gives us how much variation in `y` is explained by our model. R-squared 
 0 <= R-squared <= 1. If this value is 0.7, it means that the **independent variables explain 70% of the variation in the target variable**. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
 
 
-### 1.2 Adjusted R-squared
+### 1.3 Adjusted R-squared
 
 A major problem is that R-sqaured is related to the number of variables we add to our regression model. That is, even if we are adding redundant variables to the data, the value of R-squared does not decrease. This clearly does not make sense because some of the independent variables might not be useful in determining the target variable. 
 
