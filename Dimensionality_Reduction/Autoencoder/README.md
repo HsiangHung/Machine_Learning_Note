@@ -46,7 +46,7 @@ As a concrete example, suppose the inputs x are the pixel intensity values from 
 
 ## 2. Cost (Loss) Function
 
-Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders][[Jermey Jordan-1]][Introduction to autoencoders]
+Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders][[Jermey Jordan-1]][Introduction to autoencoders], [[Cross Validated]][Loss function for autoencoders]:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" title="C = C(x, \hat{x}) + \textrm{regularization}" /></a>
 
@@ -125,6 +125,8 @@ For a deeper understanding please see one of my previous posts on the subject he
 [[Arden Dertat] Applied Deep Learning - Part 3: Autoencoders](https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798)
 * [Dimension Reduction - Autoencoders]: https://blog.paperspace.com/dimension-reduction-with-autoencoders/
 [[ASHWINI KUMAR PAL] Dimension Reduction - Autoencoders](https://blog.paperspace.com/dimension-reduction-with-autoencoders/)
+* [Loss function for autoencoders]: https://stats.stackexchange.com/questions/245448/loss-function-for-autoencoders
+[[Cross Validated] Loss function for autoencoders](https://stats.stackexchange.com/questions/245448/loss-function-for-autoencoders)
 * [Unsupervised Learning: The autoencoder in laymans terms]: https://medium.com/@cdefaux/unsupervised-learning-the-autoencoder-in-laymans-terms-5dfdee22e692
 [[Christiaan Defaux-1] Unsupervised Learning: The autoencoder in laymans terms](https://medium.com/@cdefaux/unsupervised-learning-the-autoencoder-in-laymans-terms-5dfdee22e692)
 * [The Sparse Autoencoder (SAE) for Dummies]: https://medium.com/@cdefaux/the-sparse-autoencoder-sae-for-dummies-cb7f170bda86
