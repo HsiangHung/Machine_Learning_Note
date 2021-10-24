@@ -11,7 +11,7 @@ Some recommended summary:
 * Knowledge hut, Machine learning series. e.g. [Support Vector Machines in Machine Learning](https://www.knowledgehut.com/blog/data-science/support-vector-machines-in-machine-learning)
 
 
-## Data Sparsity
+## 1. Data Sparsity
 
 **Rakshith Gowda Kodihalli** [[Quora: What is data sparsity?]][What is data sparsity?]: Any data which as very large zero value and very little no zero value then it is called sparse data. And the way in which data is saved is sparse matrix. The example is like:
 
@@ -39,7 +39,7 @@ In this we can only save key ,value, location only for non zero elements:
 [[Quora: How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?] How do you deal with training data with high sparsity and large number of features (~1k) in machine learning?](https://www.quora.com/How-do-you-deal-with-training-data-with-high-sparsity-and-large-number-of-features-1k-in-machine-learning)
 
 
-## Why only L1 and L2 regularization but not other norms?
+## 2. Why only L1 and L2 regularization but not other norms?
 
 The `Lq` norms with q < 1 is not convex, so difficult to optimize [Cross Validated: Why do we only see L1 and L2 regularization but not other norms?
 ](https://stats.stackexchange.com/questions/269298/why-do-we-only-see-l-1-and-l-2-regularization-but-not-other-norms). L1 and L2 corresponds to Manhattan norm and Euclidean norm of complex numbers [wiki](https://en.wikipedia.org/wiki/Norm_(mathematics)). Other norm (credit from the book: [Statistical Learning with Sparsity](http://web.stanford.edu/~hastie/StatLearnSparsity/)):
@@ -48,7 +48,7 @@ The `Lq` norms with q < 1 is not convex, so difficult to optimize [Cross Validat
 ![Lq_regularization](images/Lq_regularization.png)
 
 
-## L1/L2 regularization distribution
+## 3. L1/L2 regularization distribution
 
 L1 and L2 regularization correspond to the priors of MAP in Bayesian. See [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Bayesian_%26_MCMC#22-map). L2 regularization is equivalent to **Gaussian** prior [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?]][Why is the L2 regularization equivalent to Gaussian prior?], whereas L1 corresponds to [Laplace prior](https://en.wikipedia.org/wiki/Laplace_distribution) (double exponential distribution).
 
@@ -77,9 +77,9 @@ In (a), the min cost happens at β2 = 0. But in (b), the min cost at finite β1 
 [[Terence Parr] The difference between L1 and L2 regularization](https://explained.ai/regularization/L1vsL2.html)
 
 
-## Entropy, Cross-Entropy, and KL-Divergence 
+## 4. Entropy, Cross-Entropy, and KL-Divergence 
 
-### a. Entropy
+### 4.1 Entropy
 
 Given probability distribution p, it tells us how unpredictable the probability distribution is.
 
@@ -87,7 +87,7 @@ Given probability distribution p, it tells us how unpredictable the probability 
 
 Say, a fair coin, `p(H) = p(T) = 1/2`, then `H = log2`. But if `p(H) = 0.99`, then `H ~ 0`, i.e. less uncertainty.
 
-### b. Cross-Entropy
+### 4.2 Cross-Entropy
 
 Cross-Entropy is a function of both true probability distribution `p` and predicted probability distribution `q`:
 
@@ -97,7 +97,7 @@ If our predictions are perfect, that is the predicted distribution is equal to t
 
 
 
-### c. KL-Divergence
+### 4.3 KL-Divergence
 
 Kullback-Leibler Divergence measures information lost. 
 
@@ -115,7 +115,7 @@ The [blog: Kullback-Leibler Divergence Explained](https://www.countbayesie.com/b
 The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-understanding-kl-divergence-2b382ca2b2a8) shows an example using KL-divergence to interpret approximation to a true distribution with the bionomial and uniform distribition.
 
 
-## Convex Function
+## 5. Convex Function
 
 The strict definition (from [wiki](https://en.wikipedia.org/wiki/Convex_function)) of a convert function is
 
@@ -123,7 +123,7 @@ The strict definition (from [wiki](https://en.wikipedia.org/wiki/Convex_function
 
 Note, in a convex function, the local minimum global minimum. See the [proof](https://planetmath.org/localminimumofconvexfunctionisnecessarilyglobal).
 
-## Newton Method
+## 6. Newton Method
 
 
 It is a method for finding the root of a function, rather than its maxima or minima. This means that, if the problem satisfies the constraints of Newton’s method, we can find `x` for which `f(x)=0`. **NOT** `f'(x)=0`, as was the case for gradient descent. Therefore, we, apply Newton’s method on the **derivative** `f'(x)` of the cost function (`f''(x)`, second-order derivatives), not on the cost function itself [[Gabriele De Luca]][Gradient Descent vs. Newton’s Gradient Descent], [[Stack overflow: What is the difference between Gradient Descent and Newton's Gradient Descent?]][What is the difference between Gradient Descent and Newton's Gradient Descent?].
@@ -134,7 +134,7 @@ For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" title="x_{n+1} = x_n - [\bold H f]^{-1}f^{\prime}(x_n)" /></a>
 
-### a. Primary difference
+### 6.1 Primary difference
 
 1. The first difference lies in the fact that gradient descent is parametric according to the learning rate `\alpha`. Newton’s method isn’t parametric, which means that we can apply it without worrying for hyperparameter optimization. (A parametric version of Newton’s method also exists, in truth, but it only applies in cases for which we operate with a polynomial function with multiple roots.)
 
@@ -143,7 +143,7 @@ For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross 
 3. The third difference consists of the behavior around stationary points. If gradient descent encounters a stationary point during iteration, the program continues to run, albeit the parameters don’t update. Newton’s method, however, we have `f'(x) = f''(x) = 0`. The program that runs it would therefore terminate.
 
 
-### b. Why is Newton's method not widely used in machine learning?
+### 6.2 Why is Newton's method not widely used in machine learning?
 
 The analytic expression for the second derivative is often complicated or intractable, requiring a lot of computation. Numerical methods for computing the second derivative also require a lot of computation, `O(N^2)`, where `N` is the number of features. On the other hand, computing the gradient is only `O(N)`. But the next step to invert Hessian, which is `O(N^3)`. So while computing the Hessian is expensive, inverting it or solving least squares is often even worse.
 
@@ -164,3 +164,17 @@ you see how the Newton method led you to the saddle point at `x = y = 0`. In con
 [[Gabriele De Luca] Gradient Descent vs. Newton’s Gradient Descent](https://www.baeldung.com/cs/gradient-descent-vs-newtons-gradient-descent)
 * [What is the difference between Gradient Descent and Newton's Gradient Descent?]: https://stackoverflow.com/questions/12066761/what-is-the-difference-between-gradient-descent-and-newtons-gradient-descent
 [[Stack overflow: What is the difference between Gradient Descent and Newton's Gradient Descent?] What is the difference between Gradient Descent and Newton's Gradient Descent?](https://stackoverflow.com/questions/12066761/what-is-the-difference-between-gradient-descent-and-newtons-gradient-descent)
+
+## 7. The Akaike Information Criterion
+
+In plain words, AIC is a single number score that can be used to determine which of multiple models is most likely to be the best model for a given dataset. In other words, the Akaike Information Criterion (AIC) lets you test how well your model fits the data set without over-fitting it.
+
+A lower AIC score is better.
+
+### Reference
+
+* [Introduction to AIC — Akaike Information Criterion]: https://towardsdatascience.com/introduction-to-aic-akaike-information-criterion-9c9ba1c96ced
+[[Alexandre Zajic] Introduction to AIC — Akaike Information Criterion](https://towardsdatascience.com/introduction-to-aic-akaike-information-criterion-9c9ba1c96ced)
+
+* [The Akaike Information Criterion]: https://towardsdatascience.com/the-akaike-information-criterion-c20c8fd832f2
+[[Sachin Date] The Akaike Information Criterion](https://towardsdatascience.com/the-akaike-information-criterion-c20c8fd832f2)
