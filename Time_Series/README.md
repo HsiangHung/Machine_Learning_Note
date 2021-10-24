@@ -88,6 +88,7 @@ Econometricians developed another class of models that incorporated auroregressi
 
 FFT model and Seq2Seq: [Two Effective Algorithms for Time Series Forecasting](https://www.youtube.com/watch?v=VYpAodcdFfA)
 
+Code examples in [SARIMAX Introduction](https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_stata.html): Stata ARIMA time series in statmodel in Python.
 
 ## 2. Handling Missing Values in Time Series
 
