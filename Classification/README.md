@@ -11,6 +11,7 @@ Table of Contents:
      * [2.1 Precision and Recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#21--precision-and-recall)
      * [2.2 AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#22--auc)
      * [2.3 Selection of precision or recall](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#23--selection-of-precision-or-recall)
+     * [2.4 Fraud rate to precision, recall, AUC](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#24-fraud-rate-to-precision-recall-auc)
 * [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cost-function-cross-entropy)
      * [3.1 Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#31-binary)
      * [3.2 Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#32-multiclass)
