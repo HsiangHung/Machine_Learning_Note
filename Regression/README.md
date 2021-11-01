@@ -194,7 +194,7 @@ Typically, you use the coefficient p-values to determine which terms to keep in 
 
 ## 3. Multicollinearity
 
-**Multicollinearity** is when input variables are highly positively or negatively correlated with one another, usually (absolute) correlation coefficient greater than 0.8.
+**Collinearity** occurs when two predictor variables (e.g., x1 and x2) in a multiple regression have a non-zero correlation. **Multicollinearity** is when more than twp input predictors (variables) are highly positively or negatively correlated with one another, usually (absolute) correlation coefficient greater than 0.8 [[Psychological Statistics]][Multicollinearity and collinearity (in multiple regression) - a tutorial].
 
 Multicollinearity causes the following two basic types of problems:
 
@@ -240,6 +240,11 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 [[Jim Frost] Multicollinearity in Regression Analysis: Problems, Detection, and Solutions](https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/)
 * [Enough Is Enough! Handling Multicollinearity in Regression Analysis]: https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis
 [[Minitab Blog-Multicollinearity] Enough Is Enough! Handling Multicollinearity in Regression Analysis](https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis)
+
+
+* [Multicollinearity and collinearity (in multiple regression) - a tutorial]: http://psychologicalstatistics.blogspot.com/2013/11/multicollinearity-and-collinearity-in.html
+[[Psychological Statistics] Multicollinearity and collinearity (in multiple regression) - a tutorial](http://psychologicalstatistics.blogspot.com/2013/11/multicollinearity-and-collinearity-in.html)
+
 * [How to detect and deal with Multicollinearity]: https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1
 [[Sushmitha Pulagam] How to detect and deal with Multicollinearity](https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1)
 
