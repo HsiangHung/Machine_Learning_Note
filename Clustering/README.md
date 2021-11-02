@@ -76,5 +76,5 @@ For a one-dimensional problem, don't use multidimensional clustering algorithms.
 * [Determine different clusters of 1d data from database]: https://stats.stackexchange.com/questions/40454/determine-different-clusters-of-1d-data-from-database
 [[Cross validation-2] Determine different clusters of 1d data from database](https://stats.stackexchange.com/questions/40454/determine-different-clusters-of-1d-data-from-database)
 * [1D Number Array Clustering]: https://stackoverflow.com/questions/11513484/1d-number-array-clustering
-[[Cross validation-3] 1D Number Array Clusteringe](https://stackoverflow.com/questions/11513484/1d-number-array-clustering)
+[[Cross validation-3] 1D Number Array Clustering](https://stackoverflow.com/questions/11513484/1d-number-array-clustering)
  
