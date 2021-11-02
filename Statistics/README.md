@@ -1,7 +1,7 @@
 
 # Statistical Testing
 
-## Central Limit Theorem
+## 1. Central Limit Theorem
 
 The central limit theorem states that [[The Role of Probability]][Central Limit Theorem]
 
@@ -33,7 +33,7 @@ The distribution of **sample mean** (sampling distribution) is nearly normal, ce
 [[The Role of Probability] Central Limit Theorem](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/BS704_Probability12.html)
 
 
-## Type I and Type II Error
+## 2. Type I and Type II Error
 
 The conversion matrix of testing is [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests]
 
@@ -66,11 +66,11 @@ Ideally, we want both lower <a href="https://www.codecogs.com/eqnedit.php?latex=
 [[Massa] S. Massa, Kolmogorov Smirnov Test & Power of Tests](http://www.stats.ox.ac.uk/~massa/Lecture%2013.pdf)
 
 
-## Effect size
+## 3. Effect size
 
 The larger the effect size, the larger the power and the smaller the probability of making type II error [[Courtney Donovan]][Power & Effect Size].
 
-### A. Difference family: Effect sizes based on differences between means (Cohen's D)
+### 3.1 Difference family: Effect sizes based on differences between means (Cohen's D)
 
 The effect size, Cohen's d, based on means usually considers the standardized mean difference between **two** populations [[wiki]][Wiki-Effect size, Effect size], [[Merra]][Merra, Power Analysis, Statistical Significance, & Effect Size]:
 
@@ -91,7 +91,7 @@ The form for the effect size d resembles the computation for a t-test statistic,
 
 which means that for a given effect size, the significance level increases with the sample size. Unlike the t-test statistic, the effect size here aims to estimate a population parameter and is **not** affected by the sample size.
 
-### B. Effect sizes for difference in proportion
+### 3.2 Effect sizes for difference in proportion
 
 From [[Kunchok Dorjee]][Power and Sample Size Calculation]:
 
@@ -99,7 +99,7 @@ From [[Kunchok Dorjee]][Power and Sample Size Calculation]:
 
 Also, in the Kunchok Dorjee's video, @20:00 min the slides shows more information.
 
-### C. Correlation family: Effect sizes based on "variance explained"
+### 3.3 Correlation family: Effect sizes based on "variance explained"
 
 These effect sizes estimate the amount of the variance within an experiment that is "explained" or "accounted for" by the experiment's model. Pearson's correlation, often denoted r and introduced by Karl Pearson, is widely used as an effect size when paired quantitative data are available[[wiki]][Wiki-Effect size, Effect size], [[statisticssolution]][statisticssolution, Effect Size].
 
@@ -109,7 +109,7 @@ These effect sizes estimate the amount of the variance within an experiment that
 | Medium | 0.3 |
 | Large | 0.5 |
 
-### D. Other effect sizes
+### 3.4 Other effect sizes
 
 From [[Courtney Donovan]][Power & Effect Size] lecture:
 
@@ -130,7 +130,7 @@ From [[Courtney Donovan]][Power & Effect Size] lecture:
 * [Wiki-Effect size, Effect size]: https://en.wikipedia.org/wiki/Effect_size
 [[wiki] Wiki-Effect size, Effect size](https://en.wikipedia.org/wiki/Effect_size)
 
-## Novelty Effect
+## 4. Novelty Effect
 
 The novelty effect happens: when you give users the chance to try a new feature, at first they might try it out just out of curiosity, even if the feature is not actually better. So, say you run a test for 2 weeks, you are actually capturing in those two weeks the phase in which customers are extensively using your feature just because it is **new** and they are **curious** [[Product Data Science]][Product Data Science, Novelty Effect].
 
@@ -138,14 +138,14 @@ Assume you check your test results and see, for instance, that engagement or tim
 
 The problem is how to isolate the effect of the new feature vs the effect of novelty, which is unrelated to the new feature and always happens whenever a user sees something new. For instance, let’s say you run a test giving some users a lower price. How to isolate the effect of the lower price vs the excitement of getting a discount?
 
-### A. Solution for novelty effect
+### 4.1 Solution for novelty effect
 
 The obvious solution for novelty effect would be to **run tests longer**, giving test users enough time to get rid of the novelty effect. However, that’s hardly efficient, and the cost of having to run tests for longer would probably outweigh the benefits coming from more reliable results.
 
 Another way is to consider driving traffic for **new users only** to ensure the novelty effect doesn’t impact your results [[Instapage]][Instapage, 5 Common Threats to Your A/B Test’s Validity]. Returning visitors may attract more attention on the change, simply because it’s different than what they’re accustomed to. But new visitors have never seen your previous setup, so if it attracts their attention, it won’t be because they’re used to something different.
 
 
-### B. Digression: Change aversion
+### 4.2 Digression: Change aversion
 
 The opposite to novelty effect also happens. That is, if you give users a new experience, at first they might hate it cause it is not what they are used to and they feel they have to re-learn how to use the product. This is called change aversion. However, in practice, this is a much smaller problem from an A/B testing standpoint because it only affects major product redesigns, which are rarer than small UI tweaks [[Product Data Science]][Product Data Science, Novelty Effect]. 
 
@@ -158,12 +158,12 @@ The opposite to novelty effect also happens. That is, if you give users a new ex
 [[Product Data Science] Product Data Science, Novelty Effect](https://productds.com/wp-content/uploads/Novelty_Effect.html)
 
 
-## A/B Testing
+## 5. A/B Testing
 
 
-### Different Types of Test Design [[Exponente]][How to Ace A/B Testing Interview Questions]:
+Different Types of Test Design [[Exponente]][How to Ace A/B Testing Interview Questions]:
 
-#### A/B/N
+### 5.1 A/B/N
 
 Another similar kind of test is the A/B/N test. In this kind of test, (usually, this kind of test is done for web pages) more than two versions are tested, whereas an A/B test only tests two versions against each other. The N in A/B/N stands for "number," meaning the number of versions being tested. A/B/N tests are similar to that of multivariate tests, except multivariate tests involve the testing of all possible combinations of the different **variables** at once, whereas A/B/N, does not. Rather, A/B/N is used to test several different **versions** against each other.
 
@@ -173,7 +173,7 @@ These forms of tests are best used for major layout or design decisions, rather 
 
 **Limitations** A/B testing is best used to measure the impact of **two to four** variables on interactions with the page. Tests with more variables take longer to run, and A/B testing will not reveal any information about interaction between variables on a single page [[Exponente]][How to Ace A/B Testing Interview Questions].
 
-#### Multivariate testing
+### 5.2 Multivariate testing
 
  A/B tests, as the name suggests, only compare two variables. If too many variables are included in an A/B test, it becomes difficult to discern why one version outperformed the other. When **multiple variables** are needed to be tested, multivariate testing is the way to go.
 
