@@ -70,3 +70,6 @@ For n_clusters = 6 The average silhouette_score is : 0.4504666294372765
 ## 2. 1D Kernel Density Estimate
 
 [Simple 1D Kernel Density Estimation in Sklearn](https://scikit-learn.org/stable/auto_examples/neighbors/plot_kde_1d.html)
+
+* [Clustering 1D data]: https://stats.stackexchange.com/questions/13781/clustering-1d-data/13782
+[[Cross validation] Clustering 1D data](https://stats.stackexchange.com/questions/13781/clustering-1d-data/13782)
