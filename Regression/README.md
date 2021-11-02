@@ -260,7 +260,7 @@ An influential point is an outlier that greatly affects the slope of the regress
 
 When the outlier is present, the slope is flatter (-4.10 vs. -3.32); so this outlier would be considered an influential point.
 
-#### 4.2 Example B
+### 4.2 Example B
 
 ![](images/outlier_regression_2.png)
 
