@@ -69,7 +69,12 @@ For n_clusters = 6 The average silhouette_score is : 0.4504666294372765
 
 ## 2. 1D Kernel Density Estimate
 
-[Simple 1D Kernel Density Estimation in Sklearn](https://scikit-learn.org/stable/auto_examples/neighbors/plot_kde_1d.html)
+For a one-dimensional problem, don't use multidimensional clustering algorithms. A single dimension is much more special than you naively think, because you can actually sort it, which makes things a lot easier [[Cross validation-3]][1D Number Array Clusteringe]. Also use [Simple 1D Kernel Density Estimation in Sklearn](https://scikit-learn.org/stable/auto_examples/neighbors/plot_kde_1d.html)
 
 * [Clustering 1D data]: https://stats.stackexchange.com/questions/13781/clustering-1d-data/13782
-[[Cross validation] Clustering 1D data](https://stats.stackexchange.com/questions/13781/clustering-1d-data/13782)
+[[Cross validation-1] Clustering 1D data](https://stats.stackexchange.com/questions/13781/clustering-1d-data/13782)
+* [Determine different clusters of 1d data from database]: https://stats.stackexchange.com/questions/40454/determine-different-clusters-of-1d-data-from-database
+[[Cross validation-2] Determine different clusters of 1d data from database](https://stats.stackexchange.com/questions/40454/determine-different-clusters-of-1d-data-from-database)
+* [1D Number Array Clustering]: https://stackoverflow.com/questions/11513484/1d-number-array-clustering
+[[Cross validation-3] 1D Number Array Clusteringe](https://stackoverflow.com/questions/11513484/1d-number-array-clustering)
+ 
