@@ -147,7 +147,7 @@ Thus, the time to stop collecting is important. When poorly done, this can lead 
 
 * [Stopping rules and regression to the mean](https://www.statisticsdonewrong.com/regression.html)
 * [A/B Testing Statistical Significance: How and When to End a Test](https://www.convert.com/blog/a-b-testing/experiments-statistical-significance-speed/)
-* [How Not To Run an A/B Test](https://www.evanmiller.org/how-not-to-run-an-ab-test.html), 
+* [How Not To Run an A/B Test](https://www.evanmiller.org/how-not-to-run-an-ab-test.html)
 
 
 ### 2.3 Student’s t Test Power Analysis
