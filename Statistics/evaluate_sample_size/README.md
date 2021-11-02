@@ -143,6 +143,9 @@ Therefore, to avoid [p-hacking](https://www.youtube.com/watch?v=HDCOUXE3HMM), **
 
 ![](images/process_power_analysis.png)
 
+Thus, the time to stop collecting is important. When poorly done, this can lead to numerous false positives. see [Stopping rules and regression to the mean](https://www.statisticsdonewrong.com/regression.html), [A/B Testing Statistical Significance: How and When to End a Test](https://www.convert.com/blog/a-b-testing/experiments-statistical-significance-speed/), [How Not To Run an A/B Test](https://www.evanmiller.org/how-not-to-run-an-ab-test.html), 
+
+
 ### 2.3 Student’s t Test Power Analysis
 
 We can make the idea of statistical power and power analysis concrete with a worked example [[Jason Brownlee]][A Gentle Introduction to Statistical Power and Power Analysis in Python].
@@ -167,7 +170,6 @@ analysis = TTestIndPower()
 analysis.plot_power(dep_var='nobs', nobs=sample_sizes, effect_size=effect_sizes)
 pyplot.show()
 ```
-
 
 ![](images/t_test_power_analysis.png)
 
