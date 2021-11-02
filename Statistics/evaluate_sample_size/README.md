@@ -145,7 +145,7 @@ Therefore, to avoid [p-hacking](https://www.youtube.com/watch?v=HDCOUXE3HMM), **
 
 ### 2.3 Student’s t Test Power Analysis
 
-We can make the idea of statistical power and power analysis concrete with a worked example.
+We can make the idea of statistical power and power analysis concrete with a worked example [[Jason Brownlee]][A Gentle Introduction to Statistical Power and Power Analysis in Python].
 
 The Student’s t test, which is a statistical hypothesis test for comparing the means from two samples of Gaussian variables. The assumption, or null hypothesis, of the test is that the sample populations have the same mean, e.g. that there is no difference between the samples or that the samples are drawn from the same underlying population.
 
@@ -153,13 +153,14 @@ A common significance level for interpreting the p-value is 5% or 0.05. A common
 
 For a given experiment with these defaults, we may be interested in estimating a suitable sample size. That is, how many observations are required from each sample in order to at least detect an effect of 0.80 with an 80% chance of detecting the effect if it is true (20% of a Type II error) and a 5% chance of detecting an effect if there is no such effect (Type I error).
 
+The following code shows how many observations we require to collect in t-test [[Jason Brownlee]][A Gentle Introduction to Statistical Power and Power Analysis in Python]:
 ```Python
 # calculate power curves for varying sample and effect size
 from numpy import array
 from matplotlib import pyplot
 from statsmodels.stats.power import TTestIndPower
 # parameters for power analysis
-effect_sizes = array([0.1, 0.2])
+effect_sizes = array([0.1, 0.2, 0.3])
 sample_sizes = array(range(5, 2000))
 # calculate power curves from multiple power analyses
 analysis = TTestIndPower()
