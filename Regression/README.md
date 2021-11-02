@@ -221,9 +221,6 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"
 | 1-5 |  Moderate correlation   | 
 | >10 |  High correlation  |  
 
-* VIF = 1 → No correlation
-* VIF = 1 to 5 Moderate correlation
-* VIF >10 → High correlation
 
 ### 3.2 How to deal with Multicollinearity
 
@@ -246,11 +243,8 @@ Some notes by [[Jim Frost]][Multicollinearity in Regression Analysis: Problems, 
 [[Jim Frost] Multicollinearity in Regression Analysis: Problems, Detection, and Solutions](https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/)
 * [Enough Is Enough! Handling Multicollinearity in Regression Analysis]: https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis
 [[Minitab Blog-Multicollinearity] Enough Is Enough! Handling Multicollinearity in Regression Analysis](https://blog.minitab.com/en/understanding-statistics/handling-multicollinearity-in-regression-analysis)
-
-
 * [Multicollinearity and collinearity (in multiple regression) - a tutorial]: http://psychologicalstatistics.blogspot.com/2013/11/multicollinearity-and-collinearity-in.html
 [[Psychological Statistics] Multicollinearity and collinearity (in multiple regression) - a tutorial](http://psychologicalstatistics.blogspot.com/2013/11/multicollinearity-and-collinearity-in.html)
-
 * [How to detect and deal with Multicollinearity]: https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1
 [[Sushmitha Pulagam] How to detect and deal with Multicollinearity](https://towardsdatascience.com/how-to-detect-and-deal-with-multicollinearity-9e02b18695f1)
 
