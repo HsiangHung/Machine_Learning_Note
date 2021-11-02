@@ -143,7 +143,37 @@ Therefore, to avoid [p-hacking](https://www.youtube.com/watch?v=HDCOUXE3HMM), **
 
 ![](images/process_power_analysis.png)
 
-### 2.2.A - Udacity page view example
+### 2.3 Student’s t Test Power Analysis
+
+We can make the idea of statistical power and power analysis concrete with a worked example.
+
+The Student’s t test, which is a statistical hypothesis test for comparing the means from two samples of Gaussian variables. The assumption, or null hypothesis, of the test is that the sample populations have the same mean, e.g. that there is no difference between the samples or that the samples are drawn from the same underlying population.
+
+A common significance level for interpreting the p-value is 5% or 0.05. A common measure for comparing the difference in the mean from two groups is the Cohen’s d measure. It calculates a standard score that describes the difference in terms of the number of standard deviations that the means are different. A large effect size for Cohen’s d is 0.80 or higher, as is commonly accepted when using the measure.
+
+For a given experiment with these defaults, we may be interested in estimating a suitable sample size. That is, how many observations are required from each sample in order to at least detect an effect of 0.80 with an 80% chance of detecting the effect if it is true (20% of a Type II error) and a 5% chance of detecting an effect if there is no such effect (Type I error).
+
+```Python
+# calculate power curves for varying sample and effect size
+from numpy import array
+from matplotlib import pyplot
+from statsmodels.stats.power import TTestIndPower
+# parameters for power analysis
+effect_sizes = array([0.1, 0.2])
+sample_sizes = array(range(5, 2000))
+# calculate power curves from multiple power analyses
+analysis = TTestIndPower()
+analysis.plot_power(dep_var='nobs', nobs=sample_sizes, effect_size=effect_sizes)
+pyplot.show()
+```
+
+
+![](images/t_test_power_analysis.png)
+
+
+### 2.4 Examples
+
+#### 2.4.A - Udacity page view example
 
 [Udacity](https://www.youtube.com/watch?v=WnQoZzxas-g&t=15s) shows the page view example to calculate sample size. Here we assume population is large enough (for internet, it is true), but we demand statistical power. 
 
@@ -153,9 +183,9 @@ Assume the conversion rate is about 10%, and we want to run an A/B test. The min
 
 Note the `absolute` is selected to make 8%-12% confidence interval. The online calculator shows at least we need sample size of 3,623 page views per variation (in each group) to see significant results in the AB test.
 
-### 2.2.B - Kunchok Dorjee's Example
+#### 2.4.B - Kunchok Dorjee's Example
 
-Followed the previous example, p1=0.8, p2= 0.7
+Followed the previous [Kunchok Dorjee's example](https://www.youtube.com/watch?v=iuBbJIeEUwA), p1=0.8, p2= 0.7
 
 ![](images/example_calculate_samplesize_power.png)
 
@@ -196,6 +226,8 @@ For instance, say you have two variants (baseline, plus one other), 100,000 MAUs
 [[Apptimize] How Many Users Do I Need for My A/B Test? Calculate Sample Size and Run Times](https://apptimize.com/blog/2014/01/how-many-users-time/)
 * [How to Determine Your A/B Testing Sample Size & Time Frame]: https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time
 [[Ginny Mineo] How to Determine Your A/B Testing Sample Size & Time Frame](https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time)
+* [A Gentle Introduction to Statistical Power and Power Analysis in Python]:https://machinelearningmastery.com/statistical-power-and-power-analysis-in-python/
+[[Jason Brownlee] A Gentle Introduction to Statistical Power and Power Analysis in Python](https://machinelearningmastery.com/statistical-power-and-power-analysis-in-python/)
 * [p-hacking: What it is and how to avoid it!]: https://www.youtube.com/watch?v=HDCOUXE3HMM
 [[Josh Starmer-1] p-hacking: What it is and how to avoid it!](https://www.youtube.com/watch?v=HDCOUXE3HMM)
 * [Power Analysis, Clearly Explained!!!]: https://www.youtube.com/watch?v=VX_M3tIyiYk
