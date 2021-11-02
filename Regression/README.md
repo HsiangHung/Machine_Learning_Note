@@ -215,6 +215,12 @@ The VIF for the `j`-th predictor is [[Penn stat: STAT 462 - Applied Regression A
 
 where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R^2_j" title="R^2_j" /></a> is the R-sqaured value obtained by regressing the `j`-th predictor on the remaining predictors.
 
+| VIF | judgement | 
+| --- | --- | 
+| 1 |  No correlation | 
+| 1-5 |  Moderate correlation   | 
+| >10 |  High correlation  |  
+
 * VIF = 1 → No correlation
 * VIF = 1 to 5 Moderate correlation
 * VIF >10 → High correlation
