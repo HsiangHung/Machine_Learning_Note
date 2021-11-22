@@ -59,7 +59,6 @@ For classification, this will be equal to **log(odds)** of the **dependent varia
 
 Suppose we have the following dataset
 
-
 | # | chest pain | good blood circulation | blocked arteries | heart disease|
 | --- | --- | --- | --- | --- | 
 | 1 |  No  |  No   |   No   |  No  |
@@ -98,12 +97,16 @@ where Actual value= 1 if the person has Heart Disease and 0 if not and Predicted
 | 6 |  No   |  Yes   |   No    |  No  | 0 | 0.7 | -0.7 |
 
 
-### 2.2 Second tree
+### 2.2 Second boosting tree
 
-Next step is to build a Decision Tree to predict the residuals using Chest Pain, Good Blood Circulation and Blocked Arteries. Assumed we have the following sample tree:
+Next step is to build a Decision Tree to predict the residuals using Chest Pain, Good Blood Circulation and Blocked Arteries. Assumed we built the following sample tree (from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide]):
 
 ![](images/tree-1.png)
 
+
+How do we calculate the predicted residuals in each leaf? The initial prediction was in terms of log(odds) and the leaves are derived from a probability. Hence, we need to do some transformation to get the predicted residuals in terms of log(odds). The most common transformation is done using the following formula 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\sum&space;\textrm{Resisual}_i}{\sum&space;(\textrm{PrevProb}_i)&space;(1-\textrm{PrevProb}_i)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\sum&space;\textrm{Resisual}_i}{\sum&space;(\textrm{PrevProb}_i)&space;(1-\textrm{PrevProb}_i)}" title="\frac{\sum \textrm{Resisual}_i}{\sum (\textrm{PrevProb}_i) (1-\textrm{PrevProb}_i)}" /></a>
 
 
 
@@ -113,14 +116,16 @@ Next step is to build a Decision Tree to predict the residuals using Chest Pain,
 
 
 
+* [Gradient Boosting Trees for Classification: A Beginner’s Guide]: https://medium.com/swlh/gradient-boosting-trees-for-classification-a-beginners-guide-596b594a14ea
+[[Aratrika Pal] Gradient Boosting Trees for Classification: A Beginner’s Guide](https://medium.com/swlh/gradient-boosting-trees-for-classification-a-beginners-guide-596b594a14ea)
 
 
 * [Gradient in Gradient Boosting]: https://stats.stackexchange.com/questions/338658/gradient-in-gradient-boosting/340376#340376
 [[Cross Validated: Gradient in Gradient Boosting] Gradient in Gradient Boosting](https://stats.stackexchange.com/questions/338658/gradient-in-gradient-boosting/340376#340376)
 
 
-* [Gradient Boosting Trees for Classification: A Beginner’s Guide]: https://medium.com/swlh/gradient-boosting-trees-for-classification-a-beginners-guide-596b594a14ea
-[[Aratrika Pal] Gradient Boosting Trees for Classification: A Beginner’s Guide](https://medium.com/swlh/gradient-boosting-trees-for-classification-a-beginners-guide-596b594a14ea)
+* [Gradient Boosting In Classification: Not a Black Box Anymore!]: https://blog.paperspace.com/gradient-boosting-for-classification/
+[[Vihar Kurama] Gradient Boosting In Classification: Not a Black Box Anymore!](https://blog.paperspace.com/gradient-boosting-for-classification/)
 
 
 
