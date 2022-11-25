@@ -69,9 +69,12 @@ In this example we are going to consider multiple coin-flips of a coin with unkn
 ```Python
 data = stats.bernoulli.rvs(0.5, size=1000)
 ``` 
-Our goal is to learn from data and posterior density. We use a **Beta distribution** as prior. The Beta prior is called a [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior), since the posterior distributions $p(\theta|x)$ are in the same probability distribution family as the prior probability distribution $p(\theta)$, the prior and posterior are then called conjugate distributions.
+Our goal is to learn from data and posterior density. We use a **Beta distribution** as prior. The Beta prior is called a [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior), since the posterior distributions $P(\theta|x)$ are in the same probability distribution family as the prior probability distribution $P(\theta)$, the prior and posterior are then called conjugate distributions.
 
 Once we know the number of heads within the number of trails, the posterior $P(\theta|D)$ can be modelled as a beta distribution
+
+$$P(\theta|D) = \textrm{Beta}(x, N_{H}, N_{T}) \propto x^{N_{H}-1} (1-x)^{N_{T}-1}$$
+
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;=&space;\textrm{Beta}(x,&space;N_{H},&space;N_{T})&space;\propto&space;x^{N_{H}-1}&space;(1-x)^{N_{T}-1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(\theta|D)&space;=&space;\textrm{Beta}(x,&space;N_{H},&space;N_{T})&space;\propto&space;x^{N_{H}-1}&space;(1-x)^{N_{T}-1}" title="P(\theta|D) = \textrm{Beta}(x, N_{H}, N_{T}) \propto x^{N_{H}-1} (1-x)^{N_{T}-1}" /></a>
 
@@ -81,7 +84,7 @@ x = np.linspace(0, 1, 100)
 y = stats.beta.pdf(x, heads, N - heads)
 ```
 
-Before any trials, 0 trials and 0 heads, our posterior density is a uniform distribution. We can interpret it as which due to the unknown fairness, the uniform distribution states that each level of fairness (or each value of θ) to be equally likely.
+Before any trials, 0 trials and 0 heads, our posterior density is a uniform distribution. We can interpret it as which due to the unknown fairness, the uniform distribution states that each level of fairness (or each value of $\theta$) to be equally likely.
 
 ![Figure_1](images/Figure_1.png)
 
