@@ -1,4 +1,4 @@
-# Time Series 
+# Anomaly Detection in Time Series 
 
 ## What is stationarity?
 
@@ -84,90 +84,10 @@ Econometricians developed another class of models that incorporated auroregressi
 <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y^*_t = \beta x_t + \phi_1 Y^*_{t-1} + \phi_2 Y^*_{t-2} + \cdots + \phi_p Y^*_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
 
 
-### 1.6 LSTM
 
-
-
-* [Time Series Forecasting with the Long Short-Term Memory Network in Python]: https://machinelearningmastery.com/time-series-forecasting-long-short-term-memory-network-python/
-[[Jason Brownlee-1] Time Series Forecasting with the Long Short-Term Memory Network in Python](https://machinelearningmastery.com/time-series-forecasting-long-short-term-memory-network-python/)
-
-* [Time Series Prediction with LSTM Recurrent Neural Networks in Python with Keras]: https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
-[[Jason Brownlee-2] Time Series Prediction with LSTM Recurrent Neural Networks in Python with Keras](https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/)
-
-* [Gentle Introduction to Models for Sequence Prediction with RNNs]: https://machinelearningmastery.com/models-sequence-prediction-recurrent-neural-networks/
-[[Jason Brownlee-3] Gentle Introduction to Models for Sequence Prediction with RNNs](https://machinelearningmastery.com/models-sequence-prediction-recurrent-neural-networks/)
-
-* [Crash Course in Recurrent Neural Networks for Deep Learning]: https://machinelearningmastery.com/crash-course-recurrent-neural-networks-deep-learning/
-[[Jason Brownlee-4] Crash Course in Recurrent Neural Networks for Deep Learning](https://machinelearningmastery.com/crash-course-recurrent-neural-networks-deep-learning/)
-
-* [Mini-Course on Long Short-Term Memory Recurrent Neural Networks with Keras]: https://machinelearningmastery.com/long-short-term-memory-recurrent-neural-networks-mini-course/
-[[Jason Brownlee-5] Mini-Course on Long Short-Term Memory Recurrent Neural Networks with Keras](https://machinelearningmastery.com/long-short-term-memory-recurrent-neural-networks-mini-course/)
-
-
-
-
-### 1.7 Other models
-
-FFT model and [Seq2Seq](https://google.github.io/seq2seq/). A talk in Youtube: [Two Effective Algorithms for Time Series Forecasting](https://www.youtube.com/watch?v=VYpAodcdFfA)
-
-Code examples in [SARIMAX Introduction](https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_stata.html): Stata ARIMA time series in statmodel in Python.
-
-Jose Marcial Portilla, [Using Python and Auto ARIMA to Forecast Seasonal Time Series](https://medium.com/@josemarcialportilla/using-python-and-auto-arima-to-forecast-seasonal-time-series-90877adff03c)
-
-## 2. Handling Missing Values in Time Series
-
-In time series data, if there are missing values, there are two ways to deal with the incomplete data:
-
-* omit the entire record that contains information.
-* Impute the missing information.
-
-Since the time series data has temporal property, only some of the statistical methodologies are appropriate for time series data [[Kaggle: jingjuewang]][Handle Missing Values in Time Series For Beginners].
-
-If we decomposite the time series data with linear regression model, it is:
-
-
-
-where mt stands for trend, st stands for seasonality, and ϵt stands for random variables
-
-Based on the equation above, there can be four types of time series data:
-
-## 3. Cross Validation in Time Series
-
-[[Soumya Shrivastava]][Cross Validation in Time Series]
-
-
-![](images/cross_validation_time_series.png)
-
-[[Rob Hyndman, Cross-validation]][Cross-validation for time series]
-
-[[Alexandra Amidon]][Don’t Use K-fold Validation for Time Series Forecasting]
 
 
 # Reference
 
-* [Don’t Use K-fold Validation for Time Series Forecasting]: https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64
-[[Alexandra Amidon] Don’t Use K-fold Validation for Time Series Forecasting](https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64)
-* [Time Series Analysis]: https://onlinelibrary.wiley.com/doi/book/10.1002/9781118619193
-[[Box, Jenkins, Reinsel] Time Series Analysis](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118619193)
-* [Handle Missing Values in Time Series For Beginners]: https://www.kaggle.com/juejuewang/handle-missing-values-in-time-series-for-beginners
-[[Kaggle: jingjuewang] Handle Missing Values in Time Series For Beginners](https://www.kaggle.com/juejuewang/handle-missing-values-in-time-series-for-beginners)
-* [What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?]: https://www.quora.com/Whats-the-difference-between-ARMA-ARIMA-and-ARIMAX-in-laymans-terms-What-exactly-do-P-D-Q-mean-and-how-do-you-know-what-to-put-in-for-them-in-say-R-1-0-2-or-2-1-1
-[[Quora, 1] What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?](https://www.quora.com/Whats-the-difference-between-ARMA-ARIMA-and-ARIMAX-in-laymans-terms-What-exactly-do-P-D-Q-mean-and-how-do-you-know-what-to-put-in-for-them-in-say-R-1-0-2-or-2-1-1)
-* [8.3 Autoregressive models]: https://otexts.com/fpp2/AR.html
-[[Rob Hyndman: 8.3 Autoregressive models] 8.3 Autoregressive models](https://otexts.com/fpp2/AR.html)
-* [8.4 Moving average models]: https://otexts.com/fpp2/MA.html
-[[Rob Hyndman: 8.4 Moving average models] 8.4 Moving average models](https://otexts.com/fpp2/MA.html)
-* [8.5 Non-seasonal ARIMA models]: https://otexts.com/fpp2/non-seasonal-arima.html
-[[Rob Hyndman: 8.5 Non-seasonal ARIMA models] 8.5 Non-seasonal ARIMA models](https://otexts.com/fpp2/non-seasonal-arima.html)
-* [Cross-validation for time series]: https://robjhyndman.com/hyndsight/tscv/
-[[Rob Hyndman, Cross-validation] Cross-validation for time series](https://robjhyndman.com/hyndsight/tscv/)
-* [The ARIMAX model muddle]: https://robjhyndman.com/hyndsight/arimax/
-[[Rob Hyndman, ARIMAX] The ARIMAX model muddle](https://robjhyndman.com/hyndsight/arimax/)
-* [Stationarity and differencing]: https://people.duke.edu/~rnau/411diff.htm
-[[Robert Nau, Stationarity and differencing] Stationarity and differencing](https://people.duke.edu/~rnau/411diff.htm)
-* [ARIMA models for time series forecasting]: https://people.duke.edu/~rnau/411arim.htm
-[[Robert Nau, ARIMA] ARIMA models for time series forecasting](https://people.duke.edu/~rnau/411arim.htm)
-* [Why does a time series have to be stationary?]: https://stats.stackexchange.com/questions/19715/why-does-a-time-series-have-to-be-stationary
-[[StackExchange, 1] Why does a time series have to be stationary?](https://stats.stackexchange.com/questions/19715/why-does-a-time-series-have-to-be-stationary)
-* [Cross Validation in Time Series]: https://medium.com/@soumyachess1496/cross-validation-in-time-series-566ae4981ce4
-[[Soumya Shrivastava] Cross Validation in Time Series](https://medium.com/@soumyachess1496/cross-validation-in-time-series-566ae4981ce4)
+* [Anomaly Detection in Multivariate Time Series with VAR]: https://towardsdatascience.com/anomaly-detection-in-multivariate-time-series-with-var-2130f276e5e9
+[[Marco Cerliani] Anomaly Detection in Multivariate Time Series with VAR](https://towardsdatascience.com/anomaly-detection-in-multivariate-time-series-with-var-2130f276e5e9)
