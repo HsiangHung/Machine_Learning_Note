@@ -218,11 +218,13 @@ $$P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}$$
 
 Here we denote $N_H$ is the number of heads and $\theta$ is the probability to have heads. Now we are looking for $\theta$ which maximizes the probability of observed data
 
-$$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \underset{\theta}{\textrm{argmax}} \Big( \theta^{N_H}(1-\theta)^{N_T} \Big) = \underset{\theta}{\textrm{argmax}} \ L(\theta)$$
+$$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \underset{\theta}{\textrm{argmax}} \Big[ \theta^{N_H}(1-\theta)^{N_T} \Big] = \underset{\theta}{\textrm{argmax}} \ L(\theta)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;P(D|\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\Big(&space;\theta^{N_H}(1-\theta)^{N_T}&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\&space;L(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;P(D|\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\Big(&space;\theta^{N_H}(1-\theta)^{N_T}&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\&space;L(\theta)" title="\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \underset{\theta}{\textrm{argmax}} \Big( \theta^{N_H}(1-\theta)^{N_T} \Big) = \underset{\theta}{\textrm{argmax}} \ L(\theta)" /></a>
 
-To do it, we differentiate l(θ) with respect to θ and make it equal to zero. Then we obtain the MLE estimate [[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?]][How to derive the likelihood function for binomial distribution for parameter estimation?]
+To do it, we differentiate $L(\theta)$ with respect to $\theta$ and make it equal to zero. Then we obtain the MLE estimate [[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?]][How to derive the likelihood function for binomial distribution for parameter estimation?]
+
+$$\theta_{\textrm{MLE}} = \frac{N_H}{N_H+N_T} = \frac{6}{6} = 1$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\frac{N_H}{N_H&plus;N_T}&space;=&space;\frac{6}{6}&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\frac{N_H}{N_H&plus;N_T}&space;=&space;\frac{6}{6}&space;=&space;1" title="\theta_{\textrm{MLE}} = \frac{N_H}{N_H+N_T} = \frac{6}{6} = 1" /></a>
 
