@@ -115,12 +115,12 @@ According to the [KDD article: 3 methods to deal with outliers](https://www.kdnu
  ![univariate_vs_multivariate](images/univariate_vs_multivariate.png)
 
 
-### 5.1 Inference: Z score and Modified Z score
-The z-score or standard score of an observation is a metric that indicates how many standard deviations a data point is from the sample’s mean, assuming a gaussian distribution [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]. The z-score of any data point can be calculated as
+### 5.1 Inference: Z-score and Modified Z-score
+The z-score or standard score of an observation is a metric that indicates how many standard deviations a data point is from the sample’s mean, assuming a gaussian distribution [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]. The Z-score of any data point can be calculated as
     
 $$Z = \frac{x-\bar{x}}{\sigma}$$
 
-The modified Z score $Z_{\textrm{mod}}$ is defined as [[NIST/SEMATECH e-Handbook of Statistical Methods]][Detection of Outliers]
+The modified Z-score $Z_{\textrm{mod}}$ is defined as [[NIST/SEMATECH e-Handbook of Statistical Methods]][Detection of Outliers]
 
 $$Z_{\textrm{mod}} = \frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}$$
      
