@@ -124,7 +124,7 @@ $$\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta) = \under
 
 which gives us an estimate on $\theta$. On other hand, MAP is 
 
-$$\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P(\theta |D)$$
+$$\theta_{\textrm{MAP}} = \underset{\theta}{\textrm{argmax}}P(\theta |D) = \underset{\theta}{\textrm{argmax}} P(\theta) \prod^{n}_{i=1}P(x_i, y_i|\theta)$$
 
 which gives us a distribution of $\theta$.
 
@@ -138,7 +138,7 @@ $$P(\bold{x}_i, y_i|\theta) \sim e^{\frac{-(y_i-\bold{\theta}^T \bold{x}_i)^2}{2
 
 then the likelihood is 
 
-$$L(\bold{\theta}) = P(\bold{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}$$
+$$L(\bold{\theta}) = P(\Bold{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\bold{\theta})&space;=&space;P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\bold{\theta})&space;=&space;P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="L(\bold{\theta}) = P(\bold{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
 
