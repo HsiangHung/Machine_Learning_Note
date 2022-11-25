@@ -262,8 +262,6 @@ So
 
 $$\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" title="\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}" /></a>
-
 Using $B(2,2)$, $\bar{\theta} = 8/10$; $B(1, 1)$, $\bar{\theta} = 7/8$; $B(1, 0.01)$, $\bar{\theta} = 7/7.01$.
 
 The blog [[Suzanna Sia]][Closed form Bayesian Inference for Binomial distributions] has more description on Bayesian inference for binomial distributions with Python code.
@@ -274,21 +272,15 @@ Second example is to extend binomial outcome to multinomial. Let's say if now we
 
 $$P(D|\theta) =\theta^{N_1}_1 \theta^{N_2}_2 \cdots \theta^{N_6}_6$$
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=P(D|\theta)&space;=\theta^{N_1}_1&space;\theta^{N_2}_2&space;\cdots&space;\theta^{N_6}_6" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D|\theta)&space;=\theta^{N_1}_1&space;\theta^{N_2}_2&space;\cdots&space;\theta^{N_6}_6" title="P(D|\theta) =\theta^{N_1}_1 \theta^{N_2}_2 \cdots \theta^{N_6}_6" /></a>
+If we use Dirichlet distribution as the prior,
 
-If we use Dirichlet distribution as the prior
-
-$$P(\theta) = \frac{\theta^{\beta_1}_1 \theta^{\beta_2}_2 \cdots \theta^{\beta_6}_6}{B(\beta_1, \cdots, \beta_6)} \sim \textrm{Dirichlet}(\beta_1, \cdots, \beta_6)$$
-
-<a href="http://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;=&space;\frac{\theta^{\beta_1}_1&space;\theta^{\beta_2}_2&space;\cdots&space;\theta^{\beta_6}_6}{B(\beta_1,&space;\cdots,&space;\beta_6)}&space;\sim&space;\textrm{Dirichlet}(\beta_1,&space;\cdots,&space;\beta_6)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(\theta)&space;=&space;\frac{\theta^{\beta_1}_1&space;\theta^{\beta_2}_2&space;\cdots&space;\theta^{\beta_6}_6}{B(\beta_1,&space;\cdots,&space;\beta_6)}&space;\sim&space;\textrm{Dirichlet}(\beta_1,&space;\cdots,&space;\beta_6)" title="P(\theta) = \frac{\theta^{\beta_1}_1 \theta^{\beta_2}_2 \cdots \theta^{\beta_6}_6}{B(\beta_1, \cdots, \beta_6)} \sim \textrm{Dirichlet}(\beta_1, \cdots, \beta_6)" /></a>
+$$P(\theta) = \frac{\theta^{\beta_1}_1 \theta^{\beta_2}_2 \cdots \theta^{\beta_6}_6}{B(\beta_1, \cdots, \beta_6)} \sim \textrm{Dirichlet}(\beta_1, \cdots, \beta_6),$$
 
 then we have the posterior as Dirichlet distribution 
 
-$$P(\theta|D) \sim \textrm{Dirichlet}(N_1+\beta_1, \cdots, N_6+\beta_6)$$
+$$P(\theta|D) \sim \textrm{Dirichlet}(N_1+\beta_1, \cdots, N_6+\beta_6),$$
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;\sim&space;\textrm{Dirichlet}(N_1&plus;\beta_1,&space;\cdots,&space;N_6&plus;\beta_6)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(\theta|D)&space;\sim&space;\textrm{Dirichlet}(N_1&plus;\beta_1,&space;\cdots,&space;N_6&plus;\beta_6)" title="P(\theta|D) \sim \textrm{Dirichlet}(N_1+\beta_1, \cdots, N_6+\beta_6)" /></a>
-
-and we still can maximize the term to estimate θ.
+and we still can maximize the term to estimate $\theta$.
 
 
 
