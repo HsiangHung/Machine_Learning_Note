@@ -232,39 +232,50 @@ which is consistent with our intution.
 
 #### MAP 
 
-For MAP, we need to look for Bayesian posterior `P(θ|D)`:
+For MAP, we need to look for Bayesian posterior $P(\theta|D)$:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" /></a>
 
 if we implement Beta distribution (which is a conjugate prior for binomal distribution) as part of the prior 
 
+$$P(\theta)= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} = \frac{1}{B(\alpha, \beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1}$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;=&space;\frac{1}{B(\alpha,&space;\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;=&space;\frac{1}{B(\alpha,&space;\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}" title="P(\theta)= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} = \frac{1}{B(\alpha, \beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1}" /></a>
 
 By probability normalization, we will have the following relation
+
+$$\int P(\theta) d\theta= 1= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\int \theta^{\alpha-1} (1-\theta)^{\beta-1}d\theta = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\int&space;P(\theta)&space;d\theta=&space;1=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\int&space;\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}d\theta&space;=&space;\frac{\Gamma(\alpha)&space;\Gamma(\beta)}{\Gamma(\alpha&plus;\beta)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\int&space;P(\theta)&space;d\theta=&space;1=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\int&space;\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}d\theta&space;=&space;\frac{\Gamma(\alpha)&space;\Gamma(\beta)}{\Gamma(\alpha&plus;\beta)}" title="\int P(\theta) d\theta= 1= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\int \theta^{\alpha-1} (1-\theta)^{\beta-1}d\theta = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}" /></a>
 
 
 Then we can see the posterior and prior has same form
 
+$$P(\theta|D) \propto P(\theta)P(D|\theta) = \Big( \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} \Big) \theta^{N_H} (1-\theta)^{N_T}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;\propto&space;P(\theta)P(D|\theta)&space;=&space;\Big(&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;\Big)&space;\theta^{N_H}&space;(1-\theta)^{N_T}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta|D)&space;\propto&space;P(\theta)P(D|\theta)&space;=&space;\Big(&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;\Big)&space;\theta^{N_H}&space;(1-\theta)^{N_T}" title="P(\theta|D) \propto P(\theta)P(D|\theta) = \Big( \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} \Big) \theta^{N_H} (1-\theta)^{N_T}" /></a>
 
 simply rewritten as
 
+$$P(\theta|D) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} \theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1}, \textrm{ where } \alpha^{\prime}=\alpha+N_H, \ \beta^{\prime}=\beta+N_T$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;=&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}&space;\theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1},&space;\textrm{&space;where&space;}&space;\alpha^{\prime}=\alpha&plus;N_H,&space;\&space;\beta^{\prime}=\beta&plus;N_T" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta|D)&space;=&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}&space;\theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1},&space;\textrm{&space;where&space;}&space;\alpha^{\prime}=\alpha&plus;N_H,&space;\&space;\beta^{\prime}=\beta&plus;N_T" title="P(\theta|D) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} \theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1}, \textrm{ where } \alpha^{\prime}=\alpha+N_H, \ \beta^{\prime}=\beta+N_T" /></a>
 
 
-Given the data, the expectation value on `θ` is 
+Given the data, the expectation value on $\theta$ is 
+
+$$\bar{\theta} = \int \theta P(\theta|D) d\theta= \frac{\Gamma(\alpha^{\prime} + \beta^{\prime})}{\Gamma(\alpha^{\prime}) \Gamma(\beta^{\prime})}\int \theta^{\alpha^{\prime}} (1-\theta)^{\beta^{\prime}-1}d\theta = \frac{\alpha^{\prime}}{ \alpha^{\prime}+\beta^{\prime}}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\int&space;\theta&space;P(\theta|D)&space;d\theta=&space;\frac{\Gamma(\alpha^{\prime}&space;&plus;&space;\beta^{\prime})}{\Gamma(\alpha^{\prime})&space;\Gamma(\beta^{\prime})}\int&space;\theta^{\alpha^{\prime}}&space;(1-\theta)^{\beta^{\prime}-1}d\theta&space;=&space;\frac{\alpha^{\prime}}{&space;\alpha^{\prime}&plus;\beta^{\prime}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\int&space;\theta&space;P(\theta|D)&space;d\theta=&space;\frac{\Gamma(\alpha^{\prime}&space;&plus;&space;\beta^{\prime})}{\Gamma(\alpha^{\prime})&space;\Gamma(\beta^{\prime})}\int&space;\theta^{\alpha^{\prime}}&space;(1-\theta)^{\beta^{\prime}-1}d\theta&space;=&space;\frac{\alpha^{\prime}}{&space;\alpha^{\prime}&plus;\beta^{\prime}}" title="\bar{\theta} = \int \theta P(\theta|D) d\theta= \frac{\Gamma(\alpha^{\prime} + \beta^{\prime})}{\Gamma(\alpha^{\prime}) \Gamma(\beta^{\prime})}\int \theta^{\alpha^{\prime}} (1-\theta)^{\beta^{\prime}-1}d\theta = \frac{\alpha^{\prime}}{ \alpha^{\prime}+\beta^{\prime}}" /></a>
 
 
 So 
 
+$$\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" title="\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}" /></a>
 
-Using `B(2,2)`, `θ = 8/10`; `B(1, 1)`, `θ = 7/8`; `B(1, 0.01)`, `θ = 7/7.01`.
+Using $B(2,2)$, $\theta = 8/10$; $B(1, 1)$, $\theta = 7/8$; $B(1, 0.01)$, $\theta = 7/7.01$.
 
 The blog [[Suzanna Sia]][Closed form Bayesian Inference for Binomial distributions] has more description on Bayesian inference for binomial distributions with Python code.
 
@@ -272,13 +283,19 @@ The blog [[Suzanna Sia]][Closed form Bayesian Inference for Binomial distributio
 
 Second example is to extend binomial outcome to multinomial. Let's say if now we have a dice, then the likelihood function becomes 
 
+$$P(D|\theta) =\theta^{N_1}_1 \theta^{N_2}_2 \cdots \theta^{N_6}_6$$
+
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(D|\theta)&space;=\theta^{N_1}_1&space;\theta^{N_2}_2&space;\cdots&space;\theta^{N_6}_6" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D|\theta)&space;=\theta^{N_1}_1&space;\theta^{N_2}_2&space;\cdots&space;\theta^{N_6}_6" title="P(D|\theta) =\theta^{N_1}_1 \theta^{N_2}_2 \cdots \theta^{N_6}_6" /></a>
 
 If we use Dirichlet distribution as the prior
 
+$$P(\theta) = \frac{\theta^{\beta_1}_1 \theta^{\beta_2}_2 \cdots \theta^{\beta_6}_6}{B(\beta_1, \cdots, \beta_6)} \sim \textrm{Dirichlet}(\beta_1, \cdots, \beta_6)$$
+
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;=&space;\frac{\theta^{\beta_1}_1&space;\theta^{\beta_2}_2&space;\cdots&space;\theta^{\beta_6}_6}{B(\beta_1,&space;\cdots,&space;\beta_6)}&space;\sim&space;\textrm{Dirichlet}(\beta_1,&space;\cdots,&space;\beta_6)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(\theta)&space;=&space;\frac{\theta^{\beta_1}_1&space;\theta^{\beta_2}_2&space;\cdots&space;\theta^{\beta_6}_6}{B(\beta_1,&space;\cdots,&space;\beta_6)}&space;\sim&space;\textrm{Dirichlet}(\beta_1,&space;\cdots,&space;\beta_6)" title="P(\theta) = \frac{\theta^{\beta_1}_1 \theta^{\beta_2}_2 \cdots \theta^{\beta_6}_6}{B(\beta_1, \cdots, \beta_6)} \sim \textrm{Dirichlet}(\beta_1, \cdots, \beta_6)" /></a>
 
 then we have the posterior as Dirichlet distribution 
+
+$$P(\theta|D) \sim \textrm{Dirichlet}(N_1+\beta_1, \cdots, N_6+\beta_6)$$
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;\sim&space;\textrm{Dirichlet}(N_1&plus;\beta_1,&space;\cdots,&space;N_6&plus;\beta_6)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(\theta|D)&space;\sim&space;\textrm{Dirichlet}(N_1&plus;\beta_1,&space;\cdots,&space;N_6&plus;\beta_6)" title="P(\theta|D) \sim \textrm{Dirichlet}(N_1+\beta_1, \cdots, N_6+\beta_6)" /></a>
 
