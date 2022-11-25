@@ -224,7 +224,7 @@ $$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \unde
 
 To do it, we differentiate $\log L(\theta)$ with respect to $\theta$ and make it equal to zero.
 
-$$\log L(\theta) = N_H \log(\theta) + N_T \log (1-\theta); \ \frac{\partial L(\theta)}{\partial \theta} = \frac{N_H}{\theta} - \frac{N_T}{1-\theta} = 0$$
+$$\log L(\theta) = N_H \log(\theta) + N_T \log (1-\theta); \ \frac{\partial L(\theta)}{\partial \theta} = \Big( \frac{N_H}{\theta} - \frac{N_T}{1-\theta} = 0 \Big) \vert$$
 
 Then we obtain the MLE estimate [[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?]][How to derive the likelihood function for binomial distribution for parameter estimation?]
 
