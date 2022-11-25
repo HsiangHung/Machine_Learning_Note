@@ -118,9 +118,13 @@ According to the [KDD article: 3 methods to deal with outliers](https://www.kdnu
 ### 5.1 Inference: Z score and Modified Z score
 The z-score or standard score of an observation is a metric that indicates how many standard deviations a data point is from the sample’s mean, assuming a gaussian distribution [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]. The z-score of any data point can be calculated as
     
+$$\frac{x-\bar{x}}{\sigma}$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{x-\bar{x}}{\sigma}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{x-\bar{x}}{\sigma}" title="z = \frac{x-\bar{x}}{\sigma}" /></a>
 
 The modified Z score `M` is defined as [[NIST/SEMATECH e-Handbook of Statistical Methods]][Detection of Outliers]
+
+$$\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{M}&space;=&space;\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{M}&space;=&space;\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" title="\textrm{M} = \frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" /></a>
      
@@ -173,6 +177,8 @@ One of approaches to solving the imbalance problem is to discard the minority ex
 Isolation forest’s basic principle is that outliers are few and far from the rest of the observations. For prediction, it compares an observation against that splitting value in a “node”, that node will have two node children on which another **random** comparisons will be made.  In these trees, recursive partitions are created by first **randomly selecting a feature** and then **selecting a random split** value between the minimum and maximum value of the selected feature (by [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)). 
 
 In the isolation forest method, an outlier score can computed for each observation (from [wiki](https://en.wikipedia.org/wiki/Isolation_forest)):
+
+$$s(x,&space;n)&space;=&space;2^{-\frac{E(h(x))}{c(n)}}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=s(x,&space;n)&space;=&space;2^{-\frac{E(h(x))}{c(n)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s(x,&space;n)&space;=&space;2^{-\frac{E(h(x))}{c(n)}}" title="s(x, n) = 2^{-\frac{E(h(x))}{c(n)}}" /></a>
 
