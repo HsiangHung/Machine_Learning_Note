@@ -208,13 +208,17 @@ The prior beliefs about the parameters determine what this random process looks 
 
 First let's come back to the coin-flip problem; the outcome is either head or tail. The likelihood of each sample is a Bernoulli distribution (or entire dataset is a binomial distribution) [[Barnabás Póczos & Aarti Singh]][MLE, MAP, Bayes classifications]
 
+$$P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}$$
+
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" title="P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}" /></a>
 
-**Question**: suppose we observed data `X = {1,1,1,1,1,1}` and the sample comes from iid Bernoulli distribution, what is a good guess of `θ`?
+**Question**: suppose we observed data `X = {1,1,1,1,1,1}` and the sample comes from iid Bernoulli distribution, what is a good guess of $\theta$?
 
 #### MLE
 
-Here we denote `N_H` is the number of heads and θ is the probability to have heads. Now we are looking for θ which maximizes the probability of observed data
+Here we denote $N_H$ is the number of heads and $\theta$ is the probability to have heads. Now we are looking for $\theta$ which maximizes the probability of observed data
+
+$$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \underset{\theta}{\textrm{argmax}} \Big( \theta^{N_H}(1-\theta)^{N_T} \Big) = \underset{\theta}{\textrm{argmax}} \ L(\theta)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;P(D|\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\Big(&space;\theta^{N_H}(1-\theta)^{N_T}&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\&space;L(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;P(D|\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\Big(&space;\theta^{N_H}(1-\theta)^{N_T}&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\&space;L(\theta)" title="\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \underset{\theta}{\textrm{argmax}} \Big( \theta^{N_H}(1-\theta)^{N_T} \Big) = \underset{\theta}{\textrm{argmax}} \ L(\theta)" /></a>
 
