@@ -152,7 +152,7 @@ $$C(D) = \sum^n_{i=1} (y_i - \symbf{\theta}^T \symbf{x}_i)^2$$
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-$$P( \symbf{x}_i, y_i|\theta) = (h_{\theta})^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
+$$P( \symbf{x}_i, y_i | \theta) = (h_{\theta})^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
 
 Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
 
@@ -189,8 +189,6 @@ commonly seen in regression [[Nando de Freitas]][Machine learning - Importance s
 On the other hand, **L1 (Lasso)** is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. 
 
 $$P(\theta) \sim e^{\frac{-|\theta - \mu_{\theta}|}{\sigma}}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;\sim&space;e^{\frac{-|\theta&space;-&space;\mu_{\theta}|}{\sigma}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)&space;\sim&space;e^{\frac{-|\theta&space;-&space;\mu_{\theta}|}{\sigma}}" title="P(\theta) \sim e^{\frac{-|\theta - \mu_{\theta}|}{\sigma}}" /></a>
 
 Below (credit from book: **An Introduction to Statistical Learning**), Left: Gaussian prior (for ridge). Right: double-exponential prior (for lasso).
 
