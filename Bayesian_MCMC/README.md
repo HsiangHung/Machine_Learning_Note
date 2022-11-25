@@ -222,19 +222,19 @@ $$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \unde
 
 To do it, we differentiate $\log L(\theta)$ with respect to $\theta$ and make it equal to zero.
 
-$$\log L(\theta) = N_H \log(\theta) + N_T \log (1-\theta); \ \frac{\partial L(\theta)}{\partial \theta} =  \Big( \frac{N_H}{\theta} - \frac{N_T}{1-\theta} \Big) \rvert|_{\theta}} = 0$$
+$$\log L(\theta) = N_H \log(\theta) + N_T \log (1-\theta); \ \frac{\partial L(\theta)}{\partial \theta} = \left. \Big( \frac{N_H}{\theta} - \frac{N_T}{1-\theta} \Big) \right|_{\theta}} = 0$$
 
 Then we obtain the MLE estimate [[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?]][How to derive the likelihood function for binomial distribution for parameter estimation?]
 
 $$\theta_{\textrm{MLE}} = \frac{N_H}{N_H+N_T} = \frac{6}{6} = 1$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\frac{N_H}{N_H&plus;N_T}&space;=&space;\frac{6}{6}&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\frac{N_H}{N_H&plus;N_T}&space;=&space;\frac{6}{6}&space;=&space;1" title="\theta_{\textrm{MLE}} = \frac{N_H}{N_H+N_T} = \frac{6}{6} = 1" /></a>
 
 which is consistent with our intution. 
 
 #### MAP 
 
 For MAP, we need to look for Bayesian posterior $P(\theta|D)$:
+
+$$\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" /></a>
 
