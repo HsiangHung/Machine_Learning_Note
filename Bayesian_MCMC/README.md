@@ -289,7 +289,7 @@ and we still can maximize the term to estimate $\theta$.
 
 In the above coin-flip exmaple, we infer a binomial proportion using the concept of conjugate priors. However, not all models can make use of conjugate priors. In such cases, calculation of the posterior distribution would need to be approximated numerically. Recall 
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=P(D)&space;=&space;\int&space;P(D,&space;\theta)d\theta&space;=&space;\int&space;P(D|\theta)P(\theta)d\theta" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D)&space;=&space;\int&space;P(D,&space;\theta)d\theta&space;=&space;\int&space;P(D|\theta)P(\theta)d\theta" title="P(D) = \int P(D, \theta)d\theta = \int P(D|\theta)P(\theta)d\theta" /></a>
+$$P(D) = \int_{\theta} P(D, \theta)d\theta = \int_{\theta} P(D|\theta)P(\theta)d\theta$$
 
 To infer a coin flippinh, we have one varable and use the conjugate prior such that both prior and posterior have same probability distribution. 
 
@@ -301,6 +301,8 @@ To be more concrete, let's look at Bayesian logisitic regression [[Nando de Frei
 ## 3.1 Bayesian logisitic regression
 
 Given data D = (X, y), the logisitic regression model specifies a probability of a binary output `y = 0, 1` given input X:
+
+$$P(y|X, \theta) = \prod_{i=1}^{n} \textrm{Ber}(y_i |\textrm{sigmoid}(\theta^T \bold{x}_i)) = \prod_{i=1}^n \Big( \frac{1}{1+e^{-\theta^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\theta^T \bold{x}_i}} \Big)^{1-y_i},$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(y|X,&space;\theta)&space;=&space;\prod_{i=1}^{n}&space;\textrm{Ber}(y_i&space;|\textrm{sigmoid}(\theta^T&space;\bold{x}_i))&space;=&space;\prod_{i=1}^n&space;\Big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(y|X,&space;\theta)&space;=&space;\prod_{i=1}^{n}&space;\textrm{Ber}(y_i&space;|\textrm{sigmoid}(\theta^T&space;\bold{x}_i))&space;=&space;\prod_{i=1}^n&space;\Big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(y|X, \theta) = \prod_{i=1}^{n} \textrm{Ber}(y_i |\textrm{sigmoid}(\theta^T \bold{x}_i)) = \prod_{i=1}^n \Big( \frac{1}{1+e^{-\theta^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\theta^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
 
