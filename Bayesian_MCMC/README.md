@@ -32,7 +32,7 @@ In order to carry out Bayesian inference, we need to utilise a famous theorem in
 
 A natural example question to ask is "What is the probability of seeing 3 heads in 8 flips (8 Bernoulli trials), given a fair coin?".
 
-The coin flip obeys a **binomial distribution**, a collection of **Bernoulli trials**. A Bernoulli trial is a random experiment with only two outcomes, usually labelled as "success" or "failure", in which the probability of the success is given by $\theta$, i.e. $P(\textrm{Head}) = \theta$, where $0 \le \theta \le 1$, for each trail.  A fair coin gives θ = 0.5, otherwise unfair. The values of θ itself follows a distribution (like Gaussian), P(θ), called a prior.
+The coin flip obeys a **binomial distribution**, a collection of **Bernoulli trials**. A Bernoulli trial is a random experiment with only two outcomes, usually labelled as "success" or "failure", in which the probability of the success is given by $\theta$, i.e. $P(\textrm{Head}) = \theta$, where $0 \le \theta \le 1$, for each trail.  A fair coin gives θ = 0.5, otherwise unfair. The values of $\theta$ itself follows a distribution (like Gaussian), $P(\theta)$, called a prior.
 
 Through coin flip experiments (by repeated Bernoulli trials) we will generate some data, D, about heads or tails. We are interested in the probability distribution which reflects our belief about different possible values of $\theta$, given that we have observed some data D, denoted by $P(\theta|D)$. The probability of seeing data D given θ is $P(D|\theta)$.
 
