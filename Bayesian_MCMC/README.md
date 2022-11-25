@@ -43,13 +43,13 @@ Through coin flip experiments (by repeated Bernoulli trials) we will generate so
 
 The way to calculate $P(\theta|D)$, called posterior, is 
 
-
+$$P(\theta |D) = \frac{P(D| \theta)P(\theta)}{P(D)} = \frac{\textrm{likelihood} \times \textrm{prior}}{\textrm{evidence}}$$
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(\theta&space;|D)&space;=&space;\frac{P(D|&space;\theta)P(\theta)}{P(D)}&space;=&space;\frac{\textrm{likelihood}&space;\times&space;\textrm{prior}}{\textrm{evidence}}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(\theta&space;|D)&space;=&space;\frac{P(D|&space;\theta)P(\theta)}{P(D)}&space;=&space;\frac{\textrm{likelihood}&space;\times&space;\textrm{prior}}{\textrm{evidence}}" title="P(\theta |D) = \frac{P(D| \theta)P(\theta)}{P(D)} = \frac{\textrm{likelihood} \times \textrm{prior}}{\textrm{evidence}}" /></a>
 
 where:
 
-`P(θ) is the prior`. This is the strength in our **belief** of θ without considering the evidence D. Our prior view on the probability of how fair the coin is.
+`$P(\theta)$ is the prior`. This is the strength in our **belief** of θ without considering the evidence D. Our prior view on the probability of how fair the coin is.
 
 `P(θ|D) is the posterior`. This is the (refined) strength of our belief of θ **once the evidence D has been taken into account**. After seeing 4 heads out of 8 flips, say, this is our updated view on the fairness of the coin.
    
