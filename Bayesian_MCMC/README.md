@@ -178,19 +178,17 @@ Instead, if we implement **Gaussian distribution** to the prior $P(\theta)$ [[Br
 
 $$P(\theta) \sim e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;\sim&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)&space;\sim&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}" title="P(\theta) \sim e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}" /></a>
-
-
-which can be identify to a **L2 (Ridge) regularization** term (if <a href="http://www.codecogs.com/eqnedit.php?latex=\mu_{\theta}=0" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mu_{\theta}=0" title="\mu_{\theta}=0" /></a> ) $\mu_{\theta}=0$
+which can be identify to a **L2 (Ridge) regularization** term (if $\mu_{\theta}=0$)
 
 $$\log P(\theta) \sim \log \Big( e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = - \frac{(\theta - \mu_{\theta})^2}{2\sigma^2}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;-&space;\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\log&space;P(\theta)&space;\sim&space;\log&space;\Big(&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}&space;\Big)&space;=&space;-&space;\frac{(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}" title="\log P(\theta) \sim \log \Big( e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = - \frac{(\theta - \mu_{\theta})^2}{2\sigma^2}" /></a>
 
 commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
 
 
 On the other hand, **L1 (Lasso)** is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. 
+
+$$P(\theta) \sim e^{\frac{-|\theta - \mu_{\theta}|}{\sigma}}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;\sim&space;e^{\frac{-|\theta&space;-&space;\mu_{\theta}|}{\sigma}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)&space;\sim&space;e^{\frac{-|\theta&space;-&space;\mu_{\theta}|}{\sigma}}" title="P(\theta) \sim e^{\frac{-|\theta - \mu_{\theta}|}{\sigma}}" /></a>
 
