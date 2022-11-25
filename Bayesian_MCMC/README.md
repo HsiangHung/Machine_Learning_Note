@@ -152,10 +152,7 @@ $$C(D) = \sum^n_{i=1} (y_i - \symbf{\theta}^T \symbf{x}_i)^2$$
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-$$P(\symbf{x}_i, y_i|\theta) = (h_{\theta})^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
-
-
-
+$$P( \symbf{x}_i, y_i|\theta) = (h_{\theta})^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
 
 Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
 
@@ -171,7 +168,7 @@ $$\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) = \unde
 
 Using the log trick, we can rewrite the above expression as
 
-$$\theta_{\textrm{MAP}} = \underset{\theta}{\textrm{argmax}} \sum^n_{i=1} \Big(\log P(\bold{x}_i, y_i| \theta) + \log P(\theta) \Big)$$
+$$\theta_{\textrm{MAP}} = \underset{\theta}{\textrm{argmax}} \sum^n_{i=1} \Big(\log P(\symbf{x}_i, y_i| \theta) + \log P(\theta) \Big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum^n_{i=1}&space;\Big(\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)&space;&plus;&space;\log&space;P(\theta)&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum^n_{i=1}&space;\Big(\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)&space;&plus;&space;\log&space;P(\theta)&space;\Big)" title="\theta_{\textrm{MAP}} = \underset{\theta}{\textrm{argmax}} \sum^n_{i=1} \Big(\log P(\bold{x}_i, y_i| \theta) + \log P(\theta) \Big)" /></a>
 
