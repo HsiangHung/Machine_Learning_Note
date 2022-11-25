@@ -14,7 +14,7 @@ Suppose we have two different arrays red and blue with different length, [[Ricar
 
 ![](images/Euclidean_vs_DTW.jpg)
 
-Scipy has the libray to compute dynamic time wrapping:
+In Python, scipy supports a libray to compute dynamic time wrapping, see [Dynamic Time Warping (DTW)](https://dtaidistance.readthedocs.io/en/latest/usage/dtw.html):
 ```
 from fastdtw import fastdtw
 from scipy.spatial.distance import euclidean
@@ -28,11 +28,8 @@ print(distance)
 ``` 
 It returns distance = 5.
 
-The central limit theorem states that [[The Role of Probability]][Central Limit Theorem]
 
-if you have a population with mean μ (population parameter) and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed (**sampling distribution**). This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually `n > 30`). If the population is normal, then the theorem holds true even for samples smaller than 30. 
 
-This also holds true even if the population is **binomial**, provided that `min(np, n(1-p))> 5`, where `n` is the sample size and p is the probability of success in the population. This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
 
 For the random samples we take from the population, we can compute the mean of the sample means:
 
