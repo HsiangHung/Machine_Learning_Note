@@ -154,14 +154,13 @@ On the other hand, in logistic regression (binary classification), the likelihoo
 
 $$P(\symbf{x}_i, y_i|\theta) = (h_{\theta})^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;=&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;=&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(\bold{x}_i, y_i|\theta) = h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
+
 
 
 Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
 
 $$C(D) = \sum^n_{i=1} \Big( y_i \log \big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \big) \Big)$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\big)&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\big)&space;\Big)" title="C(D) = \sum^n_{i=1} \Big( y_i \log \big( \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}} \big) \Big)" /></a>
 
 
 ## 2.2 Maximum A Posteriori (MAP)
@@ -170,18 +169,18 @@ On the other hand, MAP usually comes up in Bayesian setting. It works on a poste
 
 $$\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) = \underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)} \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)$$
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;=&space;\underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)}&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;=&space;\underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)}&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) = \underset{\theta}{\textrm{argmax}}\frac{P(D|\theta)P(\theta)}{P(D)} \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" /></a>
-
 Using the log trick, we can rewrite the above expression as
+
+$$\theta_{\textrm{MAP}} = \underset{\theta}{\textrm{argmax}} \sum^n_{i=1} \Big(\log P(\bold{x}_i, y_i| \theta) + \log P(\theta) \Big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum^n_{i=1}&space;\Big(\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)&space;&plus;&space;\log&space;P(\theta)&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum^n_{i=1}&space;\Big(\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)&space;&plus;&space;\log&space;P(\theta)&space;\Big)" title="\theta_{\textrm{MAP}} = \underset{\theta}{\textrm{argmax}} \sum^n_{i=1} \Big(\log P(\bold{x}_i, y_i| \theta) + \log P(\theta) \Big)" /></a>
 
 
-What it means is that, the likelihood is now weighted with some weight coming from the prior [[Agustinus Kristiadi]][MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation]. When the prior is uniform, i.e. we assign equal weights everywhere, on all possible values of the `θ`, MLE and MAP have same estimate. When we know parameter distribution, MAP could be more helpful [[Mary Mcglohon]][MLE, MAP, AND NAIVE BAYES].
+What it means is that, the likelihood is now weighted with some weight coming from the prior [[Agustinus Kristiadi]][MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation]. When the prior is uniform, i.e. we assign equal weights everywhere, on all possible values of the $\theta$, MLE and MAP have same estimate. When we know parameter distribution, MAP could be more helpful [[Mary Mcglohon]][MLE, MAP, AND NAIVE BAYES].
 
 ### Prior plays a role as regularization
 
-Instead, if we implement **Gaussian distribution** to the prior `P(θ)` [[Brian Keng]][A Probabilistic Interpretation of Regularization], 
+Instead, if we implement **Gaussian distribution** to the prior $P(\theta)$ [[Brian Keng]][A Probabilistic Interpretation of Regularization], 
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)&space;\sim&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)&space;\sim&space;e^{\frac{-(\theta&space;-&space;\mu_{\theta})^2}{2\sigma^2}}" title="P(\theta) \sim e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}" /></a>
