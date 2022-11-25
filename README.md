@@ -55,7 +55,7 @@ to install Keras. Now within the environment, type `jupyter notebook`, you shoul
 From August 13, 2021, Github does not support to type password authentication. 
 ```
 (base) hsianghsuanhung@x86_64-apple-darwin13 Statistics % git push 
-Password for 'https://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@github.com': 
+Password for 'https://<old_token>@github.com': 
 remote: Support for password authentication was removed on August 13, 2021.
 remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
 fatal: Authentication failed for 'https://github.com/HsiangHung/Machine_Learning_Note.git/'
