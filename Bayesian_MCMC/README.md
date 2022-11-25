@@ -258,16 +258,13 @@ Given the data, the expectation value on $\theta$ is
 
 $$\bar{\theta} = \int_{\theta} \theta P(\theta|D) d\theta= \frac{\Gamma(\alpha^{\prime} + \beta^{\prime})}{\Gamma(\alpha^{\prime}) \Gamma(\beta^{\prime})}\int_{\theta} \theta^{\alpha^{\prime}} (1-\theta)^{\beta^{\prime}-1}d\theta = \frac{\alpha^{\prime}}{ \alpha^{\prime}+\beta^{\prime}}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\int&space;\theta&space;P(\theta|D)&space;d\theta=&space;\frac{\Gamma(\alpha^{\prime}&space;&plus;&space;\beta^{\prime})}{\Gamma(\alpha^{\prime})&space;\Gamma(\beta^{\prime})}\int&space;\theta^{\alpha^{\prime}}&space;(1-\theta)^{\beta^{\prime}-1}d\theta&space;=&space;\frac{\alpha^{\prime}}{&space;\alpha^{\prime}&plus;\beta^{\prime}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\int&space;\theta&space;P(\theta|D)&space;d\theta=&space;\frac{\Gamma(\alpha^{\prime}&space;&plus;&space;\beta^{\prime})}{\Gamma(\alpha^{\prime})&space;\Gamma(\beta^{\prime})}\int&space;\theta^{\alpha^{\prime}}&space;(1-\theta)^{\beta^{\prime}-1}d\theta&space;=&space;\frac{\alpha^{\prime}}{&space;\alpha^{\prime}&plus;\beta^{\prime}}" title="\bar{\theta} = \int \theta P(\theta|D) d\theta= \frac{\Gamma(\alpha^{\prime} + \beta^{\prime})}{\Gamma(\alpha^{\prime}) \Gamma(\beta^{\prime})}\int \theta^{\alpha^{\prime}} (1-\theta)^{\beta^{\prime}-1}d\theta = \frac{\alpha^{\prime}}{ \alpha^{\prime}+\beta^{\prime}}" /></a>
-
-
 So 
 
 $$\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\frac{6&plus;\alpha}{6&space;&plus;&space;\alpha&plus;\beta}" title="\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}" /></a>
 
-Using $B(2,2)$, $\theta = 8/10$; $B(1, 1)$, $\theta = 7/8$; $B(1, 0.01)$, $\theta = 7/7.01$.
+Using $B(2,2)$, $\bar{\theta} = 8/10$; $B(1, 1)$, $\bar{\theta} = 7/8$; $B(1, 0.01)$, $\bar{\theta} = 7/7.01$.
 
 The blog [[Suzanna Sia]][Closed form Bayesian Inference for Binomial distributions] has more description on Bayesian inference for binomial distributions with Python code.
 
