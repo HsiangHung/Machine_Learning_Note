@@ -75,9 +75,6 @@ Once we know the number of heads within the number of trails, the posterior $P(\
 
 $$P(\theta|D) = \textrm{Beta}(x, N_{H}, N_{T}) \propto x^{N_{H}-1} (1-x)^{N_{T}-1}$$
 
-
-<a href="http://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;=&space;\textrm{Beta}(x,&space;N_{H},&space;N_{T})&space;\propto&space;x^{N_{H}-1}&space;(1-x)^{N_{T}-1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(\theta|D)&space;=&space;\textrm{Beta}(x,&space;N_{H},&space;N_{T})&space;\propto&space;x^{N_{H}-1}&space;(1-x)^{N_{T}-1}" title="P(\theta|D) = \textrm{Beta}(x, N_{H}, N_{T}) \propto x^{N_{H}-1} (1-x)^{N_{T}-1}" /></a>
-
 Uisng Scipy, we can model the posterior density as 
 ```Python
 x = np.linspace(0, 1, 100) 
@@ -94,12 +91,12 @@ Here we borrow the code from the blog [[QuantStart Team, 1]][Bayesian Statistics
 
 ### Coin-flipping example II: An unfair coin
 
-Now what will we see if the data implicitly hints the coin is unfair? Suppose we have data generated from 1000 Bernoulli trials but θ = 0.8:
+Now what will we see if the data implicitly hints the coin is unfair? Suppose we have data generated from 1000 Bernoulli trials but $\theta = 0.8$:
 ```Python
 data = stats.bernoulli.rvs(0.8, size=1000)
 ``` 
 
-By the similar procesures, we can see the posterior is learned to have peak nearby θ = 0.8:
+By the similar procesures, we can see the posterior is learned to have peak nearby $\theta = 0.8$:
 
 ![Figure_2](images/Figure_2.png)
 
@@ -108,13 +105,17 @@ By the similar procesures, we can see the posterior is learned to have peak near
 
 In Bayesian framework, maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP), are both methods for estimating some variable in the setting of probability distributions or graphical models [[Agustinus Kristiadi]][MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation].
 
-In short words, MLE is 
+In short, mathmatically a MLE model is determined by 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}=&space;\underset{\theta}{\textrm{argmax}}P(D|&space;\theta)" title="\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta)" /></a>
 
-and MAP is
+$$\theta_{\textrm{MLE}}= \underset{\theta}{\textrm{argmax}}P(D| \theta)$$
+
+whereas MAP is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D)" /></a>
+
+$$\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D)$$
 
 ## 2.1 maximum Likelihood Estimation (MLE)
 
