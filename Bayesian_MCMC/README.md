@@ -134,34 +134,25 @@ To provide more concrete examples, in linear regression, we make an assumption t
 
 $$P(\symbf{x}_i, y_i|\theta) \sim e^{\frac{-(y_i-\symbf{\theta}^T \symbf{x}_i)^2}{2\sigma^2}}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;e^{\frac{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;\sim&space;e^{\frac{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="P(\bold{x}_i, y_i|\theta) \sim e^{\frac{-(y_i-\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
-
 then the likelihood is 
 
 $$L(\symbf{\theta}) = P(\symbf{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\symbf{\theta}^T \symbf{x}_i)^2}{2\sigma^2}}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=L(\bold{\theta})&space;=&space;P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\bold{\theta})&space;=&space;P(\bold{X}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="L(\bold{\theta}) = P(\bold{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
 
 Note that maximizing the likelihood functions is equal to maximizing the log of these functions. Therefore, We usually denote MLE as
 
 $$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}}\log \Big( \prod_{i}P(\symbf{x}_i, y_i| \theta) \Big) = \underset{\theta}{\textrm{argmax}} \sum_{i} \log P(\symbf{x}_i, y_i| \theta) = \underset{\theta}{\textrm{argmin}} \sum_{i} -\log P(\symbf{x}_i, y_i| \theta)$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}\log&space;\Big(&space;\prod_{i}P(\bold{x}_i,&space;y_i|&space;\theta)&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmin}}&space;\sum_{i}&space;-\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}\log&space;\Big(&space;\prod_{i}P(\bold{x}_i,&space;y_i|&space;\theta)&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\sum_{i}&space;\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)&space;=&space;\underset{\theta}{\textrm{argmin}}&space;\sum_{i}&space;-\log&space;P(\bold{x}_i,&space;y_i|&space;\theta)" title="\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}}\log \Big( \prod_{i}P(\bold{x}_i, y_i| \theta) \Big) = \underset{\theta}{\textrm{argmax}} \sum_{i} \log P(\bold{x}_i, y_i| \theta) = \underset{\theta}{\textrm{argmin}} \sum_{i} -\log P(\bold{x}_i, y_i| \theta)" /></a>
-
-
 Thus the problem is equivalent to minimizing the cost functions  
 
 $$C(D) = \sum^n_{i=1} (y_i - \symbf{\theta}^T \symbf{x}_i)^2$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;(y_i&space;-&space;\bold{\theta}^T&space;\bold{x}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;(y_i&space;-&space;\bold{\theta}^T&space;\bold{x}_i)^2" title="C(D) = \sum^n_{i=1} (y_i - \bold{\theta}^T \bold{x}_i)^2" /></a>
-
 
 
 ### MLE Example: Logistic regression
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-$$P(\symbf{x}_i, y_i|\theta) = h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \bold{x}_i}} \Big)^{1-y_i}$$
+$$P(\symbf{x}_i, y_i|\theta) = h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;=&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;=&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(\bold{x}_i, y_i|\theta) = h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
 
