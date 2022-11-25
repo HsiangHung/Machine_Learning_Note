@@ -236,8 +236,6 @@ For MAP, we need to look for Bayesian posterior $P(\theta|D)$:
 
 $$\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MAP}}=&space;\underset{\theta}{\textrm{argmax}}P(&space;\theta&space;|D)&space;\propto&space;\underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" title="\theta_{\textrm{MAP}}= \underset{\theta}{\textrm{argmax}}P( \theta |D) \propto \underset{\theta}{\textrm{argmax}}P(D|\theta)P(\theta)" /></a>
-
 if we implement Beta distribution (which is a conjugate prior for binomal distribution) as part of the prior 
 
 $$P(\theta)= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} = \frac{1}{B(\alpha, \beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1}$$
