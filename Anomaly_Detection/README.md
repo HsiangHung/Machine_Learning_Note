@@ -118,17 +118,17 @@ According to the [KDD article: 3 methods to deal with outliers](https://www.kdnu
 ### 5.1 Inference: Z score and Modified Z score
 The z-score or standard score of an observation is a metric that indicates how many standard deviations a data point is from the sample’s mean, assuming a gaussian distribution [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]. The z-score of any data point can be calculated as
     
-$$\frac{x-\bar{x}}{\sigma}$$
+$$Z = \frac{x-\bar{x}}{\sigma}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{x-\bar{x}}{\sigma}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{x-\bar{x}}{\sigma}" title="z = \frac{x-\bar{x}}{\sigma}" /></a>
 
 The modified Z score `M` is defined as [[NIST/SEMATECH e-Handbook of Statistical Methods]][Detection of Outliers]
 
-$$\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}$$
+$$Z_{\textrm{mod}} = \frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{M}&space;=&space;\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{M}&space;=&space;\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" title="\textrm{M} = \frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" /></a>
      
-where `MAD` denoting the median absolute deviation and `x̃`  denoting the median. The modified Z-scores with an absolute value of greater than 3.5 is labeled as potential outliers.
+where `MAD` denoting the median absolute deviation and $\widetilde{x}$ denoting the median. The modified Z-scores with an absolute value of greater than 3.5 is labeled as potential outliers.
 
 The cons for the Z scores are that it is only convenient to use in a low dimensional feature space, in a small to medium sized dataset and not recommended when distributions can not be assumed to be parametric [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
