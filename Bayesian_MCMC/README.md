@@ -58,7 +58,11 @@ where:
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=P(D)&space;=&space;\int&space;P(D|\theta)P(\theta)d\theta" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D)&space;=&space;\int&space;P(D|\theta)P(\theta)d\theta" title="P(D) = \int P(D|\theta)P(\theta)d\theta" /></a>
 
-Note since θ is continuous, we implement integral rather than summation. If we had multiple views of what the fairness of the coin is (but didn't know for sure), then this tells us the probability of seeing a certain sequence of flips for all possibilities of our belief in the coin's fairness.
+Note since θ is continuous, we implement integral rather than summation
+
+$$P(D) = \int P(D|\theta)P(\theta)d\theta$$
+
+If we had multiple views of what the fairness of the coin is (but didn't know for sure), then this tells us the probability of seeing a certain sequence of flips for all possibilities of our belief in the coin's fairness.
 
 
 ### Coin-flipping example I: A fair coin [[QuantStart Team, 1]][Bayesian Statistics: A Beginner's Guide]
