@@ -50,3 +50,19 @@ Within the environment, run
 to install Keras. Now within the environment, type `jupyter notebook`, you should be able to import tensorflow and keras!
 
 
+## Access to Github via Teriminal
+
+From August 13, 2021, Github does not support to type password authentication. 
+```
+(base) hsianghsuanhung@x86_64-apple-darwin13 Statistics % git push 
+Password for 'https://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@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/HsiangHung/Machine_Learning_Note.git/'
+```
+
+To push code, or update via `git push` in the terminal, we need to go through the token. (See the page [Password authentication is temporarily disabled as part of a brownout. Please use a personal access token instead [duplicate]](https://stackoverflow.com/questions/68191392/password-authentication-is-temporarily-disabled-as-part-of-a-brownout-please-us/68192584#68192584)):
+```
+1. Generate a token from web, if expires or forget: https://github.com/settings/tokens
+2. Once we have the token, when push, use `git push https://ghp_xxxxxx@github.com/<username>/Machine_Learning_Note.git
+```
