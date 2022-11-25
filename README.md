@@ -62,7 +62,7 @@ fatal: Authentication failed for 'https://github.com/HsiangHung/Machine_Learning
 ```
 
 To push code, or update via `git push` in the terminal, we need to go through the token. (See the page [Password authentication is temporarily disabled as part of a brownout. Please use a personal access token instead [duplicate]](https://stackoverflow.com/questions/68191392/password-authentication-is-temporarily-disabled-as-part-of-a-brownout-please-us/68192584#68192584)):
-```
-1. Generate a token from web, if expires or forget: https://github.com/settings/tokens
+
+1. Generate a token from web, if expires or forget: [Personal access tokens (classic)](https://github.com/settings/tokens)
 2. Once we have the token, when push, use `git push https://ghp_xxxxxx@github.com/<username>/Machine_Learning_Note.git
-```
+`
