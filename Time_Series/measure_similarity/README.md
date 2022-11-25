@@ -1,11 +1,7 @@
 
-# MEASURE SIMILARITY
+# Measure Similarity Using Time-series data
 
-## 1. Correlation
-
-## 2. Time-series data
-
-### 2.1 Dynamic time warping
+##  Dynamic time warping
 To measure the similarity between two time-series data, we can use [**Dynamic time warping**](https://en.wikipedia.org/wiki/Dynamic_time_warping).
 
 The idea to compare arrays with different length is to build one-to-many and many-to-one matches so that the total distance can be minimised between the two. [[Ricardo Portilla and Brenner Heintz]][Understanding Dynamic Time Warping], [[Jeremy Zhang]][Dynamic Time Warping - Explanation and Code Implementation]
