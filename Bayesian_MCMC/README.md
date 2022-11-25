@@ -58,7 +58,7 @@ where:
 
 Note since $\theta$ is continuous, we implement integral rather than summation
 
-$$P(D) = \int P(D|\theta)P(\theta)d\theta$$
+$$P(D) = \int_{\theta} P(D|\theta)P(\theta)d\theta$$
 
 If we had multiple views of what the fairness of the coin is (but didn't know for sure), then this tells us the probability of seeing a certain sequence of flips for all possibilities of our belief in the coin's fairness.
 
