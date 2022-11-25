@@ -152,14 +152,14 @@ $$C(D) = \sum^n_{i=1} (y_i - \symbf{\theta}^T \symbf{x}_i)^2$$
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-$$P(\symbf{x}_i, y_i|\theta) = h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
+$$P(\symbf{x}_i, y_i|\theta) = (h_{\theta})^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;=&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;=&space;h_{\theta}^{y_i}&space;(1-h_{\theta})^{1-y_i}&space;=&space;\Big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(\bold{x}_i, y_i|\theta) = h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
 
 
 Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
 
-$$C(D) = \sum^n_{i=1} \Big( y_i \log \big( \frac{1}{1+e^{-\symbf{\theta}^T \bold{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \big) \Big)$$
+$$C(D) = \sum^n_{i=1} \Big( y_i \log \big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \big) \Big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(D)&space;=&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\big)&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(D)&space;=&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log&space;\big(&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}\big)&space;&plus;&space;(1-y_i)&space;\log&space;\big(&space;1-&space;\frac{1}{1&plus;e^{-\bold{\theta}^T&space;\bold{x}_i}}&space;\big)&space;\Big)" title="C(D) = \sum^n_{i=1} \Big( y_i \log \big( \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\bold{\theta}^T \bold{x}_i}} \big) \Big)" /></a>
 
