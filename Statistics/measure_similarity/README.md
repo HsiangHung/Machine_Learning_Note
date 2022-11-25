@@ -30,27 +30,6 @@ It returns distance = 5.
 
 
 
-
-For the random samples we take from the population, we can compute the mean of the sample means:
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\mu_{\bar{X}}&space;=&space;\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu_{\bar{X}}&space;=&space;\mu" title="\mu_{\bar{X}} = \mu" /></a>
-
-where <a href="https://www.codecogs.com/eqnedit.php?latex=\mu_{\bar{X}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu_{\bar{X}}" title="\mu_{\bar{X}}" /></a> (<a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}" title="\bar{X}" /></a> is called point estimate) came from the mean of <a href="https://www.codecogs.com/eqnedit.php?latex=\lbrace&space;\bar{X}_1,&space;\bar{X}_2,&space;\cdots,&space;\bar{X}_n&space;\rbrace" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lbrace&space;\bar{X}_1,&space;\bar{X}_2,&space;\cdots,&space;\bar{X}_n&space;\rbrace" title="\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace" /></a>, and the standard deviation of the sample means:
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\sigma_{\bar{X}}&space;=&space;\frac{\sigma}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma_{\bar{X}}&space;=&space;\frac{\sigma}{\sqrt{n}}" title="\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}" /></a>
-
-
-In the Coursera class, the CLT states:
-
-The distribution of **sample mean** (sampling distribution) is nearly normal, center at the population mean, and with standard deviation equal to population standard deviation divided by squared root of the sample size
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\bar{X}&space;=&space;\mathbb{N}(\textrm{mean}=\mu,&space;\textrm{SE}=\frac{\sigma}{\sqrt{n}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{X}&space;=&space;\mathbb{N}(\textrm{mean}=\mu,&space;\textrm{SE}=\frac{\sigma}{\sqrt{n}})" title="\bar{X} = \mathbb{N}(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}})" /></a>
-
-
-
-
-
-
 #### Reference
 
 * [How can we quantify similarity between time series?]: https://tech.gorilla.co/how-can-we-quantify-similarity-between-time-series-ed1d0b633ca0
