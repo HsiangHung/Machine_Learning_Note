@@ -240,31 +240,23 @@ if we implement Beta distribution (which is a conjugate prior for binomal distri
 
 $$P(\theta)= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} = \frac{1}{B(\alpha, \beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta)=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;=&space;\frac{1}{B(\alpha,&space;\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta)=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;=&space;\frac{1}{B(\alpha,&space;\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}" title="P(\theta)= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} = \frac{1}{B(\alpha, \beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1}" /></a>
-
 By probability normalization, we will have the following relation
 
-$$\int P(\theta) d\theta= 1= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\int \theta^{\alpha-1} (1-\theta)^{\beta-1}d\theta = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}$$
+$$\int P(\theta) d\theta= 1= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\int \theta^{\alpha-1} (1-\theta)^{\beta-1}d\theta = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\int&space;P(\theta)&space;d\theta=&space;1=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\int&space;\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}d\theta&space;=&space;\frac{\Gamma(\alpha)&space;\Gamma(\beta)}{\Gamma(\alpha&plus;\beta)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\int&space;P(\theta)&space;d\theta=&space;1=&space;\frac{\Gamma(\alpha&space;&plus;&space;\beta)}{\Gamma(\alpha)&space;\Gamma(\beta)}\int&space;\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}d\theta&space;=&space;\frac{\Gamma(\alpha)&space;\Gamma(\beta)}{\Gamma(\alpha&plus;\beta)}" title="\int P(\theta) d\theta= 1= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\int \theta^{\alpha-1} (1-\theta)^{\beta-1}d\theta = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}" /></a>
 
 
 Then we can see the posterior and prior has same form
 
-$$P(\theta|D) \propto P(\theta)P(D|\theta) = \Big( \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} \Big) \theta^{N_H} (1-\theta)^{N_T}$$
+$$P(\theta|D) \propto P(\theta)P(D|\theta) = \Big( \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} \Big) \theta^{N_H} (1-\theta)^{N_T},$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;\propto&space;P(\theta)P(D|\theta)&space;=&space;\Big(&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;\Big)&space;\theta^{N_H}&space;(1-\theta)^{N_T}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta|D)&space;\propto&space;P(\theta)P(D|\theta)&space;=&space;\Big(&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}&space;(1-\theta)^{\beta-1}&space;\Big)&space;\theta^{N_H}&space;(1-\theta)^{N_T}" title="P(\theta|D) \propto P(\theta)P(D|\theta) = \Big( \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1} (1-\theta)^{\beta-1} \Big) \theta^{N_H} (1-\theta)^{N_T}" /></a>
+which can be simply rewritten as
 
-simply rewritten as
-
-$$P(\theta|D) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} \theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1}, \textrm{ where } \alpha^{\prime}=\alpha+N_H, \ \beta^{\prime}=\beta+N_T$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\theta|D)&space;=&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}&space;\theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1},&space;\textrm{&space;where&space;}&space;\alpha^{\prime}=\alpha&plus;N_H,&space;\&space;\beta^{\prime}=\beta&plus;N_T" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\theta|D)&space;=&space;\frac{\Gamma(\alpha&plus;\beta)}{\Gamma(\alpha)\Gamma(\beta)}&space;\theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1},&space;\textrm{&space;where&space;}&space;\alpha^{\prime}=\alpha&plus;N_H,&space;\&space;\beta^{\prime}=\beta&plus;N_T" title="P(\theta|D) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} \theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1}, \textrm{ where } \alpha^{\prime}=\alpha+N_H, \ \beta^{\prime}=\beta+N_T" /></a>
-
+$$P(\theta|D) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} \theta^{\alpha^{\prime}-1}(1-\theta)^{\beta^{\prime}-1}, \textrm{ where } \alpha^{\prime}=\alpha+N_H, \ \beta^{\prime}=\beta+N_T.$$
 
 Given the data, the expectation value on $\theta$ is 
 
-$$\bar{\theta} = \int \theta P(\theta|D) d\theta= \frac{\Gamma(\alpha^{\prime} + \beta^{\prime})}{\Gamma(\alpha^{\prime}) \Gamma(\beta^{\prime})}\int \theta^{\alpha^{\prime}} (1-\theta)^{\beta^{\prime}-1}d\theta = \frac{\alpha^{\prime}}{ \alpha^{\prime}+\beta^{\prime}}$$
+$$\bar{\theta} = \int_{\theta} \theta P(\theta|D) d\theta= \frac{\Gamma(\alpha^{\prime} + \beta^{\prime})}{\Gamma(\alpha^{\prime}) \Gamma(\beta^{\prime})}\int_{\theta} \theta^{\alpha^{\prime}} (1-\theta)^{\beta^{\prime}-1}d\theta = \frac{\alpha^{\prime}}{ \alpha^{\prime}+\beta^{\prime}}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bar{\theta}&space;=&space;\int&space;\theta&space;P(\theta|D)&space;d\theta=&space;\frac{\Gamma(\alpha^{\prime}&space;&plus;&space;\beta^{\prime})}{\Gamma(\alpha^{\prime})&space;\Gamma(\beta^{\prime})}\int&space;\theta^{\alpha^{\prime}}&space;(1-\theta)^{\beta^{\prime}-1}d\theta&space;=&space;\frac{\alpha^{\prime}}{&space;\alpha^{\prime}&plus;\beta^{\prime}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bar{\theta}&space;=&space;\int&space;\theta&space;P(\theta|D)&space;d\theta=&space;\frac{\Gamma(\alpha^{\prime}&space;&plus;&space;\beta^{\prime})}{\Gamma(\alpha^{\prime})&space;\Gamma(\beta^{\prime})}\int&space;\theta^{\alpha^{\prime}}&space;(1-\theta)^{\beta^{\prime}-1}d\theta&space;=&space;\frac{\alpha^{\prime}}{&space;\alpha^{\prime}&plus;\beta^{\prime}}" title="\bar{\theta} = \int \theta P(\theta|D) d\theta= \frac{\Gamma(\alpha^{\prime} + \beta^{\prime})}{\Gamma(\alpha^{\prime}) \Gamma(\beta^{\prime})}\int \theta^{\alpha^{\prime}} (1-\theta)^{\beta^{\prime}-1}d\theta = \frac{\alpha^{\prime}}{ \alpha^{\prime}+\beta^{\prime}}" /></a>
 
