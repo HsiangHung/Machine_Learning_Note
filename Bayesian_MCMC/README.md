@@ -178,12 +178,12 @@ Instead, if we implement **Gaussian distribution** to the prior $P(\theta)$ [[Br
 
 $$P(\theta) \propto e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}$$
 
-which can be identify to a **L2 (Ridge) regularization** term (if $\mu_{\theta}=0$)
+which can be identify to a **L2 (Ridge) regularization** term, if $\mu_{\theta}=0$
 
-$$\log P(\theta) \sim \log \Big( e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = - \frac{(\theta - \mu_{\theta})^2}{2\sigma^2}$$
+$$\log P(\theta) \sim \log \Big( e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = - \frac{(\theta)^2}{2\sigma^2}$$
 
 
-commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I]. 
+commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I] and $1/\sigma^2$ corresponds to regularization strength. 
 
 
 On the other hand, **L1 (Lasso)** is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. 
