@@ -4,7 +4,7 @@
 
 This space is dedicated to practical application of Machine Learning in industry.
 
-Recommended materials to read:
+Recommended materials to read: ?
 
 ### Learning to Rank
 
