@@ -34,11 +34,9 @@ So far the step 1-3 can be summarized below
 
 ![](images/isolation_tree.png)
 
-* **Step 4** — Feeding data set and calculating anomaly score, which defines as 
+* **Step 4** — Feeding data set and calculating anomaly score, which is defined as 
 
 $$S(d) = e^{-\frac{E(h)}{c(n)}}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=S(d)&space;=&space;e^{-\frac{E(h)}{c(n)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S(d)&space;=&space;e^{-\frac{E(h)}{c(n)}}" title="S(d) = e^{-\frac{E(h)}{c(n)}}" /></a>
 
 Given a data point, we have an anomaly score for each tree and get the final anomaly score for an entire forest by the mean value across different trees. $h$ is the path length, and $E(h)$ denotes mean path length. 
 
