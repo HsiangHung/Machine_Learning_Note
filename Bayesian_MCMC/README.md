@@ -176,7 +176,7 @@ What it means is that, the likelihood is now weighted with some weight coming fr
 
 Instead, if we implement **Gaussian distribution** to the prior $P(\theta)$ [[Brian Keng]][A Probabilistic Interpretation of Regularization], 
 
-$$P(\theta) \sim e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}$$
+$$P(\theta) \propto e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}$$
 
 which can be identify to a **L2 (Ridge) regularization** term (if $\mu_{\theta}=0$)
 
@@ -188,7 +188,7 @@ commonly seen in regression [[Nando de Freitas]][Machine learning - Importance s
 
 On the other hand, **L1 (Lasso)** is the posterior mode for `θ` under a double-exponenetial prior [[Stathis Kamperis]][Bayesian connection to LASSO and ridge regression]. 
 
-$$P(\theta) \sim e^{\frac{-|\theta - \mu_{\theta}|}{\sigma}}$$
+$$P(\theta) \propto e^{\frac{-|\theta - \mu_{\theta}|}{\sigma}}$$
 
 Below (credit from book: **An Introduction to Statistical Learning**), Left: Gaussian prior (for ridge). Right: double-exponential prior (for lasso).
 
