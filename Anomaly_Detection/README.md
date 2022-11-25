@@ -120,13 +120,9 @@ The z-score or standard score of an observation is a metric that indicates how m
     
 $$Z = \frac{x-\bar{x}}{\sigma}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=z&space;=&space;\frac{x-\bar{x}}{\sigma}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z&space;=&space;\frac{x-\bar{x}}{\sigma}" title="z = \frac{x-\bar{x}}{\sigma}" /></a>
-
-The modified Z score $$Z_{\textrm{mod}}$ is defined as [[NIST/SEMATECH e-Handbook of Statistical Methods]][Detection of Outliers]
+The modified Z score $Z_{\textrm{mod}}$ is defined as [[NIST/SEMATECH e-Handbook of Statistical Methods]][Detection of Outliers]
 
 $$Z_{\textrm{mod}} = \frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{M}&space;=&space;\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{M}&space;=&space;\frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" title="\textrm{M} = \frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}" /></a>
      
 where `MAD` denoting the median absolute deviation and $\widetilde{x}$ denoting the median. The modified Z-scores with an absolute value of greater than 3.5 is labeled as potential outliers.
 
@@ -179,8 +175,6 @@ Isolation forest’s basic principle is that outliers are few and far from the r
 In the isolation forest method, an outlier score can computed for each observation (from [wiki](https://en.wikipedia.org/wiki/Isolation_forest)):
 
 $$s(x, n) = 2^{-\frac{E(h(x))}{c(n)}}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=s(x,&space;n)&space;=&space;2^{-\frac{E(h(x))}{c(n)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s(x,&space;n)&space;=&space;2^{-\frac{E(h(x))}{c(n)}}" title="s(x, n) = 2^{-\frac{E(h(x))}{c(n)}}" /></a>
 
 where $E(h(x))$ is the average value of $h(x)$ from a collection of iTrees; $h(x)$ is the **`path length`** of the sample $x$, and $c(n)$ is the ‘unsuccessful length search’ of a binary tree (the maximum path length of a binary tree from root to external node); $n$ is the number of external nodes. 
 
