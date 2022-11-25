@@ -152,8 +152,6 @@ $$C(D) = \sum^n_{i=1} (y_i - \symbf{\theta}^T \symbf{x}_i)^2$$
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-$$ P(\symbf{x}_i, y_i | \theta) = h_{\theta}^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
-
 $$P( \symbf{x}_i, y_i | \theta) = (h_{\theta})^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}$$
 
 Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
@@ -224,7 +222,11 @@ $$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \unde
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;P(D|\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\Big(&space;\theta^{N_H}(1-\theta)^{N_T}&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\&space;L(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;P(D|\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\Big(&space;\theta^{N_H}(1-\theta)^{N_T}&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\&space;L(\theta)" title="\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \underset{\theta}{\textrm{argmax}} \Big( \theta^{N_H}(1-\theta)^{N_T} \Big) = \underset{\theta}{\textrm{argmax}} \ L(\theta)" /></a>
 
-To do it, we differentiate $L(\theta)$ with respect to $\theta$ and make it equal to zero. Then we obtain the MLE estimate [[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?]][How to derive the likelihood function for binomial distribution for parameter estimation?]
+To do it, we differentiate $\log L(\theta)$ with respect to $\theta$ and make it equal to zero.
+
+$$\log L(\theta) = N_H \log(\theta) N_T \log (1-\theta)$$
+
+Then we obtain the MLE estimate [[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?]][How to derive the likelihood function for binomial distribution for parameter estimation?]
 
 $$\theta_{\textrm{MLE}} = \frac{N_H}{N_H+N_T} = \frac{6}{6} = 1$$
 
