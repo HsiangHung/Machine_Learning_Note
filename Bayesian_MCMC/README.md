@@ -220,11 +220,9 @@ Here we denote $N_H$ is the number of heads and $\theta$ is the probability to h
 
 $$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \underset{\theta}{\textrm{argmax}} \Big[ \theta^{N_H}(1-\theta)^{N_T} \Big] = \underset{\theta}{\textrm{argmax}} \ L(\theta)$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;P(D|\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\Big(&space;\theta^{N_H}(1-\theta)^{N_T}&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\&space;L(\theta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{\textrm{MLE}}&space;=&space;\underset{\theta}{\textrm{argmax}}&space;P(D|\theta)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\Big(&space;\theta^{N_H}(1-\theta)^{N_T}&space;\Big)&space;=&space;\underset{\theta}{\textrm{argmax}}&space;\&space;L(\theta)" title="\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}} P(D|\theta) = \underset{\theta}{\textrm{argmax}} \Big( \theta^{N_H}(1-\theta)^{N_T} \Big) = \underset{\theta}{\textrm{argmax}} \ L(\theta)" /></a>
-
 To do it, we differentiate $\log L(\theta)$ with respect to $\theta$ and make it equal to zero.
 
-$$\log L(\theta) = N_H \log(\theta) + N_T \log (1-\theta); \ \frac{\partial L(\theta)}{\partial \theta} = \Big( \frac{N_H}{\theta} - \frac{N_T}{1-\theta} = 0 \Big) \vert$$
+$$\log L(\theta) = N_H \log(\theta) + N_T \log (1-\theta); \ \frac{\partial L(\theta)}{\partial \theta} = \Big( \frac{N_H}{\theta} - \frac{N_T}{1-\theta} = 0 \Big) \right|_{\hat x_{k-1}}$$
 
 Then we obtain the MLE estimate [[Cross Validate: How to derive the likelihood function for binomial distribution for parameter estimation?]][How to derive the likelihood function for binomial distribution for parameter estimation?]
 
