@@ -141,7 +141,7 @@ $$L(\symbf{\theta}) = P(\symbf{X}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \
 
 Note that maximizing the likelihood functions is equal to maximizing the log of these functions. Therefore, We usually denote MLE as
 
-$$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}}\log \Big( \prod_{i}P(\symbf{x}_i, y_i| \theta) \Big) = \underset{\theta}{\textrm{argmax}} \sum_{i} \log P(\symbf{x}_i, y_i| \theta) = \underset{\theta}{\textrm{argmin}} \sum_{i} -\log P(\symbf{x}_i, y_i| \theta)$$
+$$\theta_{\textrm{MLE}} = \underset{\theta}{\textrm{argmax}}\log \Big( \prod_{i}P(\symbf{x}_i, y_i| \theta) \Big) = \underset{\theta}{\textrm{argmax}} \sum_i \log P(\symbf{x}_i, y_i| \theta) = \underset{\theta}{\textrm{argmin}} \sum_{i} -\log P(\symbf{x}_i, y_i| \theta)$$
 
 Thus the problem is equivalent to minimizing the cost functions  
 
