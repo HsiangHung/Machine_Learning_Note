@@ -68,6 +68,8 @@ $$p = \frac{N_p}{N_p+N_n}, \ n = \frac{N_n}{N_p+N_n}$$
 
 Then we can calculate **Expected Entropy** (EH) remaining after trying attribute `A` (with branches i=1,2,...,K types) in childs as
 
+$$EH(A) = \sum^K_{i=1} H(p_i, n_i)$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=EH(A)&space;=&space;\sum^K_{i=1}&space;H(p_i,&space;n_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EH(A)&space;=&space;\sum^K_{i=1}&space;H(p_i,&space;n_i)" title="EH(A) = \sum^K_{i=1} H(p_i, n_i)" /></a>
 
 The information gain is `H(p,n) - EH(A)` for attribute `A`, where `H(p,n)` is on root. 
@@ -92,6 +94,7 @@ We can see the larger information gain split makes better classification.
 
 The Gini index of a leaf node is defined as [[Jason Brownlee]][Classification And Regression Trees for Machine Learning]:
 
+$$G = 1- \sum^K_{i=1} p^2_i$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" title="G = 1- \sum^K_{i=1} p^2_i" /></a>
 
@@ -101,6 +104,8 @@ The Gini index of a leaf node is defined as [[Jason Brownlee]][Classification An
 * The leaf node still has 50 positive - 50 negative. `G = 0.5`.
 
 The Gini index calculation for each node is weighted by the total number of instances in the parent node. Therefore, for a split, the Gini index in a **binary classification** problem is therefore calculated as follows: 
+
+$$G = \frac{N_1}{N} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{N_2}{N} \big( 1 - [(p_2)^2 + (n_2)^2] \big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;\frac{N_1}{N}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{N_2}{N}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;\frac{N_1}{N}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{N_2}{N}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" title="G = \frac{N_1}{N} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{N_2}{N} \big( 1 - [(p_2)^2 + (n_2)^2] \big)" /></a>
 
