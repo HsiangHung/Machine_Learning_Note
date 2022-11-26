@@ -50,7 +50,7 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{m,t} } \right)}
   {\left( \matrix{ Y_{1,t-1} \cr Y_{2,t-1} } \right)} + 
   \left( \matrix{\beta_{11,2} & \beta_{12,2} \cr \beta_{21,2} & \beta_{22,2}} \right)
   {\left( \matrix{ Y_{1,t-2} \cr Y_{2,t-2} } \right)} +
-  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \cr \vdots \cr \epsilon_{m,t} } \right)}.
+  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} \cr \vdots \cr \epsilon_{m,t} } \right)}.
 $$
 
 
