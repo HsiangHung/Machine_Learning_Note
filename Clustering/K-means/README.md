@@ -92,7 +92,7 @@ K-Means++ is a smart centroid initialization technique and the rest of the algor
 
 * Pick the first centroid point, say $C_1$ randomly.
 * Compute distance of all points in the dataset from the centroid. The data point which has the maximum distance to $C_1$ will be second centroid.  Now we have $( C_1, C_2 )$.
-* Compute distances of all points from the respective nearest centroids. For example, assume we have $(x_1,.., x_6)$ in dataset. The closest centroid to $(x_1, x_3, x_6)$ is $C_1$ and $x_6$ is the farthest point to $C_1$ with distance = $d(6,1)$. The closest centroid to $(x_2, x_4, x_5)$ is $C_2$ and $x4_$ is the farthest point to $C2_$ with $d(4,2)$. We assign $x_4$ as the third centroid if $d(4,2) > d(6,1)$. Now we have $(C_1, C_2, C_3)$.
+* Compute distances of all points from the respective nearest centroids. For example, assume we have $(x_1,.., x_6)$ in dataset. The closest centroid to $(x_1, x_3, x_6)$ is $C_1$ and $x_6$ is the farthest point to $C_1$ with distance = $d(6,1)$. The closest centroid to $(x_2, x_4, x_5)$ is $C_2$ and $x_4$ is the farthest point to $C_2$ with $d(4,2)$. We assign $x_4$ as the third centroid if $d(4,2) > d(6,1)$. Now we have $(C_1, C_2, C_3)$.
 * Repeat the above step till you find K centroids.
 
 In summary, the new centroid is determined by maximum probability proportional to distance sqaure where the distance is the distance bwtween a data point and its nearest centroid:
