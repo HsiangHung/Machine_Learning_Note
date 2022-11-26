@@ -293,7 +293,7 @@ $$P(D) = \int_{\theta} P(D, \theta)d\theta = \int_{\theta} P(D|\theta)P(\theta)d
 
 To infer a coin flippinh, we have one varable and use the conjugate prior such that both prior and posterior have same probability distribution. 
 
-But in reality, both p(D|θ) and p(θ) could be high-dimensional, so the integral is difficult to evaluate. This means we are in a situation often described as the **Curse of Dimensionality**: the volume of a high-dimensional space is so vast that any available data becomes extremely sparse within that space and hence leads to problems of statistical significance. 
+But in reality, both $P(D|\theta)$ and $P(\theta)$ could be high-dimensional, so the integral is difficult to evaluate. This means we are in a situation often described as the **Curse of Dimensionality**: the volume of a high-dimensional space is so vast that any available data becomes extremely sparse within that space and hence leads to problems of statistical significance. 
 
 To be more concrete, let's look at Bayesian logisitic regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I].
 
@@ -302,7 +302,7 @@ To be more concrete, let's look at Bayesian logisitic regression [[Nando de Frei
 
 Given data D = (X, y), the logisitic regression model specifies a probability of a binary output `y = 0, 1` given input X:
 
-$$P(y|X, \theta) = \prod_{i=1}^{n} \textrm{Ber}(y_i |\textrm{sigmoid}(\theta^T \bold{x}_i)) = \prod_{i=1}^n \Big( \frac{1}{1+e^{-\theta^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\theta^T \bold{x}_i}} \Big)^{1-y_i},$$
+$$P(y|X, \theta) = \prod_{i=1}^{n} \textrm{Ber}(y_i |\textrm{sigmoid}(\theta^T \symbf{x_i} )) = \prod_{i=1}^n \Big( \frac{1}{1+e^{-\theta^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\theta^T \symbf{x}_i}} \Big)^{1-y_i},$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(y|X,&space;\theta)&space;=&space;\prod_{i=1}^{n}&space;\textrm{Ber}(y_i&space;|\textrm{sigmoid}(\theta^T&space;\bold{x}_i))&space;=&space;\prod_{i=1}^n&space;\Big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(y|X,&space;\theta)&space;=&space;\prod_{i=1}^{n}&space;\textrm{Ber}(y_i&space;|\textrm{sigmoid}(\theta^T&space;\bold{x}_i))&space;=&space;\prod_{i=1}^n&space;\Big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}\Big)^{y_i}\Big(&space;1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}&space;\Big)^{1-y_i}" title="P(y|X, \theta) = \prod_{i=1}^{n} \textrm{Ber}(y_i |\textrm{sigmoid}(\theta^T \bold{x}_i)) = \prod_{i=1}^n \Big( \frac{1}{1+e^{-\theta^T \bold{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\theta^T \bold{x}_i}} \Big)^{1-y_i}" /></a>
 
