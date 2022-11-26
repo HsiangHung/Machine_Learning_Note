@@ -11,11 +11,11 @@ and $\mathbf{X}_i$ is an $M$-dimensional input vector $\mathbf{X}_i = (x^1_i, x^
 
 Random Forests algorithm is a classifier based on primarily two methods - **Bagging** and **Random subspace method**.
 
-Suppose we decide to have $S$ number of trees in our forest, then we first create $S$ datasets of "same size as original" created from random resampling of data in $D$ **with-replacement** ($n$ times for each dataset). This will result in $(D_1, D_2, ... D_S)$ datasets. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset $D_i$ can have duplicate data records and $D_i$ can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
+Suppose we decide to have $S$ number of trees in our forest, then we first create $S$ datasets of "same size as original" created from random resampling of data in $D$ **with-replacement** (n times for each dataset). This will result in $(D_1, D_2, ... D_S)$ datasets. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset $D_i$ can have duplicate data records and $D_i$ can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
 
 **Bagging** is the process of taking bootstraps & then aggregating the models learned on each bootstrap.
 
-Now, RF creates $S$ trees and uses $m$ ($=\sqrt(M)$ or =floor(lnM+1)) random subfeatures out of $M$ possible features to create any tree. This is called **random subspace method**.
+Now, RF creates $S$ trees and uses $m (=\sqrt(M)$ or =floor(lnM+1)) random subfeatures out of $M$ possible features to create any tree. This is called **random subspace method**.
 
 So for each `Di` bootstrap dataset you create a tree `Ti`. If you want to classify some input data `d = {x_1, x_2, ..., x_M}`, you let it pass through each tree and produce `S` outputs (one for each tree) which can be denoted by `Y = {y1, y2, ..., ys}`. Final prediction is a **majority vote** on this set, or **mean probability** for each class (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33))
 
