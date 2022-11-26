@@ -70,7 +70,7 @@ With a very large value of C (similar to no regularization), this large margin c
 
 The non-linear boundary problem can be solved if we introduce a kernel [[Priyankur Sarkar]][Support Vector Machines in Machine Learning]. The cost function turns to 
 
-$$C(\symbf{\theta}) = C \sum^m_{i=1} \Big[ y_i \max ( 0, 1- \theta^T \symbf{f}_i )  + (1-y_i) \max (0, 1 + \theta^T \symbf{f}_i) ) \Big] + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2$$
+$$C(\symbf{\theta}) = C \sum^m_{i=1} \Big[ y_i \max ( 0, 1- \theta^T \symbf{f}_i )  + (1-y_i) \max (0, 1 + \theta^T \symbf{f}_i ) \Big] + \frac{1}{2}\sum^n_j |\theta_j|^2$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \bold{f}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \bold{f}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
 
