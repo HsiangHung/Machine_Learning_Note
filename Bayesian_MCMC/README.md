@@ -178,7 +178,7 @@ Instead, if we implement **Gaussian distribution** to the prior $P(\theta)$ [[Br
 
 $$P(\theta) \propto e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}$$
 
-which can be identify to a **L2 (Ridge) regularization** term, if $\mu_{\theta}=0$ and recall we are minimizing the cost (likelihoold wiht a minus)
+which can be identify to a **L2 (Ridge) regularization** term if $\mu_{\theta}=0$ (and recall maximizing likelihood is equalivent to minimizing the minus likelihood)
 
 $$-\log P(\theta) \sim \log \Big( e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \Big) = \frac{\theta^2}{2\sigma^2}$$
 
