@@ -91,7 +91,7 @@ $$f_0(x) = y$$
 
 In the above left plot (a), the black line indicates $F_0(x) = f_0(x)$, the **first** predictor (model). Then we compute the residuals $e_1 = y - y_0$, where $y_0 = f_0(x)$, shown as green dots on the right hand plot (b). Next we build another regressor model but fit the **residuals** 
 
-$$f_1(x) = e_1$$
+$$f_1(x) = e_1.$$
 
 In (b), the black line indicates the $f_1(x)$ predictor. Now we can combine the predictors $F_1(x) = F_0(x) + f_1(x)$ and the resulting predictor is the black line shown in below left (c)
 
@@ -105,15 +105,11 @@ $$f_2(x) = e_2$$
 
 and so on. In this case, mathmetically we have an iterative relation
 
-$$F_t (x) = F_{t-1}(x) + f_t(x)$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;f_t(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;f_t(x)" title="F_t (x) = F_{t-1}(x) + f_t(x)" /></a>
+$$F_t (x) = F_{t-1}(x) + f_t(x),$$
 
 and the residual fitting model is given by
 
-$$f_t (x) = y - F_{t-1}(x)$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=f_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" title="f_t (x) = y - F_{t-1}(x)" /></a>
+$$f_t (x) = y - F_{t-1}(x).$$
 
 Prof. Ihler gave a [comprehensive description](http://sli.ics.uci.edu/Classes/2012F-273a?action=download&upname=10-ensembles.pdf) about the boosting steps in his lecture and here we borrow to show below
 
@@ -131,40 +127,25 @@ In the boosting processes, we start with a baseline model $F_0(x)$ by fitting $f
 
 $$F_0(x_i) = 0 + f_0(x_i).$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_0(x_i)&space;=&space;0&space;&plus;&space;f_0(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_0(x_i)&space;=&space;0&space;&plus;&space;f_0(x_i)" title="F_0(x_i) = 0 + f_0(x_i)" /></a>
-
 Then compute residuals $e_1 = y - F_0(x)$ and fit $f_1(x) = e_1$. Now we have
 
-$$F_1(x_i) = F_0(x_i) + f_1(x_i) = f_0(x_i) + f_1(x_i)$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_1(x_i)&space;=&space;F_0(x_i)&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1(x_i)&space;=&space;F_0(x_i)&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" title="F_1(x_i) = F_0(x_i) + f_1(x_i) = f_0(x_i) + f_1(x_i)" /></a>
+$$F_1(x_i) = F_0(x_i) + f_1(x_i) = f_0(x_i) + f_1(x_i),$$
 
 where $F_1(x)$ is a better model than $F_0(x)$. Next step compute residuals $e_2 = y - F_1(x)$ and fit the second model $f_2(x) = e_1$:
 
-$$F_2(x_i) = F_1(x_i) + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="F_2(x_i) = F_1(x_i) + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)" /></a>
+$$F_2(x_i) = F_1(x_i) + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i),$$
 
 where $F_2(x)$ is a better model than $F_1(x)$. Keep doing the procedures, eventually we have the following relation
 
-$$F_t(x_i) = F_{t-1}(x_i) + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_t(x_i)&space;=&space;F_{t-1}(x_i)&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t(x_i)&space;=&space;F_{t-1}(x_i)&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" title="F_t(x_i) = F_{t-1}(x_i) + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)" /></a>
-
+$$F_t(x_i) = F_{t-1}(x_i) + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i).$$
 
 For a regression problem, the loss function is given by  
 
-$$\textrm{Loss} = J(y, \hat{y}) = \sum_i \big( y_i - \hat{y}_i \big)^2$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;J(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}_i&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;J(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}_i&space;\big)^2" title="\textrm{Loss} = J(y, \hat{y}) = \sum_i \big( y_i - \hat{y}_i \big)^2" /></a>
-
+$$\textrm{Loss} = J(y, \hat{y}) = \sum_i \big( y_i - \hat{y}_i \big)^2.$$
 
 The boosting process is equivalent to minimizing `Loss` by sequentially generating models $F_0(x)$, $F_1(x)$, .... Therefore, we can add a superscript on the `Loss` function to represent the `Loss` function in `t`-th iteration
 
-$$J_t(y, \ \hat{y}) = \sum_i \big( y_i - \hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" title="J_t(y, \ \hat{y}) = \sum_i \big( y_i - \hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2" /></a>
-
+$$J_t(y, \ \hat{y}) = \sum_i \big( y_i - \hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2,$$
 
 where $t = 1, 2, 3...$ From the gradient descent aspect, the `Loss` is minimized as
 
