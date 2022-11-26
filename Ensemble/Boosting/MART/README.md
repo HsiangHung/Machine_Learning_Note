@@ -75,8 +75,6 @@ Next, we convert this to a probability using the Logistic Function,
 
 $$p = \frac{e^{\textrm{log(odds)}}}{1+e^{\textrm{log(odds)}}} = \frac{1}{1+e^{-\textrm{log(odds)}}} = 0.6667 \sim 0.7.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=p&space;=&space;\frac{e^{\textrm{log(odds)}}}{1&plus;e^{\textrm{log(odds)}}}&space;=&space;\frac{1}{1&plus;e^{-\textrm{log(odds)}}}&space;=&space;0.6667&space;\sim&space;0.7" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p&space;=&space;\frac{e^{\textrm{log(odds)}}}{1&plus;e^{\textrm{log(odds)}}}&space;=&space;\frac{1}{1&plus;e^{-\textrm{log(odds)}}}&space;=&space;0.6667&space;\sim&space;0.7" title="p = \frac{e^{\textrm{log(odds)}}}{1+e^{\textrm{log(odds)}}} = \frac{1}{1+e^{-\textrm{log(odds)}}} = 0.6667 \sim 0.7" /></a>
-
 If we consider the probability threshold as 0.5, this means that our initial prediction is that all the individuals have Heart Disease.
 
 Next we calculate the residuals for each observation by using the following formula,
@@ -106,10 +104,6 @@ Next step is to build a Decision Tree to predict the residuals using Chest Pain,
 How do we calculate the predicted residuals in each leaf? The initial prediction was in terms of log(odds) and the leaves are derived from a probability. Hence, we need to do some transformation to get the predicted residuals in terms of log(odds). The most common transformation is done using the following formula 
 
 $$\frac{\sum \textrm{Resisual}_i}{\sum (\textrm{PrevProb}_i) (1-\textrm{PrevProb}_i)}.$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\sum&space;\textrm{Resisual}_i}{\sum&space;(\textrm{PrevProb}_i)&space;(1-\textrm{PrevProb}_i)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\sum&space;\textrm{Resisual}_i}{\sum&space;(\textrm{PrevProb}_i)&space;(1-\textrm{PrevProb}_i)}" title="\frac{\sum \textrm{Resisual}_i}{\sum (\textrm{PrevProb}_i) (1-\textrm{PrevProb}_i)}" /></a>
-
-
 
 
 ## Reference
