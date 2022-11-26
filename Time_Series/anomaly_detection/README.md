@@ -16,7 +16,8 @@ On the other hand, in multivariate time-series data, each timestamp index corres
 Suppose we have two time-series variables, $Y_{1,t}$ and $Y_{2,t}$, such that
 
 $$ \begin{matrix} 
-  Y_{1,t} = \alpha_1 + \beta_{11,1} Y_{1, t-1} + \beta_{12,1} Y_{2,t-1} + \epsilon_{1,t} \\ 
+  Y_{1,t} &=& \alpha_1 + \beta_{11,1} Y_{1, t-1} + \beta_{12,1} Y_{2,t-1} + \epsilon_{1,t} \\ 
+  Y_{1,t} &=& \alpha_1 + \beta_{11,1} Y_{1, t-1} + \beta_{12,1} Y_{2,t-1} + \epsilon_{1,t}
   \end{matrix}
 $$
 
