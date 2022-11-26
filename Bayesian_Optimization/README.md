@@ -13,9 +13,7 @@ Hyperparameter optimization is represented
 
 $$x^{*} = \textrm{argmin}_{x \in X} f(x)$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=x^{*}&space;=&space;\textrm{argmin}_{x&space;\in&space;X}&space;f(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^{*}&space;=&space;\textrm{argmin}_{x&space;\in&space;X}&space;f(x)" title="x^{*} = \textrm{argmin}_{x \in X} f(x)" /></a>
-
- `f(x)` represents an objective score to minimize, such as RMSE or error rate, evaluated on the validation set; `x*` is the set of hyperparameters that yields the lowest value of the score, and x can take on any value in the hyperparameter space. In simple terms, we want to find the model hyperparameters that yield the best score on the validation set metric.
+ $f(x)$ represents an objective score to minimize, such as RMSE or error rate, evaluated on the validation set; $x^*$ is the set of hyperparameters that yields the lowest value of the score, and x can take on any value in the hyperparameter space. In simple terms, we want to find the model hyperparameters that yield the best score on the validation set metric.
 
 With a large number of hyperparameters and complex models such as ensembles or deep neural networks, evaluating the objective function to find the score is extremely expensive. Grid and random search are completely uninformed by past evaluations and pay no attention to past results.[[Will Koehrsen]][A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning]
 
@@ -32,17 +30,17 @@ The Bayesian optimization process (credit from Nando de Freitas's [UBC machine l
 
 ![Figure_1](images/bayesian_optimization_process.png)
 
-Our goal is to find `x*` to have **maximum** true objective.
+Our goal is to find $x^*$ to have **maximum** true objective.
 
-In (a), the dash line is the true object function we are looking for. The black solid line is mean of posterior `μ`. The purple region represents confidence intervals and covers upper (`μ+σ`) and lower (`μ-σ`) bounds. The green line denotes a acquisition function. 
+In (a), the dash line is the true object function we are looking for. The black solid line is mean of posterior $\mu$. The purple region represents confidence intervals and covers upper ($\mu + \sigma$) and lower ($\mu - \sigma$) bounds. The green line denotes a acquisition function. 
 
 (b) shows how we determine next trial observation. We always look up regions which potentially have higher objective, so in this example, we can ignore the shaded area. 
 
-@t=2, we have two trial observations left: `(x1, y1)` and right: `(x2, y2)`. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look up regions where the objective is potentially higher than `y2`, and as well as wide purple area.  This corresponds to the maximum on acquisition function. Suppose we label the third trial observation `x3` by the red triangle.
+* @t=2, we have two trial observations left: $(x_1, y_1)$ and right: $(x_2, y_2)$. With these two points, we can use **Gaussian Process** to infer the purple area. For next point, we look for **high-mean** regions (**exploitation**) and **high-variance** regions (**exploration**). So we only look up regions where the objective is potentially higher than $y_2$, and as well as wide purple area.  This corresponds to the maximum on acquisition function. Suppose we label the third trial observation $x_3$ by the red triangle.
 
-@t=3, the uncertiantity of the objective function nearby `x3` diminishes, so the purple area shrinks. Also note the black solid line moves toward to the dash line, and the acquisition function drops. `y2` is still highest objective among the observations, so for next step, we looks for `x > x2` with wide purple area, i.e. maximum on the acquisition function.
+* @t=3, the uncertiantity of the objective function nearby $x_3$ diminishes, so the purple area shrinks. Also note the black solid line moves toward to the dash line, and the acquisition function drops. $y_2$ is still highest objective among the observations, so for next step, we looks for $x > x_2 with wide purple area, i.e. maximum on the acquisition function.
 
-@t=4, now we can see the mean of posterior is close to the true objective line.
+* @t=4, now we can see the mean of posterior is close to the true objective line.
 
 ## 3. HyperOpt Code Example for LGBM
 
