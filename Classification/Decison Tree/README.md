@@ -188,7 +188,7 @@ For numeric attributes, we sort the attribute by value. Then above data become
 
 At root, the entropy (9 positive, 5 negative) is
 
-$$H(\frac{9}{14},\frac{5}{14})= -\big(\frac{9}{14}\log \frac{9}{14} + \frac{5}{14}\log \frac{5}{14} \big) = 0.94 \ \textrm{bits}$$
+$$H(\frac{9}{14},\frac{5}{14})= -\left( \frac{9}{14}\log{\frac{9}{14}} + \frac{5}{14}\log{\frac{5}{14}} \right) = 0.94 \ \textrm{bits}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94&space;\&space;\textrm{bits}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94&space;\&space;\textrm{bits}" title="H(\frac{9}{14},\frac{5}{14})= -\big(\frac{9}{14}\log \frac{9}{14} + \frac{5}{14}\log \frac{5}{14} \big) = 0.94 \ \textrm{bits}" /></a>
 
