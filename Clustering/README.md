@@ -23,13 +23,11 @@ Next we can define **dissimilarity** by considering the mean distance from $i$ t
 
 $${\displaystyle b(i)= \min_{k\neq i} \frac{1}{|C_{k}|} \sum_{j \in C_{k}}d(i,j)}.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;b(i)=\min&space;_{k\neq&space;i}{\frac&space;{1}{|C_{k}|}}\sum&space;_{j\in&space;C_{k}}d(i,j)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;b(i)=\min&space;_{k\neq&space;i}{\frac&space;{1}{|C_{k}|}}\sum&space;_{j\in&space;C_{k}}d(i,j)}" title="{\displaystyle b(i)=\min _{k\neq i}{\frac {1}{|C_{k}|}}\sum _{j\in C_{k}}d(i,j)}" /></a>
-
 Note here we have `min`, meaning the cluster with this smallest mean dissimilarity is said to be the "neighboring cluster" of $C_i$.
 
 We now define a silhouette (value) of one data point $i$
 
-$$s(i)={\frac {b(i)-a(i)}{\max\{a(i),b(i)\}}}, \textrm{if } |C_{i}|>1.$$
+$$s(i)={\frac{b(i)-a(i)}{\max (a(i),b(i))}}, \textrm{if } |C_{i}|>1.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}},&space;\textrm{if&space;}&space;|C_{i}|>1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}},&space;\textrm{if&space;}&space;|C_{i}|>1" title="s(i)={\frac {b(i)-a(i)}{\max\{a(i),b(i)\}}}, \textrm{if } |C_{i}|>1" /></a>
 
