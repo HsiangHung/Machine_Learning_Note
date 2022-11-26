@@ -156,7 +156,7 @@ $${\displaystyle P( \symbf{x}_i, y_i | \theta) = (h_{\theta})^{y_i} (1-h_{\theta
 
 Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
 
-$$C(D) = \sum^n_{i=1} \Big( y_i \log \big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \big) \Big)$$
+$$C(D) = \sum^n_{i=1} \left[ y_i \log \big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\big) + (1-y_i) \log \big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \big) \right]$$
 
 
 
