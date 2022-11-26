@@ -14,7 +14,8 @@ Here is Prof. Tomas Tunys' lecture slide: [LambdaMART Demystified](https://staff
 
 The procedures of building a boosting regression tree are summarize below (given (`x`, `y`))
 
-* $ \textrm{fit } f_0(x) = y; \ \hat{y}_0 = f_0(x), \ \hat{y}^{(0)} = \hat{y}_0 = f_0(x), \ \textrm{residual } \epsilon_1 = y-\hat{y}^{(0)},$ 
+
+* $\textrm{fit} f_0(x) = y; \ \hat{y}_0 = f_0(x), \ \hat{y}^{(0)} = \hat{y}_0 = f_0(x), \ \textrm{res} \epsilon_1 = y-\hat{y}^{(0)},$
 
 * $\textrm{fit } f_1(x) = \epsilon_1; \ \hat{\epsilon}_1 = f_1(x), \ \hat{y}^{(1)} = \hat{y}_0 + \hat{\epsilon}_1 = f_0 +f_1, \ \textrm{res } \epsilon_2 = y-\hat{y}^{(1)},$
 
