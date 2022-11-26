@@ -4,9 +4,9 @@
 
 Suppose our training data set is represented by `D` and suppose data set has `M` features (or attributes or variables) [[Stackoverflow: What is out of bag error in Random Forests?]][What is out of bag error in Random Forests?].
 
-    D = {(X1,y1), (X2,y2), ... (Xn, yn)}
+$$D = \Big( (\mathbf{X}_1,y_1), (\mathbf{X}_2,y_2), ... (\mathbf{X}_n, y_n) \Big)$$
 
-and `Xi` is an `M`-dimensional input vector `{xi_1, xi_2, ... xi_M}` and `yi` is the label (or output or class). 
+and $\mathbf{X}_i$ is an $M$-dimensional input vector ${x^1_i, x^2_i, ... x^M_i}` and $y_i$ is the label (or output or class). 
 
 
 Random Forests algorithm is a classifier based on primarily two methods - **Bagging** and **Random subspace method**.
