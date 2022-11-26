@@ -38,7 +38,7 @@ dd
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)} 
 = \left\lbrack \matrix{2 & 3 \cr 4 & 5} \right\rbrack
-\left\lbrack \matrix{1 & 0 \cr 0 & 1} \right\rbrack
+{\left( \matrix{ Y_{1,t-1} \cr Y_{2,t-1} } \right)} 
 $$
 
 
