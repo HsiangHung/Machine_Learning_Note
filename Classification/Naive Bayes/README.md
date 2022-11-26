@@ -62,14 +62,14 @@ This is mostly used for document multi-class problem, i.e whether a document bel
 
 $$P(x|y) = \theta^{x_1}_1\theta^{x_2}_2 \cdots \theta^{x_k}_k,$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(x|y)&space;=&space;\theta^{x_{1}}_{1}\theta^{x_{2}}_{2}&space;\cdots&space;\theta^{x_{k}}_{k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|y)&space;=&space;\theta^{x_{1}}_{1}\theta^{x_{2}}_{2}&space;\cdots&space;\theta^{x_{k}}_{k}" title="P(x|y) = \theta^{x_{1}}_{1}\theta^{x_{2}}_{2} \cdots \theta^{x_{k}}_{k}" /></a>
-
-where `θi` is the ratio of `count(word-i, y)` and `count(y)` from corpus.
+where $θ_i$ is the ratio of `count(word-i, y)` and `count(y)` from corpus.
 
 
 ### Bernoulli Naive Bayes
 
 If predictors are boolean variables and targets to predict are only yes or no, we can use Bernoulli distribution. For example, if a predictor is whether word-i occurs in the text or not and we want to predict positive/negative comments.
+
+$$P(x|y) = \theta^{x_1}_1 (1-\theta_1)^{1-x_1} \cdots \theta^{x_k}_k (1-\theta_k)^{1-x_k}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(x|y)&space;=&space;\theta^{x_1}_1&space;(1-\theta_1)^{1-x_1}&space;\cdots&space;\theta^{x_k}_k&space;(1-\theta_k)^{1-x_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|y)&space;=&space;\theta^{x_1}_1&space;(1-\theta_1)^{1-x_1}&space;\cdots&space;\theta^{x_k}_k&space;(1-\theta_k)^{1-x_k}" title="P(x|y) = \theta^{x_1}_1 (1-\theta_1)^{1-x_1} \cdots \theta^{x_k}_k (1-\theta_k)^{1-x_k}" /></a>
 
