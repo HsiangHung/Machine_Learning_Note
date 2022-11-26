@@ -14,15 +14,15 @@ Here is Prof. Tomas Tunys' lecture slide: [LambdaMART Demystified](https://staff
 
 The procedures of building a boosting regression tree are summarize below (given (`x`, `y`))
 
-$$ \textrm{fit } f_0(x) = y; \ \hat{y}_0 = f_0(x), \ \hat{y}^{(0)} = \hat{y}_0 = f_0(x), \ \textrm{residual } \epsilon_1 = y-\hat{y}^{(0)},$$
+* $ \textrm{fit } f_0(x) = y; \ \hat{y}_0 = f_0(x), \ \hat{y}^{(0)} = \hat{y}_0 = f_0(x), \ \textrm{residual } \epsilon_1 = y-\hat{y}^{(0)},$ 
 
-$$\textrm{fit } f_1(x) = \epsilon_1; \ \hat{\epsilon}_1 = f_1(x), \ \hat{y}^{(1)} = \hat{y}_0 + \hat{\epsilon}_1 = f_0 +f_1, \ \textrm{res } \epsilon_2 = y-\hat{y}^{(1)},$$
+* $\textrm{fit } f_1(x) = \epsilon_1; \ \hat{\epsilon}_1 = f_1(x), \ \hat{y}^{(1)} = \hat{y}_0 + \hat{\epsilon}_1 = f_0 +f_1, \ \textrm{res } \epsilon_2 = y-\hat{y}^{(1)},$
 
-$$\textrm{fit } f_2(x) = \epsilon_2; \ \hat{y}^{(2)} = \hat{y}_0 + \hat{\epsilon}_1 + \hat{\epsilon}_2 = f_0 + f_1 + f_2, \ \textrm{res } \epsilon_3 = y-\hat{y}^{(2)},$$
+* $\textrm{fit } f_2(x) = \epsilon_2; \ \hat{y}^{(2)} = \hat{y}_0 + \hat{\epsilon}_1 + \hat{\epsilon}_2 = f_0 + f_1 + f_2, \ \textrm{res } \epsilon_3 = y-\hat{y}^{(2)},$
 
-$$\cdots$$
+$\cdots$
 
-$$\hat{y}^{(n)} = \hat{y}^0 + \hat{\epsilon}_1 + \hat{\epsilon}_2 \cdots + \hat{\epsilon}_n = \hat{y}^{(n-1)} + f_n(x).$$
+* $\hat{y}^{(n)} = \hat{y}^0 + \hat{\epsilon}_1 + \hat{\epsilon}_2 \cdots + \hat{\epsilon}_n = \hat{y}^{(n-1)} + f_n(x).$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{fit&space;}&space;f_0(x)&space;=&space;y;&space;\&space;\hat{y}_0&space;=&space;f_0(x),&space;\&space;\hat{y}^{(0)}&space;=&space;\hat{y}_0&space;=&space;f_0(x),&space;\&space;\textrm{residual&space;}&space;\epsilon_1&space;=&space;y-\hat{y}^{(0)}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{fit&space;}&space;f_0(x)&space;=&space;y;&space;\&space;\hat{y}_0&space;=&space;f_0(x),&space;\&space;\hat{y}^{(0)}&space;=&space;\hat{y}_0&space;=&space;f_0(x),&space;\&space;\textrm{residual&space;}&space;\epsilon_1&space;=&space;y-\hat{y}^{(0)}," title="\textrm{fit } f_0(x) = y; \ \hat{y}_0 = f_0(x), \ \hat{y}^{(0)} = \hat{y}_0 = f_0(x), \ \textrm{residual } \epsilon_1 = y-\hat{y}^{(0)}," /></a>
 
