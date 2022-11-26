@@ -17,14 +17,61 @@ There are also few other apsects:
 * DBSCAN is scabable.
 
 
-## Choosing Epsilon in DBSCAN
+## 1. Choosing Epsilon in DBSCAN
 
 It calculates distance from each point to its nearest neighbor within the same partition, so, for a small fraction of points this distance will not be accurate [[Github]][Choosing parameters of DBSCAN algorithm]
+
+### 1.2 Find Elbow Point
+
+The Stackover flow blog [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python) suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. 
+
+Another paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method for Discovering Density Varied Clusters] proposed to calculate paired distances among all the data points. If there are no outliers, the paired distances prefer to have uniform distribution. But if there exist outliers, the outlier should be relatively far away from the normal points. Therefore, there may exist elbow in the pair distance distribution.
+
+The Python sample code
+```Python
+from scipy.spatial import distance_matrix
+from kneed import KneeLocator
+
+def estimate_eps_1(X, metric="euclidean"):
+    '''
+    https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python
+    https://kneed.readthedocs.io/en/stable/parameters.html
+    '''
+    
+    pair_distance = distance_matrix(np.array(X).reshape(-1, 1), np.array(X).reshape(-1, 1))
+    pair_distance = sorted([x for x in pair_distance.reshape((pair_distance.size, ))])
+    
+    num_pair_dist = len(pair_distance)
+    
+    print("size of pair distance:", num_pair_dist)
+    plt.figure(figsize=(8,2))
+    plt.plot(range(num_pair_dist), pair_distance)
+    plt.show()
+    
+    kn = KneeLocator(range(num_pair_dist), pair_distance, curve="convex", interp_method="polynomial", polynomial_degree=4, direction="increasing")
+    kn.plot_knee()
+    print(kn.elbow)
+    return pair_distance[kn.elbow-1]
+```
+
 
 
 #### reference
 
+* [Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra]: https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf
+[[Nadia Rahmah and Imas Sukaesih Sitanggang] Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra](https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf)
+
+
+* [A dynamic Method for Discovering Density Varied Clusters]: https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters
+[[Mohammed T. H. Elbatta and Wesam M. Ashour] A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)
+
+
+* [A dynamic Method for Discovering Density Varied Clusters]: https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters
+[[Mohammed T. H. Elbatta and Wesam M. Ashour] A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)
+
+
 * Nadia Rahmah and Imas Sukaesih Sitanggang, [Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra](https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf)
+
 * Mohammed T. H. Elbatta and Wesam M. Ashour, [A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)
 
 
