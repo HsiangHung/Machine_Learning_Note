@@ -178,7 +178,7 @@ Note that we can rewrite the cost function as
 
 $$J_t = \sum^n_{i=1} C \big( y_i , \ \hat{y}^{t-1}_i + f_t(x_i) \big) + \Omega(f_t).$$
 
-Using Taylor expansion, we can approximate the cost function up to the second order of $f$:
+Using Taylor expansion, we can approximate the cost function up to the second order of $f_t$:
 
 $$J_t = \sum^n_{i=1} \big[ C( y_i , \ \hat{y}^{t-1}_i) + g_i f_t(x_i) + \frac{1}{2}h_i f^2_t(x_i) + \cdots \big] + \Omega(f_t),$$
 
