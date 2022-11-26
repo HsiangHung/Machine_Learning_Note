@@ -228,16 +228,19 @@ Detail refer to [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/
 
 To evaluate feature importance, we calculate feature importance for each split, and sum of them. For `attribute A`, we look for all splits which use `A` to split. The invidual feature importance is  [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees], [[Stacey Ronaghan]][The Mathematics of Decision Trees, Random Forest and Feature Importance in Scikit-learn and Spark]
 
+$$FI(A|c) = \frac{N_{c}}{N}\big( \textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l - \frac{N_{c,r}}{N_c}\textrm{impurity}_r \big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;\frac{N_{c}}{N}\big(&space;\textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l&space;-&space;\frac{N_{c,r}}{N_c}\textrm{impurity}_r&space;\big)" title="FI(A|c) = \frac{N_{c}}{N}\big( \textrm{impurity}_c-\frac{N_{c,l}}{N_c}\textrm{impurity}_l - \frac{N_{c,r}}{N_c}\textrm{impurity}_r \big)" /></a>
 
-where `Nc` means the number of instances on the "current" node or level, and `N` is the total number of instances. `l` and `r` denote left and right child nodes. We can simply calculate as 
+where $N_c$ means the number of instances on the "current" node or level, and $N$ is the total number of instances. $l$ and $r$ denote left and right child nodes. We can simply calculate as 
+
+$$FI(A|c) = N_{c} * \textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l - N_{c,r}*\textrm{impurity}_r$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;N_{c}&space;*&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;N_{c}&space;*&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r" title="FI(A|c) = N_{c} * \textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l - N_{c,r}*\textrm{impurity}_r" /></a>
 
-and eventually all are divided by `N`. The `impurity` metric is **entropy** if **C4.5** algorithm adopted. It would be **Gini** if the algorithm were **CART** [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]. 
+and eventually all are divided by $N$. The `impurity` metric is **entropy** if **C4.5** algorithm adopted. It would be **Gini** if the algorithm were **CART** [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]. 
 
-Keep in mind for lower impurity (say, the majority is positive), both entropy and Gini index are lower. If `attribute A` works well to split, parent has higher impurity whereas child has lower impurity, then higher `FI(A|c)`.  
+Keep in mind for lower impurity (say, the majority is positive), both entropy and Gini index are lower. If `attribute A` works well to split, parent has higher impurity whereas child has lower impurity, then higher $FI(A|c)$.  
 
 As a concrete example, suppose we have built the following tree (using C4.5 algorithm with entropy) (credit from [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]):
 
