@@ -33,7 +33,7 @@ $$\vec{w}\cdot \vec{x}_{-} -b \leq -1.$$
 
 The margin width is given
 
-$$ ( \vec{x}_{+} - \vec{x}_{-} ) \cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||} $$
+$$ ( \vec{x}_+ - \vec{x} ) \cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||} $$
 
 $$ ( \vec{x}_{+} - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}$$
 
