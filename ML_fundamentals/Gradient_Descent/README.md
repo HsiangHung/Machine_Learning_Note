@@ -119,14 +119,12 @@ In the following, we designate the graident as (if $J$ is the cost function)
 
 $$g_{t} = \frac{\partial J(\theta_{t})}{\partial \theta_{t}}.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=g_{t}&space;=&space;\frac{\partial&space;J(\theta_{t})}{\partial&space;\theta_{t}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{t}&space;=&space;\frac{\partial&space;J(\theta_{t})}{\partial&space;\theta_{t}}" title="g_{t} = \frac{\partial J(\theta_{t})}{\partial \theta_{t}}" /></a>
-
 For each step `t`, the model parameter is updated as
 
-$$\theta_{t+1} = \theta_{t} + \Delta \theta_{t}, \textrm{ here } \Delta \theta_{t} = - \alpha g_{t}.$$
+$$\theta_{t+1} = \theta_{t} + \Delta \theta_{t},$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;&space;\Delta&space;\theta_{t},&space;\textrm{&space;here&space;}&space;\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;&space;\Delta&space;\theta_{t},&space;\textrm{&space;here&space;}&space;\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;g_{t}" title="\theta_{t+1} = \theta_{t} + \Delta \theta_{t}, \textrm{ here } \Delta \theta_{t} = - \alpha g_{t}" /></a>
-
+where $\Delta \theta_{t} = - \alpha g_{t}.$
 
 ### A. Momentum
 
