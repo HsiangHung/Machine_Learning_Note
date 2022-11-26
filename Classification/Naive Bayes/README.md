@@ -16,17 +16,15 @@ $$P(y|X) = P(y|x_1,x_2,\cdots, x_f) = \frac{P(y) P(x_1|y)P(x_2|y)\cdots P(x_f|y)
 
 The class $y$ is determined by maximum probability
 
-$$y = \textrm{argmax}_y \big( P(y) \prod^f_i P(x_i|y) \big)$$
+$$y = \textrm{argmax}_y \big[ P(y) \prod^f_i P(x_i|y) \big].$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;\textrm{argmax}_y&space;P(y)&space;\prod^f_{i=1}&space;P(x_i|y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\textrm{argmax}_y&space;P(y)&space;\prod^f_{i=1}&space;P(x_i|y)" title="y = \textrm{argmax}_y P(y) \prod^f_{i=1} P(x_i|y)" /></a>
+Given $x$, if $y=1$ has higher probability than $y=0$, we assign $y=1$ for the event.
 
-Given `x`, if `y=1` has higher probability than `y=0`, we assign y=1 for the event.
-
-## Learnng Naive Bayes
+## Learning Naive Bayes
 
 ### Categorical feature
 
-If `x` is categorical, `P(x|y)` is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
+If $x$ is categorical, $P(x|y)$ is simply a count ratio. As a concrete example, we use the weather data (from [University of Edinburgh lecture](http://www.inf.ed.ac.uk/teaching/courses/inf2b/learnSlides/inf2b12-learnlec06.pdf)) as follows
 
 ![](images/example_data1.png)
 
@@ -34,10 +32,9 @@ The data has predictors: `x1=Outlook`, `x2=Temperature`, `x3=Humidity`, `x4=Wind
 
 $$P(\textrm{play}) = \frac{\textrm{count(play)}}{\textrm{count(all)}} = \frac{9}{14},$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{play})&space;=&space;\frac{\textrm{count(play)}}{\textrm{count(all)}}&space;=&space;\frac{9}{14}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{play})&space;=&space;\frac{\textrm{count(play)}}{\textrm{count(all)}}&space;=&space;\frac{9}{14}," title="P(\textrm{play}) = \frac{\textrm{count(play)}}{\textrm{count(all)}} = \frac{9}{14}," /></a>
+and the likelihood $P(x|y)$ as 
 
-
-and the likelihood `P(x|y)` as 
+$$P(\textrm{sunny}|\textrm{play}) = \frac{\textrm{count(sunny, play)}}{\textrm{count(play)}}=\frac{2}{9}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count(sunny,&space;play)}}{\textrm{count(play)}}=\frac{2}{9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\textrm{sunny}|\textrm{play})&space;=&space;\frac{\textrm{count(sunny,&space;play)}}{\textrm{count(play)}}=\frac{2}{9}" title="P(\textrm{sunny}|\textrm{play}) = \frac{\textrm{count(sunny, play)}}{\textrm{count(play)}}=\frac{2}{9}" /></a>
 
