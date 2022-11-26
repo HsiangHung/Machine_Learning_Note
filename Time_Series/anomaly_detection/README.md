@@ -41,7 +41,7 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)}
   {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
 
-Therefore, we can generalize the VAR(p) ($p$-lag model) with $n$ variables:
+Therefore, we can generalize the VAR($p$) ($p$ lag model) with $n$ variables:
 
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{n,t} } \right)} 
