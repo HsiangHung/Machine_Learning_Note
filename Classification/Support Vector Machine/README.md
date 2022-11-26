@@ -81,7 +81,7 @@ and so on, where $l^{(j)}$ are $j$ th-landmarks. He used **Gaussian Kernel** to 
 $$f_j = \textrm{similarity}(x, l^{(j)}) = \exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2} \Big)}$$
 
 
-We can map model as each data point represents a landmark. In this case, we turn `n` features to `m` features.
+We can map model as each data point represents a landmark. In this case, we turn $n$ features to $m$ features.
 Since it turns to the data size as number of features, SVM is probably not suitable for large size data.
 
 We also have **Sigmoid Kernel**, **Polynomial Kernel**.
@@ -89,7 +89,7 @@ We also have **Sigmoid Kernel**, **Polynomial Kernel**.
 
 ## 4. SVM vs Logistic Regression
 
-Many SVM packages have built in **multi-class classification**. Otherwise use **one-vs-all** method. For $K$ classes, train $K$ SVMs, each identifies if $y = 1$ for class ${1,2,...K}$. We pick class-$i$ for largest $\theta^T \mathbf{x}_i$.
+Many SVM packages have built in **multi-class classification**. Otherwise use **one-vs-all** method. For $K$ classes, train $K$ SVMs, each identifies if $y = 1$ for class ${1,2,...K}$. We pick class  for largest $\theta^T \mathbf{x}_i$.
 
 
 The main differences between SVM and Logistic regression (LR) [[Georgios Drakos]][Support Vector Machine vs Logistic Regression]:
