@@ -178,17 +178,13 @@ Note that we can rewrite the cost function as
 
 $$J_t = \sum^n_{i=1} C \big( y_i , \ \hat{y}^{t-1}_i + f_t(x_i) \big) + \Omega(f_t).$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=J_t&space;=&space;\sum^n_{i=1}&space;C&space;\big(&space;y_i&space;,&space;\&space;\hat{y}^{t-1}_i&space;&plus;&space;f_t(x_i)&space;\big)&space;&plus;&space;\Omega(f_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t&space;=&space;\sum^n_{i=1}&space;C&space;\big(&space;y_i&space;,&space;\&space;\hat{y}^{t-1}_i&space;&plus;&space;f_t(x_i)&space;\big)&space;&plus;&space;\Omega(f_t)" title="J_t = \sum^n_{i=1} C \big( y_i , \ \hat{y}^{t-1}_i + f_t(x_i) \big) + \Omega(f_t)" /></a>
-
 Using Taylor expansion, we can approximate the cost function up to the second order of $f$:
 
-$$J_t = \sum^n_{i=1} \big[ C( y_i , \ \hat{y}^{t-1}_i) + g_i f_t(x_i) + \frac{1}{2}h_i f^2_t(x_i) \big] + \Omega(f_t),$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=J_t&space;=&space;\sum^n_{i=1}&space;\big[&space;C(&space;y_i&space;,&space;\&space;\hat{y}^{t-1}_i)&space;&plus;&space;g_i&space;f_t(x_i)&space;&plus;&space;\frac{1}{2}h_i&space;f^2_t(x_i)&space;\big]&space;&plus;&space;\Omega(f_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t&space;=&space;\sum^n_{i=1}&space;\big[&space;C(&space;y_i&space;,&space;\&space;\hat{y}^{t-1}_i)&space;&plus;&space;g_i&space;f_t(x_i)&space;&plus;&space;\frac{1}{2}h_i&space;f^2_t(x_i)&space;\big]&space;&plus;&space;\Omega(f_t)" title="J_t = \sum^n_{i=1} \big[ C( y_i , \ \hat{y}^{t-1}_i) + g_i f_t(x_i) + \frac{1}{2}h_i f^2_t(x_i) \big] + \Omega(f_t)" /></a>
+$$J_t = \sum^n_{i=1} \big[ C( y_i , \ \hat{y}^{t-1}_i) + g_i f_t(x_i) + \frac{1}{2}h_i f^2_t(x_i) + \cdots \big] + \Omega(f_t),$$
 
 where the first/second order gradients are
 
-$$g_i = \partial_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i), \ h_i = \partial^2_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i).$$
+$$g_i = \partial_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i), \ h_i = \partial{y^{t-1}_i}^2 C(y_i, \ \hat{y}^{t-1}_i).$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=g_i&space;=&space;\partial_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i),&space;\&space;h_i&space;=&space;\partial^2_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_i&space;=&space;\partial_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i),&space;\&space;h_i&space;=&space;\partial^2_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i)" title="g_i = \partial_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i), \ h_i = \partial^2_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i)" /></a>
 
