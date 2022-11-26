@@ -24,18 +24,24 @@ The support vectors are formed by the data laying along the margin.
 
 In the upper right panel, we classify blue instances as positives 
 
+$$\vec{w}\cdot \vec{x}_{+} -b \geq 1$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{+}&space;-b&space;\geq&space;1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_{+}&space;-b&space;\geq&space;1," title="\vec{w}\cdot \vec{x}_{+} -b \geq 1," /></a>
 
 and green instances as negatives 
+
+$$\vec{w}\cdot \vec{x}_{-} -b \leq -1$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{-}&space;-b&space;\leq&space;-1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_{-}&space;-b&space;\leq&space;-1" title="\vec{w}\cdot \vec{x}_{-} -b \leq -1" /></a>
 
 
 The margin width is given
 
+$$(\vec{x}_+ - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b)}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b)}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" title="(\vec{x}_+ - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}" /></a>
 
-Maximize the margin width is equivalent to minimize <a href="https://www.codecogs.com/eqnedit.php?latex=||\vec{w}||" target="_blank"><img src="https://latex.codecogs.com/gif.latex?||\vec{w}||" title="||\vec{w}||" /></a>.
+Maximize the margin width is equivalent to minimize $||\vec{w}||$ <a href="https://www.codecogs.com/eqnedit.php?latex=||\vec{w}||" target="_blank"><img src="https://latex.codecogs.com/gif.latex?||\vec{w}||" title="||\vec{w}||" /></a>.
 
 ### SVM Classifier
 
@@ -57,10 +63,13 @@ The cost function of SVM is very similar to that of Logistic Regression. Looking
 
 Suppose `m` is the data size, and there are `n` features, we can write the following generic form (with regularization)
 
+$$C(\symbf{\theta}) = C \sum^m_{i=1} y_i \textrm{Cost}_1(\theta^T \symbf{x}_i) + (1-y_i) \textrm{Cost}_0(\theta^T \symbf{x}_i) + \frac{1}{2} \sum^n_{j=1} |\theta_j|^2$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;y_i&space;\textrm{Cost}_1(\theta^T&space;\bold{x}_i)&space;&plus;&space;(1-y_i)&space;\textrm{Cost}_0(\theta^T&space;\bold{x}_i)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;y_i&space;\textrm{Cost}_1(\theta^T&space;\bold{x}_i)&space;&plus;&space;(1-y_i)&space;\textrm{Cost}_0(\theta^T&space;\bold{x}_i)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} y_i \textrm{Cost}_1(\theta^T \bold{x}_i) + (1-y_i) \textrm{Cost}_0(\theta^T \bold{x}_i) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
 
 What is the hypothesis for SVM? It’s simple and straightforward. When θᵀx ≥ 0, predict 1, otherwise, predict 0. Then we can use the hinge loss function (**Hinge Loss**)
+
+$$C(\symbf{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \symbf{x}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \symbf{x}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{x}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{x}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{x}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{x}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \bold{x}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \bold{x}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
 
@@ -71,9 +80,13 @@ With a very large value of C (similar to no regularization), this large margin c
 
 The non-linear boundary problem can be solved if we introduce a kernel [[Priyankur Sarkar]][Support Vector Machines in Machine Learning]. The cost function turns to 
 
+$$C(\symbf{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \symbf{f}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \symbf{f}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \bold{f}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \bold{f}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
 
 where `f` is **Kernel Function**. In Andrew's Ng's Machine learning class, they are described as similarity function: `f1 = Similarity(x, l_1)`, `f2 = Similarity(x, l2)` and so on, where `l` are landmarks. He used **Gaussian Kernel** to describe proximity. In Scikit-learn SVM package, Gaussian Kernel is mapped to ‘rbf’ , **Radial Basis Function** Kernel, the only
+
+$$f_j = \textrm{similarity}(x, l^{(j)}) = \exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2} \Big)}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f_j&space;=&space;\textrm{similarity}(x,&space;l^{(j)})&space;=&space;\exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2}&space;\Big)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_j&space;=&space;\textrm{similarity}(x,&space;l^{(j)})&space;=&space;\exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2}&space;\Big)}" title="f_j = \textrm{similarity}(x, l^{(j)}) = \exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2} \Big)}" /></a>
 
