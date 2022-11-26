@@ -240,7 +240,7 @@ $$P(\theta)= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\theta^{
 
 By probability normalization, we will have the following relation
 
-$$\int P(\theta) d\theta= 1= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\int \theta^{\alpha-1} (1-\theta)^{\beta-1}d\theta = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}.$$
+$$\int_{\theta} P(\theta) d\theta = 1 = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)}\int_{\theta} \theta^{\alpha-1} (1-\theta)^{\beta-1}d\theta = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}.$$
 
 
 
