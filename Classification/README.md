@@ -189,7 +189,7 @@ The cross-entropy can be used as loss to optimize using gradient descent in clas
 
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, i.e. `p = [1 0]` for y = 1; `p = [0 1]` for y = 0, and prediction `q` is a sigmoid function, it arrives at the commonly-seen cross-entropy (`h` is the hypothesis function)
 
-$$L(\theta, \bold{x}) = -y \big( \log(h_{\theta}(\bold{x})) + (1-y)\log{(1-h_{\theta}(\symbf{x}))} \big)$$
+$$L(\theta, \symbf{x}) = -y \big( \log(h_{\theta}(\symbf{x})) + (1-y)\log{(1-h_{\theta}(\symbf{x}))} \big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-y&space;\big(&space;\log(h_{\theta}(\bold{x}))&space;&plus;&space;(1-y)\log{(1-h_{\theta}(\bold{x}))}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-y&space;\big(&space;\log(h_{\theta}(\bold{x}))&space;&plus;&space;(1-y)\log{(1-h_{\theta}(\bold{x}))}&space;\big)" title="L(\theta, \bold{x}) = -y \big( \log(h_{\theta}(\bold{x})) + (1-y)\log{(1-h_{\theta}(\bold{x}))} \big)" /></a>
 
