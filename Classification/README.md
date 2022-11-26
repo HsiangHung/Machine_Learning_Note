@@ -217,10 +217,7 @@ For multiclass, say $K$ classes, so $c = {1, ...K}$. If our target is a **one-ho
 
 $$L(\theta, \symbf{x}) = - \sum^K_{j=1}\symbf{I}(y=j)\log\big( h_{\theta}(\symbf{x}) \big) = - \sum^K_{j=1} \symbf{I}(y=j)\log \Big( \frac{e^{\theta^{(j)T}\symbf{x}}}{ \sum_{j=1} e^{\theta^{(j)T}\symbf{x}}} \Big)$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" title="L(\theta, \bold{x}) = - \sum^K_{j=1}\bold{I}(y=j)\log\big( h_{\theta}(\bold{x}) \big) = - \sum^K_{j=1} \bold{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}} \big)" /></a>
-
-
-where `I = 1` for y = j; otherwise `I=0`. 
+where $\symbf{I} = 1$ for $y = j$; otherwise $\symbf{I}=0$. 
 
 The cross-entropy of an K = 3 example is shown below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
