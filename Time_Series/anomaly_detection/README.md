@@ -41,20 +41,20 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)}
   {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
 
-Therefore, we can generalize the VAR(n) $p$-lag model to $m$ variables:
+Therefore, we can generalize the VAR(p) ($p$-lag model) with $n$ variables:
 
 
-$${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{m,t} } \right)} 
-= {\left( \matrix{ \alpha_1 \cr \alpha_2 \cr \vdots \cr \alpha_m } \right)} + 
+$${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{n,t} } \right)} 
+= {\left( \matrix{ \alpha_1 \cr \alpha_2 \cr \vdots \cr \alpha_n } \right)} + 
   \sum^p_{i=1}
-  \left( \matrix{\beta_{11,i} & \beta_{12,i} & \dots & \beta_{1m,i} \cr 
-                 \beta_{21,i} & \beta_{22,i} & \dots & \beta_{2m,i} \cr  
+  \left( \matrix{\beta_{11,i} & \beta_{12,i} & \dots & \beta_{1n,i} \cr 
+                 \beta_{21,i} & \beta_{22,i} & \dots & \beta_{2n,i} \cr  
                  \vdots & \vdots & \ddots & \vdots \cr
-                 \beta_{m1,i} & \beta_{m2,i} & \dots & \beta_{mm,i} 
+                 \beta_{m1,i} & \beta_{m2,i} & \dots & \beta_{nn,i} 
                 } 
   \right)
-  {\left( \matrix{ Y_{1,t-i} \cr Y_{2,t-i} \cr \vdots \cr Y_{m,t-i} } \right)} +
-  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} \cr \vdots \cr \epsilon_m } \right)}.
+  {\left( \matrix{ Y_{1,t-i} \cr Y_{2,t-i} \cr \vdots \cr Y_{n,t-i} } \right)} +
+  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} \cr \vdots \cr \epsilon_n } \right)}.
 $$
 
 
