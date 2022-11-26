@@ -317,8 +317,6 @@ The optimal values of $\theta$ can be found by maximizing the likelihood of $P(\
 
 $$L(\theta, \symbf{X}, Y) = \log P(\theta|\symbf{X},y) \propto \sum^n_{i=1} \Big( y_i \log{\big( \frac{1}{1+e^{-\theta^T \symbf{x}_i} }\big)} + (1-y_i) \log{\big( 1-\frac{1}{1+e^{-\theta^T \symbf{x}_i} }\big) \Big)}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;X,&space;Y)&space;=&space;\log&space;P(\theta|X,y)&space;\propto&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log{\big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}&space;}\big)}&space;&plus;&space;(1-y_i)&space;\log{\big(&space;1-\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}&space;}\big)&space;\Big)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;X,&space;Y)&space;=&space;\log&space;P(\theta|X,y)&space;\propto&space;\sum^n_{i=1}&space;\Big(&space;y_i&space;\log{\big(&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}&space;}\big)}&space;&plus;&space;(1-y_i)&space;\log{\big(&space;1-\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}&space;}\big)&space;\Big)}" title="L(\theta, X, Y) = \log P(\theta|X,y) \propto \sum^n_{i=1} \Big( y_i \log{\big( \frac{1}{1+e^{-\theta^T \bold{x}_i} }\big)} + (1-y_i) \log{\big( 1-\frac{1}{1+e^{-\theta^T \bold{x}_i} }\big) \Big)}" /></a>
-
 which is equivalent to minimizing the cross-entropy loss function using gradient descent in logistic regression. 
 
 
