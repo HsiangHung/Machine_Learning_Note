@@ -40,11 +40,9 @@ Note if some feature values never show (maybe lack of data), their likelihood wi
 
 $$P(x_i=A|y=1) = \frac{\textrm{count(}x_i\textrm{=A, y=1)}+1}{\textrm{count(y=1)} + V}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(x_i=A|y=1)&space;=&space;\frac{\textrm{count(}x_i\textrm{=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x_i=A|y=1)&space;=&space;\frac{\textrm{count(}x_i\textrm{=A,&space;y=1)}&plus;1}{\textrm{count(y=1)}&space;&plus;&space;V}" title="P(x_i=A|y=1) = \frac{\textrm{count(}x_i\textrm{=A, y=1)}+1}{\textrm{count(y=1)} + V}" /></a>
-
 where $V$ is the number of distinct categories for $x_i$.
 
-For example, although `count(Outlook=overcast, y=No) = 0`, with the Lapalce smoothing, $P(overcast|No)$ is not vanishing ($V=3$).
+For example, although `count(Outlook=overcast, y=No) = 0`, with the Lapalce smoothing, $\textrm{P(overcast|No)}$ is not vanishing ($V=3$).
 
 
 ### Continuous feature
