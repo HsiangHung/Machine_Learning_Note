@@ -11,6 +11,8 @@ The one-sentence summary of Bayesian hyperparameter optimization is: build a pro
 
 Hyperparameter optimization is represented
 
+$$x^{*} = \textrm{argmin}_{x \in X} f(x)$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=x^{*}&space;=&space;\textrm{argmin}_{x&space;\in&space;X}&space;f(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^{*}&space;=&space;\textrm{argmin}_{x&space;\in&space;X}&space;f(x)" title="x^{*} = \textrm{argmin}_{x \in X} f(x)" /></a>
 
  `f(x)` represents an objective score to minimize, such as RMSE or error rate, evaluated on the validation set; `x*` is the set of hyperparameters that yields the lowest value of the score, and x can take on any value in the hyperparameter space. In simple terms, we want to find the model hyperparameters that yield the best score on the validation set metric.
