@@ -57,7 +57,7 @@ The cost function of SVM is very similar to that of Logistic Regression. Looking
 
 Suppose $m$ is the data size, and there are $n$ features, we can write the following generic form (with regularization)
 
-$$C(\symbf{\theta}) = C \sum^m_{i=1} \big[ y_i \textrm{Cost}_1(\theta^T \symbf{x}_i) + (1-y_i) \textrm{Cost}_0 (\theta^T \symbf{x}_{i} ) \big] + \frac{1}{2} \sum^n_j |\theta_j| ^2$$
+$$C(\symbf{\theta}) = C \sum^m_{i=1} \big[ y_i \textrm{Cost}_1(\theta^T \symbf{x}_i) + (1-y_i) \textrm{Cost}_0 (\theta^T \symbf{x}_i ) \big] + \frac{1}{2} \sum^n_j |\theta_j| ^2$$
 
 What is the hypothesis for SVM? It’s simple and straightforward. When θᵀx ≥ 0, predict 1, otherwise, predict 0. Then we can use the hinge loss function (**Hinge Loss**)
 
