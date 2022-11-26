@@ -80,13 +80,11 @@ $$C(\symbf{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \symbf{f
 
 where $f$ is **Kernel Function**. In Andrew's Ng's Machine learning class, they are described as similarity function: 
 
-$$ f1 =  \textrm{Similarity}(x, l^{(1)}), f_2 = \textrm{Similarity}(x, l^{(2)}), \cdots$$ 
+$$ f1 =  \textrm{Similarity}(x, l^{(1)}), \ f_2 = \textrm{Similarity}(x, l^{(2)}), \cdots$$ 
 
-and so on, where $l$ are landmarks. He used **Gaussian Kernel** to describe proximity. In Scikit-learn SVM package, Gaussian Kernel is mapped to ‘rbf’ , **Radial Basis Function** Kernel, the only
+and so on, where $l^{(j)}$ are $j$th-landmarks. He used **Gaussian Kernel** to describe proximity. In Scikit-learn SVM package, Gaussian Kernel is mapped to ‘rbf’ , **Radial Basis Function** Kernel, the only
 
 $$f_j = \textrm{similarity}(x, l^{(j)}) = \exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2} \Big)}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=f_j&space;=&space;\textrm{similarity}(x,&space;l^{(j)})&space;=&space;\exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2}&space;\Big)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_j&space;=&space;\textrm{similarity}(x,&space;l^{(j)})&space;=&space;\exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2}&space;\Big)}" title="f_j = \textrm{similarity}(x, l^{(j)}) = \exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2} \Big)}" /></a>
 
 
 We can map model as each data point represents a landmark. In this case, we turn `n` features to `m` features.
@@ -97,7 +95,7 @@ We also have **Sigmoid Kernel**, **Polynomial Kernel**.
 
 ## 4. SVM vs Logistic Regression
 
-Many SVM packages have built in **multi-class classification**. Otherwise use **one-vs-all** method. For `K` classes, train `K` SVMs, each identifies if `y = 1` for class {1,2,...K}. We pick class i for largest θᵀx_i.
+Many SVM packages have built in **multi-class classification**. Otherwise use **one-vs-all** method. For $K$ classes, train $K$ SVMs, each identifies if $y = 1$ for class ${1,2,...K}$. We pick class-$i$ for largest $\theta^T \mathbf{x}_i$.
 
 
 The main differences between SVM and Logistic regression (LR) [[Georgios Drakos]][Support Vector Machine vs Logistic Regression]:
