@@ -210,8 +210,6 @@ First let's come back to the coin-flip problem; the outcome is either head or ta
 
 $$P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}$$
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(D|\theta)&space;=&space;\prod_{i}P(d_i|\theta)&space;=&space;\theta^{N_H}(1-\theta)^{N_T}" title="P(D|\theta) = \prod_{i}P(d_i|\theta) = \theta^{N_H}(1-\theta)^{N_T}" /></a>
-
 **Question**: suppose we observed data `X = {1,1,1,1,1,1}` and the sample comes from iid Bernoulli distribution, what is a good guess of $\theta$?
 
 #### MLE
