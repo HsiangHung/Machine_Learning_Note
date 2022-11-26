@@ -105,9 +105,13 @@ $$f_2(x) = e_2$$
 
 and so on. In this case, mathmetically we have an iterative relation
 
+$$F_t (x) = F_{t-1}(x) + f_t(x)$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;f_t(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t&space;(x)&space;=&space;F_{t-1}(x)&space;&plus;&space;f_t(x)" title="F_t (x) = F_{t-1}(x) + f_t(x)" /></a>
 
-and the residual fitting model is given by   
+and the residual fitting model is given by
+
+$$f_t (x) = y - F_{t-1}(x)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_t&space;(x)&space;=&space;y&space;-&space;F_{t-1}(x)" title="f_t (x) = y - F_{t-1}(x)" /></a>
 
@@ -115,47 +119,60 @@ Prof. Ihler gave a [comprehensive description](http://sli.ics.uci.edu/Classes/20
 
 ![](images/GBM3.png)
 
-Upper panel shows data and fitting models `F0(x)`, `F1(x)`, `F2(x)`, ....`Fm(x)` and lower shows the residuals. The first estimator is built on the leftmost, whereas the rightmost shows the last iteration. We can see by boosting, the predictors are becoming more and more complex but fit the data better and better. Meanwhile, the residuals are moving toward to smaller values (if you zoom in).
+Upper panel shows data and fitting models $F_0(x)$, $F_1(x)$, $F_2(x)$, .... $F_m(x)$ and lower shows the residuals. The first estimator is built on the leftmost, whereas the rightmost shows the last iteration. We can see by boosting, the predictors are becoming more and more complex but fit the data better and better. Meanwhile, the residuals are moving toward to smaller values (if you zoom in).
 
 
 
 ### 2.B - Math Intuition of GBM
 
-Previous description assumes all learners in the same weight. Where is the `gradient`? A GBM creates a set of predictors `F(x)`. The comprehensive tutorial on introduction to the model, [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) explained more detailed steps in math[[Data Science: GBM vs XGBOOST? Key differences?]][GBM vs XGBOOST? Key differences?]:
+Previous description assumes all learners in the same weight. Where is the `gradient`? A GBM creates a set of predictors $F(x)$. The comprehensive tutorial on introduction to the model, [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html#tree-boosting) explained more detailed steps in math[[Data Science: GBM vs XGBOOST? Key differences?]][GBM vs XGBOOST? Key differences?]:
 
-In the boosting processes, we start with a baseline model `F0(x)` by fitting `f0(x) = y`,
+In the boosting processes, we start with a baseline model $F_0(x)$ by fitting $f_0(x) = y$,
+
+$$F_0(x_i) = 0 + f_0(x_i).$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_0(x_i)&space;=&space;0&space;&plus;&space;f_0(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_0(x_i)&space;=&space;0&space;&plus;&space;f_0(x_i)" title="F_0(x_i) = 0 + f_0(x_i)" /></a>
 
-Then compute residuals `e1 = y - F0(x)`and fit `f1(x) = e1`. Now we have
+Then compute residuals $e_1 = y - F_0(x)$ and fit $f_1(x) = e_1$. Now we have
+
+$$F_1(x_i) = F_0(x_i) + f_1(x_i) = f_0(x_i) + f_1(x_i)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_1(x_i)&space;=&space;F_0(x_i)&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1(x_i)&space;=&space;F_0(x_i)&space;&plus;&space;f_1(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)" title="F_1(x_i) = F_0(x_i) + f_1(x_i) = f_0(x_i) + f_1(x_i)" /></a>
 
-where `F1(x)` is a better model than `F0(x)`. Next step compute residuals `e2 = y - F1(x)` and fit the second model `f2(x) = e1`:
+where $F_1(x)$ is a better model than $F_0(x)$. Next step compute residuals $e_2 = y - F_1(x)$ and fit the second model $f_2(x) = e_1$:
+
+$$F_2(x_i) = F_1(x_i) + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_2(x_i)&space;=&space;F_1(x_i)&space;&plus;&space;f_2(x_i)&space;=&space;f_0(x_i)&space;&plus;&space;f_1(x_i)&space;&plus;&space;f_2(x_i)" title="F_2(x_i) = F_1(x_i) + f_2(x_i) = f_0(x_i) + f_1(x_i) + f_2(x_i)" /></a>
 
-where `F2(x)` is a better model than `F1(x)`. Keep doing the procedures, eventually we have the following relation
+where $F_2(x)$ is a better model than $F_1(x)$. Keep doing the procedures, eventually we have the following relation
 
+$$F_t(x_i) = F_{t-1}(x_i) + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_t(x_i)&space;=&space;F_{t-1}(x_i)&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_t(x_i)&space;=&space;F_{t-1}(x_i)&space;&plus;&space;f_{t}(x_i)&space;=&space;\sum^{t}_{m=0}&space;f_m(x_i)" title="F_t(x_i) = F_{t-1}(x_i) + f_{t}(x_i) = \sum^{t}_{m=0} f_m(x_i)" /></a>
 
 
 For a regression problem, the loss function is given by  
 
+$$\textrm{Loss} = J(y, \hat{y}) = \sum_i \big( y_i - \hat{y}_i \big)^2$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Loss}&space;=&space;J(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}_i&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Loss}&space;=&space;J(y,&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}_i&space;\big)^2" title="\textrm{Loss} = J(y, \hat{y}) = \sum_i \big( y_i - \hat{y}_i \big)^2" /></a>
 
 
-The boosting process is equivalent to minimizing `Loss` by sequentially generating models `F0(x)`, `F1(x)`, .... Therefore, we can add a superscript on the `Loss` function to represent the `Loss` function in `t`-th iteration
+The boosting process is equivalent to minimizing `Loss` by sequentially generating models $F_0(x)$, $F_1(x)$, .... Therefore, we can add a superscript on the `Loss` function to represent the `Loss` function in `t`-th iteration
+
+$$J_t(y, \ \hat{y}) = \sum_i \big( y_i - \hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J_t(y,&space;\&space;\hat{y})&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;\hat{y}^t_i&space;\big)^2&space;=&space;\sum_i&space;\big(&space;y_i&space;-&space;F_t(x_i)&space;\big)^2" title="J_t(y, \ \hat{y}) = \sum_i \big( y_i - \hat{y}^t_i \big)^2 = \sum_i \big( y_i - F_t(x_i) \big)^2" /></a>
 
 
-where `t = 1, 2, 3...` From the gradient descent aspect, the `Loss` is minimized as
+where $t = 1, 2, 3...$ From the gradient descent aspect, the `Loss` is minimized as
+
+$$\hat{y}^{t+1} :=\hat{y}^t + \alpha \frac{\partial J_t(y, \hat{y})}{\partial \hat{y}^t} = y + \alpha \Big( 2 \sum_i (y_i - \hat{y}^t_i) \Big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^{t&plus;1}&space;:=\hat{y}^t&space;&plus;&space;\alpha&space;\frac{\partial&space;J_t(y,&space;\hat{y})}{\partial&space;\hat{y}^t}&space;=&space;y&space;&plus;&space;\alpha&space;\Big(&space;2&space;\sum_i&space;(y_i&space;-&space;\hat{y}^t_i)&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^{t&plus;1}&space;:=\hat{y}^t&space;&plus;&space;\alpha&space;\frac{\partial&space;J_t(y,&space;\hat{y})}{\partial&space;\hat{y}^t}&space;=&space;y&space;&plus;&space;\alpha&space;\Big(&space;2&space;\sum_i&space;(y_i&space;-&space;\hat{y}^t_i)&space;\Big)" title="\hat{y}^{t+1} :=\hat{y}^t + \alpha \frac{\partial J_t(y, \hat{y})}{\partial \hat{y}^t} = y + \alpha \Big( 2 \sum_i (y_i - \hat{y}^t_i) \Big)" /></a>
 
-where `α` is the learning rate. From the expression, we can see the gradient is equal to the errors, and the predicted value `ym` is updated by multiplying the learning rate to the errors. This is why at each step we fit the residuals, where equivalently we are computing the gradient of `J`. The posts [[Prince Grover
+where $\alpha$ is the learning rate. From the expression, we can see the gradient is equal to the errors, and the predicted value $y_m$ is updated by multiplying the learning rate to the errors. This is why at each step we fit the residuals, where equivalently we are computing the gradient of `J`. The posts [[Prince Grover
 -2]][Gradient boosting simplified], [[Kaggle]][A Kaggle Master Explains Gradient Boosting] and [Prof. Ilher's lecture video](https://www.youtube.com/watch?v=sRktKszFmSk) have more detailed interpretation.
 
 Terence Parr in a Quora post [[Quora: What is an intuitive explanation of Gradient Boosting?]][What is an intuitive explanation of Gradient Boosting?] offered a very interesting picture, which explian the procedures very well.
