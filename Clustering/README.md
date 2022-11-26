@@ -21,7 +21,7 @@ here $|C_i|-1$ because we do not include the distance $d(i,i)$ in the sum. $a(i)
 
 Next we can define **dissimilarity** by considering the mean distance from $i$ to all points in other clusters where $i$ is not in:
 
-$${\displaystyle b(i)= \min_{k\neq i} \frac{1}{|C_{k}|}}\sum _{j\in C_{k}}d(i,j).$$
+$${\displaystyle b(i)= \min_{k\neq i} \frac{1}{|C_{k}|} \sum_{j \in C_{k}}d(i,j).$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;b(i)=\min&space;_{k\neq&space;i}{\frac&space;{1}{|C_{k}|}}\sum&space;_{j\in&space;C_{k}}d(i,j)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;b(i)=\min&space;_{k\neq&space;i}{\frac&space;{1}{|C_{k}|}}\sum&space;_{j\in&space;C_{k}}d(i,j)}" title="{\displaystyle b(i)=\min _{k\neq i}{\frac {1}{|C_{k}|}}\sum _{j\in C_{k}}d(i,j)}" /></a>
 
