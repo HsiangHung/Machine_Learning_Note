@@ -1,5 +1,16 @@
 
-# DBSCAN clustering
+# DBSCAN
+
+* [1. Introduction](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#1-adaboost)
+* [2. Hyperparameters in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2-gradient-boosting)
+     * [2.1 Choosing Epsilon](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2a---boosting-steps-in-gbm)
+     * [2.2 Choosing MinPt](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2b---math-intuition-of-gbm)
+* [3. Validation of Brutal Searching Epsilon in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#3-xgboost)
+* [4. Disadvanatge in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#4-lightgbm)
+
+
+
+## 1. Introduction
 
 DBSCAN is a popular clustering algorithm which is fundamentally very different from k-means. The comparison is summarized by [[Chris McCormick]][DBSCAN Clustering].
 
@@ -17,17 +28,17 @@ There are also few other apsects:
 * DBSCAN is scabable.
 
 
-## 1. Hyperparameters in DBSCAN
+## 2. Hyperparameters in DBSCAN
 
 Two important hyperparameters in DBSCAN:
 1. eps
 2. MinPt
 
-### 1.1 Choosing Epsilon
+### 2.1 Choosing Epsilon
 
 The selection of eps is extremely important. Therefore, we need more efficient schemes to determine the value of eps.
 
-### 1.1.1 Find Elbow Point
+### 2.1.1 Find Elbow Point
 
 The Stackover flow blog, [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python), suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. 
 
@@ -60,7 +71,7 @@ def estimate_eps_pairdistance(X, metric="euclidean"):
     return pair_distance[kn.elbow-1]
 ```
 
-### 1.1.2 NearestNeighbor Method
+### 2.1.2 NearestNeighbor Method
 
 One technique to automatically determine the optimal ε value is described in the paper [[Nadia Rahmah and Imas Sukaesih Sitanggang]][Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra]. 
 
@@ -92,7 +103,7 @@ We can try from `n_neighbors=2`. It calculates distance from each point to its n
 
 Through my test result, the pair distance scheme is slightly better.
 
-### 1.2 Choosing MinPt
+### 2.2 Choosing MinPt
 
 Some general rules for determining Minimum Samples (“MinPts”). The MinPts value is better to be set using domain knowledge and familiarity with the data set. Here are a few rules of thumb for selecting the MinPts value (by [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering]]:
 
@@ -102,7 +113,7 @@ Some general rules for determining Minimum Samples (“MinPts”). The MinPts va
 * For 2-dimensional data, use DBSCAN’s default value of MinPts = 4 (Ester et al., 1996).
 * If your data has more than 2 dimensions, choose MinPts = 2*dim, where dim= the dimensions of your data set (Sander et al., 1998).
 
-#### reference
+#### 2.3 Reference
 
 
 * [Github: Choosing parameters of DBSCAN algorithm]: https://github.com/alitouka/spark_dbscan/wiki/Choosing-parameters-of-DBSCAN-algorithm
@@ -131,13 +142,13 @@ Some general rules for determining Minimum Samples (“MinPts”). The MinPts va
 
 
 
-## Validation of Brutal Searching Epsilon in DBSCAN
+## 3. Validation of Brutal Searching Epsilon in DBSCAN
 
 Validation to choose epsilon in DBSCAN. [[Davoud Moulavi et al.]][Density-Based Clustering Validation]
 
 
    
-## Disadvanatge in DBSCAN
+## 4. Disadvanatge in DBSCAN
 
 In **higher dimensional spaces** because  `curse of dimensionality`  the euclidean distance is not a very good metric for distance measurement. It may be helpful to change the distance metric to the cosine similarity [[Quora2]][Why DBSCAN clustering will not work in high dimensional space?], [[George Seif]][The 5 Clustering Algorithms Data Scientists Need to Know].
 
