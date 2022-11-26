@@ -15,37 +15,23 @@ Here is Prof. Tomas Tunys' lecture slide: [LambdaMART Demystified](https://staff
 The procedures of building a boosting regression tree are summarize below (given (`x`, `y`))
 
 
-* $\textrm{fit} f_0(x) = y; \ \hat{y}_0 = f_0(x), \ \hat{y}^{(0)} = \hat{y}_0 = f_0(x), \ \textrm{res} \epsilon_1 = y-\hat{y}^{(0)},$
+* $\textrm{fit } f_0(x) = y; \ \hat{y}_0 = f_0(x), \ \hat{y}^{(0)} = \hat{y}_0 = f_0(x), \ \textrm{res} \epsilon_1 = y-\hat{y}^{(0)},$
 
 * $\textrm{fit } f_1(x) = \epsilon_1; \ \hat{\epsilon}_1 = f_1(x), \ \hat{y}^{(1)} = \hat{y}_0 + \hat{\epsilon}_1 = f_0 +f_1, \ \textrm{res } \epsilon_2 = y-\hat{y}^{(1)},$
 
 * $\textrm{fit } f_2(x) = \epsilon_2; \ \hat{y}^{(2)} = \hat{y}_0 + \hat{\epsilon}_1 + \hat{\epsilon}_2 = f_0 + f_1 + f_2, \ \textrm{res } \epsilon_3 = y-\hat{y}^{(2)},$
 
-$\cdots$
+* $\cdots$
 
 * $\hat{y}^{(n)} = \hat{y}^0 + \hat{\epsilon}_1 + \hat{\epsilon}_2 \cdots + \hat{\epsilon}_n = \hat{y}^{(n-1)} + f_n(x).$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{fit&space;}&space;f_0(x)&space;=&space;y;&space;\&space;\hat{y}_0&space;=&space;f_0(x),&space;\&space;\hat{y}^{(0)}&space;=&space;\hat{y}_0&space;=&space;f_0(x),&space;\&space;\textrm{residual&space;}&space;\epsilon_1&space;=&space;y-\hat{y}^{(0)}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{fit&space;}&space;f_0(x)&space;=&space;y;&space;\&space;\hat{y}_0&space;=&space;f_0(x),&space;\&space;\hat{y}^{(0)}&space;=&space;\hat{y}_0&space;=&space;f_0(x),&space;\&space;\textrm{residual&space;}&space;\epsilon_1&space;=&space;y-\hat{y}^{(0)}," title="\textrm{fit } f_0(x) = y; \ \hat{y}_0 = f_0(x), \ \hat{y}^{(0)} = \hat{y}_0 = f_0(x), \ \textrm{residual } \epsilon_1 = y-\hat{y}^{(0)}," /></a>
-
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{fit&space;}&space;f_1(x)&space;=&space;\epsilon_1;&space;\&space;\hat{\epsilon}_1&space;=&space;f_1(x),&space;\&space;\hat{y}^{(1)}&space;=&space;\hat{y}_0&space;&plus;&space;\hat{\epsilon}_1&space;=&space;f_0&space;&plus;f_1,&space;\&space;\textrm{res&space;}&space;\epsilon_2&space;=&space;y-\hat{y}^{(1)}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{fit&space;}&space;f_1(x)&space;=&space;\epsilon_1;&space;\&space;\hat{\epsilon}_1&space;=&space;f_1(x),&space;\&space;\hat{y}^{(1)}&space;=&space;\hat{y}_0&space;&plus;&space;\hat{\epsilon}_1&space;=&space;f_0&space;&plus;f_1,&space;\&space;\textrm{res&space;}&space;\epsilon_2&space;=&space;y-\hat{y}^{(1)}," title="\textrm{fit } f_1(x) = \epsilon_1; \ \hat{\epsilon}_1 = f_1(x), \ \hat{y}^{(1)} = \hat{y}_0 + \hat{\epsilon}_1 = f_0 +f_1, \ \textrm{res } \epsilon_2 = y-\hat{y}^{(1)}," /></a>
-
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{fit&space;}&space;f_2(x)&space;=&space;\epsilon_2;&space;\&space;\hat{y}^{(2)}&space;=&space;\hat{y}_0&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2&space;=&space;f_0&space;&plus;&space;f_1&space;&plus;&space;f_2,&space;\&space;\textrm{res&space;}&space;\epsilon_3&space;=&space;y-\hat{y}^{(2)}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{fit&space;}&space;f_2(x)&space;=&space;\epsilon_2;&space;\&space;\hat{y}^{(2)}&space;=&space;\hat{y}_0&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2&space;=&space;f_0&space;&plus;&space;f_1&space;&plus;&space;f_2,&space;\&space;\textrm{res&space;}&space;\epsilon_3&space;=&space;y-\hat{y}^{(2)}," title="\textrm{fit } f_2(x) = \epsilon_2; \ \hat{y}^{(2)} = \hat{y}_0 + \hat{\epsilon}_1 + \hat{\epsilon}_2 = f_0 + f_1 + f_2, \ \textrm{res } \epsilon_3 = y-\hat{y}^{(2)}," /></a>
-
-....
-
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}^{(n)}&space;=&space;\hat{y}^0&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2&space;\cdots&space;&plus;&space;\hat{\epsilon}_n&space;=&space;\hat{y}^{(n-1)}&space;&plus;&space;f_n(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}^{(n)}&space;=&space;\hat{y}^0&space;&plus;&space;\hat{\epsilon}_1&space;&plus;&space;\hat{\epsilon}_2&space;\cdots&space;&plus;&space;\hat{\epsilon}_n&space;=&space;\hat{y}^{(n-1)}&space;&plus;&space;f_n(x)" title="\hat{y}^{(n)} = \hat{y}^0 + \hat{\epsilon}_1 + \hat{\epsilon}_2 \cdots + \hat{\epsilon}_n = \hat{y}^{(n-1)} + f_n(x)" /></a>
-
-
-As explained by Pulkit Bansal in the [Quora post](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting), we are modeling `Fn = f0 + f1 + f2  + .. + fn`,  where each of these is a decision tree, and each new tree is a fit on a modified version of the original data set. 
+As explained by Pulkit Bansal in the [Quora post](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting), we are modeling $F_n = f_0 + f_1 + f_2  + .. + f_n$,  where each of these is a decision tree, and each new tree is a fit on a modified version of the original data set. 
 
 The following picture also provide a good interpretation about the gradient boosting process:
 
 ![](images/golf.png)
 
-where each tree `f1`, `f2`, .... provides approaching results toward to the true target. Below shows the idea: the collection of the trees forms an ensemble. Each boosting procedure generated a tree to correct prediction approaching toward to true target, such that the error is reducing: (credit from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide])
+where each tree $f_1$, $f_2$, .... provides approaching results toward to the true target. Below shows the idea: the collection of the trees forms an ensemble. Each boosting procedure generated a tree to correct prediction approaching toward to true target, such that the error is reducing: (credit from [[Aratrika Pal]][Gradient Boosting Trees for Classification: A Beginner’s Guide])
 
 ![](images/boosting_tree.png)
 
@@ -53,13 +39,19 @@ where each tree `f1`, `f2`, .... provides approaching results toward to the true
 
 Note the cost function for regression is 
 
+$$C = \frac{1}{2}(y - \hat{y})^2.$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;\frac{1}{2}(y&space;-&space;\hat{y})^2," target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;\frac{1}{2}(y&space;-&space;\hat{y})^2," title="C = \frac{1}{2}(y - \hat{y})^2," /></a>
 
-therefore residuals is equivalent to finding the gradient of the cost function [[Cross Validated: Gradient in Gradient Boosting]][Gradient in Gradient Boosting]
+Therefore residuals is equivalent to finding the gradient of the cost function [[Cross Validated: Gradient in Gradient Boosting]][Gradient in Gradient Boosting]
+
+$$y - \hat{y} = - \frac{\partial C}{\partial \hat{y}},$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;-&space;\hat{y}&space;=&space;-&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;-&space;\hat{y}&space;=&space;-&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" title="y - \hat{y} = - \frac{\partial C}{\partial \hat{y}}" /></a>
 
 and responses in the boosting machine are updated as 
+
+$$y \to y - \alpha \frac{\partial C}{\partial \hat{y}}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;\to&space;y&space;-&space;\alpha&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;\to&space;y&space;-&space;\alpha&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" title="y \to y - \alpha \frac{\partial C}{\partial \hat{y}}" /></a>
 
