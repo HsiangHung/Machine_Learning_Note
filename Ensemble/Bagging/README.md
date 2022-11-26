@@ -17,7 +17,7 @@ Suppose we decide to have $S$ number of trees in our forest, then we first creat
 
 Now, RF creates $S$ trees and uses $m (=\sqrt(M)$ or =floor(lnM+1)) random subfeatures out of $M$ possible features to create any tree. This is called **random subspace method**.
 
-So for each $D_i$ bootstrap dataset you create a tree $T_i$. If you want to classify some input data $d = (x_1, x_2, ..., x_M)$, you let it pass through each tree and produce $S$ outputs (one for each tree) which can be denoted by $Y = (y1, y2, ..., ys)$. Final prediction is a **majority vote** on this set, or **mean probability** for each class (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33))
+So for each $D_i$ bootstrap dataset you create a tree $T_i$. If you want to classify some input data $d = (x_1, x_2, ..., x_M)$, you let it pass through each tree and produce $S$ outputs (one for each tree) which can be denoted by $Y = (y_1, y_2, ..., y_s)$. Final prediction is a **majority vote** on this set, or **mean probability** for each class (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33))
 
 ![](images/determine_probability.png)
 
