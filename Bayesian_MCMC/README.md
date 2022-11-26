@@ -261,9 +261,9 @@ So
 $$\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}$$
 
 From the above, using:
-1. $B(2,2)$, $\bar{\theta} = 8/10$
-2. $B(1, 1)$, $\bar{\theta} = 7/8$
-3. $B(1, 0.01)$, $\bar{\theta} = 7/7.01$
+1. $B(2,2)$, $\bar{\theta} = 8/10$.
+2. $B(1, 1)$, $\bar{\theta} = 7/8$.
+3. $B(1, 0.01)$, $\bar{\theta} = 7/7.01$.
 
 The blog [[Suzanna Sia]][Closed form Bayesian Inference for Binomial distributions] has more description on Bayesian inference for binomial distributions with Python code.
 
@@ -301,7 +301,7 @@ To be more concrete, let's look at Bayesian logisitic regression [[Nando de Frei
 
 ## 3.1 Bayesian logisitic regression
 
-Given data $D = (X, y)$, the logisitic regression model specifies a probability of a binary output `y = 0, 1` given input X:
+Given data $D = (\symbf{X}, y)$, the logisitic regression model specifies a probability of a binary output `y = 0, 1` given input $\symbf{X}$:
 
 $$P(y|X, \theta) = \prod_{i=1}^{n} \textrm{Ber}(y_i |\textrm{sigmoid}(\theta^T \symbf{x_i} )) = \prod_{i=1}^n \Big( \frac{1}{1+e^{-\theta^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\theta^T \symbf{x}_i}} \Big)^{1-y_i},$$
 
