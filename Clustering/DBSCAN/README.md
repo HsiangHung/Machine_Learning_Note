@@ -40,9 +40,9 @@ The selection of eps is extremely important. Therefore, we need more efficient s
 
 ### 2.1.1 Find Elbow Point
 
-The Stackover flow blog, [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python), suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. 
+The Stackover flow blog, [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python), suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. It shows ploting cost function vs number of cluster k and elblow point is at $k=5$.
 
-Another paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method for Discovering Density Varied Clusters] and [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering] proposed:
+DBSCAN can used for outlier detection, but need to choose optimal eps. The paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method for Discovering Density Varied Clusters] and [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering] proposed:
  1. Calculate paired distances among all the data points
  2. Sort the distances in ascending order.
  2. Look for the elbow in the plot (use Kneedle algorithm).
@@ -50,6 +50,8 @@ Another paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method fo
 If there are no outliers, the paired distances prefer to have uniform distribution. But if there exist outliers, the outlier should be relatively far away from the normal points. Therefore, there may exist elbow in the pair distance distribution, and the optimal value for eps will be found at the point of maximum curvature.
 
 ![](images/elbow_eps.png)
+
+As shown above, if pair distances are sorted, and there exist an outlier, the curve will show a elbow, as indicated by the red line. Thus we can determine the $eps = 0.32$. 
 
 The Python sample code
 ```Python
