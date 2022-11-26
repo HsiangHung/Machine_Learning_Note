@@ -87,7 +87,8 @@ def estimate_eps_neighbor(data, metric="euclidean", min_samples=3):
     return distances[kn.elbow-1] 
 ```
 
-We can try from `n_neighbors=2`. It calculates distance from each point to its nearest neighbor within the same partition, so, for a small fraction of points this distance will not be accurate [[Alitouka]][Github: Choosing parameters of DBSCAN algorithm] 
+We can try from `n_neighbors=2`. It calculates distance from each point to its nearest neighbor within the same partition, so, for a small fraction of points this distance will not be accurate.
+[[Alitouka]][Github: Choosing parameters of DBSCAN algorithm]
 
 Through my test result, the pair distance scheme is slightly better.
 
