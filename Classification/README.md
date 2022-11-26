@@ -150,9 +150,7 @@ If there is no external business concern about low TPR or high FPR, one option i
 
 $$F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}}$$
 
- <a href="https://www.codecogs.com/eqnedit.php?latex=F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_1&space;=&space;\frac{2\textrm{P}\textrm{R}}{\textrm{P}&plus;\textrm{R}}" title="F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}}" /></a>
-
-where P = Precision and R = Recall.
+where $P$ = Precision and $R$ = Recall.
 
 ### 2.4 Fraud rate to precision, recall, AUC
 
@@ -179,6 +177,8 @@ On the other side, the author also shows PR curves is more useful to compare mod
 
 The cross-entropy of the generic form given a data record is 
 
+$$\textrm{Cross-Entropy} = -\sum_c p_c \log q_c$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="\textrm{Cross-Entropy} = -\sum_c p_c \log q_c" /></a>
 
 where `c` denotes class labels. `p` is the probability of **target** having class = c, and `q` is the probability of **prediction** as class = c. In classification, cross-entropy is used to be loss to optimize. Also see below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
@@ -190,6 +190,8 @@ The cross-entropy can be used as loss to optimize using gradient descent in clas
 ### 3.1 Binary 
 
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, i.e. `p = [1 0]` for y = 1; `p = [0 1]` for y = 0, and prediction `q` is a sigmoid function, it arrives at the commonly-seen cross-entropy (`h` is the hypothesis function)
+
+$$L(\theta, \bold{x}) = -y \big( \log(h_{\theta}(\bold{x})) + (1-y)\log{(1-h_{\theta}(\bold{x}))} \big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-y&space;\big(&space;\log(h_{\theta}(\bold{x}))&space;&plus;&space;(1-y)\log{(1-h_{\theta}(\bold{x}))}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-y&space;\big(&space;\log(h_{\theta}(\bold{x}))&space;&plus;&space;(1-y)\log{(1-h_{\theta}(\bold{x}))}&space;\big)" title="L(\theta, \bold{x}) = -y \big( \log(h_{\theta}(\bold{x})) + (1-y)\log{(1-h_{\theta}(\bold{x}))} \big)" /></a>
 
