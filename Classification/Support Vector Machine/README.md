@@ -51,11 +51,11 @@ Kernel SVM is particularly useful when the data is not linearly separable. There
 
 ## 2. Cost Function
 
-The cost function of SVM is very similar to that of Logistic Regression. Looking at it by `y = 1` and `y = 0` separately in below plot (credit from [[Shuyu Luo]][Loss Function(Part III): Support Vector Machine]), the black line is the cost function of Logistic Regression, and the red line is for SVM. Please note that the X axis here is the raw model output, θᵀx. 
+The cost function of SVM is very similar to that of Logistic Regression. Looking at it by $y = 1$ and $y = \theta$ separately in below plot (credit from [[Shuyu Luo]][Loss Function(Part III): Support Vector Machine]), the black line is the cost function of Logistic Regression, and the red line is for SVM. Please note that the X axis here is the raw model output, $\theta^T \mthbf{x}$. 
 
 ![cost_function](images/cost_function.png)
 
-Suppose `m` is the data size, and there are `n` features, we can write the following generic form (with regularization)
+Suppose $m$ is the data size, and there are $n$ features, we can write the following generic form (with regularization)
 
 $$C(\symbf{\theta}) = C \sum^m_{i=1} y_i \textrm{Cost}_1(\theta^T \symbf{x}_i) + (1-y_i) \textrm{Cost}_0(\theta^T \symbf{x}_{i} ) + \frac{1}{2} \sum |\theta_j| ^2$$
 
