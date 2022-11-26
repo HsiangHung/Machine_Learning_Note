@@ -37,8 +37,10 @@ dd
 
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)} 
-= {\left( \matrix{ \alpha_1 \cr \alpha_2 } \right)} + \left\lbrack \matrix{2 & 3 \cr 4 & 5} \right\rbrack
-{\left( \matrix{ Y_{1,t-1} \cr Y_{2,t-1} } \right)} 
+= {\left( \matrix{ \alpha_1 \cr \alpha_2 } \right)} + 
+  \left\lbrack \matrix{2 & 3 \cr 4 & 5} \right\rbrack
+  {\left( \matrix{ Y_{1,t-1} \cr Y_{2,t-1} } \right)} + 
+  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}
 $$
 
 
