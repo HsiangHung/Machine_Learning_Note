@@ -123,8 +123,6 @@ For each step `t`, the model parameter is updated as
 
 $$\theta_{t+1} = \theta_{t} + \Delta \theta_{t},$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;&space;\Delta&space;\theta_{t},&space;\textrm{&space;here&space;}&space;\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;&space;\Delta&space;\theta_{t},&space;\textrm{&space;here&space;}&space;\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;g_{t}" title="\theta_{t+1} = \theta_{t} + \Delta \theta_{t}, \textrm{ here } \Delta \theta_{t} = - \alpha g_{t}" /></a>
-
 where $\Delta \theta_{t} = - \alpha g_{t}.$
 
 ### A. Momentum
@@ -135,10 +133,14 @@ During optimization, SGD used to oscillate across the slopes of the ravine while
 
 Momentum is a method that helps **accelerate** SGD in the relevant direction and dampens oscillations as can be seen in the right image above. Using the similar manner in [exponentially weighted average](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Time_Series#exponentially-weighted-average) and follow the notation from Andrew Ng's coursera class: [Exponentially weighted averages](https://www.coursera.org/learn/deep-neural-network/lecture/duStO/exponentially-weighted-averages), we can define the velocity and integrate into gradient descent
 
+$$v_{t} = \beta v_{t-1} +(1-\beta) g_{t}.$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\beta&space;v_{t-1}&space;&plus;(1-\beta)&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\beta&space;v_{t-1}&space;&plus;(1-\beta)&space;g_{t}" title="v_{t} = \beta v_{t-1} +(1-\beta) g_{t}" /></a>
 
 
 The momentrum term <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> is usually set to 0.9 or a similar value [[Sebastian Ruder]][An overview of gradient descent optimization algorithms]. Then models are updated as
+
+$$\theta_{t+1} = \theta_{t} +\Delta \theta_t = \theta_t - \alpha v_{t}.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_t&space;=&space;\theta_t&space;-&space;\alpha&space;v_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{t&plus;1}&space;=&space;\theta_{t}&space;&plus;\Delta&space;\theta_t&space;=&space;\theta_t&space;-&space;\alpha&space;v_{t}" title="\theta_{t+1} = \theta_{t} +\Delta \theta_t = \theta_t - \alpha v_{t}" /></a>
 
