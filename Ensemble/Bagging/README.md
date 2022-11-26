@@ -17,7 +17,7 @@ Suppose we decide to have $S$ number of trees in our forest, then we first creat
 
 Now, RF creates $S$ trees and uses $m (=\sqrt(M)$ or =floor(lnM+1)) random subfeatures out of $M$ possible features to create any tree. This is called **random subspace method**.
 
-So for each $D_i$ bootstrap dataset you create a tree $T_i$. If you want to classify some input data $d = (x_1, x_2, ..., x_M)$, you let it pass through each tree and produce $S$ outputs (one for each tree) which can be denoted by $Y = (y_1, y_2, ..., y_s)$. Final prediction is a **majority vote** on this set, or **mean probability** for each class (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33))
+So for each $D_i$ bootstrap dataset you create a tree $T_i$. If you want to classify some input data $d = (x^1, x^2, ..., x^M)$, you let it pass through each tree and produce $S$ outputs (one for each tree) which can be denoted by $Y = (y_1, y_2, ..., y_s)$. Final prediction is a **majority vote** on this set, or **mean probability** for each class (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33))
 
 ![](images/determine_probability.png)
 
@@ -27,7 +27,7 @@ Or the predictive probability can be computed by counting individual class assig
 ## Out-of-Bag (OOB) Sample and Errors
 
 
-After creating the classifiers ($S$ trees), for each $(\mathbf{X}_i,y_i)$ in the original training set i.e. $D$, select all $D_k$ which does **NOT** include $(\mathbf{X}_i,y_i)$. This subset, pay attention, is a set of boostrap datasets which does not contain a particular record from the original dataset. This set is called out-of-bag examples. There are $n$ such subsets (one for each data record in original dataset $T$). OOB classifier is the aggregation of votes ONLY over $D_k$ such that it does not contain $(\mathbf{X}_i,y_i)$.
+After creating the classifiers ( $S$ trees), for each $(\mathbf{X}_i,y_i)$ in the original training set i.e. $D$, select all $D_k$ which does **NOT** include $(\mathbf{X}_i,y_i)$. This subset, pay attention, is a set of boostrap datasets which does not contain a particular record from the original dataset. This set is called out-of-bag examples. There are $n$ such subsets (one for each data record in original dataset $T$). OOB classifier is the aggregation of votes ONLY over $D_k$ such that it does not contain $(\mathbf{X}_i,y_i)$.
 
 
 
