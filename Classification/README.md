@@ -199,8 +199,6 @@ The hypothesis function for binary case is sigmoid:
 
 $$L(\theta, \symbf{x}) = - \Big[ y \log \Big(\frac{1}{1+e^{-\theta^T \symbf{x}}} \Big) + (1-y) \log \Big(1- \frac{1}{1+e^{-\theta^T \symbf{x}}} \Big) \Big]$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\Big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\Big[&space;y&space;\log&space;\Big(\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;&plus;&space;(1-y)&space;\log&space;\Big(1-&space;\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}}}&space;\Big)&space;\Big]" title="L(\theta, \bold{x}) = - \Big[ y \log \Big(\frac{1}{1+e^{-\theta^T \bold{x}}} \Big) + (1-y) \log \Big(1- \frac{1}{1+e^{-\theta^T \bold{x}}} \Big) \Big]" /></a>
-
 
 Note that the **loss function of logistic regression model is convex**. The followings are some detailed discussion:
 
@@ -216,6 +214,8 @@ In short, we can roighly argue that the second derivatives of the loss are posit
 ### 3.2 Multiclass
 
 For multiclass, `c = {1, ...K}`, K classes. If our target is a **one-hot** vector, `p = [1 0 ... 0]`, for y = 1,...  and `p = [0 0 ... 1]` for y = K, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
+
+$$L(\theta, \symbf{x}) = - \sum^K_{j=1}\symbf{I}(y=j)\log\big( h_{\theta}(\symbf{x}) \big) = - \sum^K_{j=1} \symbf{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\symbf{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\symbf{x}}} \big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" title="L(\theta, \bold{x}) = - \sum^K_{j=1}\bold{I}(y=j)\log\big( h_{\theta}(\bold{x}) \big) = - \sum^K_{j=1} \bold{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}} \big)" /></a>
 
