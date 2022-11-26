@@ -9,6 +9,8 @@ A typical AR(p) model can be interpreted as
 
 $$Y_t = \alpha + \beta_1 Y_{t-1} + \beta_2 Y_{t-2} + \cdots + \beta_{p} Y_{t-p} + \epsilon_t$$
 
+p is the number of lagged timestamps.
+
 ## Multivariate
 
 On the other hand, in multivariate time-series data, each timestamp index corresponds to multiple columns. For example, an AR model extends the univariate autoregressive (AR) model by capturing the linear relations between multiple variables [[Marco Cerliani]][Anomaly Detection in Multivariate Time Series with VAR]. For each input series, a regression is carried out. 
@@ -43,7 +45,7 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)}
   {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
 
-Therefore, we can generalize the VAR($p$) ($p$ lagged model) with $n$ variables:
+Therefore, we can generalize the VAR(p) (p lagged model) with $n$ variables:
 
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{n,t} } \right)} 
