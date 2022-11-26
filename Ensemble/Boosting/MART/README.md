@@ -41,19 +41,13 @@ Note the cost function for regression is
 
 $$C = \frac{1}{2}(y - \hat{y})^2.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;\frac{1}{2}(y&space;-&space;\hat{y})^2," target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;\frac{1}{2}(y&space;-&space;\hat{y})^2," title="C = \frac{1}{2}(y - \hat{y})^2," /></a>
-
 Therefore residuals is equivalent to finding the gradient of the cost function [[Cross Validated: Gradient in Gradient Boosting]][Gradient in Gradient Boosting]
 
 $$y - \hat{y} = - \frac{\partial C}{\partial \hat{y}},$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=y&space;-&space;\hat{y}&space;=&space;-&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;-&space;\hat{y}&space;=&space;-&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" title="y - \hat{y} = - \frac{\partial C}{\partial \hat{y}}" /></a>
-
 and responses in the boosting machine are updated as 
 
-$$y \to y - \alpha \frac{\partial C}{\partial \hat{y}}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=y&space;\to&space;y&space;-&space;\alpha&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;\to&space;y&space;-&space;\alpha&space;\frac{\partial&space;C}{\partial&space;\hat{y}}" title="y \to y - \alpha \frac{\partial C}{\partial \hat{y}}" /></a>
+$$y \to y - \alpha \frac{\partial C}{\partial \hat{y}}.$$
 
 
 ## 2. MART for Binary Classification
@@ -78,6 +72,8 @@ The first tree is simply a classifier (tree) giving prediction by `log(odds)`. I
     log(odds) = log(p/1-p) = log(4/2) = 0.6931 ~ 0.7
 
 Next, we convert this to a probability using the Logistic Function,
+
+$$p = \frac{e^{\textrm{log(odds)}}}{1+e^{\textrm{log(odds)}}} = \frac{1}{1+e^{-\textrm{log(odds)}}} = 0.6667 \sim 0.7.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=p&space;=&space;\frac{e^{\textrm{log(odds)}}}{1&plus;e^{\textrm{log(odds)}}}&space;=&space;\frac{1}{1&plus;e^{-\textrm{log(odds)}}}&space;=&space;0.6667&space;\sim&space;0.7" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p&space;=&space;\frac{e^{\textrm{log(odds)}}}{1&plus;e^{\textrm{log(odds)}}}&space;=&space;\frac{1}{1&plus;e^{-\textrm{log(odds)}}}&space;=&space;0.6667&space;\sim&space;0.7" title="p = \frac{e^{\textrm{log(odds)}}}{1+e^{\textrm{log(odds)}}} = \frac{1}{1+e^{-\textrm{log(odds)}}} = 0.6667 \sim 0.7" /></a>
 
@@ -108,6 +104,8 @@ Next step is to build a Decision Tree to predict the residuals using Chest Pain,
 
 
 How do we calculate the predicted residuals in each leaf? The initial prediction was in terms of log(odds) and the leaves are derived from a probability. Hence, we need to do some transformation to get the predicted residuals in terms of log(odds). The most common transformation is done using the following formula 
+
+$$\frac{\sum \textrm{Resisual}_i}{\sum (\textrm{PrevProb}_i) (1-\textrm{PrevProb}_i)}.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\sum&space;\textrm{Resisual}_i}{\sum&space;(\textrm{PrevProb}_i)&space;(1-\textrm{PrevProb}_i)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\sum&space;\textrm{Resisual}_i}{\sum&space;(\textrm{PrevProb}_i)&space;(1-\textrm{PrevProb}_i)}" title="\frac{\sum \textrm{Resisual}_i}{\sum (\textrm{PrevProb}_i) (1-\textrm{PrevProb}_i)}" /></a>
 
