@@ -102,7 +102,7 @@ The Gini index calculation for each node is weighted by the total number of inst
 
 $$G = \frac{N_1}{N} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{N_2}{N} \big( 1 - [(p_2)^2 + (n_2)^2] \big),$$
 
-where `p1` and `n1` are proportion of positive and negative units; `N1` and `N2` are the total number of instances in leaf node 1 and leaf node 2, and `N` are the total number of instances from the parent node.
+where $p_1$ and $n_1$ are proportion of positive and negative units; $N_1$ and $N_2$ are the total number of instances in leaf node 1 and leaf node 2, and $N$ are the total number of instances from the parent node.
 
 The following picture explains how to evaluate the gini impirty in a split (credit from [CART: Classification and Regression Trees for Clean but Powerful Models](https://towardsdatascience.com/cart-classification-and-regression-trees-for-clean-but-powerful-models-cc89e60b7a85)):
 
@@ -188,6 +188,8 @@ For numeric attributes, we sort the attribute by value. Then above data become
 
 At root, the entropy (9 positive, 5 negative) is
 
+$$H(\frac{9}{14},\frac{5}{14})= -\big(\frac{9}{14}\log \frac{9}{14} + \frac{5}{14}\log \frac{5}{14} \big) = 0.94 \ \textrm{bits}$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94&space;\&space;\textrm{bits}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(\frac{9}{14},\frac{5}{14})=&space;-\big(\frac{9}{14}\log&space;\frac{9}{14}&space;&plus;&space;\frac{5}{14}\log&space;\frac{5}{14}&space;\big)&space;=&space;0.94&space;\&space;\textrm{bits}" title="H(\frac{9}{14},\frac{5}{14})= -\big(\frac{9}{14}\log \frac{9}{14} + \frac{5}{14}\log \frac{5}{14} \big) = 0.94 \ \textrm{bits}" /></a>
 
 
@@ -198,15 +200,18 @@ Suppose we are going to determine the humidity threshold split, and we have two 
 
 For **way A**, if humidity <= 62, 6 positive; humidity > 62, 3 positive and 5 negative
 
+$$H_A = \frac{6}{14}H(\frac{6}{6}, 0) + \frac{8}{14}H(\frac{3}{8}, \frac{5}{8}) = \frac{6}{14} \times 0 + \frac{8}{14}\times 0.95 = 0.54 \ \textrm{bits}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H_A&space;=&space;\frac{6}{14}H(\frac{6}{6},&space;0)&space;&plus;&space;\frac{8}{14}H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;\frac{6}{14}&space;\times&space;0&space;&plus;&space;\frac{8}{14}\times&space;0.95&space;=&space;0.54&space;\&space;\textrm{bits}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_A&space;=&space;\frac{6}{14}H(\frac{6}{6},&space;0)&space;&plus;&space;\frac{8}{14}H(\frac{3}{8},&space;\frac{5}{8})&space;=&space;\frac{6}{14}&space;\times&space;0&space;&plus;&space;\frac{8}{14}\times&space;0.95&space;=&space;0.54&space;\&space;\textrm{bits}" title="H_A = \frac{6}{14}H(\frac{6}{6}, 0) + \frac{8}{14}H(\frac{3}{8}, \frac{5}{8}) = \frac{6}{14} \times 0 + \frac{8}{14}\times 0.95 = 0.54 \ \textrm{bits}" /></a>
 
 
 For **way B**, if humidity <= 89, 9 positive and 1 negative; humidity > 89, 4 negative
 
+$$H_B = \frac{10}{14}H(\frac{9}{10}, \frac{1}{10}) + \frac{4}{14}H(0, \frac{4}{4}) = \frac{10}{14}\times 0.47 + \frac{4}{14} \times 0 = 0.33 \ \textrm{bits}$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=H_B&space;=&space;\frac{10}{14}H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;\frac{4}{14}H(0,&space;\frac{4}{4})&space;=&space;\frac{10}{14}\times&space;0.47&space;&plus;&space;\frac{4}{14}&space;\times&space;0&space;=&space;0.33&space;\&space;\textrm{bits}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_B&space;=&space;\frac{10}{14}H(\frac{9}{10},&space;\frac{1}{10})&space;&plus;&space;\frac{4}{14}H(0,&space;\frac{4}{4})&space;=&space;\frac{10}{14}\times&space;0.47&space;&plus;&space;\frac{4}{14}&space;\times&space;0&space;=&space;0.33&space;\&space;\textrm{bits}" title="H_B = \frac{10}{14}H(\frac{9}{10}, \frac{1}{10}) + \frac{4}{14}H(0, \frac{4}{4}) = \frac{10}{14}\times 0.47 + \frac{4}{14} \times 0 = 0.33 \ \textrm{bits}" /></a>
 
-We can see `I(B) = 0.94 - HB = 0.61` > `I(A) = 0.94 - HA = 0.4`, so we choose **way B**, humidity=0.89 to split at this step.
+We can see $I(B) = 0.94 - HB = 0.61 > I(A) = 0.94 - HA = 0.4$, so we choose **way B**, humidity=0.89 to split at this step.
 
 
 ### 3.D - Criterion to stop splitting leaf node
