@@ -60,7 +60,7 @@ $$P(x| y = 1) = \frac{1}{\sqrt{2 \pi \sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_
 
 This is mostly used for document multi-class problem, i.e whether a document belongs to the category of sports, politics, technology etc. The features/predictors used by the classifier are the **frequency** of the words present in the document. For example, in a sentence or a paragraph $x$, if there are $k$ distinct words and word-1 appears $x_1$ times, word-2 $x_2$ times,... etc, we will have
 
-$$P(x|y) = \theta^{x_{1}}_{1}\theta^{x_{2}}_{2} \cdots \theta^{x_{k}}_{k},$$
+$$P(x|y) = \theta^{x_1}_1\theta^{x_2}_2 \cdots \theta^{x_k}_k,$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(x|y)&space;=&space;\theta^{x_{1}}_{1}\theta^{x_{2}}_{2}&space;\cdots&space;\theta^{x_{k}}_{k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|y)&space;=&space;\theta^{x_{1}}_{1}\theta^{x_{2}}_{2}&space;\cdots&space;\theta^{x_{k}}_{k}" title="P(x|y) = \theta^{x_{1}}_{1}\theta^{x_{2}}_{2} \cdots \theta^{x_{k}}_{k}" /></a>
 
