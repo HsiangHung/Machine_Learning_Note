@@ -63,7 +63,7 @@ What is the hypothesis for SVM? It’s simple and straightforward. When θᵀx �
 
 $$C(\symbf{\theta}) = C \sum^m_{i=1} \Big[ y_i \max \big(0, 1- \theta^T \symbf{x}_i)  + (1-y_i) \max \big(0, 1 + \theta^T \mathbf{x}_i \big)  \Big] + \frac{1}{2} \sum^n_j |\theta_j|^2$$
 
-With a very large value of C (similar to no regularization), this large margin classifier will be very sensitive to outliers. On the other hand, When C is small, we start to allow misclassified staying in the margin. We called it **Soft-margin**.
+With a very large value of $C$ (similar to no regularization), this large margin classifier will be very sensitive to outliers. On the other hand, When $C$ is small, we start to allow misclassified staying in the margin. We called it **Soft-margin**.
 
 
 ## 3. Non-Linear SVM
@@ -72,13 +72,11 @@ The non-linear boundary problem can be solved if we introduce a kernel [[Priyank
 
 $$C(\symbf{\theta}) = C \sum^m_{i=1} \Big[ y_i \max ( 0, 1- \theta^T \symbf{f}_i )  + (1-y_i) \max (0, 1 + \theta^T \symbf{f}_i ) \Big] + \frac{1}{2}\sum^n_j |\theta_j|^2$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{f}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{f}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \bold{f}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \bold{f}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
-
 where $f$ is **Kernel Function**. In Andrew's Ng's Machine learning class, they are described as similarity function: 
 
-$$ f1 =  \textrm{Similarity}(x, l^{(1)}), \ f_2 = \textrm{Similarity}(x, l^{(2)}), \cdots$$ 
+$$ f_1 =  \textrm{Similarity}(x, l^{(1)}), \ f_2 = \textrm{Similarity}(x, l^{(2)}), \cdots$$ 
 
-and so on, where $l^{(j)}$ are $j$th-landmarks. He used **Gaussian Kernel** to describe proximity. In Scikit-learn SVM package, Gaussian Kernel is mapped to ‘rbf’ , **Radial Basis Function** Kernel, the only
+and so on, where $l^{(j)}$ are $j$ th-landmarks. He used **Gaussian Kernel** to describe proximity. In Scikit-learn SVM package, Gaussian Kernel is mapped to ‘rbf’ , **Radial Basis Function** Kernel, the only
 
 $$f_j = \textrm{similarity}(x, l^{(j)}) = \exp{\Big(-\frac{||x-l^{(j)}||^2}{2\sigma^2} \Big)}$$
 
