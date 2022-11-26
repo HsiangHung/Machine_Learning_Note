@@ -16,7 +16,7 @@ $$P(y|X) = P(y|x_1,x_2,\cdots, x_f) = \frac{P(y) P(x_1|y)P(x_2|y)\cdots P(x_f|y)
 
 The class $y$ is determined by maximum probability
 
-$$y = \textrm{argmax}_y \big( P(y) \prod^f_{i=1} P(x_i|y) \big)$$
+$$y = \textrm{argmax}_y \big( P(y) \prod^f_i P(x_i|y) \big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;\textrm{argmax}_y&space;P(y)&space;\prod^f_{i=1}&space;P(x_i|y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\textrm{argmax}_y&space;P(y)&space;\prod^f_{i=1}&space;P(x_i|y)" title="y = \textrm{argmax}_y P(y) \prod^f_{i=1} P(x_i|y)" /></a>
 
