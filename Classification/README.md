@@ -215,7 +215,7 @@ In short, we can roighly argue that the second derivatives of the loss are posit
 
 For multiclass, `c = {1, ...K}`, K classes. If our target is a **one-hot** vector, `p = [1 0 ... 0]`, for y = 1,...  and `p = [0 0 ... 1]` for y = K, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
 
-$$L(\theta, \symbf{x}) = - \sum^K_{j=1}\symbf{I}(y=j)\log\big( h_{\theta}(\symbf{x}) \big) = - \sum^K_{j=1} \symbf{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\symbf{x}}}{ \sum_{j=1} e^{\theta^{(j)T}\symbf{x}}} \big)$$
+$$L(\theta, \symbf{x}) = - \sum^K_{j=1}\symbf{I}(y=j)\log\big( h_{\theta}(\symbf{x}) \big) = - \sum^K_{j=1} \symbf{I}(y=j)\log \Big( \frac{e^{\theta^{(j)T}\symbf{x}}}{ \sum_{j=1} e^{\theta^{(j)T}\symbf{x}}} \Big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" title="L(\theta, \bold{x}) = - \sum^K_{j=1}\bold{I}(y=j)\log\big( h_{\theta}(\bold{x}) \big) = - \sum^K_{j=1} \bold{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}} \big)" /></a>
 
