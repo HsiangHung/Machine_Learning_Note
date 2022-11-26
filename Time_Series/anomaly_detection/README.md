@@ -16,19 +16,31 @@ On the other hand, in multivariate time-series data, each timestamp index corres
 Suppose we have two time-series variables, $Y_{1,t}$ and $Y_{2,t}$ [[Selva Prabhakaran]][Vector Autoregression (VAR) – Comprehensive Guide with Examples in Python], and consider only one time step lag. Then we have
 
 $$ \begin{matrix} 
-  Y_{1,t} &=& \alpha_1 + \beta_{11,1} Y_{1, t-1} + \beta_{12,1} Y_{2,t-1} + \epsilon_{1,t} \\ 
-  Y_{2,t} &=& \alpha_2 + \beta_{21,1} Y_{1, t-1} + \beta_{22,1} Y_{2,t-1} + \epsilon_{2,t}
-  \end{matrix}.
+  Y_{1,t} &=& \alpha_1 + \beta_{11,1} Y_{1, t-1} + \beta_{12,1} Y_{2,t-1} + \epsilon_{1,t}. \\ 
+  Y_{2,t} &=& \alpha_2 + \beta_{21,1} Y_{1, t-1} + \beta_{22,1} Y_{2,t-1} + \epsilon_{2,t}.
+  \end{matrix}
 $$
 
-We can rewrite it in a matrix form:
+We can rewrite the above equation in a matrix form:
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)} 
 = {\left( \matrix{ \alpha_1 \cr \alpha_2 } \right)} + 
   \left( \matrix{\beta_{11,1} & \beta_{12,1} \cr \beta_{21,1} & \beta_{22,1}} \right)
   {\left( \matrix{ Y_{1,t-1} \cr Y_{2,t-1} } \right)} + 
-  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}
+  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
+
+If the auto regression involves two time steps, then we have
+
+$${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)} 
+= {\left( \matrix{ \alpha_1 \cr \alpha_2 } \right)} + 
+  \left( \matrix{\beta_{11,1} & \beta_{12,1} \cr \beta_{21,1} & \beta_{22,1}} \right)
+  {\left( \matrix{ Y_{1,t-1} \cr Y_{2,t-1} } \right)} + 
+  \left( \matrix{\beta_{11,2} & \beta_{12,2} \cr \beta_{21,2} & \beta_{22,2}} \right)
+  {\left( \matrix{ Y_{1,t-2} \cr Y_{2,t-2} } \right)} +
+  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
+$$
+
 
 
 
