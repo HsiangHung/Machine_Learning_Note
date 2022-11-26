@@ -35,7 +35,7 @@ The margin width is given
 
 $$ ( \vec{x}_+ - \vec{x} ) \cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}.$$
 
-Maximize the margin width is equivalent to minimize $||\vec{w}||$ <a href="https://www.codecogs.com/eqnedit.php?latex=||\vec{w}||" target="_blank"><img src="https://latex.codecogs.com/gif.latex?||\vec{w}||" title="||\vec{w}||" /></a>.
+Maximize the margin width is equivalent to minimize $||\vec{w}||$.
 
 ### SVM Classifier
 
