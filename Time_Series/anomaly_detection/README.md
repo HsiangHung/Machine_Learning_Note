@@ -30,7 +30,7 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)}
   {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
 
-If the auto regression involves two time steps, then we have
+If the auto regression involves two time steps, then we have VAR(2)
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)} 
 = {\left( \matrix{ \alpha_1 \cr \alpha_2 } \right)} + 
@@ -41,7 +41,7 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)}
   {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
 
-Therefore, we can generalize the VAR model to $m$ variable and $n$-lag:
+Therefore, we can generalize the VAR(n) $n$-lag model to $m$ variables:
 
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{m,t} } \right)} 
@@ -50,7 +50,7 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{m,t} } \right)}
   {\left( \matrix{ Y_{1,t-1} \cr Y_{2,t-1} } \right)} + 
   \left( \matrix{\beta_{11,2} & \beta_{12,2} \cr \beta_{21,2} & \beta_{22,2}} \right)
   {\left( \matrix{ Y_{1,t-2} \cr Y_{2,t-2} } \right)} +
-  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} \cr \vdots \cr \epsilon_{m,t} } \right)}.
+  {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
 
 
