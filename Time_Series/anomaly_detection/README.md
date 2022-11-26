@@ -44,7 +44,7 @@ $$
 Therefore, we can generalize the VAR(n) $n$-lag model to $m$ variables:
 
 
-$${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{m,t} } \right)} 
+$${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)} 
 = {\left( \matrix{ \alpha_1 \cr \alpha_2 } \cr \vdots \cr Y_{m,t} \right)} + 
   \left( \matrix{\beta_{11,1} & \beta_{12,1} \cr \beta_{21,1} & \beta_{22,1}} \right)
   {\left( \matrix{ Y_{1,t-1} \cr Y_{2,t-1} } \right)} + 
