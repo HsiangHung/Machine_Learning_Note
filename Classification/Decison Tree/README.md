@@ -100,7 +100,7 @@ A **Smaller Gini index** means better attribute used to split tree. For binary c
 
 The Gini index calculation for each node is weighted by the total number of instances in the parent node. Therefore, for a split, the Gini index in a **binary classification** problem is therefore calculated as follows: 
 
-$$G = \frac{N_1}{N} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{N_2}{N} \big( 1 - [(p_2)^2 + (n_2)^2] \big),$$
+$$G = \frac{N_1}{N} \left( 1 - [(p_1)^2 + (n_1)^2] \right) + \frac{N_2}{N} \left( 1 - [(p_2)^2 + (n_2)^2] \right),$$
 
 where $p_1$ and $n_1$ are proportion of positive and negative units; $N_1$ and $N_2$ are the total number of instances in leaf node 1 and leaf node 2, and $N$ are the total number of instances from the parent node.
 
