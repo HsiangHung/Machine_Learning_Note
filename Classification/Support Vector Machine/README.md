@@ -24,20 +24,16 @@ The support vectors are formed by the data laying along the margin.
 
 In the upper right panel, we classify blue instances as positives 
 
-$$\vec{w}\cdot \vec{x}_{+} -b \geq 1$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{+}&space;-b&space;\geq&space;1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_{+}&space;-b&space;\geq&space;1," title="\vec{w}\cdot \vec{x}_{+} -b \geq 1," /></a>
+$$\vec{w}\cdot \vec{x}_{+} -b \geq 1,$$
 
 and green instances as negatives 
 
-$$\vec{w}\cdot \vec{x}_{-} -b \leq -1$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\vec{w}\cdot&space;\vec{x}_{-}&space;-b&space;\leq&space;-1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\vec{w}\cdot&space;\vec{x}_{-}&space;-b&space;\leq&space;-1" title="\vec{w}\cdot \vec{x}_{-} -b \leq -1" /></a>
+$$\vec{w}\cdot \vec{x}_{-} -b \leq -1.$$
 
 
 The margin width is given
 
-$$(\vec{x}_+ - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}$$
+$$ ( \vec{x}_{+} - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b)}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b)}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" title="(\vec{x}_+ - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}" /></a>
 
