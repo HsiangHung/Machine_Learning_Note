@@ -25,12 +25,12 @@ Written it in a matrix form:
 
 $$ 
 
-\[ \begin{pmatrix} Y_{1,t} \\ Y_{2,t} \end{pmatrix}=
+ \begin{pmatrix} Y_{1,t} \\ Y_{2,t} \end{pmatrix}=
    \begin{bmatrix}
      \cos\theta & -\sin\theta\\
      \sin\theta & \cos\theta
    \end{bmatrix}
-   \begin{pmatrix} Y_{1,t-1} \\ Y_{2,t-1} \end{pmatrix} \]
+   \begin{pmatrix} Y_{1,t-1} \\ Y_{2,t-1} \end{pmatrix} 
 
 $$
 
