@@ -80,8 +80,9 @@ $$C(\symbf{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \symbf{f
 
 where $f$ is **Kernel Function**. In Andrew's Ng's Machine learning class, they are described as similarity function: 
 
-$$f1 =  \textrm{Similarity}(x, l^{(1)}),$$
-$$ f_2 = \textrm{Similarity}(x, l^{(2)})$$ 
+$$ f1 =  \textrm{Similarity}(x, l^{(1)}),$$
+
+$$ f_2 = \textrm{Similarity}(x, l^{(2)}),$$ 
 
 and so on, where $l$ are landmarks. He used **Gaussian Kernel** to describe proximity. In Scikit-learn SVM package, Gaussian Kernel is mapped to ‘rbf’ , **Radial Basis Function** Kernel, the only
 
