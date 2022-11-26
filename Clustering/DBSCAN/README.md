@@ -51,7 +51,7 @@ If there are no outliers, the paired distances prefer to have uniform distributi
 
 ![](images/elbow_eps.png)
 
-As shown above, if pair distances are sorted, and there exist an outlier, the curve will show a elbow, as indicated by the red line. Thus we can determine the $eps = 0.32$. 
+As shown above, if pair distances are sorted, and there exist an outlier, the curve will show a elbow, as indicated by the red line. Thus we can determine the `eps = 0.32`. 
 
 The Python sample code
 ```Python
