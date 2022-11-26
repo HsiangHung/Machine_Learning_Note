@@ -51,8 +51,6 @@ If feature is continuous, and we visualize the data and see a bell-curve-like di
 
 $$P(x| y = 1) = \frac{1}{\sqrt{2 \pi \sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(x|&space;y&space;=&space;1)&space;=&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|&space;y&space;=&space;1)&space;=&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" title="P(x| y = 1) = \frac{1}{\sqrt{2 \pi \sigma_i}}e^{-\frac{(x-\mu_i)^2}{2\sigma^2_i}}" /></a>
-
 
 ## Text Mining
 
@@ -70,9 +68,6 @@ where $θ_i$ is the ratio of `count(word-i, y)` and `count(y)` from corpus.
 If predictors are boolean variables and targets to predict are only yes or no, we can use Bernoulli distribution. For example, if a predictor is whether word-i occurs in the text or not and we want to predict positive/negative comments.
 
 $$P(x|y) = \theta^{x_1}_1 (1-\theta_1)^{1-x_1} \cdots \theta^{x_k}_k (1-\theta_k)^{1-x_k}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(x|y)&space;=&space;\theta^{x_1}_1&space;(1-\theta_1)^{1-x_1}&space;\cdots&space;\theta^{x_k}_k&space;(1-\theta_k)^{1-x_k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(x|y)&space;=&space;\theta^{x_1}_1&space;(1-\theta_1)^{1-x_1}&space;\cdots&space;\theta^{x_k}_k&space;(1-\theta_k)^{1-x_k}" title="P(x|y) = \theta^{x_1}_1 (1-\theta_1)^{1-x_1} \cdots \theta^{x_k}_k (1-\theta_k)^{1-x_k}" /></a>
-
 
 
 ## Pro and Con
