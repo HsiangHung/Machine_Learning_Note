@@ -41,12 +41,12 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)}
   {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
 
-Therefore, we can generalize the VAR(n) $n$-lag model to $m$ variables:
+Therefore, we can generalize the VAR(n) $p$-lag model to $m$ variables:
 
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{m,t} } \right)} 
 = {\left( \matrix{ \alpha_1 \cr \alpha_2 \cr \vdots \cr \alpha_m } \right)} + 
-  \Sum_i
+  \sum^p_{i=1}
   \left( \matrix{\beta_{11,i} & \beta_{12,i} & \dots & \beta_{1m,i} \cr 
                  \beta_{21,i} & \beta_{22,i} & \dots & \beta_{2m,i} \cr  
                  \vdots & \vdots & \ddots & \vdots \cr
