@@ -179,9 +179,7 @@ The cross-entropy of the generic form given a data record is
 
 $$\textrm{Cross-Entropy} = -\sum_c p_c \log q_c$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Cross-Entropy}&space;=&space;-\sum_c&space;p_c&space;\log&space;q_c" title="\textrm{Cross-Entropy} = -\sum_c p_c \log q_c" /></a>
-
-where `c` denotes class labels. `p` is the probability of **target** having class = c, and `q` is the probability of **prediction** as class = c. In classification, cross-entropy is used to be loss to optimize. Also see below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
+where $c$ denotes class labels. $p$ is the probability of **target** having class = c, and $q$ is the probability of **prediction** as class = $c$. In classification, cross-entropy is used to be loss to optimize. Also see below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
 ![](images/cross_entropy-1.png)
 
@@ -191,7 +189,7 @@ The cross-entropy can be used as loss to optimize using gradient descent in clas
 
 For binary classification `c = {0, 1}`, if using one-hot representation to `p`, i.e. `p = [1 0]` for y = 1; `p = [0 1]` for y = 0, and prediction `q` is a sigmoid function, it arrives at the commonly-seen cross-entropy (`h` is the hypothesis function)
 
-$$L(\theta, \bold{x}) = -y \big( \log(h_{\theta}(\bold{x})) + (1-y)\log{(1-h_{\theta}(\bold{x}))} \big)$$
+$$L(\theta, \bold{x}) = -y \big( \log(h_{\theta}(\bold{x})) + (1-y)\log{(1-h_{\theta}(\symbf{x}))} \big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-y&space;\big(&space;\log(h_{\theta}(\bold{x}))&space;&plus;&space;(1-y)\log{(1-h_{\theta}(\bold{x}))}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-y&space;\big(&space;\log(h_{\theta}(\bold{x}))&space;&plus;&space;(1-y)\log{(1-h_{\theta}(\bold{x}))}&space;\big)" title="L(\theta, \bold{x}) = -y \big( \log(h_{\theta}(\bold{x})) + (1-y)\log{(1-h_{\theta}(\bold{x}))} \big)" /></a>
 
