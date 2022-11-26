@@ -182,10 +182,10 @@ Using Taylor expansion, we can approximate the cost function up to the second or
 
 $$J_t = \sum^n_{i=1} \big[ C( y_i , \ \hat{y}^{t-1}_i) + g_i f_t(x_i) + \frac{1}{2}h_i f^2_t(x_i) + \cdots \big] + \Omega(f_t),$$
 
-where the first/second order gradients are
+where the first and second order gradients $g_i$ and $h_i$ are
 
 $$g_i = \frac{\partial C(y_i, \hat{y}^{t-1}_i ) }{ \partial_{y^{t-1}_i}},$$
-$$h_i = \frac{\partial^2 C(y_i, \ \hat{y}^{t-1}_i)}{\partial (y^{t-1}_i)^2}}.$$
+$$h_i = \frac{\partial^2 C(y_i, \hat{y}^{t-1}_i)}{ \partial (y^{t-1}_i)^2 }.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=g_i&space;=&space;\partial_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i),&space;\&space;h_i&space;=&space;\partial^2_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_i&space;=&space;\partial_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i),&space;\&space;h_i&space;=&space;\partial^2_{y^{t-1}_i}C(y_i,&space;\&space;\hat{y}^{t-1}_i)" title="g_i = \partial_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i), \ h_i = \partial^2_{y^{t-1}_i}C(y_i, \ \hat{y}^{t-1}_i)" /></a>
 
