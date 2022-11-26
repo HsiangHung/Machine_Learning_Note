@@ -127,21 +127,16 @@ For example, macro-averged Precision defines as
 
 $$\textrm{Macro-P} = \frac{P_1 + P_2 + \cdots P_K}{K}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Macro-P}&space;=&space;\frac{P_1&space;&plus;&space;P_2&space;&plus;&space;\cdots&space;P_K}{K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Macro-P}&space;=&space;\frac{P_1&space;&plus;&space;P_2&space;&plus;&space;\cdots&space;P_K}{K}" title="\textrm{Macro-P} = \frac{P_1 + P_2 + \cdots P_K}{K}" /></a>
 
 ### 3.B - Micro-averged
 
 $$\textrm{Micro-P} = \frac{\textrm{TP}_1 +\cdots + \textrm{TP}_K}{\textrm{TP}_1 +\cdots + \textrm{TP}_K + \textrm{FP}_1 +\cdots + \textrm{FP}_K}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Micro-P}&space;=&space;\frac{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K}{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K&space;&plus;&space;\textrm{FP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{FP}_K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Micro-P}&space;=&space;\frac{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K}{\textrm{TP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{TP}_K&space;&plus;&space;\textrm{FP}_1&space;&plus;\cdots&space;&plus;&space;\textrm{FP}_K}" title="\textrm{Micro-P} = \frac{\textrm{TP}_1 +\cdots + \textrm{TP}_K}{\textrm{TP}_1 +\cdots + \textrm{TP}_K + \textrm{FP}_1 +\cdots + \textrm{FP}_K}" /></a>
 
 ### 3.C - Weighted-average
 
 The weight-averaged Precision is defined as (using `classification_report` from [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html#sklearn.metrics.precision_recall_fscore_support))
 
 $$\textrm{Weighted-P} = \frac{n_1 P_1 + n_2 P_2 + \cdots n_K P_K}{n_1 + n_2 + \cdots n_K}$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Weighted-P}&space;=&space;\frac{n_1*P_1&space;&plus;&space;n_2*P_2&space;&plus;&space;\cdots&space;n_K*P_K}{n_1&space;&plus;&space;n_2&space;&plus;&space;\cdots&space;n_K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Weighted-P}&space;=&space;\frac{n_1*P_1&space;&plus;&space;n_2*P_2&space;&plus;&space;\cdots&space;n_K*P_K}{n_1&space;&plus;&space;n_2&space;&plus;&space;\cdots&space;n_K}" title="\textrm{Weighted-P} = \frac{n_1*P_1 + n_2*P_2 + \cdots n_K*P_K}{n_1 + n_2 + \cdots n_K}" /></a>
 
 where $n_i$ is the sample size for $i$ -th class.
 
