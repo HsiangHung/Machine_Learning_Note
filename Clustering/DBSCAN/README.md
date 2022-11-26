@@ -1,12 +1,12 @@
 
 # DBSCAN
 
-* [1. Introduction](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#1-adaboost)
-* [2. Hyperparameters in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2-gradient-boosting)
-     * [2.1 Choosing Epsilon](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2a---boosting-steps-in-gbm)
-     * [2.2 Choosing MinPt](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#2b---math-intuition-of-gbm)
-* [3. Validation of Brutal Searching Epsilon in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#3-xgboost)
-* [4. Disadvanatge in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Ensemble/Boosting#4-lightgbm)
+* [1. Introduction](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#1-introduction)
+* [2. Hyperparameters in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#2-hyperparameters-in-dbscan)
+     * [2.1 Choosing Epsilon](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#21-choosing-epsilon)
+     * [2.2 Choosing MinPt](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#22-choosing-minpt)
+* [3. Validation of Brutal Searching Epsilon in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#3-validation-of-brutal-searching-epsilon-in-dbscan)
+* [4. Disadvanatge in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#4-disadvanatge-in-dbscan)
 
 
 
@@ -98,8 +98,7 @@ def estimate_eps_neighbor(data, metric="euclidean", min_samples=3):
     return distances[kn.elbow-1] 
 ```
 
-We can try from `n_neighbors=2`. It calculates distance from each point to its nearest neighbor within the same partition, so, for a small fraction of points this distance will not be accurate.
-[[Alitouka]][Github: Choosing parameters of DBSCAN algorithm]
+We can try from `n_neighbors=2`. It calculates distance from each point to its nearest neighbor within the same partition, so, for a small fraction of points this distance will not be accurate. (cf github post [[Alitouka]][Github: Choosing parameters of DBSCAN algorithm])
 
 Through my test result, the pair distance scheme is slightly better.
 
@@ -113,7 +112,7 @@ Some general rules for determining Minimum Samples (“MinPts”). The MinPts va
 * For 2-dimensional data, use DBSCAN’s default value of MinPts = 4 (Ester et al., 1996).
 * If your data has more than 2 dimensions, choose MinPts = 2*dim, where dim= the dimensions of your data set (Sander et al., 1998).
 
-#### 2.3 Reference
+#### Reference
 
 
 * [Github: Choosing parameters of DBSCAN algorithm]: https://github.com/alitouka/spark_dbscan/wiki/Choosing-parameters-of-DBSCAN-algorithm
@@ -175,30 +174,21 @@ DBSCAN doesn’t perform as well as others when the clusters are of **varying de
 ## Reference
 
 
-[DBSCAN Clustering]:http://mccormickml.com/2016/11/08/dbscan-clustering/
+* [DBSCAN Clustering]:http://mccormickml.com/2016/11/08/dbscan-clustering/
 [[Chris McCormick] DBSCAN Clustering](http://mccormickml.com/2016/11/08/dbscan-clustering/)
 
-
-[Density-Based Clustering Validation]: http://www.dbs.ifi.lmu.de/~zimek/publications/SDM2014/DBCV.pdf
+* [Density-Based Clustering Validation]: http://www.dbs.ifi.lmu.de/~zimek/publications/SDM2014/DBCV.pdf
 [[Davoud Moulavi et al.] Density-Based Clustering Validation](http://www.dbs.ifi.lmu.de/~zimek/publications/SDM2014/DBCV.pdf)
 
-
-[The 5 Clustering Algorithms Data Scientists Need to Know]:https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68
+* [The 5 Clustering Algorithms Data Scientists Need to Know]:https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68
 [[George Seif] The 5 Clustering Algorithms Data Scientists Need to Know](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68)
 
-
-
-
-[A gentle introduction to HDBSCAN and density-based clustering]:https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
+* [A gentle introduction to HDBSCAN and density-based clustering]:https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
 [[Pepe Berba] A gentle introduction to HDBSCAN and density-based clustering](https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8)
 
-[How do I choose value of epsilon in DBSCAN?]: https://www.quora.com/How-do-I-choose-value-of-epsilon-in-DBSCAN
+* [How do I choose value of epsilon in DBSCAN?]: https://www.quora.com/How-do-I-choose-value-of-epsilon-in-DBSCAN
 [[Quora1] How do I choose value of epsilon in DBSCAN?](https://www.quora.com/How-do-I-choose-value-of-epsilon-in-DBSCAN)
 
-
-[Why DBSCAN clustering will not work in high dimensional space?]: https://www.quora.com/Why-DBSCAN-clustering-will-not-work-in-high-dimensional-space
+* [Why DBSCAN clustering will not work in high dimensional space?]: https://www.quora.com/Why-DBSCAN-clustering-will-not-work-in-high-dimensional-space
 [[Quora2] Why DBSCAN clustering will not work in high dimensional space?](https://www.quora.com/Why-DBSCAN-clustering-will-not-work-in-high-dimensional-space)
-
-
-
 
