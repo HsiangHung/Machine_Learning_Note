@@ -27,19 +27,19 @@ It calculates distance from each point to its nearest neighbor within the same p
 
 The Stackover flow blog, [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python), suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. 
 
-Another paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method for Discovering Density Varied Clusters] and [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering] proposed to calculate paired distances among all the data points. If there are no outliers, the paired distances prefer to have uniform distribution. But if there exist outliers, the outlier should be relatively far away from the normal points. Therefore, there may exist elbow in the pair distance distribution.
+Another paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method for Discovering Density Varied Clusters] and [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering] proposed:
+ 1. Calculate paired distances among all the data points
+ 2. Sort the distances in ascending order.
+ 2. Look for the elbow in the plot (use Kneedle algorithm).
+
+If there are no outliers, the paired distances prefer to have uniform distribution. But if there exist outliers, the outlier should be relatively far away from the normal points. Therefore, there may exist elbow in the pair distance distribution, which can be used for eps.
 
 The Python sample code
 ```Python
 from scipy.spatial import distance_matrix
 from kneed import KneeLocator
 
-def estimate_eps_1(X, metric="euclidean"):
-    '''
-    https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python
-    https://kneed.readthedocs.io/en/stable/parameters.html
-    '''
-    
+def estimate_eps_pairdistance(X, metric="euclidean"):    
     pair_distance = distance_matrix(np.array(X).reshape(-1, 1), np.array(X).reshape(-1, 1))
     pair_distance = sorted([x for x in pair_distance.reshape((pair_distance.size, ))])
     
@@ -56,6 +56,35 @@ def estimate_eps_1(X, metric="euclidean"):
     return pair_distance[kn.elbow-1]
 ```
 
+### 1.1.2 NearestNeighbor Method
+
+One technique to automatically determine the optimal ε value is described in the paper [[Nadia Rahmah and Imas Sukaesih Sitanggang]][Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra]. 
+
+This technique calculates the average distance between each point and its k nearest neighbors, where k is the MinPts value you selected. The average k-distances are then plotted in ascending order on a k-distance graph [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering].
+
+
+The ideal value for ε will be equal to the distance value at the “crook of the elbow”, or the point of maximum curvature. This point represents the optimization point where diminishing returns are no longer worth the additional cost. [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering] shows that while increasing the number of clusters will always improve the fit of the model, it also increases the risk that overfitting will occur.
+
+The sample code  [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering]:
+```Python
+from sklearn.neighbors import NearestNeighbors
+
+def estimate_eps_neighbor(data, metric="euclidean", min_samples=3):
+    neighbors = NearestNeighbors(n_neighbors=4)
+    neighbors_fit = neighbors.fit(data)
+    distances, indices = neighbors_fit.kneighbors(data)
+    distances = np.sort(distances, axis=0)
+    distances = distances[:,1]
+    
+    print("size of distance:", len(distances))
+    kn = KneeLocator(range(len(distances)), distances, curve="convex", interp_method="polynomial", polynomial_degree=4, direction="increasing")
+    kn.plot_knee()
+    print(kn.elbow)
+    return distances[kn.elbow-1] 
+```
+
+Through my test result, the pair distance scheme is slightly better.
+
 ### 1.2 Choosing MinPt
 
 Some general rules for determining Minimum Samples (“MinPts”). The MinPts value is better to be set using domain knowledge and familiarity with the data set. Here are a few rules of thumb for selecting the MinPts value [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering]:
@@ -68,17 +97,18 @@ Some general rules for determining Minimum Samples (“MinPts”). The MinPts va
 
 #### reference
 
-* [Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra]: https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf
-[[Nadia Rahmah and Imas Sukaesih Sitanggang] Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra](https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf)
-
-
 * [A dynamic Method for Discovering Density Varied Clusters]: https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters
 [[Mohammed T. H. Elbatta and Wesam M. Ashour] A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)
 
+* [DBSCAN Python Example: The Optimal Value For Epsilon (EPS)]: https://towardsdatascience.com/machine-learning-clustering-dbscan-determine-the-optimal-value-for-epsilon-eps-python-example-3100091cfbc
+[[Cory Maklin] DBSCAN Python Example: The Optimal Value For Epsilon (EPS)](https://towardsdatascience.com/machine-learning-clustering-dbscan-determine-the-optimal-value-for-epsilon-eps-python-example-3100091cfbc)
 
 * [How to determine epsilon and MinPts parameters of DBSCAN clustering]: http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/
 [[Amir Masoud] How to determine epsilon and MinPts parameters of DBSCAN clustering](http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/)
 
+
+* [Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra]: https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf
+[[Nadia Rahmah and Imas Sukaesih Sitanggang] Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra](https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf)
 
 
 
