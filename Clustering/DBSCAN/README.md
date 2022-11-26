@@ -23,6 +23,8 @@ It calculates distance from each point to its nearest neighbor within the same p
 
 ### 1.1 Choosing Epsilon
 
+The selection of eps is extremely important. Therefore, we need more efficient schemes to determine the value of eps.
+
 ### 1.1.1 Find Elbow Point
 
 The Stackover flow blog, [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python), suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. 
