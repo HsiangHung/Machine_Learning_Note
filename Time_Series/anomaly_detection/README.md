@@ -49,7 +49,8 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{m,t} } \right)}
   \sum_i
   \left( \matrix{\beta_{11,i} & \beta_{12,i} & \dots & \beta_{1m,i} \cr 
                  \beta_{21,i} & \beta_{22,i} & \dots & \beta_{2m,i} \cr  
-                 \beta_{31,i} &  \beta_{32,i} & \dots & \beta_{3m,i} 
+                 \vdots & \vdots & \ddots & \vdots \cr
+                 \beta_{m1,i} & \beta_{m2,i} & \dots & \beta_{mm,i} 
                 } 
   \right)
   {\left( \matrix{ Y_{1,t-i} \cr Y_{2,t-i} \cr \vdots \cr Y_{m,t-i} } \right)} +
