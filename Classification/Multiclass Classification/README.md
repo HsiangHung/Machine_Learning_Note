@@ -139,7 +139,7 @@ $$\textrm{Micro-P} = \frac{\textrm{TP}_1 +\cdots + \textrm{TP}_K}{\textrm{TP}_1 
 
 The weight-averaged Precision is defined as (using `classification_report` from [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html#sklearn.metrics.precision_recall_fscore_support))
 
-$$\textrm{Weighted-P} = \frac{n_1*P_1 + n_2*P_2 + \cdots n_K*P_K}{n_1 + n_2 + \cdots n_K}$$
+$$\textrm{Weighted-P} = \frac{n_1 P_1 + n_2 P_2 + \cdots n_K P_K}{n_1 + n_2 + \cdots n_K}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Weighted-P}&space;=&space;\frac{n_1*P_1&space;&plus;&space;n_2*P_2&space;&plus;&space;\cdots&space;n_K*P_K}{n_1&space;&plus;&space;n_2&space;&plus;&space;\cdots&space;n_K}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Weighted-P}&space;=&space;\frac{n_1*P_1&space;&plus;&space;n_2*P_2&space;&plus;&space;\cdots&space;n_K*P_K}{n_1&space;&plus;&space;n_2&space;&plus;&space;\cdots&space;n_K}" title="\textrm{Weighted-P} = \frac{n_1*P_1 + n_2*P_2 + \cdots n_K*P_K}{n_1 + n_2 + \cdots n_K}" /></a>
 
