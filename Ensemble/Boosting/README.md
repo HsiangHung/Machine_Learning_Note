@@ -85,23 +85,23 @@ In the following, we explain the boosting pictures using the figures depicted fr
 
 We usually start with a very simple estimator, say one-layer decision tree (called a stump) to fit the data `(x1, y1), (x2, y2),...`. In the following panels, the red points denote the data points and green dots are reisduals. We build the first regressor by fitting 
 
-    f0(x) = y
+$$f_0(x) = y$$
 
 ![](images/GBM1.png)
 
-In the above left plot (a), the black line indicates `F0(x) = f0(x)`, the **first** predictor (model). Then we compute the residuals `e1 = y - y0` (where `y0 = f0(x)`), shown as green dots on the right hand plot (b). Next we build another regressor model but fit the **residuals** 
+In the above left plot (a), the black line indicates $F_0(x) = f_0(x)$, the **first** predictor (model). Then we compute the residuals $e_1 = y - y_0$ (where $y_0 = f_0(x)$), shown as green dots on the right hand plot (b). Next we build another regressor model but fit the **residuals** 
 
-    f1(x) = e1
+$$f_1(x) = e_1$$
 
-In (b), the black line indicates the `f1(x)` predictor. Now we can combine the predictors `F1(x) = F0(x) + f1(x)` and the resulting predictor is the black line shown in below left (c)
+In (b), the black line indicates the $f_1(x)$ predictor. Now we can combine the predictors $F_1(x) = F_0(x) + f_1(x)$ and the resulting predictor is the black line shown in below left (c)
 
 ![](images/GBM2.png)
 
-Now we see the `F1(x)` is a better regressor than `F0(x)` to fit the data. 
+Now we see the $F_1(x)$ is a better regressor than $F_0(x)$ to fit the data. 
 
-We then compute residuals `e2 = y - y1`, where `y1 = F1(x)`, and denote the residuals as green dots in (d). Then we still fit the residuals `e2`
+We then compute residuals $e_2 = y - y_1$, where $y_1 = F_1(x)$, and denote the residuals as green dots in (d). Then we still fit the residuals $e_2$
 
-    f2(x) = e2
+$$f_2(x) = e_2$$
 
 and so on. In this case, mathmetically we have an iterative relation
 
