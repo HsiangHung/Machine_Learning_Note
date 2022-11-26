@@ -208,7 +208,7 @@ Note that the **loss function of logistic regression model is convex**. The foll
 
 * [Quora: Is logistic regression cost function convex?](https://www.quora.com/Is-logistic-regression-cost-function-convex)
 
-In short, we can roighly argue that the second derivatives of the loss are positive semi-definite, and the linear-combination of two or more convex functions ($\log{h}$ and $\log{1-h}$) is also convex.
+In short, we can roighly argue that the second derivatives of the loss are positive semi-definite, and the linear-combination of two or more convex functions ($\log h$ and $\log{1-h}$) is also convex.
 
 
 ### 3.2 Multiclass
