@@ -27,7 +27,7 @@ Note here we have `min`, meaning the cluster with this smallest mean dissimilari
 
 We now define a silhouette (value) of one data point $i$
 
-$$s(i)={\frac{b(i)-a(i)}{\max (a(i),b(i))}}, \textrm{if } |C_{i}|>1.$$
+$$s(i)={\frac{b(i)-a(i)}{\max \lbrace a(i),b(i) \rbrace }}, \textrm{if } \ |C_{i}|>1.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}},&space;\textrm{if&space;}&space;|C_{i}|>1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s(i)={\frac&space;{b(i)-a(i)}{\max\{a(i),b(i)\}}},&space;\textrm{if&space;}&space;|C_{i}|>1" title="s(i)={\frac {b(i)-a(i)}{\max\{a(i),b(i)\}}}, \textrm{if } |C_{i}|>1" /></a>
 
