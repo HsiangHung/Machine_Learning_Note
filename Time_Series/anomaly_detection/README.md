@@ -13,12 +13,12 @@ $$Y_t = \alpha + \beta_1 Y_{t-1} + \beta_2 Y_{t-2} + \cdots + \beta_{p} Y_{t-p} 
 
 On the other hand, in multivariate time-series data, each timestamp index corresponds to multiple columns. The algorithms cover that manner are VAR (vector auto-regression), VMA (vector moving-avergae), VARMA (vector auto-regression moving average), VARIMA (vector auto-regression integrated moving average) and VECM (vector error correction model) etc.
 
-Suppose we have two time-series variables, $Y_{1,t}$ and $Y_{2,t}$ [[Selva Prabhakaran]][Vector Autoregression (VAR) – Comprehensive Guide with Examples in Python], such that
+Suppose we have two time-series variables, $Y_{1,t}$ and $Y_{2,t}$ [[Selva Prabhakaran]][Vector Autoregression (VAR) – Comprehensive Guide with Examples in Python], and consider only one time step lag. Then we have
 
 $$ \begin{matrix} 
   Y_{1,t} &=& \alpha_1 + \beta_{11,1} Y_{1, t-1} + \beta_{12,1} Y_{2,t-1} + \epsilon_{1,t} \\ 
   Y_{2,t} &=& \alpha_2 + \beta_{21,1} Y_{1, t-1} + \beta_{22,1} Y_{2,t-1} + \epsilon_{2,t}
-  \end{matrix}
+  \end{matrix}.
 $$
 
 We can rewrite it in a matrix form:
