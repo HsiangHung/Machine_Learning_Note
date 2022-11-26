@@ -232,7 +232,7 @@ $$FI(A|c) = \frac{N_{c}}{N}\left( \textrm{Impurity(c)} - \frac{N_{c,l}}{N_c}\tex
 
 where $N_c$ means the number of instances on the "current" node or level, and $N$ is the total number of instances. $l$ and $r$ denote left and right child nodes. We can simply calculate as 
 
-$$FI(A|c) = N_{c} * \textrm{impurity(c)} - N_{c,l}*\textrm{impurity(l)} - N_{c,r}*\textrm{impurity(r)}$$
+$$FI(A|c) = N_{c} * \textrm{impurity(c)} - N_{c,l} * \textrm{impurity(l)} - N_{c,r} * \textrm{impurity(r)}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;N_{c}&space;*&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;N_{c}&space;*&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r" title="FI(A|c) = N_{c} * \textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l - N_{c,r}*\textrm{impurity}_r" /></a>
 
