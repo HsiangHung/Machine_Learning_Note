@@ -260,7 +260,10 @@ So
 
 $$\bar{\theta} = \frac{6+\alpha}{6 + \alpha+\beta}$$
 
-Using $B(2,2)$, $\bar{\theta} = 8/10$; $B(1, 1)$, $\bar{\theta} = 7/8$; $B(1, 0.01)$, $\bar{\theta} = 7/7.01$.
+From the above, using:
+1. $B(2,2)$, $\bar{\theta} = 8/10$
+2. $B(1, 1)$, $\bar{\theta} = 7/8$
+3. $B(1, 0.01)$, $\bar{\theta} = 7/7.01$
 
 The blog [[Suzanna Sia]][Closed form Bayesian Inference for Binomial distributions] has more description on Bayesian inference for binomial distributions with Python code.
 
