@@ -33,6 +33,8 @@ $$\vec{w}\cdot \vec{x}_{-} -b \leq -1.$$
 
 The margin width is given
 
+$$ ( vec{x}_{+} - \vec{x}_-  )
+
 $$ ( \vec{x}_{+} - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b)}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(\vec{x}_&plus;&space;-&space;\vec{x}_-)\cdot&space;\frac{\vec{w}&space;}{||\vec{w}&space;||}&space;=&space;\frac{(1&plus;b)-(-1&plus;b)}{||\vec{w}||}&space;=&space;\frac{2}{||\vec{w}||}" title="(\vec{x}_+ - \vec{x}_-)\cdot \frac{\vec{w} }{||\vec{w} ||} = \frac{(1+b)-(-1+b)}{||\vec{w}||} = \frac{2}{||\vec{w}||}" /></a>
