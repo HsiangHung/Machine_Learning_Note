@@ -11,7 +11,9 @@ $$Y_t = \alpha + \beta_1 Y_{t-1} + \beta_2 Y_{t-2} + \cdots + \beta_{p} Y_{t-p} 
 
 ## Multivariate
 
-On the other hand, in multivariate time-series data, each timestamp index corresponds to multiple columns. The algorithms cover that manner are VAR (vector auto-regression), VMA (vector moving-avergae), VARMA (vector auto-regression moving average), VARIMA (vector auto-regression integrated moving average) and VECM (vector error correction model) etc.
+On the other hand, in multivariate time-series data, each timestamp index corresponds to multiple columns. For example, an AR model extends the univariate autoregressive (AR) model by capturing the linear relations between multiple variables [[Marco Cerliani]][Anomaly Detection in Multivariate Time Series with VAR]. For each input series, a regression is carried out. 
+
+The algorithms cover that manner are VAR (vector auto-regression), VMA (vector moving-avergae), VARMA (vector auto-regression moving average), VARIMA (vector auto-regression integrated moving average) and VECM (vector error correction model) etc.
 
 Suppose we have two time-series variables, $Y_{1,t}$ and $Y_{2,t}$ [[Selva Prabhakaran]][Vector Autoregression (VAR) – Comprehensive Guide with Examples in Python], and consider only one time step lag. Then we have
 
@@ -41,7 +43,7 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} } \right)}
   {\left( \matrix{ \epsilon_{1,t} \cr \epsilon_{2,t} } \right)}.
 $$
 
-Therefore, we can generalize the VAR($p$) ($p$ lag model) with $n$ variables:
+Therefore, we can generalize the VAR($p$) ($p$ lagged model) with $n$ variables:
 
 
 $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{n,t} } \right)} 
