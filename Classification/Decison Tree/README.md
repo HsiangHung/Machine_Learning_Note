@@ -234,8 +234,6 @@ where $N_c$ means the number of instances on the "current" node or level, and $N
 
 $$FI(A|c) = N_{c} * \textrm{impurity(c)} - N_{c,l} * \textrm{impurity(l)} - N_{c,r} * \textrm{impurity(r)}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=FI(A|c)&space;=&space;N_{c}&space;*&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FI(A|c)&space;=&space;N_{c}&space;*&space;\textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l&space;-&space;N_{c,r}*\textrm{impurity}_r" title="FI(A|c) = N_{c} * \textrm{impurity}_c-N_{c,l}*\textrm{impurity}_l - N_{c,r}*\textrm{impurity}_r" /></a>
-
 and eventually all are divided by $N$. The `impurity` metric is **entropy** if **C4.5** algorithm adopted. It would be **Gini** if the algorithm were **CART** [[Sefik Ilkin Serengil]][Feature Importance in Decision Trees]. 
 
 Keep in mind for lower impurity (say, the majority is positive), both entropy and Gini index are lower. If `attribute A` works well to split, parent has higher impurity whereas child has lower impurity, then higher $FI(A|c)$.  
