@@ -23,9 +23,7 @@ $$
 
 Written it in a matrix form:
 
-$$ 
-
-\begin{equation} \begin{pmatrix} Y_{1,t} \\ Y_{2,t} \end{pmatrix}=
+$$ \begin{equation} \begin{pmatrix} Y_{1,t} \\ Y_{2,t} \end{pmatrix}=
    \begin{bmatrix}
      \cos\theta & -\sin\theta\\
      \sin\theta & \cos\theta
