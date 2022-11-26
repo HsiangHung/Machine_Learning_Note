@@ -60,11 +60,11 @@ $$H(p,n) = -p\log p -n\log n$$
 
 where $p$ and $n$ are probability of positive and negative events
 
-$$p = \frac{N_p}{N_p+N_n}, \ n = \frac{N_n}{N_p+N_n}$$
+$$p = \frac{N_p}{N_p+N_n}, \ n = \frac{N_n}{N_p+N_n}.$$
 
 Then we can calculate **Expected Entropy** (EH) remaining after trying attribute $A$ (with branches i=1,2,...,K types) in childs as
 
-$$EH(A) = \sum^K_{i=1} H(p_i, n_i)$$
+$$EH(A) = \sum^K_{i=1} H(p_i, n_i).$$
 
 The information gain is 
 
@@ -92,21 +92,15 @@ We can see the larger information gain split makes better classification.
 
 The Gini index of a leaf node is defined as [[Jason Brownlee]][Classification And Regression Trees for Machine Learning]:
 
-$$G = 1- \sum^K_{i=1} p^2_i$$
+$$G = 1- \sum^K_{i=1} p^2_i.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;1-&space;\sum^K_{i=1}&space;p^2_i" title="G = 1- \sum^K_{i=1} p^2_i" /></a>
-
-
-**Smaller Gini index** means better attribute used to split tree. For binary classification, two extremes to think about:
+A **Smaller Gini index** means better attribute used to split tree. For binary classification, two extremes to think about:
 * The leaf node only positive events, then `G = 0`.
 * The leaf node still has 50 positive - 50 negative. `G = 0.5`.
 
 The Gini index calculation for each node is weighted by the total number of instances in the parent node. Therefore, for a split, the Gini index in a **binary classification** problem is therefore calculated as follows: 
 
-$$G = \frac{N_1}{N} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{N_2}{N} \big( 1 - [(p_2)^2 + (n_2)^2] \big)$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;=&space;\frac{N_1}{N}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{N_2}{N}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;=&space;\frac{N_1}{N}&space;\big(&space;1&space;-&space;[(p_1)^2&space;&plus;&space;(n_1)^2]&space;\big)&space;&plus;&space;\frac{N_2}{N}&space;\big(&space;1&space;-&space;[(p_2)^2&space;&plus;&space;(n_2)^2]&space;\big)" title="G = \frac{N_1}{N} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{N_2}{N} \big( 1 - [(p_2)^2 + (n_2)^2] \big)" /></a>
-
+$$G = \frac{N_1}{N} \big( 1 - [(p_1)^2 + (n_1)^2] \big) + \frac{N_2}{N} \big( 1 - [(p_2)^2 + (n_2)^2] \big),$$
 
 where `p1` and `n1` are proportion of positive and negative units; `N1` and `N2` are the total number of instances in leaf node 1 and leaf node 2, and `N` are the total number of instances from the parent node.
 
