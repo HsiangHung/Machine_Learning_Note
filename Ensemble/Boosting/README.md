@@ -201,9 +201,7 @@ $$f_t(x) = \omega_{q(x)}, \ \omega \in R^T, \ q: R^d \to \lbrace 1,2,\cdots, T \
 
 and the complexity of the regularization term as
 
-$$\Omega(f) = \gamma T + \frac{1}{2}\lambda \sum^T_{j=1} \omega^2_j$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\Omega(f)&space;=&space;\gamma&space;T&space;&plus;&space;\frac{1}{2}\lambda&space;\sum^T_{j=1}&space;\omega^2_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Omega(f)&space;=&space;\gamma&space;T&space;&plus;&space;\frac{1}{2}\lambda&space;\sum^T_{j=1}&space;\omega^2_j" title="\Omega(f) = \gamma T + \frac{1}{2}\lambda \sum^T_{j=1} \omega^2_j" /></a>
+$$\Omega(f) = \gamma T + \frac{1}{2}\lambda \sum^T_{j=1} \omega^2_j,$$
 
 where $\omega$ is the vector of scores on leaves, and $T$ is the number of leaves. XGBoost will use the gamma parameter in its pruning steps. 
 
