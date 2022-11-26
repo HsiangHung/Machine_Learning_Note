@@ -47,7 +47,9 @@ Another paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method fo
  2. Sort the distances in ascending order.
  2. Look for the elbow in the plot (use Kneedle algorithm).
 
-If there are no outliers, the paired distances prefer to have uniform distribution. But if there exist outliers, the outlier should be relatively far away from the normal points. Therefore, there may exist elbow in the pair distance distribution, which can be used for eps.
+If there are no outliers, the paired distances prefer to have uniform distribution. But if there exist outliers, the outlier should be relatively far away from the normal points. Therefore, there may exist elbow in the pair distance distribution, and the optimal value for eps will be found at the point of maximum curvature.
+
+![](images/elbow_eps.png)
 
 The Python sample code
 ```Python
