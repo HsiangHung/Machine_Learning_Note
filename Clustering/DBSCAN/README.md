@@ -17,15 +17,17 @@ There are also few other apsects:
 * DBSCAN is scabable.
 
 
-## 1. Choosing Epsilon in DBSCAN
+## 1. Hyperparameters in DBSCAN
 
 It calculates distance from each point to its nearest neighbor within the same partition, so, for a small fraction of points this distance will not be accurate [[Github]][Choosing parameters of DBSCAN algorithm]
 
-### 1.2 Find Elbow Point
+### 1.1 Choosing Epsilon
 
-The Stackover flow blog [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python) suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. 
+### 1.1.1 Find Elbow Point
 
-Another paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method for Discovering Density Varied Clusters] proposed to calculate paired distances among all the data points. If there are no outliers, the paired distances prefer to have uniform distribution. But if there exist outliers, the outlier should be relatively far away from the normal points. Therefore, there may exist elbow in the pair distance distribution.
+The Stackover flow blog, [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python), suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. 
+
+Another paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method for Discovering Density Varied Clusters] and [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering] proposed to calculate paired distances among all the data points. If there are no outliers, the paired distances prefer to have uniform distribution. But if there exist outliers, the outlier should be relatively far away from the normal points. Therefore, there may exist elbow in the pair distance distribution.
 
 The Python sample code
 ```Python
@@ -54,7 +56,15 @@ def estimate_eps_1(X, metric="euclidean"):
     return pair_distance[kn.elbow-1]
 ```
 
+### 1.2 Choosing MinPt
 
+Some general rules for determining Minimum Samples (“MinPts”). The MinPts value is better to be set using domain knowledge and familiarity with the data set. Here are a few rules of thumb for selecting the MinPts value [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering]:
+
+* The larger the data set, the larger the value of MinPts should be
+* If the data set is noisier, choose a larger value of MinPts
+* Generally, MinPts should be greater than or equal to the dimensionality of the data set
+* For 2-dimensional data, use DBSCAN’s default value of MinPts = 4 (Ester et al., 1996).
+* If your data has more than 2 dimensions, choose MinPts = 2*dim, where dim= the dimensions of your data set (Sander et al., 1998).
 
 #### reference
 
@@ -66,13 +76,10 @@ def estimate_eps_1(X, metric="euclidean"):
 [[Mohammed T. H. Elbatta and Wesam M. Ashour] A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)
 
 
-* [A dynamic Method for Discovering Density Varied Clusters]: https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters
-[[Mohammed T. H. Elbatta and Wesam M. Ashour] A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)
+* [How to determine epsilon and MinPts parameters of DBSCAN clustering]: http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/
+[[Amir Masoud] How to determine epsilon and MinPts parameters of DBSCAN clustering](http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/)
 
 
-* Nadia Rahmah and Imas Sukaesih Sitanggang, [Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra](https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf)
-
-* Mohammed T. H. Elbatta and Wesam M. Ashour, [A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)
 
 
 
