@@ -152,7 +152,7 @@ $$C(D) = \sum^n_{i=1} (y_i - \symbf{\theta}^T \symbf{x}_i)^2$$
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-$${\displaystyle P( \symbf{x}_i, y_i \vert \theta) = h_{\theta} ^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i} }$$
+$$ P( \symbf{x}_i, y_i \vert \theta) = ( h_{\theta} )^{y_i} (1-h_{\theta})^{1-y_i} = \Big( \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}}\Big)^{y_i}\Big( 1- \frac{1}{1+e^{-\symbf{\theta}^T \symbf{x}_i}} \Big)^{1-y_i}.$$
 
 Then similarly, we convert maximizing the log of the likelihood to optimizing the cost functions  
 
