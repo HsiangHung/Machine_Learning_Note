@@ -32,7 +32,7 @@ The Bayesian optimization process (credit from Nando de Freitas's [UBC machine l
 
 Our goal is to find $x^*$ to have **maximum** true objective.
 
-In (a), the dash line is the true object function we are looking for. The black solid line is mean of posterior $\mu$. The purple region represents confidence intervals and covers upper ($\mu$ + $\sigma$) and lower ($\mu$ - $\sigma$) bounds. The green line denotes a acquisition function. 
+In (a), the dash line is the true object function we are looking for. The black solid line is mean of posterior $\mu$. The purple region represents confidence intervals and covers upper ( $\mu$ + $\sigma$ ) and lower $(\mu - \sigma)$ bounds. The green line denotes a acquisition function. 
 
 (b) shows how we determine next trial observation. We always look up regions which potentially have higher objective, so in this example, we can ignore the shaded area. 
 
