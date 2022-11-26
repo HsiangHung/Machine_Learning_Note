@@ -90,9 +90,9 @@ Also check this: [Cross Validate: How to understand the drawbacks of K-means](ht
 ## D. K-Means++
 K-Means++ is a smart centroid initialization technique and the rest of the algorithm is the same as that of K-Means [[Satyam Kumar]][Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]. The coursera course: [Machine Learning: Clustering & Retrieval](https://www.coursera.org/lecture/ml-clustering-and-retrieval/smart-initialization-via-k-means-T9ZaG) has better explanation about the procedures:
 
-* Pick the first centroid point (`C1`) randomly.
-* Compute distance of all points in the dataset from the centroid. The data point which has the maximum distance to `C1` will be second centroid.  Now we have `(C1, C2)`.
-* Compute distances of all points from the respective nearest centroids. For example, assume we have `(x1,.., x6)` in dataset. The closest centroid to `(x1, x3, x6)` is `C1` and `x6` is the farthest point to `C1` with distance = `d(6,1)`. The closest centroid to `(x2, x4, x5)` is `C2` and `x4` is the farthest point to `C2` with `d(4,2)`. We assign `x4` as the third centroid if `d(4,2) > d(6,1)`. Now we have `(C1, C2, C3)`.
+* Pick the first centroid point, say $C_1$ randomly.
+* Compute distance of all points in the dataset from the centroid. The data point which has the maximum distance to $C_1$ will be second centroid.  Now we have $( C_1, C_2 )$.
+* Compute distances of all points from the respective nearest centroids. For example, assume we have $(x_1,.., x_6)$ in dataset. The closest centroid to $(x_1, x_3, x_6)$ is $C_1$ and $x_6$ is the farthest point to $C_1$ with distance = $d(6,1)$. The closest centroid to $(x_2, x_4, x_5)$ is $C_2$ and $x4_$ is the farthest point to $C2_$ with $d(4,2)$. We assign $x_4$ as the third centroid if $d(4,2) > d(6,1)$. Now we have $(C_1, C_2, C_3)$.
 * Repeat the above step till you find K centroids.
 
 In summary, the new centroid is determined by maximum probability proportional to distance sqaure where the distance is the distance bwtween a data point and its nearest centroid:
