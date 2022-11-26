@@ -146,7 +146,7 @@ Note the blog [[Sebastian Ruder]][An overview of gradient descent optimization a
 
 Adagrad **modifies the general learning rate** at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
 
-$$\Delta \theta_t = - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}.$$
+$$\Delta \theta_t = - \frac{\alpha}{\sqrt{ \sum^t_{\tau=1} (g_{\tau})^2 + \epsilon }} g_{t}.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\Delta \theta_t = - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
 
@@ -157,11 +157,7 @@ RMSProp improves the latter by including the exponential moving average of the *
 
 $$\Delta \theta_{t} = - \alpha \Big( \frac{g_t}{\sqrt{s_t} + \epsilon} \Big),$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{s_t}&space;&plus;&space;\epsilon}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{s_t}&space;&plus;&space;\epsilon}&space;\Big)" title="\Delta \theta_{t} = - \alpha \Big( \frac{g_t}{\sqrt{s_t} + \epsilon} \Big)" /></a>
-
-where $s_{t} = \beta s_{t-1} + (1-\beta)g^2_t$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=s_{t}&space;=&space;\beta&space;s_{t-1}&space;&plus;&space;(1-\beta)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s_{t}&space;=&space;\beta&space;s_{t-1}&space;&plus;&space;(1-\beta)g^2_t" title="s_{t} = \beta s_{t-1} + (1-\beta)g^2_t" /></a>
+where $s_{t} = \beta s_{t-1} + (1-\beta)g^2_t$.
 
 The RMSProp also slow down relatively large gradients and speed up relatively small gradients by dividing the squared root of the velocity.
 
