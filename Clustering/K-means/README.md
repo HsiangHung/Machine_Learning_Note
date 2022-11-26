@@ -45,7 +45,7 @@ $$J(c^{(1)},\cdots , c^{(m)}, \mu_1, \cdots , \mu_K) = \frac{1}{m}\sum^m_{i=1} |
 Thus, it is just the **average distance of datapoints from their centroid**. K-means is an algorithm to minimize $J(\cdots)$:
 
 * The above procedure a is the cluster assignment step, to minimize $J$ by updating $c^{(1)}$, $c^{(2)}$,.. , $c^{(m)}$.
-* The above procedure b is the move centroid step, to minimize $J$ by updating $\mu_1$, $μ\mu_2$, ... $\mu_K$.
+* The above procedure b is the move centroid step, to minimize $J$ by updating $\mu_1$, $\mu_2$, ... $\mu_K$.
 
 
 ## C. Some Notes
@@ -96,6 +96,8 @@ K-Means++ is a smart centroid initialization technique and the rest of the algor
 * Repeat the above step till you find K centroids.
 
 In summary, the new centroid is determined by maximum probability proportional to distance sqaure where the distance is the distance bwtween a data point and its nearest centroid:
+
+$$C_{n+1} = x_i, \ \textrm{if} \ d_i = \max_{ C_j \textrm{closest to }x_i } ||x_i - C_j||^2,$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C_{n&plus;1}&space;=&space;x_i,&space;\&space;\textrm{if}&space;\&space;d_i&space;=&space;\max_{&space;C_j&space;\textrm{closest&space;to&space;}x_i&space;}&space;||x_i&space;-&space;C_j||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C_{n&plus;1}&space;=&space;x_i,&space;\&space;\textrm{if}&space;\&space;d_i&space;=&space;\max_{&space;C_j&space;\textrm{closest&space;to&space;}x_i&space;}&space;||x_i&space;-&space;C_j||^2" title="C_{n+1} = x_i, \ \textrm{if} \ d_i = \max_{ C_j \textrm{closest to }x_i } ||x_i - C_j||^2" /></a>
 
