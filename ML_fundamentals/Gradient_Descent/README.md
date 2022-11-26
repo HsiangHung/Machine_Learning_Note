@@ -139,12 +139,14 @@ The momentrum term $\beta$ is usually set to 0.9 or a similar value [[Sebastian 
 
 $$\theta_{t+1} = \theta_{t} +\Delta \theta_t = \theta_t - \alpha v_{t}.$$
 
-Note the blog [[Sebastian Ruder]][An overview of gradient descent optimization algorithms] implemented $v_{t} = \gamma v_{t-1} + g_{t}$  <a href="https://www.codecogs.com/eqnedit.php?latex=v_{t}&space;=&space;\gamma&space;v_{t-1}&space;&plus;&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{t}&space;=&space;\gamma&space;v_{t-1}&space;&plus;&space;g_{t}" title="v_{t} = \gamma v_{t-1} + g_{t}" /></a>  for momentum, and it is ok. But the Anrew's Ng's notation gaives more intuition. 
+Note the blog [[Sebastian Ruder]][An overview of gradient descent optimization algorithms] implemented $v_{t} = \gamma v_{t-1} + g_{t}$ for momentum, and it is ok. But the Anrew's Ng's notation gaives more intuition. 
 
 
 ### B. Adagrad (Adaptive Gradient Algorithm)
 
 Adagrad **modifies the general learning rate** at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
+
+$$\Delta \theta_t = - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\Delta \theta_t = - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
 
@@ -153,9 +155,11 @@ Adagrad **modifies the general learning rate** at each time step `t` for every p
 
 RMSProp improves the latter by including the exponential moving average of the **squared gradient**:
 
+$$\Delta \theta_{t} = - \alpha \Big( \frac{g_t}{\sqrt{s_t} + \epsilon} \Big),$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{s_t}&space;&plus;&space;\epsilon}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_{t}&space;=&space;-&space;\alpha&space;\Big(&space;\frac{g_t}{\sqrt{s_t}&space;&plus;&space;\epsilon}&space;\Big)" title="\Delta \theta_{t} = - \alpha \Big( \frac{g_t}{\sqrt{s_t} + \epsilon} \Big)" /></a>
 
-where 
+where $s_{t} = \beta s_{t-1} + (1-\beta)g^2_t$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=s_{t}&space;=&space;\beta&space;s_{t-1}&space;&plus;&space;(1-\beta)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s_{t}&space;=&space;\beta&space;s_{t-1}&space;&plus;&space;(1-\beta)g^2_t" title="s_{t} = \beta s_{t-1} + (1-\beta)g^2_t" /></a>
 
