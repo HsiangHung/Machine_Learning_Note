@@ -63,7 +63,7 @@ $$C(\symbf{\theta}) = C \sum^m_{i=1} y_i \textrm{Cost}_1(\theta^T \symbf{x}_i) +
 
 What is the hypothesis for SVM? It’s simple and straightforward. When θᵀx ≥ 0, predict 1, otherwise, predict 0. Then we can use the hinge loss function (**Hinge Loss**)
 
-$$C(\symbf{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \symbf{x}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \mathbf{x}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2$$
+$$C(\symbf{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \symbf{x}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \mathbf{x})} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{x}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{x}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\bold{\theta})&space;=&space;C&space;\sum^m_{i=1}&space;\Big(&space;y_i&space;\max{\big(0,&space;1-&space;\theta^T&space;\bold{x}_i)}&space;&plus;&space;(1-y_i)&space;\max{\big(0,&space;1&space;&plus;&space;\theta^T&space;\bold{x}_i)}&space;\Big)&space;&plus;&space;\frac{1}{2}\sum^n_{j=1}&space;|\theta_j|^2" title="C(\bold{\theta}) = C \sum^m_{i=1} \Big( y_i \max{\big(0, 1- \theta^T \bold{x}_i)} + (1-y_i) \max{\big(0, 1 + \theta^T \bold{x}_i)} \Big) + \frac{1}{2}\sum^n_{j=1} |\theta_j|^2" /></a>
 
