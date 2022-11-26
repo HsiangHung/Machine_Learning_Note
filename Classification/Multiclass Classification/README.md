@@ -93,7 +93,7 @@ SVMs are inherently two-class classifiers. In the **multiclass SVM**, if it is b
 
 For multiclass, $c = {1, ...K}$, $K$ classes. If our target is a **one-hot** vector, $p = [1, 0, ... 0]$ for $y = 1$, $p = [0, 2, ... 0]$, for $y = 2$, .... and $p = [0, 0, ... 1]$ for $y = K$, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
 
-$$L(\theta, \mathbf{x}) = - \sum^K_{j=1}\bold{I}(y=j)\log\big( h_{\theta}(\mathbf{x}) \big) = - \sum^K_{j=1} \mathbf{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\mathbf{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\mathbf{x}}} \big)$$
+$$L(\theta, \mathbf{x}) = - \sum^K_{j=1} \mathbf{I}(y=j)\log\big( h_{\theta}(\mathbf{x}) \big) = - \sum^K_{j=1} \mathbf{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\mathbf{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\mathbf{x}}} \big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta,&space;\bold{x})&space;=&space;-&space;\sum^K_{j=1}\bold{I}(y=j)\log\big(&space;h_{\theta}(\bold{x})&space;\big)&space;=&space;-&space;\sum^K_{j=1}&space;\bold{I}(y=j)\log\big(&space;\frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}}&space;\big)" title="L(\theta, \bold{x}) = - \sum^K_{j=1}\bold{I}(y=j)\log\big( h_{\theta}(\bold{x}) \big) = - \sum^K_{j=1} \bold{I}(y=j)\log\big( \frac{e^{\theta^{(j)T}\bold{x}}}{\sum^K_{j=1}e^{\theta^{(j)T}\bold{x}}} \big)" /></a>
 
