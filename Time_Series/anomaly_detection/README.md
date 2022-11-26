@@ -23,16 +23,14 @@ $$
 
 Written it in a matrix form:
 
-$$ \begin{matrix} 
-  Y_{1,t}  \\ 
-  Y_{2,t} 
-  \end{matrix}
- = 
+$$ 
 
- \begin{matrix} 
- \alpha_1 + \beta_{11,1} Y_{1, t-1} + \beta_{12,1} Y_{2,t-1} + \epsilon_{1,t} \\ 
-\alpha_2 + \beta_{21,1} Y_{1, t-1} + \beta_{22,1} Y_{2,t-1} + \epsilon_{2,t}
-  \end{matrix}
+\[ \begin{pmatrix} Y_{1,t} \\ Y_{2,t} \end{pmatrix}=
+   \begin{bmatrix}
+     \cos\theta & -\sin\theta\\
+     \sin\theta & \cos\theta
+   \end{bmatrix}
+   \begin{pmatrix} Y_{1,t-1} \\ Y_{2,t-1} \end{pmatrix} \]
 
 $$
 
