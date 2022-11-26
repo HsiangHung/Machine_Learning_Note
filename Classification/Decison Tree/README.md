@@ -204,7 +204,7 @@ For **way B**, if humidity <= 89, 9 positive and 1 negative; humidity > 89, 4 ne
 
 $$H_B = \frac{10}{14}H(\frac{9}{10}, \frac{1}{10}) + \frac{4}{14}H(0, \frac{4}{4}) = \frac{10}{14}\times 0.47 + \frac{4}{14} \times 0 = 0.33 \ \textrm{bits}$$
 
-We can see $I(B) = 0.94 - HB = 0.61 > I(A) = 0.94 - HA = 0.4$, so we choose **way B**, humidity=0.89 to split at this step.
+We can see $I(B) = 0.94 - H_B = 0.61 > I(A) = 0.94 - H_A = 0.4$, so we choose **way B**, humidity=0.89 to split at this step.
 
 
 ### 3.D - Criterion to stop splitting leaf node
