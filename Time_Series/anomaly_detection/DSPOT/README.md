@@ -1,6 +1,6 @@
 # DSPOT
 
-# Introduction 
+## Introduction 
 
 DSPOT is a drift stream POT method, fitting generalized Pareto distribution (GPD) to detect extreme values. In the code, the DSPOT algorithm only focuses on upper extremem values. To detect both upper and lower extreme extreme values, we use the specific variant of DSPOT, called biDSPOT.
 
@@ -14,12 +14,21 @@ $$ F = 1 - \bar{F}.$$
 
 The above function $F(t)$ is called GPD. In the paper, $\mu =0$ is used. Then we have
 
-$$\bar{F}_t(x) \sim \big( 1 + \frac{\gamma}{\sigma} x \big)^{-1/\gamma}$$
+$$\bar{F}_t(x) \sim \big( 1 + \frac{\gamma}{\sigma} x \big)^{-\frac{1}{\gamma}}$$
 
-To fit the GPD, the paper used the peak-over-threshold (POT) approach to the excess of $X-t$.
+Rather than fitting an EVD to the extreme values of $X$, the paper used the peak-over-threshold (POT) approach fit the GPD to the excesses of $X-t$.
 
 
-## Univariate 
+## Extreme Value Threshold $z_q$ Determination
+
+Given $\gamma$ ($\gamma \ne 0$) and $\sigma$, we need to estimate the extreme value threshold $z_q$, and then evaluate the probability $P(X > z_q) < q$, given by the desired probability $q$. ($q$ is usually a small number, like 0.001, 0.0001... etc)
+
+Assume $n$ is the total number of observation (data points), $N_t$ the number of peaks (meaning the number of $X > t$), therefore we have
+
+$$\bar{F}_t(x) = \frac{q}{(\frac{N_t}{n})} = \frac{qn}{N_t} \sim \left[ 1 + \frac{\gamma}{\sigma} (z_q - t) \right]^{-\frac{1}{\gamma}}$$
+
+
+
 Univariate time-series data has only ONE column for event value and a timestamp index corresponding the event. The algorithms like AR (auto regression), MA (moving averaging) or ARIMA (Auto Regression Integrated Moving Averaging) to forecast future events. In the univariate anomaly approach, we can use one of the above models to detect the presence of strange patterns.
 
 A typical AR(p) model can be interpreted as 
