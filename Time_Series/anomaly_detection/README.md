@@ -54,7 +54,7 @@ $${\left( \matrix{ Y_{1,t} \cr Y_{2,t} \cr \vdots \cr Y_{n,t} } \right)}
   \left( \matrix{\beta_{11,i} & \beta_{12,i} & \dots & \beta_{1n,i} \cr 
                  \beta_{21,i} & \beta_{22,i} & \dots & \beta_{2n,i} \cr  
                  \vdots & \vdots & \ddots & \vdots \cr
-                 \beta_{m1,i} & \beta_{m2,i} & \dots & \beta_{nn,i} 
+                 \beta_{n1,i} & \beta_{n2,i} & \dots & \beta_{nn,i} 
                 } 
   \right)
   {\left( \matrix{ Y_{1,t-i} \cr Y_{2,t-i} \cr \vdots \cr Y_{n,t-i} } \right)} +
@@ -80,3 +80,11 @@ $$
 
 * [Vector Autoregression (VAR) – Comprehensive Guide with Examples in Python]: https://www.machinelearningplus.com/time-series/vector-autoregression-examples-python/
 [[Selva Prabhakaran] Vector Autoregression (VAR) – Comprehensive Guide with Examples in Python](https://www.machinelearningplus.com/time-series/vector-autoregression-examples-python/)
+
+
+* [Kaggle: Anomaly detection in multivariate time series]: https://www.kaggle.com/code/drscarlat/anomaly-detection-in-multivariate-time-series/notebook
+[[ALEXANDER SCARLAT] Kaggle: Anomaly detection in multivariate time series](https://www.kaggle.com/code/drscarlat/anomaly-detection-in-multivariate-time-series/notebook)
+
+
+* [Developing Vector AutoRegressive Model in Python!]: https://www.analyticsvidhya.com/blog/2021/08/vector-autoregressive-model-in-python/
+[[Analytics Vidhya] Developing Vector AutoRegressive Model in Python!](https://www.analyticsvidhya.com/blog/2021/08/vector-autoregressive-model-in-python/)
