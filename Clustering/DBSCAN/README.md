@@ -40,7 +40,7 @@ The selection of eps is extremely important. Therefore, we need more efficient s
 
 ### 2.1.1 Find Elbow Point
 
-The Stackover flow blog, [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python), suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python. It shows ploting cost function vs number of cluster k and elblow point is at $k=5$.
+The Stackover flow blog, [find the "elbow point" on an optimization curve with Python](https://stackoverflow.com/questions/51762514/find-the-elbow-point-on-an-optimization-curve-with-python), suggests to implement [Kneedle algorithm](https://kneed.readthedocs.io/en/stable/parameters.html) find the "elbow point" on an optimization curve with Python (also see the paper [Finding a “Kneedle” in a Haystack: Detecting Knee Points in System Behavior](https://raghavan.usc.edu/papers/kneedle-simplex11.pdf)). It shows ploting cost function vs number of cluster k and elblow point is at $k=5$.
 
 DBSCAN can used for outlier detection, but need to choose optimal eps. The paper [[Mohammed T. H. Elbatta and Wesam M. Ashour]][A dynamic Method for Discovering Density Varied Clusters] and [[Amir Masoud]][How to determine epsilon and MinPts parameters of DBSCAN clustering] proposed:
  1. Calculate paired distances among all the data points
@@ -121,6 +121,11 @@ Some general rules for determining Minimum Samples (“MinPts”). The MinPts va
 
 * [Github: Choosing parameters of DBSCAN algorithm]: https://github.com/alitouka/spark_dbscan/wiki/Choosing-parameters-of-DBSCAN-algorithm
 [[Alitouka] Github: Choosing parameters of DBSCAN algorithm](https://github.com/alitouka/spark_dbscan/wiki/Choosing-parameters-of-DBSCAN-algorithm)
+
+
+* [CrossValidate: A routine to choose eps and minPts for DBSCAN]: https://stats.stackexchange.com/questions/88872/a-routine-to-choose-eps-and-minpts-for-dbscan
+[[CrossValidate] CrossValidate: A routine to choose eps and minPts for DBSCAN](https://stats.stackexchange.com/questions/88872/a-routine-to-choose-eps-and-minpts-for-dbscan)
+
 
 * [A dynamic Method for Discovering Density Varied Clusters]: https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters
 [[Mohammed T. H. Elbatta and Wesam M. Ashour] A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)

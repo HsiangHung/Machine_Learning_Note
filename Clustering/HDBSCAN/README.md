@@ -1,5 +1,5 @@
 
-# Unsupervised Clustering 
+# HDBSCAN
 
 DBSCAN, HDBSCAN [[Pepe Berba]][A gentle introduction to HDBSCAN and density-based clustering], K-means, Expectation–Maximization (EM) Clustering [[George Seif]][The 5 Clustering Algorithms Data Scientists Need to Know], Deep Embedded Clustering (DEC) [[Yuefeng Zhang]][Deep Clustering for Financial Market Segmentation] and [[Chengwei]][How to do Unsupervised Clustering with Keras], Clustering for Topic Modelling [[Syed Sadat Nazrul]][Clustering Based Unsupervised Learning].
 
