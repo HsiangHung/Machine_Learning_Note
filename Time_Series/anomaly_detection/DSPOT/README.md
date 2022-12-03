@@ -12,7 +12,7 @@ The distribution has $iid$ vairables $X > t$, with asymptotic power-law tail beh
 
 $$ F = 1 - \bar{F}.$$
 
-The above function $F(t)$ is called GPD. In the paper, $\mu =0$ is used. Then we have
+The above function $F(t)$ is called GPD. In the paper, $\mu$ is simply set as $\mu = 0$. Then we have
 
 $$\bar{F}_t(x) \sim \Big( 1 + \frac{\gamma}{\sigma} x \Big)^{-\frac{1}{\gamma}}.$$
 
@@ -23,23 +23,23 @@ Rather than fitting an EVD (extreme value distribution) to the extreme values of
 
 ### A. $z_q$ for $\gamma \ne 0$
 
-Given $\gamma$ (and $\gamma \ne 0$) and $\sigma$, we need to estimate the **upper** extreme value threshold $z_q$, and then evaluate the probability of $P(X > z_q) < q$, given a the desired probability $q$. (here $q$ is usually a small number, like 0.001, 0.0001... etc)
+Given $\gamma$ (and $\gamma \ne 0$) and $\sigma$, we need to estimate the **upper** extreme value threshold $z_q$, and then evaluate the probability of $P(X > z_q) < q$, given a desired probability $q$. (here $q$ is usually a small number, like 0.001, 0.0001... etc)
 
-Assume $n$ is the total number of observations (data points), $N_t$ the number of peaks (meaning the number of data points having $X > t$), therefore the probability can be evaluated as
+Assume $n$ is the total number of observations (data points) and $N_t$ is the number of peaks (meaning the number of data points having $X > t$), the probability can be evaluated as
 
 $$\bar{F}_t(x) = \frac{q}{(\frac{N_t}{n})} = \frac{qn}{N_t} \sim \left[ 1 + \frac{\gamma}{\sigma} (z_q - t) \right]^{-\frac{1}{\gamma}}$$
 
-By simple algebra, the lower extremem value threshold $z_q$ is given by
+By simple algebra, the upper extremem value threshold $z^u_q$ is given by
 
 $$z^u_q = z_q \simeq t + \frac{\sigma}{\gamma}\left[ \Big( \frac{qn}{N_t}\Big)^{-\gamma} -1 \right],$$
 
-where in the upper GPD, we have $z^u_q > t$ and superscript $u$ denotes *upper*. On the other hand, for **upper** extreme value threshold $z_q$, the probability is 
+where in the upper GPD, we have $z^u_q > t$ and superscript $u$ denotes *upper*. On the other hand, for **lower** extreme value threshold $z^l_q$, the probability is 
 
-$$\bar{F}_t(x) = \frac{q}{(\frac{N_t}{n})} = \frac{qn}{N_t} \sim \left[ 1 + \frac{\gamma}{\sigma} ( t - z_q ) \right]^{-\frac{1}{\gamma}}$$
+$$\bar{F}_t(x) = \frac{qn}{N_t} \sim \left[ 1 + \frac{\gamma}{\sigma} ( t - z_q ) \right]^{-\frac{1}{\gamma}},$$
 
-then
+due to $ z_q < t$ in the lower GPD. Then
 
-$$z^l_q = z_q \simeq t - \frac{\sigma}{\gamma}\left[ \Big( \frac{qn}{N_t}\Big)^{-\gamma} -1 \right],$$
+$$z^l_q = z_q \simeq t - \frac{\sigma}{\gamma}\left[ \Big( \frac{qn}{N_t}\Big)^{-\gamma} -1 \right].$$
 
 
 
@@ -50,13 +50,13 @@ For the $\gamma = 0$ case, the cumulative distribution $\bar{F}_t(x)$ turns out 
 
 $$ \bar{F}_t(x) \sim e^{-(x-\mu)/ \sigma}, $$
 
-which has exponential tail asymptotic behavior, rather than asymptotic power-law tail behavior. The upper extremem value GPD, $z^u_q$, (and $z^u_q > t$) can be derived as 
+which has exponential tail asymptotic behavior, rather than asymptotic power-law tail behavior. The upper extremem value GPD, $z^u_q$ can be derived as 
 
-$$\frac{qn}{N_t} \sim e^{-(z_q -t)/\sigma} \to z_q \simeq t - \sigma \ln \Big( \frac{qn}{N_t} \Big).$$
+$$\frac{qn}{N_t} \sim e^{-(z_q -t)/\sigma} \to z^u_q = z_q \simeq t - \sigma \ln \Big( \frac{qn}{N_t} \Big).$$
 
-On the other hand, in the lower extremem value GPD, the threshold $z^l_q$ is given as (and $ t < z_q$)
+On the other hand, in the lower extremem value GPD, the threshold $z^l_q$ is given as 
 
-$$\frac{qn}{N_t} \sim e^{-(t - z_q)/\sigma} \to z_q \simeq t + \sigma \ln \Big( \frac{qn}{N_t} \Big).$$
+$$\frac{qn}{N_t} \sim e^{-(t - z_q)/\sigma} \to z^l_q = z_q \simeq t + \sigma \ln \Big( \frac{qn}{N_t} \Big).$$
 
 
 ## Log-Likelihood Function
@@ -65,7 +65,7 @@ The cumulative distribution $F(x)$ is defined as the integral over the probabili
 
 $$F(x) = \int^{x}_0 P(x^{\prime}) dx^{\prime} = 1 - \bar{F}_t(x) = 1 - \left( 1 + \frac{\gamma}{\sigma}x \right)^{-\frac{1}{\gamma}}.$$
 
-Therefore, taking the derivative of the cumulative function, the probability density function $P(x)$ turns out to be either, if $\gamma \ne 0$ 
+Therefore, taking the derivative of the cumulative function, the probability density function $P(x)$ turns out to be either, if $\gamma \ne 0$:
 
 $$P(x) = \frac{1}{\sigma}\left( 1 + \frac{\gamma}{\sigma}x \right)^{(1+\frac{1}{\gamma})}, $$
 
@@ -77,15 +77,15 @@ for $\gamma = 0$.
 
 By the result, the log-likelihood function is defined as 
 
-$$\log L(\gamma, \sigma, X) = \log \prod^{N_t}_i P(x_i)  = \sum^{N_t}_i \log P(x_i)  \nn &=& -N_t \log \sigma - (1+\frac{1}{\gamma}) \sum^{N_t}_i \log \Big( 1 + \frac{\gamma}{\sigma} x_i \Big)$$
+$$\log L(\gamma, \sigma, X) = \log \prod^{N_t}_i P(x_i)  = \sum^{N_t}_i \log P(x_i)$$
 
 For $\gamma \ne 0$, we have 
 
-$$\log L(\gamma, \sigma, X) = \log \prod^{N_t}_i P(x_i)  = \sum^{N_t}_i \log P(x_i)  \nn &=& -N_t \log \sigma - (1+\frac{1}{\gamma}) \sum^{N_t}_i \log \Big( 1 + \frac{\gamma}{\sigma} x_i \Big)$$
+$$\log L(\gamma, \sigma, X) = \sum^{N_t}_i \log \Big( \frac{1}{\sigma}\left( 1 + \frac{\gamma}{\sigma}x \right)^{(1+\frac{1}{\gamma})} \Big) = -N_t \log \sigma - (1+\frac{1}{\gamma}) \sum^{N_t}_i \log \Big( 1 + \frac{\gamma}{\sigma} x_i \Big)$$
 
 or 
 
-$$ \log L(\gamma, \sigma, X) =  - N_t \log \sigma - \frac{1}{\sigma} \sum^{N_t}_i x_i, $$
+$$ \log L(\gamma, \sigma, X) = \sum^{N_t}_i \log \big( \frac{1}{\sigma} e^{-x/ \sigma} \big) =  - N_t \log \sigma - \frac{1}{\sigma} \sum^{N_t}_i x_i, $$
 
 if $\gamma = 0$.
 
