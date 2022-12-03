@@ -77,15 +77,15 @@ for $\gamma = 0$.
 
 The log-likelihood function is defined as 
 
-$$\log L(\gamma, \sigma, X) = \log \prod^{N_t}_{i=1} P(x_i)  = \sum^{N_t}_{i=1} \log P(x_i).$$
+$$\log L(\gamma, \sigma, X) = \log \prod^{N_t}_i P(x_i)  = \sum^{N_t}_i \log P(x_i).$$
 
 For $\gamma \ne 0$, we have 
 
-$$\log L(\gamma, \sigma, X) = \sum^{N_t}_{i=1} \log \left[ \frac{1}{\sigma}\left( 1 + \frac{\gamma}{\sigma} x_i \right)^{(1+\frac{1}{\gamma})} \right] = -N_t \log \sigma - (1+\frac{1}{\gamma}) \sum^{N_t}_{i=1} \log \Big( 1 + \frac{\gamma}{\sigma} x_i \Big)$$
+$$\log L(\gamma, \sigma, X) = \sum^{N_t}_i \log \left[ \frac{1}{\sigma}\left( 1 + \frac{\gamma}{\sigma} x_i \right)^{(1+\frac{1}{\gamma})} \right] = -N_t \log \sigma - (1+\frac{1}{\gamma}) \sum^{N_t}_i \log \Big( 1 + \frac{\gamma}{\sigma} x_i \Big)$$
 
 or 
 
-$$ \log L(\gamma, \sigma, X) = \sum^{N_t}_{i=1} \log \big( \frac{1}{\sigma} e^{-x/ \sigma} \big) =  - N_t \log \sigma - \frac{1}{\sigma} \sum^{N_t}_{i=1} x_i, $$
+$$ \log L(\gamma, \sigma, X) = \sum^{N_t}_i \log \big( \frac{1}{\sigma} e^{-x/ \sigma} \big) =  - N_t \log \sigma - \frac{1}{\sigma} \sum^{N_t}_i x_i, $$
 
 if $\gamma = 0$.
 
