@@ -75,13 +75,13 @@ $$P(x) = \frac{1}{\sigma} e^{-x/ \sigma}, $$
 
 for $\gamma = 0$.
 
-By the result, the log-likelihood function is defined as 
+The log-likelihood function is defined as 
 
-$$\log L(\gamma, \sigma, X) = \log \prod^{N_t}_i P(x_i)  = \sum^{N_t}_i \log P(x_i)$$
+$$\log L(\gamma, \sigma, X) = \log \prod^{N_t}_i P(x_i)  = \sum^{N_t}_i \log P(x_i).$$
 
 For $\gamma \ne 0$, we have 
 
-$$\log L(\gamma, \sigma, X) = \sum^{N_t}_i \log \Big( \frac{1}{\sigma}\left( 1 + \frac{\gamma}{\sigma}x \right)^{(1+\frac{1}{\gamma})} \Big) = -N_t \log \sigma - (1+\frac{1}{\gamma}) \sum^{N_t}_i \log \Big( 1 + \frac{\gamma}{\sigma} x_i \Big)$$
+$$\log L(\gamma, \sigma, X) = \sum^{N_t}_i \log \left[ \frac{1}{\sigma}\left( 1 + \frac{\gamma}{\sigma}x \right)^{(1+\frac{1}{\gamma})} \right] = -N_t \log \sigma - (1+\frac{1}{\gamma}) \sum^{N_t}_i \log \Big( 1 + \frac{\gamma}{\sigma} x_i \Big)$$
 
 or 
 
