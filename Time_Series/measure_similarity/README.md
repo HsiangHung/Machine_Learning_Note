@@ -30,10 +30,8 @@ It returns distance = 5.
 
 * [How can we quantify similarity between time series?]: https://tech.gorilla.co/how-can-we-quantify-similarity-between-time-series-ed1d0b633ca0
 [[Alexander Bader] How can we quantify similarity between time series?](https://tech.gorilla.co/how-can-we-quantify-similarity-between-time-series-ed1d0b633ca0)
-
 * [Understanding Dynamic Time Warping]: https://www.databricks.com/blog/2019/04/30/understanding-dynamic-time-warping.html
 [[Ricardo Portilla and Brenner Heintz] Understanding Dynamic Time Warping](https://www.databricks.com/blog/2019/04/30/understanding-dynamic-time-warping.html)
-
 * [Dynamic Time Warping - Explanation and Code Implementation]: https://towardsdatascience.com/dynamic-time-warping-3933f25fcdd
 [[Jeremy Zhang] Dynamic Time Warping - Explanation and Code Implementation](https://towardsdatascience.com/dynamic-time-warping-3933f25fcdd)
 
