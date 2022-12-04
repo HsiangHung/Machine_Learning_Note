@@ -20,6 +20,8 @@ For each K{
 }
 ```
 
+Here Yi Zhe Ang built a [page](https://k-means-explorable.vercel.app) to explain how K-means works. 
+
 ### Stop Criterion
 
 See [[Azika Amelia]][K-Means Clustering: From A to Z] and [[Pulkit Sharma]][The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need]:

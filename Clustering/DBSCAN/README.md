@@ -116,34 +116,27 @@ Some general rules for determining Minimum Samples (“MinPts”). The MinPts va
 * For 2-dimensional data, use DBSCAN’s default value of MinPts = 4 (Ester et al., 1996).
 * If your data has more than 2 dimensions, choose MinPts = 2*dim, where dim= the dimensions of your data set (Sander et al., 1998).
 
-#### Reference
 
+### 2.3 Code for Auto search Eps
+[Jupyter Notebook: DBSCSN Outlier Detection for Eps](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Clustering/DBSCAN/DBSCAN_autoeps.ipynb)
+
+
+#### Reference
 
 * [Github: Choosing parameters of DBSCAN algorithm]: https://github.com/alitouka/spark_dbscan/wiki/Choosing-parameters-of-DBSCAN-algorithm
 [[Alitouka] Github: Choosing parameters of DBSCAN algorithm](https://github.com/alitouka/spark_dbscan/wiki/Choosing-parameters-of-DBSCAN-algorithm)
-
-
 * [CrossValidate: A routine to choose eps and minPts for DBSCAN]: https://stats.stackexchange.com/questions/88872/a-routine-to-choose-eps-and-minpts-for-dbscan
 [[CrossValidate] CrossValidate: A routine to choose eps and minPts for DBSCAN](https://stats.stackexchange.com/questions/88872/a-routine-to-choose-eps-and-minpts-for-dbscan)
-
-
 * [A dynamic Method for Discovering Density Varied Clusters]: https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters
 [[Mohammed T. H. Elbatta and Wesam M. Ashour] A dynamic Method for Discovering Density Varied Clusters](https://www.researchgate.net/publication/256706346_A_dynamic_Method_for_Discovering_Density_Varied_Clusters)
-
-
 * [A Modified DBSCAN Algorithm for Anomaly Detection in Time-series Data with Seasonality]: https://iajit.org/portal/images/Year2022/No.1/19023.pdf
 [[Praphula Jain, Mani Shankar Bajpai, and Rajendra Pamula] A Modified DBSCAN Algorithm for Anomaly Detection in Time-series Data with Seasonality](https://iajit.org/portal/images/Year2022/No.1/19023.pdf)
-
-
 * [DBSCAN Python Example: The Optimal Value For Epsilon (EPS)]: https://towardsdatascience.com/machine-learning-clustering-dbscan-determine-the-optimal-value-for-epsilon-eps-python-example-3100091cfbc
 [[Cory Maklin] DBSCAN Python Example: The Optimal Value For Epsilon (EPS)](https://towardsdatascience.com/machine-learning-clustering-dbscan-determine-the-optimal-value-for-epsilon-eps-python-example-3100091cfbc)
-
 * [How to determine epsilon and MinPts parameters of DBSCAN clustering]: http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/
 [[Amir Masoud] How to determine epsilon and MinPts parameters of DBSCAN clustering](http://www.sefidian.com/2020/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering/)
-
 * [A NEW METHOD FOR AUTOMATIC DETERMINING OF THE DBSCAN PARAMETERS]: https://sciendo.com/pdf/10.2478/jaiscr-2020-0014
 [[Artur Starczewski, Piotr Goetzen, Meng Joo Er] A NEW METHOD FOR AUTOMATIC DETERMINING OF THE DBSCAN PARAMETERS](https://sciendo.com/pdf/10.2478/jaiscr-2020-0014)
-
 * [Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra]: https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf
 [[Nadia Rahmah and Imas Sukaesih Sitanggang] Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra](https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf)
 
