@@ -168,22 +168,18 @@ Adam is another method that computes adaptive learning rates for each parameter.
 
 $$\Delta \theta_t = - \alpha \Big( \frac{v^{\textrm{corr}}_t}{\sqrt{s^{\textrm{corr}}_t} + \epsilon}\Big),$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\alpha&space;\Big(&space;\frac{v^{\textrm{corr}}_t}{\sqrt{s^{\textrm{corr}}_t}&space;&plus;&space;\epsilon}\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\alpha&space;\Big(&space;\frac{v^{\textrm{corr}}_t}{\sqrt{s^{\textrm{corr}}_t}&space;&plus;&space;\epsilon}\Big)" title="\Delta \theta_t = - \alpha \Big( \frac{v^{\textrm{corr}}_t}{\sqrt{s^{\textrm{corr}}_t} + \epsilon}\Big)" /></a>
-
-where 
-
-$v_t = \beta_1 v_{t-1} + (1-\beta_1)g_t \textrm{, and } s_t = \beta_2 s_{t-1} + (1-\beta_2)g^2_t$.
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=v_t&space;=&space;\beta_1&space;v_{t-1}&space;&plus;&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_t&space;=&space;\beta_1&space;v_{t-1}&space;&plus;&space;(1-\beta_1)g_t&space;\textrm{,&space;and&space;}&space;s_t&space;=&space;\beta_2&space;s_{t-1}&space;&plus;&space;(1-\beta_2)g^2_t" title="v_t = \beta_1 v_{t-1} + (1-\beta_1)g_t \textrm{, and } s_t = \beta_2 s_{t-1} + (1-\beta_2)g^2_t" /></a>
+where $v_t = \beta_1 v_{t-1} + (1-\beta_1)g_t$ and $s_t = \beta_2 s_{t-1} + (1-\beta_2)g^2_t$.
 
 The first is momentum-like, and the second is RMSprop. The supersrcipt "corr" represents "corrected" momentum and RSMprop:
 
-$$v^{\textrm{corr}}_t = \frac{v_{t}}{(1-\beta^t_1)} \textrm{, and } \ s^{\textrm{corr}}_t = \frac{s_t}{(1-\beta^t_{2})}.$$
+$$v^{\textrm{corr}}_t = \frac{v_{t}}{(1-\beta^t_1)},$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=v^{\textrm{corr}}_t&space;=&space;\frac{v_{t}}{(1-\beta^t_1)}&space;\textrm{,&space;and&space;}&space;\&space;s^{\textrm{corr}}_t&space;=&space;\frac{s_t}{(1-\beta^t_{2})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v^{\textrm{corr}}_t&space;=&space;\frac{v_{t}}{(1-\beta^t_1)}&space;\textrm{,&space;and&space;}&space;\&space;s^{\textrm{corr}}_t&space;=&space;\frac{s_t}{(1-\beta^t_{2})}" title="v^{\textrm{corr}}_t = \frac{v_{t}}{(1-\beta^t_1)} \textrm{, and } \ s^{\textrm{corr}}_t = \frac{s_t}{(1-\beta^t_{2})}" /></a>
+and 
 
-The proposed default values are $\beta_1=0.9$, $\beta_2=0.999$ and $epsilon=10^{-8}$. `β1 = 0.9`, `β2 = 0.999`, and `ϵ = 10^{-8}`.
+$$s^{\textrm{corr}}_t = \frac{s_t}{(1-\beta^t_2)}.$$
 
+
+The proposed default values are $\beta_1=0.9$, $\beta_2=0.999$ and $\epsilon=10^{-8}$.
 
 ### E. Comparison Between Optimizers
 
