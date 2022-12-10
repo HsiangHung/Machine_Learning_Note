@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-DSPOT is a drift stream POT method, fitting generalized Pareto distribution (GPD) to detect extreme values. In the paper [[Alban Siffer et. al. 2017]][Anomaly Detection in Streams with Extreme Value Theory], the DSPOT algorithm only focuses on upper extremem values. To detect both upper and lower extreme extreme values, we use the specific variant of DSPOT, called biDSPOT.
+DSPOT is a drift stream POT method, fitting generalized Pareto distribution (GPD) to detect extreme values. In the paper [[Alban Siffer et. al. 2017]][Anomaly Detection in Streams with Extreme Value Theory], the DSPOT algorithm only focuses on anomaly detection on upper extremem values. To detect both upper and lower extreme extreme values, we generalize the variant of DSPOT below.
 
 Assume we have an extreme value distribution. The Pickands-Balkema-de Haan theorem states, that there exists a cumulative distribution function $F(x)$, which reads as
 
@@ -18,20 +18,20 @@ The above function $F(t)$ is called GPD, with parameter of $\gamma$, $\sigma$ an
 
 $$\bar{F}_t(x) \sim \Big( 1 + \frac{\gamma}{\sigma} x \Big)^{-\frac{1}{\gamma}}.$$
 
-Rather than fitting an EVD to the extreme values of $X$, the DSPOT paper used the peak-over-threshold (POT) approach to fit the GPD to the excesses, $i.e.$ $X-t$ [[GitHub]][GitHub:model-pot, Peak over Threshold].
+Rather than fitting an EVD to the extreme values of $X$, the DSPOT paper used the peak-over-threshold (POT) approach [[GitHub]][GitHub:model-pot, Peak over Threshold] to fit the GPD to the excesses, $i.e.$ $X-t$. The DSPOT code implemented grimshaw to fit $gamm$ and $sigma$.
 
 
 ## Extreme Value Threshold $z_q$ Determination
 
 ### A. $z_q$ for $\gamma \ne 0$
 
-Given $\gamma$ (and $\gamma \ne 0$) and $\sigma$, we need to estimate the **upper** extreme value threshold $z_q$, and then evaluate the probability of $P(X > z_q) < q$, given a desired probability $q$. (here $q$ is usually a small number, like 0.001, 0.0001... etc)
+Given $\gamma$ (and $\gamma \ne 0$) and $\sigma$, we need to estimate the extreme value threshold $z_q$. For **upper** extreme value threshold, we evaluate the probability of $P(X > z_q) < q$, given a desired probability $q$. (here $q$ is usually a small number, like 0.001, 0.0001... etc)
 
 Assume $n$ is the total number of observations (data points) and $N_t$ is the number of peaks (meaning the number of data points having $X > t$), the probability can be evaluated as
 
 $$\bar{F}_t(x) = \frac{q}{(\frac{N_t}{n})} = \frac{qn}{N_t} \sim \left[ 1 + \frac{\gamma}{\sigma} (z_q - t) \right]^{-\frac{1}{\gamma}}$$
 
-By simple algebra, the upper extremem value threshold $z^u_q$ is given by
+By simple algebra, the upper extreme value threshold $z^u_q$ is given by
 
 $$z^u_q = z_q \simeq t + \frac{\sigma}{\gamma}\left[ \Big( \frac{qn}{N_t}\Big)^{-\gamma} -1 \right],$$
 
@@ -41,10 +41,15 @@ $$\bar{F}_t(x) = \frac{qn}{N_t} \sim \left[ 1 + \frac{\gamma}{\sigma} ( t - z_q 
 
 due to $ z_q < t$ in the lower GPD. Then
 
-$$z^l_q = z_q \simeq t - \frac{\sigma}{\gamma}\left[ \Big( \frac{qn}{N_t}\Big)^{-\gamma} -1 \right].$$
+$$z^l_q = z_q \simeq t - \frac{\sigma}{\gamma}\left[ \Big( \frac{qn}{N_t}\Big)^{-\gamma} -1 \right],$$
 
+where in $z^l_q$ the superscript denotes *lower*.
 
-
+The above derivation can refer to the code https://github.com/cbhua/model-pot/blob/main/src/dspot.py#L51:
+```Python
+r = k * risk / peaks.size
+z = t + (sigma / gamma) * (pow(r, -gamma) - 1)
+```
 
 ### B. $z_q$ for $\gamma = 0$
 
@@ -52,13 +57,23 @@ For the $\gamma = 0$ case, the cumulative distribution $\bar{F}_t(x)$ turns out 
 
 $$ \bar{F}_t(x) \sim e^{-(x-\mu)/ \sigma}, $$
 
-which has exponential tail asymptotic behavior, rather than asymptotic power-law tail behavior. The upper extremem value GPD, $z^u_q$ can be derived as 
+which has exponential tail asymptotic behavior, rather than asymptotic power-law tail behavior. The upper extreme value GPD, $z^u_q$ can be derived as 
 
 $$\frac{qn}{N_t} \sim e^{-(z_q -t)/\sigma} \ \to \ z^u_q = z_q \simeq t - \sigma \ln \Big( \frac{qn}{N_t} \Big).$$
 
+This corresponds to the code in https://github.com/cbhua/model-pot/blob/main/src/pot.py#L40
+```Python
+z = t + (sigma / gamma) * (pow(r, -gamma) - 1)
+```
+
 On the other hand, in the lower extremem value GPD, the threshold $z^l_q$ is given as 
 
-$$\frac{qn}{N_t} \sim e^{-(t - z_q)/\sigma} \ \to \ z^l_q = z_q \simeq t + \sigma \ln \Big( \frac{qn}{N_t} \Big).$$
+$$\frac{qn}{N_t} \sim e^{-(t - z_q)/\sigma} \ \to \ z^l_q = z_q \simeq t + \sigma \ln \Big( \frac{qn}{N_t} \Big),$$
+
+corresponding to https://github.com/cbhua/model-pot/blob/main/src/pot.py#L42
+```Python
+z = t - sigma * log(r)
+```
 
 
 ## Log-Likelihood Function
@@ -85,11 +100,31 @@ For $\gamma \ne 0$, we have
 
 $$\log L(\gamma, \sigma, X) = \sum^{N_t}_i \log \left[ \frac{1}{\sigma}\left( 1 + \frac{\gamma}{\sigma} x_i \right)^{(1+\frac{1}{\gamma})} \right] = -N_t \log \sigma - (1+\frac{1}{\gamma}) \sum^{N_t}_i \log \Big( 1 + \frac{\gamma}{\sigma} x_i \Big)$$
 
-or 
+This corresponds to the code in https://github.com/cbhua/model-pot/blob/main/src/pot.py#L40
+```Python
+z = t + (sigma / gamma) * (pow(r, -gamma) - 1)
+```
+
+For $\gamma = 0$, 
 
 $$ \log L(\gamma, \sigma, X) = \sum^{N_t}_i \log \big( \frac{1}{\sigma} e^{-x_i/ \sigma} \big) =  - N_t \log \sigma - \frac{1}{\sigma} \sum^{N_t}_i x_i, $$
 
-if $\gamma = 0$.
+corresponding to https://github.com/cbhua/model-pot/blob/main/src/pot.py#L42
+```Python
+z = t - sigma * log(r)
+```
+
+The liklihood evaluation corresponds to the code: https://github.com/cbhua/model-pot/blob/main/src/utils/grimshaw.py#L101
+```Python
+def cal_log_likelihood(peaks, gamma, sigma):
+    if gamma != 0:
+        tau = gamma/sigma
+        log_likelihood = -peaks.size * log(sigma) - (1 + (1 / gamma)) * (np.log(1 + tau * peaks)).sum()
+    else: 
+        log_likelihood = peaks.size * (1 + log(peaks.mean()))
+    return log_likelihood
+```
+
 
 ## Example
 
