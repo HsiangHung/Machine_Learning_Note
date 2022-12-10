@@ -146,7 +146,7 @@ Note the blog [[Sebastian Ruder]][An overview of gradient descent optimization a
 
 Adagrad **modifies the general learning rate** at each time step `t` for every parameter θ based on the past gradients [[Sebastian Ruder]][An overview of gradient descent optimization algorithms], [[Roan Gylberth]][An Introduction to AdaGrad]
 
-$$\Delta \theta_t = - \frac{\alpha}{\sqrt{ \sum^t_{\tau} (g_{\tau})^2 + \epsilon }} g_{t}.$$
+$$\Delta \theta_t = - \frac{\alpha}{\sqrt{ \sum^t_{\tau = 1} (g_{\tau})^2 + \epsilon }} g_{t}.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;\theta_t&space;=&space;-&space;\frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2&space;&plus;&space;\epsilon}}&space;g_{t}" title="\Delta \theta_t = - \frac{\alpha}{\sqrt{\sum^t_{\tau=1}(g_{\tau})^2 + \epsilon}} g_{t}" /></a>
 
