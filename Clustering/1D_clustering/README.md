@@ -1,20 +1,35 @@
 
 # 1D Clustering
 
-* [1. Introduction](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#1-introduction)
-* [2. Hyperparameters in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#2-hyperparameters-in-dbscan)
-     * [2.1 Choosing Epsilon](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#21-choosing-epsilon)
-     * [2.2 Choosing MinPt](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#22-choosing-minpt)
+* [1. Kernel Density Estimate (KDE)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/1D_clustering#1-kernel-density-estimate)
+* [2. Gaussina Mixture Model (GMM)](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/1D_clustering#2-gaussina-mixture-model-gmm)
 * [3. Validation of Brutal Searching Epsilon in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#3-validation-of-brutal-searching-epsilon-in-dbscan)
-* [4. Disadvanatge in DBSCAN](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Clustering/DBSCAN#4-disadvanatge-in-dbscan)
 
 
 
-## 1. Kernel Density Estimate
+
+## 1. Kernel Density Estimate (KDE)
 
 
 How to use KDE for 1D clustering? see [[Stackoverflow]][How would one use Kernel Density Estimation as a 1D clustering method in scikit learn?]
 
+First fit the 1D density using KDE:
+```Python
+from sklearn.neighbors.kde import KernelDensity
+a = array([10,11,9,23,21,11,45,20,11,12]).reshape(-1, 1)
+kde = KernelDensity(kernel='gaussian', bandwidth=3).fit(a)
+```
+Then prepare profile based on the data range to identfiy local minima and maxima:
+```Python
+from scipy.signal import argrelextrema
+s = linspace(np.min(a), np.max(a))
+e = kde.score_samples(s.reshape(-1,1))
+mi, ma = argrelextrema(e, np.less)[0], argrelextrema(e, np.greater)[0]
+```
+Then we can simply clustering the data as 
+1. a[a < mi[0]]
+2. a[(a >= mi[0]) * (a <= mi[1])]
+3. a[a >= mi[1]]
 
 Some easy rules of thumb for bandwidth [[Andrey Akinshin]][The importance of kernel density estimation bandwidth]:
 * Scott’s rule of thumb: $h \sim 1.06 \sigma n^{-1/5}$
