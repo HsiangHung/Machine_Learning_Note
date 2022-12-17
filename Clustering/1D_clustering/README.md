@@ -11,7 +11,7 @@
 ## 1. Kernel Density Estimate (KDE)
 
 
-How to use KDE for 1D clustering? see [[Stackoverflow]][How would one use Kernel Density Estimation as a 1D clustering method in scikit learn?]
+How to use KDE for 1D clustering? see the stackoverflow post [Stackoverflow: How would one use Kernel Density Estimation as a 1D clustering method in scikit learn?](https://stackoverflow.com/questions/35094454/how-would-one-use-kernel-density-estimation-as-a-1d-clustering-method-in-scikit).
 
 First fit the 1D density using KDE:
 ```Python
@@ -26,12 +26,22 @@ s = linspace(np.min(a), np.max(a))
 e = kde.score_samples(s.reshape(-1,1))
 mi, ma = argrelextrema(e, np.less)[0], argrelextrema(e, np.greater)[0]
 ```
-Then we can simply clustering the data as 
-1. a[a < mi[0]]
-2. a[(a >= mi[0]) * (a <= mi[1])]
-3. a[a >= mi[1]]
+`mi` returns `[17.34693878, 33.67346939]`. 
 
-Some easy rules of thumb for bandwidth [[Andrey Akinshin]][The importance of kernel density estimation bandwidth]:
+Then we can simply clustering the data as 
+1. `a[a < mi[0]]` (a < 17.347)
+2. `a[(a >= mi[0]) * (a <= mi[1])]` (17.347 < a < 33.673)
+3. `a[a >= mi[1]]` (a > 33.673)
+
+### Hyperparameters in KDE
+
+Two important hyperparameters in KDE:
+1. Kernel
+2. bandwidth
+
+The 1D clustering using KDE is sensitive to bandwidth selection.
+
+There are some easy rules of thumb for determining bandwidth [[Andrey Akinshin]][The importance of kernel density estimation bandwidth]:
 * Scott’s rule of thumb: $h \sim 1.06 \sigma n^{-1/5}$
 * Silverman’s rule of thumb: $h = 0.9 \min(\sigma, \frac{IQR}{1.35})n^{-1/5}$, where $IQR = (Q_3 - Q_1)/2$ [Interquartile Range](https://byjus.com/maths/interquartile-range/). Using ``` scipy.stats.iqr```
 
@@ -43,12 +53,6 @@ The Improved Sheather-Jones algorithm [[KDEpy]][KDEpy Bandwidth], [[Eduardo Garc
 
 others: [[Andrey Akinshin]][The importance of kernel density estimation bandwidth], [[Crossvalidated]][Methods to Find the Best Bandwidth for Kernel Density Estimation]
 
-
-### Hyperparameters in KDE
-
-Two important hyperparameters in DBSCAN:
-1. Kernel
-2. bandwidth
 
 #### Reference
 
