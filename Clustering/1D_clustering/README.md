@@ -84,17 +84,17 @@ In the GMM model, the prior distribution on the vector $\bf{\mu}$ and $\Sigma$ o
 
 $$ p(\bf{X}) = \sum^K_{n=1} \omega_n \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n), $$
 
-where index $n$ goes over distribution component, $K$ is the number of components, and $\mathcal{N}(X|\bf{\mu}_n, \Sigma_n)$ is the $n$-th component multivariate **Guassian** distribution with means $\bf{\mu_n}$ and covariance matrices $\Sigma_n$, which reads as
+where index $n$ goes over distribution component, $K$ is the number of components, and $\mathcal{N}(X|\bf{\mu}_n, \Sigma_n)$ is the $n$-th component multivariate **Guassian** distribution $\mathcal{N}_n$ with means $\bf{\mu_n}$ and covariance matrices $\Sigma_n$, which reads as
 
 $$ \mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n) = \frac{1}{ (2\pi)^{\frac{n}{2}} |\Sigma|^{\frac{1}{2}}}\exp \left( -\frac{1}{2} (\bf{X}- \bf{\mu}_n)^T \Sigma_n^{-1}(\bf{X}- \bf{\mu}_n) \right).$$
 
 Given a predetermining parameter, $K$, the number of Gaussian distributions, we perform iterative processes, called Expectation–maximization (EM) algorithm. 
 
-At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. $ x < s^0 $ for $\mathcal{N}_0$, $ s^0 \ge x < s^1 $ for $\mathcal{N}_1$ ... etc. Thus from data, we have means $\mu_n$ and covariance matrices $\Sigma_n$ for each Gaussian distributions component and then determine $\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$. 
+At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. $ x < s^0 $ for $\mathcal{N}_0$, $ s^0 \ge x < s^1 $ for $\mathcal{N}_1$ ... etc. Thus from data, we determine means $\mu_n$ and covariance matrices $\Sigma_n$ as well as  $\mathcal{N}_n$ for each component $n$.
 
 Next step is to compute new weight as 
 
-$$ \omega_{\textrm{new}, n} = \frac{1}{N} \sum^N_{n=1} \frac{\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}{\sum_n^K \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}, $$
+$$ \omega_n^{\textrm{new}} = \frac{1}{N} \sum^N_{n=1} \frac{\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}{\sum_n^K \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}, $$
 
 Here is a introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
 
