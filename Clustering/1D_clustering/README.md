@@ -104,7 +104,7 @@ and
 
 $$ \Sigma^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) || \bf{X}_i - \mu_n ||^2 .$$
 
-This completes an iteration. We replace $\omega^{\textrm{new}_n}$, $\mu^{\textrm{new}}_n$, $\Sigma^{\textrm{new}}_n$ to $\omega_n}$, $\mu_n$, $\Sigma_n$ and continue the process until the changes on the parameters are less some threshold.
+This completes an iteration. We replace $\omega^{\textrm{new}}_n$, $\mu^{\textrm{new}}_n$, $\Sigma^{\textrm{new}}_n$ to $\omega_n$, $\mu_n$, $\Sigma_n$ and continue the process until the changes on the parameters are less some threshold.
 
 
 Here is a introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
