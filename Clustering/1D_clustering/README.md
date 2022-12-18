@@ -75,7 +75,6 @@ Optimization approach [[Niranjan Pramanik]][Kernel Density Estimation]:
 
 ## 2. Gaussina Mixture Model (GMM)
 
-The example to use GMM to perform 1D clustering is described in: [[AstroML]][1D Gaussian Mixture Example]
 
 In the GMM model, the prior distribution on the vector $\bf{\mu}$ and $\Sigma$ of estimates given data $\bf{X}$ is 
 
@@ -104,8 +103,24 @@ $$ \Sigma^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) || \bf{X}_i - \mu_n ||^2 .
 
 This completes an iteration. We replace $\omega^{\textrm{new}}_n$, $\mu^{\textrm{new}}_n$, $\Sigma^{\textrm{new}}_n$ to $\omega_n$, $\mu_n$, $\Sigma_n$ and continue the process until the changes on the parameters are less some threshold.
 
+The example Python code is as follows [[AstroML]][1D Gaussian Mixture Example]:
 
+```Python
+from sklearn.mixture import GaussianMixture
 
+K = 11
+
+models = []
+for n in range(2, len(K)):
+    models.append(GaussianMixture(N[i]).fit(X)) # grid search number of components
+
+# compute the AIC and the BIC
+AIC = [m.aic(X) for m in models]
+BIC = [m.bic(X) for m in models]
+
+best_GMM = models[np.argmin(AIC)]
+```
+Above example run grid search on $n=2, 3... 10$ components, and choose the model with lowest AIC as optimal model.
 
 
 #### Reference
