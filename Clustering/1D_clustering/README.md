@@ -98,7 +98,7 @@ $$ \omega_n^{\textrm{new}} = \frac{1}{N} \sum^N_{i=1} \frac{\mathcal{N}(\bf{X}_i
 
 and the new means and covariance matrices 
 
-$$ \mu^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) \bf{X}_i = \sum^N_i \frac{ \bf{X}_i \omega_n \mathcal{N} (\bf{X}|\bf{\mu}_n, \Sigma_n) }{\sum_n \omega_n \mathcal{N}  (\bf{X}|\bf{\mu}_n, \Sigma_n)}$$
+$$ \mu^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) \bf{X}_i = \sum^N_i \frac{ \omega_n \mathcal{N} (\bf{X}_i |\bf{\mu}_n, \Sigma_n) \bf{X}_i }{\sum_n \omega_n \mathcal{N}  (\bf{X}_i |\bf{\mu}_n, \Sigma_n)}$$
 
 Here is a introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
 
