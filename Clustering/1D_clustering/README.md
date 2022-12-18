@@ -90,7 +90,7 @@ $$ \mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n) = \frac{1}{ (2\pi)^{
 
 Given a predetermining parameter, $K$, the number of Gaussian distributions, we perform iterative processes, called Expectation–maximization (EM) algorithm. 
 
-At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. $ x < s^0$ for $\mathcal{N}_0$, $ s^0 \ge x < s^1$ for $\mathcal{N}_1$ ... etc. Thus from data, we have means $\mu_n$ and covariance matrices $\Sigma_n$ for each Gaussian distributions component and then determine $\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$. 
+At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. $ x < s^0 $ for $\mathcal{N}_0$, $ s^0 \ge x < s^1 $ for $\mathcal{N}_1$ ... etc. Thus from data, we have means $\mu_n$ and covariance matrices $\Sigma_n$ for each Gaussian distributions component and then determine $\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$. 
 
 Next step is to compute new weight as 
 
