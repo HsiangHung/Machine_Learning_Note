@@ -94,7 +94,7 @@ At first we initialize the weights $\omega_n = 1/K$ and split points which defin
 
 Next step is to compute new weight as 
 
-$$ \omega_n^{\textrm{new}} = \frac{1}{N} \sum^N_{n=1} \frac{\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}{\sum_{n=1 ~ K} \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}, $$
+$$ \omega_n^{\textrm{new}} = \frac{1}{N} \sum^N_{i=1} \frac{\mathcal{N}(\bf{X}_i |\bf{\mu}_n, \Sigma_n)}{\sum_{n=1, 2 \cdots K} \mathcal{N}(\bf{X}_i |\bf{\mu}_n, \Sigma_n)}, $$
 
 and the new means and covariance matrices 
 
