@@ -88,7 +88,7 @@ where index $n$ goes over distribution component, $K$ is the number of component
 
 $$ \mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n) = \frac{1}{ (2\pi)^{\frac{n}{2}} |\Sigma|^{\frac{1}{2}}}\exp \left( -\frac{1}{2} (\bf{X}- \bf{\mu}_n)^T \Sigma_n^{-1}(\bf{X}- \bf{\mu}_n) \right).$$
 
-Given a predetermining parameter, $K$, the number of Gaussian distributions, we perform iterative processes, called Expectation–maximization (EM) algorithm. 
+Given a predetermining parameter, $K$, the number of Gaussian distributions, we need to perform iterative processes, called **Expectation–maximization** (EM) algorithm to update $\omega_n$, $\mu_n$, $\Sigma_n$. 
 
 At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. x < $s^0$ for $\mathcal{N}_0$, $s^0 \le$ x < $s^1$ for $\mathcal{N}_1$ ... etc. Then from data, we can determine means $\mu_n$ and covariance matrices $\Sigma_n$, as well as  $\mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$ for each component $n$.
 
@@ -98,7 +98,7 @@ $$ \omega_n^{\textrm{new}} = \frac{1}{N} \sum^N_{i=1} \frac{\mathcal{N}(\bf{X}_i
 
 and the new means and covariance matrices 
 
-$$ \mu^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) \bf{X}_i = $$
+$$ \mu^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) \bf{X}_i = \sum^N_i \frac{ \bf{X}_i \omega_n \mathcal{N} (\bf{X}|\bf{\mu}_n, \Sigma_n) }{\sum_n \omega_n \mathcal{N}  (\bf{X}|\bf{\mu}_n, \Sigma_n)}$$
 
 Here is a introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
 
