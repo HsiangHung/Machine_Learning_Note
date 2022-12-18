@@ -11,7 +11,7 @@
 ## 1. Kernel Density Estimate (KDE)
 
 
-How to use KDE for 1D clustering? see the stackoverflow post [Stackoverflow: How would one use Kernel Density Estimation as a 1D clustering method in scikit learn?](https://stackoverflow.com/questions/35094454/how-would-one-use-kernel-density-estimation-as-a-1d-clustering-method-in-scikit).
+How to use KDE for 1D clustering? Mainly refer the stackoverflow post: [Stackoverflow: How would one use Kernel Density Estimation as a 1D clustering method in scikit learn?](https://stackoverflow.com/questions/35094454/how-would-one-use-kernel-density-estimation-as-a-1d-clustering-method-in-scikit).
 
 First fit the 1D density using KDE:
 ```Python
@@ -78,15 +78,23 @@ others: [[Andrey Akinshin]][The importance of kernel density estimation bandwidt
 
 ## 2. Gaussina Mixture Model (GMM)
 
-GMM example [[AstroML]][1D Gaussian Mixture Example]
+The example to use GMM to perform 1D clustering is described in: [[AstroML]][1D Gaussian Mixture Example]
 
 In the GMM model, the prior distribution on the vector $\bf{\mu}$ and $\Sigma$ of estimates given data $\bf{X}$ is 
 
-$$ p(\bf{X}) = \sum^K_{n=1} w_n \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n), $$
+$$ p(\bf{X}) = \sum^K_{n=1} \omega_n \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n), $$
 
 where index $n$ goes over distribution component, $K$ is the number of components, and $\mathcal{N}(X|\bf{\mu}_n, \Sigma_n)$ is the $n$-th component multivariate **Guassian** distribution with means $\bf{\mu_n}$ and covariance matrices $\Sigma_n$, which reads as
 
 $$\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n) = \frac{1}{ (2\pi)^{\frac{n}{2}} |\Sigma|^{\frac{1}{2}}}\exp \left( -\frac{1}{2} (\bf{X}- \bf{\mu}_n)^T \Sigma_n^{-1}(\bf{X}- \bf{\mu}_n) \right).$$
+
+Given a predetermining parameter, $K$, the number of Gaussian distributions, we perform iterative processes, called EM algorithm. At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions. Thus we have means $\mu_n$ and covariance matrices $\Sigma_n$ for each Gaussian distributions component and then determine $\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$. 
+
+Then new weight can be computed as 
+
+$$ \omega_{\textrm{new}, n} = \frac{1}{N} \sum^N_{n=1} \frac{\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}{\sum^K_n \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}, $$
+
+Here is a introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
 
 
 #### Reference
@@ -96,3 +104,7 @@ $$\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n) = \frac{1}{ (2\pi)^{\frac{n}{2}} |\Si
 
 
 ## 3. Meanshift
+
+**Mean shift** is an unsupervised learning algorithm that is mostly used for clustering. It is widely used in real-world data analysis (e.g., image segmentation)because it’s **non-parametric** and doesn’t require any predefined shape of the clusters in the feature space.
+
+Simply speaking, “mean shift” is equal to “shifting to the mean” in an iterative way.
