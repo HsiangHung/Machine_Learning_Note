@@ -90,11 +90,11 @@ $$ \mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n) = \frac{1}{ (2\pi)^{
 
 Given a predetermining parameter, $K$, the number of Gaussian distributions, we perform iterative processes, called Expectation–maximization (EM) algorithm. 
 
-At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. x < $s^0$ for $\mathcal{N}_0$, $s^0 \ge$ x < $s^1 $ for $\mathcal{N}_1$ ... etc. Then from data, we can determine means $\mu_n$ and covariance matrices $\Sigma_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$ as well as  $\mathcal{N}_n$ for each component $n$.
+At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. x < $s^0$ for $\mathcal{N}_0$, $s^0 \le$ x < $s^1$ for $\mathcal{N}_1$ ... etc. Then from data, we can determine means $\mu_n$ and covariance matrices $\Sigma_n$, as well as  $\mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$ for each component $n$.
 
 Next step is to compute new weight as 
 
-$$ \omega_n^{\textrm{new}} = \frac{1}{N} \sum^N_{n=1} \frac{\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}{\sum^K \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}, $$
+$$ \omega_n^{\textrm{new}} = \frac{1}{N} \sum^N_{n=1} \frac{\mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}{\sum_{n=1 ~ K} \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)}, $$
 
 and the new means and covariance matrices 
 
