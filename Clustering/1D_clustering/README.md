@@ -28,10 +28,10 @@ mi, ma = argrelextrema(e, np.less)[0], argrelextrema(e, np.greater)[0]
 ```
 `mi` returns `[17.34693878, 33.67346939]`. 
 
-Then we can simply clustering the data as 
-1. `a[a < mi[0]]` (a < 17.347)
-2. `a[(a >= mi[0]) * (a <= mi[1])]` (17.347 < a < 33.673)
-3. `a[a >= mi[1]]` (a > 33.673)
+Then we can simply cluster the 1D data as 
+1. a < 17.347 (`mi[0]`)
+2. 17.347 (`mi[0]`) < a < 33.673 (`mi[1]`)
+3. a > 33.673 (`mi[1]]`)
 
 ### Hyperparameters in KDE
 
@@ -39,19 +39,16 @@ Two important hyperparameters in KDE:
 1. Kernel
 2. bandwidth
 
-The 1D clustering using KDE is sensitive to bandwidth selection.
+The 1D clustering using KDE is sensitive to bandwidth selection. There are some easy rules of thumb for determining bandwidth [[Andrey Akinshin]][The importance of kernel density estimation bandwidth]:
 
-There are some easy rules of thumb for determining bandwidth [[Andrey Akinshin]][The importance of kernel density estimation bandwidth]:
 * Scott’s rule of thumb: $h \sim 1.06 \sigma n^{-1/5}$
 * Silverman’s rule of thumb: $h = 0.9 \min(\sigma, \frac{IQR}{1.35})n^{-1/5}$, where $IQR = (Q_3 - Q_1)/2$ [Interquartile Range](https://byjus.com/maths/interquartile-range/). Using ``` scipy.stats.iqr```
 
 
 Optimization approach [[Niranjan Pramanik]][Kernel Density Estimation]:
 * Maximum likelihood cross- validation (MLCV)
-
-The Improved Sheather-Jones algorithm [[KDEpy]][KDEpy Bandwidth], [[Eduardo García-Portugués]][A Short Course on Nonparametric Curve Estimation: Bandwidth selection]
-
-others: [[Andrey Akinshin]][The importance of kernel density estimation bandwidth], [[Crossvalidated]][Methods to Find the Best Bandwidth for Kernel Density Estimation]
+* The Improved Sheather-Jones algorithm [[KDEpy]][KDEpy Bandwidth], [[Eduardo García-Portugués]][A Short Course on Nonparametric Curve Estimation: Bandwidth selection]
+* others: [[Andrey Akinshin]][The importance of kernel density estimation bandwidth], [[Crossvalidated]][Methods to Find the Best Bandwidth for Kernel Density Estimation]
 
 
 #### Reference
@@ -88,7 +85,8 @@ where index $n$ goes over distribution component, $K$ is the number of component
 
 $$ \mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n) = \frac{1}{ (2\pi)^{\frac{n}{2}} |\Sigma|^{\frac{1}{2}}}\exp \left( -\frac{1}{2} (\bf{X}- \bf{\mu}_n)^T \Sigma_n^{-1}(\bf{X}- \bf{\mu}_n) \right).$$
 
-Given a predetermining parameter, $K$, the number of Gaussian distributions, we need to perform iterative processes, called **Expectation–maximization** (EM) algorithm to update $\omega_n$, $\mu_n$, $\Sigma_n$. 
+Given a predetermining parameter, $K$, the number of Gaussian distributions, we need to perform iterative processes, called **Expectation–maximization** (EM) algorithm to update $\omega_n$, $\mu_n$, $\Sigma_n$. In the following, we follow the introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
+
 
 At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. x < $s^0$ for $\mathcal{N}_0$, $s^0 \le$ x < $s^1$ for $\mathcal{N}_1$ ... etc. Then from data, we can determine means $\mu_n$ and covariance matrices $\Sigma_n$, as well as  $\mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$ for each component $n$.
 
@@ -107,13 +105,17 @@ $$ \Sigma^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) || \bf{X}_i - \mu_n ||^2 .
 This completes an iteration. We replace $\omega^{\textrm{new}}_n$, $\mu^{\textrm{new}}_n$, $\Sigma^{\textrm{new}}_n$ to $\omega_n$, $\mu_n$, $\Sigma_n$ and continue the process until the changes on the parameters are less some threshold.
 
 
-Here is a introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
+
 
 
 #### Reference
 
 * [1D Gaussian Mixture Example]: https://www.astroml.org/book_figures/chapter4/fig_GMM_1D.html
 [[AstroML] 1D Gaussian Mixture Example](https://www.astroml.org/book_figures/chapter4/fig_GMM_1D.html)
+
+* [Youtube: Unsupervised Learning: Gaussian Mixture Model (1D GMM)]: https://www.youtube.com/watch?v=fVsmnZqrBUs
+[[ADipLearn] Youtube: Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs)
+
 
 
 ## 3. Meanshift
