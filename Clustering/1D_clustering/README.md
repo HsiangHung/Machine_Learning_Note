@@ -96,9 +96,14 @@ Next step is to compute new weight as
 
 $$ \omega_n^{\textrm{new}} = \frac{1}{N} \sum^N_{i=1} \frac{\mathcal{N}(\bf{X}_i |\bf{\mu}_n, \Sigma_n)}{\sum_{n=1, 2 \cdots K} \mathcal{N}(\bf{X}_i |\bf{\mu}_n, \Sigma_n)}, $$
 
-and the new means and covariance matrices 
+and the new means and covariance matrices are given by 
 
-$$ \mu^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) \bf{X}_i = \sum^N_i \frac{ \omega_n \mathcal{N} (\bf{X}_i |\bf{\mu}_n, \Sigma_n) \bf{X}_i }{\sum_n \omega_n \mathcal{N}  (\bf{X}_i |\bf{\mu}_n, \Sigma_n)}$$
+$$ \mu^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) \bf{X}_i = \sum^N_{i=1} \frac{ \omega_n \mathcal{N} (\bf{X}_i |\bf{\mu}_n, \Sigma_n) \bf{X}_i }{\sum_n \omega_n \mathcal{N}  (\bf{X}_i |\bf{\mu}_n, \Sigma_n)},$$
+
+and 
+
+$$ \mu^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) || \bf{X}_i - \mu_n ||^2 .$$
+
 
 Here is a introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
 
