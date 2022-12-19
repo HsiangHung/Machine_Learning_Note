@@ -154,6 +154,13 @@ The process is described as below (c.f. [[Yuki Liu]][Clustering method 2 - Mean 
 
 ![](images/meanshift_process.png)
 
+1. Assume the red dot is a data point which has not been identified clustering label. Now set it as centroid. 從未被分群的資料點中選擇一起始點做為中心。
+2. Assign the data points within a radius of the centroid as the same cluster
+3. Compute the vector for each data point against the centroid. Find the mean shift vector by the vectors in average.
+4. Update the centroid by the original location with the mean shidt vector: center -> center + mean shift.
+5. repeat step 1-4 until the centroid stops to move. In this case, it reaches the local probability density. 若此群的中心點已被歸於先前所分的群中，便將兩群合併為同一群。
+6. 重複以上步驟直到所有點都被歸類為止。
+
 ```Python
 from sklearn.cluster import MeanShift, estimate_bandwidth
 
