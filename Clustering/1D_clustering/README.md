@@ -133,7 +133,7 @@ Simply speaking, “mean shift” is an iterative method to seek cluster centroi
 
 $$p(\bf{X}) = \sum_n \omega_n \mathcal{K}_n(\bf{X}) = \sum_n \omega_n \mathcal{K}_n( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma}),$$
 
-where $\bf{x}_n$ denotes the centroid of the $n$-th Kernel. The gradient of 
+where $\bf{x}_n$ denotes the centroid of the $n$-th Kernel. The gradient of the probability density reads as
  
 $$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{x}_n \right) \mathcal{K}^{\prime}_n( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma})$$
 
