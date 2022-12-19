@@ -55,21 +55,14 @@ Optimization approach [[Niranjan Pramanik]][Kernel Density Estimation]:
 
 * [The importance of kernel density estimation bandwidth]: https://aakinshin.net/posts/kde-bw/
 [[Andrey Akinshin] The importance of kernel density estimation bandwidth](https://aakinshin.net/posts/kde-bw/)
-
 * [Kernel Density Estimation]: https://medium.com/analytics-vidhya/kernel-density-estimation-kernel-construction-and-bandwidth-optimization-using-maximum-b1dfce127073
 [[Niranjan Pramanik] Kernel Density Estimation](https://medium.com/analytics-vidhya/kernel-density-estimation-kernel-construction-and-bandwidth-optimization-using-maximum-b1dfce127073)
-
-
 * [KDEpy Bandwidth]: https://kdepy.readthedocs.io/en/latest/bandwidth.html
 [[KDEpy] KDEpy Bandwidth](https://kdepy.readthedocs.io/en/latest/bandwidth.html)
-
 * [A Short Course on Nonparametric Curve Estimation: Bandwidth selection]: https://bookdown.org/egarpor/NP-EAFIT/dens-bwd.html
 [[Eduardo García-Portugués] A Short Course on Nonparametric Curve Estimation: Bandwidth selection](https://bookdown.org/egarpor/NP-EAFIT/dens-bwd.html)
-
 * [Methods to Find the Best Bandwidth for Kernel Density Estimation]: https://stats.stackexchange.com/questions/229743/methods-to-find-the-best-bandwidth-for-kernel-density-estimation
 [[Crossvalidated] Methods to Find the Best Bandwidth for Kernel Density Estimation](https://stats.stackexchange.com/questions/229743/methods-to-find-the-best-bandwidth-for-kernel-density-estimation)
-
-
 * [How would one use Kernel Density Estimation as a 1D clustering method in scikit learn?]: https://stackoverflow.com/questions/35094454/how-would-one-use-kernel-density-estimation-as-a-1d-clustering-method-in-scikit
 [[Stackoverflow] How would one use Kernel Density Estimation as a 1D clustering method in scikit learn?](https://stackoverflow.com/questions/35094454/how-would-one-use-kernel-density-estimation-as-a-1d-clustering-method-in-scikit)
 
@@ -84,7 +77,7 @@ where index $n$ goes over distribution component, $K$ is the number of component
 
 $$ \mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n) = \frac{1}{ (2\pi)^{\frac{n}{2}} |\Sigma|^{\frac{1}{2}}}\exp \left( -\frac{1}{2} (\bf{X}- \bf{\mu}_n)^T \Sigma_n^{-1}(\bf{X}- \bf{\mu}_n) \right).$$
 
-Given a predetermining parameter, $K$, the number of Gaussian distributions, we need to perform iterative processes, called **Expectation–maximization** (EM) algorithm to update $\omega_n$, $\mu_n$, $\Sigma_n$. In the following, we follow the introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
+Given a predetermining parameter, $K$, the number of Gaussian distributions, we need to perform iterative processes, called **Expectation–maximization** (EM) algorithm to update ($\omega_n$, $\mu_n$, $\Sigma_n$). In the following, we follow the introductionary youtube: [Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs).
 
 
 At first we initialize the weights $\omega_n = 1/K$ and split points which define the range of Gaussian distrubutions, e.g. x < $s^0$ for $\mathcal{N}_0$, $s^0 \le$ x < $s^1$ for $\mathcal{N}_1$ ... etc. Then from data, we can determine means $\mu_n$ and covariance matrices $\Sigma_n$, as well as  $\mathcal{N}_n = \mathcal{N}(\bf{X}|\bf{\mu}_n, \Sigma_n)$ for each component $n$.
@@ -101,7 +94,7 @@ and
 
 $$ \Sigma^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) || \bf{X}_i - \mu_n ||^2 .$$
 
-This completes an iteration. We replace $\omega^{\textrm{new}}_n$, $\mu^{\textrm{new}}_n$, $\Sigma^{\textrm{new}}_n$ to $\omega_n$, $\mu_n$, $\Sigma_n$ and continue the process until the changes on the parameters are less some threshold.
+This completes an iteration. We replace ($\omega^{\textrm{new}}_n$, $\mu^{\textrm{new}}_n$, $\Sigma^{\textrm{new}}_n$) to ($\omega_n$, $\mu_n$, $\Sigma_n$) and continue the process until the changes on the parameters are less some threshold.
 
 The example Python code is as follows [[AstroML]][1D Gaussian Mixture Example]:
 
@@ -112,7 +105,7 @@ K = 11
 
 models = []
 for n in range(2, len(K)):
-    models.append(GaussianMixture(N[i]).fit(X)) # grid search number of components
+    models.append(GaussianMixture(n).fit(X)) # grid search number of components
 
 # compute the AIC and the BIC
 AIC = [m.aic(X) for m in models]
@@ -127,7 +120,6 @@ Above example run grid search on $n=2, 3... 10$ components, and choose the model
 
 * [1D Gaussian Mixture Example]: https://www.astroml.org/book_figures/chapter4/fig_GMM_1D.html
 [[AstroML] 1D Gaussian Mixture Example](https://www.astroml.org/book_figures/chapter4/fig_GMM_1D.html)
-
 * [Youtube: Unsupervised Learning: Gaussian Mixture Model (1D GMM)]: https://www.youtube.com/watch?v=fVsmnZqrBUs
 [[ADipLearn] Youtube: Unsupervised Learning: Gaussian Mixture Model (1D GMM)](https://www.youtube.com/watch?v=fVsmnZqrBUs)
 
@@ -137,4 +129,51 @@ Above example run grid search on $n=2, 3... 10$ components, and choose the model
 
 **Mean shift** is an unsupervised learning algorithm that is mostly used for clustering. It is widely used in real-world data analysis (e.g., image segmentation)because it’s **non-parametric** and doesn’t require any predefined shape of the clusters in the feature space.
 
-Simply speaking, “mean shift” is equal to “shifting to the mean” in an iterative way.
+Simply speaking, “mean shift” is an iterative method to seek cluster centroids, and the density gradient “mean shift vector” is determined by the kernel density gradient. The data density can be described by multiple kernel density functions. 
+
+$$p(\bf{X}) = \sum_n \omega_n \mathcal{K}(\bf{X}) = \sum_n \omega_n \mathcal{K}( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma})$$
+
+
+$$ \nabla p(\bf{X}) = $$
+
+
+Pro:
+* Clustering can be any shape
+* No need to predetermine the number of clusters
+* Implement k-nearest neighbor method to determine bandwidth
+
+Con:
+* Time complexity is $O(kn^2)$, where $n$ is the data size and $k$ is the number of iterations for data points.
+* May be unable to identify clutsering outlier data.
+
+
+### Algorithm 
+
+The process is described as below (c.f. [[Yuki Liu]][Clustering method 2 - Mean Shift])
+
+![](images/meanshift_process.png)
+
+```Python
+from sklearn.cluster import MeanShift, estimate_bandwidth
+
+X = data.reshape(-1, 1)
+#estimate bandwidth
+bandwidth = estimate_bandwidth(X, quantile=0.2, n_samples=len(data))
+
+#Mean Shift method
+model = MeanShift(bandwidth=bandwidth, bin_seeding=True)
+model.fit(X)
+labels = model.predict(X)
+```
+
+
+#### Reference
+
+* [Clustering method 2 - Mean Shift]: https://medium.com/ai-academy-taiwan/clustering-method-2-cd9bb883a0cb
+[[Yuki Liu] Clustering method 2 - Mean Shift](https://medium.com/ai-academy-taiwan/clustering-method-2-cd9bb883a0cb)
+* [Mean Shift, Mode Seeking, and Clustering]: http://home.ku.edu.tr/mehyilmaz/public_html/mean-shift/00400568.pdf
+[[Yizong Cheng] Mean Shift, Mode Seeking, and Clustering](http://home.ku.edu.tr/mehyilmaz/public_html/mean-shift/00400568.pdf)
+* [Understanding Mean Shift Clustering and Implementation with Python]: https://towardsdatascience.com/understanding-mean-shift-clustering-and-implementation-with-python-6d5809a2ac40
+[[Yufeng] Understanding Mean Shift Clustering and Implementation with Python](https://towardsdatascience.com/understanding-mean-shift-clustering-and-implementation-with-python-6d5809a2ac40)
+
+
