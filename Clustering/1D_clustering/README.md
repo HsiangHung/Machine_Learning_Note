@@ -94,7 +94,7 @@ and
 
 $$ \Sigma^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) || \bf{X}_i - \mu_n ||^2 .$$
 
-This completes an iteration. We replace ($\omega^{\textrm{new}}_n$, $\mu^{\textrm{new}}_n$, $\Sigma^{\textrm{new}}_n$) to ($\omega_n$, $\mu_n$, $\Sigma_n$) and continue the process until the changes on the parameters are less some threshold.
+This completes an iteration. We replace ($\omega^{\textrm{new}}_n, \mu^{\textrm{new}}_n, \Sigma^{\textrm{new}}_n$) to ($\omega_n, \mu_n, \Sigma_n$) and continue the processes until the changes of the parameters are less some threshold.
 
 The example Python code is as follows [[AstroML]][1D Gaussian Mixture Example]:
 
@@ -129,13 +129,24 @@ Above example run grid search on $n=2, 3... 10$ components, and choose the model
 
 **Mean shift** is an unsupervised learning algorithm that is mostly used for clustering. It is widely used in real-world data analysis (e.g., image segmentation)because it’s **non-parametric** and doesn’t require any predefined shape of the clusters in the feature space.
 
+Let data be a finite set $S$ embedded in the $d$-dimensional Euclidean space, e.g. $\bf{X} \in S$, 
+$$$$
+
 Simply speaking, “mean shift” is an iterative method to seek cluster centroids, and the density gradient “mean shift vector” is determined by the kernel density gradient. Assume the data density can be described by multiple kernel density functions $\mathcal{K}_n$: 
 
 $$p(\bf{X}) = \sum_n \omega_n \mathcal{K}_n(\bf{X}) = \sum_n \omega_n \mathcal{K}_n( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma}),$$
 
-where $\bf{x}_n$ denotes the centroid of the $n$-th Kernel. The gradient of the probability density reads as
+where $\bf{x}_n$ denotes the centroid of the $n$-th Kernel. 
+
+The gradient of the probability density reads as
  
-$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{x}_n \right) \mathcal{K}^{\prime}_n( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma})$$
+$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{s}_n \right) \mathcal{K}^{\prime}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right)$$
+
+replace with $\mathcal{G} = - \mathcal{K}^{\prime}$, the above can be rewritten as
+
+$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{s}_n - \bf{X} \right) \mathcal{G}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right)$$
+
+
 
 
 Pro:
@@ -154,12 +165,12 @@ The process is described as below (c.f. [[Yuki Liu]][Clustering method 2 - Mean 
 
 ![](images/meanshift_process.png)
 
-1. Assume the red dot is a data point which has not been identified clustering label. Now set it as centroid. 從未被分群的資料點中選擇一起始點做為中心。
-2. Assign the data points within a radius of the centroid as the same cluster
-3. Compute the vector for each data point against the centroid. Find the mean shift vector by the vectors in average.
-4. Update the centroid by the original location with the mean shidt vector: center -> center + mean shift.
-5. repeat step 1-4 until the centroid stops to move. In this case, it reaches the local probability density. 若此群的中心點已被歸於先前所分的群中，便將兩群合併為同一群。
-6. 重複以上步驟直到所有點都被歸類為止。
+1. Assume the red dot is a data point which has not been identified clustering label. Now set it as centroid.
+2. Assign the data points within a radius $\lambda$ of the centroid as the same cluster (within the red cycle)
+3. Compute the vector for every data point within the cycle against the centroid. Find the mean shift vector by the average of the vectors.
+4. Update the centroid by the original location with the mean shidt vector, i.e. `center -> center + mean shift`.
+5. Repeat step 1-4 until the centroid stops to move. In this case, it reaches the local maximum of probability density. If the centroid belongs to identified clusters, merge the clusters.
+6. Repeat step 1-5 until all data points have been visited.
 
 ```Python
 from sklearn.cluster import MeanShift, estimate_bandwidth
