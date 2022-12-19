@@ -129,12 +129,12 @@ Above example run grid search on $n=2, 3... 10$ components, and choose the model
 
 **Mean shift** is an unsupervised learning algorithm that is mostly used for clustering. It is widely used in real-world data analysis (e.g., image segmentation)because it’s **non-parametric** and doesn’t require any predefined shape of the clusters in the feature space.
 
-Simply speaking, “mean shift” is an iterative method to seek cluster centroids, and the density gradient “mean shift vector” is determined by the kernel density gradient. The data density can be described by multiple kernel density functions. 
+Simply speaking, “mean shift” is an iterative method to seek cluster centroids, and the density gradient “mean shift vector” is determined by the kernel density gradient. Assume the data density can be described by multiple kernel density functions $\mathcal{K}_n$: 
 
-$$p(\bf{X}) = \sum_n \omega_n \mathcal{K}(\bf{X}) = \sum_n \omega_n \mathcal{K}( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma})$$
+$$p(\bf{X}) = \sum_n \omega_n \mathcal{K}_n(\bf{X}) = \sum_n \omega_n \mathcal{K}_n( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma}),$$
 
-
-$$ \nabla p(\bf{X}) = $$
+ 
+$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{x}_n \right) \mathcal{K}^{\prime}_n( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma})$$
 
 
 Pro:
