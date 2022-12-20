@@ -11,7 +11,7 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 
 ![](images/complement_graph.png)
 
-### Walk and Path
+### Walk, Path, Cycle
 
 #### Definition 
 
@@ -20,12 +20,16 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 * A path is a walk where all edges are the distinct.
 * A simple path is a path where all vertices are distinct
 
+* A cycle in a graph is a path whose first and last vertices are the same. All edges in a cycle must also be distinct.
+* A simple cycle is a cycle where all vertices are distinct, except for the first one which must be the same as the last one. 
+
 #### Example
 
 ![](images/walk_path.png)
 
 * Walk: start from the $v_6$, $(e_1, e_2, e_4, e_5, e_3, e_1)$.
-* Path: $(e_7, e_6, e_4, and e_5.)$. It's not a simple path, because we've visited $v_2$ twice.
-* Simple path: $(e_7, e_6, e_2, e_3)$.
-
+* Path: $(e_7, e_6, e_4, e_5) = (v_2, v_1, v_5, v_2, v_3)$. It's not a simple path, because we've visited $v_2$ twice.
+* Simple path: $(e_7, e_6, e_2, e_3)=(v_2, v_1, v_5, v_4, v_3)$.
+* Cycle: $(e_2, e_3, e_8, e_4, e_7, e_6)$.
+* Simple cycle: $(e_5, e_4, e_2, e_3)$.
 
