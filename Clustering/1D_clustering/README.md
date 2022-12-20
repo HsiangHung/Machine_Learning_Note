@@ -130,7 +130,7 @@ Above example run grid search on $n=2, 3... 10$ components, and choose the model
 **Mean shift** is an unsupervised learning algorithm that is mostly used for clustering. It is widely used in real-world data analysis (e.g., image segmentation)because it’s **non-parametric** and doesn’t require any predefined shape of the clusters in the feature space.
 
 Let data be a finite set $S$ embedded in the $d$-dimensional Euclidean space. The simple mean of the data point in the set $\bf{X} \in S$ is
-$$m(\bf{X}) = \frac{\sum_{s \in S} \mathcal{K}(\bf{X} - \bf{s}) \bf{s}}{s \in S} \mathcal{K}(\bf{X} - \bf{s})},$$
+$$m(\bf{X}) = \frac{\sum_{s \in S} \mathcal{K}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s \in S} \mathcal{K}(\bf{X} - \bf{s})},$$
 
 where $\bf{s} \in S$ is the neighborhood of $\bf{X}$. In pratical, the kernel $\mathcal{K}$ can be flat kernel, i.e. $\mathcal{K}(x) = 1$ if $|x| < \lambda$, or Gaussian. 
 The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated movement of data point to the simple mean is called mean shift algorithm. The mean-shift algorithm now sets $\bf{X} \leftarrow m(\bf{X})$, and repeats the estimation until $m(\bf{X})$ converges.
