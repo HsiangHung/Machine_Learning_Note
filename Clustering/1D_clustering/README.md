@@ -141,7 +141,7 @@ $$p(\bf{X}) = \sum_{\bf{s} \in D} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{c}{n 
 
 where $\bf{s} \in D$ denotes the summation over all data points $D$, and $c$ is a normalization constant. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
  
-$$ \nabla p(\bf{X}) = \sum_{\bf{s} \in S} \frac{2}{n\sigma^(d+2)} \left( \bf{X} - \bf{s} \right) \mathcal{K}^{\prime} \left( \left\|\left\| \frac{\bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2 \right).$$
+$$ \nabla p(\bf{X}) = \sum_{\bf{s} \in S} \frac{2c}{n\sigma^{d+2}} \left( \bf{X} - \bf{s} \right) \mathcal{K}^{\prime} \left( \left\|\left\| \frac{\bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2 \right).$$
 
 Replace with $\mathcal{G} = - \mathcal{K}^{\prime}$, the above can be rewritten as
 
