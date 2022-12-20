@@ -3,6 +3,12 @@
 
 ## Vertex Degree
 
+* The Degree of a vertex is the number of its incident edges.
+* The degree of a graph is the maximum degree of its vertices.
+
+* The Indegree of a vertex is the number of edges ending at $v$. 
+* The Outdegree of a vertex is the number of edges leaving $v$.
+
 ## Complement Graph
 
 The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two graphs have same set of vertices $V$ and:
@@ -35,11 +41,19 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 
 ## Connectivity
 
+* A graph is called Connected if there is a path between every pair of its vertices
 * A connected component of a graph is a maximal connected subgraph of it. 
 
 ![](images/connectivity.png)
 
 * $(v_1, v_2, v_3)$ are connected, they form a connected subgraph. But this is not a connected component because it's not maximal. 
-* $(v_1, v_2, v_3, v_4, v_5, v_6) form a connected component.
+* $(v_1, v_2, v_3, v_4, v_5, v_6)$ form a connected component.
 * $(v_7, v_8)$ form the connected component. 
 * The vertex $v_0$ itself forms the third connected component.
+
+## Weight Graph
+
+* A graph can also be weighted. So weighted graph gives a weight to every edge.
+* The weight of your path then is just the sum of all edges on this path.
+* The shortest path between two vertices is just the path of the minimum weight. 
+* The distance between two vertices and the length of the shortest path between them.
