@@ -3,7 +3,7 @@
 
 ## Vertex Degree
 
-### Complement Graph
+## Complement Graph
 
 The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two graphs have same set of vertices $V$ and:
 * Two vertices are connected in $\bar{G}$ if and only if they are NOT connected in $G$.
@@ -11,9 +11,9 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 
 ![](images/complement_graph.png)
 
-### Walk, Path, Cycle
+## Walk, Path, Cycle
 
-#### Definition 
+### Definition 
 
 *  A walk in a graph is a sequence of edges, such that each edge starts in a vertex where the previous edge ended. Note that a walk contains the same edge several times
 * The length of a walk is a number of edges in it. 
@@ -23,7 +23,7 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 * A cycle in a graph is a path whose first and last vertices are the same. All edges in a cycle must also be distinct.
 * A simple cycle is a cycle where all vertices are distinct, except for the first one which must be the same as the last one. 
 
-#### Example
+### Example
 
 ![](images/walk_path.png)
 
@@ -33,3 +33,13 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 * Cycle: $(e_2, e_3, e_8, e_4, e_7, e_6)$.
 * Simple cycle: $(e_5, e_4, e_2, e_3)$.
 
+## Connectivity
+
+* A connected component of a graph is a maximal connected subgraph of it. 
+
+![](images/connectivity.png)
+
+* $(v_1, v_2, v_3)$ are connected, they form a connected subgraph. But this is not a connected component because it's not maximal. 
+* $(v_1, v_2, v_3, v_4, v_5, v_6) form a connected component.
+* $(v_7, v_8)$ form the connected component. 
+* The vertex $v_0$ itself forms the third connected component.
