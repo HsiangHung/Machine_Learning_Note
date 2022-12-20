@@ -137,11 +137,11 @@ The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated moveme
 
 The probability density at an arbitrary point $\bf{X}$ can be described by a kernel density function $\mathcal{K}$: 
 
-$$p(\bf{X}) = \sum_{\bf{s} \in D} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{1}{n \sigma^d} \sum_{\bf{s} \in D} \mathcal{K}( \left\|\left\| \frac{\bf{X} - \bf{s}}{\sigma} \right\|\right\|  ),$$
+$$p(\bf{X}) = \sum_{\bf{s} \in D} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{c}{n \sigma^d} \sum_{\bf{s} \in D} \mathcal{K}\left( \left\|\left\| \frac{\bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2  \right),$$
 
 where $\bf{s} \in D$ denotes the summation over all data points $D$, and $c$ is a normalization constant. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
  
-$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{s}_n \right) \mathcal{K}^{\prime}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right).$$
+$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{s}_n \right) \mathcal{K}^{\prime}_n \left( \left\|\left\| \frac{\bf{X} - \bf{s}}{\sigma} \right).$$
 
 Replace with $\mathcal{G} = - \mathcal{K}^{\prime}$, the above can be rewritten as
 
