@@ -94,7 +94,7 @@ and
 
 $$ \Sigma^{\textrm{new}}_n = \sum^N_{i=1} p(\bf{X}_i) || \bf{X}_i - \mu_n ||^2 .$$
 
-This completes an iteration. We replace ($\omega^{\textrm{new}}_n, \mu^{\textrm{new}}_n, \Sigma^{\textrm{new}}_n$) to ($\omega_n, \mu_n, \Sigma_n$) and continue the processes until the changes of the parameters are less some threshold.
+This completes an iteration. We replace $(\omega^{\textrm{new}}_n, \mu^{\textrm{new}}_n, \Sigma^{\textrm{new}}_n)$ to $(\omega_n, \mu_n, \Sigma_n)$ and continue the processes until the changes of the parameters are less some threshold.
 
 The example Python code is as follows [[AstroML]][1D Gaussian Mixture Example]:
 
