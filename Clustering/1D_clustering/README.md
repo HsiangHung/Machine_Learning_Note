@@ -133,7 +133,7 @@ Let data be a finite set $S$ embedded in the $d$-dimensional Euclidean space. Th
 $$m(\bf{X}) = \frac{\sum_{s \in S} \mathcal{K}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s \in S} \mathcal{K}(\bf{X} - \bf{s})},$$
 
 where $\bf{s} \in S$ is the neighborhood of $\bf{X}$. In pratical, the kernel $\mathcal{K}$ can be flat kernel, i.e. $\mathcal{K}(x) = 1$ if $|x| < \lambda$ otherwise 0, or Gaussian Kernel. 
-The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated movement of data point to the simple mean is called mean shift algorithm. The mean-shift algorithm now sets $\bf{X} \leftarrow m(\bf{X})$, and repeats the estimation until $m(\bf{X})$ converges.
+The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated movement of data point to the simple mean is called mean shift algorithm. The mean-shift algorithm now sets $\bf{X} \leftarrow m(\bf{X})$, and repeats the estimation until $m(\bf{X})$ converges (c.f. [wiki: Mean shift](https://en.wikipedia.org/wiki/Mean_shift)).
 
 Assume the data density can be described by multiple kernel density functions $\mathcal{K}_n$: 
 
@@ -141,11 +141,11 @@ $$p(\bf{X}) = \sum_n \omega_n \mathcal{K}_n(\bf{X}) = \sum_n \omega_n \mathcal{K
 
 where $\bf{x}_n$ denotes the centroid of the $n$-th Kernel. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
  
-$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{s}_n \right) \mathcal{K}^{\prime}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right)$$
+$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{s}_n \right) \mathcal{K}^{\prime}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right).$$
 
-replace with $\mathcal{G} = - \mathcal{K}^{\prime}$, the above can be rewritten as
+Replace with $\mathcal{G} = - \mathcal{K}^{\prime}$, the above can be rewritten as
 
-$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{s}_n - \bf{X} \right) \mathcal{G}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right)$$
+$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{s}_n - \bf{X} \right) \mathcal{G}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right) \sim \sum_n \left( \frac{\sum_{s \in S} \mathcal{G}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s \in S} \mathcal{G}(\bf{X} - \bf{s})}  - \bf{X} \right) \mathcal{G}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right) .$$
 
 
 
