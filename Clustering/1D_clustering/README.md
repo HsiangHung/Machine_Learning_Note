@@ -137,7 +137,7 @@ The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated moveme
 
 The probability density at an arbitrary point $\bf{X}$ can be described by a kernel density function $\mathcal{K}$: 
 
-$$p(\bf{X}) = \sum_{\bf{s} \in D} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{1}{n \sigma^d} \sum_{\bf{s} \in D} \mathcal{K}( \quad \norm{\frac{ \bf{X} - \bf{s}}{\sigma}}  ),$$
+$$p(\bf{X}) = \sum_{\bf{s} \in D} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{1}{n \sigma^d} \sum_{\bf{s} \in D} \mathcal{K}( \norm{ \frac{\bf{X} - \bf{s}}{\sigma} }  ),$$
 
 where $\bf{s} \in D$ denotes the summation over all data points $D$, and $c$ is a normalization constant. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
  
