@@ -135,9 +135,9 @@ $$m(\bf{X}) = \frac{\sum_{s \in S} \mathcal{K}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s 
 where $\bf{s} \in S$ is the neighborhood of $\bf{X}$. In pratical, the kernel $\mathcal{K}$ can be flat kernel, i.e. $\mathcal{K}(x) = 1$ if $|x| < \lambda$ otherwise 0, or Gaussian Kernel. 
 The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated movement of data point to the simple mean is called mean shift algorithm. The mean-shift algorithm now sets $\bf{X} \leftarrow m(\bf{X})$, and repeats the estimation until $m(\bf{X})$ converges (c.f. [wiki: Mean shift](https://en.wikipedia.org/wiki/Mean_shift)).
 
-Assume the data density can be described by multiple kernel density functions $\mathcal{K}_n$: 
+Assume the data density can be described by a kernel density function $\mathcal{K}$: 
 
-$$p(\bf{X}) = \sum_{\bf{s} \in S} c \mathcal{K}_n(\bf{X} - \bf{s}) = \sum_{\bf{s} \in S} \mathcal{K}_n( \frac{|| \bf{X} - \bf{s}||^2}{\sigma}),$$
+$$p(\bf{X}) = \sum_{\bf{s} \in S} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{1}{n \sigma^d} \sum_{\bf{s} \in S} \mathcal{K}_n( \frac{|| \bf{X} - \bf{s}||^2}{\sigma}),$$
 
 where $\bf{x}_n$ denotes the centroid of the $n$-th Kernel. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
  
