@@ -141,11 +141,11 @@ $$p(\bf{X}) = \sum_{\bf{s} \in D} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{c}{n 
 
 where $\bf{s} \in D$ denotes the summation over all data points $D$, and $c$ is a normalization constant. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
  
-$$ \nabla p(\bf{X}) = \sum_{\bf{s} \in S} \frac{2c}{n\sigma^{d+2}} \left( \bf{X} - \bf{s} \right) \mathcal{K}^{\prime} \left( \left\|\left\| \frac{\bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2 \right).$$
+$$ \nabla p(\bf{X}) = \sum_{\bf{s} \in D} \frac{2c}{n\sigma^{d+2}} \left( \bf{X} - \bf{s} \right) \mathcal{K}^{\prime} \left( \left\|\left\| \frac{\bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2 \right).$$
 
 Replace with $\mathcal{G} = - \mathcal{K}^{\prime}$, the above can be rewritten as
 
-$$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{s}_n - \bf{X} \right) \mathcal{G}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right) \sim \sum_n \left( \frac{\sum_{s \in S} \mathcal{G}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s \in S} \mathcal{G}(\bf{X} - \bf{s})}  - \bf{X} \right) \mathcal{G}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right) .$$
+$$ \nabla p(\bf{X}) = \frac{2 c}{n \sigma^{d+2}}  \sum_{\bf{s} \in D} \left( \bf{s} - \bf{X} \right) \mathcal{G} \left( \left\|\left\| \frac{ \bf{X} - \bf{x}_n}{\sigma} \right\|\right\| ^2 \right) \sim \sum_n \left( \frac{\sum_{s \in D} \mathcal{G}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s \in D} \mathcal{G}(\bf{X} - \bf{s})}  - \bf{X} \right) \mathcal{G} \left( \left\|\left\|  \frac{ \bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2  \right) .$$
 
 
 
