@@ -135,7 +135,7 @@ $$m(\bf{X}) = \frac{\sum_{s \in S} \mathcal{K}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s 
 where $\bf{s} \in S$ is the neighborhood of $\bf{X}$. In pratical, the kernel $\mathcal{K}$ can be flat kernel, i.e. $\mathcal{K}(x) = 1$ if $|x| < \lambda$ otherwise 0, or Gaussian Kernel. 
 The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated movement of data point to the simple mean is called mean shift algorithm. The mean-shift algorithm now sets $\bf{X} \leftarrow m(\bf{X})$, and repeats the estimation until $m(\bf{X})$ converges (c.f. [wiki: Mean shift](https://en.wikipedia.org/wiki/Mean_shift)).
 
-The probability density at an arbitrary point $\bf{X}$ can be described by a kernel density function $\mathcal{K}$: 
+The probability density at an arbitrary point $\bf{X}$ can be described by a kernel density function $\mathcal{K}$ [[Yuki Liu]][Clustering method 2 - Mean Shift]: 
 
 $$p(\bf{X}) = \sum_{\bf{s} \in D} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{c}{n \sigma^d} \sum_{\bf{s} \in D} \mathcal{K}\left( \left\|\left\| \frac{\bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2  \right),$$
 
