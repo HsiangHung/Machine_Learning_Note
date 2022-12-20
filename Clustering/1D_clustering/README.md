@@ -145,7 +145,7 @@ $$ \nabla p(\bf{X}) = \sum_{\bf{s} \in D} \frac{2c}{n\sigma^{d+2}} \left( \bf{X}
 
 Replace with $\mathcal{G} = - \mathcal{K}^{\prime}$, the above can be rewritten as
 
-$$ \nabla p(\bf{X}) = \frac{2 c}{n \sigma^{d+2}}  \sum_{\bf{s} \in D} \left( \bf{s} - \bf{X} \right) \mathcal{G} \left( \left\|\left\| \frac{ \bf{X} - \bf{x}_n}{\sigma} \right\|\right\| ^2 \right) \sim \sum_n \left( \frac{\sum_{s \in D} \mathcal{G}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s \in D} \mathcal{G}(\bf{X} - \bf{s})}  - \bf{X} \right) \mathcal{G} \left( \left\|\left\|  \frac{ \bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2  \right) .$$
+$$ \nabla p(\bf{X}) = \frac{2 c}{n \sigma^{d+2}}  \sum_{\bf{s} \in D} \left( \bf{s} - \bf{X} \right) \mathcal{G} \left( \left\|\left\| \frac{ \bf{X} - \bf{x}_n}{\sigma} \right\|\right\| ^2 \right) \sim \sum_{\bf{s} \in D} \left( \frac{\sum_{s \in D} \mathcal{G}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s \in D} \mathcal{G}(\bf{X} - \bf{s})}  - \bf{X} \right) \mathcal{G} \left( \left\|\left\|  \frac{ \bf{X} - \bf{s}}{\sigma} \right\|\right\| ^2  \right) .$$
 
 
 
