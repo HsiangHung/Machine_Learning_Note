@@ -137,7 +137,7 @@ The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated moveme
 
 Assume the data density can be described by multiple kernel density functions $\mathcal{K}_n$: 
 
-$$p(\bf{X}) = \sum_n \omega_n \mathcal{K}_n(\bf{X}) = \sum_n \omega_n \mathcal{K}_n( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma}),$$
+$$p(\bf{X}) = \sum_{\bf{s} \in S} c \mathcal{K}_n(\bf{X} - \bf{s}) = \sum_{\bf{s} \in S} \mathcal{K}_n( \frac{|| \bf{X} - \bf{s}||^2}{\sigma}),$$
 
 where $\bf{x}_n$ denotes the centroid of the $n$-th Kernel. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
  
