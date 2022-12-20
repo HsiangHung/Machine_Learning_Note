@@ -135,11 +135,11 @@ $$m(\bf{X}) = \frac{\sum_{s \in S} \mathcal{K}(\bf{X} - \bf{s}) \bf{s}}{\sum_{s 
 where $\bf{s} \in S$ is the neighborhood of $\bf{X}$. In pratical, the kernel $\mathcal{K}$ can be flat kernel, i.e. $\mathcal{K}(x) = 1$ if $|x| < \lambda$ otherwise 0, or Gaussian Kernel. 
 The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated movement of data point to the simple mean is called mean shift algorithm. The mean-shift algorithm now sets $\bf{X} \leftarrow m(\bf{X})$, and repeats the estimation until $m(\bf{X})$ converges (c.f. [wiki: Mean shift](https://en.wikipedia.org/wiki/Mean_shift)).
 
-Assume the data density at $\bf{X}$ can be described by a kernel density function $\mathcal{K}$: 
+The probability density at an arbitrary point $\bf{X}$ can be described by a kernel density function $\mathcal{K}$: 
 
 $$p(\bf{X}) = \sum_{\bf{s} \in D} c \mathcal{K}_n(\bf{X} - \bf{s}) = \frac{1}{n \sigma^d} \sum_{\bf{s} \in D} \mathcal{K}_n( \frac{|| \bf{X} - \bf{s}||^2}{\sigma}),$$
 
-where $\bf{s} \in D$ denotes the summation over all data points. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
+where $\bf{s} \in D$ denotes the summation over all data points $D$, and $c$ is a normalization constant. The “mean shift vector” can be determined by the kernel density gradient. The gradient of the probability density reads as
  
 $$ \nabla p(\bf{X}) = \sum_n \frac{2 \omega_n}{\sigma^d} \left( \bf{X} - \bf{s}_n \right) \mathcal{K}^{\prime}_n \left( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma} \right).$$
 
