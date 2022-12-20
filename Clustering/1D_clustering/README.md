@@ -129,10 +129,12 @@ Above example run grid search on $n=2, 3... 10$ components, and choose the model
 
 **Mean shift** is an unsupervised learning algorithm that is mostly used for clustering. It is widely used in real-world data analysis (e.g., image segmentation)because it’s **non-parametric** and doesn’t require any predefined shape of the clusters in the feature space.
 
-Let data be a finite set $S$ embedded in the $d$-dimensional Euclidean space, e.g. $\bf{X} \in S$, 
-$$$$
+Let data be a finite set $S$ embedded in the $d$-dimensional Euclidean space. The simple mean of the data point in the set $\bf{X} \in S$ is
+$$m(\bf{X}) = \frac{\sum_{\bf{x} \in S} (\bf{X} - \bf{s}) \bf{s}}{\sum_{\bf{x} \in S} \mathcal{K}(\bf{X} - \bf{s})},$$
 
-Simply speaking, “mean shift” is an iterative method to seek cluster centroids, and the density gradient “mean shift vector” is determined by the kernel density gradient. Assume the data density can be described by multiple kernel density functions $\mathcal{K}_n$: 
+The difference $m(\bf{X}) - \bf{X}$ is called mean shift and the repeated movement of data point to the simple mean is called mean shift algorithm. 
+
+ density gradient “mean shift vector” is determined by the kernel density gradient. Assume the data density can be described by multiple kernel density functions $\mathcal{K}_n$: 
 
 $$p(\bf{X}) = \sum_n \omega_n \mathcal{K}_n(\bf{X}) = \sum_n \omega_n \mathcal{K}_n( \frac{|| \bf{X} - \bf{x}_n||^2}{\sigma}),$$
 
