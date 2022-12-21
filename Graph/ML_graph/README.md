@@ -3,11 +3,14 @@
 
 ## Node-Level Features
 
+Important-based features:
 * **Node degree**: the number of neighboring nodes
 * **Node centrality**: 
      1. Eigenvector centrality
      2. Betweenness centrality 
      3. Closeness centrality
+
+Structure-based features:
 * **Clustering coefficient** 
 * **Graphlet**
 
