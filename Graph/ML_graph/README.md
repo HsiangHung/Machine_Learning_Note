@@ -9,4 +9,4 @@
 * Use adjaceny matrix powers. If A is adjaceny matrix, $A^k_{uv}$ specifies the number of paths of length $k$ between node $u$ and $v$.
 * Katz index:
 
-$$S_{uv} = \sum_^{infty}_{k=0} \beta^{k} A^k_{uv}$$
+$$S_{uv} = \sum_^{\infty}_{k=0} \beta^{k} A^k_{uv}$$
