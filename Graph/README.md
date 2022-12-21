@@ -41,7 +41,7 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 
 ## Connectivity
 
-* A graph is called Connected if there is a path between every pair of its vertices
+* A graph is called Connected if there is a path between any two vertices.
 * A connected component of a graph is a maximal connected subgraph of it. 
 
 ![](images/connectivity.png)
@@ -66,6 +66,6 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 
 * For any graph $G(V, E)$, the sum of degrees of all its nodes is twice the number of edges
 
-$$ \sum_{v \in G} degree(v) = 2|E|$$
+$$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 
 *  If a graph had an odd number of odd nodes, then the sum of degrees would be also odd.
