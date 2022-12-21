@@ -5,10 +5,11 @@
 
 * **Node degree**: the number of neighboring nodes
 * **Node centrality**: 
-     * Eigenvector centrality
-     * Betweenness centrality 
-     *  
-
+     1. Eigenvector centrality
+     2. Betweenness centrality 
+     3. Closeness centrality
+* **Clustering coefficient** 
+* **Graphlet**
 
 ## Link-Level Features
 
