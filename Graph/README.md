@@ -65,5 +65,7 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 ## Handshaking Lemma
 
 * For any graph $G(V, E)$, the sum of degrees of all its nodes is twice the number of edges
+
 $$ \sum_{v \in G} degree(v) = 2|E|$$
+
 *  If a graph had an odd number of odd nodes, then the sum of degrees would be also odd.
