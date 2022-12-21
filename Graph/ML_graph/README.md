@@ -19,12 +19,12 @@ Shortest path distance between two nodes. Doesn't capture the degree of neighbor
 
 ### Local neighborhood overlap
 
-* Capture the number of neighboring nodes shared between nodes $u$ and $v$.
-    * **Common neighbors**: $|N(u) \cap N(v)|$
-    * **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$
-    * **Adamic-Adar index**
+Capture the number of neighboring nodes shared between nodes $u$ and $v$.
+* **Common neighbors**: $|N(u) \cap N(v)|$
+* **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$
+* **Adamic-Adar index**
 
-* However, the metric will be zero if two nodes have no nodes shared in common. Potentially these nodes may be connected in future.
+However, the metric will be zero if two nodes have no nodes shared in common. Potentially these nodes may be connected in future.
 
 ### Global neighborhood overlap
 
