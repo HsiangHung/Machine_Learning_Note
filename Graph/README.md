@@ -57,3 +57,13 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 * The weight of your path then is just the sum of all edges on this path.
 * The shortest path between two vertices is just the path of the minimum weight. 
 * The distance between two vertices and the length of the shortest path between them.
+
+## Graph Type
+
+* Path graph, cycle graph
+
+## Handshaking Lemma
+
+* For any graph $G(V, E)$, the sum of degrees of all its nodes is twice the number of edges
+$$ \sum_{v \in G} degree(v) = 2|E|$$
+*  If a graph had an odd number of odd nodes, then the sum of degrees would be also odd.
