@@ -8,7 +8,9 @@ Important-based features:
 * **Node centrality**: 
      1. Eigenvector centrality
      2. Betweenness centrality: a node is important if it lies on many shortes paths between other nodes.
+     
      $$ c_v = \sum_{s,t \ne v} \frac{\textrm{# of shortest paths between s, t containing v}}{\textrm{# of shortest paths between s, t}} $$
+     
      3. Closeness centrality
 
 Structure-based features:
