@@ -80,3 +80,5 @@ Goal: Design graph feature vector $\phi(G)$:
 
 * Map nodes into an embedding space.
 * Encode nodes so that similarity (e.g. dot product) among nodes in embedding space approximate similarity in graph.
+
+![](images/node_embedding.png)
