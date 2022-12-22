@@ -17,6 +17,8 @@ Important-based features:
 
      $$ c_v = \frac{1}{ \sum_{u \ne v} \textrm{shortest path length between u and v}}$$
 
+     ![](images/feature_node_closeness.png)
+
      
 
 Structure-based features:
