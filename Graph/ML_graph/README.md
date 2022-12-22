@@ -1,7 +1,7 @@
 # Machine Learning with Graph
 
 
-# 1 Feature Engineering
+# 1. Feature Engineering
 
 
 ## 1.1 Node-Level Features
@@ -46,7 +46,7 @@ Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppos
 
 * **Common neighbors**: $|N(u) \cap N(v)|$, e.g. $|N(A) \cap N(B)| = |\lbrace C \rbrace|=1$.
 * **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$, e.g. $|N(A) \cap N(B)|/ |N(A) \cup N(B)|= | \lbrace C \rbrace |/| \lbrace C,D \rbrace |=1/2$.
-* **Adamic-Adar index**
+* **Adamic-Adar index**: $\sum_{u in N(u) \cap N(v) } \frac{1}{\log(k_u)}$, e.g. $\frac{1}{\log(k_C)}=1/\log 4$.
 
 
 However, the metric will be zero if two nodes have no nodes shared in common. Potentially these nodes may be connected in future.
@@ -71,3 +71,12 @@ Kernel method: graph kernel is to measure similarity between two graphs.
 Goal: Design graph feature vector $\phi(G)$:
 * **Graphlet kernel**: graph is represented as **Bag-of-graphlets**. Computationally expansive.
 * **Weisfeiler-Lehman kernel**: represented as **Bag-of-color** (apply k-step color refinement) and computationally efficient.The time complexity $O(n)$, $n$ is the number of edges.
+
+
+
+# 2. Graph Representation Learning
+
+## 2.1 Node embedding
+
+* Map nodes into an embedding space.
+* Encode nodes so that similarity (e.g. dot product) among nodes in embedding space approximate similarity in graph.
