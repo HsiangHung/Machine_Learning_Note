@@ -82,3 +82,7 @@ Goal: Design graph feature vector $\phi(G)$:
 * Encode nodes so that similarity (e.g. dot product) among nodes in embedding space approximate similarity in graph.
 
 ![](images/node_embedding.png)
+
+* Simplest encoding approach: encoder is just a embedding-lookup. Directly optimize the embedding for **each node**.
+* Method: Deepwalk, Node2vec
+    
