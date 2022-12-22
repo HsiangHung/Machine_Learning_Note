@@ -29,7 +29,7 @@ Structure-based features:
 
 ### Distance-based feature
 
-Shortest path distance between two nodes.
+**Shortest path distance** between two nodes.
 
 ![](images/feature_link_distance.png)
 
@@ -41,8 +41,8 @@ Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppos
 
 ![](images/feature_link_local_neighbor.png)
 
-* **Common neighbors**: $|N(u) \cap N(v)|$, $|N(A) \cap N(B)| = {|C|}=1$.
-* **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$
+* **Common neighbors**: $|N(u) \cap N(v)|$, e.g. $|N(A) \cap N(B)| = |{C}|=1$.
+* **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$, e.g. $|N(A) \cap N(B)|/ |N(A) \cup N(B)|= |{C}|/|{C,D}|=1/2$.
 * **Adamic-Adar index**
 
 
