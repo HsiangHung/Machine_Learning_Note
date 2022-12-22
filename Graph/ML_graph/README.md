@@ -63,5 +63,8 @@ $$\bf{S} = \sum^{\infty}_{k=0} \left( \bf{I} - \beta \bf{A}\right)^{-1} - \bf{I}
 
 ## Graph-Level Features
 
-Kernel method: graph kernel is to measure similarity between two graphs.
-Design graph feature vector $\Phi(G)$.
+**Kernel method**: graph kernel is to measure similarity between two graphs.
+
+**Goal**: Design graph feature vector $\phi(G)$.
+* **Graphlet feature**: graph is represented as **Bag-of-graphlets**. Computationally expansive.
+* **Weisfeiler-Lehman graph feature**: represented as **Bag-of-color** (apply k-step color refinement) and computationally efficient.The time complexity $O(n)$, $n$ is the number of edges.
