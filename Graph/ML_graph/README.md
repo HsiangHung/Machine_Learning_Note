@@ -43,3 +43,9 @@ $$S_{uv} = \sum^{\infty}_{k=0} \beta^{k} A^k_{uv}, \ \ \textrm{where } \beta = [
 * Katz index matrix can be computed in close-form:
 
 $$\bf{S} = \sum^{\infty}_{k=0} \left( \bf{I} - \beta \bf{A}\right)^{-1} - \bf{I}. $$
+
+
+## Graph-Level Features
+
+Kernel method: graph kernel is to measure similarity between two graphs.
+Design graph feature vector $\Phi(G)$.
