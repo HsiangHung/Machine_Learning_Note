@@ -1,7 +1,10 @@
 # Machine Learning with Graph
 
 
-## Node-Level Features
+# 1 Feature Engineering
+
+
+## 1.1 Node-Level Features
 
 Important-based features:
 * **Node degree**: the number of neighboring nodes
@@ -25,9 +28,9 @@ Structure-based features:
 * **Clustering coefficient** 
 * **Graphlet**
 
-## Link-Level Features
+## 1.2 Link-Level Features
 
-### Distance-based feature
+### 1.2.1 Distance-based feature
 
 **Shortest path distance** between two nodes.
 
@@ -35,7 +38,7 @@ Structure-based features:
 
 This metric however doesn't capture the degree of neighborhood overlap. The pair (B,H) has 2 shared neighboring nodes, but (B,E) and (A,B) only have 1 such node.
 
-### Local neighborhood overlap
+### 1.2.2 Local neighborhood overlap
 
 Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppose a graph:
 
@@ -48,7 +51,7 @@ Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppos
 
 However, the metric will be zero if two nodes have no nodes shared in common. Potentially these nodes may be connected in future.
 
-### Global neighborhood overlap
+### 1.2.3 Global neighborhood overlap
 
 **Katz index**: the number of paths of **all lengths** between a pair of nodes.
 * Use adjaceny matrix powers. If A is adjaceny matrix, $A^k_{uv}$ specifies the number of paths of length $k$ between node $u$ and $v$.
@@ -61,10 +64,10 @@ $$S_{uv} = \sum^{\infty}_{k=0} \beta^{k} A^k_{uv}, \ \ \textrm{where } \beta = [
 $$\bf{S} = \sum^{\infty}_{k=0} \left( \bf{I} - \beta \bf{A}\right)^{-1} - \bf{I}. $$
 
 
-## Graph-Level Features
+## 1.3 Graph-Level Features
 
-**Kernel method**: graph kernel is to measure similarity between two graphs.
+Kernel method: graph kernel is to measure similarity between two graphs.
 
-**Goal**: Design graph feature vector $\phi(G)$.
-* **Graphlet feature**: graph is represented as **Bag-of-graphlets**. Computationally expansive.
-* **Weisfeiler-Lehman graph feature**: represented as **Bag-of-color** (apply k-step color refinement) and computationally efficient.The time complexity $O(n)$, $n$ is the number of edges.
+Goal: Design graph feature vector $\phi(G)$:
+* **Graphlet kernel**: graph is represented as **Bag-of-graphlets**. Computationally expansive.
+* **Weisfeiler-Lehman kernel**: represented as **Bag-of-color** (apply k-step color refinement) and computationally efficient.The time complexity $O(n)$, $n$ is the number of edges.
