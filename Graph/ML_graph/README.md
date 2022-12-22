@@ -29,7 +29,9 @@ Structure-based features:
 
 ### Distance-based feature
 
-Shortest path distance between two nodes. Doesn't capture the degree of neighborhood overlap
+Shortest path distance between two nodes. Doesn't capture the degree of neighborhood overlap.
+
+![](images/feature_link_distance.png)
 
 ### Local neighborhood overlap
 
@@ -37,6 +39,8 @@ Capture the number of neighboring nodes shared between nodes $u$ and $v$.
 * **Common neighbors**: $|N(u) \cap N(v)|$
 * **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$
 * **Adamic-Adar index**
+
+![](images/feature_link_local_neighbor.png)
 
 However, the metric will be zero if two nodes have no nodes shared in common. Potentially these nodes may be connected in future.
 
