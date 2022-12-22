@@ -46,7 +46,7 @@ Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppos
 
 * **Common neighbors**: $|N(u) \cap N(v)|$, e.g. $|N(A) \cap N(B)| = |\lbrace C \rbrace|=1$.
 * **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$, e.g. $|N(A) \cap N(B)|/ |N(A) \cup N(B)|= | \lbrace C \rbrace |/| \lbrace C,D \rbrace |=1/2$.
-* **Adamic-Adar index**: $\sum_{u \in N(u) \cap N(v) } \frac{1}{\log(k_u)}$, e.g. $\frac{1}{\log(k_C)}=\frac{1}{\log 4}$.
+* **Adamic-Adar index**: $\sum_{u \in \lbrace N(u) \cap N(v) \rbrace} \frac{1}{\log(k_u)}$, e.g. $\frac{1}{\log(k_C)}=\frac{1}{\log 4}$.
 
 
 However, the metric will be zero if two nodes have no nodes shared in common. Potentially these nodes may be connected in future.
