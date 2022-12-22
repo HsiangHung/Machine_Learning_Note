@@ -41,8 +41,8 @@ Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppos
 
 ![](images/feature_link_local_neighbor.png)
 
-* **Common neighbors**: $|N(u) \cap N(v)|$, e.g. $|N(A) \cap N(B)| = |\left{ C \right}|=1$.
-* **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$, e.g. $|N(A) \cap N(B)|/ |N(A) \cup N(B)|= |\left{ C \right}|/|\left{ C,D \right}|=1/2$.
+* **Common neighbors**: $|N(u) \cap N(v)|$, e.g. $|N(A) \cap N(B)| = |\lbrace C \rbrace|=1$.
+* **Jaccard's coefficient**: $|N(u) \cap N(v)|/|N(u) \cup N(v)|$, e.g. $|N(A) \cap N(B)|/ |N(A) \cup N(B)|= | \lbrace C \rbrace |/| \lbrace C,D \rbrace |=1/2$.
 * **Adamic-Adar index**
 
 
