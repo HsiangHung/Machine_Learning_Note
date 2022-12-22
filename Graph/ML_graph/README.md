@@ -7,11 +7,17 @@ Important-based features:
 * **Node degree**: the number of neighboring nodes
 * **Node centrality**: 
      1. Eigenvector centrality
-     2. Betweenness centrality: a node is important if it lies on many shortes paths between other nodes.
+     2. Betweenness centrality: a node is important if it lies on many shortest paths between other nodes.
      
-     $$ c_v = \sum_{s,t \ne v} \frac{\textrm{num of shortest paths between s, t containing v}}{\textrm{num of shortest paths between s, t}} $$
+     $$ c_v = \sum_{s,t \ne v} \frac{\textrm{num of shortest paths between s, t containing v}}{\textrm{num of shortest paths between s, t}}.$$
 
-     3. Closeness centrality
+     ![](images/feature_node_betweenness.png)
+
+     3. Closeness centrality: a node is important if it has small shortest path lengths to all other nodes.
+
+     $$ c_v = \frac{1}{ \sum_{u \ne v} \textrm{shortest path length between u and v}}$$
+
+     
 
 Structure-based features:
 * **Clustering coefficient** 
