@@ -114,10 +114,11 @@ where $P(Y_v=c)$ is the probability of node $v$ having label $c$.
 
 ![](images/label_relational_classification_0.png)
 
-* Update all nodes in a random order until convergence or until maximum number of iterations is reached.
-
-![](images/label_relational_classification_1.png)
-![](images/label_relational_classification_2.png)
+* Iteratively update all nodes in a random order until convergence or until maximum number of iterations is reached.
+     * For example, for the first iteration,
+     ![](images/label_relational_classification_1.png)
+     * We continue following iterations update each node 
+     ![](images/label_relational_classification_2.png)
 
 * Challenges:
      * Convergence is not guaranteed
