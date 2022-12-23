@@ -111,7 +111,11 @@ where $P(Y_v=c)$ is the probability of node $v$ having label $c$.
 
 * For labeled nodes $v$, initialize label $Y_v$ with ground-truth label $Y^*_v$.
 * For unlabeled nodes, initialize $Y_v= 0.5$.
+
+![](images/label_relational_classification.png)
+
 * Update all nodes in a random order until convergence or until maximum number of iterations is reached.
 * Challenges:
      * Convergence is not guaranteed
      * Model cannot use node feature information
+
