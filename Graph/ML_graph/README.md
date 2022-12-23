@@ -83,7 +83,10 @@ Goal: Design graph feature vector $\phi(G)$:
 
 ![](images/node_embedding.png)
 
-* Simplest encoding approach: **shallow encoder**. encoder is just a embedding-lookup. Directly optimize the embedding for **each node**.
+
+### 2.1.1 Shallow encoder
+
+* Simplest encoding approach: encoder is just a embedding-lookup. Directly optimize the embedding for **each node**.
 * $\bf{Z}$ matrix, where each column vector $z_u$ denotes a node, $u \in V$, and the number of row denotes embedding dimensionality.
 * Method: Deepwalk, Node2vec, but both don't capture structral similarity.
 * Decoder: based on node similarity 
