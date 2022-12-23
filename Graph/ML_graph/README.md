@@ -85,6 +85,26 @@ Goal: Design graph feature vector $\phi(G)$:
 
 * Simplest encoding approach: encoder is just a embedding-lookup. Directly optimize the embedding for **each node** (shallow encoder).
 * $\bf{Z}$ matrix, where each column vector $z_u$ denotes a node, $u \in V$, and the number of row denotes embedding dimensionality.
-* Method: Deepwalk, Node2vec
+* Method: Deepwalk, Node2vec, but both don't capture structral similarity.
 * Decoder: based on node similarity 
-* Objective: maximize $z^T_u z_u$ for node pairs (u, v) which are similar.
+* Objective: maximize $z^T_u z_v$ for node pairs (u, v) which are similar.
+
+## 2.2 Node Classification
+
+Messgae passing labels, similar nodes are connected (correlation). 
+
+Collective classification: assign labels to all nodes in the network. Three techniques:
+* Relational classification
+* Iterative classification
+* Correct & Smooth
+
+Two explanations for nodes in networks are correlated:
+* social Homophily: The tendency of individuals to associate and bond with similar others
+* Influence: Social connections can influence the individual characteristics of a person
+
+### 2.2.1 Relational classification
+
+Prbabilistic relational classification: Propagate node labels across the network. Class probability $Y_v$ of node $v$ is a weighted average of class probabilities of its neighbors.
+* For labeled nodes $v$, initialize label $Y_v$ with ground-truth label $Y^*_v$.
+* For unlabeled nodes, initialize $Y_v= 0.5$.
+* Update all nodes in a random order until convergence or until maximum number of iterations is reached.
