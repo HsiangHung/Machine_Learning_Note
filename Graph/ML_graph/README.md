@@ -105,9 +105,13 @@ Collective classification: assign labels to all nodes in the network. Three tech
 ### 2.2.1 Relational classification
 
 Prbabilistic relational classification: Propagate node labels across the network. Class probability $Y_v$ of node $v$ is a weighted average of class probabilities of its neighbors.
+
+$$P(Y_v=c) = \frac{1}{\sum_{(u,v) \in E} A_{uv}}\sum_{(u,v) \in E} A_{uv}P(Y_u=c),$$
+where $P(Y_v=c)$ is the probability of node $v$ having label $c$.
+
 * For labeled nodes $v$, initialize label $Y_v$ with ground-truth label $Y^*_v$.
 * For unlabeled nodes, initialize $Y_v= 0.5$.
 * Update all nodes in a random order until convergence or until maximum number of iterations is reached.
-$$P(Y_v=c) = \frac{1}{\sum_{(u,v) \in E} A_{uv}}\sum_{(u,v) \in c} A_{uv}P(Y_u=c)$$
-
-
+* Challenges:
+     * Convergence is not guaranteed
+     * Model cannot use node feature information
