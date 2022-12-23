@@ -83,7 +83,7 @@ Goal: Design graph feature vector $\phi(G)$:
 
 ![](images/node_embedding.png)
 
-* Simplest encoding approach: encoder is just a embedding-lookup. Directly optimize the embedding for **each node** (shallow encoder).
+* Simplest encoding approach: **shallow encoder**. encoder is just a embedding-lookup. Directly optimize the embedding for **each node**.
 * $\bf{Z}$ matrix, where each column vector $z_u$ denotes a node, $u \in V$, and the number of row denotes embedding dimensionality.
 * Method: Deepwalk, Node2vec, but both don't capture structral similarity.
 * Decoder: based on node similarity 
@@ -124,3 +124,9 @@ where $P(Y_v=c)$ is the probability of node $v$ having label $c$.
      * Convergence is not guaranteed
      * Model cannot use node feature information
 
+### 2.2.2 Iterative classification
+
+* Relational classifier does not use node attributes.
+* Iterative classification: Classify node $v$ based on its attributes $f_v$ as well as labels $z_v$ of neighbor set $N_v$.
+
+### 2.2.3 Loopy belief propagation 
