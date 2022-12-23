@@ -91,16 +91,16 @@ Goal: Design graph feature vector $\phi(G)$:
 
 ## 2.2 Node Classification
 
-Messgae passing labels, similar nodes are connected (correlation). 
+Messgae passing labels, similar nodes are connected (correlation).  
+
+Two explanations for nodes in networks are correlated:
+* social Homophily: The tendency of individuals to associate and bond with similar others
+* Influence: Social connections can influence the individual characteristics of a person
 
 Collective classification: assign labels to all nodes in the network. Three techniques:
 * Relational classification
 * Iterative classification
 * Correct & Smooth
-
-Two explanations for nodes in networks are correlated:
-* social Homophily: The tendency of individuals to associate and bond with similar others
-* Influence: Social connections can influence the individual characteristics of a person
 
 ### 2.2.1 Relational classification
 
@@ -108,3 +108,6 @@ Prbabilistic relational classification: Propagate node labels across the network
 * For labeled nodes $v$, initialize label $Y_v$ with ground-truth label $Y^*_v$.
 * For unlabeled nodes, initialize $Y_v= 0.5$.
 * Update all nodes in a random order until convergence or until maximum number of iterations is reached.
+$$P(Y_v=c) = \frac{1}{\sum_{(u,v) \in E} A_{uv}}\sum_{(u,v) \in c} A_{uv}P(Y_u=c)$$
+
+
