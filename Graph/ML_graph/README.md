@@ -49,7 +49,7 @@ Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppos
 * **Adamic-Adar index**: $\sum_{u \in \lbrace N(u) \cap N(v) \rbrace} \frac{1}{\log(k_u)}$, e.g. $\frac{1}{\log(k_C)}=\frac{1}{\log 4}$.
 
 
-However, the metric will be zero if two nodes have no nodes shared in common. Potentially these nodes may be connected in future.
+However, the local neighborhood overlap metric will be zero if two nodes have no nodes shared in common. Potentially these nodes may be connected in future.
 
 ### 1.2.3 Global neighborhood overlap
 
@@ -63,6 +63,7 @@ $$S_{uv} = \sum^{\infty}_{k=0} \beta^{k} A^k_{uv}, \ \ \textrm{where } \beta = [
 
 $$\bf{S} = \sum^{\infty}_{k=0} \left( \bf{I} - \beta \bf{A}\right)^{-1} - \bf{I}. $$
 
+Here we use the geometric series formula $\sum^{\infty}_{k=0} \beta^k \bf{A}^k = \left( \bf{I} - \beta \bf{A}\right)^{-1} $
 
 ## 1.3 Graph-Level Features
 
