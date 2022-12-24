@@ -63,7 +63,9 @@ $$S_{uv} = \sum^{\infty}_{k=0} \beta^{k} A^k_{uv}, \ \ \textrm{where } \beta = [
 
 $$\bf{S} = \sum^{\infty}_{k=0} \left( \bf{I} - \beta \bf{A}\right)^{-1} - \bf{I}. $$
 
-Here we use the geometric series formula $\sum^{\infty}_{k=0} \beta^k \bf{A}^k = \left( \bf{I} - \beta \bf{A}\right)^{-1} $
+Here we use the geometric series formula 
+
+$$\sum^{\infty}_{k=0} \beta^k \bf{A}^k = \left( \bf{I} - \beta \bf{A}\right)^{-1} $$
 
 ## 1.3 Graph-Level Features
 
