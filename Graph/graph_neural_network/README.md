@@ -14,3 +14,5 @@ Tasks we will be able to solve:
 4. Network similarity: How similar are two (sub)networks
 
 Modern deep learning toolbox is designed for simple sequences & grids. However a network has an arbitrary size and complex topological structure (i.e., no spatial locality like grids)
+
+![](images/graph_encoder.png)
