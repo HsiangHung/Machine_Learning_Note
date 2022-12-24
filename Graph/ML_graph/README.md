@@ -40,7 +40,7 @@ This metric however doesn't capture the degree of neighborhood overlap. The pair
 
 ### 1.2.2 Local neighborhood overlap
 
-Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppose a graph:
+Capture the number of neighboring nodes shared between nodes $u$ and $v$. Suppose a graph and $N(v)$ denotes the neighbors of node $v$:
 
 ![](images/feature_link_local_neighbor.png)
 
