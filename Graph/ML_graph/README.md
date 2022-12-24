@@ -97,7 +97,7 @@ Goal: Design graph feature vector $\phi(G)$:
 * $\bf{Z}$ matrix, where each column vector $z_u$ denotes a node, $u \in V$, and the number of row denotes embedding dimensionality.
 ![](images/node_embedding_lookup.png)
 * Method: Deepwalk, Node2vec, but both don't capture structural similarity.
-* Decoder: based on node similarity 
+* Decoder: 𝐃𝐄𝐂 maps from embeddings (based on node similarity) to the similarity score.
 * Objective: maximize $z^T_u z_v$ for node pairs (u, v) which are similar
 $$\textrm{similarity}(u, v) \approx z^T_u z_v.$$
 
