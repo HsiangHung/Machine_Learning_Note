@@ -79,12 +79,16 @@ Goal: Design graph feature vector $\phi(G)$:
 
 # 2. Graph Representation Learning
 
+**Goal**: Efficient task-independent feature learning for machine learning with graphs!
+
+![](images/node_embedding_0.png)
+
 ## 2.1 Node embedding
 
 * Map nodes into an embedding space.
 * Encode nodes so that similarity (e.g. dot product) among nodes in embedding space approximate similarity in graph.
 
-![](images/node_embedding.png)
+![](images/node_embedding_1.png)
 
 
 ### 2.1.1 Shallow encoder
