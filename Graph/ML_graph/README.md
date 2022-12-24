@@ -63,7 +63,7 @@ $$S_{uv} = \sum^{\infty}_{k=0} \beta^{k} A^k_{uv}, \ \ \textrm{where } \beta = [
 
 $$\bf{S} = \sum^{\infty}_{k=0} \left( \bf{I} - \beta \bf{A}\right)^{-1} - \bf{I}. $$
 
-Here we use the geometric series formula 
+Here we implemented the geometric series formula 
 
 $$\sum^{\infty}_{k=0} \beta^k \bf{A}^k = \left( \bf{I} - \beta \bf{A}\right)^{-1} $$
 
@@ -73,7 +73,7 @@ Kernel method: graph kernel is to measure similarity between two graphs.
 
 Goal: Design graph feature vector $\phi(G)$:
 * **Graphlet kernel**: graph is represented as **Bag-of-graphlets**. Computationally expansive.
-* **Weisfeiler-Lehman kernel**: represented as **Bag-of-color** (apply k-step color refinement) and computationally efficient.The time complexity $O(n)$, $n$ is the number of edges.
+* **Weisfeiler-Lehman kernel**: represented as **Bag-of-color** (apply k-step color refinement) and computationally efficient. The time complexity $O(n)$, $n$ is the number of edges.
 
 
 
@@ -89,11 +89,13 @@ Goal: Design graph feature vector $\phi(G)$:
 
 ### 2.1.1 Shallow encoder
 
-* Simplest encoding approach: encoder is just a embedding-lookup. Directly optimize the embedding for **each node**.
+* Simplest encoding approach: encoder is just a embedding-**lookup**. Directly optimize the embedding for **each node**.
 * $\bf{Z}$ matrix, where each column vector $z_u$ denotes a node, $u \in V$, and the number of row denotes embedding dimensionality.
-* Method: Deepwalk, Node2vec, but both don't capture structral similarity.
+![](images/node_embedding_lookup.png)
+* Method: Deepwalk, Node2vec, but both don't capture structural similarity.
 * Decoder: based on node similarity 
-* Objective: maximize $z^T_u z_v$ for node pairs (u, v) which are similar.
+* Objective: maximize $z^T_u z_v$ for node pairs (u, v) which are similar
+$$\textrm{similarity}(u, v) \approx z^T_u z_v.$$
 
 ## 2.2 Node Classification
 
