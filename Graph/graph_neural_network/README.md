@@ -48,3 +48,11 @@ Basic approach:
 * Apply a neural network
 
 ![](images/deep_model_3.png)
+
+$h^k_v$: the hidden representation of node $v$ at layer $k$
+
+Trainable weight matrices (i.e., what we learn):
+* $W_k$: weight matrix for neighborhood aggregation.
+* $B_k$: weight matrix for transforming hidden vector of self.
+
+We can feed these embeddings into any loss function and run SGD to train the weight parameters. 
