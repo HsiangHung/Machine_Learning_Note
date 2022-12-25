@@ -17,15 +17,27 @@ Modern deep learning toolbox is designed for simple sequences & grids. However a
 
 ![](images/graph_encoder.png)
 
-## Set up into Graph Neural Networwk
+###  Naive MLP approach fails for graphs
 
 We cannot naively feed graph into a deep neural net using adjacency matrix and features. Issues with this idea:
 1. $O(|V|)$ parameters
 2. Not applicable to graphs of different sizes; each graph is a "data point".
 3. Sensitive to node ordering. "A->B->C" and "A->C->B" have different adjacency matrix.
 
-### Graph convolutional network
+## Graph convolutional network
 
 **Idea**: Node’s neighborhood defines a computation graph
 
 ![](images/computation_graph.png)
+
+### Multiple Layer Deep Model
+
+Obtain nodes aggregate information (node embeddings) from their locoal network neighbors using neural networks.
+
+![](images/deep_model_1.png)
+
+Nodes have embeddings at each layer:
+1. Layer-0 embedding of node $v$ is its input feature, $x_v$.
+2. Layer-k embedding gets information from nodes that are k hops away.
+
+![](images/deep_model_2.png)
