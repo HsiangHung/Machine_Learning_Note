@@ -36,8 +36,15 @@ Obtain nodes aggregate information (node embeddings) from their locoal network n
 
 ![](images/deep_model_1.png)
 
-Nodes have embeddings at each layer:
-1. Layer-0 embedding of node $v$ is its input feature, $x_v$.
-2. Layer-k embedding gets information from nodes that are k hops away.
+Model can be of **arbitrary** depth:
+* Nodes have embeddings at each layer:
+* Layer-0 embedding of node $v$ is its input feature, $x_v$.
+* Layer-$k$ embedding gets information from nodes that are $k$ hops away.
 
 ![](images/deep_model_2.png)
+
+Basic approach: 
+* Average information from neighbors
+* Apply a neural network
+
+![](images/deep_model_3.png)
