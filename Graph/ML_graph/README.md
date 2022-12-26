@@ -1,5 +1,6 @@
 # Machine Learning with Graph
 
+$\textcolor{red}{NOTE: \ This \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ "machine learning \ with \ graph" \ lectures.}$
 
 # 1. Feature Engineering
 
