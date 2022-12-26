@@ -64,11 +64,11 @@ In a nutshell, a knowledge graph is a directed labeled graph in which the nodes 
 * RDF(Subject predicate Object)
 * Property Graphs
 
-For example, a node hosting a pod is a minimal property graph, in which there are two types of entities with a set of properties. There is also a “HOSTS” relationship between the Node entity and the Pod entity.
+For example, a node hosting a pod is a minimal property graph, in which there are two types of entities with a set of properties. There is also a “HOSTS” relationship between the Node entity and the Pod entity:
 
 ![](images/knowledge_graph_1.png)
 
-As another example, the following knowledge graph infers that a Node HOSTS a Pod and a Services CONTROLS a Pod.
+As another example, the following knowledge graph infers that a Node HOSTS a Pod and a Services CONTROLS a Pod:
 
 ![](images/knowledge_graph_2.png)
 

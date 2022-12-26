@@ -56,3 +56,13 @@ Trainable weight matrices (i.e., what we learn):
 * $B_k$: weight matrix for transforming hidden vector of node's **itself**.
 
 We can feed these embeddings into any loss function and run SGD to train the weight parameters. 
+
+### Train a GNN
+
+Node embedding $z_v$ is a function of input graph:
+* Supervised setting: we want to minimize the loss $L$, $\min_{\Theta}L(y, f(z_v))$:
+     * $y$: node label
+     * $L$ could be $L_2$ if $y$ is real number, or cross entropy if $y$ is categorical
+* Unsupervised setting:
+     * No node label available
+     * Use the graph structure as the supervision.
