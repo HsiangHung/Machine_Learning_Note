@@ -1,8 +1,8 @@
 # Graph Neural Network
 
-$\textcolor{red}{NOTE: \ This \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ "machine learning \ with \ graph" \ lectures.}$
+$\textcolor{red}{NOTE: \ This \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ 'Machine Learning \ With \ Graphs' \ lectures.}$
 
-## Node Embedding
+## 1. Node Embedding
 
 Goal: Map nodes to $d$-dimensional embeddings such that similar nodes in the graph are embedded close together 
 
@@ -25,13 +25,13 @@ We cannot naively feed graph into a deep neural net using adjacency matrix and f
 2. Not applicable to graphs of different sizes; each graph is a "data point".
 3. Sensitive to node ordering. "A->B->C" and "A->C->B" have different adjacency matrix.
 
-## Graph convolutional network
+## 2. Graph convolutional network
 
 **Idea**: Node’s neighborhood defines a computation graph
 
 ![](images/computation_graph.png)
 
-### Multiple layer deep model
+### 2.1 Multiple layer deep model
 
 Obtain nodes aggregation information (node embeddings) from their locoal network neighbors using neural networks.
 
@@ -44,7 +44,7 @@ Model can be of **arbitrary** depth:
 
 ![](images/deep_model_2.png)
 
-### Basic approach for deep model
+### 2.2 Basic approach for deep model
 
 * Average information from neighbors
 * Apply a neural network (Note: $h^k_v$ denotes the hidden representation of node $v$ at layer $k$)
@@ -58,7 +58,7 @@ Trainable weight matrices (i.e., what we learn):
 
 We can feed these embeddings into any loss function and run SGD to train the weight parameters. 
 
-## Train a GNN
+### 2.3 Train a GNN
 
 Node embedding $z_v$ is a function of input graph:
 * Supervised setting: we want to minimize the loss $L$, 
@@ -69,7 +69,7 @@ Node embedding $z_v$ is a function of input graph:
      * No node label available
      * Use the graph structure as the supervision.
 
-### Supervised Learning
+#### 2.3.1 Supervised Learning
 
 Directly train the model for a supervised task. e.g., node classification, if the node is safe or toxic drug:
 
@@ -80,8 +80,9 @@ $$L = \sum_{v \in V} y_v \log \left( \sigma ( z^T_v \theta ) \right) +  (1 - y_v
 
 where $\theta$ is classification weight, $z_v$ is node embedding from encoder output.
 
+### 2.3.2 Unsupervised Learning
 
-## GNN Process
+## 3. GNN Process
 
 ![](images/train_GNN_summary_1.png)
 
