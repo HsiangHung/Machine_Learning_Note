@@ -9,6 +9,9 @@ Traces and metrics are an abstraction built on top of logs that pre-process and 
 
 
 ### Event Logs
+
+Logs are important when engineers are in deep debugging mode, trying to understand a problem and troubleshoot code. 
+
 An event log is an immutable, timestamped record of discrete events that happened over time. Event logs in general come in three forms but are fundamentally the same: a timestamp and a payload of some context.
 
 ### Metrics
@@ -21,14 +24,19 @@ A metric in Prometheus, as shown in Figure 4-1, is identified using both the met
 The biggest drawback with both application logs and application metrics is that they are system scoped, making it hard to understand anything else other than what’s happening inside a particular system. 
 
 ### Tracing
-A trace is a representation of a series of causally related distributed events that encode the end-to-end request flow through a distributed system.
+A trace is a representation of a series of causally related **distributed** events that encode the end-to-end request flow through a distributed system.
+
+Applications often call multiple other applications depending on the task they’re trying to accomplish, and often process data in parallel. This means the call-chain can be inconsistent and have unreliable timing.
 
 Traces are a representation of logs; the data structure of traces looks almost like that of an event log. A single trace can provide visibility into both the path traversed by a request as well as the structure of a request. The path of a request allows software engineers and SREs to understand the different services involved in the path of a request, and the structure of a request helps one understand the junctures and effects of asynchrony in the execution of a request.
 
 ![](images/trace_model_1.png)
 ![](images/trace_model_2.png)
 
-Zipkin and Jaeger are two of the most popular OpenTracing-compliant open source distributed tracing solutions. (OpenTracing is a vendor-neutral spec and instrumentation libraries for distributed tracing APIs.)
+Zipkin and Jaeger are two of the most popular OpenTracing-compliant open source **distributed** tracing solutions. (OpenTracing is a vendor-neutral spec and instrumentation libraries for distributed tracing APIs.)
+
+### Event 
+Events are a critical telemetry type for any observability solution. They’re valuable because they can be used to validate the occurrence of a particular action at a particular time and enable a fine-grained analysis in real time. However, events are often overlooked or can be confused with logs. What’s the difference? Events contain a higher level of abstraction than the level of detail provided by logs. **Logs record everything, whereas events are records of selected significant things**.
 
 #### The Challenges of Tracing
 
@@ -38,6 +46,10 @@ The second problem with tracing instrumentation is that it’s not sufficient fo
 
 * [The Three Pillars of Observability]: https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html
 [[O'Reilly] The Three Pillars of Observability](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html)
+
+* [Demystifying M.E.L.T. - the key data for business observability]: https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy
+[[LinkedIn] Demystifying M.E.L.T. - the key data for business observability](https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy)
+
 
 
 
