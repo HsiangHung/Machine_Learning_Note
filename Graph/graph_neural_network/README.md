@@ -60,7 +60,8 @@ We can feed these embeddings into any loss function and run SGD to train the wei
 ### Train a GNN
 
 Node embedding $z_v$ is a function of input graph:
-* Supervised setting: we want to minimize the loss $L$, $\min_{\Theta}L(y, f(z_v))$:
+* Supervised setting: we want to minimize the loss $L$, 
+      $$\min_{\Theta}L(y, f(z_v))$$
      * $y$: node label
      * $L$ could be $L_2$ if $y$ is real number, or cross entropy if $y$ is categorical
 * Unsupervised setting:
