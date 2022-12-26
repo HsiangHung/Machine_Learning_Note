@@ -5,6 +5,9 @@
 
 Monitoring is about tools that gather predefined sets of information about the state of each system element, while observability is about solutions that help us explore the monitoring output and discover problems we may not already know.
 
+* [What is Data Observability?]: https://www.youtube.com/watch?v=jfg9wBJBtKk
+[[Youtube] What is Data Observability?](https://www.youtube.com/watch?v=jfg9wBJBtKk)
+
 ## MELT Data
 
 * [The Three Pillars of Observability]: https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html
