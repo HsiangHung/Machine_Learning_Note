@@ -30,7 +30,7 @@ We cannot naively feed graph into a deep neural net using adjacency matrix and f
 
 ![](images/computation_graph.png)
 
-### Multiple Layer Deep Model
+### Multiple layer deep model
 
 Obtain nodes aggregation information (node embeddings) from their locoal network neighbors using neural networks.
 
@@ -43,7 +43,8 @@ Model can be of **arbitrary** depth:
 
 ![](images/deep_model_2.png)
 
-Basic approach: 
+### Basic approach for deep model
+
 * Average information from neighbors
 * Apply a neural network
 
