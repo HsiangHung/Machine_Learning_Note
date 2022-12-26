@@ -5,6 +5,13 @@
 
 Monitoring is about tools that gather predefined sets of information about the state of each system element, while observability is about solutions that help us explore the monitoring output and discover problems we may not already know.
 
+## MELT Data
+
+* [The Three Pillars of Observability]: https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html
+[[O'Reilly] The Three Pillars of Observability](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html)
+* [Demystifying M.E.L.T. - the key data for business observability]: https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy
+[[LinkedIn] Demystifying M.E.L.T. - the key data for business observability](https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy)
+
 
 **Logs**, **metrics**, and **traces** are often known as the three pillars of observability (sometimes we generalize it as MELT, where E is event). While plainly having access to logs, metrics, and traces doesn’t necessarily make systems more observable, these are powerful tools that, if understood well, can unlock the ability to build better systems.
 
@@ -45,14 +52,13 @@ Events are a critical telemetry type for any observability solution. They’re v
 
 Tracing is, by far, the hardest to retrofit into an existing infrastructure, because for tracing to be truly effective, every component in the path of a request needs to be modified to propagate tracing information. 
 
-The second problem with tracing instrumentation is that it’s not sufficient for developers to instrument their code alone. 
+The second problem with tracing instrumentation is that it’s not sufficient for developers to instrument their code alone.
 
-* [The Three Pillars of Observability]: https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html
-[[O'Reilly] The Three Pillars of Observability](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html)
-* [Demystifying M.E.L.T. - the key data for business observability]: https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy
-[[LinkedIn] Demystifying M.E.L.T. - the key data for business observability](https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy)
 
 ## Knowledge Graph in Observability
+
+* [Observability Knowledge Graph]: https://www.asserts.ai/blog/observability-knowledge-graph/
+[[Jia Xu] Observability Knowledge Graph](https://www.asserts.ai/blog/observability-knowledge-graph/)
 
 In a nutshell, a knowledge graph is a directed labeled graph in which the nodes and edges have well-defined meanings. It’s a graph that uses entities and relationships to encode semantic information about specific topics. There are two popular graph data models: 
 * RDF(Subject predicate Object)
@@ -64,7 +70,12 @@ For example, a node hosting a pod is a minimal property graph, in which there ar
 
 To be clear, we understand that a graph is not a suitable data structure for encoding time series data. Nor is it practical to represent raw logs or traces. However, if we can extract entities and relationships from these data and form a graph, we can leverage it for the benefit of observability.
 
+* A graph can easily visualize a **system topology** that crosses organizational boundaries.
+* A graph can empower search with context, making it easy to explore and navigate all the **software and hardware components** in a cloud-scale application.
+* A graph is a good choice for schema-free data integration. We can **define entities on the fly without any schema**. These entities then serve as an abstraction layer upon which we can answer semantic queries that require combining data from multiple sources.
+* A graph provides **spatial correlation**, which supplements the temporal correlation and reduces the human cognitive load for troubleshooting.
 
+With a knowledge graph, we can instead place contextualization at the center of observability.
 
 
 
