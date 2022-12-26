@@ -46,7 +46,6 @@ The second problem with tracing instrumentation is that it’s not sufficient fo
 
 * [The Three Pillars of Observability]: https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html
 [[O'Reilly] The Three Pillars of Observability](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html)
-
 * [Demystifying M.E.L.T. - the key data for business observability]: https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy
 [[LinkedIn] Demystifying M.E.L.T. - the key data for business observability](https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy)
 
