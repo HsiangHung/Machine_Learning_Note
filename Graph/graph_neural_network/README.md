@@ -71,10 +71,20 @@ Node embedding $z_v$ is a function of input graph:
 
 ### Supervised Learning
 
-Directly train the model for a supervised task (e.g., node classification)
+Directly train the model for a supervised task. e.g., node classification, if the node is safe or toxic drug:
 
 ![](images/train_supervised_GNN.png)
 
 * Use cross entropy loss
-      $$L = \sum_{v \in V} y_v \log \left( \sigma ( z^T_v \theta ) \right) +  (1 - y_v) \log \left(  1 - \sigma (z^T_v \theta) \right)$$
-      
+$$L = \sum_{v \in V} y_v \log \left( \sigma ( z^T_v \theta ) \right) +  (1 - y_v) \log \left(  1 - \sigma (z^T_v \theta) \right),$$
+
+where $\theta$ is classification weight, $z_v$ is node embedding from encoder output.
+
+
+## GNN Process
+
+![](images/train_GNN_summary_1.png)
+
+The same aggregation parameters are shared for all nodes:
+
+![](images/train_GNN_summary_2.png)
