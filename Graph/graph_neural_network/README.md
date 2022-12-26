@@ -57,7 +57,7 @@ Trainable weight matrices (i.e., what we learn):
 
 We can feed these embeddings into any loss function and run SGD to train the weight parameters. 
 
-### Train a GNN
+## Train a GNN
 
 Node embedding $z_v$ is a function of input graph:
 * Supervised setting: we want to minimize the loss $L$, 
@@ -67,3 +67,9 @@ Node embedding $z_v$ is a function of input graph:
 * Unsupervised setting:
      * No node label available
      * Use the graph structure as the supervision.
+
+### Supervised Learning
+
+Directly train the model for a supervised task (e.g., node classification)
+* Use cross entropy loss
+      $$ L = \sum_{v \in V} y_v \log \Big( \sigma(z^T_v \theta) \Big) +  (1-y_v) \log \Big( 1 - \sigma(z^T_v \theta) \Big)$$
