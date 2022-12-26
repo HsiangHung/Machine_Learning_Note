@@ -46,11 +46,10 @@ Model can be of **arbitrary** depth:
 ### Basic approach for deep model
 
 * Average information from neighbors
-* Apply a neural network
+* Apply a neural network ($h^k_v$: the hidden representation of node $v$ at layer $k$)
 
 ![](images/deep_model_3.png)
 
-$h^k_v$: the hidden representation of node $v$ at layer $k$
 
 Trainable weight matrices (i.e., what we learn):
 * $W_k$: weight matrix for neighborhood aggregation.
