@@ -1,5 +1,9 @@
 # Graph Neural Network
 
+NOTE: This note is based on Prof. Jure Leskovec's CS 224W machine learning with graph lectures.
+
+$\textcolor{red}{textrm{NOTE: This note is based on Prof. Jure Leskovec's CS 224W machine learning with graph lectures.
+}}$
 
 ## Node Embedding
 
