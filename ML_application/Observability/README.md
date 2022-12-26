@@ -1,6 +1,9 @@
 
 # Observability  
 
+## Monitoring vs Observability
+
+Monitoring is about tools that gather predefined sets of information about the state of each system element, while observability is about solutions that help us explore the monitoring output and discover problems we may not already know.
 
 
 **Logs**, **metrics**, and **traces** are often known as the three pillars of observability (sometimes we generalize it as MELT, where E is event). While plainly having access to logs, metrics, and traces doesn’t necessarily make systems more observable, these are powerful tools that, if understood well, can unlock the ability to build better systems.
@@ -15,7 +18,7 @@ Logs are important when engineers are in deep debugging mode, trying to understa
 An event log is an immutable, timestamped record of discrete events that happened over time. Event logs in general come in three forms but are fundamentally the same: a timestamp and a payload of some context.
 
 ### Metrics
-Metrics are a numeric representation of data measured over intervals of time and are better suited to trigger alerts. Modern monitoring systems like Prometheus and newer versions of Graphite represent every time series using a metric name as well as additional key-value pairs called labels.
+Metrics are a numeric representation of data measured over intervals of time and are better suited to trigger alerts (time-series data). Modern monitoring systems like Prometheus and newer versions of Graphite represent every time series using a metric name as well as additional key-value pairs called labels.
 
 A metric in Prometheus, as shown in Figure 4-1, is identified using both the metric name and the labels. The actual data stored in the time series is called a sample, and it consists of two components: a float64 value and a millisecond precision timestamp.
 
@@ -48,6 +51,18 @@ The second problem with tracing instrumentation is that it’s not sufficient fo
 [[O'Reilly] The Three Pillars of Observability](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html)
 * [Demystifying M.E.L.T. - the key data for business observability]: https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy
 [[LinkedIn] Demystifying M.E.L.T. - the key data for business observability](https://www.linkedin.com/pulse/demystifying-melt-key-data-business-observability-jillian-macmurchy)
+
+## Knowledge Graph in Observability
+
+In a nutshell, a knowledge graph is a directed labeled graph in which the nodes and edges have well-defined meanings. It’s a graph that uses entities and relationships to encode semantic information about specific topics. There are two popular graph data models: 
+* RDF(Subject predicate Object)
+* Property Graphs
+
+For example, a node hosting a pod is a minimal property graph, in which there are two types of entities with a set of properties. There is also a “HOSTS” relationship between the Node entity and the Pod entity.
+
+![](images/knowledge_graph.png)
+
+To be clear, we understand that a graph is not a suitable data structure for encoding time series data. Nor is it practical to represent raw logs or traces. However, if we can extract entities and relationships from these data and form a graph, we can leverage it for the benefit of observability.
 
 
 
