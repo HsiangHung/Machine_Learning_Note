@@ -72,6 +72,6 @@ Node embedding $z_v$ is a function of input graph:
 
 Directly train the model for a supervised task (e.g., node classification)
 * Use cross entropy loss
-      $$L = \sum_{v \in V} y_v \log \left( \right)$$
+      $$L = \sum_{v \in V} y_v \log \left( \sigma \right)$$
       <!-- $$ L = \sum_{v \in V} y_v \log \left( \sigma (z^T_v \theta) \right)$$ -->
        <!-- +  (1 - y_v) \log \left( 1 - \sigma (z^T_v \theta) \right)$$ -->
