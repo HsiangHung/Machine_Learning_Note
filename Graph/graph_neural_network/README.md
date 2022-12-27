@@ -1,6 +1,10 @@
 # Graph Neural Network
 
-$\textcolor{red}{NOTE: \ This \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ 'Machine \ Learning \ With \ Graphs' \ lectures.}$
+$\textcolor{red}{NOTE: \ The \ majority \ of \ the \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ 'Machine \ Learning \ With \ Graphs' \ lectures.}$
+
+* [Graph Neural Network and Some of GNN Applications: Everything You Need to Know]: https://neptune.ai/blog/graph-neural-network-and-some-of-gnn-applications
+[[Amal Menzli] Graph Neural Network and Some of GNN Applications: Everything You Need to Know](https://neptune.ai/blog/graph-neural-network-and-some-of-gnn-applications)
+
 
 ## 1. Node Embedding
 
@@ -14,11 +18,11 @@ Tasks we will be able to solve:
 3. Community detection: Identify densely linked clusters of nodes
 4. Network similarity: How similar are two (sub)networks
 
-Modern deep learning toolbox is designed for simple sequences & grids. However a network has an arbitrary size and complex topological structure (i.e., no spatial locality like grids)
+##  1.1 Naive MLP approach fails for graphs
+
+Modern deep learning toolbox (e.g. convolutional neural network) is designed for simple sequences & regular grids. However a network has an arbitrary size and complex topological structure (i.e., no spatial locality like grids)
 
 ![](images/graph_encoder.png)
-
-###  Naive MLP approach fails for graphs
 
 We cannot naively feed graph into a deep neural net using adjacency matrix and features. Issues with this idea:
 1. $O(|V|)$ parameters
@@ -93,6 +97,8 @@ $|V|$ and we can generalize to unseen nodes.
 
 ### 3.1 A single GNN layer
 
+A single GNN layer mainly includes two parts:
+
 1. Message: each node compute a message
 $$m^{(l)}_u = \textrm{MSG}^{(l)} \left( \bf{h}^{(l-1)}_u \right), \ u \in \lbrace N(v) \cup v\rbrace $$
 e.g. a linear layer $\bf{m}^{(l)}_v=\bf{W}^{(l)} \bf{h}^{(l-1)}_v$.
@@ -100,4 +106,8 @@ e.g. a linear layer $\bf{m}^{(l)}_v=\bf{W}^{(l)} \bf{h}^{(l-1)}_v$.
 2. Aggregation: aggregate messages from neighbors, e.g. sum(.), mean(.), max(.) etc aggregator
 
 $$ \bf{h}^{(l)}_v = \textrm{AGG}^{(l)} \left( \lbrace  \bf{m}^{(l)}_u, u \in  N(v) \rbrace , \bf{m}^{(l)}_v \right),$$
+
+### 3.2 Graph Convolutional Networks (GCN)
+
+### 3.3 GraphSAGE
 
