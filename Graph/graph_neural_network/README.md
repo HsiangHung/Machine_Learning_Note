@@ -95,6 +95,8 @@ where $\theta$ is classification weight, $z_v$ is node embedding from encoder ou
 
 ### 2.3.2 Unsupervised Learning
 
+Use only the graph structure: similar nodes have similar embeddings. Unsupervised loss function can be a loss based on node proximity in the graph, or random walks.
+
 ## 3. GNN Process
 
 ![](images/train_GNN_summary_1.png)
@@ -110,13 +112,28 @@ A single GNN layer mainly includes two parts:
 
 1. Message: each node compute a message
 $$m^{(l)}_u = \textrm{MSG}^{(l)} \left( \bf{h}^{(l-1)}_u \right), \ u \in \lbrace N(v) \cup v\rbrace $$
-e.g. a linear layer $\bf{m}^{(l)}_v=\bf{W}^{(l)} \bf{h}^{(l-1)}_v$.
+e.g. a linear layer $\bf{m}^{(l)}_v=\bf{W}^{(l)} h^{(l-1)}_v$.
 
 2. Aggregation: aggregate messages from neighbors, e.g. sum(.), mean(.), max(.) etc aggregator
 
-$$ \bf{h}^{(l)}_v = \textrm{AGG}^{(l)} \left( \lbrace  \bf{m}^{(l)}_u, u \in  N(v) \rbrace , \bf{m}^{(l)}_v \right),$$
+$$ h^{(l)}_v = \textrm{AGG}^{(l)} \left( \lbrace  \bf{m}^{(l)}_u, u \in  N(v) \rbrace , \bf{m}^{(l)}_v \right),$$
 
 ### 3.2 Graph Convolutional Networks (GCN)
 
+The simplest GCN has only three different operators:
+
+* Graph convolution
+* Linear layer
+* Nonlinear activation
+
+The operations are usually done in this order. Together, they make up one network layer. We can combine one or more layers to form a complete GCN.
+
+
 ### 3.3 GraphSAGE
+
+GraphSAGE (Hamilton et al, NIPS 2017) is a representation learning technique for dynamic graphs. 
+
+It can predict the embedding of a new node, without needing a re-training procedure. 
+
+To do this, GraphSAGE uses inductive learning. It learns aggregator functions which can induce new node embedding, based on the features and neighborhood of the node.
 
