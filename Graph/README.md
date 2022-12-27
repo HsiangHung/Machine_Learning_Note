@@ -14,7 +14,6 @@ Networks (also known as Natural Graphs):
 * Biomedicine: Interactions between genes/proteins regulate life
 * Brain connections: Our thoughts are hidden in the connections between billions of neurons
 
-![](images/graph_type.png)
 
 * The order of a graph is the number of its vertices $|V|$. The size of a graph is the number of its edges $|E|$.
 * The degree of a vertex is the number of edges that are adjacent to it. The neighbors of a vertex $v$ in a graph $G$ is a subset of vertex Vi induced by all vertices adjacent to $v$.
@@ -79,6 +78,8 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 ## Graph Type
 
 * Path graph, cycle graph
+
+![](images/graph_type.png)
 
 ## Handshaking Lemma
 
