@@ -128,6 +128,7 @@ The simplest GCN has only three different operators:
 
 The operations are usually done in this order. Together, they make up one network layer. We can combine one or more layers to form a complete GCN.
 
+$$ h^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)_u}}{|N(v)|} + \bf{B}_k h^{(k-1)}_v  \right),$$
 
 ### 3.3 GraphSAGE
 
@@ -137,5 +138,5 @@ It can predict the embedding of a new node, without needing a re-training proced
 
 To do this, GraphSAGE uses inductive learning. It learns aggregator functions which can induce new node embedding, based on the features and neighborhood of the node.
 
-$$ h^{(l)}_v = \sigma \left( [ \bf{W}_k . \textrm{AGG} \left( \lbrace  h^{(k-1)}_u, u \in  N(v) \rbrace  \right), \bf{B}_k h^{(k-1)}_v ] \right),$$
+$$ h^{(k)}_v = \sigma \left( [ \bf{W}_k . \textrm{AGG} \left( \lbrace  h^{(k-1)}_u, u \in  N(v) \rbrace  \right), \bf{B}_k h^{(k-1)}_v ] \right),$$
 
