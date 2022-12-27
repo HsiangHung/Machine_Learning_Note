@@ -1,5 +1,13 @@
 # Graph
 
+Graphs (as a representation):
+
+* Information/knowledge are organized and linked
+* Software can be represented as a graph
+* Similarity networks: Connect similar data points
+* Relational structures: Molecules, Scene graphs, 3D shapes, Particle-based physics simulations
+
+
 
 ## Vertex Degree
 
