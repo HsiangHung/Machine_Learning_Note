@@ -1,15 +1,7 @@
 # Machine Learning with Graph
 
-$\textcolor{red}{NOTE: \ The \ majority \ of \ the \ note \ page \ follows \ Prof. \ Jure \ Leskovec's \ CS224W \ 'MACHINE \ LEARNING \ WITH \ GRAPH' \ lectures.}$
+$\textcolor{red}{NOTE: \ The \ majority \ of \ the \ note \ page \ follows \ Prof. \ Jure \ Leskovec's \ CS224W \ 'Machine \ Learning \ With \ Graph' \ lectures.}$
 
-Dr. Jure Leskovec, in his Machine Learning for Graphs course, outlines a few examples such as:
-
-Graphs (as a representation):
-
-* Information/knowledge are organized and linked
-* Software can be represented as a graph
-* Similarity networks: Connect similar data points
-* Relational structures: Molecules, Scene graphs, 3D shapes, Particle-based physics simulations
 
 # 1. Feature Engineering
 
