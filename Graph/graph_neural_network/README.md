@@ -4,6 +4,17 @@ $\textcolor{red}{NOTE: \ The \ majority \ of \ the \ note \ page \ is \ based \ 
 
 * [Graph Neural Network and Some of GNN Applications: Everything You Need to Know]: https://neptune.ai/blog/graph-neural-network-and-some-of-gnn-applications
 [[Amal Menzli] Graph Neural Network and Some of GNN Applications: Everything You Need to Know](https://neptune.ai/blog/graph-neural-network-and-some-of-gnn-applications)
+* [Graph neural networks: A review of methods and applications]: https://arxiv.org/pdf/1812.08434.pdf
+[[arxiv] Graph neural networks: A review of methods and applications](https://arxiv.org/pdf/1812.08434.pdf)
+
+
+Tasks we will be able to solve:
+
+1. **Node classification**: Predict a type of a given node
+2. **Graph classification**
+3. **Link prediction**: Predict whether two nodes are linked
+4. **Community detection**: Identify densely linked clusters of nodes
+5. **Network similarity**: How similar are two (sub)networks
 
 
 ## 1. Node Embedding
@@ -12,13 +23,8 @@ Goal: Map nodes to $d$-dimensional embeddings such that similar nodes in the gra
 
 ![](images/node_embedding.png)
 
-Tasks we will be able to solve:
-1. Node classification: Predict a type of a given node
-2. Link prediction: Predict whether two nodes are linked
-3. Community detection: Identify densely linked clusters of nodes
-4. Network similarity: How similar are two (sub)networks
 
-##  1.1 Naive MLP approach fails for graphs
+###  Naive MLP approach fails for graphs
 
 Modern deep learning toolbox (e.g. convolutional neural network) is designed for simple sequences & regular grids. However a network has an arbitrary size and complex topological structure (i.e., no spatial locality like grids)
 
@@ -140,7 +146,7 @@ It can predict the embedding of a new node, without needing a re-training proced
 
 To do this, GraphSAGE uses inductive learning. It learns aggregator functions which can induce new node embedding, based on the features and neighborhood of the node.
 
-$$ \bf{h}^{(k)}_v = \sigma \left( \left[ \bf{W}_k . \textrm{AGG} \left( \lbrace  h^{(k-1)}_u, u \in  N(v) \rbrace  \right), \bf{B}_k h^{(k-1)}_v \right] \right).$$
+$$ \bf{h}^{(k)}_v = \sigma \left( \left[ \bf{W}_k . \textrm{AGG} \left( \lbrace  h^{(k-1)}_u, u \in  N(v) \rbrace  \right) , \bf{B}_k h^{(k-1)}_v \right] \right).$$
 
 Rather than summing two things together and losing track of them, we can use a general aggregation function, e.g. `Pool` or `LSTM` which keeps them separate by concatenating them [[Amal Menzli]][Graph Neural Network and Some of GNN Applications: Everything You Need to Know]. 
 
