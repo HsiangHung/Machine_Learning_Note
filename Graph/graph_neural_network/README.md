@@ -48,10 +48,16 @@ Model can be of **arbitrary** depth:
 
 ![](images/deep_model_2.png)
 
+Each grey box represents a neural network. They require aggregations to be order-invariant, like sum, average, maximum.
+
 ### 2.2 Basic approach for deep model
 
-* Average information from neighbors
-* Apply a neural network (Note: $h^k_v$ denotes the hidden representation of node $v$ at layer $k$)
+Forward propagation rule in GNNs: 
+
+1. Initialize input as activation units $x_v$
+2. Every layer in the network:
+    * Average information from neighbors
+    * Apply a neural network (Note: $h^k_v$ denotes the hidden representation of node $v$ at layer $k$)
 
 ![](images/deep_model_3.png)
 
