@@ -61,7 +61,7 @@ Forward propagation rule in GNNs:
 
 ![](images/deep_model_3.png)
 
-3. The output $\bf{h}^k_v$ is the embedding after layer-$k$ of neighborhood aggregation.
+3. The output $h^k_v$ is the embedding after layer-k of neighborhood aggregation.
 
 Trainable weight matrices (i.e., what we learn):
 * $W_k$: weight matrix for **neighborhood aggregation**.
