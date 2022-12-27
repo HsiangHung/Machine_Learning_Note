@@ -68,9 +68,6 @@ Forward propagation rule in GNNs:
 
 3. The output $h^k_v$ is the embedding after layer-k of neighborhood aggregation.
 
-Trainable weight matrices (i.e., what we learn):
-* $W_k$: weight matrix for **neighborhood aggregation**.
-* $B_k$: weight matrix for transforming hidden vector of node's **itself**.
 
 We can feed these embeddings into any loss function and run SGD to train the weight parameters. 
 
