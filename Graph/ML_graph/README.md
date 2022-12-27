@@ -1,6 +1,6 @@
 # Machine Learning with Graph
 
-$\textcolor{red}{NOTE: \ This \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ "machine learning \ with \ graph" \ lectures.}$
+$\textcolor{red}{NOTE: \ The \ majority \ of \ the \ note \ page \ follows \ Prof. \ Jure \ Leskovec's \ CS224W \ 'Machine learning \ With \ Graph' \ lectures.}$
 
 Dr. Jure Leskovec, in his Machine Learning for Graphs course, outlines a few examples such as:
 
