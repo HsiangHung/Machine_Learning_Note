@@ -16,7 +16,7 @@ Tasks we will be able to solve:
 4. **Community detection**: Identify densely linked clusters of nodes
 5. **Network similarity**: How similar are two (sub)networks
 
-![](images/GNN_prediction.png)
+![](images/graph_prediction.png)
 
 ## 1. Node Embedding
 
