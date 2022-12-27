@@ -1,6 +1,6 @@
 # Graph Neural Network
 
-$\textcolor{red}{NOTE: \ This \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ 'Machine Learning \ With \ Graphs' \ lectures.}$
+$\textcolor{red}{NOTE: \ This \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ 'Machine \ Learning \ With \ Graphs' \ lectures.}$
 
 ## 1. Node Embedding
 
@@ -86,6 +86,13 @@ where $\theta$ is classification weight, $z_v$ is node embedding from encoder ou
 
 ![](images/train_GNN_summary_1.png)
 
-The same aggregation parameters are shared for all nodes:
+The same aggregation parameters are shared for all nodes. The number of model parameters is sublinear in
+$|V|$ and we can generalize to unseen nodes.
 
 ![](images/train_GNN_summary_2.png)
+
+### 3.1 A single GNN layer
+
+1. Message:
+$$m^{(l)}_u = \textrm{MSG}^{(l)} \left( \bf{h}^{l-1}_u \right), \ u \in \lbrace N(v) \cup v\rbrace $$
+2. Aggregation:
