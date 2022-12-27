@@ -16,6 +16,10 @@ Networks (also known as Natural Graphs):
 
 ![](images/graph_type.png)
 
+* The order of a graph is the number of its vertices $|V|$. The size of a graph is the number of its edges $|E|$.
+* The degree of a vertex is the number of edges that are adjacent to it. The neighbors of a vertex $v$ in a graph $G$ is a subset of vertex Vi induced by all vertices adjacent to $v$.
+* The neighborhood graph (also known as an ego graph) of a vertex $v$ in a graph $G$ is a subgraph of $G$, composed of the vertices adjacent to $v$ and all edges connecting vertices adjacent to $v$.
+
 
 ## Vertex Degree
 
