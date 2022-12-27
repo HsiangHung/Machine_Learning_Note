@@ -14,7 +14,7 @@ Important-based features:
      1. **Eigenvector centrality**
      2. **Betweenness centrality**: a node is important if it lies on many shortest paths between other nodes.
       
-  $$ c_v = \sum_{s,t \ne v} \frac{\textrm{num of shortest paths between s, t containing v}}{\textrm{num of shortest paths between s, t}}.$$
+       $$ c_v = \sum_{s,t \ne v} \frac{\textrm{num of shortest paths between s, t containing v}}{\textrm{num of shortest paths between s, t}}.$$
 
      ![](images/feature_node_betweenness.png)
 
