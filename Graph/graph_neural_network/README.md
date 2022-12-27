@@ -111,12 +111,12 @@ $|V|$ and we can generalize to unseen nodes.
 A single GNN layer mainly includes two parts:
 
 1. Message: each node compute a message
-$$m^{(l)}_u = \textrm{MSG}^{(l)} \left( \bf{h}^{(l-1)}_u \right), \ u \in \lbrace N(v) \cup v\rbrace $$
-e.g. a linear layer $\bf{m}^{(l)}_v=\bf{W}^{(l)} h^{(l-1)}_v$.
+$$m^{(k)}_u = \textrm{MSG}^{(k)} \left( \bf{h}^{(k-1)}_u \right), \ u \in \lbrace N(v) \cup v\rbrace $$
+e.g. a linear layer $\bf{m}^{(k)}_v=\bf{W}^{(k)} h^{(k-1)}_v$.
 
 2. Aggregation: aggregate messages from neighbors, e.g. sum(.), mean(.), max(.) etc aggregator
 
-$$ h^{(l)}_v = \textrm{AGG}^{(l)} \left( \lbrace  \bf{m}^{(l)}_u, u \in  N(v) \rbrace , \bf{m}^{(l)}_v \right),$$
+$$ h^{(k)}_v = \textrm{AGG}^{(k)} \left( \lbrace  \bf{m}^{(k)}_u, u \in  N(v) \rbrace , \bf{m}^{(k)}_v \right),$$
 
 ### 3.2 Graph Convolutional Networks (GCN)
 
