@@ -7,6 +7,14 @@ Graphs (as a representation):
 * Similarity networks: Connect similar data points
 * Relational structures: Molecules, Scene graphs, 3D shapes, Particle-based physics simulations
 
+Networks (also known as Natural Graphs):
+
+* Social networks: Society is a collection of 7+ billion individuals
+* Communication and transactions: Electronic devices, phone calls, financial transactions
+* Biomedicine: Interactions between genes/proteins regulate life
+* Brain connections: Our thoughts are hidden in the connections between billions of neurons
+
+![](images/graph_type.png)
 
 
 ## Vertex Degree
