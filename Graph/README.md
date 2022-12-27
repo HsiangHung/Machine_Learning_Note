@@ -5,7 +5,6 @@
 
 * The Degree of a vertex is the number of its incident edges.
 * The degree of a graph is the maximum degree of its vertices.
-
 * The Indegree of a vertex is the number of edges ending at $v$. 
 * The Outdegree of a vertex is the number of edges leaving $v$.
 
@@ -25,7 +24,6 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 * The length of a walk is a number of edges in it. 
 * A path is a walk where all edges are the distinct.
 * A simple path is a path where all vertices are distinct
-
 * A cycle in a graph is a path whose first and last vertices are the same. All edges in a cycle must also be distinct.
 * A simple cycle is a cycle where all vertices are distinct, except for the first one which must be the same as the last one. 
 

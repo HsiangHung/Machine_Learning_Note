@@ -11,8 +11,8 @@ $\textcolor{red}{NOTE: \ The \ majority \ of \ the \ note \ page \ is \ based \ 
 Tasks we will be able to solve:
 
 1. **Node classification**: Predict a type of a given node
-2. **Graph classification**
-3. **Link prediction**: Predict whether two nodes are linked
+2. **Link prediction**: Predict whether two nodes are linked
+3. **Graph classification**
 4. **Community detection**: Identify densely linked clusters of nodes
 5. **Network similarity**: How similar are two (sub)networks
 
