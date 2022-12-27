@@ -97,4 +97,4 @@ $|V|$ and we can generalize to unseen nodes.
 $$m^{(l)}_u = \textrm{MSG}^{(l)} \left( \bf{h}^{(l-1)}_u \right), \ u \in \lbrace N(v) \cup v\rbrace $$
 2. Aggregation: aggregate messages from neighbors
 
-$$ \bf{h}^{(l)}_v = \textrm{AGG}^{(l)} \left(  \bf{m}^{(l)}_u, u \in  N(v) , \bf{m}^{(l)}_v \right),$$
+$$ \bf{h}^{(l)}_v = \textrm{AGG}^{(l)} \left( \lbrace  \bf{m}^{(l)}_u, u \in  N(v) \rbrace , \bf{m}^{(l)}_v \right),$$
