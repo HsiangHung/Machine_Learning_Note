@@ -16,7 +16,7 @@ Important-based features:
       
      $$ c_v = \sum_{s,t \ne v} \frac{\textrm{num of shortest paths between s, t containing v}}{\textrm{num of shortest paths between s, t}}.$$
 
-     ![](images/feature_node_betweenness.png)
+     <!-- ![](images/feature_node_betweenness.png) -->
 
      3. **Closeness centrality**: a node is important if it has small shortest path lengths to all other nodes.
 
