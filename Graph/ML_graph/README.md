@@ -2,6 +2,15 @@
 
 $\textcolor{red}{NOTE: \ This \ note \ page \ is \ based \ on \ Prof. \ Jure \ Leskovec's \ CS224W \ "machine learning \ with \ graph" \ lectures.}$
 
+Dr. Jure Leskovec, in his Machine Learning for Graphs course, outlines a few examples such as:
+
+Graphs (as a representation):
+
+* Information/knowledge are organized and linked
+* Software can be represented as a graph
+* Similarity networks: Connect similar data points
+* Relational structures: Molecules, Scene graphs, 3D shapes, Particle-based physics simulations
+
 # 1. Feature Engineering
 
 
