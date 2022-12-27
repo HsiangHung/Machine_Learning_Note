@@ -100,5 +100,4 @@ e.g. a linear layer $\bf{m}^{(l)}_v=\bf{W}^{(l)} \bf{h}^{(l-1)}_v$.
 2. Aggregation: aggregate messages from neighbors
 
 $$ \bf{h}^{(l)}_v = \textrm{AGG}^{(l)} \left( \lbrace  \bf{m}^{(l)}_u, u \in  N(v) \rbrace , \bf{m}^{(l)}_v \right),$$
-
 e.g. sum(.), mean(.), max(.) etc aggregator.
