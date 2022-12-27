@@ -140,7 +140,7 @@ It can predict the embedding of a new node, without needing a re-training proced
 
 To do this, GraphSAGE uses inductive learning. It learns aggregator functions which can induce new node embedding, based on the features and neighborhood of the node.
 
-$$ \bf{h}^{(k)}_v = \sigma \left( [ \bf{W}_k . \textrm{AGG} \left( \lbrace  h^{(k-1)}_u, u \in  N(v) \rbrace  \right), \bf{B}_k h^{(k-1)}_v ] \right).$$
+$$ \bf{h}^{(k)}_v = \sigma \left( \left[ \bf{W}_k . \textrm{AGG} \left( \lbrace  h^{(k-1)}_u, u \in  N(v) \rbrace  \right), \bf{B}_k h^{(k-1)}_v \right] \right).$$
 
 Rather than summing two things together and losing track of them, we can use a general aggregation function, e.g. `Pool` or `LSTM` which keeps them separate by concatenating them [[Amal Menzli]][Graph Neural Network and Some of GNN Applications: Everything You Need to Know]. 
 
