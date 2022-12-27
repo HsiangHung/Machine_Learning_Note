@@ -128,7 +128,7 @@ The simplest GCN has only three different operators:
 
 The operations are usually done in this order. Together, they make up one network layer. We can combine one or more layers to form a complete GCN.
 
-$$ h^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)_u}}{|N(v)|} + \bf{B}_k h^{(k-1)}_v  \right),$$
+$$ h^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)}_u}{|N(v)|} + \bf{B}_k h^{(k-1)}_v  \right),$$
 
 ### 3.3 GraphSAGE
 
