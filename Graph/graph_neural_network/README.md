@@ -139,6 +139,13 @@ $$ \bf{h}^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)}_u}{
 
 where the `AGG` function just simply takes weight average of neighbors.
 
+##### Difference between CNN and GNN
+
+CNN can be seen as a special GNN with fixed neighbor size and ordering:
+* The size of the filter is pre-defined for a CNN.
+* The advantage of GNN is it processes arbitrary graphs with different degrees for each node.
+
+
 #### 3.1.2 GraphSAGE
 
 GraphSAGE (Hamilton et al, NIPS 2017) is a representation learning technique for dynamic graphs. 
@@ -151,7 +158,7 @@ $$ \bf{h}^{(k)}_v = \sigma \left( \left[ \bf{W}_k . \textrm{AGG} \left( \lbrace 
 
 Rather than summing two things together and losing track of them, we can use a general aggregation function, e.g. `Pool` or `LSTM` which keeps them separate by concatenating them [[Amal Menzli]][Graph Neural Network and Some of GNN Applications: Everything You Need to Know]. 
 
-[Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@11:47)
+* [Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@11:47)
 
 #### 3.1.3 Graph attention networks
 
@@ -163,7 +170,7 @@ $\alpha_{vu} = \frac{1}{|N(v)|}.$
 
 However, not all nodes' neighbors are equally important.
 
-[Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@15:55)
+* [Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@15:55)
 
 
 ### 3.2 GNN Layer in Practice 
@@ -171,3 +178,5 @@ However, not all nodes' neighbors are equally important.
 Many modern deep learning modules can be incorporated into a GNN layer:
 
 ![](images/GNN_in_practice.png)
+
+* [Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@31:07)
