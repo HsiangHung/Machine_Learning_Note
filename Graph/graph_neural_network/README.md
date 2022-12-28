@@ -161,6 +161,8 @@ $\alpha_{vu} = \frac{1}{|N(v)|}.$
 
 However, not all nodes' neighbors are equally important.
 
-### GNN Layer in Practice 
+### 3.2 GNN Layer in Practice 
 
-Many modern deep learning modules can be incorporated into a GNN layer
+Many modern deep learning modules can be incorporated into a GNN layer:
+
+![](images/GNN_in_practice.png)
