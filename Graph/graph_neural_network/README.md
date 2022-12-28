@@ -170,6 +170,9 @@ However, not all nodes' neighbors are equally important.
 ### 3.2 Difference between CNN and GNN
 
 CNN can be seen as a special GNN with fixed neighbor size and ordering:
+
+![](images/CNN_vs_GNN.png)
+
 * The size of the filter is pre-defined for a CNN.
 * CNN is not permutation equivariant. Switching the order of pixels will leads to different outputs.
 
@@ -179,7 +182,6 @@ $$ \bf{h}^{(k)}_v = \sigma \left( \sum_{u \in N(v)} \bf{W}^u_k \frac{h^{(k-1)}_u
 
 $$ \bf{h}^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)}_u}{|N(v)|} + \bf{B}_k h^{(k-1)}_v  \right),$$
 
-![](images/CNN_vs_GNN.png)
 
 ### 3.3 GNN Layer in Practice 
 
