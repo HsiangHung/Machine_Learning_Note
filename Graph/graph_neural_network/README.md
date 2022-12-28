@@ -125,7 +125,7 @@ e.g. a linear layer $\bf{m}^{(k)}_v=\bf{W}^{(k)} h^{(k-1)}_v$.
 
 $$ \bf{h}^{(k)}_v = \textrm{AGG}^{(k)} \left( \lbrace  \bf{m}^{(k)}_u, u \in  N(v) \rbrace , \bf{m}^{(k)}_v \right),$$
 
-### 3.2 Graph Convolutional Networks (GCN)
+#### 3.1.1 Graph Convolutional Networks (GCN)
 
 The simplest GCN has only three different operators:
 
@@ -139,7 +139,7 @@ $$ \bf{h}^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)}_u}{
 
 where the `AGG` function just simply takes weight average of neighbors.
 
-### 3.3 GraphSAGE
+#### 3.1.2 GraphSAGE
 
 GraphSAGE (Hamilton et al, NIPS 2017) is a representation learning technique for dynamic graphs. 
 
@@ -151,7 +151,7 @@ $$ \bf{h}^{(k)}_v = \sigma \left( \left[ \bf{W}_k . \textrm{AGG} \left( \lbrace 
 
 Rather than summing two things together and losing track of them, we can use a general aggregation function, e.g. `Pool` or `LSTM` which keeps them separate by concatenating them [[Amal Menzli]][Graph Neural Network and Some of GNN Applications: Everything You Need to Know]. 
 
-### 3.4 Graph attention networks
+#### 3.1.3 Graph attention networks
 
 $$ \bf{h}^{(k)}_v = \sigma \left( \sum_{u \in N(v)} \alpha_{vu} \bf{W}^{(k)} h^{(k-1)}_v \right),$$
 
@@ -160,3 +160,7 @@ where $\alpha_{vu}$ is the attention weights (importance) of node $u$'s message 
 $\alpha_{vu} = \frac{1}{|N(v)|}.$
 
 However, not all nodes' neighbors are equally important.
+
+### GNN Layer in Practice 
+
+Many modern deep learning modules can be incorporated into a GNN layer
