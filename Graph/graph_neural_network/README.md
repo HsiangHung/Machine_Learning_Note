@@ -96,6 +96,7 @@ Directly train the model for a supervised task. e.g., node classification, if th
 ![](images/train_supervised_GNN.png)
 
 Use cross entropy loss
+
 $$L = \sum_{v \in V} y_v \log \left( \sigma ( z^T_v \theta ) \right) +  (1 - y_v) \log \left(  1 - \sigma (z^T_v \theta) \right),$$
 
 where $\theta$ is classification weight, $z_v$ is node embedding from encoder output.
@@ -105,6 +106,8 @@ where $\theta$ is classification weight, $z_v$ is node embedding from encoder ou
 Use only the graph structure: similar nodes have similar embeddings. Unsupervised loss function can be a loss based on node proximity in the graph, or random walks.
 
 ## 3. GNN Process
+
+Recap of GNN:
 
 ![](images/train_GNN_summary_1.png)
 
