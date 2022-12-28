@@ -95,7 +95,7 @@ Directly train the model for a supervised task. e.g., node classification, if th
 
 ![](images/train_supervised_GNN.png)
 
-* Use cross entropy loss
+Use cross entropy loss
 $$L = \sum_{v \in V} y_v \log \left( \sigma ( z^T_v \theta ) \right) +  (1 - y_v) \log \left(  1 - \sigma (z^T_v \theta) \right),$$
 
 where $\theta$ is classification weight, $z_v$ is node embedding from encoder output.
