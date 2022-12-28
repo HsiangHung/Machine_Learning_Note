@@ -154,3 +154,9 @@ Rather than summing two things together and losing track of them, we can use a g
 ### 3.4 Graph attention networks
 
 $$ \bf{h}^{(k)}_v = \sigma \left( \sum_{u \in N(v)} \alpha_{vu} \bf{W}^{(k)} h^{(k-1)}_v \right),$$
+
+where $\alpha_{vu}$ is the attention weights (importance) of node $u$'s message to $v$. In GCN/GraphSAGE, the weight is 
+
+$\alpha_{vu} = \frac{1}{|N(v)|}.$
+
+However, not all nodes' neighbors are equally important.
