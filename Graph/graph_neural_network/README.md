@@ -151,6 +151,8 @@ $$ \bf{h}^{(k)}_v = \sigma \left( \left[ \bf{W}_k . \textrm{AGG} \left( \lbrace 
 
 Rather than summing two things together and losing track of them, we can use a general aggregation function, e.g. `Pool` or `LSTM` which keeps them separate by concatenating them [[Amal Menzli]][Graph Neural Network and Some of GNN Applications: Everything You Need to Know]. 
 
+[Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@11:47)
+
 #### 3.1.3 Graph attention networks
 
 $$ \bf{h}^{(k)}_v = \sigma \left( \sum_{u \in N(v)} \alpha_{vu} \bf{W}^{(k)} h^{(k-1)}_v \right),$$
@@ -160,6 +162,9 @@ where $\alpha_{vu}$ is the attention weights (importance) of node $u$'s message 
 $\alpha_{vu} = \frac{1}{|N(v)|}.$
 
 However, not all nodes' neighbors are equally important.
+
+[Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@15:55)
+
 
 ### 3.2 GNN Layer in Practice 
 
