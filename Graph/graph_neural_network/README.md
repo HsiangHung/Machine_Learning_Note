@@ -111,8 +111,7 @@ Recap of GNN:
 
 ![](images/train_GNN_summary_1.png)
 
-The same aggregation parameters are shared for all nodes. The number of model parameters is sublinear in
-$|V|$ and we can generalize to unseen nodes.
+The same aggregation parameters are **shared** for all nodes. The number of model parameters is sublinear in $|V|$ and we can generalize to **unseen** nodes.
 
 ![](images/train_GNN_summary_2.png)
 
@@ -179,6 +178,8 @@ $$ \bf{h}^{(k)}_v = \sigma \left( \sum_{u \in N(v)} \bf{W}^u_k \frac{h^{(k-1)}_u
 * The advantage of GNN is it processes arbitrary graphs with different degrees for each node.
 
 $$ \bf{h}^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)}_u}{|N(v)|} + \bf{B}_k h^{(k-1)}_v  \right),$$
+
+![](images/CNN_vs_GNN.png)
 
 ### 3.3 GNN Layer in Practice 
 
