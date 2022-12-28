@@ -139,13 +139,6 @@ $$ \bf{h}^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)}_u}{
 
 where the `AGG` function just simply takes weight average of neighbors.
 
-##### Difference between CNN and GNN
-
-CNN can be seen as a special GNN with fixed neighbor size and ordering:
-* The size of the filter is pre-defined for a CNN.
-* The advantage of GNN is it processes arbitrary graphs with different degrees for each node.
-
-
 #### 3.1.2 GraphSAGE
 
 GraphSAGE (Hamilton et al, NIPS 2017) is a representation learning technique for dynamic graphs. 
@@ -172,8 +165,19 @@ However, not all nodes' neighbors are equally important.
 
 * [Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@15:55)
 
+### 3.2 Difference between CNN and GNN
 
-### 3.2 GNN Layer in Practice 
+CNN can be seen as a special GNN with fixed neighbor size and ordering:
+* The size of the filter is pre-defined for a CNN.
+* CNN is not permutation equivariant. Switching the order of pixels will leads to different outputs.
+
+$$ \bf{h}^{(k)}_v = \sigma \left( \sum_{u \in N(v)} \bf{W}^u_k \frac{h^{(k-1)}_u}{|N(v)|} + \bf{B}_k h^{(k-1)}_v  \right),$$
+
+* The advantage of GNN is it processes arbitrary graphs with different degrees for each node.
+
+$$ \bf{h}^{(k)}_v = \sigma \left( \bf{W}_k \sum_{u \in N(v)} \frac{h^{(k-1)}_u}{|N(v)|} + \bf{B}_k h^{(k-1)}_v  \right),$$
+
+### 3.3 GNN Layer in Practice 
 
 Many modern deep learning modules can be incorporated into a GNN layer:
 
