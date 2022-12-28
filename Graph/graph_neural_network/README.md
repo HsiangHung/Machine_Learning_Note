@@ -153,3 +153,4 @@ Rather than summing two things together and losing track of them, we can use a g
 
 ### 3.4 Graph attention networks
 
+$$ \bf{h}^{(k)}_v = \sigma \left( \sum_{u \in N(v)} \alpha_{vu} \bf{W}^{(k)} h^{(k-1)}_v \right),$$
