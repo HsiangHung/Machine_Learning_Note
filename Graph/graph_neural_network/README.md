@@ -217,5 +217,5 @@ The over-smoothing problem: all the node embeddings converge to the same value.
     * Step 2: Set number of GNN layers L to be a bit more than the receptive field we like. Do not set L to be **unnecessarily large**!
 
 **Solution**: 
-1. Make shallow GNN more expressive within each GNN layer: for example, each transformation/aggregation become a deep neural network rather than only one linear layer.
+1. Make shallow GNN more expressive within each GNN layer: for example, each transformation/aggregation become a deep neural network (add MLP layer without passing messages) rather than only one linear layer.
 2. Add skip connections in GNNs.
