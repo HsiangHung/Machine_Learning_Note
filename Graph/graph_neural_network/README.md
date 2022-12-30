@@ -215,3 +215,7 @@ The over-smoothing problem: all the node embeddings converge to the same value.
 * Therefore, unlike neural networks in other domains (CNN for image classification), adding more GNN layers do not always help
     * Step 1: Analyze the necessary receptive field to solve your problem. E.g., by computing the **diameter** of the graph
     * Step 2: Set number of GNN layers L to be a bit more than the receptive field we like. Do not set L to be **unnecessarily large**!
+
+**Solution**: 
+1. Make shallow GNN more expressive: Add MLP layers that do not pass messages
+2. Add skip connections in GNNs
