@@ -202,3 +202,10 @@ Connect GNN layers into a GNN:
 * Ways of adding skip connections
 
 ![](images/stack_GNN_1.png)
+
+### 3.2.2 Over-smoothing problem
+
+The over-smoothing problem: all the node embeddings converge to the same value.
+
+* In a K-layer GNN, each node has a receptive field (the set of nodes that determine the embedding of a node of interest) of K-hop neighborhood.
+* But for two nodes, receptive field overlap: The shared neighbors quickly grows when we increase the number of hops (num of GNN layers)
