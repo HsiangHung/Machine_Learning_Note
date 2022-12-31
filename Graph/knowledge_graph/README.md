@@ -1,5 +1,9 @@
 # Heterogeneous & Knowledge Graph
 
+
+[talk: Homin Lee - The Observability Graph: Knowledge Graphs for Automated Infrastructure Observability](https://vimeo.com/369632039)
+
+
 What if the graph has multiple relation types? 
 
 ![](images/relation_GCN.png)
