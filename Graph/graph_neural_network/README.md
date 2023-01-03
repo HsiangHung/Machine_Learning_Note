@@ -193,7 +193,7 @@ Many modern deep learning modules can be incorporated into a GNN layer:
 * [Youtube: Classical GNN Layers: GraphSAGE](https://www.youtube.com/watch?v=247Mkqj_wRM&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=21) (@31:07)
 
 
-Here we have demo notebook of implementing GCN using `torch`:
+Here we have demo notebook of implementing GCN using `torch` in Google colab:
 * [GNN - 1: GCN demo.ipynb](https://colab.research.google.com/drive/1QN9rz9K1-ZjGRmP8ME12AQavyD7gWc1k#scrollTo=oFTbdTG4_VL3)
 * [GNN - 2: Semi-Supervised Classification with GCN.ipynb](https://colab.research.google.com/drive/15JNInLAd9ECs0f3iwTZkuPuq1jyJOzJB#scrollTo=T--oKPfRP3ER)
 
