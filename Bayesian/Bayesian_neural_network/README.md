@@ -15,10 +15,10 @@
 
 ## 1.1 Frequentist and Bayesian
 
-In a traditional neural network, weights $\bf{w} = (w_1, w_2, \cdots)$ are assigned as a single value or point estimate, whereas in BNN, weights are considered a probability distribution. These probability distributions of network weights are used to estimate the uncertainty in weights and predictions. 
+In a traditional neural network, weights $\bf{w} = (w_1, w_2, \cdots, b_1, \cdots)$ are assigned as a single value or point estimate, whereas in BNN, weights are considered a probability distribution. These probability distributions of network weights are used to estimate the uncertainty in weights and predictions. 
 
-Figure-1 shows a schematic diagram of a BNN where weights are normally distributed.
-![images](images/lasso_ridge_prior.png)
+Figure-1 shows a schematic diagram of a BNN where weights are normally distributed [[Sabber Ahamed]][Bayesian Neural network].
+![](images/weight_distribution.png)
 
 Given data $\bf{X}$, the likelihood of observing $\bf{X}$, given weights $\bf{w}$ is calculated using Bayes theorem as:
 
@@ -39,8 +39,8 @@ $$p(\bf{w}) = \int p(\bf{X}|\bf{x})p(\bf{w}) d\bf{w}.$$
 
 
 
-[Closed form Bayesian Inference for Binomial distributions]: https://suzyahyah.github.io/bayesian%20inference/2017/03/01/Closed-Form-Toy-Bayesian-Inference.html
-[[Suzanna Sia] Closed form Bayesian Inference for Binomial distributions](https://suzyahyah.github.io/bayesian%20inference/2017/03/01/Closed-Form-Toy-Bayesian-Inference.html)
+[Bayesian Neural network]: https://towardsdatascience.com/bayesian-neural-network-7041dd09f2cc
+[[Sabber Ahamed] Bayesian Neural network](https://towardsdatascience.com/bayesian-neural-network-7041dd09f2cc)
 
 
 
