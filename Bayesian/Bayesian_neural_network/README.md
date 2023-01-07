@@ -14,10 +14,12 @@
 # 1. Bayesian Neural Networks
 
 
-In a traditional neural network, weights $\bf{w} = (w_1, w_2, \cdots, b_1, \cdots)$ are assigned as a single value or point estimate, whereas in BNN, weights are considered a probability distribution. These probability distributions of network weights are used to estimate the **uncertainty** in weights and predictions. 
+In a traditional neural network, weights $\bf{w} = (w_1, w_2, \cdots, b_1, b_2, \cdots)$ are assigned as a single value or point estimate, whereas in BNN, weights are considered a probability distribution. These probability distributions of network weights are used to estimate the **uncertainty** in weights and predictions. 
 
-Figure-1 shows a schematic diagram of a BNN where weights are normally distributed [[Sabber Ahamed]][Bayesian Neural network].
+The figure below shows a schematic diagram of a BNN where weights are normally distributed [[Sabber Ahamed]][Bayesian Neural network].
 ![](images/weight_distribution.png)
+
+The left hand panel shows (w_1, b_1) truns from single values to distributions. The right hand panel describe in the networks all weights are described by normal distributions.
 
 Given data $\bf{X}$, the likelihood of observing $\bf{X}$, given weights $\bf{w}$ is calculated using Bayes theorem as:
 
