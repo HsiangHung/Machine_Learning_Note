@@ -7,8 +7,7 @@ $\textcolor{red}{NOTE: \ The \ majority \ of \ the \ note \ page \ is \ based \ 
 * [Graph neural networks: A review of methods and applications]: https://arxiv.org/pdf/1812.08434.pdf
 [[arxiv] Graph neural networks: A review of methods and applications](https://arxiv.org/pdf/1812.08434.pdf)
 
-
-Tasks we will be able to solve:
+Graph Neural Networks (GNN) are deep Learnings to capture hidden patterns of non-Euclidean data, represented as graphs with complex relationships and interdependencies between objects. Tasks we will be able to solve using GNN include:
 
 1. **Node classification**: Predict a type of a given node
 2. **Link prediction**: Predict whether two nodes are linked
