@@ -48,15 +48,15 @@ $$q^*(w|\theta) = \textrm{argmin}_{\theta} \bf{KL}\left[ q(w|\theta) || p(w|\bf{
 
 where **KL** means Kullback–Leibler divergence which is used to describe information-theoretic measure of similarity (relative entropy) between true and approximated distributions. The KL divergence is defined as ([wiki's page](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence))
 
-$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] = \sum_x q(x) \log \left( \frac{q(x)}{p(x)} \right) =  \int q(w|\theta) \log \left( \frac{q(w|\theta)}{p(w|\bf{X})} \right) dw$$
+$$ \bf{KL}\left[ q(x) || p(x) \right] = \sum_x q(x) \log \left( \frac{q(x)}{p(x)} \right).$$
 
 Subsitute the Baye's theorem 
 
 $$p(\bf{w}|\bf{X}) = \frac{p(\bf{X}|w)p(w)}{p(\bf{X})},$$
 
-the KL divergence turns out to be
+and consider continuous variable on $\bf{w}$, the KL divergence turns out to be
 
-$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] = \int q(w|\theta) \log \left( \frac{q(w|\theta) p(\bf{X})}{ p(\bf{X}|w)p(w) } \right) dw$$
+$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] = \int q(w|\theta) \log \left( \frac{q(w|\theta)}{p(w|\bf{X})} \right) dw = \int q(w|\theta) \log \left( \frac{q(w|\theta) p(\bf{X})}{ p(\bf{X}|w)p(w) } \right) dw$$
 
 
 [Bayesian Neural network]: https://towardsdatascience.com/bayesian-neural-network-7041dd09f2cc
