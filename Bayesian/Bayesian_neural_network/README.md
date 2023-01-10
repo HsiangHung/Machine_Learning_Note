@@ -44,7 +44,7 @@ Usually MCMC sampling is slow for large datasets or complex models. Variational 
 
 In VI, a new distribution $q(w|\theta)$ is considered that approximates the true posterior $p(w|\bf{X})$. $q(w|\theta)$ is parameterized by over $w$, and VI finds the right set of that minimizes the divergence of two distributions through optimization:
 
-$$q^*(w|\theta) = \argmin_{\theta} \bf{KL}\left[ q(w|\theat) || p(w|\bf{X}) \right]$$
+$$q^*(w|\theta) = \textrm{argmin}_{\theta} \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right]$$
 
 KL or Kullback–Leibler divergence is a non-symmetric and information-theoretic measure of similarity (relative entropy) between true and approximated distributions. 
 
