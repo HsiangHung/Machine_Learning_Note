@@ -23,7 +23,7 @@ The left hand panel shows the idea where $(w_1, b_1)$ truns from single values t
 
 Given data $\bf{X}$, the likelihood of observing $\bf{X}$, given weights $\bf{w}$ is calculated using Bayes theorem as:
 
-$$p(\bf{w}|\bf{X}) = \frac{p(\bf{X}|\bf{x})p(\bf{w})}{p(\bf{w})},$$
+$$p(\bf{w}|\bf{X}) = \frac{p(\bf{X}|w)p(w)}{p(\bf{X})},$$
 
 where $p(\bf{w})$ is the prior belief of the weights as known as `model evidence`, equals to the integration over all possible values of the weights as:
 
