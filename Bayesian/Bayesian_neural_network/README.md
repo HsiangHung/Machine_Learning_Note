@@ -48,7 +48,7 @@ $$q^*(w|\theta) = \textrm{argmin}_{\theta} \bf{KL}\left[ q(w|\theta) || p(w|\bf{
 
 where **KL** means Kullback–Leibler divergence which is used to describe information-theoretic measure of similarity (relative entropy) between true and approximated distributions. The KL divergence is defined as 
 
-$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] = \int q(w|\theta) \log \left( \frac{q(w|\theta)}{p(w|\bf{X})} \right) dw = $$
+$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] &=& \int q(w|\theta) \log \left( \frac{q(w|\theta)}{p(w|\bf{X})} \right) dw \nn \ &=& a $$
 
 
 
