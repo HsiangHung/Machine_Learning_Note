@@ -27,7 +27,7 @@ $$p(\bf{w}|\bf{X}) = \frac{p(\bf{X}|w)p(w)}{p(\bf{X})},$$
 
 where $p(\bf{w})$ is the prior belief of the weights as known as `model evidence`, equals to the integration over all possible values of the weights as:
 
-$$p(\bf{w}) = \int p(\bf{X}|\bf{x})p(\bf{w}) d\bf{w}.$$
+$$p(\bf{X}) = \int p(\bf{X}|w)p(\bf{w}) d\bf{w}.$$
 
 Integrating all over the indefinite weights in evidence makes it hard to find a closed-form analytical solution. Therefore we resort to pseudo-numerical approaches to solve the integration [[Stefano Cosentino]][Deep Bayesian Neural Networks]:
 
