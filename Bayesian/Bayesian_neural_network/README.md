@@ -46,7 +46,7 @@ VI considers a new distribution $q(w|\theta)$ to approximates the true posterior
 
 $$q^*(w|\theta) = \textrm{argmin}_{\theta} \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right],$$
 
-where **KL** means Kullback–Leibler divergence which is used to describe information-theoretic measure of similarity (relative entropy) between true and approximated distributions. The KL divergence is defined as ([wiki's page](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence))
+where **KL** means Kullback–Leibler divergence which is used to describe information-theoretic measure of similarity (relative entropy) between true and approximated distributions. The KL divergence  (from [wiki's page](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)) is defined as
 
 $$ \bf{KL}\left[ q(x) || p(x) \right] = \sum_x q(x) \log \left( \frac{q(x)}{p(x)} \right).$$
 
