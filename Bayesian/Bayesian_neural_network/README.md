@@ -25,7 +25,7 @@ Given data $\bf{X}$, the likelihood of observing $\bf{X}$, given weights $\bf{w}
 
 $$p(\bf{w}|\bf{X}) = \frac{p(\bf{X}|\bf{x})p(\bf{w})}{p(\bf{w})},$$
 
-where $p(\bf{w})$ is the prior belief of the weights as known as \it{model evidence}, equals to the integration over all possible values of the weights as:
+where $p(\bf{w})$ is the prior belief of the weights as known as `model evidence`, equals to the integration over all possible values of the weights as:
 
 $$p(\bf{w}) = \int p(\bf{X}|\bf{x})p(\bf{w}) d\bf{w}.$$
 
@@ -38,9 +38,15 @@ Integrating all over the indefinite weights in evidence makes it hard to find a 
 Usually MCMC sampling is slow for large datasets or complex models. Variational inference (VI), on the other hand, is faster than other methods. It has also been applied to solve many large-scale computationally expensive neuroscience and computer vision problems.
 
 
-## 1.2 Bayes' Rule for Bayesian Inference
+## 2 MCMC
 
+## 3 Variational Inference (VI)
 
+In VI, a new distribution $q(w|\theta)$ is considered that approximates the true posterior $p(w|\bf{X})$. $q(w|\theta)$ is parameterized by over $w$, and VI finds the right set of that minimizes the divergence of two distributions through optimization:
+
+$$q^*(w|\theta) = \argmin_{\theta} \bf{KL}\left[ q(w|\theat) || p(w|\bf{X}) \right]$$
+
+KL or Kullback–Leibler divergence is a non-symmetric and information-theoretic measure of similarity (relative entropy) between true and approximated distributions. 
 
 
 
