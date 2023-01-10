@@ -46,10 +46,17 @@ VI considers a new distribution $q(w|\theta)$ to approximates the true posterior
 
 $$q^*(w|\theta) = \textrm{argmin}_{\theta} \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right],$$
 
-where **KL** means Kullback–Leibler divergence which is used to describe information-theoretic measure of similarity (relative entropy) between true and approximated distributions. The KL divergence is defined as 
+where **KL** means Kullback–Leibler divergence which is used to describe information-theoretic measure of similarity (relative entropy) between true and approximated distributions. The KL divergence is defined as ([wiki's page](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence))
 
-$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] &=& \int q(w|\theta) \log \left( \frac{q(w|\theta)}{p(w|\bf{X})} \right) dw \nn \ &=& a $$
+$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] = \int q(w|\theta) \log \left( \frac{q(w|\theta)}{p(w|\bf{X})} \right) dw$$
 
+Subsitute the Baye's theorem 
+
+$$p(\bf{w}|\bf{X}) = \frac{p(\bf{X}|\bf{x})p(\bf{w})}{p(\bf{w})},$$
+
+the KL divergence turns out to be
+
+$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] = \int q(w|\theta) \log \left( \frac{q(w|\theta) p(\bf{w})}{ p(\bf{X}|\bf{x})p(\bf{w}) } \right) dw$$
 
 
 [Bayesian Neural network]: https://towardsdatascience.com/bayesian-neural-network-7041dd09f2cc
