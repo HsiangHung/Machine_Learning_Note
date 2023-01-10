@@ -42,11 +42,13 @@ Usually MCMC sampling is slow for large datasets or complex models. Variational 
 
 ## 3 Variational Inference (VI)
 
-In VI, a new distribution $q(w|\theta)$ is considered that approximates the true posterior $p(w|\bf{X})$. $q(w|\theta)$ is parameterized by over $w$, and VI finds the right set of that minimizes the divergence of two distributions through optimization:
+VI considers a new distribution $q(w|\theta)$ to approximates the true posterior $p(w|\bf{X})$. VI finds the right set of that minimizes the divergence of two distributions through optimization [[Sabber Ahamed]][Bayesian Neural network]
 
-$$q^*(w|\theta) = \textrm{argmin}_{\theta} \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right]$$
+$$q^*(w|\theta) = \textrm{argmin}_{\theta} \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right],$$
 
-KL or Kullback–Leibler divergence is a non-symmetric and information-theoretic measure of similarity (relative entropy) between true and approximated distributions. 
+where **KL** means Kullback–Leibler divergence which is used to describe information-theoretic measure of similarity (relative entropy) between true and approximated distributions. The KL divergence is defined as 
+
+$$ \bf{KL}\left[ q(w|\theta) || p(w|\bf{X}) \right] = \int q(w|\theta) \log \frac{q(w|\theta)}{p(w|\bf{X})} dw = $$
 
 
 
