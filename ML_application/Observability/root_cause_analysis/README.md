@@ -1,7 +1,7 @@
 
 # Root Cause Analysis
 
-RCA provides a systematic analysis process to identify problems within complex modern infrastructures accurately and quickly. It can also help with risk management and significantly reduce costs by helping teams identify the root of the problem before they have a domino impact on the system. [What Is Root Cause Analysis (RCA)?](https://www.splunk.com/en_us/data-insider/what-is-root-cause-analysis.html?utm_campaign=google_amer_en_search_generic_dynamic_audienceonly&utm_source=google&utm_medium=cpc&utm_content=dynamic_search&utm_term=&_bk=&_bt=641457582643&_bm=&_bn=g&_bg=144996249792&device=c&gclid=Cj0KCQiAn4SeBhCwARIsANeF9DI_vnK4iRxCFDv9aXEZe0qhcfzCLrFqrshSJqkxxbSqaG7_D78viBoaAvHWEALw_wcB)
+RCA provides a systematic analysis process to identify problems within complex modern infrastructures accurately and quickly. It can also help with risk management and significantly reduce costs by helping teams identify the root of the problem before they have a domino impact on the system. (see [What Is Root Cause Analysis (RCA)?](https://www.splunk.com/en_us/data-insider/what-is-root-cause-analysis.html?utm_campaign=google_amer_en_search_generic_dynamic_audienceonly&utm_source=google&utm_medium=cpc&utm_content=dynamic_search&utm_term=&_bk=&_bt=641457582643&_bm=&_bn=g&_bg=144996249792&device=c&gclid=Cj0KCQiAn4SeBhCwARIsANeF9DI_vnK4iRxCFDv9aXEZe0qhcfzCLrFqrshSJqkxxbSqaG7_D78viBoaAvHWEALw_wcB))
 
 ## Root Cause Analysis (RCA) Process
 
