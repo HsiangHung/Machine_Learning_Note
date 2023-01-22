@@ -30,8 +30,7 @@ Various business customers have various definition on critical business concern.
 To conduct service triage on performance anomalies, you must first identify the root cause of the problem. 
 
 
-## Sample BT
-
+## Sample BTs
 
 As the first example, AppD has the fictional ACME online application exposes a **checkout** service at `http://acmeonline.example.com/checkout`, and a user request to the service triggers these distributed processing flow and actions [[AppDynamics]][Business Transaction@AppDynamics]:
 
@@ -43,6 +42,15 @@ As the first example, AppD has the fictional ACME online application exposes a *
 4. Any user request on the entry point is similarly categorized as this `Checkout` BT. 
 
 
+As the second example, another app enables a user to request weather information about their location [[Uzziah Eyee]][Microservices Observability with Distributed Tracing]:
+
+![](images/ip_weather_api_request.png)
+
+1. First the request is handled by an api-service which translates the user’s **IP address** to a city name using a 3rd party `ip-service`. 
+2. Then, it obtains the latest weather information for that city from another 3rd party `weather-service`. 
+3. Finally, the weather information is returned to the user.
+
+## BTs and Traces
 
 
 
