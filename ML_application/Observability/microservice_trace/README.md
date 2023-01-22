@@ -56,6 +56,8 @@ A Trace is the record of a BT. It captures the work done by each service as a co
 
 **Jaeger** is an open source to mimic the applications and generate traces. It is in [opentelemetry-demo repo](https://github.com/open-telemetry/opentelemetry-demo). We can simply git clone the repo and run with dokcer. Then it will constantly generate trace data on the backend. 
 
+Using the above ip-weather api service, the Jaeger UI can visualize a trace as follows [[Uzziah Eyee]][Microservices Observability with Distributed Tracing]:
+
 ![](images/Jaeger_trace_example.png)
 
 
