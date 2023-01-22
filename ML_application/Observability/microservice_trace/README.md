@@ -52,7 +52,7 @@ As the second example, another app enables a user to request weather information
 
 ## BTs and Traces
 
-A Trace is the record of a BT. It captures the work done by each service as a collection of Spans all sharing the same Trace ID. More granular **operations of a service** can be captured as Children Spans which have a `childOf` reference pointing to their parent Span. Hence the tuple (`TraceID`, `SpanID`, `ParentID`) sufficiently describes a Span’s position in a Trace so this is called the SpanContext.
+A BT can be recorded in a trace. It captures the work done by each service as a collection of Spans all sharing the same Trace ID. More granular **operations of a service** can be captured as Children Spans which have a `childOf` reference pointing to their parent Span. Hence the tuple (`TraceID`, `SpanID`, `ParentID`) sufficiently describes a Span’s position in a Trace so this is called the SpanContext [[Uzziah Eyee]][Microservices Observability with Distributed Tracing].
 
 **Jaeger** is an open source to mimic the applications and generate traces. It is in [opentelemetry-demo repo](https://github.com/open-telemetry/opentelemetry-demo). We can simply git clone the repo and run with dokcer. Then it will constantly generate trace data on the backend. 
 
