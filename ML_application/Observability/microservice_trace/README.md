@@ -32,9 +32,10 @@ To conduct service triage on performance anomalies, you must first identify the 
 
 ## Sample BT
 
-[[AppDynamics]][Business Transaction@AppDynamics]
 
-As the first example, AppD has the fictional ACME online application exposes a checkout service at `http://acmeonline.example.com/checkout`, and a user request to the service triggers these distributed processing flow and actions:
+As the first example, AppD has the fictional ACME online application exposes a **checkout** service at `http://acmeonline.example.com/checkout`, and a user request to the service triggers these distributed processing flow and actions [[AppDynamics]][Business Transaction@AppDynamics]:
+
+![](images/bt_processflow.png)
 
 1. The BT **entry point** at the originating tier is `/checkout` URI, which is mapped to a Servlet called `CheckoutServlet.`
 2. The request results in the originating tier invoking the `createOrder` method on a downstream tier, the `ECommerce-Services` server.
