@@ -56,6 +56,16 @@ As the second example, another app enables a user to request weather information
 2. Then, it obtains the latest weather information for that city from another 3rd party `weather-service`. 
 3. Finally, the weather information is returned to the user.
 
+### Reference
+
+* [Business Transaction@AppDynamics]: https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions
+[[AppDynamics] Business Transaction@AppDynamics](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions)
+
+
+* [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
+[[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
+
+
 ## 2. Distributed Trace
 
 ### 2.1 BTs and Traces
@@ -80,6 +90,15 @@ Before the advent of containers, Kubernetes, and microservices, gaining visibili
 Log aggregation may give a snapshot of the activity within a collection of individual services, but the logs lack contextual metadata to provide the full picture of a request as it travels downstream through possibly millions of application dependencies. On its own, this method simply isn’t sufficient for troubleshooting in distributed systems.[[Dynatrace]][What is distributed tracing and why does it matter?]
 
 In comparison, distributed tracing is the process of following a single transaction from endpoint to endpoint in context. 
+
+### Reference
+
+* [What is distributed tracing and why does it matter?]: https://www.dynatrace.com/news/blog/what-is-distributed-tracing/
+[[Dynatrace] What is distributed tracing and why does it matter?](https://www.dynatrace.com/news/blog/what-is-distributed-tracing/)
+
+* [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
+[[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
+
 
 ## 3. Root Cause Analysis Using Traces
 
