@@ -144,6 +144,8 @@ To conduct service triage on performance anomalies, you must first identify the 
 * [What is distributed tracing and why does it matter?]: https://www.dynatrace.com/news/blog/what-is-distributed-tracing/
 [[Dynatrace] What is distributed tracing and why does it matter?](https://www.dynatrace.com/news/blog/what-is-distributed-tracing/)
 
-* [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
-[[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
+
+
+* [System Comprehension and Root Cause Analysis With Distributed Tracing]: https://www.shkuro.com/talks/2018-12-10-system-comprehension-and-root-cause-analysis-with-distributed-tracing/
+[[YURI SHKURO] System Comprehension and Root Cause Analysis With Distributed Tracing](https://www.shkuro.com/talks/2018-12-10-system-comprehension-and-root-cause-analysis-with-distributed-tracing/)
 
