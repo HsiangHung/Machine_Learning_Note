@@ -23,7 +23,7 @@ Various business customers have various definition on critical business concern.
 * Is the Edge service at fault? 
 * If not, then identify which **downstream service** may be at fault?
 
-## Transaction Entry and Exit Points
+### Transaction Entry and Exit Points
 
 [View Business Transactions@Appdynamics](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions/view-business-transactions)
 
@@ -36,8 +36,7 @@ App agents tag exit point calls with metadata describing the existing transactio
 This linking of upstream exit points to downstream entry points is called **correlation**. Correlation maintains the client request context as it is processed by various tiers in your business application.
 
 
-
-## Sample BTs
+### Sample BTs
 
 As the first example, AppD has the fictional ACME online application exposes a **checkout** service at `http://acmeonline.example.com/checkout`, and a user request to the service triggers these distributed processing flow and actions [[AppDynamics]][Business Transaction@AppDynamics]:
 
@@ -57,7 +56,9 @@ As the second example, another app enables a user to request weather information
 2. Then, it obtains the latest weather information for that city from another 3rd party `weather-service`. 
 3. Finally, the weather information is returned to the user.
 
-## BTs and Traces
+## Distributed Trace
+
+### BTs and Traces
 
 A BT can be recorded in a trace. It captures the work done by each service as a collection of Spans all sharing the same Trace ID. More granular **operations of a service** can be captured as Children Spans which have a `childOf` reference pointing to their parent Span. Hence the tuple (`TraceID`, `SpanID`, `ParentID`) sufficiently describes a Span’s position in a Trace so this is called the SpanContext [[Uzziah Eyee]][Microservices Observability with Distributed Tracing].
 
@@ -72,8 +73,14 @@ A recent global survey of 700 CIOs found that 86% of companies are now using clo
 
 Distributed tracing now meets this need, allowing companies to better understand the performance issues affecting their microservices environments.
 
+### The difference between distributed tracing and logging
 
-## Troubleshoot BT Performance with Transaction Snapshots
+Before the advent of containers, Kubernetes, and microservices, gaining visibility into monolithic systems was simple. 
+
+Log aggregation, the practice of combining logs from many different services, is a good example. It may give a snapshot of the activity within a collection of individual services, but the logs lack contextual metadata to provide the full picture of a request as it travels downstream through possibly millions of application dependencies. On its own, this method simply isn’t sufficient for troubleshooting in distributed systems.[[Dynatrace]][What is distributed tracing and why does it matter?]
+
+
+### Troubleshoot BT Performance with Transaction Snapshots
 
 [Troubleshoot Business Transaction Performance with Transaction Snapshots@Appdynamics](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions/troubleshoot-business-transaction-performance-with-transaction-snapshots)
 
@@ -87,11 +94,6 @@ AppDynamics monitors every execution of a business transaction in the instrument
 To conduct service triage on performance anomalies, you must first identify the root cause of the problem. 
 
 
-## The difference between distributed tracing and logging
-
-Before the advent of containers, Kubernetes, and microservices, gaining visibility into monolithic systems was simple. 
-
-Log aggregation, the practice of combining logs from many different services, is a good example. It may give a snapshot of the activity within a collection of individual services, but the logs lack contextual metadata to provide the full picture of a request as it travels downstream through possibly millions of application dependencies. On its own, this method simply isn’t sufficient for troubleshooting in distributed systems.[[Dynatrace]][What is distributed tracing and why does it matter?]
 
 
 ## Reference
