@@ -75,9 +75,11 @@ Distributed tracing now meets this need, allowing companies to better understand
 
 ### 2.2 The difference between distributed tracing and logging
 
-Before the advent of containers, Kubernetes, and microservices, gaining visibility into monolithic systems was simple. 
+Before the advent of containers, Kubernetes, and microservices, gaining visibility into monolithic systems was simple. However, in distributed environment, distributed tracing provides comprehensive visibility into application performance across microservices and containers.
 
-Log aggregation, the practice of combining logs from many different services, is a good example. It may give a snapshot of the activity within a collection of individual services, but the logs lack contextual metadata to provide the full picture of a request as it travels downstream through possibly millions of application dependencies. On its own, this method simply isn’t sufficient for troubleshooting in distributed systems.[[Dynatrace]][What is distributed tracing and why does it matter?]
+Log aggregation may give a snapshot of the activity within a collection of individual services, but the logs lack contextual metadata to provide the full picture of a request as it travels downstream through possibly millions of application dependencies. On its own, this method simply isn’t sufficient for troubleshooting in distributed systems.[[Dynatrace]][What is distributed tracing and why does it matter?]
+
+In comparison, distributed tracing is the process of following a single transaction from endpoint to endpoint in context. 
 
 ## 3. Root Cause Analysis Using Traces
 
