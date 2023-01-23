@@ -58,7 +58,7 @@ As the second example, another app enables a user to request weather information
 
 ### 1.3 Practices to Create BT@AppDynamics
 
-The default BT name is based on the **first two segments of a URI**. More URI or segments may result in the overflow of BTs [Best Practices to Create Business Transactions](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions/best-practices-to-create-business-transactions). For example, you want to monitor these URIs for `/eCommerce/login`:
+The default BT name is based on the **first two segments of a URI**. More URI or segments may result in the overflow of BTs (see [Best Practices to Create Business Transactions](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions/best-practices-to-create-business-transactions)). For example, you want to monitor these URIs for `/eCommerce/login`:
 
 * `/eCommerce/order`
 * `/eCommerce/checkout`
