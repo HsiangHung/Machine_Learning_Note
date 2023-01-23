@@ -55,6 +55,24 @@ As the second example, another app enables a user to request weather information
 2. Then, it obtains the latest weather information for that city from another 3rd party `weather-service`. 
 3. Finally, the weather information is returned to the user.
 
+
+### 1.3 Practices to Create BT@AppDynamics
+
+The default BT name is based on the **first two segments of a URI**. More URI or segments may result in the overflow of BTs [Best Practices to Create Business Transactions](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions/best-practices-to-create-business-transactions). For example, you want to monitor these URIs for `/eCommerce/login`:
+
+* `/eCommerce/order`
+* `/eCommerce/checkout`
+* `/eCommerce/feedback`
+
+However, `/order` contains many URI patterns and if it uses more than two segments, then it may reach the `200 BT limit`. Additionally, `/order` results in many URIs that need to be monitored, which are not required for the users:
+
+* `/eCommerce/order/1/add`
+* `/eCommerce/order/list`
+* `/eCommerce/order/2/add`
+
+Exclude BTs that are not required- Agent snapshots collection depends on the number of unique BTs in the BT list monitored from the target tier. Therefore, it is recommended to review the Business transactions list to check if any BTs listed as part of the auto-discovered transactions are not required. You can use the Exclude Transactions option to temporarily exclude such BTs. If you do not want to collect the snapshots but want only the KPI metrics, then you can monitor the BTs as Service Endpoint.
+
+
 ### Reference
 
 * [Business Transaction@AppDynamics]: https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions
