@@ -98,3 +98,6 @@ Shannon defined the entropy of a probability distribution as the expected value 
 * [Similarity-Sensitive Diversity]: https://dtunkelang.medium.com/similarity-sensitive-diversity-16a35d64f48c
 [[Daniel Tunkelang] Similarity-Sensitive Diversity](https://dtunkelang.medium.com/similarity-sensitive-diversity-16a35d64f48c)
 
+
+* [Cross-Entropy Cost Functions used in Classification]: https://www.geeksforgeeks.org/cross-entropy-cost-functions-used-in-classification/
+[[Geeksforgeeks] Cross-Entropy Cost Functions used in Classification](https://www.geeksforgeeks.org/cross-entropy-cost-functions-used-in-classification/)
