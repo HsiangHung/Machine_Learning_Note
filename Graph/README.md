@@ -88,3 +88,13 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 
 *  If a graph had an odd number of odd nodes, then the sum of degrees would be also odd.
+
+
+## Diversity Measurement - Shannon Entropy
+
+Shannon defined the entropy of a probability distribution as the expected value of the information content of a value drawn from that distribution.
+
+
+* [Similarity-Sensitive Diversity]: https://dtunkelang.medium.com/similarity-sensitive-diversity-16a35d64f48c
+[[Daniel Tunkelang] Similarity-Sensitive Diversity](https://dtunkelang.medium.com/similarity-sensitive-diversity-16a35d64f48c)
+
