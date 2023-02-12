@@ -83,6 +83,3 @@ To be clear, we understand that a graph is not a suitable data structure for enc
 * A graph provides **spatial correlation**, which supplements the temporal correlation and reduces the human cognitive load for troubleshooting.
 
 With a knowledge graph, we can instead place contextualization at the center of observability.
-
-
-

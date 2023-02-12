@@ -85,6 +85,19 @@ Exclude BTs that are not required- Agent snapshots collection depends on the num
 
 ## 2. Distributed Trace
 
+What is a distributed trace? The following definition is from O'reilly book [[O'Reilly]][Introduction: What Is Distributed Tracing?]:
+
+Distributed tracing (also called distributed request tracing) is a type of correlated logging that helps you gain visibility into the operation of a **distributed software system** for use cases such as performance profiling, debugging in production, and **root cause analysis** of failures or other incidents. It gives you the ability to understand exactly what a particular individual service is doing as part of the whole, enabling you to ask and answer questions about the performance of your services and your distributed system as a whole.
+
+The O'Reilly book also explains why distributed software is so popular?:
+
+* **Scalability**: A distributed application can more easily respond to demand, and its scaling can be more efficient. If a lot of people are trying to log in to your application, you could scale out only the login services, for example.
+
+* **Reliability**: Failures in one component shouldn’t bring down the entire application. Distributed applications are more resilient because they split up functions through a variety of service processes and hosts, ensuring that even if a dependent service goes offline, it shouldn’t impact the rest of the application.
+
+* **Maintainability**: Distributed software is more easily maintainable for a couple of reasons. Dividing services from each other can increase how maintainable each component is by allowing it to focus on a smaller set of responsibilities. In addition, you’re freer to add features and capabilities without implementing (and maintaining) them yourself—for example, adding a speech-to-text function in an application by relying on some cloud provider’s speech-to-text service.
+
+
 ### 2.1 BTs and Traces
 
 A BT can be recorded in a trace. It captures the work done by each service as a collection of Spans all sharing the same Trace ID. More granular **operations of a service** can be captured as Children Spans which have a `childOf` reference pointing to their parent Span. Hence the tuple (`TraceID`, `SpanID`, `ParentID`) sufficiently describes a Span’s position in a Trace so this is called the SpanContext [[Uzziah Eyee]][Microservices Observability with Distributed Tracing].
@@ -113,6 +126,9 @@ In comparison, distributed tracing is the process of following a single transact
 * [What is distributed tracing and why does it matter?]: https://www.dynatrace.com/news/blog/what-is-distributed-tracing/
 [[Dynatrace] What is distributed tracing and why does it matter?](https://www.dynatrace.com/news/blog/what-is-distributed-tracing/)
 
+* [Introduction: What Is Distributed Tracing?]: https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html
+[[O'Reilly] Introduction: What Is Distributed Tracing?](https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html)
+
 * [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
 [[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
 
@@ -132,6 +148,50 @@ AppDynamics monitors every execution of a business transaction in the instrument
 
 To conduct service triage on performance anomalies, you must first identify the root cause of the problem. 
 
+
+
+## Visualization for Flow Map
+
+Reference: [Flowcharts PyDot](https://www.kaggle.com/code/kmader/flowcharts-pydot/notebook)
+
+To run it, we may need to refer:
+* [Exception: "dot" not found in path in python on mac](https://stackoverflow.com/questions/40243753/exception-dot-not-found-in-path-in-python-on-mac)
+* [FileNotFoundError: [Errno 2] "dot" not found in path #257](https://github.com/pydot/pydot/issues/257)
+Install `gprof2dot`:
+* [After installing Homebrew I get `zsh: command not found: brew`](https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew)
+
+
+```Python
+import networkx as nx
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from io import StringIO
+from IPython.display import SVG
+import pydot # import pydot or you're not going to get anywhere my friend :D
+```
+### Define DAG
+
+```Python
+dot_graph = pydot.Dot(graph_type='digraph')
+```
+### Define Nodes
+```Python
+sd_node = pydot.Node('Structured\nData\n(ODBC, CSV, XLS)')
+sd_node.set_shape('box3d')
+dot_graph.add_node(sd_node)
+```
+### Define Edges
+```Python
+iedge = pydot.Edge(sd_node,riq_node)
+iedge.set_label('Tables')
+dot_graph.add_edge(iedge)
+```
+In the end, put
+```Python
+dot_graph.write_svg('big_data.svg')
+dot_graph.write_ps2('big_data.ps2')
+SVG('big_data.svg')
+```
 
 
 
