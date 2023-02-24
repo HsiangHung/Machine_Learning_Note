@@ -8,6 +8,8 @@ $\textcolor{red}{NOTE: \ The \ majority \ of \ the \ note \ page \ follows \ Pro
 
 ## 1.1 Node-Level Features
 
+Summary of centrality analysis: [Centrality algorithms overview](https://networkx.guide/algorithms/centrality-algorithms)
+
 Important-based features:
 * **Node degree**: the number of neighboring nodes
 * **Node centrality**: 
@@ -24,7 +26,14 @@ $$ c_v = \frac{1}{ \sum_{u \ne v} \textrm{shortest path length between u and v}}
 
 ![](images/feature_node_closeness.png)
 
+4. Other centrality measurement:
+* [PageRank](https://networkx.guide/algorithms/centrality-algorithms/pagerank/)
+* [Katz centrality](https://networkx.guide/algorithms/centrality-algorithms/katz-centrality/)
 
+### Reference 
+
+* [Graph Analytics: Determining important nodes in a graph using Neo4j]: https://medium.com/data-science-in-your-pocket/graph-analytics-determining-important-nodes-in-a-graph-using-neo4j-bce0dc31c2c8
+[[Mehul Gupta] Graph Analytics: Determining important nodes in a graph using Neo4j](https://medium.com/data-science-in-your-pocket/graph-analytics-determining-important-nodes-in-a-graph-using-neo4j-bce0dc31c2c8)
      
 
 Structure-based features:
