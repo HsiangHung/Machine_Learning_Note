@@ -62,19 +62,18 @@ is referred as an **MA(q)** model, a moving average model of order $q$. $Y_t$ ca
 
 ### 1.4 ARIMA(p,d,q) model
 
-By Sunny Mewati [[Quora, 1]][What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?], Box and Jenkins claimed (successfully) [[Box, Jenkins, Reinsel]][Time Series Analysis] that nonstationary data can be made stationary by differencing the series. This series, <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*" title="Y^*" /></a> $Y^*$ is the input in Box-Jenkins analysis. 
+By Sunny Mewati [[Quora, 1]][What's the difference between ARMA, ARIMA, and ARIMAX, in layman's terms?], Box and Jenkins claimed (successfully) [[Box, Jenkins, Reinsel]][Time Series Analysis] that nonstationary data can be made stationary by differencing the series. This series, $Y^*$ is the input in Box-Jenkins analysis. 
 
 If we combine **differencing** with autoregression and a moving average model, we obtain a non-seasonal ARIMA model [[Rob Hyndman: 8.5 Non-seasonal ARIMA models]][8.5 Non-seasonal ARIMA models]
 
 $$Y^{\prime}_t = c + \big( \phi_1 Y^{\prime}_{t-1} + \phi_2 Y^{\prime}_{t-2} + \cdots + \phi_p Y^{\prime}_{t-p} \big) + \big( \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q} \big),$$
 
-where $\phi$ `ϕ` and $\theta$ `θ` are unknown parameters and $\epsilon$`ϵ` are independent identically distributed error terms with zero mean; <a href="https://www.codecogs.com/eqnedit.php?latex=Y^{\prime}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y^{\prime}" title="Y^{\prime}" /></a> $Y^{\prime}$
-  is the differenced series (it may have been differenced more than once)
+where $\phi$ and $\theta$ are unknown parameters and $\epsilon$ are independent identically distributed error terms with zero mean; $Y^{\prime}$ is the differenced series (it may have been differenced more than once)
 
-This model is called **Autoregressive Integrated Moving Average** or `ARIMA(p,d,q)` model of Y. $p$ is the number of lagged values of <a href="http://www.codecogs.com/eqnedit.php?latex=Y^{\prime}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^{\prime}" title="Y^{\prime}" /></a>  $Y^{\prime}$ which represents the autoregressive (AR) nature of model, $q$ is the number of lagged values of the error term which represents the moving average (MA) nature of model and $d$ is the number of times $Y$ has to be differences to produce the stationary <a href="http://www.codecogs.com/eqnedit.php?latex=Y^{\prime}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^{\prime}" title="Y^{\prime}" /></a> $Y^{\prime}$ .
+This model is called **Autoregressive Integrated Moving Average** or `ARIMA(p,d,q)` model of Y. $p$ is the number of lagged values of $Y^{\prime}$ which represents the autoregressive (AR) nature of model, $q$ is the number of lagged values of the error term which represents the moving average (MA) nature of model and $d$ is the number of times $Y$ has to be differences to produce the stationary $Y^{\prime}$ .
 
 
-The term **integrated** implies that in order to obtain a forecast of Y, we have to sum up (or **integrate over**) the values of <a href="http://www.codecogs.com/eqnedit.php?latex=Y^{\prime}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^{\prime}" title="Y^{\prime}" /></a> because <a href="http://www.codecogs.com/eqnedit.php?latex=Y^{\prime}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^{\prime}" title="Y^{\prime}" /></a> $Y^{\prime}$ are the differenced values of the original series Y. If no differencing is involved, this model is called an Autoregressive Moving Average, i.e. `ARMA(p,q)`.
+The term **integrated** implies that in order to obtain a forecast of Y, we have to sum up (or **integrate over**) the values of $Y^{\prime}$ are the differenced values of the original series Y. If no differencing is involved, this model is called an Autoregressive Moving Average, i.e. `ARMA(p,q)`.
 
 
 ### 1.5 ARIMAX model
@@ -83,7 +82,7 @@ Econometricians developed another class of models that incorporated auroregressi
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y^*_t = \beta x_t + \phi_1 Y^*_{t-1} + \phi_2 Y^*_{t-2} + \cdots + \phi_p Y^*_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
 
-$$ Y^*_t = \beta x_t + \phi_1 Y^*_{t-1} + \phi_2 Y^*_{t-2} + \cdots + \phi_p Y^*_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q} $$
+$$ Y^{*}_t = \beta x_t + \phi_1 Y^*_{t-1} + \phi_2 Y^*_{t-2} + \cdots + \phi_p Y^*_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q} $$
 
 ### 1.6 LSTM
 
