@@ -40,7 +40,7 @@ Suppose we have time-series data like day 1, temperature <a href="https://www.co
 
 ![exponentially_average](images/exponentially_avg.png)
 
-The value of <a href="https://www.codecogs.com/eqnedit.php?latex=1/(1-\beta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/(1-\beta)" title="1/(1-\beta)" /></a>  $1/(1-\beta)$ describes number of previous days used for weighted average. For example, if <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> $\beta = 0.9, data will decay to 1/e after 10 days; if 0.98 it is 50 days. 
+The value of <a href="https://www.codecogs.com/eqnedit.php?latex=1/(1-\beta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/(1-\beta)" title="1/(1-\beta)" /></a>  $1/(1-\beta)$ describes number of previous days used for weighted average. For example, if <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> $\beta = 0.9$, data will decay to 1/e after 10 days; if 0.98 it is 50 days. 
 
 ### 1.2 AR(p) model
 
