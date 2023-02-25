@@ -2,7 +2,7 @@
 
 ## What is stationarity?
 
-$X$ is strictly stationary meaning if the distribution of $\Big( x_{t+1}, x_{t+2}, \cdots ,x_{t+k} \Big) $ is identical to that of $\Big( x_1, x_2, \cdots, x_{k} \Big)$ for each $t$ and $k$. From Wiki: a stationary process is a stochastic process whose joint **probability distribution does not change when shifted in time or space** (by IrishStat, [[StackExchange, 1]][Why does a time series have to be stationary?]). Consequently, a stationary time-series is one whose statistical properties such as **mean**, **variance**, **autocorrelation**, etc. are all **constant over time**. [[Robert Nau, Stationarity and differencing]][Stationarity and differencing]
+$X$ is strictly stationary meaning if the distribution of $( x_{t+1}, x_{t+2}, \cdots ,x_{t+k} ) $ is identical to that of $( x_1, x_2, \cdots, x_{k} )$ for each $t$ and $k$. From Wiki: a stationary process is a stochastic process whose joint **probability distribution does not change when shifted in time or space** (by IrishStat, [[StackExchange, 1]][Why does a time series have to be stationary?]). Consequently, a stationary time-series is one whose statistical properties such as **mean**, **variance**, **autocorrelation**, etc. are all **constant over time**. [[Robert Nau, Stationarity and differencing]][Stationarity and differencing]
 
 Most statistical forecasting methods are based on the assumption that the time series can be rendered approximately stationary (i.e., "stationarized") through the use of mathematical transformations. Thus, finding the sequence of transformations to stationarize a time-series often provides important clues in the search for an appropriate forecasting model. 
 
