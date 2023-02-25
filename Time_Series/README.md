@@ -2,7 +2,7 @@
 
 ## What is stationarity?
 
-`X` is strictly stationary meaning if the distribution of (`x[t+1]`,…,`x[t+k]`) is identical to that of (`x[1]`,…,`x[k]`) for each t and k. From Wiki: a stationary process is a stochastic process whose joint **probability distribution does not change when shifted in time or space** (by IrishStat, [[StackExchange, 1]][Why does a time series have to be stationary?]). Consequently, a stationary time-series is one whose statistical properties such as **mean**, **variance**, **autocorrelation**, etc. are all **constant over time**. [[Robert Nau, Stationarity and differencing]][Stationarity and differencing]
+$X$ is strictly stationary meaning if the distribution of $\lbrace x_{t+1}, \cdots ,x_{t+k} \rbrace$ is identical to that of $\lbrace x_2, \cdots, x_{k} \rbrace$ (`x[1]`,…,`x[k]`) for each t and k. From Wiki: a stationary process is a stochastic process whose joint **probability distribution does not change when shifted in time or space** (by IrishStat, [[StackExchange, 1]][Why does a time series have to be stationary?]). Consequently, a stationary time-series is one whose statistical properties such as **mean**, **variance**, **autocorrelation**, etc. are all **constant over time**. [[Robert Nau, Stationarity and differencing]][Stationarity and differencing]
 
 Most statistical forecasting methods are based on the assumption that the time series can be rendered approximately stationary (i.e., "stationarized") through the use of mathematical transformations. Thus, finding the sequence of transformations to stationarize a time-series often provides important clues in the search for an appropriate forecasting model. 
 
@@ -36,7 +36,7 @@ After detrending, if the mean, variance, and autocorrelations of the original se
 
 ### 1.1 Exponentially Weighted Average
 
-Suppose we have time-series data like day 1, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_1" title="\theta_1" /></a>, day 2, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_2" title="\theta_2" /></a> .... etc, we can implement exponentially weighted avergae to fit the time series as follows (from Andrew Ng's class)
+Suppose we have time-series data like day 1, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_1" title="\theta_1" /></a> $\theta_1$, day 2, temperature <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_2" title="\theta_2" /></a> $\theta2$ .... etc, we can implement exponentially weighted avergae to fit the time series as follows (from Andrew Ng's class)
 
 ![exponentially_average](images/exponentially_avg.png)
 
@@ -73,12 +73,12 @@ where $\phi$ and $\theta$ are unknown parameters and $\epsilon$ are independent 
 This model is called **Autoregressive Integrated Moving Average** or `ARIMA(p,d,q)` model of Y. $p$ is the number of lagged values of $Y^{\prime}$ which represents the autoregressive (AR) nature of model, $q$ is the number of lagged values of the error term which represents the moving average (MA) nature of model and $d$ is the number of times $Y$ has to be differences to produce the stationary $Y^{\prime}$ .
 
 
-The term **integrated** implies that in order to obtain a forecast of Y, we have to sum up (or **integrate over**) the values of $Y^{\prime}$ are the differenced values of the original series Y. If no differencing is involved, this model is called an Autoregressive Moving Average, i.e. `ARMA(p,q)`.
+The term **integrated** implies that in order to obtain a forecast of $Y$, we have to sum up (or **integrate over**) the values of $Y^{\prime}$ are the differenced values of the original series $Y$. If no differencing is involved, this model is called an Autoregressive Moving Average, i.e. `ARMA(p,q)`.
 
 
 ### 1.5 ARIMAX model
 
-Econometricians developed another class of models that incorporated auroregressive and moving average components of Box-Jenkins approach with the ‘explanatory variables’ approach of standard econometrics [[Rob Hyndman, ARIMAX]][The ARIMAX model muddle]. The simplest of such models is the ARIMAX which is just an ARIMA with additional explanatory variables, written as
+Econometricians developed another class of models that incorporated auroregressive and moving average components of Box-Jenkins approach with the `explanatory variables` approach of standard econometrics [[Rob Hyndman, ARIMAX]][The ARIMAX model muddle]. The simplest of such models is the ARIMAX which is just an ARIMA with additional explanatory variables, written as
 
 $$ Y_t^* = \beta x_t + \Big( \phi_1 Y_{t-1}^* + \phi_2 Y_{t-2}^* + \cdots + \phi_p Y^*_{t-p} \Big) + \Big( \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q} \Big) $$
 
