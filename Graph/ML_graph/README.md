@@ -159,9 +159,11 @@ where $P(Y_v=c)$ is the probability of node $v$ having label $c$.
 
 The notion of community in a graph represents similarly to what it represents in the real world. Different social circles are examples of such communities. Analogously, in graphs, community represents a partition of a graph, ie a set of nodes.
 
-### Markov Clustering
+### Markov Clustering (MCL)
 
-MCL algorithm is achieved by simulating a random walk on a graph until it reaches equilibrium. In the case of network data, the only task to perform is to compute the adjacency (or affinity) matrix A. The definition of such a matrix is $A_{ij}= 1$ if there is an edge from vertex i to vertex j, and 0 otherwise
+[MCL algorithm](https://micans.org/mcl/#:~:text=The%20MCL%20algorithm%20is%20short,in%20bioinformatics%20and%20other%20disciplines.) is achieved by simulating a random walk on a graph until it reaches equilibrium. 
+
+In the case of network data, the only task to perform is to compute the adjacency (or affinity) matrix A. The definition of such a matrix is $A_{ij}= 1$ if there is an edge from vertex $i$ to vertex $j$, and 0 otherwise.
 
 By the adjacency matrix, one can obtain the Markov matrix, which is a matrix of probabilities representing the chances for a node reaching another one it is connected to. Then the random walk on the graph is simulated by alternating two operators called **expansion** and **inflation**:
 
