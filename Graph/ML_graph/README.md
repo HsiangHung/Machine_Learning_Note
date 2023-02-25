@@ -163,9 +163,9 @@ The notion of community in a graph represents similarly to what it represents in
 
 [MCL algorithm](https://micans.org/mcl/#:~:text=The%20MCL%20algorithm%20is%20short,in%20bioinformatics%20and%20other%20disciplines.) is achieved by simulating a random walk on a graph until it reaches equilibrium. 
 
-In the case of network data, the only task to perform is to compute the adjacency (or affinity) matrix A. The definition of such a matrix is $A_{ij}= 1$ if there is an edge from vertex $i$ to vertex $j$, and 0 otherwise.
+In the case of network data, the only task to perform is to compute the **adjacency** (or affinity) matrix A. The definition of such a matrix is $A_{ij}= 1$ if there is an edge from vertex $i$ to vertex $j$, and 0 otherwise.
 
-By the adjacency matrix, one can obtain the Markov matrix, which is a matrix of probabilities representing the chances for a node reaching another one it is connected to. Then the random walk on the graph is simulated by alternating two operators called **expansion** and **inflation**:
+By the adjacency matrix, one can obtain the **Markov matrix**, which is a matrix of probabilities representing the chances for a node reaching another one it is connected to. Then the random walk on the graph is simulated by alternating two operators called **expansion** and **inflation**:
 
 * **Expansion** allows the random walker to take higher length paths. For instance taking a large number of steps from one node to the other.
 * **Inflation** changes the transition probabilities by favouring more probable walks over less probable ones.
