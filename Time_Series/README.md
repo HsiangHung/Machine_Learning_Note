@@ -40,13 +40,15 @@ Suppose we have time-series data like day 1, temperature <a href="https://www.co
 
 ![exponentially_average](images/exponentially_avg.png)
 
-The value of <a href="https://www.codecogs.com/eqnedit.php?latex=1/(1-\beta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/(1-\beta)" title="1/(1-\beta)" /></a> describes number of previous days used for weighted average. For example, if <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> = 0.9, data will decay to 1/e after 10 days; if 0.98 it is 50 days. 
+The value of $\beta=0.9$ <a href="https://www.codecogs.com/eqnedit.php?latex=1/(1-\beta)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1/(1-\beta)" title="1/(1-\beta)" /></a> describes number of previous days used for weighted average. For example, if <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> = 0.9, data will decay to 1/e after 10 days; if 0.98 it is 50 days. 
 
 ### 1.2 AR(p) model
 
 In a multiple regression model, we forecast the variable of interest using a linear combination of **past values** of the variable. The term autoregression indicates that it is a regression of the variable against itself.
 
 The **AR(p)** mdoel of order p is a multiple regression but with lagged values of `Yt` as predictors [[Rob Hyndman: 8.4 Moving average models]][8.4 Moving average models]:
+
+$$Y_t = c +\phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + \epsilon_t,$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Y_t&space;=&space;c&space;&plus;\phi_1&space;Y_{t-1}&space;&plus;&space;\phi_2&space;Y_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y_{t-p}&space;&plus;&space;\epsilon_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y_t&space;=&space;c&space;&plus;\phi_1&space;Y_{t-1}&space;&plus;&space;\phi_2&space;Y_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y_{t-p}&space;&plus;&space;\epsilon_t" title="Y_t = c +\phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + \epsilon_t" /></a>
 
@@ -58,6 +60,8 @@ Rather than using past values of the forecast variable in a regression, a moving
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Y_t&space;=&space;c&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y_t&space;=&space;c&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y_t = c + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
 
+$$Y_t = c + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}$$
+
 is referred as an **MA(q)** model, a moving average model of order q. `Yt` can be thought of as a weighted moving average of the past few forecast errors.
 
 ### 1.4 ARIMA(p,d,q) model
@@ -67,6 +71,8 @@ By Sunny Mewati [[Quora, 1]][What's the difference between ARMA, ARIMA, and ARIM
 If we combine **differencing** with autoregression and a moving average model, we obtain a non-seasonal ARIMA model [[Rob Hyndman: 8.5 Non-seasonal ARIMA models]][8.5 Non-seasonal ARIMA models]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Y^{\prime}_t&space;=&space;c&space;&plus;&space;\phi_1&space;Y^{\prime}_{t-1}&space;&plus;&space;\phi_2&space;Y^{\prime}_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^{\prime}_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y^{\prime}_t&space;=&space;c&space;&plus;&space;\phi_1&space;Y^{\prime}_{t-1}&space;&plus;&space;\phi_2&space;Y^{\prime}_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^{\prime}_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y^{\prime}_t = c + \phi_1 Y^{\prime}_{t-1} + \phi_2 Y^{\prime}_{t-2} + \cdots + \phi_p Y^{\prime}_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
+
+$$Y^{\prime}_t = c + \phi_1 Y^{\prime}_{t-1} + \phi_2 Y^{\prime}_{t-2} + \cdots + \phi_p Y^{\prime}_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}$$
 
 where `ϕ` and `θ` are unknown parameters and `ϵ` are independent identically distributed error terms with zero mean; <a href="https://www.codecogs.com/eqnedit.php?latex=Y^{\prime}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y^{\prime}" title="Y^{\prime}" /></a>
   is the differenced series (it may have been differenced more than once)
@@ -83,6 +89,7 @@ Econometricians developed another class of models that incorporated auroregressi
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?Y^*_t&space;=&space;\beta&space;x_t&space;&plus;&space;\phi_1&space;Y^*_{t-1}&space;&plus;&space;\phi_2&space;Y^*_{t-2}&space;&plus;&space;\cdots&space;&plus;&space;\phi_p&space;Y^*_{t-p}&space;&plus;&space;\epsilon_t&space;&plus;&space;\theta_1&space;\epsilon_{t-1}&space;&plus;&space;\theta_2&space;\epsilon_{t-2}&space;&plus;&space;\cdots&space;\theta_q&space;\epsilon_{t-q}" title="Y^*_t = \beta x_t + \phi_1 Y^*_{t-1} + \phi_2 Y^*_{t-2} + \cdots + \phi_p Y^*_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}" /></a>
 
+$$Y^*_t = \beta x_t + \phi_1 Y^*_{t-1} + \phi_2 Y^*_{t-2} + \cdots + \phi_p Y^*_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q}$$
 
 ### 1.6 LSTM
 
