@@ -153,3 +153,26 @@ where $P(Y_v=c)$ is the probability of node $v$ having label $c$.
 * Iterative classification: Classify node $v$ based on its attributes $f_v$ as well as labels $z_v$ of neighbor set $N_v$.
 
 ### 2.2.3 Loopy belief propagation 
+
+
+## 3. Community Detection
+
+The notion of community in a graph represents similarly to what it represents in the real world. Different social circles are examples of such communities. Analogously, in graphs, community represents a partition of a graph, ie a set of nodes.
+
+### Markov Clustering
+
+MCL algorithm is achieved by simulating a random walk on a graph until it reaches equilibrium. In the case of network data, the only task to perform is to compute the adjacency (or affinity) matrix A. The definition of such a matrix is $A_{ij}= 1$ if there is an edge from vertex i to vertex j, and 0 otherwise
+
+By the adjacency matrix, one can obtain the Markov matrix, which is a matrix of probabilities representing the chances for a node reaching another one it is connected to. Then the random walk on the graph is simulated by alternating two operators called **expansion** and **inflation**:
+
+* **Expansion** allows the random walker to take higher length paths. For instance taking a large number of steps from one node to the other.
+* **Inflation** changes the transition probabilities by favouring more probable walks over less probable ones.
+
+The combination of expansion and inflation will boost the probabilities of walks inside each cluster. Moreover it will reduce walks between the clusters.
+
+* Pro: unlike many clustering algorithms that need the user to specify the expected number of clusters beforehand, sometimes mistakenly, the MCL algorithm provides a partition of the data into clusters that naturally arises from the graph topology itself.
+
+
+
+* [Effective community detection with Markov Clustering]: https://towardsdatascience.com/effective-community-detection-with-markov-clustering-d5c6abee11b2
+[[Mehul Gupta] Effective community detection with Markov Clustering](https://towardsdatascience.com/effective-community-detection-with-markov-clustering-d5c6abee11b2)
