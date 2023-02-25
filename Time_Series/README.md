@@ -66,7 +66,7 @@ By Sunny Mewati [[Quora, 1]][What's the difference between ARMA, ARIMA, and ARIM
 
 If we combine **differencing** with autoregression and a moving average model, we obtain a non-seasonal ARIMA model [[Rob Hyndman: 8.5 Non-seasonal ARIMA models]][8.5 Non-seasonal ARIMA models]
 
-$$Y^{\prime}_t = c + \big( \phi_1 Y^{\prime}_{t-1} + \phi_2 Y^{\prime}_{t-2} + \cdots + \phi_p Y^{\prime}_{t-p} \big) + \big( \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q} \big),$$
+$$Y^{\prime}_t = c + \Big( \phi_1 Y^{\prime}_{t-1} + \phi_2 Y^{\prime}_{t-2} + \cdots + \phi_p Y^{\prime}_{t-p} \Big) + \Big( \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots \theta_q \epsilon_{t-q} \Big),$$
 
 where $\phi$ and $\theta$ are unknown parameters and $\epsilon$ are independent identically distributed error terms with zero mean; $Y^{\prime}$ is the differenced series (it may have been differenced more than once)
 
