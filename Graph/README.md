@@ -90,6 +90,20 @@ $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 *  If a graph had an odd number of odd nodes, then the sum of degrees would be also odd.
 
 
+## Algorithmd in Graph
+
+
+* [19 Graph Algorithms You Can Use Right Now]: https://memgraph.com/blog/graph-algorithms-list
+[[Memgraph] 19 Graph Algorithms You Can Use Right Now](https://memgraph.com/blog/graph-algorithms-list)
+
+* [Applications of the 20 Most Popular Graph Algorithms]: https://memgraph.com/blog/graph-algorithms-applications
+[[Memgraph] Applications of the 20 Most Popular Graph Algorithms](https://memgraph.com/blog/graph-algorithms-applications)
+
+
+* [10 Graph Algorithms Visually Explained]: https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3
+[[Vijini Mallawaarachchi] 10 Graph Algorithms Visually Explained](https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3)
+
+
 ## Diversity Measurement - Shannon Entropy
 
 Shannon defined the entropy of a probability distribution as the expected value of the information content of a value drawn from that distribution.
