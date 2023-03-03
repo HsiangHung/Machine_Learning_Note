@@ -3,7 +3,7 @@
 
 ## 1. Distributed Traces
 
-In a **microservices architecture**, a request can travel across **multiple microservices** to build the response and send it to the user [[Dineshchandgr]][Distributed Tracing in Microservices / Spring Boot], [[Manoj Bhagwat]][Distributed Tracing in Microservices], [[RisingStack][Engineering] Introducing Distributed Tracing for Microservices Monitoring]. Distributed Tracing is the process of tracing every single request from the point of origin up to all the services it touches by analyzing the data.
+In a **microservices architecture**, a request can travel across **multiple microservices** to build the response and send it to the user [[Dineshchandgr]][Distributed Tracing in Microservices / Spring Boot], [[Manoj Bhagwat]][Distributed Tracing in Microservices], [[RisingStack Engineering]][Introducing Distributed Tracing for Microservices Monitoring]. Distributed Tracing is the process of tracing every single request from the point of origin up to all the services it touches by analyzing the data.
 
 ![](images/trace_and_graph.png)
 
@@ -23,7 +23,9 @@ The O'Reilly book also explains why distributed software is so popular?:
 
 ### 1.1 Service Flow Map
 
-Trace automatically generates a dynamic service map based on how your services communicate with each other or with databases and external APIs. In this view, we provide feedback on infrastructure health as well; call per min, error per min in an application. The following map is from AppDynamics [AppDynamics, Flow Maps](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-applications/flow-maps):
+Trace automatically generates a dynamic service map based on how your services communicate with each other or with databases and external APIs. In this view, we provide feedback on infrastructure health as well; call per min, error per min in an application [[RisingStack Engineering]][Introducing Distributed Tracing for Microservices Monitoring]. 
+
+The following map is from AppDynamics [AppDynamics, Flow Maps](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-applications/flow-maps):
 
 ![](images/flow_map.png)
 
