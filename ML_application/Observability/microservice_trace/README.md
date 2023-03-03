@@ -17,6 +17,7 @@ The O'Reilly book also explains why distributed software is so popular?:
 
 In other words, in a **microservices architecture**, a request can travel across **multiple microservices** to build the response and send it to the user [[Dineshchandgr]][Distributed Tracing in Microservices / Spring Boot]. Distributed Tracing is the process of tracing every single request from the point of origin up to all the services it touches by analyzing the data. Every request will have a Trace ID, timestamp, and other useful metadata. With this, we can see how long the request spans across a particular microservice, and also we can get the metrics to improve the latency.
 
+![](images/trace_and_graph.png)
 
 
 ### 1.2 The difference between distributed tracing and logging
@@ -94,14 +95,6 @@ As the first example, AppD has the fictional ACME online application exposes a *
 4. Any user request on the entry point is similarly categorized as this `Checkout` BT. 
 
 
-As the second example, another app enables a user to request weather information about their location [[Uzziah Eyee]][Microservices Observability with Distributed Tracing]:
-
-![](images/ip_weather_api_request.png)
-
-1. First the request is handled by an api-service which translates the user’s **IP address** to a city name using a 3rd party `ip-service`. 
-2. Then, it obtains the latest weather information for that city from another 3rd party `weather-service`. 
-3. Finally, the weather information is returned to the user.
-
 
 ### 2.3 Practices to Create BT@AppDynamics
 
@@ -135,6 +128,16 @@ Exclude BTs that are not required- Agent snapshots collection depends on the num
 A BT can be recorded in a trace. It captures the work done by each service as a collection of Spans all sharing the same Trace ID. More granular **operations of a service** can be captured as Children Spans which have a `childOf` reference pointing to their parent Span. Hence the tuple (`TraceID`, `SpanID`, `ParentID`) sufficiently describes a Span’s position in a Trace so this is called the SpanContext [[Uzziah Eyee]][Microservices Observability with Distributed Tracing].
 
 OpenTelemetry, is a widely popular observability framework for cloud-native software to distributed tracing. Currently, organizations can use OpenTelemetry to send collected telemetry data to a third-party system for analysis. By running [opentelemetry-demo repo](https://github.com/open-telemetry/opentelemetry-demo) repo (using docker), **Jaeger** provides a UI to visualize collected trace data in the backend. 
+
+
+As an example, consider that another app enables a user to request weather information about their location [[Uzziah Eyee]][Microservices Observability with Distributed Tracing]:
+
+![](images/ip_weather_api_request.png)
+
+1. First the request is handled by an api-service which translates the user’s **IP address** to a city name using a 3rd party `ip-service`. 
+2. Then, it obtains the latest weather information for that city from another 3rd party `weather-service`. 
+3. Finally, the weather information is returned to the user.
+
 
 Using the above ip-weather api service, the Jaeger UI can visualize a trace as follows [[Uzziah Eyee]][Microservices Observability with Distributed Tracing]:
 
