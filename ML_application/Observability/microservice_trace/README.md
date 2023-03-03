@@ -1,10 +1,57 @@
 
 # Microservice Observability and Distributed Traces 
 
+## 1. Distributed Traces
 
-## 1. Business Transaction 
+What is a distributed trace? The following definition is from O'reilly book [[O'Reilly]][Introduction: What Is Distributed Tracing?]:
 
-In the AppDynamics application model [[AppDynamics]][Business Transaction@AppDynamics], a business transaction (BT) represents an **end-to-end**, **cross-tier processing path** used to fulfill a request for a service provided by the application. 
+Distributed tracing (also called distributed request tracing) is a type of correlated logging that helps you gain visibility into the operation of a **distributed software system** for use cases such as performance profiling, debugging in production, and **root cause analysis** of failures or other incidents. It gives you the ability to understand exactly what a particular individual service is doing as part of the whole, enabling you to ask and answer questions about the performance of your services and your distributed system as a whole.
+
+The O'Reilly book also explains why distributed software is so popular?:
+
+* **Scalability**: A distributed application can more easily respond to demand, and its scaling can be more efficient. If a lot of people are trying to log in to your application, you could scale out only the login services, for example.
+
+* **Reliability**: Failures in one component shouldn’t bring down the entire application. Distributed applications are more resilient because they split up functions through a variety of service processes and hosts, ensuring that even if a dependent service goes offline, it shouldn’t impact the rest of the application.
+
+* **Maintainability**: Distributed software is more easily maintainable for a couple of reasons. Dividing services from each other can increase how maintainable each component is by allowing it to focus on a smaller set of responsibilities. In addition, you’re freer to add features and capabilities without implementing (and maintaining) them yourself—for example, adding a speech-to-text function in an application by relying on some cloud provider’s speech-to-text service.
+
+In other words, in a **microservices architecture**, a request can travel across **multiple microservices** to build the response and send it to the user [[Dineshchandgr]][Distributed Tracing in Microservices / Spring Boot]. Distributed Tracing is the process of tracing every single request from the point of origin up to all the services it touches by analyzing the data. Every request will have a Trace ID, timestamp, and other useful metadata. With this, we can see how long the request spans across a particular microservice, and also we can get the metrics to improve the latency.
+
+
+
+### 1.2 The difference between distributed tracing and logging
+
+Before the advent of containers, Kubernetes, and microservices, gaining visibility into monolithic systems was simple. However, in distributed environment, distributed tracing provides comprehensive visibility into application performance across microservices and containers.
+
+Log aggregation may give a snapshot of the activity within a collection of individual services, but the logs lack contextual metadata to provide the full picture of a request as it travels downstream through possibly millions of application dependencies. On its own, this method simply isn’t sufficient for troubleshooting in distributed systems.[[Dynatrace]][What is distributed tracing and why does it matter?]
+
+In comparison, distributed tracing is the process of following a single transaction from endpoint to endpoint in context. 
+
+
+
+### Reference
+
+
+* [Distributed Tracing in Microservices / Spring Boot]: https://medium.com/javarevisited/distributed-tracing-in-microservices-spring-boot-125272b58ad8
+[[Dineshchandgr] Distributed Tracing in Microservices / Spring Boot](https://medium.com/javarevisited/distributed-tracing-in-microservices-spring-boot-125272b58ad8)
+
+
+* [What is distributed tracing and why does it matter?]: https://www.dynatrace.com/news/blog/what-is-distributed-tracing/
+[[Dynatrace] What is distributed tracing and why does it matter?](https://www.dynatrace.com/news/blog/what-is-distributed-tracing/)
+
+* [Introduction: What Is Distributed Tracing?]: https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html
+[[O'Reilly] Introduction: What Is Distributed Tracing?](https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html)
+
+* [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
+[[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
+
+
+
+## 2. Business Transaction 
+
+Business Transactions (BT) are a model to monitoring performance of an application.
+
+In the AppDynamics application model [[AppDynamics]][Business Transaction@AppDynamics], a BT represents an **end-to-end**, **cross-tier processing path** used to fulfill a request for a service provided by the application. 
 
 It consists of **all** required services within your environment such as login, search, and checkout that are utilized to fulfill and respond to a user-initiated request. These transactions reflect the logical way users interact with your applications. 
 
@@ -23,7 +70,7 @@ Various business customers have various definition on critical business concern.
 * Is the Edge service at fault? 
 * If not, then identify which **downstream service** may be at fault?
 
-### 1.1 Transaction entry and exit points
+### 2.1 Transaction entry and exit points
 
 
 Typically, more than one tier participates in the processing of a BT. Outbound requests from an instrumented application tier are called **exit points**. Downstream tiers may, in turn, have exit points that invoke other services or backend requests (see [View Business Transactions@Appdynamics](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions/view-business-transactions)). 
@@ -35,7 +82,7 @@ App agents tag exit point calls with metadata describing the existing transactio
 This linking of upstream exit points to downstream entry points is called **correlation**. Correlation maintains the client request context as it is processed by various tiers in your business application.
 
 
-### 1.2 Sample BTs
+### 2.2 Sample BTs
 
 As the first example, AppD has the fictional ACME online application exposes a **checkout** service at `http://acmeonline.example.com/checkout`, and a user request to the service triggers these distributed processing flow and actions [[AppDynamics]][Business Transaction@AppDynamics]:
 
@@ -56,7 +103,7 @@ As the second example, another app enables a user to request weather information
 3. Finally, the weather information is returned to the user.
 
 
-### 1.3 Practices to Create BT@AppDynamics
+### 2.3 Practices to Create BT@AppDynamics
 
 The default BT name is based on the **first two segments of a URI**. More URI or segments may result in the overflow of BTs (see [Best Practices to Create Business Transactions](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions/best-practices-to-create-business-transactions)). For example, you want to monitor these URIs for `/eCommerce/login`:
 
@@ -83,22 +130,7 @@ Exclude BTs that are not required- Agent snapshots collection depends on the num
 [[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
 
 
-## 2. Distributed Trace
-
-What is a distributed trace? The following definition is from O'reilly book [[O'Reilly]][Introduction: What Is Distributed Tracing?]:
-
-Distributed tracing (also called distributed request tracing) is a type of correlated logging that helps you gain visibility into the operation of a **distributed software system** for use cases such as performance profiling, debugging in production, and **root cause analysis** of failures or other incidents. It gives you the ability to understand exactly what a particular individual service is doing as part of the whole, enabling you to ask and answer questions about the performance of your services and your distributed system as a whole.
-
-The O'Reilly book also explains why distributed software is so popular?:
-
-* **Scalability**: A distributed application can more easily respond to demand, and its scaling can be more efficient. If a lot of people are trying to log in to your application, you could scale out only the login services, for example.
-
-* **Reliability**: Failures in one component shouldn’t bring down the entire application. Distributed applications are more resilient because they split up functions through a variety of service processes and hosts, ensuring that even if a dependent service goes offline, it shouldn’t impact the rest of the application.
-
-* **Maintainability**: Distributed software is more easily maintainable for a couple of reasons. Dividing services from each other can increase how maintainable each component is by allowing it to focus on a smaller set of responsibilities. In addition, you’re freer to add features and capabilities without implementing (and maintaining) them yourself—for example, adding a speech-to-text function in an application by relying on some cloud provider’s speech-to-text service.
-
-
-### 2.1 BTs and Traces
+### 2.4 BTs and Traces
 
 A BT can be recorded in a trace. It captures the work done by each service as a collection of Spans all sharing the same Trace ID. More granular **operations of a service** can be captured as Children Spans which have a `childOf` reference pointing to their parent Span. Hence the tuple (`TraceID`, `SpanID`, `ParentID`) sufficiently describes a Span’s position in a Trace so this is called the SpanContext [[Uzziah Eyee]][Microservices Observability with Distributed Tracing].
 
@@ -113,24 +145,6 @@ A recent global survey of 700 CIOs found that 86% of companies are now using clo
 
 Distributed tracing now meets this need, allowing companies to better understand the performance issues affecting their microservices environments.
 
-### 2.2 The difference between distributed tracing and logging
-
-Before the advent of containers, Kubernetes, and microservices, gaining visibility into monolithic systems was simple. However, in distributed environment, distributed tracing provides comprehensive visibility into application performance across microservices and containers.
-
-Log aggregation may give a snapshot of the activity within a collection of individual services, but the logs lack contextual metadata to provide the full picture of a request as it travels downstream through possibly millions of application dependencies. On its own, this method simply isn’t sufficient for troubleshooting in distributed systems.[[Dynatrace]][What is distributed tracing and why does it matter?]
-
-In comparison, distributed tracing is the process of following a single transaction from endpoint to endpoint in context. 
-
-### Reference
-
-* [What is distributed tracing and why does it matter?]: https://www.dynatrace.com/news/blog/what-is-distributed-tracing/
-[[Dynatrace] What is distributed tracing and why does it matter?](https://www.dynatrace.com/news/blog/what-is-distributed-tracing/)
-
-* [Introduction: What Is Distributed Tracing?]: https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html
-[[O'Reilly] Introduction: What Is Distributed Tracing?](https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html)
-
-* [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
-[[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
 
 
 ## 3. Root Cause Analysis Using Traces
