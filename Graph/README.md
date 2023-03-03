@@ -99,9 +99,19 @@ $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 * [Applications of the 20 Most Popular Graph Algorithms]: https://memgraph.com/blog/graph-algorithms-applications
 [[Memgraph] Applications of the 20 Most Popular Graph Algorithms](https://memgraph.com/blog/graph-algorithms-applications)
 
-
 * [10 Graph Algorithms Visually Explained]: https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3
 [[Vijini Mallawaarachchi] 10 Graph Algorithms Visually Explained](https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3)
+
+
+### Community Detections
+
+* [Getting Started with Community Detection in Graphs and Networks]: https://www.analyticsvidhya.com/blog/2020/04/community-detection-graphs-networks/
+[[Vidhya Analytics - Prateek Joshi] Getting Started with Community Detection in Graphs and Networks](https://www.analyticsvidhya.com/blog/2020/04/community-detection-graphs-networks/)
+
+### Importance Node Ranking
+
+* [Unveiling important nodes in a network]: https://towardsdatascience.com/unveiling-important-nodes-in-a-network-4992a2ea1cca
+[[Kilver J. Campos] Unveiling important nodes in a network](https://towardsdatascience.com/unveiling-important-nodes-in-a-network-4992a2ea1cca)
 
 
 ## Diversity Measurement - Shannon Entropy
