@@ -35,14 +35,12 @@ In comparison, distributed tracing is the process of following a single transact
 
 * [Distributed Tracing in Microservices / Spring Boot]: https://medium.com/javarevisited/distributed-tracing-in-microservices-spring-boot-125272b58ad8
 [[Dineshchandgr] Distributed Tracing in Microservices / Spring Boot](https://medium.com/javarevisited/distributed-tracing-in-microservices-spring-boot-125272b58ad8)
-
-
 * [What is distributed tracing and why does it matter?]: https://www.dynatrace.com/news/blog/what-is-distributed-tracing/
 [[Dynatrace] What is distributed tracing and why does it matter?](https://www.dynatrace.com/news/blog/what-is-distributed-tracing/)
-
+* [Distributed Tracing in Microservices]: https://manoj-bhagwat60.medium.com/distributed-tracing-in-microservices-4c6fac8d941e
+[[Manoj Bhagwat] Distributed Tracing in Microservices](https://manoj-bhagwat60.medium.com/distributed-tracing-in-microservices-4c6fac8d941e)
 * [Introduction: What Is Distributed Tracing?]: https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html
 [[O'Reilly] Introduction: What Is Distributed Tracing?](https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html)
-
 * [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
 [[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
 
