@@ -3,7 +3,13 @@
 
 ## 1. Distributed Traces
 
-What is a distributed trace? The following definition is from O'reilly book [[O'Reilly]][Introduction: What Is Distributed Tracing?]:
+In a **microservices architecture**, a request can travel across **multiple microservices** to build the response and send it to the user [[Dineshchandgr]][Distributed Tracing in Microservices / Spring Boot], [[Manoj Bhagwat]][Distributed Tracing in Microservices], [[RisingStack][Engineering] Introducing Distributed Tracing for Microservices Monitoring]. Distributed Tracing is the process of tracing every single request from the point of origin up to all the services it touches by analyzing the data.
+
+![](images/trace_and_graph.png)
+
+Every request will have a Trace ID, timestamp, and other useful metadata. With this, we can see how long the request spans across a particular microservice, and also we can get the metrics to improve the latency.
+
+The following definition is from O'reilly book [[O'Reilly]][Introduction: What Is Distributed Tracing?]:
 
 Distributed tracing (also called distributed request tracing) is a type of correlated logging that helps you gain visibility into the operation of a **distributed software system** for use cases such as performance profiling, debugging in production, and **root cause analysis** of failures or other incidents. It gives you the ability to understand exactly what a particular individual service is doing as part of the whole, enabling you to ask and answer questions about the performance of your services and your distributed system as a whole.
 
@@ -15,9 +21,11 @@ The O'Reilly book also explains why distributed software is so popular?:
 
 * **Maintainability**: Distributed software is more easily maintainable for a couple of reasons. Dividing services from each other can increase how maintainable each component is by allowing it to focus on a smaller set of responsibilities. In addition, you’re freer to add features and capabilities without implementing (and maintaining) them yourself—for example, adding a speech-to-text function in an application by relying on some cloud provider’s speech-to-text service.
 
-In other words, in a **microservices architecture**, a request can travel across **multiple microservices** to build the response and send it to the user [[Dineshchandgr]][Distributed Tracing in Microservices / Spring Boot]. Distributed Tracing is the process of tracing every single request from the point of origin up to all the services it touches by analyzing the data. Every request will have a Trace ID, timestamp, and other useful metadata. With this, we can see how long the request spans across a particular microservice, and also we can get the metrics to improve the latency.
+### 1.1 Service Flow Map
 
-![](images/trace_and_graph.png)
+Trace automatically generates a dynamic service map based on how your services communicate with each other or with databases and external APIs. In this view, we provide feedback on infrastructure health as well; call per min, error per min in an application. The following map is from AppDynamics [AppDynamics, Flow Maps](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-applications/flow-maps):
+
+![](images/flow_map.png)
 
 
 ### 1.2 The difference between distributed tracing and logging
@@ -41,6 +49,8 @@ In comparison, distributed tracing is the process of following a single transact
 [[Manoj Bhagwat] Distributed Tracing in Microservices](https://manoj-bhagwat60.medium.com/distributed-tracing-in-microservices-4c6fac8d941e)
 * [Introduction: What Is Distributed Tracing?]: https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html
 [[O'Reilly] Introduction: What Is Distributed Tracing?](https://www.oreilly.com/library/view/distributed-tracing-in/9781492056621/preface01.html)
+* [Introducing Distributed Tracing for Microservices Monitoring]: https://blog.risingstack.com/distributed-transaction-tracing-microservices-monitoring/
+[[RisingStack Engineering] Introducing Distributed Tracing for Microservices Monitoring](https://blog.risingstack.com/distributed-transaction-tracing-microservices-monitoring/)
 * [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
 [[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
 
@@ -115,8 +125,6 @@ Exclude BTs that are not required- Agent snapshots collection depends on the num
 
 * [Business Transaction@AppDynamics]: https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions
 [[AppDynamics] Business Transaction@AppDynamics](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions)
-
-
 * [Microservices Observability with Distributed Tracing]: https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a
 [[Uzziah Eyee] Microservices Observability with Distributed Tracing](https://medium.com/swlh/microservices-observability-with-distributed-tracing-32ae467bb72a)
 
@@ -214,12 +222,8 @@ SVG('big_data.svg')
 
 * [Business Transaction@AppDynamics]: https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions
 [[AppDynamics] Business Transaction@AppDynamics](https://docs.appdynamics.com/appd/22.x/22.3/en/application-monitoring/business-transactions)
-
-
 * [What is distributed tracing and why does it matter?]: https://www.dynatrace.com/news/blog/what-is-distributed-tracing/
 [[Dynatrace] What is distributed tracing and why does it matter?](https://www.dynatrace.com/news/blog/what-is-distributed-tracing/)
-
-
 * [System Comprehension and Root Cause Analysis With Distributed Tracing]: https://www.shkuro.com/talks/2018-12-10-system-comprehension-and-root-cause-analysis-with-distributed-tracing/
 [[YURI SHKURO] System Comprehension and Root Cause Analysis With Distributed Tracing](https://www.shkuro.com/talks/2018-12-10-system-comprehension-and-root-cause-analysis-with-distributed-tracing/)
 
