@@ -104,6 +104,10 @@ $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 [[Vijini Mallawaarachchi] 10 Graph Algorithms Visually Explained](https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3)
 
 
+* [Path Finding Algorithms]: https://neo4j.com/developer/graph-data-science/path-finding-graph-algorithms/
+[[Neo4j] Path Finding Algorithms](https://neo4j.com/developer/graph-data-science/path-finding-graph-algorithms/)
+
+
 ### 2.1 Community Detections
 
 * [Getting Started with Community Detection in Graphs and Networks]: https://www.analyticsvidhya.com/blog/2020/04/community-detection-graphs-networks/
@@ -126,6 +130,7 @@ $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 
 * [Is there any algorithm which can find all critical paths in DAG?]: https://stackoverflow.com/questions/18450062/is-there-any-algorithm-which-can-find-all-critical-paths-in-dag
 [[Stackoverflow] Is there any algorithm which can find all critical paths in DAG?](https://stackoverflow.com/questions/18450062/is-there-any-algorithm-which-can-find-all-critical-paths-in-dag)
+
 
 
 ## 3. Others
