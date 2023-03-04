@@ -19,15 +19,16 @@ Networks (also known as Natural Graphs):
 * The degree of a vertex is the number of edges that are adjacent to it. The neighbors of a vertex $v$ in a graph $G$ is a subset of vertex Vi induced by all vertices adjacent to $v$.
 * The neighborhood graph (also known as an ego graph) of a vertex $v$ in a graph $G$ is a subgraph of $G$, composed of the vertices adjacent to $v$ and all edges connecting vertices adjacent to $v$.
 
+## 1. Basic Properties
 
-## Vertex Degree
+### 1.1 Vertex Degree
 
 * The Degree of a vertex is the number of its incident edges.
 * The degree of a graph is the maximum degree of its vertices.
 * The Indegree of a vertex is the number of edges ending at $v$. 
 * The Outdegree of a vertex is the number of edges leaving $v$.
 
-## Complement Graph
+### 1.2 Complement Graph
 
 The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two graphs have same set of vertices $V$ and:
 * Two vertices are connected in $\bar{G}$ if and only if they are NOT connected in $G$.
@@ -35,9 +36,9 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 
 ![](images/complement_graph.png)
 
-## Walk, Path, Cycle
+### 1.3 Walk, Path, Cycle
 
-### Definition 
+#### Definition 
 
 *  A walk in a graph is a sequence of edges, such that each edge starts in a vertex where the previous edge ended. Note that a walk contains the same edge several times
 * The length of a walk is a number of edges in it. 
@@ -46,7 +47,7 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 * A cycle in a graph is a path whose first and last vertices are the same. All edges in a cycle must also be distinct.
 * A simple cycle is a cycle where all vertices are distinct, except for the first one which must be the same as the last one. 
 
-### Example
+#### Example
 
 ![](images/walk_path.png)
 
@@ -56,7 +57,7 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 * Cycle: $(e_2, e_3, e_8, e_4, e_7, e_6)$.
 * Simple cycle: $(e_5, e_4, e_2, e_3)$.
 
-## Connectivity
+### 1.4 Connectivity
 
 * A graph is called Connected if there is a path between any two vertices.
 * A connected component of a graph is a maximal connected subgraph of it. 
@@ -68,20 +69,20 @@ The complement of a graph $G=(V, E)$ is a graph of $G=(V, \bar{E})$ where two gr
 * $(v_7, v_8)$ form the connected component. 
 * The vertex $v_0$ itself forms the third connected component.
 
-## Weight Graph
+### 1.5 Weight Graph
 
 * A graph can also be weighted. So weighted graph gives a weight to every edge.
 * The weight of your path then is just the sum of all edges on this path.
 * The shortest path between two vertices is just the path of the minimum weight. 
 * The distance between two vertices and the length of the shortest path between them.
 
-## Graph Type
+## 1.6 Graph Type
 
 * Path graph, cycle graph
 
 ![](images/graph_type.png)
 
-## Handshaking Lemma
+## 1.7 Handshaking Lemma
 
 * For any graph $G(V, E)$, the sum of degrees of all its nodes is twice the number of edges
 
@@ -90,7 +91,7 @@ $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 *  If a graph had an odd number of odd nodes, then the sum of degrees would be also odd.
 
 
-## Algorithmd in Graph
+## 2. Algorithmd in Graph
 
 
 * [19 Graph Algorithms You Can Use Right Now]: https://memgraph.com/blog/graph-algorithms-list
@@ -103,15 +104,26 @@ $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 [[Vijini Mallawaarachchi] 10 Graph Algorithms Visually Explained](https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3)
 
 
-### Community Detections
+### 2.1 Community Detections
 
 * [Getting Started with Community Detection in Graphs and Networks]: https://www.analyticsvidhya.com/blog/2020/04/community-detection-graphs-networks/
 [[Vidhya Analytics - Prateek Joshi] Getting Started with Community Detection in Graphs and Networks](https://www.analyticsvidhya.com/blog/2020/04/community-detection-graphs-networks/)
 
-### Importance Node Ranking
+### 2.2 Importance Node Ranking
 
 * [Unveiling important nodes in a network]: https://towardsdatascience.com/unveiling-important-nodes-in-a-network-4992a2ea1cca
 [[Kilver J. Campos] Unveiling important nodes in a network](https://towardsdatascience.com/unveiling-important-nodes-in-a-network-4992a2ea1cca)
+
+### 2.3 Critical Node
+
+* [Articulation Points (or Cut Vertices) in a Graph]: https://www.geeksforgeeks.org/articulation-points-or-cut-vertices-in-a-graph/
+[[GeeksForGeek] Articulation Points (or Cut Vertices) in a Graph](https://www.geeksforgeeks.org/articulation-points-or-cut-vertices-in-a-graph/)
+
+
+* [What is a fast algorithm for finding critical nodes?]: https://stackoverflow.com/questions/3678335/what-is-a-fast-algorithm-for-finding-critical-nodes
+[[Stackoverflow] What is a fast algorithm for finding critical nodes?](https://stackoverflow.com/questions/3678335/what-is-a-fast-algorithm-for-finding-critical-nodes)
+
+
 
 
 ## Diversity Measurement - Shannon Entropy
