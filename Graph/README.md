@@ -108,6 +108,11 @@ $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 [[Neo4j] Path Finding Algorithms](https://neo4j.com/developer/graph-data-science/path-finding-graph-algorithms/)
 
 
+* [Chapter 4. Pathfinding and Graph Search Algorithms]: https://neo4j.com/developer/graph-data-science/path-finding-graph-algorithms/
+[[O'Reilly] Chapter 4. Pathfinding and Graph Search Algorithms](https://neo4j.com/developer/graph-data-science/path-finding-graph-algorithms/)
+
+
+
 ### 2.1 Community Detections
 
 * [Getting Started with Community Detection in Graphs and Networks]: https://www.analyticsvidhya.com/blog/2020/04/community-detection-graphs-networks/

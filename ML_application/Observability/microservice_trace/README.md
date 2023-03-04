@@ -21,6 +21,7 @@ The O'Reilly book also explains why distributed software is so popular?:
 
 * **Maintainability**: Distributed software is more easily maintainable for a couple of reasons. Dividing services from each other can increase how maintainable each component is by allowing it to focus on a smaller set of responsibilities. In addition, you’re freer to add features and capabilities without implementing (and maintaining) them yourself—for example, adding a speech-to-text function in an application by relying on some cloud provider’s speech-to-text service.
 
+
 ### 1.1 Service Flow Map
 
 Trace automatically generates a dynamic service map based on how your services communicate with each other or with databases and external APIs. In this view, we provide feedback on infrastructure health as well; call per min, error per min in an application [[RisingStack Engineering]][Introducing Distributed Tracing for Microservices Monitoring]. 
@@ -39,6 +40,7 @@ Log aggregation may give a snapshot of the activity within a collection of indiv
 In comparison, distributed tracing is the process of following a single transaction from endpoint to endpoint in context. 
 
 
+[Conquering Microservices Complexity @Uber with Distributed Tracing](https://www.infoq.com/presentations/uber-microservices-distributed-tracing/)
 
 ### Reference
 
