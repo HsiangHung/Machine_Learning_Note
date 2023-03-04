@@ -118,15 +118,19 @@ $$ \sum_{v \in G} \textrm{degree}(v) = 2|E|$$
 
 * [Articulation Points (or Cut Vertices) in a Graph]: https://www.geeksforgeeks.org/articulation-points-or-cut-vertices-in-a-graph/
 [[GeeksForGeek] Articulation Points (or Cut Vertices) in a Graph](https://www.geeksforgeeks.org/articulation-points-or-cut-vertices-in-a-graph/)
-
-
 * [What is a fast algorithm for finding critical nodes?]: https://stackoverflow.com/questions/3678335/what-is-a-fast-algorithm-for-finding-critical-nodes
 [[Stackoverflow] What is a fast algorithm for finding critical nodes?](https://stackoverflow.com/questions/3678335/what-is-a-fast-algorithm-for-finding-critical-nodes)
 
 
+### 2.4 Critical Paths
+
+* [Is there any algorithm which can find all critical paths in DAG?]: https://stackoverflow.com/questions/18450062/is-there-any-algorithm-which-can-find-all-critical-paths-in-dag
+[[Stackoverflow] Is there any algorithm which can find all critical paths in DAG?](https://stackoverflow.com/questions/18450062/is-there-any-algorithm-which-can-find-all-critical-paths-in-dag)
 
 
-## Diversity Measurement - Shannon Entropy
+## 3. Others
+
+### 3.1 Diversity Measurement - Shannon Entropy
 
 Shannon defined the entropy of a probability distribution as the expected value of the information content of a value drawn from that distribution.
 
