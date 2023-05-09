@@ -20,3 +20,5 @@ energy data: [[Archit Yadav]][Modeling and Generating Time-Series Data using Tim
 [[Archit Yadav] Modeling and Generating Time-Series Data using TimeGAN](https://towardsdatascience.com/modeling-and-generating-time-series-data-using-timegan-29c00804f54d)
 
 
+* [时间序列丨基于 TimeGAN 模型生成时间序列数据及其 Python 实践]: https://zhuanlan.zhihu.com/p/410176524
+[[Zhifu, dreamhomes] 时间序列丨基于 TimeGAN 模型生成时间序列数据及其 Python 实践](https://zhuanlan.zhihu.com/p/410176524)
