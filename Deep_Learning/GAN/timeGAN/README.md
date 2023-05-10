@@ -7,7 +7,7 @@ There are some articles describing training timeGAN models on different data:
 * Energy data: [[Archit Yadav]][Medium, Modeling and Generating Time-Series Data using TimeGAN]
 * Financial data: [[Sulabh Soral]][Deloitte, Timeseries Generative Adversarial Networks: Current Account Transactions]
 
-
+The first two references are relevant to the GAN repo, with hyperparameter explanations and used the same experiment data source as the paper [[Jinsung Yoon et al.] Time-series Generative Adversarial Networks]. The third one is an experiment of Deloitte's work.
 
 
 ## Reference
