@@ -141,6 +141,8 @@ In DL, we can do the similar normalization processes, not only data in input lay
 
 Given an intermediate hidden layer, we first normalize as 
 
+$$\mu = \frac{1}{n}\sum^{n}_{i=1} z_i, \ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;=&space;\frac{1}{n}\sum^{n}_{i=1}&space;z_i,&space;\&space;\sigma&space;=&space;\frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;=&space;\frac{1}{n}\sum^{n}_{i=1}&space;z_i,&space;\&space;\sigma&space;=&space;\frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" title="\mu = \frac{1}{n}\sum^{n}_{i=1} z_i, \ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" /></a>
 
 where <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;\equiv&space;n^{n[l]},&space;z_i&space;\equiv&space;z^{n[l]}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;\equiv&space;n^{n[l]},&space;z_i&space;\equiv&space;z^{n[l]}_i" title="n \equiv n^{n[l]}, z_i \equiv z^{n[l]}_i" /></a> denote the number of units in the hidden layer `l` and the value on the i-th unit in the hidden layer `l`. For notation simplicity, we drop the layer label `l`, but `n`, `zi`, `μ` and `σ` are layer dependent.
