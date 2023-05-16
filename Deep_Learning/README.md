@@ -139,7 +139,7 @@ to explain gradient descent with data normalization benefiting faster converge.
 
 In DL, we can do the similar normalization processes, not only data in input layer, but also in **hidden layers**. This is called **batch normalization** (BN) [[Manish Chablani]][Batch Normalization]. BN can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
 
-Given an intermediate hidden layer, we first normalize as 
+Given an intermediate hidden layer, we first normalize as $\alpha$
 
 $$\mu = \frac{1}{n}\sum^{n}_{i=1} z_i, \ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2$$
 
