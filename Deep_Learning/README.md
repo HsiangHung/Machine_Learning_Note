@@ -141,7 +141,7 @@ In DL, we can do the similar normalization processes, not only data in input lay
 
 Given an intermediate hidden layer, we first normalize as $\alpha$
 
-$$\mu = \frac{1}{n}\sum^{n}_{i=1} z_i, \ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2$$
+$$ \mu = \frac{1}{n}\sum^{n}_{i=1} z_i, \ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2 $$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;=&space;\frac{1}{n}\sum^{n}_{i=1}&space;z_i,&space;\&space;\sigma&space;=&space;\frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;=&space;\frac{1}{n}\sum^{n}_{i=1}&space;z_i,&space;\&space;\sigma&space;=&space;\frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" title="\mu = \frac{1}{n}\sum^{n}_{i=1} z_i, \ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2" /></a>
 
