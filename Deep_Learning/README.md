@@ -149,7 +149,7 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;\equiv&space;n
 
 Then we can rescale the values in hiddent units with a shift as
 
-$$ {z}_i = \gamma z_{i, \textrm{norm}} + \beta$$
+$$ \tilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tilde{z}_i&space;=&space;\gamma&space;z_{i,&space;\textrm{norm}}&space;&plus;&space;\beta" title="\tilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta" /></a>  
 
