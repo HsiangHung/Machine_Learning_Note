@@ -92,7 +92,7 @@ From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning], there are 
 
 1. Dropout forces a neural network to learn more robust features that are useful in conjunction with many different random subsets of the other neurons.
 2. Dropout roughly doubles the number of iterations required to converge. However, training time for each epoch is less.
-3. With $H$ hidden units, each of which can be dropped, we have $2^H$ possible models. In testing phase, the entire network is considered and each activation is reduced by a factor p.
+3. With $H$ hidden units, each of which can be dropped, we have $2^H$ possible models. In testing phase, the entire network is considered and each activation is reduced by a factor $p$.
 
 ### B. Note from Andrew Ng's class
 
@@ -100,7 +100,7 @@ Dropout is used in computer vision field to prevent overfitting if there is no e
 
 Meanwhile, the hyperparameter, the probability threshold to keep neurons trigger, **keep_prob**, could be layer-dependent. 
 
-As a concrete example, suppose we have a neural netwrok below. There are 7 x 7 + 7 parameters between the first hidden layer to the second hidden layer, which are more than others. Thus we can assign smaller **keep_prob** to the second hidden later, and larger **keep_prob** in other layers. 
+As a concrete example, suppose we have a neural netwrok below. There are $7 x 7 + 7$ parameters between the first hidden layer to the second hidden layer, which are more than others. Thus we can assign smaller **keep_prob** to the second hidden later, and larger **keep_prob** in other layers. 
 
 ![dropout_2](images/dropout_2.png)
 
