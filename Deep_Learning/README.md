@@ -151,7 +151,7 @@ where $n \equiv n^{n[l]}, z_i \equiv z^{n[l]}_i$ denote the number of units in t
 Then we can rescale the values in hiddent units with a shift as
 
 
-$$ \widetilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta$$
+$$ \widetilde{z} = \gamma z_{i, \textrm{norm}} + \beta$$
 
 
 where
