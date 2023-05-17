@@ -157,9 +157,11 @@ $$ \tilde{z}_i = \gamma z_{i, \textrm{norm}} + \beta$$
 
 where
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" title="z_{i,\textrm{norm}} = \frac{z_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}" /></a>
+$$z_{i,\textrm{norm}} = \frac{ z_i - \mu }{ \sqrt{\sigma^2 + \varepsilon} }$$
 
-`β` and `γ` are now parameters and can be determined by gradient descent. The overall processes are as follows (credit from Andrew Ng's courser class)
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_{i,\textrm{norm}}&space;=&space;\frac{z_i&space;-&space;\mu}{\sqrt{\sigma^2&space;&plus;&space;\varepsilon}}" title="z_{i,\textrm{norm}} = \frac{z_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}" /></a> -->
+
+$\beta$ `β` and $\gamma$ `γ` are now parameters and can be determined by gradient descent. The overall processes are as follows (credit from Andrew Ng's courser class)
 
 ![batch_normalization](images/batch_norm.png)
 
