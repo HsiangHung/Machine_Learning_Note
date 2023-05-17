@@ -31,16 +31,10 @@ Check training/dev error and compare to **optimal Bayes error**: the lowest poss
 
 The expected value of errors is ([Wiki: Bias–variance tradeoff](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff))
 
-<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)&space;=&space;(\textrm{Bias}[\hat{f}])^2&space;&plus;&space;\textrm{Var}(\hat{f})&space;&plus;&space;\epsilon^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\textrm{Var}(\epsilon)&space;=&space;(\textrm{Bias}[\hat{f}])^2&space;&plus;&space;\textrm{Var}(\hat{f})&space;&plus;&space;\epsilon^2" title="E[(y-\hat{y})^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \textrm{Var}(\epsilon) = (\textrm{Bias}[\hat{f}])^2 + \textrm{Var}(\hat{f}) + \epsilon^2" /></a> -->
 
 $$E[(y-\hat{y})^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \textrm{Var}(\epsilon) = (\textrm{Bias}[\hat{f}])^2 + \textrm{Var}(\hat{f}) + \epsilon^2$$
 
-where 
-
-<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=\epsilon^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\epsilon^2" title="\epsilon^2" /></a>  -->
-
-$\epsilon^2$
-is the Bayes error [[Cross Validated: What is Bayes Error in machine learning?]][What is Bayes Error in machine learning?].
+where $\epsilon^2$ is the Bayes error [[Cross Validated: What is Bayes Error in machine learning?]][What is Bayes Error in machine learning?].
 
 
 ## Activation Function
@@ -121,7 +115,7 @@ In very deep neural networks, we may meet vanishing and exploding gradient issue
 
 ![vanishing_gradients](images/vanishing_gradient.png)
 
-We can see if the parameter `w > 1` in very deep network, the multiplication of parameters grow exponentially and the value of `y` will explode. On the other hand, multiplication of parameter `w < 1` may lead to vanishing `y`. 
+We can see if the parameter $w > 1$ in very deep network, the multiplication of parameters grow exponentially and the value of $y$ will explode. On the other hand, multiplication of parameter $w < 1$ may lead to vanishing $y$. 
 
 ### Solution to vanishing gradients
  
@@ -146,9 +140,11 @@ to explain gradient descent with data normalization benefiting faster converge.
 
 In DL, we can do the similar normalization processes, not only data in input layer, but also in **hidden layers**. This is called **batch normalization** (BN) [[Manish Chablani]][Batch Normalization]. BN can be implemented before and after activation. In the coursera DL class, Andrew suggested batch norm before applying to activation function.
 
-Given an intermediate hidden layer, we first normalize as $\alpha$
+Given an intermediate hidden layer, we first normalize as
 
-$$ \mu = \frac{1}{n}\sum^{n}_{i=1} z_i, \ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2 $$
+$$ \mu = \frac{1}{n} \sum^{n}_{i=1} z_i, $$
+
+$$ \sigma = \frac{1}{n}\sum^{n}_{i=1}(\mu-z_i)^2 $$
 
 where $n \equiv n^{n[l]}, z_i \equiv z^{n[l]}_i$ denote the number of units in the hidden layer $l$ and the value on the i-th unit in the hidden layer $l$. For notation simplicity, we drop the layer label $l$, but $n$, $z_i$, $\mu$ and $\sigma$ are layer dependent.
 
