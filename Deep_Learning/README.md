@@ -92,7 +92,7 @@ From the post [[Amar Budhiraja]][Dropout in (Deep) Machine learning], there are 
 
 1. Dropout forces a neural network to learn more robust features that are useful in conjunction with many different random subsets of the other neurons.
 2. Dropout roughly doubles the number of iterations required to converge. However, training time for each epoch is less.
-3. With `H` hidden units, each of which can be dropped, we have `2^H` possible models. In testing phase, the entire network is considered and each activation is reduced by a factor p.
+3. With $H$ hidden units, each of which can be dropped, we have $2^H$ possible models. In testing phase, the entire network is considered and each activation is reduced by a factor p.
 
 ### B. Note from Andrew Ng's class
 
