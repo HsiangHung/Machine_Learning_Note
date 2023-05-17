@@ -165,7 +165,7 @@ $\beta$  and $\gamma$ are now parameters and can be determined by gradient desce
 
 BN also has other advantages like: enabling the utilization of larger learning rates and reducing the common problem of vanishing gradients. BN also has a slight regularization effect. [[Manish Chablani]][Batch Normalization], [[Richmond Alake]][Batch Normalization In Neural Networks Explained (Algorithm Breakdown)].
 
-The mini-batch gradient descent can also implement BN. However, if the neural networks are trained by mini-batch and we perform prediction on test dataset, we need to determine `μ` and `σ` from training data, and then rescale the test data. We can simply compute the average `μ` from all mini-batch, or using exponentially weight average (mentioned in Andre Ng's class).
+The mini-batch gradient descent can also implement BN. However, if the neural networks are trained by mini-batch and we perform prediction on test dataset, we need to determine $\mu$ and $\sigma$ from training data, and then rescale the test data. We can simply compute the average $\mu$ from all mini-batch, or using exponentially weight average (mentioned in Andre Ng's class).
 
 
 ## Data Augmentation
@@ -184,39 +184,21 @@ Early is used when the validation error saturates. Since your validation set muc
 
 ## Reference
 
-[Dropout in (Deep) Machine learning]: https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5
+* [Dropout in (Deep) Machine learning]: https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5
 [[Amar Budhiraja] Dropout in (Deep) Machine learning](https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5)
-
-
-[Data Augmentation | How to use Deep Learning when you have Limited Data — Part 2]: https://nanonets.com/blog/data-augmentation-how-to-use-deep-learning-when-you-have-limited-data-part-2/
+* [Data Augmentation | How to use Deep Learning when you have Limited Data — Part 2]: https://nanonets.com/blog/data-augmentation-how-to-use-deep-learning-when-you-have-limited-data-part-2/
 [[Arun Gandhi] Data Augmentation | How to use Deep Learning when you have Limited Data — Part 2](https://nanonets.com/blog/data-augmentation-how-to-use-deep-learning-when-you-have-limited-data-part-2/)
-
-
-
-[The Vanishing Gradient Problem]: https://towardsdatascience.com/optimizers-be-deeps-appetizers-511f3706aa67
+* [The Vanishing Gradient Problem]: https://towardsdatascience.com/optimizers-be-deeps-appetizers-511f3706aa67
 [[Chi-Feng Wang] The Vanishing Gradient Problem](https://towardsdatascience.com/optimizers-be-deeps-appetizers-511f3706aa67)
-
-
-[What is Bayes Error in machine learning?]: https://stats.stackexchange.com/questions/302900/what-is-bayes-error-in-machine-learning
+* [What is Bayes Error in machine learning?]: https://stats.stackexchange.com/questions/302900/what-is-bayes-error-in-machine-learning
 [[Cross Validated: What is Bayes Error in machine learning?] What is Bayes Error in machine learning?](https://stats.stackexchange.com/questions/302900/what-is-bayes-error-in-machine-learning)
-
-
-[A Quick Guide on Basic Regularization Methods for Neural Networks]: https://medium.com/yottabytes/a-quick-guide-on-basic-regularization-methods-for-neural-networks-e10feb101328
+* [A Quick Guide on Basic Regularization Methods for Neural Networks]: https://medium.com/yottabytes/a-quick-guide-on-basic-regularization-methods-for-neural-networks-e10feb101328
 [[Jaime Durán] A Quick Guide on Basic Regularization Methods for Neural Networks](https://medium.com/yottabytes/a-quick-guide-on-basic-regularization-methods-for-neural-networks-e10feb101328)
-
-
-
-[How to Improve a Neural Network With Regularization]: https://towardsdatascience.com/how-to-improve-a-neural-network-with-regularization-8a18ecda9fe3
+* [How to Improve a Neural Network With Regularization]: https://towardsdatascience.com/how-to-improve-a-neural-network-with-regularization-8a18ecda9fe3
 [[Marco Peixeiro] How to Improve a Neural Network With Regularization](https://towardsdatascience.com/how-to-improve-a-neural-network-with-regularization-8a18ecda9fe3)
-
-
-[Batch Normalization]: https://towardsdatascience.com/batch-normalization-8a2e585775c9
+* [Batch Normalization]: https://towardsdatascience.com/batch-normalization-8a2e585775c9
 [[Manish Chablani] Batch Normalization](https://towardsdatascience.com/batch-normalization-8a2e585775c9)
-
-
-[Batch Normalization In Neural Networks Explained (Algorithm Breakdown)]: https://towardsdatascience.com/batch-normalization-explained-algorithm-breakdown-23d2794511c
+* [Batch Normalization In Neural Networks Explained (Algorithm Breakdown)]: https://towardsdatascience.com/batch-normalization-explained-algorithm-breakdown-23d2794511c
 [[Richmond Alake] Batch Normalization In Neural Networks Explained (Algorithm Breakdown)](https://towardsdatascience.com/batch-normalization-explained-algorithm-breakdown-23d2794511c)
-
-
-[Multi-Layer Neural Network]: http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/
+* [Multi-Layer Neural Network]: http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/
 [[UFLDL Tutorial] Multi-Layer Neural Network](http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/)
