@@ -2,7 +2,7 @@
 
 ## MinMax Game
 
-$$\mathbb{E}[\log{\big( D(x) \big)}] + \mathbb{E}[\log{\big( 1-D(G(x)) \big)}]$$
+$$\mathbb{E}\Big[ \log{\big( D(x) \big)} \Big] + \mathbb{E}\Big[ \log{\big( 1-D(G(x)) \big)} \Big]$$
 
 ## Tabluar data GAN
 
