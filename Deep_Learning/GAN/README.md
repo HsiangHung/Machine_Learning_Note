@@ -2,7 +2,11 @@
 
 ## MinMax Game
 
-$$\mathbb{E}\Big[ \log{\big( D(x) \big)} \Big] + \mathbb{E}\Big[ \log{\big( 1-D(G(x)) \big)} \Big]$$
+$$\min_{G} \max_{D} V(G, D) = \mathbb{E}\Big[ \log{\big( D(x) \big)} \Big] + \mathbb{E}\Big[ \log{\big( 1-D(G(x)) \big)} \Big]$$
+
+The generator tries to minimize this function while the discriminator tries to maximize it. Looking at it as a min-max game, this formulation of the loss seemed effective. 
+
+In practice, it saturates for the generator, meaning that the generator quite frequently stops training if it doesn’t catch up with the discriminator.
 
 ## Tabluar data GAN
 
