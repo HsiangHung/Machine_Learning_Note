@@ -4,7 +4,7 @@
 
 The value function for GAN is
 
-$$\min_{G} \max_{D} V(G, D) = \mathbb{E}_{x \sim p(x)} [ \log{\big( D(x) \big)} ] + \mathbb{E}[ \log{\big( 1-D(G(x)) \big)} ]$$
+$$\min_{G} \max_{D} V(G, D) = \mathbb{E}_{x \sim p(x)} [ \log{\big( D(x) \big)} ] + \mathbb{E}_{z \sim p(z)}[ \log{\big( 1-D(G(z)) \big)} ]$$
 
 The generator tries to minimize this function while the discriminator tries to maximize it. Looking at it as a min-max game, this formulation of the loss seemed effective. 
 
