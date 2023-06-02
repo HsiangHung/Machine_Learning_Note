@@ -1,5 +1,9 @@
 # GAN
 
+## MinMax Game
+
+$$\mathbf{E}[\log{D(x)}]$$
+
 ## Tabluar data GAN
 
 
