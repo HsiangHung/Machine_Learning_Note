@@ -4,7 +4,7 @@
 
 The value function for GAN is
 
-$$\min_{G} \max_{D} V(G, D) = \mathbb{E}_{x} [ \log{\big( D(x) \big)} ] + \mathbb{E}_{z}[ \log{\big( 1-D(G(z)) \big)} ],$$
+$$\min_{G} \max_{D} V(G, D) = \mathbb{E}_x [ \log{\big( D(x) \big)} ] + \mathbb{E}_z[ \log{\big( 1-D(G(z)) \big)} ],$$
 
 where $D(x)$ is the discriminator's estimate of the probability that real data instance $x$ is real, $G(z)$ is the generator's output when given noise $z$, so $D(G(z))$ is the discriminator's estimate of the probability that a fake instance is real. 
 
