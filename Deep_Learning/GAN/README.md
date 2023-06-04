@@ -4,7 +4,11 @@
 
 The value function for GAN is
 
-$$\min_{G} \max_{D} V(G, D) = \mathbb{E}_{x \sim p(x)} [ \log{\big( D(x) \big)} ] + \mathbb{E}_{z \sim p(z)}[ \log{\big( 1-D(G(z)) \big)} ]$$
+$$\min_{G} \max_{D} V(G, D) = \mathbb{E}_{x} [ \log{\big( D(x) \big)} ] + \mathbb{E}_{z}[ \log{\big( 1-D(G(z)) \big)} ],$$
+
+where $D(x)$ is the discriminator's estimate of the probability that real data instance $x$ is real, $G(z)$ is the generator's output when given noise $z$, so $D(G(z))$ is the discriminator's estimate of the probability that a fake instance is real. 
+
+$\mathbb{E}_x$ is the expected value over all real data instances, whereas $\mathbb{E}_z$ is the expected value over all random inputs to the generator (the expected value over all generated fake instances $G(z)$)
 
 The generator tries to minimize this function while the discriminator tries to maximize it. Looking at it as a min-max game, this formulation of the loss seemed effective. 
 
