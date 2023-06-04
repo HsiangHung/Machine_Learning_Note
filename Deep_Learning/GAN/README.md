@@ -8,7 +8,7 @@ $$\min_{G} \max_{D} V(G, D) = \mathbb{E}_x [ \log{\big( D(x) \big)} ] + \mathbb{
 
 where $D(x)$ is the discriminator's estimate of the probability that real data instance $x$ is real, whereas $G(z)$ is the generator's output when given noise $z$, so $D(G(z))$ is the discriminator's estimate of the probability that a fake instance is real. 
 
-$\mathbb{E}_x$ is the expected value over all real data instances, whereas $\mathbb{E}_z$ is the expected value over all random inputs to the generator (the expected value over all generated fake instances $G(z)$)
+$\mathbb{E}_x$ is the expected value over all real data instances, whereas $\mathbb{E}_z$ is the expected value over all random inputs to the generator, i.e. the expected value over all generated fake instances $G(z)$.
 
 The generator tries to minimize this function while the discriminator tries to maximize it. Looking at it as a min-max game, this formulation of the loss seemed effective. 
 
