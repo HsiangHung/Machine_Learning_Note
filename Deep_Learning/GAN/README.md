@@ -24,6 +24,17 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 [[neptune.ai] Understanding GAN Loss Functions](https://neptune.ai/blog/gan-loss-functions)
 
 
+## Convergence and Evaluate GAN
+
+
+
+* [How good is my GAN?]: https://inria.hal.science/hal-01850447/document
+[[Konstantin Shmelkov et al.] How good is my GAN?](https://inria.hal.science/hal-01850447/document)
+
+* [GAN — Why it is so hard to train Generative Adversarial Networks!]: https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b
+[[Jonathan Hui] GAN — Why it is so hard to train Generative Adversarial Networks!](https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b)
+
+
 
 
 
@@ -48,11 +59,6 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 
 
 
-
-## Evaluate GAN
-
-* [How good is my GAN?]: https://inria.hal.science/hal-01850447/document
-[[Konstantin Shmelkov et al.] How good is my GAN?](https://inria.hal.science/hal-01850447/document)
 
 
 
