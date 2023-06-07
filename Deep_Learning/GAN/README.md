@@ -15,7 +15,7 @@ The generator tries to minimize this function while the discriminator tries to m
 In practice, it saturates for the generator, meaning that the generator quite frequently stops training if it doesn’t catch up with the discriminator.
 
 
-## Reference
+### Reference
 
 * [Google ML Developer - Loss Functions]: https://developers.google.com/machine-learning/gan/loss
 [[Google] Google ML Developer - Loss Functions](https://developers.google.com/machine-learning/gan/loss)
@@ -38,12 +38,21 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 
 
 
-## Reference
+### Reference
 
 * [Time-series Generative Adversarial Networks]: https://papers.nips.cc/paper_files/paper/2019/hash/c9efe5f26cd17ba6216bbe2a7d26d490-Abstract.html
 [[Jinsung Yoon et al.] Time-series Generative Adversarial Networks](https://papers.nips.cc/paper_files/paper/2019/hash/c9efe5f26cd17ba6216bbe2a7d26d490-Abstract.html)
 
 * [PAR Model]: https://sdv.dev/SDV/user_guides/timeseries/par.html
 [[Open source - SDV] PAR Model](https://sdv.dev/SDV/user_guides/timeseries/par.html)
+
+
+
+
+## Evaluate GAN
+
+* [How good is my GAN?]: https://inria.hal.science/hal-01850447/document
+[[Konstantin Shmelkov et al.] How good is my GAN?](https://inria.hal.science/hal-01850447/document)
+
 
 
