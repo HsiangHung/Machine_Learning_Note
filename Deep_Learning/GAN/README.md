@@ -34,7 +34,7 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 
 * TimeGAN: [[Jinsung Yoon et al.]][Time-series Generative Adversarial Networks]
 
-* Probabilistic autoregressive model (PAR): [[SDV]][PAR Model]
+* Probabilistic autoregressive model (PAR): [[Open source - SDV]][PAR Model]
 
 
 
@@ -44,6 +44,6 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 [[Jinsung Yoon et al.] Time-series Generative Adversarial Networks](https://papers.nips.cc/paper_files/paper/2019/hash/c9efe5f26cd17ba6216bbe2a7d26d490-Abstract.html)
 
 * [PAR Model]: https://sdv.dev/SDV/user_guides/timeseries/par.html
-[[SDV] PAR Model](https://sdv.dev/SDV/user_guides/timeseries/par.html)
+[[Open source - SDV] PAR Model](https://sdv.dev/SDV/user_guides/timeseries/par.html)
 
 
