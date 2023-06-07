@@ -38,7 +38,7 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 
 
 
-## Tabluar data GAN
+
 
 
 ## Time-Series GAN
@@ -54,10 +54,19 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 * [Time-series Generative Adversarial Networks]: https://papers.nips.cc/paper_files/paper/2019/hash/c9efe5f26cd17ba6216bbe2a7d26d490-Abstract.html
 [[Jinsung Yoon et al.] Time-series Generative Adversarial Networks](https://papers.nips.cc/paper_files/paper/2019/hash/c9efe5f26cd17ba6216bbe2a7d26d490-Abstract.html)
 
+
+* [Qualitative and Quantitative Evaluation of Multivariate Time-Series Synthetic Data Generated Using MTS-TGAN: A Novel Approach]: https://www.mdpi.com/2076-3417/13/7/4136
+[[Parul Yadav et al.] Qualitative and Quantitative Evaluation of Multivariate Time-Series Synthetic Data Generated Using MTS-TGAN: A Novel Approach](https://www.mdpi.com/2076-3417/13/7/4136)
+
+
 * [PAR Model]: https://sdv.dev/SDV/user_guides/timeseries/par.html
 [[Open source - SDV] PAR Model](https://sdv.dev/SDV/user_guides/timeseries/par.html)
 
 
+
+
+
+## Tabluar data GAN
 
 
 
