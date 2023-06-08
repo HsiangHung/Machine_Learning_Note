@@ -63,6 +63,10 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 [[Open source - SDV] PAR Model](https://sdv.dev/SDV/user_guides/timeseries/par.html)
 
 
+* [Modeling financial time-series with generative adversarial networks]: https://www.sciencedirect.com/science/article/abs/pii/S0378437119307277?fr=RR-2&ref=pdf_download&rr=7c99aab42cfe9444
+[[Shuntaro Takahashi et al.] Modeling financial time-series with generative adversarial networks](https://www.sciencedirect.com/science/article/abs/pii/S0378437119307277?fr=RR-2&ref=pdf_download&rr=7c99aab42cfe9444)
+
+
 
 
 
