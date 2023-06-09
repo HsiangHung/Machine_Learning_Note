@@ -67,6 +67,15 @@ Sometimes K-means is used to helpful to give business purpose, e.g. if we decide
 
 ![business_purpose](images/kmeans_purpose.png)
 
+NOTE, recently, the study [[Samuele Mazzanti]][Are You Still Using the Elbow Method?] shows elbow method using inertia, which is a score of the goodness of fit of clusters, is not reliable. There are other metrics:
+
+* Calinski-Harabasz
+* Davies-Bouldin
+* Silhouette
+* BIC
+
+
+
 ### Evaluating the cluster quality 
 
 see [[Azika Amelia]][K-Means Clustering: From A to Z] and [[Pulkit Sharma]][The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need]
@@ -113,18 +122,14 @@ KMeans(n_clusters=3, init='k-means++')
 ## Reference
 
 
-[K-Means Clustering: From A to Z]: https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a
+* [K-Means Clustering: From A to Z]: https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a
 [[Azika Amelia] K-Means Clustering: From A to Z](https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a)
-
-
-
-[K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks]: https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a#:~:text=Since%20clustering%20algorithms%20including%20kmeans,units%20of%20measurements%20such%20as
+* [K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks]: https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a#:~:text=Since%20clustering%20algorithms%20including%20kmeans,units%20of%20measurements%20such%20as
 [[Imad Dabbura] K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a#:~:text=Since%20clustering%20algorithms%20including%20kmeans,units%20of%20measurements%20such%20as)
-
-
-[The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need]: https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
+* [The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need]: https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
 [[Pulkit Sharma] The Most Comprehensive Guide to K-Means Clustering You’ll Ever Need](https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/)
-
-
-[Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]: https://towardsdatascience.com/understanding-k-means-k-means-and-k-medoids-clustering-algorithms-ad9c9fbf47ca
+* [Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms]: https://towardsdatascience.com/understanding-k-means-k-means-and-k-medoids-clustering-algorithms-ad9c9fbf47ca
 [[Satyam Kumar] Understanding K-Means, K-Means++ and, K-Medoids Clustering Algorithms](https://towardsdatascience.com/understanding-k-means-k-means-and-k-medoids-clustering-algorithms-ad9c9fbf47ca)
+
+* [Are You Still Using the Elbow Method?]: https://towardsdatascience.com/are-you-still-using-the-elbow-method-5d271b3063bd
+[[Samuele Mazzanti] Are You Still Using the Elbow Method?](https://towardsdatascience.com/are-you-still-using-the-elbow-method-5d271b3063bd)
