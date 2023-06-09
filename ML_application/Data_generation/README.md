@@ -1,23 +1,23 @@
 
 # Data Generation 
 
+From the blog: synthetic data generation is a must-have skill for data scientists [[Tirthajyoti Sarkar]][Synthetic data generation — a must-have skill for new data scientists].
+
+I totally agree it.
+
+In many cases, when customers begin on board ML products, they don't have enough data, or even don't have any data. To start with using ML services, we should provide synthetic data for training models.
+
+
 
 | tool | Description |
 | --- | --- | 
 | [tsBNgen](https://github.com/manitadayon/tsBNgen/tree/master) | [A Python Library to Generate a Synthetic Time Series Data](https://towardsdatascience.com/tsbngen-a-python-library-to-generate-time-series-data-from-an-arbitrary-dynamic-bayesian-network-4b46e178cd9f) |
-| [TSAGen](https://github.com/AprilCal/TSAGen) | |
+| [TSAGen](https://github.com/AprilCal/TSAGen) | paper: TSAGen - Synthetic Time Series Generation for KPI Anomaly Detection|
 
 
-## TSAGen
+### Reference
 
-* [TSAGen]: https://github.com/AprilCal/TSAGen
-[[Github] TSAGen](https://github.com/AprilCal/TSAGen)
+* [Synthetic data generation — a must-have skill for new data scientists]: https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae
+[[Tirthajyoti Sarkar] Synthetic data generation — a must-have skill for new data scientists](https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae)
 
 
-## tsBNgen
-
-* [A Python Library to Generate a Synthetic Time Series Data]: https://towardsdatascience.com/tsbngen-a-python-library-to-generate-time-series-data-from-an-arbitrary-dynamic-bayesian-network-4b46e178cd9f
-[[MANIE TADAYON] A Python Library to Generate a Synthetic Time Series Data](https://towardsdatascience.com/tsbngen-a-python-library-to-generate-time-series-data-from-an-arbitrary-dynamic-bayesian-network-4b46e178cd9f)
-
-* [tsBNgen]: https://github.com/manitadayon/tsBNgen/tree/master
-[[Github] tsBNgen](https://github.com/manitadayon/tsBNgen/tree/master)
