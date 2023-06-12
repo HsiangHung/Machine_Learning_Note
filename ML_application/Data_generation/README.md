@@ -15,7 +15,6 @@ In many cases, when customers begin on board ML products, they don't have enough
 | [TSAGen](https://github.com/AprilCal/TSAGen) | paper: TSAGen - Synthetic Time Series Generation for KPI Anomaly Detection |
 | [DoppelGANger](https://github.com/fjxmlzn/DoppelGANger/tree/master) | paper: Using GANs for Sharing Networked Time Series Data: Challenges, Initial Promise, and Open Questions<br>
 [[Armando Vieira]][Generating Synthetic Sequential Data using GANs] |
-
 | [Gretel](https://github.com/fjxmlzn/DoppelGANger/tree/master) | paper: Using GANs for Sharing Networked Time Series Data: Challenges, Initial Promise, and Open Questions |
 
 
