@@ -18,6 +18,7 @@ In many cases, when customers begin on board ML products, they don't have enough
 | [DeepEcho]() | [Using the DeepEcho Timeseries Package for Synthetic Data Generation](https://medium.com/@mike.roweprediger/using-the-deepecho-timeseries-package-for-synthetic-data-generation-e8086e7dda3d) |
 | [TSAGen](https://github.com/AprilCal/TSAGen) | paper: TSAGen - Synthetic Time Series Generation for KPI Anomaly Detection |
 | [AnoGen](https://research.facebook.com/publications/anogen-deep-anomaly-generator/) | AnoGen: Deep Anomaly Generator |
+| [agots](https://github.com/KDD-OpenSource/agots) | Anomaly Generator on Time Series |
 
 
 
