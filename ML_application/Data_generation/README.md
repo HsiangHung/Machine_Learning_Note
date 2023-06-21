@@ -12,9 +12,10 @@ In many cases, when customers begin on board ML products, they don't have enough
 | tool | Description |
 | --- | --- | 
 | [tsBNgen](https://github.com/manitadayon/tsBNgen/tree/master) | [A Python Library to Generate a Synthetic Time Series Data](https://towardsdatascience.com/tsbngen-a-python-library-to-generate-time-series-data-from-an-arbitrary-dynamic-bayesian-network-4b46e178cd9f) |
+| [DoppelGANger](https://github.com/fjxmlzn/DoppelGANger/tree/master) | <p> * paper: Using GANs for Sharing Networked Time Series Data: Challenges, Initial Promise, and Open Questions <p> * [[Armando Vieira]][Generating Synthetic Sequential Data using GANs] |
+| [Gretel.ai]() |  |
 | [TSAGen](https://github.com/AprilCal/TSAGen) | paper: TSAGen - Synthetic Time Series Generation for KPI Anomaly Detection |
-| [DoppelGANger](https://github.com/fjxmlzn/DoppelGANger/tree/master) | <p> paper: Using GANs for Sharing Networked Time Series Data: Challenges, Initial Promise, and Open Questions <p> [[Armando Vieira]][Generating Synthetic Sequential Data using GANs] |
-| [Gretel](https://github.com/fjxmlzn/DoppelGANger/tree/master) | paper: Using GANs for Sharing Networked Time Series Data: Challenges, Initial Promise, and Open Questions |
+| [AnoGen](https://research.facebook.com/publications/anogen-deep-anomaly-generator/) | AnoGen: Deep Anomaly Generator |
 
 
 
