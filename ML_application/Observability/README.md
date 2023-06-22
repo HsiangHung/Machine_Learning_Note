@@ -3,7 +3,13 @@
 
 ## Monitoring vs Observability
 
-Monitoring is about tools that gather predefined sets of information about the state of each system element, while observability is about solutions that help us explore the monitoring output and discover problems we may not already know.
+Monitoring is about tools that gather predefined sets of information about the state of each system element, while observability is about solutions that help us **explore** the monitoring output and discover problems we may not already know.
+
+In other words, traditional monitoring tools work by checking system conditions against **known** thresholds that indicate whether previously known error conditions are present. That reactive approach works well only for identifying **previously encountered failure** modes.
+
+In contrast, observability tools work by enabling iterative **exploratory** investigations to systematically determine where and why performance issues may be occurring. Observability enables a **proactive** approach to identifying any failure mode, whether previously known or unknown.
+
+
 
 * [What is Data Observability?]: https://www.youtube.com/watch?v=jfg9wBJBtKk
 [[Youtube] What is Data Observability?](https://www.youtube.com/watch?v=jfg9wBJBtKk)
