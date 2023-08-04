@@ -152,7 +152,7 @@ $$C(D) = \sum^n_{i=1} (y_i - \symbf{\theta}^T \symbf{x}_i)^2$$
 
 On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
 
-$$ P( \symbf{x}_i, y_i \vert \theta) = ( h_{\theta} )^{y_i} (1-h_{\theta})^{1-y_i} .$$
+$$ P( \symbf{x}_i, y_i \vert \theta) = ( h_{\theta} )^{y_i} (1 - h_{\theta})^{1-y_i} .$$
 
 a
 
