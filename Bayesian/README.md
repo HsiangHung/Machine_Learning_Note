@@ -150,7 +150,7 @@ $$C(D) = \sum^n_{i=1} (y_i - \symbf{\theta}^T \symbf{x}_i)^2$$
 
 ### MLE Example: Logistic regression
 
-On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution
+On the other hand, in logistic regression (binary classification), the likelihood is a Bernoulli distribution. Assume the hypothesis function $h_{\theta}$
 
 $$ P( \symbf{x}_i, y_i \vert \theta) = ( h_{\theta} )^{y_i} (1 - h_{\theta})^{1-y_i} .$$
 
