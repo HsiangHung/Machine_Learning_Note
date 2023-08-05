@@ -87,11 +87,9 @@ The adjusted R-squared compares the descriptive power of regression models that 
 
 $$\textrm{Adjusted R}^2 = 1- \frac{(1-R^2)(n-1)}{(m-p-1)}.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Adjusted&space;R}^2&space;=&space;1-&space;\frac{(1-R^2)(n-1)}{(m-p-1)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Adjusted&space;R}^2&space;=&space;1-&space;\frac{(1-R^2)(n-1)}{(m-p-1)}" title="\textrm{Adjusted R}^2 = 1- \frac{(1-R^2)(n-1)}{(m-p-1)}" /></a>
+Thus, if $R^2$ does not increase significantly on the addition of a new independent variable (higher $p$), then $1/(m-p-1)$ increases and Adjusted $R^2$ will actually decrease. In other words, adjusted $R^2$ takes into account the number of predictor variables.
 
-Thus, if R-squared does not increase significantly on the addition of a new independent variable (higher $p$), then $1/(m-p-1)$ increases and Adjusted R-squared will actually decrease. In other words, adjusted R squared takes into account the number of predictor variables.
-
-On the other hand, if on adding the new independent variable we see a significant increase in R-squared value, then the Adjusted R-squared value will also increase.
+On the other hand, if on adding the new independent variable we see a significant increase in $R^2$ value, then the Adjusted $R^2$ value will also increase.
 
 
 ### 1.5 Other regression loss function
