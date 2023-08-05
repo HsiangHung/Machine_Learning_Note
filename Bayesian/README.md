@@ -184,7 +184,7 @@ What it means is that, the likelihood is now weighted with some weight coming fr
 
 Instead, if we implement **Gaussian distribution** to the prior $P(\theta)$ [[Brian Keng]][A Probabilistic Interpretation of Regularization], 
 
-$$P(\theta) \propto e^{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}$$
+$$P(\theta) \propto \exp{\frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}}$$
 
 which can be identify to a **L2 (Ridge) regularization** term if $\mu_{\theta}=0$ (and recall maximizing likelihood is equivalent to minimizing the minus likelihood)
 
