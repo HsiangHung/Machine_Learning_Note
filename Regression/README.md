@@ -42,6 +42,8 @@ There are other measurements to evaluate regression models.
 
 ### 1.1  MSE (mean squared errors) and RMSE (squared-rooted MSE) 
 
+$$\textrm{MSE} = \frac{1}{N}\sum_i (\hat{y}_i-y_i)^2$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MSE}&space;=&space;\frac{1}{N}\sum_i&space;(\hat{y}_i-y_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MSE}&space;=&space;\frac{1}{N}\sum_i&space;(\hat{y}_i-y_i)^2" title="\textrm{MSE} = \frac{1}{N}\sum_i (\hat{y}_i-y_i)^2" /></a>
 
 MSE and RMSE penalizes the large prediction errors vi-a-vis Mean Absolute Error (MAE). RMSE is widely used than MSE to evaluate the performance of the regression model with other random models as it has the same units as the dependent variable [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?].
