@@ -61,13 +61,17 @@ R-squared statistic or coefficient of determination is a scale invariant statist
 
 For R-sqaured, we need RSS and TSS. **Residual sum of squares (RSS)** is equal to the cost function:
 
+$$\textrm{RSS} = \sum_i (y_i - \hat{y}_i)^2.$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" title="\textrm{RSS} = \sum_i (y_i - \hat{y}_i)^2" /></a>
 
 The lower the value of RSS, the better is the model predictions. **Total Sum of Squares (TSS)** is 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" title="\textrm{TSS} = \sum_i (y_i - \bar{y})^2" /></a>
 
-TSS or Total sum of squares gives the total variation in target variable `y`.
+$$\textrm{TSS} = \sum_i (y_i - \bar{y})^2$$
+
+TSS or Total sum of squares gives the total variation in target variable $y$.
 
 TSS-RSS gives us how much variation in `y` is explained by our model. R-squared is the ratio with repect to total variance explained by model:
 
