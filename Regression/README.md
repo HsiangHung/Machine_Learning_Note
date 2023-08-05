@@ -6,18 +6,15 @@ Regression is to model when the target variable $y$ is numeric, continuous
 
 $$y = f(x)$$
 
-
 Designate $m$ is the number of data points and the data is $D$, the cost function for regression reads
 
 $$C(D) = \sum^m_{i=1} (y_i - \hat{y}_i)^2,$$
 
-where $\hat{y}_i = \symbf{x}_i \theta$ <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}_i&space;=&space;\bold{x}_i&space;\theta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}_i&space;=&space;\bold{x}_i&space;\theta" title="\hat{y}_i = \bold{x}_i \theta" /></a> is the predicted value, and residuals are defined as the difference between the actual value $y_i$ and the predicted value:
+where $\hat{y}_i = \symbf{x}_i \theta$ is the predicted value, and residuals are defined as the difference between the actual value $y_i$ and the predicted value:
 
 $$e_i = \hat{y}_i - y_i.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=e_i&space;=&space;\hat{y}_i&space;-&space;y_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e_i&space;=&space;\hat{y}_i&space;-&space;y_i" title="e_i = \hat{y}_i - y_i" /></a>
-
-The optimization objective is to minimize the cost function. 
+The optimization objective is to minimize the cost function $C(D)$ using $D$. 
 
 
 Table of Contents:
@@ -39,7 +36,7 @@ Table of Contents:
 
 
 
-## 1. Metric
+## 1. Evaluation Metric
 
 There are other measurements to evaluate regression models.
 
