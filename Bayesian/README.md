@@ -156,7 +156,7 @@ $$ h_{\theta} = p(y=1 \vert \theta, \symbf{x}_i) = \frac{1}{1+e^{-\symbf{\theta}
 
 is the probability of $y_i = 1$ given $x_i$ and $\theta$. The likelihood is 
 
-$$ P( \symbf{x}_i, y_i \vert \theta) =  h _{\theta}^{y} (1 - h_{\theta})^{1-y} .$$
+$$ P( \symbf{x}_i, y_i \vert \theta) =  \theta^{y} (1 - \theta)^{1-y} .$$
 
 a
 
