@@ -2,7 +2,9 @@
 # Regression 
 
 
-Regression is to models when the target variable `y` is numeric, continuous
+Regression is to model when the target variable $y$ is numeric, continuous
+
+$$y = f(x)$$
 
 ```
 y = f(x)
