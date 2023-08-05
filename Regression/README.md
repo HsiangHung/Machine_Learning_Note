@@ -6,12 +6,10 @@ Regression is to model when the target variable $y$ is numeric, continuous
 
 $$y = f(x)$$
 
-```
-y = f(x)
-```
 
+Designate $m$ is the number of data points and the data is $D$, the cost function for regression reads
 
-Assume `m` is the number of data points, the cost function reads
+$$C(D) = \sum^m_1 = (y_i - \hat{y}_i)^2$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{C}&space;=&space;\sum^m_{i=1}&space;(y_i&space;-&space;\hat{y}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{C}&space;=&space;\sum^m_{i=1}&space;(y_i&space;-&space;\hat{y}_i)^2" title="\textrm{C} = \sum^m_{i=1} (y_i - \hat{y}_i)^2" /></a>
 
