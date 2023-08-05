@@ -59,27 +59,25 @@ MAE is more robust to data with outliers [[Akshita Chugh]][MAE, MSE, RMSE, Coeff
 
 R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis] Higher and closer to 1 is better.
 
-For R-sqaured, we need RSS and TSS. **Residual sum of squares (RSS)** is equal to the cost function:
+To compute R-sqaured, we need RSS and TSS. **Residual sum of squares (RSS)** is equal to the cost function:
 
 $$\textrm{RSS} = \sum_i (y_i - \hat{y}_i)^2.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{RSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\hat{y}_i)^2" title="\textrm{RSS} = \sum_i (y_i - \hat{y}_i)^2" /></a>
-
-The lower the value of RSS, the better is the model predictions. **Total Sum of Squares (TSS)** is 
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{TSS}&space;=&space;\sum_i&space;(y_i&space;-&space;\bar{y})^2" title="\textrm{TSS} = \sum_i (y_i - \bar{y})^2" /></a>
+**Total Sum of Squares (TSS)** is 
 
 $$\textrm{TSS} = \sum_i (y_i - \bar{y})^2$$
 
 TSS or Total sum of squares gives the total variation in target variable $y$.
 
-TSS-RSS gives us how much variation in `y` is explained by our model. R-squared is the ratio with repect to total variance explained by model:
+TSS-RSS gives us how much variation in $y$ is explained by our model. R-squared is the ratio with repect to total variance explained by model:
+
+$$\textrm{R}^2 = \frac{\textrm{TSS-RSS}}{\textrm{TSS}} = 1- \frac{\textrm{RSS}}{\textrm{TSS}},$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{R-sqaured}&space;=&space;\frac{\textrm{TSS-RSS}}{\textrm{TSS}}&space;=&space;1-&space;\frac{\textrm{RSS}}{\textrm{TSS}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{R-sqaured}&space;=&space;\frac{\textrm{TSS-RSS}}{\textrm{TSS}}&space;=&space;1-&space;\frac{\textrm{RSS}}{\textrm{TSS}}" title="\textrm{R-sqaured} = \frac{\textrm{TSS-RSS}}{\textrm{TSS}} = 1- \frac{\textrm{RSS}}{\textrm{TSS}}" /></a>
 
-`RSS/TSS` is the variance in `y` **NOT** explained by the model.
+$RSS/TSS$ is the variance in $y$ **NOT** explained by the model.
 
-0 <= R-squared <= 1. If this value is 0.7, it means that the **independent variables explain 70% of the variation in the target variable**. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
+$0 \le R^2 \le 1$. If this value is 0.7, it means that the **independent variables explain 70% of the variation in the target variable**. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
 
 
 ### 1.4 Adjusted R-squared
