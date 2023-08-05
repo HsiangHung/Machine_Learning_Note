@@ -188,7 +188,7 @@ $$P(\theta) \propto \exp{\Big( \frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \Bi
 
 which can be identify to a **L2 (Ridge) regularization** term if $\mu_{\theta}=0$ (and recall maximizing likelihood is equivalent to minimizing the minus likelihood)
 
-$$-\log P(\theta) = -\log \Big( \exp{\big( \frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \big) \Big) = \frac{\theta^2}{2\sigma^2}$$
+$$-\log P(\theta) = -\log \Big( \exp{\big[ \frac{-(\theta - \mu_{\theta})^2}{2\sigma^2}} \big] \Big) = \frac{\theta^2}{2\sigma^2}$$
 
 
 commonly seen in regression [[Nando de Freitas]][Machine learning - Importance sampling and MCMC I] and $1/\sigma^2$ corresponds to regularization strength. 
