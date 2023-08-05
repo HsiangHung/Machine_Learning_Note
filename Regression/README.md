@@ -8,7 +8,7 @@ $$y = f(x)$$
 
 Designate $m$ is the number of data points and the data is $D$, the cost function for regression reads
 
-$$C(D) = \sum^m_{i=1} (y_i - \hat{y}_i)^2,$$
+$$C(D) = \sum^m_{i=1} (\hat{y}_i - y_i)^2,$$
 
 where $\hat{y}_i = \symbf{x}_i \theta$ is the predicted value, and residuals are defined as the difference between the actual value $y_i$ and the predicted value:
 
@@ -44,21 +44,20 @@ There are other measurements to evaluate regression models.
 
 $$\textrm{MSE} = \frac{1}{N}\sum_i (\hat{y}_i-y_i)^2$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MSE}&space;=&space;\frac{1}{N}\sum_i&space;(\hat{y}_i-y_i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MSE}&space;=&space;\frac{1}{N}\sum_i&space;(\hat{y}_i-y_i)^2" title="\textrm{MSE} = \frac{1}{N}\sum_i (\hat{y}_i-y_i)^2" /></a>
-
-MSE and RMSE penalizes the large prediction errors vi-a-vis Mean Absolute Error (MAE). RMSE is widely used than MSE to evaluate the performance of the regression model with other random models as it has the same units as the dependent variable [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?].
+MSE and RMSE penalizes the large prediction errors vi-a-vis Mean Absolute Error (MAE); lower is better. RMSE is widely used than MSE to evaluate the performance of the regression model with other random models as it has the same units as the dependent variable [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?].
 
 MSE is a differentiable function that makes it easy to perform mathematical operations in comparison to a non-differentiable function like MAE [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?].
 
 ### 1.2 MAE (Mean absolute error)
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{MAE}&space;=&space;\frac{1}{N}\sum_i&space;|\hat{y}_i-y_i|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{MAE}&space;=&space;\frac{1}{N}\sum_i&space;|\hat{y}_i-y_i|" title="\textrm{MAE} = \frac{1}{N}\sum_i |\hat{y}_i-y_i|" /></a>
 
-MAE is more robust to data with outliers [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?].
+$$\textrm{MAE} = \frac{1}{N}\sum_i |\hat{y}_i-y_i|$$
 
-### 1.3 R-squared
+MAE is more robust to data with outliers [[Akshita Chugh]][MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?]. Lower is better.
 
-R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis]
+### 1.3 R-Squared
+
+R-squared statistic or coefficient of determination is a scale invariant statistic that gives the proportion of variation in target variable explained by the linear regression model. [[Aniruddha Bhandari]][Analytics Vidhya: Key Difference between R-squared and Adjusted R-squared for Regression Analysis] Higher and closer to 1 is better.
 
 For R-sqaured, we need RSS and TSS. **Residual sum of squares (RSS)** is equal to the cost function:
 
