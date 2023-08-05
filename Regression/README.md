@@ -71,13 +71,12 @@ TSS or Total sum of squares gives the total variation in target variable $y$.
 
 TSS-RSS gives us how much variation in $y$ is explained by our model. R-squared is the ratio with repect to total variance explained by model:
 
-$$\textrm{R}^2 = \frac{\textrm{TSS-RSS}}{\textrm{TSS}} = 1- \frac{\textrm{RSS}}{\textrm{TSS}},$$
+$$R^2 = \frac{\textrm{TSS-RSS}}{\textrm{TSS}} = 1- \frac{\textrm{RSS}}{\textrm{TSS}},$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{R-sqaured}&space;=&space;\frac{\textrm{TSS-RSS}}{\textrm{TSS}}&space;=&space;1-&space;\frac{\textrm{RSS}}{\textrm{TSS}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{R-sqaured}&space;=&space;\frac{\textrm{TSS-RSS}}{\textrm{TSS}}&space;=&space;1-&space;\frac{\textrm{RSS}}{\textrm{TSS}}" title="\textrm{R-sqaured} = \frac{\textrm{TSS-RSS}}{\textrm{TSS}} = 1- \frac{\textrm{RSS}}{\textrm{TSS}}" /></a>
 
-$RSS/TSS$ is the variance in $y$ **NOT** explained by the model.
+where $RSS/TSS$ is the variance in $y$ **NOT** explained by the model.
 
-$0 \le R^2 \le 1$. If this value is 0.7, it means that the **independent variables explain 70% of the variation in the target variable**. A higher R-squared value indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
+$0 \le R^2 \le 1$. If this value is 0.7, it means that the **independent variables explain 70% of the variation in the target variable**. A higher $R^2$ indicates a higher amount of variability being explained by our model and vice-versa: a better model, lower RSS value, higher R-sqaured values.
 
 
 ### 1.4 Adjusted R-squared
