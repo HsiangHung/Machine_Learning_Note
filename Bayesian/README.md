@@ -130,9 +130,9 @@ which gives us a distribution of $\theta$.
 
 ### MLE Example: Linear regression
 
-To provide more concrete examples, in linear regression, we make an assumption that the likelihood is a normal distribution (both $\theta$ and $x$ are multi-dimensional)
+To provide more concrete examples, in linear regression, we make an assumption that the **likelihood is a normal distribution** (both $\theta$ and $x$ are multi-dimensional)
 
-$$P(\symbf{x}_i, y_i|\theta) \sim e^{\frac{-(y_i-\symbf{\theta}^T \symbf{x}_i)^2}{2\sigma^2}}$$
+$$P(\symbf{x}_i, y_i|\theta) \sim \exp{ \Big( \frac{-(y_i-\symbf{\theta}^T \symbf{x}_i)^2}{2\sigma^2}} \Big)$$
 
 then the likelihood is 
 
