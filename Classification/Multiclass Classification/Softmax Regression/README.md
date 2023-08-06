@@ -13,15 +13,16 @@ For binary case, the hypothesis in logistic regression is
 $$h_{\theta}(\symbf{x}_i) = P(y_i|\theta, \symbf{x}_i) =\frac{1}{1+e^{-\theta^T \symbf{x}_i}}.$$
 
 
-The cost fucntion is cross entropy
+The cost fucntion, cross entropy, for the binary case reads as
 
-$$C(\theta) = - \sum^m_{i=1} \Big[ y_i \log h_{\theta}(x_i) + (1-y_i) \log (1-h_{\theta}(x_i)) \Big]$$
-
+$$C(\theta) = - \sum^m_{i=1} \Big[ y_i \log h_{\theta}(x_i) + (1-y_i) \log (1-h_{\theta}(x_i)) \Big].$$
 
 
 ## Multiclass Classification
 
-In the softmax regression setting, the hypothesis hθ(x) takes the following form:
+In the softmax regression setting, the hypothesis $h_{\theta}(x)$ takes the following form:
+
+$$h_{\theta}(x_i) = \begin{bmatrix} P(y_i=1|\theta, \bold{x}_i) \\ P(y_i=2|\theta, \bold{x}_i) \\ \vdots \\ P(y_i=K|\theta, \bold{x}_i) \end{bmatrix} = \frac{1}{\sum^K_{j=1} \exp{ \big( \theta^{(j)T} \bold{x}_i \big)} }\begin{bmatrix} \exp{\big( \theta^{(1)T} \bold{x}_i \big)} \\ \exp{ \big( \theta^{(2)T} \bold{x}_i \big) } \\ \vdots \\ \exp{ \big( \theta^{(K)T} \bold{x}_i \big) } \end{bmatrix}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=h_{\theta}(x_i)&space;=&space;\begin{bmatrix}&space;P(y_i=1|\theta,&space;\bold{x}_i)&space;\\&space;P(y_i=2|\theta,&space;\bold{x}_i)&space;\\&space;\vdots&space;\\&space;P(y_i=K|\theta,&space;\bold{x}_i)&space;\end{bmatrix}&space;=&space;\frac{1}{\sum^K_{j=1}&space;\exp{&space;\big(&space;\theta^{(j)T}&space;\bold{x}_i&space;\big)}&space;}\begin{bmatrix}&space;\exp{\big(&space;\theta^{(1)T}&space;\bold{x}_i&space;\big)}&space;\\&space;\exp{&space;\big(&space;\theta^{(2)T}&space;\bold{x}_i&space;\big)&space;}&space;\\&space;\vdots&space;\\&space;\exp{&space;\big(&space;\theta^{(K)T}&space;\bold{x}_i&space;\big)&space;}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_{\theta}(x_i)&space;=&space;\begin{bmatrix}&space;P(y_i=1|\theta,&space;\bold{x}_i)&space;\\&space;P(y_i=2|\theta,&space;\bold{x}_i)&space;\\&space;\vdots&space;\\&space;P(y_i=K|\theta,&space;\bold{x}_i)&space;\end{bmatrix}&space;=&space;\frac{1}{\sum^K_{j=1}&space;\exp{&space;\big(&space;\theta^{(j)T}&space;\bold{x}_i&space;\big)}&space;}\begin{bmatrix}&space;\exp{\big(&space;\theta^{(1)T}&space;\bold{x}_i&space;\big)}&space;\\&space;\exp{&space;\big(&space;\theta^{(2)T}&space;\bold{x}_i&space;\big)&space;}&space;\\&space;\vdots&space;\\&space;\exp{&space;\big(&space;\theta^{(K)T}&space;\bold{x}_i&space;\big)&space;}&space;\end{bmatrix}" title="h_{\theta}(x_i) = \begin{bmatrix} P(y_i=1|\theta, \bold{x}_i) \\ P(y_i=2|\theta, \bold{x}_i) \\ \vdots \\ P(y_i=K|\theta, \bold{x}_i) \end{bmatrix} = \frac{1}{\sum^K_{j=1} \exp{ \big( \theta^{(j)T} \bold{x}_i \big)} }\begin{bmatrix} \exp{\big( \theta^{(1)T} \bold{x}_i \big)} \\ \exp{ \big( \theta^{(2)T} \bold{x}_i \big) } \\ \vdots \\ \exp{ \big( \theta^{(K)T} \bold{x}_i \big) } \end{bmatrix}" /></a>
 
