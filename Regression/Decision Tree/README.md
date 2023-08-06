@@ -30,6 +30,9 @@ Then the SDR is computed `S("overlook", "hours played") = 9.32 - 7.66 = 1.66` (s
 
 5. However, the "Sunny" branch has an CV (28%) more than the threshold (10%) which needs further splitting. We select "Temp" as the best best node after "Outlook" because it has the largest SDR.  ![steps](images/DTR_split_sunny.png)
 
+Because the number of data points for both branches (FALSE and TRUE) is equal or less than 3 we stop further branching and assign the average of each branch to the related leaf node. 
+[steps](images/DTR_split_sunny2.png)
+
 
 ## Coefficient of Variation
 
