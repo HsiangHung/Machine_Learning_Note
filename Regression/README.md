@@ -226,7 +226,7 @@ The VIF for the $j$-th predictor is defined as [[Penn stat: STAT 462 - Applied R
 
 $$\textrm{VIF}_j = \frac{1}{1-R^2_j},$$
 
-where $R^2_j$ <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R^2_j" title="R^2_j" /></a> is the R-sqaured value obtained by regressing the $j$-th predictor on the remaining predictors.
+where $R^2_j$ is the R-sqaured value obtained by regressing the $j$-th predictor on the remaining predictors.
 
 | VIF | judgement | 
 | --- | --- | 
@@ -238,7 +238,7 @@ How do we interpret the variance inflation factors for a regression model? A VIF
 
 ### 3.2 How to deal with Multicollinearity
 
-* **Remove highly correlated predictors from the model**: If you have two or more factors with a high VIF, remove one from the model. Consider using stepwise regression, best subsets regression, or specialized knowledge of the data set to remove these variables. Select the model that has the highest R-squared value [[Minitab Blog-Multicollinearity]][Enough Is Enough! Handling Multicollinearity in Regression Analysis]. 
+* **Remove highly correlated predictors from the model**: If you have two or more factors with a high VIF, remove one from the model. Consider using **stepwise** regression, **best subsets** regression, or specialized knowledge of the data set to remove these variables. Select the model that has the highest R-squared value [[Minitab Blog-Multicollinearity]][Enough Is Enough! Handling Multicollinearity in Regression Analysis]. 
 
 * **combine variables**: Use Partial Least Squares Regression (PLS) or **Principal Components Analysis**, regression methods that cut the number of predictors to a smaller set of uncorrelated components [[Minitab Blog-Multicollinearity]][Enough Is Enough! Handling Multicollinearity in Regression Analysis], [[Sushmitha Pulagam]][How to detect and deal with Multicollinearity].
 
