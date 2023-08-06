@@ -21,7 +21,8 @@ The processes are as folllows:
 1. First, at root, we compute SD for target variables `hours played`. The average `hours play` (target) is 39.8 and the SD is 9.32.
 
 2. Next we choose an attribute. Suppose we choose `overlook` to split, there are three categories: "overcast", "rainy", "sunny". After that, the data will be split as follows:
-![split](images/DTR_split.png) Then the SDR is computed `S("overlook", "hours played") = 9.32 - 7.66 = 1.66` (shown as below (a)) ![steps](images/SDR.png) 
+![split](images/DTR_split.png) 
+Then the SDR is computed `S("overlook", "hours played") = 9.32 - 7.66 = 1.66` (shown as below (a)) ![steps](images/SDR.png) 
 
 3. Similarly, we compute SDR for other attributes, as shown in (b). Among these predictors, `outlook` attribute has maximal SDR, so we select `overlook` to split first.
 
