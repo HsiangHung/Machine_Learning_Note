@@ -167,7 +167,7 @@ However I don't think multicollinearity does hurt regression model (but does imp
 
 Given a model $\symbf{\theta}$, the likelihood of a given data point $(\symbf{x}_i, y_i)$ is a normal distribution as
 
-$$P(\symbf{x}_i, y_i|\theta) \propto e^{-(y_i-\hat{y}_i)^2/2\sigma^2} = e^{-(y_i-\symbf{\theta}^T \bold{x}_i)^2/2\sigma^2}$$
+$$P(\symbf{x}_i, y_i|\theta) \propto \exp^{\Big( -(y_i-\hat{y}_i)^2/2\sigma^2 \Big)} = e^{\Big(\frac{1}{\sigma^2}-(y_i-\symbf{\theta}^T \symbf{x}_i)^2 \Big) }$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;\propto&space;e^{-(y_i-\hat{y}_i)^2/2\sigma^2}&space;=&space;e^{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2/2\sigma^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;\propto&space;e^{-(y_i-\hat{y}_i)^2/2\sigma^2}&space;=&space;e^{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2/2\sigma^2}" title="P(\bold{x}_i, y_i|\theta) \propto e^{-(y_i-\hat{y}_i)^2/2\sigma^2} = e^{-(y_i-\bold{\theta}^T \bold{x}_i)^2/2\sigma^2}" /></a>
 
