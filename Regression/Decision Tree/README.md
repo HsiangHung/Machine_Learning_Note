@@ -20,13 +20,13 @@ The processes are as folllows:
 
 1. First, at root, we compute SD for target variables `hours played`. The average `hours play` (target) is 39.8 and the SD is 9.32.
 
-2. Next we choose an attribute. Suppose we choose `overlook` to split, there are three categories: "overcast", "rainy", "sunny". After that, the data will be split as follows: ![split](images/DTR_split.png)  
+2. Next we choose an attribute. Suppose we choose `overlook` to split, there are three categories: "overcast", "rainy", "sunny". After that, the data will be split as follows: ![split](images/DTR_split_root.png)  
 
 Then the SDR is computed `S("overlook", "hours played") = 9.32 - 7.66 = 1.66` (shown as below (a)) ![steps](images/SDR.png) 
 
-3. Similarly, we compute SDR for other attributes: `temp`, `humidity`, `windy`, as shown in (b). Among these predictors, `outlook` attribute has maximal SDR, so we select `overlook` to split first.
+3. Similarly, we compute SDR for other attributes: `temp`, `humidity`, `windy`, as shown in the above (b). Among these predictors, `outlook` attribute has maximal SDR, so we select `overlook` to split first.
 
-4. Next we look at nodes described by "overcast", "rainy", "sunny". In practice, we need some termination criteria. For example, when coefficient of deviation (CV) for a branch becomes smaller than a certain threshold (e.g., 10%) and/or when too few instances (n) remain in the branch (e.g. n=3). For node "overcast" the subset does not need any further splitting because its CV (8%) is less than the threshold (10%). Thus "Overcast" is a leaf node. 
+4. Next we look at nodes described by "overcast", "rainy", "sunny". In practice, we need some termination criteria. For example, when coefficient of deviation (CV) for a branch becomes smaller than a certain threshold (e.g., 10%) and/or when too few instances (n) remain in the branch (e.g. n=3). For node "overcast" the subset does not need any further splitting because its CV (8%) is less than the threshold (10%). Thus "Overcast" is a leaf node. ![steps](images/DTR_split_overlook.png) 
 
 5. However, the "Sunny" branch has an CV (28%) more than the threshold (10%) which needs further splitting. We select "Temp" as the best best node after "Outlook" because it has the largest SDR. 
 
