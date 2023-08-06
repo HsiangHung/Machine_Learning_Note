@@ -173,9 +173,7 @@ Thus the total likelihood of having the entire dataset $D={(\symbf{x}_1, y_1), (
 
 $$L(\symbf{\theta}) = P(D|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}} \exp{\Big( \frac{-(y_i -\symbf{\theta}^T \symbf{x}_i)^2}{2\sigma^2} \Big)}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=L(\bold{\theta})&space;=&space;P(\bold{D}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\bold{\theta})&space;=&space;P(\bold{D}|\theta)&space;=&space;\prod^n_{i=1}&space;\frac{1}{\sqrt{2&space;\pi&space;\sigma^2}}e^{-\frac{(y_i&space;-\bold{\theta}^T&space;\bold{x}_i)^2}{2\sigma^2}}" title="L(\bold{\theta}) = P(\bold{D}|\theta) = \prod^n_{i=1} \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y_i -\bold{\theta}^T \bold{x}_i)^2}{2\sigma^2}}" /></a>
-
-The following is the picture, credit from Prof. Nando de Freitas's UBC Machine learning class. For each x, the likelihood of having y is described normal distribution, and the mean value is the linear fit:
+The following is the picture, credit from Prof. Nando de Freitas's UBC Machine learning class. For each x, the likelihood of having y is described by a normal distribution, and the mean value is the linear fit:
 
 ![](images/gaussian_likelihood.png)
 
@@ -209,7 +207,7 @@ Typically, you use the coefficient p-values to determine which terms to keep in 
 
 ## 3. Multicollinearity
 
-**Collinearity** occurs when two predictor variables (e.g., x1 and x2) in a multiple regression have a non-zero correlation. **Multicollinearity** is when more than twp input predictors (variables) are highly positively or negatively correlated with one another, usually (absolute) correlation coefficient greater than 0.8 [[Psychological Statistics]][Multicollinearity and collinearity (in multiple regression) - a tutorial].
+**Collinearity** occurs when two predictor variables (e.g. $x_1$ and $x_2$) in a multiple regression have a non-zero correlation. **Multicollinearity** is when more than twp input predictors (variables) are highly positively or negatively correlated with one another, usually (absolute) correlation coefficient greater than 0.8 [[Psychological Statistics]][Multicollinearity and collinearity (in multiple regression) - a tutorial].
 
 Multicollinearity causes the following two basic types of problems:
 
@@ -224,7 +222,9 @@ Severe multicollinearity is a major problem, because it increases the variance o
 1. Correlation matrix / Correlation plot
 2. **Variation Inflation Factor (VIF)**: identifies correlation between independent variables and the strength of that correlation. 
 
-The VIF for the `j`-th predictor is [[Penn stat: STAT 462 - Applied Regression Analysis]][10.7 - Detecting Multicollinearity Using Variance Inflation Factors]:
+The VIF for the $j$-th predictor is defined as [[Penn stat: STAT 462 - Applied Regression Analysis]][10.7 - Detecting Multicollinearity Using Variance Inflation Factors]:
+
+$$\textrm{VIF}_j = \frac{1}{1-R^2_j}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{VIF}_j&space;=&space;\frac{1}{1-R^2_j}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{VIF}_j&space;=&space;\frac{1}{1-R^2_j}" title="\textrm{VIF}_j = \frac{1}{1-R^2_j}" /></a>
 
