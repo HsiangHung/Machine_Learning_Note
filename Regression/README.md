@@ -224,11 +224,9 @@ Severe multicollinearity is a major problem, because it increases the variance o
 
 The VIF for the $j$-th predictor is defined as [[Penn stat: STAT 462 - Applied Regression Analysis]][10.7 - Detecting Multicollinearity Using Variance Inflation Factors]:
 
-$$\textrm{VIF}_j = \frac{1}{1-R^2_j}$$
+$$\textrm{VIF}_j = \frac{1}{1-R^2_j},$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{VIF}_j&space;=&space;\frac{1}{1-R^2_j}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{VIF}_j&space;=&space;\frac{1}{1-R^2_j}" title="\textrm{VIF}_j = \frac{1}{1-R^2_j}" /></a>
-
-where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R^2_j" title="R^2_j" /></a> is the R-sqaured value obtained by regressing the `j`-th predictor on the remaining predictors.
+where $R^2_j$ <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R^2_j" title="R^2_j" /></a> is the R-sqaured value obtained by regressing the $j$-th predictor on the remaining predictors.
 
 | VIF | judgement | 
 | --- | --- | 
@@ -236,6 +234,7 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=R^2_j" target="_blank"
 | 1-5 |  Moderate correlation   | 
 | >10 |  High correlation  |  
 
+How do we interpret the variance inflation factors for a regression model? A VIF of 1 means that there is no correlation among the $j$-th predictor and the remaining predictor variables, and hence the variance of bj is not inflated at all. The general rule of thumb is that VIFs exceeding 4 warrant further investigation, while VIFs exceeding 10 are signs of serious multicollinearity requiring correction.
 
 ### 3.2 How to deal with Multicollinearity
 
