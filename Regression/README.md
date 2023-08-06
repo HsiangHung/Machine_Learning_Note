@@ -116,15 +116,15 @@ The linear regression has a generic form
 
 $$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 +\cdots + \epsilon = \symbf{x} \theta + \epsilon.$$
 
-The linear regression can be modeled with more generic terms. For example, we can consider nonlinear feature in a polynomial regression model:
+The linear regression can be modeled with more generic terms. For example, we can consider non-linear features in a polynomial regression model:
 
 $$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + + \theta_3 x^2_1 + \theta_4 x^2_2 +  \cdots + \epsilon.$$
 
-and kernels regression model is implemented as:
+and implement kernels regression model as:
 
 $$\hat{y} = \theta_0 + K(x_1, \mu_1, \lambda_1) \theta_1 + K(x_2, \mu_2, \lambda_2) \theta_2 + K(x_3, \mu_3, \lambda_3) \theta_3 +  \cdots + \epsilon,$$
 
-where 
+where the kernel $K(x, \mu, \lambda) = \exp{\big( -\frac{1}{\lambda}|x-\mu|^2 \big)}$ is the radial basis function
 
 ### 2.1 Assumption for linear regression
 
