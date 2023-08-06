@@ -12,9 +12,10 @@ For binary case, the hypothesis in logistic regression is
 
 $$h_{\theta}(x_i) = P(y_i|\theta, \symbf{x}_i) =\frac{1}{1+e^{-\theta^T \symbf{x}_i}}.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=h_{\theta}(x_i)&space;=&space;P(y_i|\theta,&space;\bold{x}_i)&space;=\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_{\theta}(x_i)&space;=&space;P(y_i|\theta,&space;\bold{x}_i)&space;=\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}" title="h_{\theta}(x_i) = P(y_i|\theta, \bold{x}_i) =\frac{1}{1+e^{-\theta^T \bold{x}_i}}" /></a>
 
 The cost fucntion is cross entropy
+
+$$C(\theta) = - \sum^m_{i=1} \Big[ y_i \log h_{\theta}(x_i) + (1-y_i) \log (1-h_{\theta}(x_i)) \Big]$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\Big[&space;y_i&space;\log&space;h_{\theta}(x_i)&space;&plus;&space;(1-y_i)&space;\log&space;(1-h_{\theta}(x_i))&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\Big[&space;y_i&space;\log&space;h_{\theta}(x_i)&space;&plus;&space;(1-y_i)&space;\log&space;(1-h_{\theta}(x_i))&space;\Big]" title="C(\theta) = - \sum^m_{i=1} \Big[ y_i \log h_{\theta}(x_i) + (1-y_i) \log (1-h_{\theta}(x_i)) \Big]" /></a>
 
