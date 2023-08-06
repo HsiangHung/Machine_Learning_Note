@@ -100,7 +100,7 @@ Dropout is used in computer vision field to prevent overfitting if there is no e
 
 Meanwhile, the hyperparameter, the probability threshold to keep neurons trigger, **keep_prob**, could be layer-dependent. 
 
-As a concrete example, suppose we have a neural netwrok below. There are $7 \times 7 + 7$ parameters between the first hidden layer to the second hidden layer, which are more than others. Thus we can assign smaller **keep_prob** to the second hidden later, and larger **keep_prob** in other layers. 
+As a concrete example, suppose we have a neural netwrok below. There are $7 \times 7 + 7 = 56$ parameters between the first hidden layer to the second hidden layer, which are more than others. Thus we can assign smaller **keep_prob** to the second hidden later, and larger **keep_prob** in other layers. 
 
 ![dropout_2](images/dropout_2.png)
 
