@@ -12,21 +12,19 @@ where attributes (predictors) are `X = (outlook, temp, humidity, windy)`, and th
 
 ## Split Features Using Continuous Targets
 
-For each split, we compute standard deviation (SD) for each attribute, and choose the attribute with maximal **Standard Deviation Reduction (SDR)** to split. 
+For each split, we compute standard deviation (SD) for each attribute, and choose the attribute with maximal **Standard Deviation Reduction (SDR)** to split. The SD is computed for each attribute as 
 
-First, at root, we compute SD for target variables `hours played`, which is 9.32. 
+$$S(X, y) = \sum_{c}P(c)S(c).$$
 
-For each branch split, we compute SD using the following formula for each attribute
+The processes are as folllows:
 
-$$S(X, y) = \sum_{c}P(c)S(c)$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=S(X,&space;y)&space;=&space;\sum_{c}P(c)S(c)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S(X,&space;y)&space;=&space;\sum_{c}P(c)S(c)" title="S(X, y) = \sum_{c}P(c)S(c)" /></a>
+First, at root, we compute SD for target variables `hours played`. The average `hours play` (target) is 39.8 and the SD is 9.32.
 
 As a further concrete example, if we choose `overlook` to split, there are three categories: "overcast", "rainy", "sunny". Then the SD is computed `S("overlook", "hours played") = 7.66` (shown (a) below)
 
 ![steps](images/SDR.png)
 
-The `SDR = 9.32 - 7.66 = 1.66`. Similarly, we compute SDR for other attributes, as shown in (b). Among these predictors, `outlook` attribute has maximal SDR, so we select `overlook` to split first.
+The $SDR = 9.32 - 7.66 = 1.66$. Similarly, we compute SDR for other attributes, as shown in (b). Among these predictors, `outlook` attribute has maximal SDR, so we select `overlook` to split first.
 
 After that, the data will be split as follows:
 
