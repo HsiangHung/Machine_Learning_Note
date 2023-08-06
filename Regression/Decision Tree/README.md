@@ -28,7 +28,7 @@ Then the SDR is computed `S("overlook", "hours played") = 9.32 - 7.66 = 1.66` (s
 
 4. Next we look at nodes described by "overcast", "rainy", "sunny". In practice, we need some termination criteria. For example, when coefficient of deviation (CV) for a branch becomes smaller than a certain threshold (e.g., 10%) and/or when too few instances (n) remain in the branch (e.g. n=3). For node "overcast" the subset does not need any further splitting because its CV (8%) is less than the threshold (10%). Thus "Overcast" is a leaf node. ![steps](images/DTR_split_overlook.png) 
 
-5. However, the "Sunny" branch has an CV (28%) more than the threshold (10%) which needs further splitting. We select "Temp" as the best best node after "Outlook" because it has the largest SDR. 
+5. However, the "Sunny" branch has an CV (28%) more than the threshold (10%) which needs further splitting. We select "Temp" as the best best node after "Outlook" because it has the largest SDR.  ![steps](images/DTR_split_sunny.png)
 
 
 ## Coefficient of Variation
