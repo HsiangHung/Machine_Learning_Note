@@ -29,6 +29,8 @@ $$h_{\theta}(x_i) = \begin{bmatrix} P(y_i=1|\theta, \bold{x}_i) \\ P(y_i=2|\thet
 
 Now $\Theta$ is a n-by-K matrix (`n` features and `K` classes) obtained by
 
+$$\theta = \begin{pmatrix} \begin{pmatrix} | \\ \theta^{(1)} \\ | \end{pmatrix} & \begin{pmatrix} | \\ \theta^{(2)} \\ | \end{pmatrix} & \cdots & \begin{pmatrix} | \\ \theta^{(K)} \\ | \end{pmatrix} \end{pmatrix}$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=&space;\begin{pmatrix}&space;\begin{pmatrix}&space;|&space;\\&space;\theta^{(1)}&space;\\&space;|&space;\end{pmatrix}&space;&&space;\begin{pmatrix}&space;|&space;\\&space;\theta^{(2)}&space;\\&space;|&space;\end{pmatrix}&space;&&space;\cdots&space;&&space;\begin{pmatrix}&space;|&space;\\&space;\theta^{(K)}&space;\\&space;|&space;\end{pmatrix}&space;\end{pmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=&space;\begin{pmatrix}&space;\begin{pmatrix}&space;|&space;\\&space;\theta^{(1)}&space;\\&space;|&space;\end{pmatrix}&space;&&space;\begin{pmatrix}&space;|&space;\\&space;\theta^{(2)}&space;\\&space;|&space;\end{pmatrix}&space;&&space;\cdots&space;&&space;\begin{pmatrix}&space;|&space;\\&space;\theta^{(K)}&space;\\&space;|&space;\end{pmatrix}&space;\end{pmatrix}" title="\theta = \begin{pmatrix} \begin{pmatrix} | \\ \theta^{(1)} \\ | \end{pmatrix} & \begin{pmatrix} | \\ \theta^{(2)} \\ | \end{pmatrix} & \cdots & \begin{pmatrix} | \\ \theta^{(K)} \\ | \end{pmatrix} \end{pmatrix}" /></a>
 
 
