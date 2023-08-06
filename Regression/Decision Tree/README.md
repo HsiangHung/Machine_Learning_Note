@@ -16,6 +16,15 @@ For each split, we compute standard deviation (SD) for each attribute, and choos
 
 $$S(X, y) = \sum_{c}P(c)S(c).$$
 
+## Termination Criterion
+
+In [[Saed Sayad]][Decision Tree - Regression], the author mentioned using Coefficient of Variance (CV), to decide when to stop splitting in the DTR. CV is defined as 
+
+$$CV = \frac{SD}{mean}$$. 
+
+In the below exmaple, after first split, in the `overlook = overcast` branch, CV is 8%, below threshold 10%. Therefore we can stop to split this branch.
+
+
 The processes are as folllows:
 
 1. First, at root, we compute SD for target variables `hours played`. The average `hours play` (target) is 39.8 and the SD is 9.32.
@@ -33,12 +42,6 @@ Then the SDR is computed `S("overlook", "hours played") = 9.32 - 7.66 = 1.66` (s
 Because the number of data points for both branches (FALSE and TRUE) is equal or less than 3 we stop further branching and assign the average of each branch to the related leaf node. 
 [steps](images/DTR_split_sunny2.png)
 
-
-## Coefficient of Variation
-
-In [[Saed Sayad]][Decision Tree - Regression], the author mentioned using Coefficient of Variance (CV), to decide when to stop splitting in the DTR. CV is defined as SD/mean. 
-
-Followed the above exmaple, after first split, in the `overlook = overcast` branch, CV is 8%, below threshold 10%. Therefore we can stop to split this branch.
 
 
 
