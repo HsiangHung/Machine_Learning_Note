@@ -2,7 +2,7 @@
 # Softmax Regression
 
 
-Softmax regression (or **Multinomial Logistic Regression**, **Maximum Entropy Classifier**, or just **Multi-class Logistic Regression** [[KDNuggets]][What is Softmax Regression and How is it Related to Logistic Regression?]) is a generalization of logistic regression to the case where we want to handle multiple classes. In logistic regression we assumed that the labels were binary: y(i)∈{0,1}. We used such a classifier to distinguish between two kinds of hand-written digits. Softmax regression allows us to handle y(i)∈{1,…,K} where K is the number of classes, i.e. multi-class classification.
+Softmax regression (or **Multinomial Logistic Regression**, **Maximum Entropy Classifier**, or just **Multi-class Logistic Regression** [[KDNuggets]][What is Softmax Regression and How is it Related to Logistic Regression?]) is a generalization of logistic regression to the case where we want to handle multiple classes. In logistic regression we assumed that the labels were binary: $y_i \in \lbrace 0, 1 \rbrace$. We used such a classifier to distinguish between two kinds of hand-written digits. Softmax regression allows us to handle $y_i \in \lbrace 1, \cdots,K \rbrace$ where K is the number of classes, i.e. multi-class classification.
 
 The following content are from [[UFLDL Tutorial]][Softmax Regression].
 
@@ -10,7 +10,7 @@ The following content are from [[UFLDL Tutorial]][Softmax Regression].
 
 For binary case, the hypothesis in logistic regression is
 
-$$h_{\theta}(x_i) = P(y_i|\theta, \bold{x}_i) =\frac{1}{1+e^{-\theta^T \bold{x}_i}}.$$
+$$h_{\theta}(x_i) = P(y_i|\theta, \symbf{x}_i) =\frac{1}{1+e^{-\theta^T \symbf{x}_i}}.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=h_{\theta}(x_i)&space;=&space;P(y_i|\theta,&space;\bold{x}_i)&space;=\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_{\theta}(x_i)&space;=&space;P(y_i|\theta,&space;\bold{x}_i)&space;=\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}" title="h_{\theta}(x_i) = P(y_i|\theta, \bold{x}_i) =\frac{1}{1+e^{-\theta^T \bold{x}_i}}" /></a>
 
