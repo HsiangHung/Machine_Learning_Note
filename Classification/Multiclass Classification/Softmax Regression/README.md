@@ -10,6 +10,7 @@ The following content are from [[UFLDL Tutorial]][Softmax Regression].
 
 For binary case, the hypothesis in logistic regression is
 
+$$h_{\theta}(x_i) = P(y_i|\theta, \bold{x}_i) =\frac{1}{1+e^{-\theta^T \bold{x}_i}}.$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=h_{\theta}(x_i)&space;=&space;P(y_i|\theta,&space;\bold{x}_i)&space;=\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_{\theta}(x_i)&space;=&space;P(y_i|\theta,&space;\bold{x}_i)&space;=\frac{1}{1&plus;e^{-\theta^T&space;\bold{x}_i}}" title="h_{\theta}(x_i) = P(y_i|\theta, \bold{x}_i) =\frac{1}{1+e^{-\theta^T \bold{x}_i}}" /></a>
 
