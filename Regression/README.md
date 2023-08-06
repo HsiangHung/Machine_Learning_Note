@@ -116,7 +116,7 @@ The linear regression has a generic form
 
 $$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 +\cdots + \epsilon = \symbf{x} \theta + \epsilon.$$
 
-Even polynomial regression, the model has linear format:
+The linear regression can be modeled in a more generic terms. For example, polynomial regression model is :
 
 $$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + + \theta_3 x^2_1 + \theta_4 x^2_2 +  \cdots + \epsilon.$$
 
@@ -129,7 +129,7 @@ $$\hat{y} = \theta_0 + K(\theta_1) x_1 + K(\theta_2) x_2 + + K(\theta_3) x_3 +  
 
 There are some assumptions associated with a linear regression model [[BUMC]][Simple Linear Regression], [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]:
 
-* **Independence**: Observations are independent of each other, i.e. no **autocorrelation** in our output variable. The presence of autocorrelation in error terms drastically reduces model’s accuracy, and the estimated standard errors tend to underestimate the true standard error. Use Durbin – Watson (DW) statistic to check autocorrelation: DW = 2 implies no autocorrelation; 0 < DW < 2  positive autocorrelation; 2 < DW < 4 indicates negative autocorrelation [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions].
+* **Independence**: Observations are independent of each other, i.e. no **autocorrelation** in our output variable. The presence of autocorrelation in error terms drastically reduces model’s accuracy, and the estimated standard errors tend to underestimate the true standard error. Use **Durbin – Watson (DW) statistic** to check autocorrelation: DW = 2 implies no autocorrelation; 0 < DW < 2  positive autocorrelation; 2 < DW < 4 indicates negative autocorrelation [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions].
 ![](images/autocorrelation.png)
 As an example, the above value vs time plot clearly shows autocorrelation present in the data [in (a)]. If we did try to fit a linear regression model to this data, using Year and Month as our input variables, we would end up with the red line in (b). In order to deal with the autocorrelation, we need to use a model which is specifically designed for dealing with time series, such as an ARIMA model. As shown in (c), the orange line fitted by ARIMA(5, 1, 0) provides a good forecast [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them].
 
