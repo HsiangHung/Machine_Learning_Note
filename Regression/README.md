@@ -124,7 +124,7 @@ and implement kernels regression model as another example:
 
 $$\hat{y} = \theta_0 + K(x_1, \mu_1, \lambda_1) \theta_1 + K(x_2, \mu_2, \lambda_2) \theta_2 + K(x_3, \mu_3, \lambda_3) \theta_3 +  \cdots + \epsilon,$$
 
-where the kernel $K(x, \mu, \lambda) = \exp{\big( -\frac{1}{\lambda}||x-\mu||^2 \big)}$ is the radial basis function
+where the kernel $K(x, \mu, \lambda) = \exp{\big( -\frac{1}{\lambda}||x-\mu||^2 \big)}$ is the radial basis function.
 
 ### 2.1 Assumption for linear regression
 
@@ -135,21 +135,26 @@ There are some assumptions associated with a linear regression model [[BUMC]][Si
 As an example, the above value vs time plot clearly shows autocorrelation present in the data [in (a)]. If we did try to fit a linear regression model to this data, using Year and Month as our input variables, we would end up with the red line in (b). In order to deal with the autocorrelation, we need to use a model which is specifically designed for dealing with time series, such as an ARIMA model. As shown in (c), the orange line fitted by ARIMA(5, 1, 0) provides a good forecast [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them].
 
 
-* **Linearity**: The relationship between X and the mean of Y is linear. Look for **residual vs fitted value** plots. To fix this, you can include polynomial terms ($x^2, X^3, \cdots $) or interaction terms in your model to capture the non-linear effect (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
+* **Linearity**: Linear regression assumes the relationship between $\symbf{X}=(x_1, x_2, \cdots)$ and the mean of $y$ is linear. we can look for **residual vs fitted value** plots to verify. To fix this, you can include polynomial terms ($x^2, x^3, \cdots $) or interaction terms in your model to capture the non-linear effect (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 
 ![](images/non_linear_effect.png)
 
 
-* **Homoscedasticity**: The variance of residual is the same for any value of X, i.e. error terms must have constant variance. The presence of non-constant variance in the error terms results in heteroskedasticity (see below) (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
+* **Homoscedasticity**: We expect the variance of residual should be the same for any value of $\symbf{X}$, i.e. error terms must have constant variance. The presence of non-constant variance in the error terms results in heteroskedasticity (see below) (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 
 ![](images/Heteroskedasticity.png)
 ![](images/Heteroskedasticity_2.png)
 
-* **Normality**: For any fixed value of X, Y is normally distributed.  If the data comes from a normal distribution, the plot would show fairly straight line. Absence of normality in the errors can be seen with deviation in the straight line (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
+* **Normality**: For any paired value of ($\symbf{X}$, $y$) is normally distributed.  If the data comes from a normal distribution, the Q-Q plot would show fairly straight line. Absence of normality in the errors can be seen with deviation in the straight line (credit from [[Analytics Vidhya]][Going Deeper into Regression Analysis with Assumptions, Plots & Solutions]).
 ![](images/normal_distribution_residuals.png)
-For example, skewed data leads to normality violation, below (a). If we fit a linear regression model to this dataset **without** transforming our output variable, we will see heteroskedasticity in the fitted values vs residual plot, in (b). But if we **log transform** our output variable prior to fitting our model, the residuals show homoskedasticity, in below (c) [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them]. 
+
+
+### An Example and Generalized Linear Model (GLM)
+
+For example, skewed data leads to normality violation, shown in below (a). If we fit a linear regression model to this dataset **without** transforming our output variable, we will see heteroskedasticity in the fitted values vs residual plot, in (b). But if we **log transform** our output variable prior to fitting our model, the residuals show homoskedasticity, in below (c) [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them]. 
 ![](images/skewed_data.png)
-Alternatively, we can fit a model that is specifically designed for non-normal data, such as a **generalized linear model (GLM)**. The blog [Beyond Linear Regression: An Introduction to GLMs](https://towardsdatascience.com/beyond-linear-regression-an-introduction-to-glms-7ae64a8fad9c) discusses GLMs in detail. In the case of positively skewed data, a gamma GLM is typically the best choice.
+
+Alternatively, we can fit a model that is specifically designed for non-normal data, such as a **generalized linear model (GLM)**. The blog [Beyond Linear Regression: An Introduction to GLMs](https://towardsdatascience.com/beyond-linear-regression-an-introduction-to-glms-7ae64a8fad9c) discusses GLMs using different **link functions** in detail. In the case of positively skewed data, a gamma GLM is typically the best choice.
 
 
 In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author additionally listed another key assumption for linear regression: 
