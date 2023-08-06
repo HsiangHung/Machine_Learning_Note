@@ -36,7 +36,7 @@ Table of Contents:
 
 
 
-## 1. Evaluation Metric
+## 1. Regression Evaluation 
 
 There are other measurements to evaluate regression models.
 
@@ -114,7 +114,18 @@ Quantile loss functions turn out to be useful when we are interested in predicti
 
 The linear regression has a generic form
 
+$$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 +\cdots + \epsilon = \bold{x} \theta + \epsilon.$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;&plus;&space;\epsilon&space;=&space;\bold{x}&space;\theta&space;&plus;&space;\epsilon" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;\theta_0&space;&plus;&space;\theta_1&space;x_1&space;&plus;&space;\theta_2&space;x_2&space;&plus;\cdots&space;&plus;&space;\epsilon&space;=&space;\bold{x}&space;\theta&space;&plus;&space;\epsilon" title="\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 +\cdots + \epsilon = \bold{x} \theta + \epsilon" /></a>
+
+
+Even polynomial regression, the model has linear format:
+
+$$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + + \theta_3 x^2_1 + \theta_4 x^2_2 +  \cdots + \epsilon.$$
+
+and implement kernels in the linear model:
+
+$$\hat{y} = \theta_0 + K(\theta_1) x_1 + K(\theta_2) x_2 + + K(\theta_3) x_3 +  \cdots + \epsilon.$$
 
 
 ### 2.1 Assumption for linear regression
