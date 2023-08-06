@@ -18,6 +18,8 @@ First, at root, we compute SD for target variables `hours played`, which is 9.32
 
 For each branch split, we compute SD using the following formula for each attribute
 
+$$S(X, y) = \sum_{c}P(c)S(c)$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=S(X,&space;y)&space;=&space;\sum_{c}P(c)S(c)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S(X,&space;y)&space;=&space;\sum_{c}P(c)S(c)" title="S(X, y) = \sum_{c}P(c)S(c)" /></a>
 
 As a further concrete example, if we choose `overlook` to split, there are three categories: "overcast", "rainy", "sunny". Then the SD is computed `S("overlook", "hours played") = 7.66` (shown (a) below)
