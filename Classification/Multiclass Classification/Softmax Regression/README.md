@@ -10,12 +10,12 @@ The following content are from [[UFLDL Tutorial]][Softmax Regression].
 
 For binary case, the hypothesis in logistic regression is
 
-$$h_{\theta}(x_i) = P(y_i|\theta, \symbf{x}_i) =\frac{1}{1+e^{-\theta^T \symbf{x}_i}}.$$
+$$h_{\theta}(\symbf{x}_i) = P(y_i|\theta, \symbf{x}_i) =\frac{1}{1+e^{-\theta^T \symbf{x}_i}}.$$
 
 
 The cost fucntion is cross entropy
 
-$$C(\theta) = - \sum^m_{i=1} \Big[ y_i \log h_{\theta}(x_i) + (1-y_i) \log (1-h_{\theta}(x_i)) \Big]$$
+$$C(\theta) = - \sum^m_{i=1} \Big[ y_i \log h_{\theta}(\symbf{x}_i) + (1-y_i) \log (1-h_{\theta}(\symbf{x}_i)) \Big]$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\Big[&space;y_i&space;\log&space;h_{\theta}(x_i)&space;&plus;&space;(1-y_i)&space;\log&space;(1-h_{\theta}(x_i))&space;\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(\theta)&space;=&space;-&space;\sum^m_{i=1}&space;\Big[&space;y_i&space;\log&space;h_{\theta}(x_i)&space;&plus;&space;(1-y_i)&space;\log&space;(1-h_{\theta}(x_i))&space;\Big]" title="C(\theta) = - \sum^m_{i=1} \Big[ y_i \log h_{\theta}(x_i) + (1-y_i) \log (1-h_{\theta}(x_i)) \Big]" /></a>
 
