@@ -157,15 +157,17 @@ For example, skewed data leads to normality violation, shown in below (a). If we
 Alternatively, we can fit a model that is specifically designed for non-normal data, such as a **generalized linear model (GLM)**. The blog [Beyond Linear Regression: An Introduction to GLMs](https://towardsdatascience.com/beyond-linear-regression-an-introduction-to-glms-7ae64a8fad9c) discusses GLMs using different **link functions** in detail. In the case of positively skewed data, a gamma GLM is typically the best choice.
 
 
-In [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them], the author additionally listed another key assumption for linear regression: 
+In the blog The Pitfalls of Linear Regression and How to Avoid Them, the author [[Genevieve Hayes]][The Pitfalls of Linear Regression and How to Avoid Them] additionally listed another key assumption for linear regression: 
 
 * **No multicollinearity**: none of input variables are highly positively or negatively correlated with one another. 
 
-However I don't think multicollinearity does hurt regression model (but does impact to the model interpretation). We have more comprehensive discussion in later section.
+However I don't think multicollinearity does hurt regression model (but does impact to the model interpretation). We will have more comprehensive discussion in later section.
 
 ### 2.2 Maximum likelihood estimate
 
-Given a model `θ`, the likelihood of having a data point `(xi, yi)` is a normal distribution as
+Given a model $\symbf{\theta}$, the likelihood of a given data point $(x_i, y_i)$ is a normal distribution as
+
+$$P(\bold{x}_i, y_i|\theta) \propto e^{-(y_i-\hat{y}_i)^2/2\sigma^2} = e^{-(y_i-\bold{\theta}^T \bold{x}_i)^2/2\sigma^2}$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\bold{x}_i,&space;y_i|\theta)&space;\propto&space;e^{-(y_i-\hat{y}_i)^2/2\sigma^2}&space;=&space;e^{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2/2\sigma^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\bold{x}_i,&space;y_i|\theta)&space;\propto&space;e^{-(y_i-\hat{y}_i)^2/2\sigma^2}&space;=&space;e^{-(y_i-\bold{\theta}^T&space;\bold{x}_i)^2/2\sigma^2}" title="P(\bold{x}_i, y_i|\theta) \propto e^{-(y_i-\hat{y}_i)^2/2\sigma^2} = e^{-(y_i-\bold{\theta}^T \bold{x}_i)^2/2\sigma^2}" /></a>
 
