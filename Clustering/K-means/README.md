@@ -81,7 +81,7 @@ see [[Azika Amelia]][K-Means Clustering: From A to Z] and [[Pulkit Sharma]][The 
 
 1. **Inertia**: Inertia actually calculates the sum of distances of all the points within a cluster from the centroid of that cluster. Therefore, a small of inertia is aimed for. The range of inertia’s value starts from zero and goes up.
 
-2. **Silhouette score**: Silhouette score tells how far away the datapoints in one cluster are, from the datapoints in another cluster. The range of silhouette score is from -1 to 1. Score should be closer to 1 than -1.
+2. **Silhouette score**: Silhouette score tells how far away the datapoints in one cluster are, from the datapoints in another cluster. The range of silhouette score is from -1 to 1. Score should be closer to 1 than -1. The example to choose k via Silhouette score can be found from [sklearn](https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html) page and the [blog: Stop using the Elbow Method](https://medium.com/geekculture/stop-using-the-elbow-method-96bcfbbbe9fd).
 
 ### Drawbacks
 
