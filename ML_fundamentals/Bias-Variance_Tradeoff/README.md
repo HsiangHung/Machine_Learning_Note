@@ -10,13 +10,14 @@ It is the model that you will use to make predictions on new data where you do n
 
 The bias-variance trade-off is a conceptual idea in applied machine learning to help understand the sources of error in models. 
 
-Suppose we have a model such that given $\symbg{x}$, the prediction is:
+Suppose we have a model such that given $\symbf{x}$, the prediction is:
 
-$$\hat{y} = \hat{f}(\symbf{x})$$
+$$\hat{y} = \hat{f}(\symbf{x}).$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;\hat{f}(X)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;\hat{f}(X)" title="\hat{y} = \hat{f}(X)" /></a>
 
-Then the expected value of squared difference btween the prediction and actual value `y`, 
+Then the expected value of squared difference btween the prediction $\hat{y}$ and actual value $y$, 
+
+$$\mathbf{E}[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\epsilon^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\epsilon^2" title="E[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2" /></a>
 
