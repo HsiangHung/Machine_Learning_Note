@@ -66,7 +66,7 @@ Learning](http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.pdf) shows a way to
 
 $$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(f(x)+\epsilon -\hat{y}\big)^2] = \mathbb{E}[(f-\hat{y}^2)] = \mathbb{E}[ (f-h)^2 + (h-\hat{y})^2].$$
 
-Note $f(x)$ denotes a possible best model, and the true target value from data, $y = f(x) + \varepsilon $ <img src="https://latex.codecogs.com/gif.latex?\varepsilon" title="\varepsilon" />, where $\varepsilon$ <img src="https://latex.codecogs.com/gif.latex?\varepsilon" title="\varepsilon" /> is irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions <img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;\equiv&space;h_D(x)" title="\hat{y} \equiv h_D(x)" /> $\hat{y} \equiv h_D(x)$, and
+Note $f(x)$ denotes a possible best model, and the true target value from data, $y = f(x) + \varepsilon$, where $\varepsilon$ is irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions <img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;\equiv&space;h_D(x)" title="\hat{y} \equiv h_D(x)" /> $\hat{y} \equiv h_D(x)$, and
 <img src="https://latex.codecogs.com/gif.latex?h\equiv&space;E_D[h_D(x)]" title="h\equiv E_D[h_D(x)]" /> is the long-term expectation of learners' predictions on `x` averaged over more data from `D`.
 
 So the MSE is
@@ -77,7 +77,7 @@ $$\mathbb{E}[(f-h)^2+(h-\hat{y})^2+2(f-h)(h-\hat{y})] = \mathbb{E}[(f-h)^2]+\mat
 
 The first term is **Bias square**. If our model reaches the best possible model, then the first term is determined by the irreducible errors only and should be minimized, denoting that our model is low-bias. 
 
-On the other hand, the second term descibes **Variance**. If it is small, it means that all various learners will gives <img src="https://latex.codecogs.com/gif.latex?h_D(x)" title="h_D(x)" /> close to `h`, the long-term expectation, denoting low-variance.
+On the other hand, the second term descibes **Variance**. If it is small, it means that all various learners will gives <img src="https://latex.codecogs.com/gif.latex?h_D(x)" title="h_D(x)" /> $h_D(x$ close to $h$ `h`, the long-term expectation, denoting low-variance.
 
 
 
