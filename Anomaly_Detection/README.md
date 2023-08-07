@@ -16,6 +16,7 @@ Table of Contents:
      * [5.3 Unsupervised Learning](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#53-unsupervised-learning)
 * [6. Time-Series Anomaly Detection](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#6-time-series-anomaly-detection)
 * [7. Effect of An outlier](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#7-effect-of-an-outlier)
+* [8. Outlier Detection Algorithm Comparison](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Anomaly_Detection#8-outlier-detection-algorithm-comparison)
 
 
 ## 1. Is it not just Classification? 
