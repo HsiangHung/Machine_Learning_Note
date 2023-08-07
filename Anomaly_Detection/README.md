@@ -124,7 +124,7 @@ The modified Z-score $Z_{\textrm{mod}}$ is defined as [[NIST/SEMATECH e-Handbook
 
 $$Z_{\textrm{mod}} = \frac{0.6745(x-\widetilde{x})}{\textrm{MAD}}$$
      
-where `MAD` denoting the median absolute deviation and $\widetilde{x}$ denoting the median. The modified Z-scores with an absolute value of greater than 3.5 is labeled as potential outliers.
+where `MAD` denotes the median absolute deviation and $\widetilde{x}$ the median. The modified Z-scores with an absolute value of greater than 3.5 is labeled as potential outliers.
 
 The cons for the Z scores are that it is only convenient to use in a low dimensional feature space, in a small to medium sized dataset and not recommended when distributions can not be assumed to be parametric [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
@@ -176,7 +176,7 @@ In the isolation forest method, an outlier score can computed for each observati
 
 $$s(x, n) = 2^{-\frac{\mathbb{E}[h(x)]}{c(n)}}$$
 
-where $E(h(x))$ is the average value of $h(x)$ from a collection of iTrees; $h(x)$ is the **`path length`** of the sample $x$, and $c(n)$ is the ‘unsuccessful length search’ of a binary tree (the maximum path length of a binary tree from root to external node); $n$ is the number of external nodes. 
+where $\mathbb{E}[h(x)]$ is the average value of $h(x)$ from a collection of iTrees, where $h(x)$ is the **`path length`** of the sample $x$, and $c(n)$ is the ‘unsuccessful length search’ of a binary tree (the maximum path length of a binary tree from root to external node); $n$ is the number of external nodes. 
 
 
 **`path length`** is defined as the number of “splittings” made by the algorithm for an instance; the number of splittings required to isolate a sample is equivalent to the path length from the root node to the terminating node. As shown below, outliers will have shorter path lengths than the rest of the observations (pictures from [wiki](https://en.wikipedia.org/wiki/Isolation_forest) and [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]). Also see [my notebook example](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Anomaly_Detection/outlier_methods_sklearn.ipynb).
@@ -187,7 +187,7 @@ where $E(h(x))$ is the average value of $h(x)$ from a collection of iTrees; $h(x
 In the above picture, (a) indicates how the isolation forest splits a normal data, whereas (b) splits an outlier. The isolation forest builds a tree and splits until a data point is isolated. An outlier spent less splits. The first part of the [talk](https://www.youtube.com/watch?v=sFRrFWYNAUI), by James Verbus, has clear explanation about how it works. 
 
 
-If the outlier score `s(x,n)` is close to 1, then `x` is very likely to be an anomaly. On the other hand, if the score is smaller than 0.5, then `x` is likely to be a normal value. Thus smaller `E(h(x))` (shorter path length) and larger `c(n)` cause a larger outleir score. 
+If the outlier score $s(x,n)$ is close to 1, then $x$ is very likely to be an anomaly. On the other hand, if the score is smaller than 0.5, then it is likely to be a normal value. Thus smaller $\mathbb{E}[h(x)]$ (shorter path length) and larger $c(n)$ cause a larger outleir score. 
 
 The determination threshold can be specified, i.e. 0.55 or 0.60, not just at 0.5.
 
