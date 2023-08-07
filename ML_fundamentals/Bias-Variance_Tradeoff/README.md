@@ -75,7 +75,7 @@ $$\mathbb{E}[(f-h)^2+(h-\hat{y})^2+2(f-h)(h-\hat{y})] = \mathbb{E}[(f-h)^2]+\mat
 
 The first term is **Bias square**. If our model reaches the best possible model, then the first term is determined by the irreducible errors only and should be minimized, denoting that our model is low-bias. 
 
-On the other hand, the second term descibes **Variance**. If it is small, it means that all various learners will gives <img src="https://latex.codecogs.com/gif.latex?h_D(x)" title="h_D(x)" /> $h_D(x$ close to $h$ `h`, the long-term expectation, denoting low-variance.
+On the other hand, the second term descibes **Variance**. If it is small, it means that all various learners will gives $h_D(x)$ close to $h$, the long-term expectation, denoting low-variance.
 
 
 
