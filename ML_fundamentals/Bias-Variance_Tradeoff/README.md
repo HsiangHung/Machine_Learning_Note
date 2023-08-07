@@ -66,8 +66,8 @@ Learning](http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.pdf) shows a way to
 
 $$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(f(x)+\epsilon -\hat{y}\big)^2] = \mathbb{E}[(f-\hat{y}^2)] = \mathbb{E}[ (f-h)^2 + (h-\hat{y})^2].$$
 
-Note $f(x)$ denotes a possible best model, and the true target value from data, $y = f(x) + \varepsilon$, where $\varepsilon$ is irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions <img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;\equiv&space;h_D(x)" title="\hat{y} \equiv h_D(x)" /> $\hat{y} \equiv h_D(x)$, and
-<img src="https://latex.codecogs.com/gif.latex?h\equiv&space;E_D[h_D(x)]" title="h\equiv E_D[h_D(x)]" /> is the long-term expectation of learners' predictions on `x` averaged over more data from `D`.
+Note $f(x)$ denotes a possible best model, and the true target value from data, $y = f(x) + \varepsilon$, where $\varepsilon$ is irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions $\hat{y} \equiv h_D(x)$, and
+<img src="https://latex.codecogs.com/gif.latex?h\equiv&space;E_D[h_D(x)]" title="h\equiv E_D[h_D(x)]" /> $h\equiv \mathbb{E}_D[h_D(x)]$ is the long-term expectation of learners' predictions on `x` averaged over more data from $D$.
 
 So the MSE is
 
