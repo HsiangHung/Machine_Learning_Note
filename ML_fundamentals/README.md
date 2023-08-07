@@ -122,8 +122,6 @@ The strict definition (from [wiki](https://en.wikipedia.org/wiki/Convex_function
 
 $$f(tx_1 + (1-t)x_2) \le tf(x_1) + (1-t)f(x_2), \ 0 < t < 1$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=f(tx_1&space;&plus;&space;(1-t)x_2)&space;\le&space;tf(x_1)&space;&plus;&space;(1-t)f(x_2),&space;\&space;0&space;<&space;t&space;<&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(tx_1&space;&plus;&space;(1-t)x_2)&space;\le&space;tf(x_1)&space;&plus;&space;(1-t)f(x_2),&space;\&space;0&space;<&space;t&space;<&space;1" title="f(tx_1 + (1-t)x_2) \le tf(x_1) + (1-t)f(x_2), \ 0 < t < 1" /></a>
-
 Note, in a convex function, the local minimum global minimum. See the [proof](https://planetmath.org/localminimumofconvexfunctionisnecessarilyglobal).
 
 ## 6. Newton Method
@@ -131,11 +129,15 @@ Note, in a convex function, the local minimum global minimum. See the [proof](ht
 
 It is a method for finding the root of a function, rather than its maxima or minima. This means that, if the problem satisfies the constraints of Newton’s method, we can find `x` for which `f(x)=0`. **NOT** `f'(x)=0`, as was the case for gradient descent. Therefore, we, apply Newton’s method on the **derivative** `f'(x)` of the cost function (`f''(x)`, second-order derivatives), not on the cost function itself [[Gabriele De Luca]][Gradient Descent vs. Newton’s Gradient Descent], [[Stack overflow: What is the difference between Gradient Descent and Newton's Gradient Descent?]][What is the difference between Gradient Descent and Newton's Gradient Descent?].
 
+$$x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}$$
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;&plus;&space;\frac{f^{\prime}(x_n)}{f^{\prime&space;\prime}(x_n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;&plus;&space;\frac{f^{\prime}(x_n)}{f^{\prime&space;\prime}(x_n)}" title="x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}" /></a>
 
-For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], assume <a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)" title="f = f(x,y)" /></a>, then
+For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], assume <a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)" title="f = f(x,y)" /></a>, $ f= f(x,y)$, then
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" title="x_{n+1} = x_n - [\bold H f]^{-1}f^{\prime}(x_n)" /></a>
+
+$$x_{n+1} = x_n - [\bold H f]^{-1}f^{\prime}(x_n).$$
 
 ### 6.1 Primary difference
 
