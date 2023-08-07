@@ -106,7 +106,7 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
    *  all observations are isolated at their own external node
    *  all data have the same values for all attributes.
 
-5. Path length. The path length $h(x)$ of an observation $x$ is measured by the number of edges that $x$ traverses an iTree from the root node until transversal is terminated at an external node. $\mathbb{E}[h(x)]$ is the average of $h(x)$ from a collection of isolation trees. An anomaly score $S(x, n)$ is derived from the **average** path length, $\mathbb{E}[h(x)]: S(x, n) = 2^[− \mathbb{E}[h(x)] / c(n)]$. Basically, there is a monotonic relationship between $S(x,n)$ and $\mathbb{E}[h(x)]$ The term $c(n)$ is a constant for any given, static data set.
+5. Path length. The path length $h(x)$ of an observation $x$ is measured by the number of edges that $x$ traverses an iTree from the root node until transversal is terminated at an external node. $\mathbb{E}[h(x)]$ is the average of $h(x)$ from a collection of isolation trees. An anomaly score $S(x, n)$ is derived from the **average** path length, $\mathbb{E}[h(x)]: S(x, n) = 2^{− \mathbb{E}[h(x)] / c(n)}$. Basically, there is a monotonic relationship between $S(x,n)$ and $\mathbb{E}[h(x)]$ The term $c(n)$ is a constant for any given, static data set.
 
 6. Only requires user to set two variables in isolation forest: **the number of trees** to build and the **sub-sampling size**. 
 
