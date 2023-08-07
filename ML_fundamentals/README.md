@@ -81,7 +81,9 @@ In (a), the min cost happens at $\beta_2 = 0$. But in (b), the min cost at finit
 
 ### 4.1 Entropy
 
-Given probability distribution p, it tells us how unpredictable the probability distribution is.
+Given probability distribution $p$, it tells us how unpredictable the probability distribution is.
+
+$$H(p) = - \sum_i p_i \log p_i$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H(p)&space;=&space;-&space;\sum_i&space;p_i&space;\log&space;p_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(p)&space;=&space;-&space;\sum_i&space;p_i&space;\log&space;p_i" title="H(p) = - \sum_i p_i \log p_i" /></a>
 
