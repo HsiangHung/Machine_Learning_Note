@@ -34,10 +34,10 @@ Examples of low-bias ML algorithms are **Decision Trees**, **k-Nearest Neighbors
 
 ## Variance
 
-n the other hand, the variance is error from sensitivity to small fluctuations in the training set. High variance can cause **overfitting**: modeling the random noise in the training data, rather than the intended outputs [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]. 
+Obcn the other hand, the variance is error from sensitivity to small fluctuations in the training set. High variance can cause **overfitting**: modeling the random noise in the training data, rather than the intended outputs [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]. 
 
 Low/High Variance suggests small/large changes to the estimate of the target function with changes to the training dataset.
-Generally, nonparametric machine learning algorithms that have a lot of flexibility have a high variance. For example, decision trees have a high variance, that is even higher if the trees are not pruned before use. The high-bias models are usually **low-variance** models; examples include: **Linear Regression**, **Linear Discriminant Analysis** and **Logistic Regression**. On the other hand, examples of **high-variance** machine learning algorithms include: **Decision Trees**, **k-Nearest Neighbors** and **Support Vector Machines** [[Deepanshu Bhalla]][UNDERSTANDING BIAS-VARIANCE TRADEOFF].
+Generally, nonparametric machine learning algorithms that have a lot of flexibility have a high variance. For example, **decision trees** have a high variance, that is even higher if the trees are not pruned before use. The high-bias models are usually **low-variance** models; examples include: **Linear Regression**, **Linear Discriminant Analysis** and **Logistic Regression**. On the other hand, examples of **high-variance** machine learning algorithms include: **Decision Trees**, **k-Nearest Neighbors** and **Support Vector Machines** [[Deepanshu Bhalla]][UNDERSTANDING BIAS-VARIANCE TRADEOFF].
 
 
 ## Learning Curve
@@ -62,14 +62,18 @@ Training error is low but test erro is high. More training data could be helpful
 ## Measuring Bias and Variance
 
    The presentation [Bias-Variance in Machine
-Learning](http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.pdf) shows a way to measure bias and variance, separately. The mean sqaure error (MSE) for a given `x` is written as
-  
+Learning](http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.pdf) shows a way to measure bias and variance, separately. The mean sqaure error (MSE) for a given $\symbf{x}$ is written as
+
+$$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(f(x)+\epsilon -\hat{y}\big)^2] = \mathbb{E}[(f-\hat{y}^2)] = \mathbb{E}[\big((f-h)+(h-\hat{y})\big)^2].$$
+
 <a href="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(f(x)&plus;\epsilon&space;-\hat{y}\big)^2]&space;=&space;E[(f-\hat{y}^2)]&space;=&space;E[\big((f-h)&plus;(h-\hat{y})\big)^2]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(f(x)&plus;\epsilon&space;-\hat{y}\big)^2]&space;=&space;E[(f-\hat{y}^2)]&space;=&space;E[\big((f-h)&plus;(h-\hat{y})\big)^2]" title="E[(y-\hat{y})^2] = E[\big(f(x)+\epsilon -\hat{y}\big)^2] = E[(f-\hat{y}^2)] = E[\big((f-h)+(h-\hat{y})\big)^2]" /></a>
 
 Note `f(x)` denotes a possible best model, and the true target value from data, `y = f(x) + `<img src="https://latex.codecogs.com/gif.latex?\varepsilon" title="\varepsilon" />, where <img src="https://latex.codecogs.com/gif.latex?\varepsilon" title="\varepsilon" /> is irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions <img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;\equiv&space;h_D(x)" title="\hat{y} \equiv h_D(x)" />, and
 <img src="https://latex.codecogs.com/gif.latex?h\equiv&space;E_D[h_D(x)]" title="h\equiv E_D[h_D(x)]" /> is the long-term expectation of learners' predictions on `x` averaged over more data from `D`.
 
 So the MSE is
+
+$$\mathbb{E}[(f-h)^2+(h-\hat{y})^2+2(f-h)(h-\hat{y})] = \mathbb{E}[(f-h)^2]+\mathbb{E}[(h-\hat{y})^2]$$
 
 <a href="https://latex.codecogs.com/gif.latex?E[(f-h)^2&plus;(h-\hat{y})^2&plus;2(f-h)(h-\hat{y})]&space;=&space;E[(f-h)^2]&plus;E[(h-\hat{y})^2]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(f-h)^2&plus;(h-\hat{y})^2&plus;2(f-h)(h-\hat{y})]&space;=&space;E[(f-h)^2]&plus;E[(h-\hat{y})^2]" title="E[(f-h)^2+(h-\hat{y})^2+2(f-h)(h-\hat{y})] = E[(f-h)^2]+E[(h-\hat{y})^2]" /></a>
 
