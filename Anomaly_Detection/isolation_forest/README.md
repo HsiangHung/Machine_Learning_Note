@@ -101,7 +101,7 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
 
 3. Additionally, iForest has “a low constant and low memory requirement” i.e. low overhead. Specifics: the number of external nodes is n since each observation, n, is isolated by itself. The total number of internal nodes is clearly n-1, and the total number nodes is 2n-1. Hence, we see why the **memory requirement** is bounded and **grows linearly with n**.
 
-4. Isolation tree node definition: T is either a childless external node or an internal node with one test and exactly two daughter nodes (Tₗ, Tᵣ). To build an iTree, we recursively divide X by randomly selecting an attribute q and a split value p until either: 
+4. Isolation tree node definition: T is either a childless external node or an internal node with one test and exactly two daughter nodes $(T_l, T_r)$. To build an iTree, we recursively divide X by randomly selecting an attribute q and a split value p until either: 
    *  the tree reaches a height limit
    *  all observations are isolated at their own external node
    *  all data have the same values for all attributes.
