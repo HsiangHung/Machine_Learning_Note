@@ -129,10 +129,10 @@ Note, in a convex function, the local minimum global minimum. See the [proof](ht
 
 It is a method for finding the root of a function, rather than its maxima or minima. This means that, if the problem satisfies the constraints of Newton’s method, we can find `x` for which `f(x)=0`. **NOT** `f'(x)=0`, as was the case for gradient descent. Therefore, we, apply Newton’s method on the **derivative** `f'(x)` of the cost function (`f''(x)`, second-order derivatives), not on the cost function itself [[Gabriele De Luca]][Gradient Descent vs. Newton’s Gradient Descent], [[Stack overflow: What is the difference between Gradient Descent and Newton's Gradient Descent?]][What is the difference between Gradient Descent and Newton's Gradient Descent?].
 
-$$x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}$$
+$$x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}.$$
 
 
-For multivariate, $f^{\prime \prime}(x)$ turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], we assume $f=f(x,y)$ then
+For multivariate, $f^{\prime \prime}(x)$ turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], we assume $f=f(x,y)$, then
 
 $$x_{n+1} = x_n - [\mathbf{H} f]^{-1}f^{\prime}(x_n).$$
 
@@ -151,11 +151,10 @@ The analytic expression for the second derivative is often complicated or intrac
 
 Newton method attracts to saddle points and saddle points are common in machine learning. As an example in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], if 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)&space;=&space;x^2-y^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)&space;=&space;x^2-y^2" title="f = f(x,y) = x^2-y^2" /></a>
 
 $$f = f(x,y) = x^2-y^2$$
 
-you see how the Newton method led you to the saddle point at `x = y = 0`. In contrast, the gradient descent method will not lead to the saddle point. The gradient is zero at the saddle point, but a tiny step out would pull the optimization away as you can see from the gradient above - its gradient on y-variable is negative.
+you see how the Newton method led you to the saddle point at $x = y = 0$$. In contrast, the gradient descent method will not lead to the saddle point. The gradient is zero at the saddle point, but a tiny step out would pull the optimization away as you can see from the gradient above - its gradient on y-variable is negative.
 
 
 ### Reference
