@@ -89,9 +89,9 @@ Tuning bias-variance tradeoff is hard, however. Increasing the bias will decreas
 
 Below are two examples of configuring the bias-variance trade-off for specific algorithms: 
 
-(1) The k-nearest neighbors algorithm has low bias and high variance, but the trade-off can be changed by increasing the value of k which increases the number of neighbors that contribute to the prediction and in turn increases the bias of the model 
+(1) The $k$-nearest neighbors algorithm has low bias and high variance, but the trade-off can be changed by increasing the value of $k$ which increases the number of neighbors that contribute to the prediction and in turn increases the bias of the model 
 
-(2) The support vector machine algorithm has low bias and high variance, but the trade-off can be changed by increasing the C parameter that influences the number of violations of the margin allowed in the training data which increases the bias but decreases the variance.
+(2) The support vector machine algorithm has low bias and high variance, but the trade-off can be changed by increasing the $C$ parameter that influences the number of violations of the margin allowed in the training data which increases the bias but decreases the variance.
 
 (3) For linear regression and logistic regression, we can add regularization. By increasing the regularization strength, we move from high variance to low variance. However, in the large limit of the regularization strength, we reach high bias. The tradeoff should be chosen at best performance using cross validation dataset.
 
