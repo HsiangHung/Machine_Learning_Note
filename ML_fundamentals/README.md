@@ -50,7 +50,7 @@ The $L_q$ norms with $q < 1$ is not convex, so difficult to optimize [Cross Vali
 
 ## 3. $L_1$ / $L_2$ regularization distribution
 
-$L_1$ and $L_2$ regularization correspond to the priors of MAP in Bayesian. See [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Bayesian_%26_MCMC#22-map). $L_2$ regularization is equivalent to **Gaussian** prior [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?]][Why is the $L_2$ regularization equivalent to Gaussian prior?], whereas $L_1$ corresponds to [Laplace prior](https://en.wikipedia.org/wiki/Laplace_distribution) (double exponential distribution).
+$L_1$ and $L_2$ regularization correspond to the priors of MAP in Bayesian. See [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Bayesian_%26_MCMC#22-map). $L_2$ regularization is equivalent to **Gaussian** prior [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?]][Why is the L2 regularization equivalent to Gaussian prior?], whereas L1 corresponds to [Laplace prior](https://en.wikipedia.org/wiki/Laplace_distribution) (double exponential distribution).
 
 
 The main intuitive difference between the L1 and L2 regularization is that L1 regularization tries to estimate the **median** while the L2 regularization tries to estimate the **mean** to avoid overfitting [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference]. Here is the intuition explanation: [L1 regression estimates median whereas L2 regression estimates mean?](https://stats.stackexchange.com/questions/34613/l1-regression-estimates-median-whereas-l2-regression-estimates-mean). The post [[Neelam Tyagi]][L2 and L1 Regularization in Machine Learning] has more comprehensive comparison.
