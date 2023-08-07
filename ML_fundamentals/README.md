@@ -85,11 +85,13 @@ Given probability distribution $p$, it tells us how unpredictable the probabilit
 
 $$H(p) = - \sum_i p_i \log p_i$$
 
-Say, a fair coin, $p(H) = p(T) = 1/2$, then $H = log2$. But if $p(H) = 0.99$, then $H \sim \theta$, i.e. less uncertainty.
+Say, a fair coin, $p(H) = p(T) = 1/2$, then $H = \log 2$. But if $p(H) = 0.99$, then $H \sim \theta$, i.e. less uncertainty.
 
 ### 4.2 Cross-Entropy
 
-Cross-Entropy is a function of both true probability distribution `p` and predicted probability distribution `q`:
+Cross-Entropy is a function of both true probability distribution $p$ and predicted probability distribution $q$:
+
+$$H(p, q) = - \sum_i p_i \log q_i$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H(p,&space;q)&space;=&space;-&space;\sum_i&space;p_i&space;\log&space;q_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(p,&space;q)&space;=&space;-&space;\sum_i&space;p_i&space;\log&space;q_i" title="H(p, q) = - \sum_i p_i \log q_i" /></a>
 
