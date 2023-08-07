@@ -66,13 +66,12 @@ Learning](http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.pdf) shows a way to
 
 $$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(f(x)+\epsilon -\hat{y}\big)^2] = \mathbb{E}[(f-\hat{y}^2)] = \mathbb{E}[ (f-h)^2 + (h-\hat{y})^2].$$
 
-Note $f(\symbf{x})$ denotes a possible best model, and the true target value from data, $y = f(x) + \varepsilon$, where $\varepsilon$ is the irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions $\hat{y} \equiv h_D(x)$, and $h\equiv \mathbb{E}_D[h_D(x)]$ is the long-term expectation of learners' predictions on `x` averaged over more data from $D$.
+Note $f(\symbf{x})$ denotes a possible best model, and the true target value from data, $y = f(\symbf{x}) + \varepsilon$, where $\varepsilon$ is the irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions $\hat{y} \equiv h_D(\symbf{x})$, and $h\equiv \mathbb{E}_D[h_D(x)]$ is the long-term expectation of learners' predictions on $\symbf{x}$ averaged over more data from $D$.
 
 So the MSE is
 
-$$\mathbb{E}[(f-h)^2+(h-\hat{y})^2+2(f-h)(h-\hat{y})] = \mathbb{E}[(f-h)^2]+\mathbb{E}[(h-\hat{y})^2]$$
+$$\mathbb{E}[(f-h)^2+(h-\hat{y})^2+2(f-h)(h-\hat{y})] = \mathbb{E}[(f-h)^2]+\mathbb{E}[(h-\hat{y})^2].$$
 
-<a href="https://latex.codecogs.com/gif.latex?E[(f-h)^2&plus;(h-\hat{y})^2&plus;2(f-h)(h-\hat{y})]&space;=&space;E[(f-h)^2]&plus;E[(h-\hat{y})^2]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(f-h)^2&plus;(h-\hat{y})^2&plus;2(f-h)(h-\hat{y})]&space;=&space;E[(f-h)^2]&plus;E[(h-\hat{y})^2]" title="E[(f-h)^2+(h-\hat{y})^2+2(f-h)(h-\hat{y})] = E[(f-h)^2]+E[(h-\hat{y})^2]" /></a>
 
 The first term is **Bias square**. If our model reaches the best possible model, then the first term is determined by the irreducible errors only and should be minimized, denoting that our model is low-bias. 
 
