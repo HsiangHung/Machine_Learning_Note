@@ -17,7 +17,7 @@ $$\hat{y} = \hat{f}(\symbf{x}).$$
 
 Then the expected value of squared difference btween the prediction $\hat{y}$ and actual value $y$, 
 
-$$\mathbf{E}[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2$$
+$$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = \mathbb{E}[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\epsilon^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\epsilon^2" title="E[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2" /></a>
 
