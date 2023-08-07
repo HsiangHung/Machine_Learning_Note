@@ -17,9 +17,8 @@ $$\hat{y} = \hat{f}(\symbf{x}).$$
 
 Then the expected value of squared difference btween the prediction $\hat{y}$ and actual value $y$, 
 
-$$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = \mathbb{E}[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2$$
+$$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = \mathbb{E}[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2.$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\epsilon^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(\hat{f}(X)&plus;\epsilon&space;-\hat{f}(X)\big)^2]&space;=&space;E[\big(f(X)-\hat{f}(X)\big)^2]&space;&plus;&space;\epsilon^2" title="E[(y-\hat{y})^2] = E[\big(\hat{f}(X)+\epsilon -\hat{f}(X)\big)^2] = E[\big(f(X)-\hat{f}(X)\big)^2] + \epsilon^2" /></a>
 
 The first term is reducible erros: Bias + Variance and the second term is irreducible, i.e. Bayes error [[Cross Validated: What is Bayes Error in machine learning?]][What is Bayes Error in machine learning?]. The irreducible error is the lower bound error from a perfect model.
 
@@ -27,7 +26,7 @@ The first term is reducible erros: Bias + Variance and the second term is irredu
 
 The bias is error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (**underfitting**) [[Quora: Yisong Yue]][What are the differences between Random Forest and Gradient Tree Boosting algorithms?].
 
-Generally, **parametric algorithms** have a **high bias** making them fast to learn and easier to understand but generally less flexible [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]. In turn, they have **lower predictive performance**. In Blog [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning], Jason interpreted Low-Bias/High-Bias as less/more assumptions about the form of the target function (`y = f(x)`). 
+Generally, **parametric algorithms** have a **high bias** making them fast to learn and easier to understand but generally less flexible [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning]. In turn, they have **lower predictive performance**. In Blog [[Jason Brownlee]][Gentle Introduction to the Bias-Variance Trade-Off in Machine Learning], Jason interpreted Low-Bias/High-Bias as less/more assumptions about the form of the target function ($\hat{y} = \hat{f}(\symbf{x})$). 
 
 Examples of low-bias ML algorithms are **Decision Trees**, **k-Nearest Neighbors** and **Support Vector Machines**, where high-bias algorithms are **Linear Regression**, **Linear Discriminant Analysis** and **Logistic Regression** [[Deepanshu Bhalla]][UNDERSTANDING BIAS-VARIANCE TRADEOFF]. Note random forest and boosting are non-parametric; do not confuse the hyperparameters. The parameters in the parametrical models point to the assumptions regarding the data distribution. The post [[StachExchange: Are Random Forest and Boosting parametric or non-parametric?]][Are Random Forest and Boosting parametric or non-parametric?] has clearified the concept. Peter even further explain: In statistical sense, the model is parametric, if **parameters are learned** or **inferred** based on the **data**. A tree in this sense is nonparametric. Of course the tree depth is a parameter of the algorithm, but it is not inherently derived from the data, but rather an input parameter that has to be provided by the user.
 
