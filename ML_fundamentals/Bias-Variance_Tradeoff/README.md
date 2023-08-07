@@ -99,7 +99,7 @@ Below are two examples of configuring the bias-variance trade-off for specific a
    
 ![andrew-regularization](images/Andrew-regularization.png)
 
-Also, the learning curve can be used for model selection. A good example is that models will be over-complicated if we consider many polynomial terms, and over-simple if few terms. 
+   Also, the learning curve can be used for model selection. A good example is that models will be over-complicated if we consider many polynomial terms, and over-simple if few terms. 
 
 ![andrew-model](images/Andrew-model_selection.png)
 
