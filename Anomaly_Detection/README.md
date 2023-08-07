@@ -174,7 +174,7 @@ Isolation forest’s basic principle is that outliers are few and far from the r
 
 In the isolation forest method, an outlier score can computed for each observation (from [wiki](https://en.wikipedia.org/wiki/Isolation_forest)):
 
-$$s(x, n) = 2^{-\frac{E(h(x))}{c(n)}}$$
+$$s(x, n) = 2^{-\frac{\mathbb{E}[h(x)]}{c(n)}}$$
 
 where $E(h(x))$ is the average value of $h(x)$ from a collection of iTrees; $h(x)$ is the **`path length`** of the sample $x$, and $c(n)$ is the ‘unsuccessful length search’ of a binary tree (the maximum path length of a binary tree from root to external node); $n$ is the number of external nodes. 
 
