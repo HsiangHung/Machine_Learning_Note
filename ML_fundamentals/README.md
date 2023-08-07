@@ -56,9 +56,9 @@ $\textrm{L}_1$ and $\textrm{L}_2$ regularization correspond to the priors of MAP
 The main intuitive difference between the $\textrm{L}_1$ and $\textrm{L}_2$ regularization is that $\textrm{L}_1$ regularization tries to estimate the **median** while the $\textrm{L}_2$ regularization tries to estimate the **mean** to avoid overfitting [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference]. Here is the intuition explanation: [L1 regression estimates median whereas L2 regression estimates mean?](https://stats.stackexchange.com/questions/34613/l1-regression-estimates-median-whereas-l2-regression-estimates-mean). The post [[Neelam Tyagi]][L2 and L1 Regularization in Machine Learning] has more comprehensive comparison.
 
 
-Another difference between them is that L1 regularization helps in **feature selection** by eliminating the features that are not important. This is helpful when the number of feature points are large in number [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference].
+Another difference between them is that $\textrm{L}_1$ regularization helps in **feature selection** by eliminating the features that are not important. This is helpful when the number of feature points are large in number [[Dhaval Taunk]][L1 vs L2 Regularization: The intuitive difference].
 
-We all know why L1 regularization has chance to surpress coefficient. The following gives a better picture and explanation (credit from [[Terence Parr]][The difference between L1 and L2 regularization]):
+We all know why $\textrm{L}_1$ regularization has chance to surpress coefficient. The following gives a better picture and explanation (credit from [[Terence Parr]][The difference between L1 and L2 regularization]):
 
 ![](images/Lasso_ridge_regularization.png)
 
