@@ -36,7 +36,7 @@ So far the step 1-3 can be summarized below
 
 * **Step 4** — Feeding data set and calculating anomaly score, which is defined as 
 
-$$S(x, n) = e^{-\frac{\mathbb{E}[h(x)]}{c(n)}}$$
+$$S(x, n) = 2^{-\frac{\mathbb{E}[h(x)]}{c(n)}}$$
 
 Given a data point, we have an anomaly score for each tree and get the final anomaly score for an entire forest by the mean value across different trees. $h(x)$ is the path length for $x$, and $\mathbb{E}[h(x)]$ denotes mean path length. 
 
@@ -106,7 +106,7 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
    *  all observations are isolated at their own external node
    *  all data have the same values for all attributes.
 
-5. Path length. The path length h(x) of an observation x is measured by the number of edges x traverses an iTree from the root node until transversal is terminated at an external node. $\mathbb{E}[h(x)]$ is the average of $h(x)$ from a collection of isolation trees. An anomaly score, $S(x, n)$, can be derived from the **average** path length, $\mathbb{E}[h(x)]: S(x, n) = 2^[− \mathbb{E}[h(x)] / c(n)]$. Basically, there is a monotonic relationship between $S(x,n)$ and $\mathbb{E}[h(x)]$ The term $c(n)$ is a constant for any given, static data set.
+5. Path length. The path length $h(x)$ of an observation x is measured by the number of edges x traverses an iTree from the root node until transversal is terminated at an external node. $\mathbb{E}[h(x)]$ is the average of $h(x)$ from a collection of isolation trees. An anomaly score, $S(x, n)$, can be derived from the **average** path length, $\mathbb{E}[h(x)]: S(x, n) = 2^[− \mathbb{E}[h(x)] / c(n)]$. Basically, there is a monotonic relationship between $S(x,n)$ and $\mathbb{E}[h(x)]$ The term $c(n)$ is a constant for any given, static data set.
 
 6. Only requires user to set two variables in isolation forest: **the number of trees** to build and the **sub-sampling size**. 
 
