@@ -89,11 +89,10 @@ Say, a fair coin, $p(H) = p(T) = 1/2$, then $H = \log 2$. But if $p(H) = 0.99$, 
 
 ### 4.2 Cross-Entropy
 
-Cross-Entropy is a function of both true probability distribution $p$ and predicted probability distribution $q$:
+Cross-Entropy is a function of both **true** probability distribution $p$ and **predicted** probability distribution $q$:
 
 $$H(p, q) = - \sum_i p_i \log q_i$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H(p,&space;q)&space;=&space;-&space;\sum_i&space;p_i&space;\log&space;q_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(p,&space;q)&space;=&space;-&space;\sum_i&space;p_i&space;\log&space;q_i" title="H(p, q) = - \sum_i p_i \log q_i" /></a>
 
 If our predictions are perfect, that is the predicted distribution is equal to the true distribution, then the cross-entropy is simply equal to entropy. But, if the distributions differ, then the cross-entropy will be greater than the entropy by some number of bits. This amount by which the cross-entropy exceeds the entropy is called the **Relative Entropy** or more commonly known as the **Kullback-Leibler Divergence (KL Divergence)**. (see [Aakarsh Yelisetty: Entropy, Cross-Entropy, and KL-Divergence Explained!](https://towardsdatascience.com/entropy-cross-entropy-and-kl-divergence-explained-b09cdae917a))
 
@@ -107,7 +106,9 @@ Kullback-Leibler Divergence measures information lost.
 Cross_entropy = Entropy + KL-divergence
 ```
 
-In layman’s terms, the K-L divergence is a measure of how different a specific probability distribution is from a reference distribution [[Christiaan Defaux]][Kullback-Leibler Divergence for Machine Learning]. In the following, D(K-L) is the divergence of q from p:
+In layman’s terms, the K-L divergence is a measure of how different a specific probability distribution is from a reference distribution [[Christiaan Defaux]][Kullback-Leibler Divergence for Machine Learning]. In the following, $D(K-L)$ is the divergence of $q$ from $p$:
+
+$$D_{KL}(p||q) = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_{KL}(p||q)&space;=&space;\big(-\sum_i&space;p_i&space;\log&space;q_i&space;\big)&space;-&space;\big(&space;-\sum_i&space;p_i&space;\log&space;p_i&space;\big)&space;=&space;\sum_i&space;p_i&space;\log&space;\Big(&space;\frac{p_i}{q_i}\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{KL}(p||q)&space;=&space;\big(-\sum_i&space;p_i&space;\log&space;q_i&space;\big)&space;-&space;\big(&space;-\sum_i&space;p_i&space;\log&space;p_i&space;\big)&space;=&space;\sum_i&space;p_i&space;\log&space;\Big(&space;\frac{p_i}{q_i}\Big)" title="D_{KL}(p||q) = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)" /></a>
 
