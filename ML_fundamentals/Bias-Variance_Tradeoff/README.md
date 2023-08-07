@@ -64,7 +64,7 @@ Training error is low but test erro is high. More training data could be helpful
    The presentation [Bias-Variance in Machine
 Learning](http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.pdf) shows a way to measure bias and variance, separately. The mean sqaure error (MSE) for a given $\symbf{x}$ is written as
 
-$$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(f(x)+\epsilon -\hat{y}\big)^2] = \mathbb{E}[(f-\hat{y}^2)] = \mathbb{E}[\big((f-h)^2+(h-\hat{y})\big)^2].$$
+$$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(f(x)+\epsilon -\hat{y}\big)^2] = \mathbb{E}[(f-\hat{y}^2)] = \mathbb{E}[ (f-h)^2 + (h-\hat{y})^2].$$
 
 <a href="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(f(x)&plus;\epsilon&space;-\hat{y}\big)^2]&space;=&space;E[(f-\hat{y}^2)]&space;=&space;E[\big((f-h)&plus;(h-\hat{y})\big)^2]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(f(x)&plus;\epsilon&space;-\hat{y}\big)^2]&space;=&space;E[(f-\hat{y}^2)]&space;=&space;E[\big((f-h)&plus;(h-\hat{y})\big)^2]" title="E[(y-\hat{y})^2] = E[\big(f(x)+\epsilon -\hat{y}\big)^2] = E[(f-\hat{y}^2)] = E[\big((f-h)+(h-\hat{y})\big)^2]" /></a>
 
