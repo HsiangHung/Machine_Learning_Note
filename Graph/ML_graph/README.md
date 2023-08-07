@@ -178,3 +178,6 @@ The combination of expansion and inflation will boost the probabilities of walks
 
 * [Effective community detection with Markov Clustering]: https://towardsdatascience.com/effective-community-detection-with-markov-clustering-d5c6abee11b2
 [[Mehul Gupta] Effective community detection with Markov Clustering](https://towardsdatascience.com/effective-community-detection-with-markov-clustering-d5c6abee11b2)
+
+* [Markov Clustering Algorithm]: https://towardsdatascience.com/markov-clustering-algorithm-577168dad475
+[[Arun Jagota] Markov Clustering Algorithm](https://towardsdatascience.com/markov-clustering-algorithm-577168dad475)
