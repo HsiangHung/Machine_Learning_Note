@@ -131,13 +131,12 @@ It is a method for finding the root of a function, rather than its maxima or min
 
 $$x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;&plus;&space;\frac{f^{\prime}(x_n)}{f^{\prime&space;\prime}(x_n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;&plus;&space;\frac{f^{\prime}(x_n)}{f^{\prime&space;\prime}(x_n)}" title="x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}" /></a>
 
-For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], assume <a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)" title="f = f(x,y)" /></a>, $ f= f(x,y)$, then
+For multivariate, `f''(x)` turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], assume $ f= f(x,y)$, then
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" title="x_{n+1} = x_n - [\bold H f]^{-1}f^{\prime}(x_n)" /></a>
 
-$$x_{n+1} = x_n - [\bold H f]^{-1}f^{\prime}(x_n).$$
+$$x_{n+1} = x_n - [\mathbf{H} f]^{-1}f^{\prime}(x_n).$$
 
 ### 6.1 Primary difference
 
