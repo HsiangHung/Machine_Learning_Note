@@ -41,14 +41,14 @@ In this we can only save key ,value, location only for non zero elements:
 
 ## 2. Why only L1 and L2 regularization but not other norms?
 
-The $L_q$ norms with $q < 1$ is not convex, so difficult to optimize [Cross Validated: Why do we only see L1 and L2 regularization but not other norms?
+The $L_q$ norms with $q < 1$ is not convex, so difficult to optimize [Cross Validated: Why do we only see $L_1$ and $L_2$ regularization but not other norms?
 ](https://stats.stackexchange.com/questions/269298/why-do-we-only-see-l-1-and-l-2-regularization-but-not-other-norms). L1 and L2 corresponds to Manhattan norm and Euclidean norm of complex numbers [wiki](https://en.wikipedia.org/wiki/Norm_(mathematics)). Other norm (credit from the book: [Statistical Learning with Sparsity](http://web.stanford.edu/~hastie/StatLearnSparsity/)):
 
 
 ![Lq_regularization](images/Lq_regularization.png)
 
 
-## 3. $L_1$/$L_2$ regularization distribution
+## 3. $L_1$ / $L_2$ regularization distribution
 
 $L_1$ and $L_2$ regularization correspond to the priors of MAP in Bayesian. See [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Bayesian_%26_MCMC#22-map). $L_2$ regularization is equivalent to **Gaussian** prior [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?]][Why is the $L_2$ regularization equivalent to Gaussian prior?], whereas $L_1$ corresponds to [Laplace prior](https://en.wikipedia.org/wiki/Laplace_distribution) (double exponential distribution).
 
