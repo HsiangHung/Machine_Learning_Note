@@ -132,28 +132,28 @@ It is a method for finding the root of a function, rather than its maxima or min
 $$x_{n+1} = x_n + \frac{f^{\prime}(x_n)}{f^{\prime \prime}(x_n)}$$
 
 
-For multivariate, $f^{\prime \prime}(x)$ turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], assume $ f= f(x,y)$, then
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{n&plus;1}&space;=&space;x_n&space;-&space;[\bold&space;H&space;f]^{-1}f^{\prime}(x_n)" title="x_{n+1} = x_n - [\bold H f]^{-1}f^{\prime}(x_n)" /></a>
+For multivariate, $f^{\prime \prime}(x)$ turns to the Hessian matrix. For example, in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], we assume $f=f(x,y)$ then
 
 $$x_{n+1} = x_n - [\mathbf{H} f]^{-1}f^{\prime}(x_n).$$
 
 ### 6.1 Primary difference
 
-1. The first difference lies in the fact that gradient descent is parametric according to the learning rate `\alpha`. Newton’s method isn’t parametric, which means that we can apply it without worrying for hyperparameter optimization. (A parametric version of Newton’s method also exists, in truth, but it only applies in cases for which we operate with a polynomial function with multiple roots.)
+1. The first difference lies in the fact that gradient descent is parametric according to the learning rate $\alpha$. Newton’s method isn’t parametric, which means that we can apply it without worrying for hyperparameter optimization. (A parametric version of Newton’s method also exists, in truth, but it only applies in cases for which we operate with a polynomial function with multiple roots.)
 
 2. The second difference has to do with the cost function on which we apply the algorithm. Newton’s method has **stronger constraints in terms of the differentiability of the function than gradient descent**. If the second derivative of the function is undefined in the function’s root, then we can apply gradient descent on it but not Newton’s method.
 
-3. The third difference consists of the behavior around stationary points. If gradient descent encounters a stationary point during iteration, the program continues to run, albeit the parameters don’t update. Newton’s method, however, we have `f'(x) = f''(x) = 0`. The program that runs it would therefore terminate.
+3. The third difference consists of the behavior around stationary points. If gradient descent encounters a stationary point during iteration, the program continues to run, albeit the parameters don’t update. Newton’s method, however, we have $f^{\prime}(x) = f^{\prime \prime}(x) = 0$. The program that runs it would therefore terminate.
 
 
 ### 6.2 Why is Newton's method not widely used in machine learning?
 
-The analytic expression for the second derivative is often complicated or intractable, requiring a lot of computation. Numerical methods for computing the second derivative also require a lot of computation, `O(N^2)`, where `N` is the number of features. On the other hand, computing the gradient is only `O(N)`. But the next step to invert Hessian, which is `O(N^3)`. So while computing the Hessian is expensive, inverting it or solving least squares is often even worse.
+The analytic expression for the second derivative is often complicated or intractable, requiring a lot of computation. Numerical methods for computing the second derivative also require a lot of computation, $O(N^2)$, where $N$ is the number of features. On the other hand, computing the gradient is only $O(N)$. But the next step to invert Hessian, which is $O(N^3)$. So while computing the Hessian is expensive, inverting it or solving least squares is often even worse.
 
 Newton method attracts to saddle points and saddle points are common in machine learning. As an example in [[Cross Validated: Why is Newton's method not widely used in machine learning?]][Why is Newton's method not widely used in machine learning?], if 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f&space;=&space;f(x,y)&space;=&space;x^2-y^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;=&space;f(x,y)&space;=&space;x^2-y^2" title="f = f(x,y) = x^2-y^2" /></a>
+
+$$f = f(x,y) = x^2-y^2$$
 
 you see how the Newton method led you to the saddle point at `x = y = 0`. In contrast, the gradient descent method will not lead to the saddle point. The gradient is zero at the saddle point, but a tiny step out would pull the optimization away as you can see from the gradient above - its gradient on y-variable is negative.
 
