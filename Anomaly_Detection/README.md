@@ -218,9 +218,27 @@ An outlier can affect the mean of a data set by skewing the results so that the 
 
 The effect of an outlier in regression is mentioned [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Regression#4-effects-of-an-outlier-on-regression).
 
+
+## 8. Outlier Detection Algorithm Comparison
+
+The blog author [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now] compare some outlier detection (OD) algorithms across a variety of datasets, based on ROC performance and Precision. He took benchmark data from the authors of the Python Outlier Detection package (PyOD; [original paper](https://www.jmlr.org/papers/volume20/19-011/19-011.pdf)) and applied row-wise green-red gradient conditional formatting in Excel. 
+
+Dark **green** indicates the best performing algorithm for a dataset and dark **red** indicates the worst performing.
+
+For ROC performances:
+![](images/ROC_performance.png)
+
+For precision @ N performances:
+![](images/precision_performance.png)
+
+iForest is the fastest performing algorithm for its performance. PCA and Histogram-based Outlier Score (HBOS; paper, poster) are expectedly faster across all datasets. k-nearest-neighbors (KNN) is much slower and scales terribly with more observations, N:
+![](images/timespent_comparison.png)
+
+
 ## Reference
 
-
+* [Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now]: https://towardsdatascience.com/isolation-forest-is-the-best-anomaly-detection-algorithm-for-big-data-right-now-e1a18ec0f94f
+[[Andrew Young] Isolation Forest is the best Anomaly Detection Algorithm for Big Data Right Now](https://towardsdatascience.com/isolation-forest-is-the-best-anomaly-detection-algorithm-for-big-data-right-now-e1a18ec0f94f)
 * [5 SMOTE Techniques for Oversampling your Imbalance Data]: https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5
 [[Cornellius Yudha Wijaya] 5 SMOTE Techniques for Oversampling your Imbalance Data](https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5)
 * [Dealing with Imbalanced Classes in Machine Learning]: https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2

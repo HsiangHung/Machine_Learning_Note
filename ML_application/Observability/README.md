@@ -9,6 +9,9 @@ In other words, traditional monitoring tools work by checking system conditions 
 
 In contrast, observability tools work by enabling iterative **exploratory** investigations to systematically determine where and why performance issues may be occurring. Observability enables a **proactive** approach to identifying any failure mode, whether previously known or unknown.
 
+## Telemetry Data
+
+Observability tools pull high-cardinality, high-dimensionality context from telemetry data into a single location where investigators can easily slice and dice to zoom in, zoom out, or follow breadcrumbs to find definitive answers.
 
 
 * [What is Data Observability?]: https://www.youtube.com/watch?v=jfg9wBJBtKk
