@@ -66,9 +66,7 @@ Learning](http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.pdf) shows a way to
 
 $$\mathbb{E}[(y-\hat{y})^2] = \mathbb{E}[\big(f(x)+\epsilon -\hat{y}\big)^2] = \mathbb{E}[(f-\hat{y}^2)] = \mathbb{E}[ (f-h)^2 + (h-\hat{y})^2].$$
 
-<a href="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(f(x)&plus;\epsilon&space;-\hat{y}\big)^2]&space;=&space;E[(f-\hat{y}^2)]&space;=&space;E[\big((f-h)&plus;(h-\hat{y})\big)^2]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[(y-\hat{y})^2]&space;=&space;E[\big(f(x)&plus;\epsilon&space;-\hat{y}\big)^2]&space;=&space;E[(f-\hat{y}^2)]&space;=&space;E[\big((f-h)&plus;(h-\hat{y})\big)^2]" title="E[(y-\hat{y})^2] = E[\big(f(x)+\epsilon -\hat{y}\big)^2] = E[(f-\hat{y}^2)] = E[\big((f-h)+(h-\hat{y})\big)^2]" /></a>
-
-Note `f(x)` denotes a possible best model, and the true target value from data, `y = f(x) + `<img src="https://latex.codecogs.com/gif.latex?\varepsilon" title="\varepsilon" />, where <img src="https://latex.codecogs.com/gif.latex?\varepsilon" title="\varepsilon" /> is irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions <img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;\equiv&space;h_D(x)" title="\hat{y} \equiv h_D(x)" />, and
+Note $f(x)$ denotes a possible best model, and the true target value from data, $y = f(x) + \varepsilon $ <img src="https://latex.codecogs.com/gif.latex?\varepsilon" title="\varepsilon" />, where $\varepsilon$ <img src="https://latex.codecogs.com/gif.latex?\varepsilon" title="\varepsilon" /> is irreducible error. In other words, there are always irreducible errors we cannot interpret. Each learner gives predictions <img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;\equiv&space;h_D(x)" title="\hat{y} \equiv h_D(x)" /> $\hat{y} \equiv h_D(x)$, and
 <img src="https://latex.codecogs.com/gif.latex?h\equiv&space;E_D[h_D(x)]" title="h\equiv E_D[h_D(x)]" /> is the long-term expectation of learners' predictions on `x` averaged over more data from `D`.
 
 So the MSE is
