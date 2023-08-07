@@ -110,8 +110,6 @@ In layman’s terms, the K-L divergence is a measure of how different a specific
 
 $$D_{KL}(p||q) = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_{KL}(p||q)&space;=&space;\big(-\sum_i&space;p_i&space;\log&space;q_i&space;\big)&space;-&space;\big(&space;-\sum_i&space;p_i&space;\log&space;p_i&space;\big)&space;=&space;\sum_i&space;p_i&space;\log&space;\Big(&space;\frac{p_i}{q_i}\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{KL}(p||q)&space;=&space;\big(-\sum_i&space;p_i&space;\log&space;q_i&space;\big)&space;-&space;\big(&space;-\sum_i&space;p_i&space;\log&space;p_i&space;\big)&space;=&space;\sum_i&space;p_i&space;\log&space;\Big(&space;\frac{p_i}{q_i}\Big)" title="D_{KL}(p||q) = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)" /></a>
-
 
 The [blog: Kullback-Leibler Divergence Explained](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) shows using KL divergence to minimize how much information loss we have when approximating a distribution. We can combine KL divergence with neural networks allows us to learn very complex approximating distribution for our data. A common approach to this is called a "Variational Autoencoder" which learns the best way to approximate the information in a data set.
 
@@ -121,6 +119,8 @@ The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatasc
 ## 5. Convex Function
 
 The strict definition (from [wiki](https://en.wikipedia.org/wiki/Convex_function)) of a convert function is
+
+$$f(tx_1 + (1-t)x_2) \le tf(x_1) + (1-t)f(x_2), \ 0 < t < 1$$
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f(tx_1&space;&plus;&space;(1-t)x_2)&space;\le&space;tf(x_1)&space;&plus;&space;(1-t)f(x_2),&space;\&space;0&space;<&space;t&space;<&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(tx_1&space;&plus;&space;(1-t)x_2)&space;\le&space;tf(x_1)&space;&plus;&space;(1-t)f(x_2),&space;\&space;0&space;<&space;t&space;<&space;1" title="f(tx_1 + (1-t)x_2) \le tf(x_1) + (1-t)f(x_2), \ 0 < t < 1" /></a>
 
