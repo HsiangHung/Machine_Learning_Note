@@ -47,7 +47,10 @@ $$u(y \vert x) = \frac{1}{K}.$$
 As an example, suppose we have $K = 3$ classes, the label vector is $[1, 0, 0]$. With label smoothing $\epsilon=0.1$, the smoothed label vector is $[0.9333, 0.0333, 0.0333]$. 
 It turns out our loss function became
 
-$$ L^{\prime} = -\sum^N_{i=1} \sum^K_{y=1} \Big( (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x) \Big) \log q_{\theta}(y_i \vert x_i)$$
+$$ L^{\prime} = -\sum^N_{i=1} \sum^K_{y=1} \Big( (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x_i) \Big) \log q_{\theta}(y \vert x_i) = \sum^N_{i=1} \Big( -  \sum^K_{y=1} \Big( (1-\epsilon) p(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big) + \Big( - \sum^K_{y=1} \epsilon u(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big),$$
+
+Eventually the loss fucntion is 
+
 
 
 
