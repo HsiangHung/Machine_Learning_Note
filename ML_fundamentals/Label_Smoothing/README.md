@@ -17,7 +17,9 @@ Label Smoothing is one technique that can help prevent overfitting by encouragin
 
 ## Label Smoothing
 
-Assume in a multiclass classification problem $y_i=\lbrace 1, 2, \cdots, K \rbrace$, the ground truth distribution is $p(y_i \vert x_i)$ and the predicted label distribution (with a model with parameters $\theta$) is $q_{\theta}(y_i \vert x_i)$. The ground truth $y_i$ is a one-hot encoded vector, $y_i =1$ when $x_i$ is labeled as $j$-th class.
+Assume in a multiclass classification problem $y_i=\lbrace 1, 2, \cdots, K \rbrace$, the ground truth distribution is $p(y_i \vert x_i)$ and the predicted label distribution (with a model with parameters $\theta$) is $q_{\theta}(y_i \vert x_i)$. 
+
+In the one-hot encoded vector representation the ground truth $y_i=1$, otherwise $y_i=0$ when $x_i$ instance is labeled as $j$-th class.
 
 The cross entropy loss function would be
 
@@ -25,66 +27,20 @@ $$L = \sum^N_{i=1}H_i(p, q_{\theta}) = -\sum^N_{i=1} p(y_i \vert x_i) \log q_{\t
 
 Label smoothing is given by introducing noise distribution $u(y \vert x)$ on ground truth label. Our new ground truth label for data  became 
 
-$$p^{\prime}(y \vert x) = (1-\epsilon) p(y \vert x_i) \\ + \epsilon u(y \vert x)$$
+$$p^{\prime}(y \vert x) = (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x), $$
 
+where $epsilon$ is a weight factor for fine-tuning. Therefore 
+$$ p^{\prime}(y \vert x) = (1-\epsilon) + \epsilon u(y \vert x), \ \textrm{if} $$
 
-
-
-=
-{
-1
-−
-ε
-+
-ε
-u
-(
-y
-|
-x
-i
-)
-if 
-y
-=
-y
-i
-ε
-u
-(
-y
-|
-x
-i
-)
 otherwise
-Where 
-ε
- is a weight factor, 
-ε
-∈
-[
-0
-,
-1
-]
-, and note that 
-∑
-K
-y
-=
-1
-p
-′
-(
-y
-|
-x
-i
-)
-=
-1
-.
+
+$$ p^{\prime}(y \vert x) = \epsilon u(y \vert x) $$
+
+It turns out our loss function became
+
+$$ L^{\prime} = -\sum^N_{i=1} \sum^K ((1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x)) \log q_{\theta}(y_i \vert x_i)$$
+
+
 
 
 ## Example: Label Smoothing in PyTorch
