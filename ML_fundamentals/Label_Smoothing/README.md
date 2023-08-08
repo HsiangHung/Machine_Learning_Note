@@ -51,7 +51,7 @@ $$ L^{\prime} = -\sum^N_{i=1} \sum^K_{y=1} \Big( (1-\epsilon) p(y \vert x_i) + \
 
 Eventually the loss fucntion is rewritten as 
 
-$$ L^{\prime} = \sum^N_{i=1} \Big( (1-\epsilon) \Big[ -  \sum^K_{y=1} p(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big] + \epsilon \Big[ - \sum^K_{y=1}  u(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big] \Big) = \sum^N_{i=1} \Big( (1-\epsilon) H(p, q_{\theta}) + \epsilon H(u, q_{\theta}) \Big),$$
+$$ L^{\prime} = \sum^N_{i=1} \Big( (1-\epsilon) \Big[ -  \sum^K_{y=1} p(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big] + \epsilon \Big[ - \sum^K_{y=1}  u(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big] \Big) = \sum^N_{i=1} \Big( (1-\epsilon) H_i(p, q_{\theta}) + \epsilon H_i(u, q_{\theta}) \Big),$$
 
 
 
