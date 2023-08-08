@@ -51,9 +51,7 @@ $$ L^{\prime} = -\sum^N_{i=1} \sum^K_{y=1} \Big( (1-\epsilon) p(y \vert x_i) + \
 
 Eventually the loss fucntion is rewritten as 
 
-$$ L^{\prime} = \sum^N_{i=1} \Big( (1-\epsilon) \Big[ -  \sum^K_{y=1} p(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big] + \epsilon \Big[ - \sum^K_{y=1}  u(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big] \Big) = \sum^N_{i=1} \Big( (1-\epsilon) H_i(p, q_{\theta}) + \epsilon H_i(u, q_{\theta}) \Big),$$
-
-
+$$ L^{\prime} = \sum^N_{i=1} \Big( (1-\epsilon) \Big[ -  \sum^K_{y=1} p(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big] + \epsilon \Big[ - \sum^K_{y=1}  u(y \vert x_i) \log q_{\theta}(y \vert x_i) \Big] \Big) = \sum^N_{i=1} \Big( (1-\epsilon) H_i(p, q_{\theta}) + \epsilon H_i(u, q_{\theta}) \Big).$$
 
 
 
@@ -103,10 +101,10 @@ Some recommended summary:
 
 * [Label Smoothing in PyTorch A Guide for Data Scientists]: https://saturncloud.io/blog/label-smoothing-in-pytorch-a-guide-for-data-scientists/
 [[Saturn Cloud] Label Smoothing in PyTorch A Guide for Data Scientists](https://saturncloud.io/blog/label-smoothing-in-pytorch-a-guide-for-data-scientists/)
-
 * [Label Smoothing]: https://leimao.github.io/blog/Label-Smoothing/
 [[Lei Mao] Label Smoothing](https://leimao.github.io/blog/Label-Smoothing/)
-
+* [What is Label Smoothing?]: https://towardsdatascience.com/what-is-label-smoothing-108debd7ef06
+[[Wanshun Wong] What is Label Smoothing?](https://towardsdatascience.com/what-is-label-smoothing-108debd7ef06)
 
 
 
