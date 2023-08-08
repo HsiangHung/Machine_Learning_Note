@@ -25,7 +25,7 @@ $$L = \sum^N_{i=1}H_i(p, q_{\theta}) = -\sum^N_{i=1} p(y_i \vert x_i) \log q_{\t
 
 Label smoothing is given by introducing noise distribution $u(y \vert x)$ on ground truth label. Our new ground truth label for data  became 
 
-$$p^{\prime}(y \vert x) = (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x)$$
+$$p^{\prime}(y \vert x) = (1-\epsilon) p(y \vert x_i) \\ + \epsilon u(y \vert x)$$
 
 
 
