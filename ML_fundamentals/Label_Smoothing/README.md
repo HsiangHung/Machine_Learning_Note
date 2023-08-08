@@ -29,12 +29,13 @@ Label smoothing is given by introducing noise distribution $u(y \vert x)$ on gro
 
 $$p^{\prime}(y \vert x) = (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x), $$
 
-where $epsilon$ is a weight factor for fine-tuning. Therefore 
-$$ p^{\prime}(y \vert x) = (1-\epsilon) + \epsilon u(y \vert x), \ \textrm{if} $$
+where $\epsilon \in [0, 1]$ is a weight factor for fine-tuning. Therefore 
+
+$$ p^{\prime}(y \vert x) = (1-\epsilon) + \epsilon u(y \vert x), \ \textrm{if} y_i = j$$
 
 otherwise
 
-$$ p^{\prime}(y \vert x) = \epsilon u(y \vert x) $$
+$$ p^{\prime}(y \vert x) = \epsilon u(y \vert x).$$
 
 It turns out our loss function became
 
