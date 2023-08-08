@@ -21,7 +21,7 @@ Assume in a multiclass classification problem $y_i=\lbrace 1, 2, \cdots, K \rbra
 
 The cross entropy loss function would be
 
-$$L = \sum^N_{i=1}H_i(p, q_{\theta})$$
+$$L = \sum^N_{i=1}H_i(p, q_{\theta}) = \sum^N_{i=1} p(y_i \vert x_i) \log q_{\theta}(y_i \vert x_i)$$
 
 
 
