@@ -17,7 +17,9 @@ Label Smoothing is one technique that can help prevent overfitting by encouragin
 
 ## Label Smoothing
 
-Assume in a multiclass classification problem $y_i=\lbrace 1, 2, \cdots, K \rbrace$, the ground truth distribution is $p(y_i \vert x_i)$ and the predicted label distribution (with a model with parameters $\theta$) is $q_{\theta}(y_i \vert x_i)$. 
+The below content follows the blog from [[Lei Mao]][Label Smoothing].
+
+Assume in a multiclass classification problem $y_i=\lbrace 1, 2, \cdots, K \rbrace$, the ground truth distribution is $p(y_i \vert x_i)$ and the predicted label distribution (with a model with parameters $\theta$) is $q_{\theta}(y_i \vert x_i)$.
 
 In the one-hot encoded vector representation the ground truth $y_i=1$, otherwise $y_i=0$ when $x_i$ instance is labeled as $j$-th class.
 
@@ -31,15 +33,21 @@ $$p^{\prime}(y \vert x) = (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x), $
 
 where $\epsilon \in [0, 1]$ is a weight factor for fine-tuning. Therefore 
 
-$$ p^{\prime}(y \vert x) = (1-\epsilon) + \epsilon u(y \vert x), \ \textrm{if} y_i = j$$
+$$ p^{\prime}(y \vert x) = (1-\epsilon) + \epsilon u(y \vert x), \ \textrm{ if } y_i = j$$
 
 otherwise
 
 $$ p^{\prime}(y \vert x) = \epsilon u(y \vert x).$$
 
+In practice, $u(y \vert x)$ is a uniform distribution which does not dependent on data:
+
+$$u(y \vert x) = \frac{1}{K}.$$
+
+
+As an example, suppose we have $K = 3$ classes, the label vector is $[1, 0, 0]$. With label smoothing $\epsilon=0.1$, the smoothed label vector $ \sim [0.9333, 0.0333, 0.0333]$. 
 It turns out our loss function became
 
-$$ L^{\prime} = -\sum^N_{i=1} \sum^K ((1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x)) \log q_{\theta}(y_i \vert x_i)$$
+$$ L^{\prime} = -\sum^N_{i=1} \sum^K_{y=1} \Big( (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x) \Big) \log q_{\theta}(y_i \vert x_i)$$
 
 
 
@@ -91,6 +99,8 @@ Some recommended summary:
 * [Label Smoothing in PyTorch A Guide for Data Scientists]: https://saturncloud.io/blog/label-smoothing-in-pytorch-a-guide-for-data-scientists/
 [[Saturn Cloud] Label Smoothing in PyTorch A Guide for Data Scientists](https://saturncloud.io/blog/label-smoothing-in-pytorch-a-guide-for-data-scientists/)
 
+* [Label Smoothing]: https://leimao.github.io/blog/Label-Smoothing/
+[[Lei Mao] Label Smoothing](https://leimao.github.io/blog/Label-Smoothing/)
 
 
 
