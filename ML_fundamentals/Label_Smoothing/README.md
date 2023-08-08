@@ -17,7 +17,7 @@ Label Smoothing is one technique that can help prevent overfitting by encouragin
 
 ## Label Smoothing
 
-Assume in a multiclass classification problem $y_i=\lbrace 1, 2, \cdots, K \rbrace$, the ground truth distribution is $p(y_i \vert x_i)$ and the predicted label distribution (with a model with parameters $\theta$) is $q_{\theta}(y_i \vert x_i)$. The ground truth $y$ is a one-hot encoded vector.
+Assume in a multiclass classification problem $y_i=\lbrace 1, 2, \cdots, K \rbrace$, the ground truth distribution is $p(y_i \vert x_i)$ and the predicted label distribution (with a model with parameters $\theta$) is $q_{\theta}(y_i \vert x_i)$. The ground truth $y_i$ is a one-hot encoded vector, $y_i =1$ when $x_i$ is labeled as $j$-th class.
 
 The cross entropy loss function would be
 
