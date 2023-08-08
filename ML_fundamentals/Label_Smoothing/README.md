@@ -17,7 +17,7 @@ Label Smoothing is one technique that can help prevent overfitting by encouragin
 
 ## Label Smoothing
 
-Assume in a multiclass classification problem $(\symbf{x}_i, y_i=\lbrace 1, 2, \cdots, K \rbrace) $, the ground truth distribution is $p(y_i \vert x_i)$ and the predicted label distribution (with a model with parameters) is $q_{\theta}(y_i \vert x_i)$.
+Assume in a multiclass classification problem $(x_i, y_i=\lbrace 1, 2, \cdots, K \rbrace) $, the ground truth distribution is $p(y_i \vert x_i)$ and the predicted label distribution (with a model with parameters) is $q_{\theta}(y_i \vert x_i)$.
 
 
 
