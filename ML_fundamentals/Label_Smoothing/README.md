@@ -25,26 +25,26 @@ In the one-hot encoded vector representation the ground truth $y_i=1$, otherwise
 
 The cross entropy loss function would be
 
-$$L = \sum^N_{i=1}H_i(p, q_{\theta}) = -\sum^N_{i=1} p(y_i \vert x_i) \log q_{\theta}(y_i \vert x_i).$$
+$$L = \sum^N_{i=1}H_i(p, q_{\theta}) = -\sum^N_{i=1} \sum^K_{y=1} p(y \vert x_i) \log q_{\theta}(y \vert x_i).$$
 
-Label smoothing is given by introducing noise distribution $u(y \vert x)$ on ground truth label. Our new ground truth label for data  became 
+Label smoothing is given by introducing noise distribution $u(y \vert x)$ on ground truth label. Our new ground truth label became 
 
-$$p^{\prime}(y \vert x) = (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x), $$
+$$p^{\prime}(y \vert x_i) = (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x_i), $$
 
 where $\epsilon \in [0, 1]$ is a weight factor for fine-tuning. Therefore 
 
-$$ p^{\prime}(y \vert x) = (1-\epsilon) + \epsilon u(y \vert x), \ \textrm{ if } y_i = j$$
+$$ p^{\prime}(y \vert x_i) = (1-\epsilon) + \epsilon u(y \vert x_i), \ \textrm{ if } y_i = j$$
 
 otherwise
 
-$$ p^{\prime}(y \vert x) = \epsilon u(y \vert x).$$
+$$ p^{\prime}(y \vert x_i) = \epsilon u(y \vert x_i).$$
 
 In practice, $u(y \vert x)$ is a uniform distribution which does not dependent on data:
 
 $$u(y \vert x) = \frac{1}{K}.$$
 
 
-As an example, suppose we have $K = 3$ classes, the label vector is $[1, 0, 0]$. With label smoothing $\epsilon=0.1$, the smoothed label vector $ \sim [0.9333, 0.0333, 0.0333]$. 
+As an example, suppose we have $K = 3$ classes, the label vector is $[1, 0, 0]$. With label smoothing $\epsilon=0.1$, the smoothed label vector is $[0.9333, 0.0333, 0.0333]$. 
 It turns out our loss function became
 
 $$ L^{\prime} = -\sum^N_{i=1} \sum^K_{y=1} \Big( (1-\epsilon) p(y \vert x_i) + \epsilon u(y \vert x) \Big) \log q_{\theta}(y_i \vert x_i)$$
