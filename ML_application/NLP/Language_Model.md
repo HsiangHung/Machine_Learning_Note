@@ -2,9 +2,9 @@
 # Language Model 
 
 
-A statistical language model is a probability distribution over sequences of words. Given such a sequence, say of length m, it assigns a probability $P(w_1, \cdots , w_m)$ to the whole sequence [[wiki: Language model]][Language model].
+A statistical language model is a probability distribution over sequences of words. Given such a sequence, say of length $m$, it assigns a probability $P(w_1, \cdots , w_m)$ to the whole sequence [[wiki: Language model]][Language model].
 
-**Data sparsity** is a major problem in building language models. Most possible word sequences are not observed in training. One solution is to make the assumption that the probability of a word only depends on the previous $n$ words; this is known as an $n$-gram model. When $n=1$ it is the unigram model, known as the **bag of words model**.
+**Data sparsity** is a major problem in building language models. Most possible word sequences are not observed in training. One solution is to make the assumption that the probability of a word only depends on the previous $n$ words; this is known as an $n$-gram model. When $n=1$ it is the **unigram** model, known as the **bag of words model**.
 
 
 Language models are used in information retrieval in the **query likelihood model**. There, a separate language model is associated with each document in a collection. Documents are ranked based on the probability of the query $Q$ in the document's language model $M$, i.e. $P(Q|M)$. Commonly, the unigram language model is used for this purpose [[wiki: Language model]][Language model].
