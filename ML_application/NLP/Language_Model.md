@@ -2,7 +2,7 @@
 # Language Model 
 
 
-A statistical language model is a probability distribution over sequences of words. Given such a sequence, say of length $m$, it assigns a probability $P(w_1, \cdots , w_m)$ to the whole sequence [[wiki: Language model]][Language model].
+A statistical language model is a probability distribution over sequences of words $\lbrace w_1, w_2, \cdots \rbrace$. Given such a sequence, say of length $m$, it assigns a probability $P(w_1, \cdots , w_m)$ to the whole sequence [[wiki: Language model]][Language model].
 
 **Data sparsity** is a major problem in building language models. Most possible word sequences are not observed in training. One solution is to make the assumption that the probability of a word only depends on the previous $n$ words; this is known as an $n$-gram model. When $n=1$ it is the **unigram** model, known as the **bag of words model**.
 
@@ -15,14 +15,9 @@ A unigram model can be treated as the combination of several one-state finite au
 
 $$P(w_1, w_2, w_3) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2)$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(w_1,&space;w_2,&space;w_3)&space;=&space;P(w_1)P(w_2|w_1)P(w_3|w_1,w_2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_1,&space;w_2,&space;w_3)&space;=&space;P(w_1)P(w_2|w_1)P(w_3|w_1,w_2)" title="P(w_1, w_2, w_3) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2)" /></a>
-
 to
 
 $$P(w_1, w_2, w_3) = P(w_1)P(w_2)P(w_3).$$
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(w_1,&space;w_2,&space;w_3)&space;=&space;P(w_1)P(w_2)P(w_3)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_1,&space;w_2,&space;w_3)&space;=&space;P(w_1)P(w_2)P(w_3)" title="P(w_1, w_2, w_3) = P(w_1)P(w_2)P(w_3)" /></a>
-
 
 In this model, the probability of each word only depends on that word's own probability in the document, so we only have one-state finite automata as units.  The following is an illustration of a unigram model of a document [[wiki: Language model]][Language model]
 
@@ -41,11 +36,7 @@ The automaton itself has a probability distribution over the entire vocabulary o
 
 $$\sum_{w} P(w) = 1$$
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\sum_{w}&space;P(w)&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum_{w}&space;P(w)&space;=&space;1" title="\sum_{w} P(w) = 1" /></a>
-
 The probability generated for a specific query is calculated as
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(Q)&space;=&space;\prod_{\textrm{word&space;in&space;query&space;Q}}&space;P(w)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(Q)&space;=&space;\prod_{\textrm{word&space;in&space;query&space;Q}}&space;P(w)" title="P(Q) = \prod_{\textrm{word in query Q}} P(w)" /></a>
 
 $$P(Q) = \prod_{\textrm{word in query Q}} P(w).$$
 
