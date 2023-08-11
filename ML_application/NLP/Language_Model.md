@@ -86,7 +86,7 @@ whereas in a trigram (n = 3) language model, the approximation is
 
 $${\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle ,\langle s\rangle )P({\text{saw}}\mid \langle s\rangle ,I)P({\text{the}}\mid {\text{I, saw}})P({\text{red}}\mid {\text{saw, the}})P({\text{house}}\mid {\text{the, red}})P(\langle /s\rangle \mid {\text{red, house}})}$$
 
-Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted `<s>`.
+Note that the context of the first $n–1$ n-grams is filled with start-of-sentence markers, typically denoted `<s>`.
 
 
 ## Neural Networks
@@ -117,7 +117,7 @@ Given a sequence of training words $w_1, w_2, \cdots ,w_T$, one maximizes the av
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\frac&space;{1}{T}}\sum&space;_{t=1}^{T}\sum&space;_{-k\leq&space;j\leq&space;k,j\neq&space;0}\log&space;P(w_{t&plus;j}|w_{t})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\frac&space;{1}{T}}\sum&space;_{t=1}^{T}\sum&space;_{-k\leq&space;j\leq&space;k,j\neq&space;0}\log&space;P(w_{t&plus;j}|w_{t})" title="{\frac {1}{T}}\sum _{t=1}^{T}\sum _{-k\leq j\leq k,j\neq 0}\log P(w_{t+j}|w_{t})" /></a>
 
-$$ \frac{1}{T} \sum _{t=1}^{T} \sum_{-k \le j\le k,j \ne 0} \log P(w_{t+j}|w_{t} $$
+$$ \frac{1}{T} \sum_{t=1}^{T} \sum_{-k \le j\le k,j \ne 0} \log P(w_{t+j}|w_t) $$
 
 where $k$, the size of the training context, can be a function of the center word $w_t$. This is called a **skip-gram** language model.
 
