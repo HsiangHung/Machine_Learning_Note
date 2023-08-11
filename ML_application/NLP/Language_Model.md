@@ -105,8 +105,6 @@ $${\displaystyle P(w_{t}|w_{t-k},\dots ,w_{t-1})}.$$
 
 Another option is to use **future** words as well as **past** words as features, so that the estimated probability is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(w_{t}|w_{{t-k}},\dots&space;,w_{{t-1}},w_{{t&plus;1}},\dots&space;,w_{{t&plus;k}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_{t}|w_{{t-k}},\dots&space;,w_{{t-1}},w_{{t&plus;1}},\dots&space;,w_{{t&plus;k}})" title="P(w_{t}|w_{{t-k}},\dots ,w_{{t-1}},w_{{t+1}},\dots ,w_{{t+k}})" /></a>
-
 $$P(w_{t}|w_{{t-k}},\dots ,w_{{t-1}},w_{{t+1}},\dots ,w_{{t+k}}).$$
 
 This is called a bag-of-words model. 
@@ -122,9 +120,11 @@ where $k$, the size of the training context, can be a function of the center wor
 Bag-of-words and skip-gram models are the basis of the **word2vec** program [[wiki: Word2vec]][Word2vec]. As the name implies, word2vec represents each distinct word with a particular list of numbers called a vector. The vectors are chosen carefully such that a simple mathematical function (the **cosine similarity** between the vectors) indicates the level of **semantic similarity** between the words represented by those vectors.
 
 
-Instead of using neural net language models to produce actual probabilities, word2vec instead uses the distributed representation encoded in the networks' **hidden** layers as representations of words; each word is then mapped onto an `n`-dimensional real vector called the word embedding, where `n` is the size of the hidden layer just before the output layer. 
+Instead of using neural net language models to produce actual probabilities, word2vec instead uses the distributed representation encoded in the networks' **hidden** layers as representations of words; each word is then mapped onto an $n$-dimensional real vector called the word embedding, where $n$ is the size of the hidden layer just before the output layer. 
 
-For example, in some such models, if v is the function that maps a word `w` to its `n`-d vector representation, then
+For example, in some such models, if v is the function that maps a word $w$ to its $n$-dimensional vector representation, then
+
+$$v(\textrm{king})-v(\textrm{queen}) \simeq v(\textrm{male}) - v(\textrm{female}).$$
 
 ```
 v(king)-v(queen) ~ v(male) - v(female)
