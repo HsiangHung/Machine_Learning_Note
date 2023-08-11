@@ -122,9 +122,9 @@ Bag-of-words and skip-gram models are the basis of the **word2vec** program [[wi
 
 Instead of using neural net language models to produce actual probabilities, word2vec instead uses the distributed representation encoded in the networks' **hidden** layers as representations of words; each word is then mapped onto an $n$-dimensional real vector called the word embedding, where $n$ is the size of the hidden layer just before the output layer. 
 
-For example, in some such models, if v is the function that maps a word $w$ to its $n$-dimensional vector representation, then
+For example, in some such models, if $v(w)$ is the function that maps a word $w$ to its $n$-dimensional vector representation, then
 
-$$v(\textrm{king})-v(\textrm{queen}) \simeq v(\textrm{male}) - v(\textrm{female}).$$
+$$v(\textrm{"king"})-v(\textrm{"queen"}) \simeq v(\textrm{"male"}) - v(\textrm{"female"}).$$
 
 ```
 v(king)-v(queen) ~ v(male) - v(female)
