@@ -80,17 +80,13 @@ Typically, the n-gram model probabilities are not derived directly from frequenc
 
 If the sentence is "I saw the red house", in a bigram (n = 2) language model, the probability of the sentence is approximated as
 
-<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;{\text{I}})P({\text{the}}\mid&space;{\text{saw}})P({\text{red}}\mid&space;{\text{the}})P({\text{house}}\mid&space;{\text{red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{house}})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;{\text{I}})P({\text{the}}\mid&space;{\text{saw}})P({\text{red}}\mid&space;{\text{the}})P({\text{house}}\mid&space;{\text{red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{house}})}" title="{\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle )P({\text{saw}}\mid {\text{I}})P({\text{the}}\mid {\text{saw}})P({\text{red}}\mid {\text{the}})P({\text{house}}\mid {\text{red}})P(\langle /s\rangle \mid {\text{house}})}" /></a>
-
 $${\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle )P({\text{saw}}\mid {\text{I}})P({\text{the}}\mid {\text{saw}})P({\text{red}}\mid {\text{the}})P({\text{house}}\mid {\text{red}})P(\langle /s\rangle \mid {\text{house}})}$$
 
 whereas in a trigram (n = 3) language model, the approximation is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;,\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;\langle&space;s\rangle&space;,I)P({\text{the}}\mid&space;{\text{I,&space;saw}})P({\text{red}}\mid&space;{\text{saw,&space;the}})P({\text{house}}\mid&space;{\text{the,&space;red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{red,&space;house}})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;,\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;\langle&space;s\rangle&space;,I)P({\text{the}}\mid&space;{\text{I,&space;saw}})P({\text{red}}\mid&space;{\text{saw,&space;the}})P({\text{house}}\mid&space;{\text{the,&space;red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{red,&space;house}})}" title="{\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle ,\langle s\rangle )P({\text{saw}}\mid \langle s\rangle ,I)P({\text{the}}\mid {\text{I, saw}})P({\text{red}}\mid {\text{saw, the}})P({\text{house}}\mid {\text{the, red}})P(\langle /s\rangle \mid {\text{red, house}})}" /></a>
-
 $${\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle ,\langle s\rangle )P({\text{saw}}\mid \langle s\rangle ,I)P({\text{the}}\mid {\text{I, saw}})P({\text{red}}\mid {\text{saw, the}})P({\text{house}}\mid {\text{the, red}})P(\langle /s\rangle \mid {\text{red, house}})}$$
 
-Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted `<s>`.
+Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted $<s>$.
 
 
 ## Neural Networks
@@ -101,15 +97,11 @@ Continuous space embeddings help to alleviate the **curse of dimensionality** in
 
 Typically, neural net language models are constructed and trained as **probabilistic classifiers** that learn to predict a probability distribution
 
-<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P(w_{t}|\mathrm&space;{context}&space;)\,\forall&space;t\in&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P(w_{t}|\mathrm&space;{context}&space;)\,\forall&space;t\in&space;V}" title="{\displaystyle P(w_{t}|\mathrm {context} )\,\forall t\in V}" /></a>
+$${\displaystyle P(w_{t}|\mathrm {context} )\,\forall t\in V}, $$
 
-$${\displaystyle P(w_{t}|\mathrm {context} )\,\forall t\in V}$$
+i.e., the network is trained to predict a probability distribution over the vocabulary, given some linguistic context. The network predicts usually predicts a probability from a feature vector representing the **previous** k words:
 
-i.e., the network is trained to predict a probability distribution over the vocabulary, given some linguistic context. The network predicts usually predicts a probability from a feature vector representing the **previous** k words.
-
-<a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P(w_{t}|w_{t-k},\dots&space;,w_{t-1})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P(w_{t}|w_{t-k},\dots&space;,w_{t-1})}" title="{\displaystyle P(w_{t}|w_{t-k},\dots ,w_{t-1})}" /></a>
-
-$${\displaystyle P(w_{t}|w_{t-k},\dots ,w_{t-1})}$$
+$${\displaystyle P(w_{t}|w_{t-k},\dots ,w_{t-1})}.$$
 
 Another option is to use **future** words as well as **past** words as features, so that the estimated probability is
 
@@ -121,11 +113,11 @@ This is called a bag-of-words model.
 
 When the feature vectors for the words in the context are combined by a continuous operation, this model is referred to as the **continuous bag-of-words architecture (CBOW)**.
 
-Given a sequence of training words `w_{1},w_{2},... ,w_{T}`, one maximizes the average log-probability
+Given a sequence of training words $w_1, w_2, \cdots ,w_T$, one maximizes the average log-probability
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\frac&space;{1}{T}}\sum&space;_{t=1}^{T}\sum&space;_{-k\leq&space;j\leq&space;k,j\neq&space;0}\log&space;P(w_{t&plus;j}|w_{t})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\frac&space;{1}{T}}\sum&space;_{t=1}^{T}\sum&space;_{-k\leq&space;j\leq&space;k,j\neq&space;0}\log&space;P(w_{t&plus;j}|w_{t})" title="{\frac {1}{T}}\sum _{t=1}^{T}\sum _{-k\leq j\leq k,j\neq 0}\log P(w_{t+j}|w_{t})" /></a>
 
-$${\frac {1}{T}}\sum _{t=1}^{T}\sum _{-k\leq j\leq k,j\neq 0}\log P(w_{t+j}|w_{t})$$
+$$ \frac{1}{T} \sum _{t=1}^{T}\sum _{-k\leq j\leq k,j\neq 0}\log P(w_{t+j}|w_{t} $$
 
 where $k$, the size of the training context, can be a function of the center word $w_t$. This is called a **skip-gram** language model.
 
