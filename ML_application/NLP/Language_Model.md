@@ -126,9 +126,6 @@ For example, in some such models, if $v(w)$ is the function that maps a word $w$
 
 $$v(\textrm{"king"})-v(\textrm{"queen"}) \simeq v(\textrm{"male"}) - v(\textrm{"female"}).$$
 
-```
-v(king)-v(queen) ~ v(male) - v(female)
-```
 
 
 ## Reference
