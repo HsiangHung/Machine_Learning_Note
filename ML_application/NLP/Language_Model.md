@@ -86,7 +86,7 @@ whereas in a trigram (n = 3) language model, the approximation is
 
 $${\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle ,\langle s\rangle )P({\text{saw}}\mid \langle s\rangle ,I)P({\text{the}}\mid {\text{I, saw}})P({\text{red}}\mid {\text{saw, the}})P({\text{house}}\mid {\text{the, red}})P(\langle /s\rangle \mid {\text{red, house}})}$$
 
-Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted $<s>$.
+Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted `<s>`.
 
 
 ## Neural Networks
