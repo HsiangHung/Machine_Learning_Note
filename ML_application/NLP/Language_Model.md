@@ -58,20 +58,17 @@ P in doc2 | 0.3|  0.1  | 0.03  | 0.02 |  0.4  | ...
 ``` -->
 If P in doc2 > P in doc1, then rank doc2 in front of doc1. 
 
-In information retrieval contexts, unigram language models are often smoothed to avoid instances where P(term) = 0. A common approach is to generate a maximum-likelihood model for the entire collection and linearly interpolate the collection model with a maximum-likelihood model for each document to smooth the model.
+In information retrieval contexts, unigram language models are often smoothed to avoid instances where $P(w) = 0$. A common approach is to generate a maximum-likelihood model for the entire collection and linearly interpolate the collection model with a maximum-likelihood model for each document to smooth the model.
 
 
 ## n-gram
 
 In an n-gram model, the probability $P(w_1,... ,w_m)$ of observing the sentence $w_1, \cdots, w_m$ is approximated as
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(w_1,\cdots,&space;w_m)&space;=&space;\prod^m_{i=1}P(w_i|w_1,&space;\cdots,&space;w_{i-1})&space;\simeq&space;\prod^m_{i=1}P(w_i|w_{i-(n-1)},&space;\cdots,&space;w_{i-1})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_1,\cdots,&space;w_m)&space;=&space;\prod^m_{i=1}P(w_i|w_1,&space;\cdots,&space;w_{i-1})&space;\simeq&space;\prod^m_{i=1}P(w_i|w_{i-(n-1)},&space;\cdots,&space;w_{i-1})" title="P(w_1,\cdots, w_m) = \prod^m_{i=1}P(w_i|w_1, \cdots, w_{i-1}) \simeq \prod^m_{i=1}P(w_i|w_{i-(n-1)}, \cdots, w_{i-1})" /></a>
-
 $$P(w_1,\cdots, w_m) = \prod^m_{i=1}P(w_i|w_1, \cdots, w_{i-1}) \simeq \prod^m_{i=1}P(w_i|w_{i-(n-1)}, \cdots, w_{i-1})$$
 
 The conditional probability can be calculated from n-gram model frequency counts:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(w_i|w_{i-(n-1)},&space;\cdots,&space;w_{i-1})&space;=&space;\frac{P(w_{i-(n-1)},&space;\cdots,&space;w_{i-1},&space;w_i)}{P(w_{i-(n-1)},&space;\cdots,&space;w_{i-1})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w_i|w_{i-(n-1)},&space;\cdots,&space;w_{i-1})&space;=&space;\frac{P(w_{i-(n-1)},&space;\cdots,&space;w_{i-1},&space;w_i)}{P(w_{i-(n-1)},&space;\cdots,&space;w_{i-1})}" title="P(w_i|w_{i-(n-1)}, \cdots, w_{i-1}) = \frac{P(w_{i-(n-1)}, \cdots, w_{i-1}, w_i)}{P(w_{i-(n-1)}, \cdots, w_{i-1})}" /></a>
 
 $$P(w_i|w_{i-(n-1)}, \cdots, w_{i-1}) = \frac{P(w_{i-(n-1)}, \cdots, w_{i-1}, w_i)}{P(w_{i-(n-1)}, \cdots, w_{i-1})}.$$
 
@@ -85,9 +82,13 @@ If the sentence is "I saw the red house", in a bigram (n = 2) language model, th
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;{\text{I}})P({\text{the}}\mid&space;{\text{saw}})P({\text{red}}\mid&space;{\text{the}})P({\text{house}}\mid&space;{\text{red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{house}})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;{\text{I}})P({\text{the}}\mid&space;{\text{saw}})P({\text{red}}\mid&space;{\text{the}})P({\text{house}}\mid&space;{\text{red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{house}})}" title="{\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle )P({\text{saw}}\mid {\text{I}})P({\text{the}}\mid {\text{saw}})P({\text{red}}\mid {\text{the}})P({\text{house}}\mid {\text{red}})P(\langle /s\rangle \mid {\text{house}})}" /></a>
 
+$${\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle )P({\text{saw}}\mid {\text{I}})P({\text{the}}\mid {\text{saw}})P({\text{red}}\mid {\text{the}})P({\text{house}}\mid {\text{red}})P(\langle /s\rangle \mid {\text{house}})}$$
+
 whereas in a trigram (n = 3) language model, the approximation is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;,\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;\langle&space;s\rangle&space;,I)P({\text{the}}\mid&space;{\text{I,&space;saw}})P({\text{red}}\mid&space;{\text{saw,&space;the}})P({\text{house}}\mid&space;{\text{the,&space;red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{red,&space;house}})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P({\text{I,&space;saw,&space;the,&space;red,&space;house}})\approx&space;P({\text{I}}\mid&space;\langle&space;s\rangle&space;,\langle&space;s\rangle&space;)P({\text{saw}}\mid&space;\langle&space;s\rangle&space;,I)P({\text{the}}\mid&space;{\text{I,&space;saw}})P({\text{red}}\mid&space;{\text{saw,&space;the}})P({\text{house}}\mid&space;{\text{the,&space;red}})P(\langle&space;/s\rangle&space;\mid&space;{\text{red,&space;house}})}" title="{\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle ,\langle s\rangle )P({\text{saw}}\mid \langle s\rangle ,I)P({\text{the}}\mid {\text{I, saw}})P({\text{red}}\mid {\text{saw, the}})P({\text{house}}\mid {\text{the, red}})P(\langle /s\rangle \mid {\text{red, house}})}" /></a>
+
+$${\displaystyle P({\text{I, saw, the, red, house}})\approx P({\text{I}}\mid \langle s\rangle ,\langle s\rangle )P({\text{saw}}\mid \langle s\rangle ,I)P({\text{the}}\mid {\text{I, saw}})P({\text{red}}\mid {\text{saw, the}})P({\text{house}}\mid {\text{the, red}})P(\langle /s\rangle \mid {\text{red, house}})}$$
 
 Note that the context of the first n – 1 n-grams is filled with start-of-sentence markers, typically denoted `<s>`.
 
@@ -102,9 +103,13 @@ Typically, neural net language models are constructed and trained as **probabili
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P(w_{t}|\mathrm&space;{context}&space;)\,\forall&space;t\in&space;V}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P(w_{t}|\mathrm&space;{context}&space;)\,\forall&space;t\in&space;V}" title="{\displaystyle P(w_{t}|\mathrm {context} )\,\forall t\in V}" /></a>
 
+$${\displaystyle P(w_{t}|\mathrm {context} )\,\forall t\in V}$$
+
 i.e., the network is trained to predict a probability distribution over the vocabulary, given some linguistic context. The network predicts usually predicts a probability from a feature vector representing the **previous** k words.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\displaystyle&space;P(w_{t}|w_{t-k},\dots&space;,w_{t-1})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\displaystyle&space;P(w_{t}|w_{t-k},\dots&space;,w_{t-1})}" title="{\displaystyle P(w_{t}|w_{t-k},\dots ,w_{t-1})}" /></a>
+
+$${\displaystyle P(w_{t}|w_{t-k},\dots ,w_{t-1})}$$
 
 Another option is to use **future** words as well as **past** words as features, so that the estimated probability is
 
