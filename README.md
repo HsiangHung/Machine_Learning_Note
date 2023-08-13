@@ -13,17 +13,38 @@ First [install tensorflow](https://www.tensorflow.org/install/pip#package-locati
 
 In **Create a virtual environment (recommended)** section, choose `Conda` tag, rather than `UBUNTU/MAC OS` (choosing this tag won't successfully implement tensorflow in Jupyter notebook). In your shell (it indicates `xxxx:~ hsiang$`), type
 
-`conda create -n venv pip python=3.6`
+`conda create -n <yourenvname> pip python=3.6`
 
-`venv` is any virtual environment name; can be `zoo`, `LSTM_test` and `Boo`, whatever you like. Then activate the `venv` by
+or 
+
+`conda create -n <yourenvname> python=x.x anaconda`
+
+`<yourenvname>` is any virtual environment name; can be `zoo`, `LSTM_test` and `Boo`, whatever you like. Second way designates the specific python version, e.g. `python=3.8`. See [Create virtual environments for python with conda](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
+
+Assume we use `venv` as virtual name, then activate `venv` by
     
-`source activate venv` 
+`source activate venv`
+
+or 
+
+`conda activate venv`
 
 For example, if you name your virtual environment as `LSTM_test`, after activating the environment, you will see
 
 `(LSTM_test) xxxx:~ hsiang$   `
 
-in your terminal. To quit the mode, just type `source deactivate`.
+in your terminal. To quit the mode, just type `source deactivate` or `conda deactivate`.
+
+To view environments and delete, use 
+
+`conda env list`
+
+and 
+
+`conda remove --name <yourenvname> --all`
+
+See [Conda Remove Environment – How to Delete an Env](https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/).
+
 
 ### 2. Install TensorFlow package
 
