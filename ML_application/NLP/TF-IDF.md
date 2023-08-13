@@ -24,7 +24,7 @@ where $||D||$ is the total number of terms in the document. In the above example
 
 `idf` means inverse document frequency:
 
-$$idf(t) = \log \frac{\textrm{Total Number Of Docs}}{\textrm{ Number Of Docs with term t in it}}.$$
+$$idf(t) = \log \Big( \frac{\textrm{Total Number Of Docs}}{\textrm{ Number Of Docs with term t in it}} \Big).$$
 
 So the `tf-idf` score is
 
