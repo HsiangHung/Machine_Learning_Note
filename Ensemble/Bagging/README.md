@@ -2,11 +2,11 @@
 
 
 
-Suppose our training data set is represented by $D$ and suppose data set has $M$ features (or attributes or variables) [[Stackoverflow: What is out of bag error in Random Forests?]][What is out of bag error in Random Forests?].
+Suppose our training data set is represented by $D$ and suppose data set has $M$ features (or attributes or variables) [[Stackoverflow: What is out of bag error in Random Forests?]][What is out of bag error in Random Forests?]
 
-$$D = \big[ (\mathbf{X}_1,y_1), (\mathbf{X}_2,y_2), ... (\mathbf{X}_n, y_n) \big]$$
+$$D = \big[ (\mathbf{X}_1,y_1), (\mathbf{X}_2,y_2), ... (\mathbf{X}_n, y_n) \big],$$
 
-and $\mathbf{X}_i$ is an $M$-dimensional input vector, $\mathbf{X}_i = (x^1_i, x^2_i, ... x^M_i)$ and $y_i$ is the label (or output or class). 
+where $\mathbf{X}_i$ is an $M$-dimensional input vector, $\mathbf{X}_i = (x^1_i, x^2_i, ... x^M_i)$ and $y_i$ is the label (or output or class). 
 
 
 Random Forests algorithm is a classifier based on primarily two methods - **Bagging** and **Random subspace method**.
