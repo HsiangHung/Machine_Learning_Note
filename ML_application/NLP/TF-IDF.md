@@ -16,6 +16,20 @@ and we are doing a search on these documents with query: **Data Scientists**.
 
 ## TF-IDF 
 
+`tf` is the **term frequency** for a term t in document $d$:
+
+$$tf(t,d) = \frac{\textrm{term frequency for a term t in document d}}{||D||},$$
+
+where $$||D||$$ is the total number of terms in the document. In the above example, $||\textrm{Doc1}|| = 7$, $||\textrm{Doc2}||=5$, $||\textrm{Doc3}||=6$.
+
+`idf` means inverse document frequency:
+
+$$idf(t) = \log \frac{\textrm{Total Number Of Docs}}{\textrm{ Number Of Docs with term t in it}}.$$
+
+So the `tf-idf` score is
+
+$$tf-idf(t, d) = tf(t, d)* idf(t).$$
+
 * tf(t, d): (term frequency for a term t in document d)/||D||.
 * ||D||: total number of term in the document: ||Doc1|| = 7, ||Doc2||=5, ||Doc3||=6.
 * idf(t) = log(Total Number Of Docs / Number Of Docs with term t in it)
