@@ -70,7 +70,9 @@ The information gain is
 
 $$ I(A) = H(p,n) - EH(A),$$
 
-for attribute $A$, where $H(p,n)$ is on root.
+for attribute $A$, where $H(p,n)$ is the entropy on root. 
+
+To build the tree, we select the attribute $A$ which gives largest $I(A)$.
 
 
 #### Example
