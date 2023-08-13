@@ -30,11 +30,6 @@ So the `tf-idf` score is
 
 $$tf-idf(t, d) = tf(t, d)* idf(t).$$
 
-* tf(t, d): (term frequency for a term t in document d)/||D||.
-* ||D||: total number of term in the document: ||Doc1|| = 7, ||Doc2||=5, ||Doc3||=6.
-* idf(t) = log(Total Number Of Docs / Number Of Docs with term t in it)
-* tf-idf(t, d) = tf(t, d)* idf(t)
-
 
 | Doc | term | tf(t, d) | idf(t) | tf-idf(t, d) |
 | --- | --- | --- | --- | --- |
