@@ -20,7 +20,7 @@ and we are doing a search on these documents with query: **Data Scientists**.
 
 $$tf(t,d) = \frac{\textrm{term frequency for a term t in document d}}{||D||},$$
 
-where $$||D||$$ is the total number of terms in the document. In the above example, $||\textrm{Doc1}|| = 7$, $||\textrm{Doc2}||=5$, $||\textrm{Doc3}||=6$.
+where $||D||$ is the total number of terms in the document. In the above example, $||\textrm{Doc1}|| = 7$, $||\textrm{Doc2}||=5$, $||\textrm{Doc3}||=6$.
 
 `idf` means inverse document frequency:
 
