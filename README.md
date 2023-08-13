@@ -17,7 +17,7 @@ In **Create a virtual environment (recommended)** section, choose `Conda` tag, r
 
 or 
 
-`conda create -n <yourenvname> python=4.6 anaconda`
+`conda create -n <yourenvname> python=3.6 anaconda`
 
 `<yourenvname>` is any virtual environment name; can be `zoo`, `LSTM_test` and `Boo`, whatever you like. Second way designates using anaconda to set up virtual environment. See [Create virtual environments for python with conda](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
 
