@@ -37,7 +37,7 @@ There are many different ways that LangChain can be used to build applications. 
 [[Paul Yang, Einblick] What is LangChain? Why Use LangChain?](https://www.einblick.ai/blog/what-is-langchain-why-use-it/#:~:text=At%20a%20high%20level%2C%20LangChain,way%20to%20build%20user%20interfaces.)
 
 
-* [What is LangChain? — A 101 overview]: https://medium.com/the-techlife/what-is-langchain-a-101-overview-c2bed339b08fhow-to-derive-the-likelihood-function-for-binomial-distribution-for-parameter-es
+* [What is LangChain? — A 101 overview]: https://medium.com/the-techlife/what-is-langchain-a-101-overview-c2bed339b08f
 [[Mostafa Ibrahim] What is LangChain? — A 101 overview](https://medium.com/the-techlife/what-is-langchain-a-101-overview-c2bed339b08f)
 
 
