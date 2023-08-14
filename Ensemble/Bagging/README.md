@@ -11,13 +11,15 @@ where $\mathbf{X}_i$ is an $M$-dimensional input vector, $\mathbf{X}_i = (x^1_i,
 
 Random Forests algorithm is a classifier based on primarily two methods - **Bagging** and **Random subspace method**.
 
-Suppose we decide to have $S$ number of trees in our forest, then we first create $S$ datasets of "same size as original" created from random resampling of data in $D$ **with-replacement** (n times for each dataset). This will result in $(D_1, D_2, ... D_S)$ datasets. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset $D_i$ can have duplicate data records and $D_i$ can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
+Suppose we decide to have $S$ number of trees in our forest, then we first create $S$ datasets of "same size as original" created from random resampling of data in $D$ **with-replacement** (n times for each dataset). This will result in $(D_1, D_2, ... D_S)$ datasets for the **independent** trees $(T_1, T_2, ... T_S)$. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset $D_i$ can have duplicate data records and $D_i$ can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
 
 **Bagging** is the process of taking bootstraps & then aggregating the models learned on each bootstrap. The random forests algorithm summary:
 
 ![](images/random_forest_algorithm.png)
 
 Now, RF creates $S$ trees and uses $m (=\sqrt(M)$ or =floor(lnM+1)) random subfeatures out of $M$ possible features to create any tree. This is called **random subspace method**.
+
+## Prediction
 
 So for each $D_i$ bootstrap dataset you create a tree $T_i$. If you want to classify some input data $d = (x^1, x^2, ..., x^M)$, you let it pass through each tree and produce $S$ outputs (one for each tree) which can be denoted by $Y = (y_1, y_2, ..., y_s)$. Final prediction is a **majority vote** on this set, or **mean probability** for each class (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33))
 
