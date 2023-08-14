@@ -93,7 +93,7 @@ SVMs are inherently two-class classifiers. In the **multiclass SVM**, if it is b
 
 For multiclass, $c = {1, ...K}$, $K$ classes. If our target is a **one-hot** vector, $p = [1, 0, ... 0]$ for $y = 1$, $p = [0, 2, ... 0]$, for $y = 2$, .... and $p = [0, 0, ... 1]$ for $y = K$, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
 
-$$L(\theta, \mathbf{x}) = - \sum^K_{j=1} \mathbb{I}(y=j)\log\big( h_{\theta}(\mathbb{x}) \big) = - \sum^K_{j=1} \mathbf{I}(y=j)\log \left( \frac{\exp (\theta^{(j)^T}\mathbf{x}) }{ \sum_j \exp ((\theta^j)^T}\mathbf{x} ) } \right),$$
+$$L(\theta, \mathbf{x}) = - \sum^K_{j=1} \mathbb{I}(y=j)\log\big( h_{\theta}(\mathbb{x}) \big) = - \sum^K_{j=1} \mathbf{I}(y=j)\log \left( \frac{\exp (\theta^{(j)}^T}\mathbf{x}) }{ \sum_j \exp (\theta^{(j)}^T \mathbf{x} ) } \right),$$
 
 where $\mathbf{I} = 1$ for $y = j$; otherwise $\mathbf{I}=0$. 
 
