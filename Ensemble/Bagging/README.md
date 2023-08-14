@@ -13,7 +13,9 @@ Random Forests algorithm is a classifier based on primarily two methods - **Bagg
 
 Suppose we decide to have $S$ number of trees in our forest, then we first create $S$ datasets of "same size as original" created from random resampling of data in $D$ **with-replacement** (n times for each dataset). This will result in $(D_1, D_2, ... D_S)$ datasets. Each of these is called a **bootstrap** dataset. Due to "with-replacement", every dataset $D_i$ can have duplicate data records and $D_i$ can be missing several data records from original datasets. The procedure to generate the datasets is called [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
 
-**Bagging** is the process of taking bootstraps & then aggregating the models learned on each bootstrap.
+**Bagging** is the process of taking bootstraps & then aggregating the models learned on each bootstrap. The random forests algorithm summary:
+
+![](images/random_forest_algorithm.png)
 
 Now, RF creates $S$ trees and uses $m (=\sqrt(M)$ or =floor(lnM+1)) random subfeatures out of $M$ possible features to create any tree. This is called **random subspace method**.
 
