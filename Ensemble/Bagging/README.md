@@ -56,11 +56,10 @@ There are good articles talking about hyperparameter fine tuning in random fores
 In the followings, we show how the hyperparameter influences the performance. The results are all from [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest] or [[Jason Brownlee]][How to Develop a Random Forest Ensemble in Python].
 
 
-1. `max_samples`: Each decision tree in the ensemble is fit on a bootstrap sample drawn from the training dataset. More sample data for training, better accuracy. “max_samples” argument can be set to a float between 0 and 1 to control the percentage of the size of the training dataset to make the bootstrap sample used to train each decision tree.
-
+1. `max_samples`: Each decision tree in the ensemble is fit on a bootstrap sample drawn from the training dataset. More sample data for training, better accuracy. “max_samples” argument can be set to a float between 0 and 1 to control the percentage of the size of the training dataset to make the bootstrap sample used to train each decision tree. Below is the box plot of Random Forest Bootstrap Sample Size vs. Classification Accuracy [[Jason Brownlee]][How to Develop a Random Forest Ensemble in Python].
 ![](images/n_sample.png)
 
-2. `n_estimators`: is the **number of trees** in the forest. Usually higher the number of trees the better to learn the data:
+2. `n_estimators`: is the **number of trees** in the forest. Usually higher the number of trees the better to learn the data [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest]:
 
 ![](images/n_estimate_1.png)
 
@@ -74,17 +73,17 @@ However, more trees also mean more computational cost. In discussion of [[Stacko
 <!-- ![](images/max_depth_1.png) -->
 ![](images/effect_depth.png)
 
-4. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case. When we increase this parameter, each tree in the forest becomes more constrained as it has to consider more samples at each node. 
+4. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case. When we increase this parameter, each tree in the forest becomes more constrained as it has to consider more samples at each node [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest]. 
 
 ![](images/min_sample_split.png)
 
 We can clearly see that when we require all of the samples at each node, the model cannot learn enough about the data. This is an underfitting case.
 
-5. `min_samples_leaf`: min_samples_leaf is the minimum number of samples required to be at a **leaf node**. Increasing this value can cause underfitting.
+5. `min_samples_leaf`: min_samples_leaf is the minimum number of samples required to be at a **leaf node**. Increasing this value can cause underfitting [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest].
 
 ![](images/min_sample_leaf.png)
 
-6. `max_features`: max_features represents the number of features to consider when looking for the best split. Higher max_features indicates an overfitting case. 
+6. `max_features`: max_features represents the number of features to consider when looking for the best split. Higher max_features indicates an overfitting case [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest]. 
 
 ![](images/max_features.png)
 
