@@ -56,9 +56,11 @@ There are good articles talking about hyperparameter fine tuning in random fores
 In the followings, we show how the hyperparameter influences the performance. The results are all from [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest] or [[Jason Brownlee]][How to Develop a Random Forest Ensemble in Python].
 
 
-1. `n_samples`: more sample data for training, better accuracy.
+1. `max_samples`: Each decision tree in the ensemble is fit on a bootstrap sample drawn from the training dataset. More sample data for training, better accuracy. “max_samples” argument can be set to a float between 0 and 1 to control the percentage of the size of the training dataset to make the bootstrap sample used to train each decision tree.
+
 ![](images/n_sample.png)
-2. `n_estimators`: is the number of trees in the forest. Usually higher the number of trees the better to learn the data:
+
+2. `n_estimators`: is the **number of trees** in the forest. Usually higher the number of trees the better to learn the data:
 
 ![](images/n_estimate_1.png)
 
@@ -67,16 +69,18 @@ However, more trees also mean more computational cost. In discussion of [[Stacko
 
 ![](images/effect_numtrees.png)
 
-3. `max_depth`: max_depth represents the depth of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting. We can also visualize how depth infleunces the classification (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33)).
+3. `max_depth`: max_depth represents the **depth** of each tree in the forest. The deeper the tree, the more splits it has but gets overfitting. We can also visualize how depth infleunces the classification (credit from Prof. Nando de Freitas's [UBC Machine Learning class](https://www.youtube.com/watch?v=aXqICfH4ZlA&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=33)).
 
 <!-- ![](images/max_depth_1.png) -->
 ![](images/effect_depth.png)
 
-4. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case.
+4. `min_samples_split`: min_samples_split represents the minimum number of samples required to split an internal node. Higher indicates underfitting case. When we increase this parameter, each tree in the forest becomes more constrained as it has to consider more samples at each node. 
 
 ![](images/min_sample_split.png)
 
-5. `min_samples_leaf`: min_samples_leaf is the minimum number of samples required to be at a leaf node. Increasing this value can cause underfitting.
+We can clearly see that when we require all of the samples at each node, the model cannot learn enough about the data. This is an underfitting case.
+
+5. `min_samples_leaf`: min_samples_leaf is the minimum number of samples required to be at a **leaf node**. Increasing this value can cause underfitting.
 
 ![](images/min_sample_leaf.png)
 
@@ -90,37 +94,21 @@ However, more trees also mean more computational cost. In discussion of [[Stacko
 ## Reference
 
 
-[Practical questions on tuning Random Forests]: https://stats.stackexchange.com/questions/53240/practical-questions-on-tuning-random-forests
+* [Practical questions on tuning Random Forests]: https://stats.stackexchange.com/questions/53240/practical-questions-on-tuning-random-forests
 [[Cross Validated: Practical questions on tuning Random Forests] Practical questions on tuning Random Forests](https://stats.stackexchange.com/questions/53240/practical-questions-on-tuning-random-forests)
-
-
-[How to Develop a Random Forest Ensemble in Python]: https://machinelearningmastery.com/random-forest-ensemble-in-python/
+* [How to Develop a Random Forest Ensemble in Python]: https://machinelearningmastery.com/random-forest-ensemble-in-python/
 [[Jason Brownlee] How to Develop a Random Forest Ensemble in Python](https://machinelearningmastery.com/random-forest-ensemble-in-python/)
-
-
-[Random Forest using GridSearchCV]: https://www.kaggle.com/sociopath00/random-forest-using-gridsearchcv
+* [Random Forest using GridSearchCV]: https://www.kaggle.com/sociopath00/random-forest-using-gridsearchcv
 [[Kaggle, Random Forest using GridSearchCV] Random Forest using GridSearchCV](https://www.kaggle.com/sociopath00/random-forest-using-gridsearchcv)
-
-
-[In Depth: Parameter tuning for Random Forest]: https://medium.com/all-things-ai/in-depth-parameter-tuning-for-random-forest-d67bb7e920d
+* [In Depth: Parameter tuning for Random Forest]: https://medium.com/all-things-ai/in-depth-parameter-tuning-for-random-forest-d67bb7e920d
 [[Mohtadi Ben Fraj] In Depth: Parameter tuning for Random Forest](https://medium.com/all-things-ai/in-depth-parameter-tuning-for-random-forest-d67bb7e920d)
-
-
-
-[What is Out of Bag (OOB) score in Random Forest?]: https://towardsdatascience.com/what-is-out-of-bag-oob-score-in-random-forest-a7fa23d710
+* [What is Out of Bag (OOB) score in Random Forest?]: https://towardsdatascience.com/what-is-out-of-bag-oob-score-in-random-forest-a7fa23d710
 [[Navnina Bhatia] What is Out of Bag (OOB) score in Random Forest?](https://towardsdatascience.com/what-is-out-of-bag-oob-score-in-random-forest-a7fa23d710)
-
-
-
-[Random forest tuning - tree depth and number of trees]: https://stackoverflow.com/questions/34997134/random-forest-tuning-tree-depth-and-number-of-trees
+* [Random forest tuning - tree depth and number of trees]: https://stackoverflow.com/questions/34997134/random-forest-tuning-tree-depth-and-number-of-trees
 [[Stackoverflow: Random forest tuning - tree depth and number of trees] Random forest tuning - tree depth and number of trees](https://stackoverflow.com/questions/34997134/random-forest-tuning-tree-depth-and-number-of-trees)
-
-
-[What is out of bag error in Random Forests?]: https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests
+* [What is out of bag error in Random Forests?]: https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests
 [[Stackoverflow: What is out of bag error in Random Forests?] What is out of bag error in Random Forests?](https://stackoverflow.com/questions/18541923/what-is-out-of-bag-error-in-random-forests)
-
-
-[Hyperparameter Tuning the Random Forest in Python]: https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
+* [Hyperparameter Tuning the Random Forest in Python]: https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
 [[Will Koehrsen] Hyperparameter Tuning the Random Forest in Python](https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74)
 
 
