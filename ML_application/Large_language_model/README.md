@@ -9,8 +9,9 @@
 | ChatGPT | 4,096 tokens | 
 | GPT4 | 32,768 tokens |
 | Claude (Anthropic AI) | 100,000 tokens | 
-| CodeT5+ (Salesforce)   | 3. softmax regression | 
-
+| CodeT5+ (Salesforce)   | | 
+| LlaMa 1 (7B, 13B, 33B, 65B) | 2000 tokens | 
+| LlaMa 2 (7B, 13B, 34B, 70B) | 4000 tokens | 
 
 
 * [Understanding the Context Length Hitch with GPT Models]: https://www.linkedin.com/pulse/understanding-context-length-hitch-gpt-models-arun-kesavan/
