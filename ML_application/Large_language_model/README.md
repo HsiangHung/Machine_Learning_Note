@@ -2,6 +2,22 @@
 # Large Language Model
 
 
+* Context Length: Context length refers to the number of tokens a language model can process. The longer the context length, the more information and the richer the context the model has for generating a response.
+
+| Model |  Context Length |  
+| --- | --- | 
+| ChatGPT | 4,096 tokens | 
+| GPT4 | 32,768 tokens |
+| Claude (Anthropic AI) | 100,000 tokens | 
+| CodeT5+ (Salesforce)   | 3. softmax regression | 
+
+
+
+* [Week2 - Instruction fine-tuning]: https://www.coursera.org/learn/generative-ai-with-llms/lecture/exyNC/instruction-fine-tuning
+[[Coursera, Generative AI with Large Language Models] Week2 - Instruction fine-tuning](https://www.coursera.org/learn/generative-ai-with-llms/lecture/exyNC/instruction-fine-tuning)
+
+
+
 ## Fine-Tuning 
 
 
