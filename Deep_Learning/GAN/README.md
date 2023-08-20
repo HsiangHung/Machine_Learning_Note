@@ -41,11 +41,13 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 
 
 
-## Time-Series GAN
+## GANs for Time-Series Data
 
 * TimeGAN: [[Jinsung Yoon et al.]][Time-series Generative Adversarial Networks]
 
 * Probabilistic autoregressive model (PAR): [[Open source - SDV]][PAR Model]
+
+* DoppelGANger: [[Kendrick Boyd]][Generate Synthetic Time-series Data with Open-source Tools], [[Alex Watson]][Creating Synthetic Time Series Data for Global Financial Institutions – a POC Deep Dive]
 
 
 
@@ -67,10 +69,15 @@ In practice, it saturates for the generator, meaning that the generator quite fr
 [[Shuntaro Takahashi et al.] Modeling financial time-series with generative adversarial networks](https://www.sciencedirect.com/science/article/abs/pii/S0378437119307277?fr=RR-2&ref=pdf_download&rr=7c99aab42cfe9444)
 
 
+* [Generate Synthetic Time-series Data with Open-source Tools]: https://www.kdnuggets.com/2022/06/generate-synthetic-timeseries-data-opensource-tools.html
+[[Kendrick Boyd] Generate Synthetic Time-series Data with Open-source Tools](https://www.kdnuggets.com/2022/06/generate-synthetic-timeseries-data-opensource-tools.html)
 
 
+* [Creating Synthetic Time Series Data for Global Financial Institutions – a POC Deep Dive]: https://gretel.ai/blog/creating-synthetic-time-series-data-for-global-financial-institutions-a-poc-deep-dive
+[[Alex Watson] Creating Synthetic Time Series Data for Global Financial Institutions – a POC Deep Dive](https://gretel.ai/blog/creating-synthetic-time-series-data-for-global-financial-institutions-a-poc-deep-dive)
 
-## Tabluar data GAN
+
+## GANs for Tabluar data
 
 
 
