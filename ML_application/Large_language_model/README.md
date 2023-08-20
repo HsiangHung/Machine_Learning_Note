@@ -8,8 +8,8 @@
 
 1. **Instruction fine-tuning**: Instruction fine-tuning, where **all** of the model's weights are updated is known as **full fine-tuning**. The process results in a **new version** of the model with **updated weights**. It is important to note that just like pre-training, full fine tuning requires enough memory and compute budget to store and process all the gradients, optimizers and other components that are being updated during training [[Coursera, Generative AI with Large Language Models] ][Week2 Instruction fine-tuning]. 
 
-* [Week2 Instruction fine-tuning]: https://www.coursera.org/learn/generative-ai-with-llms/lecture/exyNC/instruction-fine-tuning
-[[Coursera, Generative AI with Large Language Models] Week2 Instruction fine-tuning](https://www.coursera.org/learn/generative-ai-with-llms/lecture/exyNC/instruction-fine-tuning)
+* [Week2 - Instruction fine-tuning]: https://www.coursera.org/learn/generative-ai-with-llms/lecture/exyNC/instruction-fine-tuning
+[[Coursera, Generative AI with Large Language Models] Week2 - Instruction fine-tuning](https://www.coursera.org/learn/generative-ai-with-llms/lecture/exyNC/instruction-fine-tuning)
 
 
 ## LlaMa
@@ -17,6 +17,13 @@
 Intsall LlaMa 2 in M1/M2 chip Mac:
 * [Tutorial: Install a Chat Large Language Model (LLM) on your M1/M2 Mac](https://www.youtube.com/watch?v=rStOK2FfyEY)
 * [How to install LLaMA on Mac (llama.cpp)](https://agi-sphere.com/install-llama-mac/#Step_1_Install_Homebrew)
+
+
+Fine-tuning on LlaMa 2:
+
+* [Youtube - Tutorial on Llama 2 and How to Fine-tune It]: https://www.youtube.com/watch?v=ntJUXgaTJIM
+[[Junling Hu] Youtube -  Tutorial on Llama 2 and How to Fine-tune It](https://www.youtube.com/watch?v=ntJUXgaTJIM)
+
 
 
 ## LangChain
