@@ -1,5 +1,5 @@
 
-# Large Language Model
+# Build a chatbot with Llama 2 and LangChain
 
 
 * Context Length: Context length refers to the number of tokens a language model can process. The longer the context length, the more information and the richer the context the model has for generating a response [[LinkedIn, Arun Kesavan]][Understanding the Context Length Hitch with GPT Models].
