@@ -1,6 +1,32 @@
 
 # Large Language Model
 
+## What Was the First Large Language Model?
+
+As we mentioned earlier, when talking about large language models, we're basically talking about software that excels at generating human-like language. The first model that really caught people's attention was the GPT (Generative Pre-trained Transformer) model developed by OpenAI in 2018. The well-known ChatGPT is basically GPT-3.5.
+What made the GPT model so special was that it was one of the first language models to use the transformer architecture. This is a type of neural network that's great at understanding long-range dependencies in text data, which made it possible for the model to generate highly coherent and contextually relevant language output. With 117 million parameters, the GPT model was a real game-changer for natural language processing.
+Since then, we've seen the development of even larger and more impressive language models, like GPT-2, GPT-3, and BERT. These models can generate text that's even more sophisticated and human-like than the GPT model. But even though the GPT model might not be the biggest or the best anymore, it's still an important milestone in the history of language models and has had a major impact on the field of natural language processing.
+
+
+## How Do Large Language Models Work?
+
+The most well-known Large Language Model (LLM) architecture is the **transformer architecture**. A typical Transformer model consists of four main steps:
+
+### 1. Word Embedding 
+
+To give another example, let's consider the words "cat" and "dog". These two words will usually be closer to each other when compared to another pair of words, such as "cat" and "burgers. In word embedding, these words would be represented as vectors that are located close to each other in the vector space.  
+
+Creating word embeddings involves training a neural network on a large corpus of text data, such as news articles or books. During training, the network learns to predict the likelihood of a word appearing in a given context based on the words that come before and after it in a sentence. The vectors that are learned through this process capture the semantic relationships between different words in the corpus.
+
+### 2. Positional Encoding
+
+Positional encoding is all about helping the model figure out where words are in a sequence.  For example, when translating a sentence like "The cat is on the mat" to another language, it's crucial to know that "cat" comes before "mat".
+
+### 3.
+
+### 4.
+
+
 
 * Context Length: Context length refers to the number of tokens a language model can process. The longer the context length, the more information and the richer the context the model has for generating a response [[LinkedIn, Arun Kesavan]][Understanding the Context Length Hitch with GPT Models].
 
