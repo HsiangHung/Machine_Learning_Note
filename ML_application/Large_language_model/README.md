@@ -12,7 +12,7 @@ Since then, we've seen the development of even larger and more impressive langua
 
 ## How Do Large Language Models Work?
 
-The most well-known Large Language Model (LLM) architecture is the **transformer architecture**. 
+The most well-known Large Language Model (LLM) architecture is the **transformer architecture** shown below (picture from the paper **Attention Is All You Need** [[Ashish Vaswani et al.]][Attention Is All You Need]). 
 
 ![transformer](images/transformer.png)
 
@@ -38,6 +38,10 @@ Positional encoding is all about helping the model figure out where words are in
 
 * [An Overview of Large Language Models (LLMs)]: https://wandb.ai/mostafaibrahim17/ml-articles/reports/An-Overview-of-Large-Language-Models-LLMs---VmlldzozODA3MzQz
 [[Mostafa Ibrahim] An Overview of Large Language Models (LLMs)](https://wandb.ai/mostafaibrahim17/ml-articles/reports/An-Overview-of-Large-Language-Models-LLMs---VmlldzozODA3MzQz)
+
+
+* [Attention Is All You Need]: https://arxiv.org/abs/1706.03762
+[[Ashish Vaswani et al.] Attention Is All You Need](https://arxiv.org/abs/1706.03762)
 
 
 ## LLMs Comparison
