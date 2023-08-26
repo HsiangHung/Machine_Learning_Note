@@ -3,14 +3,16 @@
 
 ## What Was the First Large Language Model?
 
-As we mentioned earlier, when talking about large language models, we're basically talking about software that excels at generating human-like language. The first model that really caught people's attention was the GPT (Generative Pre-trained Transformer) model developed by OpenAI in 2018. The well-known ChatGPT is basically GPT-3.5.
-What made the GPT model so special was that it was one of the first language models to use the transformer architecture. This is a type of neural network that's great at understanding long-range dependencies in text data, which made it possible for the model to generate highly coherent and contextually relevant language output. With 117 million parameters, the GPT model was a real game-changer for natural language processing.
-Since then, we've seen the development of even larger and more impressive language models, like GPT-2, GPT-3, and BERT. These models can generate text that's even more sophisticated and human-like than the GPT model. But even though the GPT model might not be the biggest or the best anymore, it's still an important milestone in the history of language models and has had a major impact on the field of natural language processing.
+The first model that really caught people's attention was the GPT (Generative Pre-trained Transformer) model developed by OpenAI in 2018. The well-known ChatGPT is basically GPT-3.5.
+
+The GPT model was one of the first language models to use the **transformer architecture**. This is a type of neural network that's great at understanding **long-range dependencies** in text data, which made it possible for the model to generate highly coherent and contextually relevant language output. With **117 million** parameters, the GPT model was a real game-changer for natural language processing.
+Since then, we've seen the development of even larger and more impressive language models, like GPT-2, GPT-3, and BERT. [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
+
 
 
 ## How Do Large Language Models Work?
 
-The most well-known Large Language Model (LLM) architecture is the **transformer architecture**. A typical Transformer model consists of four main steps:
+The most well-known Large Language Model (LLM) architecture is the **transformer architecture**. A typical Transformer model consists of four main steps [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]:
 
 ### 1. Word Embedding 
 
@@ -26,6 +28,13 @@ Positional encoding is all about helping the model figure out where words are in
 
 ### 4.
 
+
+
+* [An Overview of Large Language Models (LLMs)]: https://wandb.ai/mostafaibrahim17/ml-articles/reports/An-Overview-of-Large-Language-Models-LLMs---VmlldzozODA3MzQz
+[[Mostafa Ibrahim] An Overview of Large Language Models (LLMs)](https://wandb.ai/mostafaibrahim17/ml-articles/reports/An-Overview-of-Large-Language-Models-LLMs---VmlldzozODA3MzQz)
+
+
+## LLMs Comparison
 
 
 * Context Length: Context length refers to the number of tokens a language model can process. The longer the context length, the more information and the richer the context the model has for generating a response [[LinkedIn, Arun Kesavan]][Understanding the Context Length Hitch with GPT Models].
