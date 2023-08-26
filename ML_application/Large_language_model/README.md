@@ -10,6 +10,8 @@ Since then, we've seen the development of even larger and more impressive langua
 
 ## Types of Pre-trained Large Language Models
 
+The following table is summarized from Coursera course (Generative AI):
+
 | Type | Model  | approach | objective | Use Case |  Model Example |
 | --- | --- | --- | --- | --- | --- |
 | Encoder Only | autoEncoding | masked language modeling (MLM), bidirectional | reconstruct test ("denoising")| sentiment analysis, name entity recognition, word classification | BERT, ROBERTA |
