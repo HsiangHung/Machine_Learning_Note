@@ -7,7 +7,8 @@
 
 [[Mostafa Ibrahim]][What is LangChain? — A 101 overview]
 
-LangChain is a library that helps developers build applications powered by large language models (LLMs). It does this by providing a framework for connecting LLMs to other sources of data, such as the internet or your personal files. This allows developers to chain together multiple commands to create more complex applications.
+LangChain is a library that helps developers build applications powered by large language models (LLMs).
+More specifically, LangChain is an **orchestration tool for prompts**, making it easier for developers to chain different prompts interactively. It does this by providing a framework for **connecting LLMs to other sources of data**, such as the internet or your personal files. This allows developers to **chain together multiple commands** to create more complex applications.
 
 LLMs are complex models that can be difficult to use directly. LangChain provides a simple interface that makes it easy to connect LLMs to your application.
 
