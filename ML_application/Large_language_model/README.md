@@ -8,6 +8,14 @@ The first model that really caught people's attention was the GPT (Generative Pr
 The GPT model was one of the first language models to use the **transformer architecture**. This is a type of neural network that's great at understanding **long-range dependencies** in text data, which made it possible for the model to generate highly coherent and contextually relevant language output. With **117 million** parameters, the GPT model was a real game-changer for natural language processing.
 Since then, we've seen the development of even larger and more impressive language models, like GPT-2, GPT-3, and BERT. [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
 
+## Types of Large Language Models
+
+| Type | Model  | Use Case |  
+| --- | --- | --- | 
+| Encoder | AutoEncoder | 4,096 tokens | 
+| Encoder + Decoder | | 32,768 tokens |
+| Decoder | | 100,000 tokens | 
+
 
 
 ## How Do Large Language Models Work?
@@ -20,7 +28,9 @@ A typical Transformer model consists of four main steps [[Mostafa Ibrahim]][An O
 
 ### 1. Word Embedding 
 
-To give another example, let's consider the words "cat" and "dog". These two words will usually be closer to each other when compared to another pair of words, such as "cat" and "burgers. In word embedding, these words would be represented as vectors that are located close to each other in the vector space.  
+To give another example, let's consider the words "cat" and "dog". These two words will usually be closer to each other when compared to another pair of words, such as "cat" and "burgers. In word embedding, these words would be represented as vectors that are located close to each other in the vector space. Following illustration is another example of trained Word2Vec Vectors with Semantic and Syntactic relationship
+
+![word2vec](images/word_embedding.png)
 
 Creating word embeddings involves training a neural network on a large corpus of text data, such as news articles or books. During training, the network learns to predict the likelihood of a word appearing in a given context based on the words that come before and after it in a sentence. The vectors that are learned through this process capture the semantic relationships between different words in the corpus.
 
@@ -35,9 +45,13 @@ Advanced large language models utilize a certain architecture known as Transform
 The transformer layer works by processing the entire input sequence **in parallel** rather than sequentially. It consists of two essential components: 
 1. **self-attention mechanism**: The self-attention mechanism allows the model to assign a weight to each word in the sequence, depending on how valuable it is for the prediction. This enables the model to capture the relationships between words, regardless of their distance from each other.
 
-2. feedforward neural network
+2. **feedforward neural network**: After the self-attention layer finishes processing the sequence, the position-wise feed-forward layer takes in each position in the input sequence and processes it independently. For each position, a fully connected layer takes in a vector representation of the token (word or subword) at that position. This vector representation is the output from the preceding self-attention layer.
 
-### 4.
+During training, the transformer layer's weights are updated repeatedly to reduce the difference between the predicted output and the actual output. This is done through the backpropagation algorithm, which is similar to the training process for traditional neural network layers.
+
+### 4. Text  Generation
+
+After the LLM has been trained and fine-tuned, the model can be used to generate highly sophisticated text in response to a prompt or question. The model is typically "primed" with a seed input, which can be a few words, a sentence, or even an entire paragraph. The LLM then uses its learned patterns to generate a coherent and contextually-relevant response.
 
 
 
@@ -54,7 +68,7 @@ The transformer layer works by processing the entire input sequence **in paralle
 
 * Context Length: Context length refers to the number of tokens a language model can process. The longer the context length, the more information and the richer the context the model has for generating a response [[LinkedIn, Arun Kesavan]][Understanding the Context Length Hitch with GPT Models].
 
-| Model | parameter  | Context Length |  
+| Model | Parameter  | Context Length |  
 | --- | --- | --- | 
 | ChatGPT |  | 4,096 tokens | 
 | GPT4 | | 32,768 tokens |
