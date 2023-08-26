@@ -30,7 +30,12 @@ Positional encoding is all about helping the model figure out where words are in
 
 ### 3. Transformers
 
+Advanced large language models utilize a certain architecture known as Transformers. The transformer layer is often added as an additional layer to the traditional neural network architecture to improve the LLM's ability to model long-range dependencies in natural language text.
 
+The transformer layer works by processing the entire input sequence **in parallel** rather than sequentially. It consists of two essential components: 
+1. **self-attention mechanism**: The self-attention mechanism allows the model to assign a weight to each word in the sequence, depending on how valuable it is for the prediction. This enables the model to capture the relationships between words, regardless of their distance from each other.
+
+2. feedforward neural network
 
 ### 4.
 
