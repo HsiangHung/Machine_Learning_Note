@@ -8,13 +8,13 @@ The first model that really caught people's attention was the GPT (Generative Pr
 The GPT model was one of the first language models to use the **transformer architecture**. This is a type of neural network that's great at understanding **long-range dependencies** in text data, which made it possible for the model to generate highly coherent and contextually relevant language output. With **117 million** parameters, the GPT model was a real game-changer for natural language processing.
 Since then, we've seen the development of even larger and more impressive language models, like GPT-2, GPT-3, and BERT. [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
 
-## Types of Large Language Models
+## Types of Pre-trained Large Language Models
 
-| Type | Model  | Use Case |  
-| --- | --- | --- | 
-| Encoder | autoEncoder | sentiment analysis | 
-| Encoder + Decoder | sequence-2-sequence | translation, summarization, Q & A |
-| Decoder | autoregression | GPT | 
+| Type | Model  | approach | objective | Use Case |  Model Example |
+| --- | --- | --- | --- | --- | --- |
+| Encoder Only | autoEncoding | masked language modeling (MLM), bidirectional | reconstruct test ("denoising")| sentiment analysis, name entity recognition, word classification | BERT, ROBERTA |
+| Encoder-Decoder | sequence-to-sequence | span corruption | reconstruct span | translation, text summarization, Q&A | T5, BART |
+| Decoder Only | autoregression | causal language modeling (CML), unidirectional  | predict next token | text generation | GPT, BLOOM | 
 
 
 
