@@ -1,4 +1,8 @@
-# GAN
+# Generative Adversial Networks (GAN)
+
+GANs are synthetic data generation tools. Synthetic data generation became a must-have skill for new data scientists (see [Synthetic data generation — a must-have skill for new data scientists](https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae)).
+
+
 
 ## MinMax Loss
 
