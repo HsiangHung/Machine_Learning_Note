@@ -52,8 +52,6 @@ where $pos$ refers to the position of the “word” in the sequence, $d$ means 
 
 * [A Gentle Introduction to Positional Encoding in Transformer Models, Part 1]: https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/#:~:text=Positional%20encoding%20describes%20the%20location,item%27s%20position%20in%20transformer%20models.
 [[Jason Brownlee] A Gentle Introduction to Positional Encoding in Transformer Models, Part 1](https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/#:~:text=Positional%20encoding%20describes%20the%20location,item%27s%20position%20in%20transformer%20models.)
-
-
 * [What is the positional encoding in the transformer model?]: https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model
 [[Data Science StackExchange] What is the positional encoding in the transformer model?](https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model)
 
