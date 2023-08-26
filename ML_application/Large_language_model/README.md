@@ -12,9 +12,9 @@ Since then, we've seen the development of even larger and more impressive langua
 
 | Type | Model  | Use Case |  
 | --- | --- | --- | 
-| Encoder | AutoEncoder | 4,096 tokens | 
-| Encoder + Decoder | | 32,768 tokens |
-| Decoder | | 100,000 tokens | 
+| Encoder | autoEncoder | sentiment analysis | 
+| Encoder + Decoder | sequence-2-sequence | translation, summarization, Q & A |
+| Decoder | autoregression | GPT | 
 
 
 
@@ -28,7 +28,9 @@ A typical Transformer model consists of four main steps [[Mostafa Ibrahim]][An O
 
 ### 1. Word Embedding 
 
-To give another example, let's consider the words "cat" and "dog". These two words will usually be closer to each other when compared to another pair of words, such as "cat" and "burgers. In word embedding, these words would be represented as vectors that are located close to each other in the vector space. Following illustration is another example of trained Word2Vec Vectors with Semantic and Syntactic relationship
+To give another example, let's consider the words "cat" and "dog". These two words will usually be closer to each other when compared to another pair of words, such as "cat" and "burgers. In word embedding, these words would be represented as vectors that are located close to each other in the vector space. 
+
+Another example of trained Word2Vec Vectors with Semantic and Syntactic relationship is illustrated below (from [Word2Vec Research Paper Explained](https://towardsdatascience.com/word2vec-research-paper-explained-205cb7eecc30))
 
 ![word2vec](images/word_embedding.png)
 
