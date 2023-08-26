@@ -12,7 +12,11 @@ Since then, we've seen the development of even larger and more impressive langua
 
 ## How Do Large Language Models Work?
 
-The most well-known Large Language Model (LLM) architecture is the **transformer architecture**. A typical Transformer model consists of four main steps [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]:
+The most well-known Large Language Model (LLM) architecture is the **transformer architecture**. 
+
+![transformer](images/transformer.png)
+
+A typical Transformer model consists of four main steps [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]:
 
 ### 1. Word Embedding 
 
@@ -24,7 +28,9 @@ Creating word embeddings involves training a neural network on a large corpus of
 
 Positional encoding is all about helping the model figure out where words are in a sequence.  For example, when translating a sentence like "The cat is on the mat" to another language, it's crucial to know that "cat" comes before "mat".
 
-### 3.
+### 3. Transformers
+
+
 
 ### 4.
 
