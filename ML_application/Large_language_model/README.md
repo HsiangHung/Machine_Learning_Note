@@ -28,6 +28,8 @@ A typical Transformer model consists of four main steps [[Mostafa Ibrahim]][An O
 
 ### 1. Word Embedding 
 
+[[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
+
 To give another example, let's consider the words "cat" and "dog". These two words will usually be closer to each other when compared to another pair of words, such as "cat" and "burgers. In word embedding, these words would be represented as vectors that are located close to each other in the vector space. 
 
 Another example of trained Word2Vec Vectors with Semantic and Syntactic relationship is illustrated below (from [Word2Vec Research Paper Explained](https://towardsdatascience.com/word2vec-research-paper-explained-205cb7eecc30))
@@ -38,9 +40,28 @@ Creating word embeddings involves training a neural network on a large corpus of
 
 ### 2. Positional Encoding
 
+[[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
+
 Positional encoding is all about helping the model figure out where words are in a sequence.  For example, when translating a sentence like "The cat is on the mat" to another language, it's crucial to know that "cat" comes before "mat".
 
+The position embeddings are computed as [[Data Science StackExchange]][What is the positional encoding in the transformer model?]
+
+$$PE_{(pos, 2i)} = \sin \Big( \frac{pos}{10000^{\frac{2i}{d}}} \Big),$$
+
+where $pos$ refers to the position of the “word” in the sequence, $d$ means the size of the word/token embedding, and $i$ refers to each of the 5 individual dimensions of the embedding (i.e. 0, 1,2,3,4).
+
+* [A Gentle Introduction to Positional Encoding in Transformer Models, Part 1]: https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/#:~:text=Positional%20encoding%20describes%20the%20location,item%27s%20position%20in%20transformer%20models.
+[[Jason Brownlee] A Gentle Introduction to Positional Encoding in Transformer Models, Part 1](https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/#:~:text=Positional%20encoding%20describes%20the%20location,item%27s%20position%20in%20transformer%20models.)
+
+
+* [What is the positional encoding in the transformer model?]: https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model
+[[Data Science StackExchange] What is the positional encoding in the transformer model?](https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model)
+
+
+
 ### 3. Transformers
+
+[[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
 
 Advanced large language models utilize a certain architecture known as Transformers. The transformer layer is often added as an additional layer to the traditional neural network architecture to improve the LLM's ability to model long-range dependencies in natural language text.
 
@@ -53,8 +74,11 @@ During training, the transformer layer's weights are updated repeatedly to reduc
 
 ### 4. Text  Generation
 
+[[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
+
 After the LLM has been trained and fine-tuned, the model can be used to generate highly sophisticated text in response to a prompt or question. The model is typically "primed" with a seed input, which can be a few words, a sentence, or even an entire paragraph. The LLM then uses its learned patterns to generate a coherent and contextually-relevant response.
 
+Text generation relies on a technique called autoregression, where the model generates each word or token of the output sequence one at a time based on the previous words it has generated. The model uses the parameters it has learned during training to calculate the probability distribution of the next word or token and then selects the most likely choice as the next output.
 
 
 * [An Overview of Large Language Models (LLMs)]: https://wandb.ai/mostafaibrahim17/ml-articles/reports/An-Overview-of-Large-Language-Models-LLMs---VmlldzozODA3MzQz
