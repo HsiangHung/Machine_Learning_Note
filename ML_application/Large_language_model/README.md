@@ -79,7 +79,7 @@ The transformer layer works by processing the entire input sequence **in paralle
 
 During training, the transformer layer's weights are updated repeatedly to reduce the difference between the predicted output and the actual output. This is done through the backpropagation algorithm, which is similar to the training process for traditional neural network layers.
 
-### 4. Text  Generation
+### 4. Text Generation
 
 [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
 
