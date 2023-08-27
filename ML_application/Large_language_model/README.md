@@ -8,6 +8,12 @@ The first model that really caught people's attention was the GPT (Generative Pr
 The GPT model was one of the first language models to use the **transformer architecture**. This is a type of neural network that's great at understanding **long-range dependencies** in text data, which made it possible for the model to generate highly coherent and contextually relevant language output. With **117 million** parameters, the GPT model was a real game-changer for natural language processing.
 Since then, we've seen the development of even larger and more impressive language models, like GPT-2, GPT-3, and BERT. [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
 
+OpenAI's ChatGPT is a fine-tuned version of the base GPT model to make it more suitable for generating conversational responses. Examples of GPT models include GPT-2, GPT-3, and GPT-4. OpenAI’s ChatGPT is a large language model. 
+
+There are other large language models. See [What’s the difference between a Large Language Model (LLM) and a General Pre-trained Transformer (GPT)?](https://www.brinwilson.com/whats-the-difference-between-a-large-language-model-llm-and-a-general-pre-trained-transformer-gpt/).
+
+
+
 ## Types of Pre-trained Large Language Models
 
 The following table is summarized from Coursera course (Generative AI):
@@ -18,6 +24,7 @@ The following table is summarized from Coursera course (Generative AI):
 | Encoder-Decoder | sequence-to-sequence | span corruption | reconstruct span | translation, text summarization, Q&A | T5, BART |
 | Decoder Only | autoregression | causal language modeling (CML), unidirectional  | predict next token | text generation | GPT, BLOOM | 
 
+BERT utilizes a bi-directional transformer architecture, which means that it can process input text in both forward and backward directions to better understand the context and relationships between words.
 
 
 ## How Do Large Language Models Work?
@@ -96,8 +103,8 @@ Text generation relies on a technique called autoregression, where the model gen
 
 | Model | Parameter  | Context Length |  
 | --- | --- | --- | 
-| ChatGPT |  | 4,096 tokens | 
-| GPT4 | | 32,768 tokens |
+| GPT3 | [175 billion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 4,096 tokens | 
+| GPT4 | [100 trillion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 32,768 tokens |
 | Claude (Anthropic AI) | | 100,000 tokens | 
 | CodeT5+ (Salesforce)   | | | 
 | LLaMa 1 (7B, 13B, 33B, 65B) | | 2,000 tokens | 
