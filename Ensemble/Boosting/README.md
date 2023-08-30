@@ -31,7 +31,7 @@ Adaptive boosting **changes sample distribution** by **modifying the weights** a
 We first train a decision tree in which each observation is assigned an equal weight. After evaluating the first tree, we increase the weights of those observations which have significant calssificstion errors. The second tree is therefore grown on this weighted data. Our new model is therefore Tree 1 + Tree 2. We then compute the classification error from this new 2-tree **ensemble** model and grow a third tree to predict the revised residuals. Predictions of the final ensemble model is therefore the weighted sum of the predictions made by the previous tree models [[Harshdeep Singh]][Understanding Gradient Boosting Machines].
 
 
-As a concrete example, we follow Josh Starmer's video lecture: [Adaboost, clearly explained](https://www.youtube.com/watch?v=LsK-xG1cLYA) below. Suppose we have data if patients have heart disease as follows (**chest** = if chest pain,**weight** = patient weight, **disease** = heart disease and **sample weight**):
+As a concrete example, we follow **Josh Starmer's StatQuest** video [Adaboost, clearly explained](https://www.youtube.com/watch?v=LsK-xG1cLYA) below. Suppose we have data if patients have heart disease as follows (**chest** = if chest pain,**weight** = patient weight, **disease** = heart disease and **sample weight**, target variable is **disease**=0/1):
 
 | # | chest | weight | disease | sample weight|
 | --- | --- | --- | --- | --- |
@@ -46,8 +46,7 @@ As a concrete example, we follow Josh Starmer's video lecture: [Adaboost, clearl
 
 At the beginning each data has same sample weight = 1/8.
 
-Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` and patients' weight < as `No`.
-For `Yes` we have 3 correct, 0 incorrect and for `No` we have 4 correct and 1 incorrect (#4). Then next step we reweigh #4 data with higher sample weight than others since it is misclassified
+Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` and patients' weight < as `No`. For `Yes` prediction we have 3 correct, 0 incorrect, and for `No` prediction we have 4 correct and 1 incorrect (#4). Then next step we reweigh #4 data with higher sample weight than others since it is misclassified
 
 | # | chest | weight | disease | new sample weight|
 | --- | --- | --- | --- | --- | 
