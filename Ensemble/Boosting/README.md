@@ -59,7 +59,14 @@ Suppose we select weight = 176 to split node, patients' weight > 176 as `Yes` an
 | 7 |  Yes  |  168   |   No    |  0.07  |
 | 8 |  Yes  |  172   |   No    |  0.07  |
 
-Then we reconstruct data in next forest by the new sample weights. For example, given random numbers r: if r < 0.07 we pick #1, if 0.07 <= r < 0.14 we pick #2,..., if 0.21 <= r < 0.7 pick #4,.... As a result, we will have more #4 than others in the new constructed data.
+Then we reconstruct data in next forest by the new sample weights. 
+
+For example, given random numbers r: 
+* if r < 0.07 we pick #1, 
+* if 0.07 <= r < 0.14 we pick #2,..., 
+* if 0.21 <= r < 0.7 pick #4,.... 
+
+As a result, we will have more #4 than others in the new constructed data.
 
 
 
