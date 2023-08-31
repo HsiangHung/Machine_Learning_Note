@@ -85,7 +85,7 @@ Recall the **confusion matrix**:
 |    |  actual positive |  actual negative | 
 | --- | --- | --- | 
 |  **predicted positive** | TP | FP | 
-|  **predicted negative** | FP | TN | 
+|  **predicted negative** | FN | TN | 
 
 
 The relevant metrics are 
