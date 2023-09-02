@@ -13,6 +13,18 @@ OpenAI's ChatGPT is a fine-tuned version of the base GPT model to make it more s
 There are other large language models. See [What’s the difference between a Large Language Model (LLM) and a General Pre-trained Transformer (GPT)?](https://www.brinwilson.com/whats-the-difference-between-a-large-language-model-llm-and-a-general-pre-trained-transformer-gpt/).
 
 
+## What are Generative Pre-trained Transformers (GPT)?
+
+Generative Pre-trained Transformer (GPT) is a transformer-based model that **uses self-attention mechanisms** to process sequential data, such as natural language text.
+
+One of the key features of GPT is that it is pre-trained on a massive dataset of human-generated text, allowing it to generate highly realistic and human-like text. This pre-training step enables the model to learn rich representations of the underlying structure of language, which can then be fine-tuned for specific NLP tasks, including machine translation, summarization, question answering, and text generation.
+
+In addition to its impressive performance on a variety of NLP tasks, GPT has also been used to generate creative writing, such as poetry and fiction. This has opened up new possibilities for using machine learning in the arts, and has sparked new research into the use of GPT.
+
+
+* [What are Generative Pre-trained Transformers (GPT)?]: https://www.linkedin.com/pulse/what-generative-pre-trained-transformers-gpt-scalebuildai/
+[[LinkedIn, ScaleBuild AI] What are Generative Pre-trained Transformers (GPT)?](https://www.linkedin.com/pulse/what-generative-pre-trained-transformers-gpt-scalebuildai/)
+
 
 ## Types of Pre-trained Large Language Models
 
@@ -37,9 +49,8 @@ A typical Transformer model consists of four main steps [[Mostafa Ibrahim]][An O
 
 ### 1. Word Embedding 
 
-[[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
 
-To give another example, let's consider the words "cat" and "dog". These two words will usually be closer to each other when compared to another pair of words, such as "cat" and "burgers. In word embedding, these words would be represented as vectors that are located close to each other in the vector space. 
+To give another example, let's consider the words "cat" and "dog". These two words will usually be closer to each other when compared to another pair of words, such as "cat" and "burgers. In word embedding, these words would be represented as vectors that are located close to each other in the vector space [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]. 
 
 Another example of trained Word2Vec Vectors with Semantic and Syntactic relationship is illustrated below (from [Word2Vec Research Paper Explained](https://towardsdatascience.com/word2vec-research-paper-explained-205cb7eecc30))
 
@@ -49,9 +60,8 @@ Creating word embeddings involves training a neural network on a large corpus of
 
 ### 2. Positional Encoding
 
-[[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
 
-Positional encoding is all about helping the model figure out where words are in a sequence.  For example, when translating a sentence like "The cat is on the mat" to another language, it's crucial to know that "cat" comes before "mat".
+Positional encoding is all about helping the model figure out where words are in a sequence.  For example, when translating a sentence like "The cat is on the mat" to another language, it's crucial to know that "cat" comes before "mat" [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)].
 
 The position embeddings are computed as [[Data Science StackExchange]][What is the positional encoding in the transformer model?]
 
@@ -68,9 +78,8 @@ where $pos$ refers to the position of the “word” in the sequence, $d$ means 
 
 ### 3. Transformers
 
-[[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
 
-Advanced large language models utilize a certain architecture known as Transformers. The transformer layer is often added as an additional layer to the traditional neural network architecture to improve the LLM's ability to model long-range dependencies in natural language text.
+Advanced large language models utilize a certain architecture known as Transformers. The transformer layer is often added as an additional layer to the traditional neural network architecture to improve the LLM's ability to model long-range dependencies in natural language text [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)].
 
 The transformer layer works by processing the entire input sequence **in parallel** rather than sequentially. It consists of two essential components: 
 1. **self-attention mechanism**: The self-attention mechanism allows the model to assign a weight to each word in the sequence, depending on how valuable it is for the prediction. This enables the model to capture the relationships between words, regardless of their distance from each other.
@@ -81,9 +90,7 @@ During training, the transformer layer's weights are updated repeatedly to reduc
 
 ### 4. Text Generation
 
-[[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
-
-After the LLM has been trained and fine-tuned, the model can be used to generate highly sophisticated text in response to a prompt or question. The model is typically "primed" with a seed input, which can be a few words, a sentence, or even an entire paragraph. The LLM then uses its learned patterns to generate a coherent and contextually-relevant response.
+After the LLM has been trained and fine-tuned, the model can be used to generate highly sophisticated text in response to a prompt or question. The model is typically "primed" with a seed input, which can be a few words, a sentence, or even an entire paragraph. The LLM then uses its learned patterns to generate a coherent and contextually-relevant response [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)].
 
 Text generation relies on a technique called autoregression, where the model generates each word or token of the output sequence one at a time based on the previous words it has generated. The model uses the parameters it has learned during training to calculate the probability distribution of the next word or token and then selects the most likely choice as the next output.
 
