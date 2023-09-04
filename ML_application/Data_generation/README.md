@@ -7,7 +7,7 @@ I totally agree it.
 
 In many cases, when customers begin on board ML products, they don't have enough data, or even don't have any data. To start with using ML services, we should provide synthetic data for training models.
 
-## Tool Summary
+## Time-Series Data Gen Tools
 
 | tool | Description |
 | --- | --- | 
@@ -26,5 +26,9 @@ In many cases, when customers begin on board ML products, they don't have enough
 
 * [Synthetic data generation — a must-have skill for new data scientists]: https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae
 [[Tirthajyoti Sarkar] Synthetic data generation — a must-have skill for new data scientists](https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae)
+
+
+* [Synthetic Data and Data Augmentation]: https://medium.com/@dogankeskin01/synthetic-data-and-data-augmentation-c022029dd660
+[[Doğan Keskin] Synthetic Data and Data Augmentation](https://medium.com/@dogankeskin01/synthetic-data-and-data-augmentation-c022029dd660)
 
 
