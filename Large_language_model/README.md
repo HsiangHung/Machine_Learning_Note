@@ -108,13 +108,15 @@ Text generation relies on a technique called autoregression, where the model gen
 
 * Context Length: Context length refers to the number of tokens a language model can process. The longer the context length, the more information and the richer the context the model has for generating a response [[LinkedIn, Arun Kesavan]][Understanding the Context Length Hitch with GPT Models].
 
+[L19.5.2.1 Some Popular Transformer Models: BERT, GPT, and BART](https://www.youtube.com/watch?v=iFhYwEi03Ew)
+
 | Model | Parameter  | Context Length |  reference |
 | --- | --- | --- | --- | 
 | GPT1 | [110 million | 4,096 tokens | [L19.5.2.2 GPT-v1](https://www.youtube.com/watch?v=LOCzBgSV4tQ) |
-| BERT | [] | 4,096 tokens |  |
+| BERT |  | 4,096 tokens | [L19.5.2.3 BERT](https://www.youtube.com/watch?v=_BFp4kjSB-I) |
 | GPT2 | 1.5 billion | 4,096 tokens | [L19.5.2.4 GPT-v2](https://www.youtube.com/watch?v=BXv1m9Asl7I&t=23s) |
 | GPT3 | [175 billion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 4,096 tokens | [L19.5.2.5 GPT-v3](https://www.youtube.com/watch?v=wYdKn-X4MhY) |
-| BART | [ billion]() | 4,096 tokens | [L19.5.2.6 BART](https://www.youtube.com/watch?v=1JBMCG8rW18) |
+| BART |  | 4,096 tokens | [L19.5.2.6 BART](https://www.youtube.com/watch?v=1JBMCG8rW18) |
 | GPT4 | [100 trillion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 32,768 tokens | |
 | Claude (Anthropic AI) | | 100,000 tokens |  |
 | CodeT5+ (Salesforce)   | | |  |
