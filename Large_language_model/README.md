@@ -26,6 +26,13 @@ In addition to its impressive performance on a variety of NLP tasks, GPT has als
 [[LinkedIn, ScaleBuild AI] What are Generative Pre-trained Transformers (GPT)?](https://www.linkedin.com/pulse/what-generative-pre-trained-transformers-gpt-scalebuildai/)
 
 
+* [What Is GPT?]: https://aws.amazon.com/what-is/gpt/
+[[AWS] What Is GPT?](https://aws.amazon.com/what-is/gpt/)
+
+
+
+
+
 ## Types of Pre-trained Large Language Models
 
 The following table is summarized from Coursera course (Generative AI):
@@ -37,6 +44,36 @@ The following table is summarized from Coursera course (Generative AI):
 | Decoder Only | autoregression | causal language modeling (CML), unidirectional  | predict next token | text generation | GPT, BLOOM | 
 
 BERT utilizes a bi-directional transformer architecture, which means that it can process input text in both forward and backward directions to better understand the context and relationships between words.
+
+
+### LLMs Comparison
+
+
+* Context Length: Context length refers to the number of tokens a language model can process. The longer the context length, the more information and the richer the context the model has for generating a response [[LinkedIn, Arun Kesavan]][Understanding the Context Length Hitch with GPT Models].
+
+[L19.5.2.1 Some Popular Transformer Models: BERT, GPT, and BART](https://www.youtube.com/watch?v=iFhYwEi03Ew)
+
+| Model | Parameter  | Context Length |  reference |
+| --- | --- | --- | --- | 
+| GPT1 | 110 million | 4,096 tokens | [L19.5.2.2 GPT-v1](https://www.youtube.com/watch?v=LOCzBgSV4tQ) |
+| BERT |  | 4,096 tokens | [L19.5.2.3 BERT](https://www.youtube.com/watch?v=_BFp4kjSB-I) |
+| GPT2 | 1.5 billion | 4,096 tokens | [L19.5.2.4 GPT-v2](https://www.youtube.com/watch?v=BXv1m9Asl7I&t=23s) |
+| GPT3 | [175 billion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 4,096 tokens | [L19.5.2.5 GPT-v3](https://www.youtube.com/watch?v=wYdKn-X4MhY) |
+| BART |  | 4,096 tokens | [L19.5.2.6 BART](https://www.youtube.com/watch?v=1JBMCG8rW18) |
+| GPT4 | [100 trillion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 32,768 tokens | |
+| Claude (Anthropic AI) | | 100,000 tokens |  |
+| CodeT5+ (Salesforce)   | | |  |
+| LLaMa 1 (7B, 13B, 33B, 65B) | | 2,000 tokens |  |
+| LLaMa 2 (7B, 13B, 34B, 70B) | | 4,000 tokens |  |
+| Flacon () | |  tokens |  |
+|Flan-T5 (80M, 250M, 780M, )| | | |
+
+NOTE: GPT3 to GPT3.5 has the reinforecement human feedback loop, with instrucion-answer pairs as training data. GPT3.5 to ChatGPT has the similar loop, but with conversation data. See [How ChatGPT Works: A Non-Technical Primer](https://mitsloanedtech.mit.edu/ai/basics/how-chatgpt-works-a-non-technical-primer/#Watch_the_Video).
+
+
+* [Understanding the Context Length Hitch with GPT Models]: https://www.linkedin.com/pulse/understanding-context-length-hitch-gpt-models-arun-kesavan/
+[[LinkedIn, Arun Kesavan] Understanding the Context Length Hitch with GPT Models](https://www.linkedin.com/pulse/understanding-context-length-hitch-gpt-models-arun-kesavan/)
+
 
 
 ## How Do Large Language Models Work?
@@ -101,33 +138,6 @@ Text generation relies on a technique called autoregression, where the model gen
 
 * [Attention Is All You Need]: https://arxiv.org/abs/1706.03762
 [[Ashish Vaswani et al.] Attention Is All You Need](https://arxiv.org/abs/1706.03762)
-
-
-## LLMs Comparison
-
-
-* Context Length: Context length refers to the number of tokens a language model can process. The longer the context length, the more information and the richer the context the model has for generating a response [[LinkedIn, Arun Kesavan]][Understanding the Context Length Hitch with GPT Models].
-
-[L19.5.2.1 Some Popular Transformer Models: BERT, GPT, and BART](https://www.youtube.com/watch?v=iFhYwEi03Ew)
-
-| Model | Parameter  | Context Length |  reference |
-| --- | --- | --- | --- | 
-| GPT1 | [110 million | 4,096 tokens | [L19.5.2.2 GPT-v1](https://www.youtube.com/watch?v=LOCzBgSV4tQ) |
-| BERT |  | 4,096 tokens | [L19.5.2.3 BERT](https://www.youtube.com/watch?v=_BFp4kjSB-I) |
-| GPT2 | 1.5 billion | 4,096 tokens | [L19.5.2.4 GPT-v2](https://www.youtube.com/watch?v=BXv1m9Asl7I&t=23s) |
-| GPT3 | [175 billion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 4,096 tokens | [L19.5.2.5 GPT-v3](https://www.youtube.com/watch?v=wYdKn-X4MhY) |
-| BART |  | 4,096 tokens | [L19.5.2.6 BART](https://www.youtube.com/watch?v=1JBMCG8rW18) |
-| GPT4 | [100 trillion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 32,768 tokens | |
-| Claude (Anthropic AI) | | 100,000 tokens |  |
-| CodeT5+ (Salesforce)   | | |  |
-| LLaMa 1 (7B, 13B, 33B, 65B) | | 2,000 tokens |  |
-| LLaMa 2 (7B, 13B, 34B, 70B) | | 4,000 tokens |  |
-| Flacon () | |  tokens |  |
-|Flan-T5 (80M, 250M, 780M, )| | | |
-
-
-* [Understanding the Context Length Hitch with GPT Models]: https://www.linkedin.com/pulse/understanding-context-length-hitch-gpt-models-arun-kesavan/
-[[LinkedIn, Arun Kesavan] Understanding the Context Length Hitch with GPT Models](https://www.linkedin.com/pulse/understanding-context-length-hitch-gpt-models-arun-kesavan/)
 
 
 
