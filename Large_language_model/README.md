@@ -68,7 +68,12 @@ BERT utilizes a bi-directional transformer architecture, which means that it can
 | Flacon () | |  tokens |  |
 |Flan-T5 (80M, 250M, 780M, )| | | |
 
-NOTE: GPT3 to GPT3.5 has the reinforecement human feedback loop, with instrucion-answer pairs as training data. GPT3.5 to ChatGPT has the similar loop, but with conversation data. See [How ChatGPT Works: A Non-Technical Primer](https://mitsloanedtech.mit.edu/ai/basics/how-chatgpt-works-a-non-technical-primer/#Watch_the_Video).
+NOTE: Compared to GPT3, GPT3.5 （See [How ChatGPT Works: A Non-Technical Primer](https://mitsloanedtech.mit.edu/ai/basics/how-chatgpt-works-a-non-technical-primer/#Watch_the_Video)）
+
+1. used 125000 instrucion-answer pairs as training data for supervised fine-tuning and
+2. used the reinforecement human feedback loop, with more instrucion-answer pair data.
+
+GPT3.5 to ChatGPT has implemented the similar steps, but with conversation data.
 
 
 * [Understanding the Context Length Hitch with GPT Models]: https://www.linkedin.com/pulse/understanding-context-length-hitch-gpt-models-arun-kesavan/
