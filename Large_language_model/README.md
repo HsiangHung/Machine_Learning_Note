@@ -55,11 +55,11 @@ BERT utilizes a bi-directional transformer architecture, which means that it can
 
 | Model | Parameter  | Context Length |  reference |
 | --- | --- | --- | --- | 
-| GPT1 | 110 million | 4,096 tokens | [L19.5.2.2 GPT-v1](https://www.youtube.com/watch?v=LOCzBgSV4tQ) |
-| BERT |  | 4,096 tokens | [L19.5.2.3 BERT](https://www.youtube.com/watch?v=_BFp4kjSB-I) |
-| GPT2 | 1.5 billion | 4,096 tokens | [L19.5.2.4 GPT-v2](https://www.youtube.com/watch?v=BXv1m9Asl7I&t=23s) |
-| GPT3 | [175 billion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 4,096 tokens | [L19.5.2.5 GPT-v3](https://www.youtube.com/watch?v=wYdKn-X4MhY) |
-| BART |  | 4,096 tokens | [L19.5.2.6 BART](https://www.youtube.com/watch?v=1JBMCG8rW18) |
+| GPT1 (OpenAI) | 117 million (12 layers) | 4,096 tokens | [L19.5.2.2 GPT-v1](https://www.youtube.com/watch?v=LOCzBgSV4tQ) |
+| BERT (Google) |  | 4,096 tokens | [L19.5.2.3 BERT](https://www.youtube.com/watch?v=_BFp4kjSB-I) |
+| GPT2 (OpenAI) | 1.5 billion (48 layers) | 4,096 tokens | [L19.5.2.4 GPT-v2](https://www.youtube.com/watch?v=BXv1m9Asl7I&t=23s) |
+| GPT3 (OpenAI) | [175 billion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) (96 layers) | 4,096 tokens | [L19.5.2.5 GPT-v3](https://www.youtube.com/watch?v=wYdKn-X4MhY) |
+| BART (Facebook) |  | 4,096 tokens | [L19.5.2.6 BART](https://www.youtube.com/watch?v=1JBMCG8rW18) |
 | GPT4 | [100 trillion](https://towardsdatascience.com/gpt-4-is-here-is-it-really-changing-the-game-for-language-ai-e49eb2d5022b#:~:text=The%20legend%20says%20that%20GPT,as%20input%2C%20not%20only%20text.) | 32,768 tokens | |
 | Claude (Anthropic AI) | | 100,000 tokens |  |
 | CodeT5+ (Salesforce)   | | |  |
@@ -70,10 +70,10 @@ BERT utilizes a bi-directional transformer architecture, which means that it can
 
 NOTE: Compared to GPT3, GPT3.5 （See [How ChatGPT Works: A Non-Technical Primer](https://mitsloanedtech.mit.edu/ai/basics/how-chatgpt-works-a-non-technical-primer/#Watch_the_Video)）
 
-1. used 125000 instrucion-answer pairs as training data for supervised fine-tuning and
-2. used the reinforecement human feedback loop, with more instrucion-answer pair data.
+1. used 12500 (human-written) instrucion-answer pairs as training data for supervised fine-tuning and
+2. used the reinforecement learning human feedback loop, with more instrucion-answer pairs and the ratings.
 
-GPT3.5 to ChatGPT has implemented the similar steps, but with conversation data.
+GPT3.5 to ChatGPT has implemented the similar steps, but with conversation data, and can follow-on the questions
 
 
 * [Understanding the Context Length Hitch with GPT Models]: https://www.linkedin.com/pulse/understanding-context-length-hitch-gpt-models-arun-kesavan/
