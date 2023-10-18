@@ -1,14 +1,8 @@
 
-# Large Language Model
+# Diffusion Model
 
-## What Was the First Large Language Model?
 
-The first model that really caught people's attention was the GPT (Generative Pre-trained Transformer) model developed by OpenAI in 2018. The well-known ChatGPT is basically GPT-3.5.
 
-The GPT model was one of the first language models to use the **transformer architecture**. This is a type of neural network that's great at understanding **long-range dependencies** in text data, which made it possible for the model to generate highly coherent and contextually relevant language output. With **117 million** parameters, the GPT model was a real game-changer for natural language processing.
-Since then, we've seen the development of even larger and more impressive language models, like GPT-2, GPT-3, and BERT. [[Mostafa Ibrahim]][An Overview of Large Language Models (LLMs)]
-
-OpenAI's ChatGPT is a fine-tuned version of the base GPT model to make it more suitable for generating conversational responses. Examples of GPT models include GPT-2, GPT-3, and GPT-4. OpenAI’s ChatGPT is a large language model. 
 
 There are other large language models. See [What’s the difference between a Large Language Model (LLM) and a General Pre-trained Transformer (GPT)?](https://www.brinwilson.com/whats-the-difference-between-a-large-language-model-llm-and-a-general-pre-trained-transformer-gpt/).
 
