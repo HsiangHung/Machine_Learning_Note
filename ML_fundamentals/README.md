@@ -120,8 +120,7 @@ In the following we visualize how KL divergence varies given a varying distribut
 ![](images/KL_divergence_1.png)
 ![](images/KL_divergence_2.png)
 ![](images/KL_divergence_3.png)
-![](images/KL_divergence_4.png)
-![](images/KL_divergence_5.png)
+
 
 
 ## 5. Convex Function
