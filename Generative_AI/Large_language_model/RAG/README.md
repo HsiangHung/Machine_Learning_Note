@@ -2,10 +2,10 @@
 # Retrieval-Augmented Generation (RAG)
 
 
-## What Is (RAG)?
+## What Is RAG?
 
 
-Large language models can be inconsistent: Sometimes they nail the answer to questions, other times they regurgitate random facts from their training data. If they occasionally sound like they have no idea what they’re saying, it’s because they don’t. LLMs know how words relate statistically, but not what they mean [[IBM Blog]][What is retrieval-augmented generation?].
+Large language models (LLMs) sometimes can nail the answer to questions, but other times they regurgitate random facts from their training data. Occasionally we observe hallucination in LLMs: they have no idea what they’re saying; it’s because they don’t. LLMs know how words relate statistically, but not what they mean [[IBM Blog]][What is retrieval-augmented generation?].
 
 RAG is an AI framework for retrieving facts from an external knowledge base to ground large language models (LLMs) on the most accurate, up-to-date information and to give users insight into LLMs' generative process [[IBM Blog]][What is retrieval-augmented generation?]. 
 
@@ -18,6 +18,8 @@ Implementing RAG in an LLM-based question answering system has the following mai
 
 
 By [[IBM Blog]][What is retrieval-augmented generation?]: “It’s the difference between an open-book and a closed-book exam.” In a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.
+
+LLMs need to be explicitly trained to recognize questions they can’t answer, rather than being prone to making things up.
 
 
 
@@ -32,9 +34,7 @@ To craft its response, the LLM first pulls data from Alice’s HR files to find 
 
 Today, LLM-powered chatbots can give customers more personalized answers without humans having to write out new scripts. And RAG allows LLMs to go one step further by greatly reducing the need to feed and retrain the model on **fresh examples**. Simply upload the **latest documents** or **policies**, and the model retrieves the information in open-book mode to answer the question.
 
-RAG has two phases: 
-1. retrieval
-2. content generation. 
+RAG has two phases, retrieval and content generation:
 
 ### Retrieval
 
