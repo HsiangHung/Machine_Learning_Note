@@ -117,7 +117,11 @@ The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatasc
 
 In the following we visualize how KL divergence varies given a varying distribution P (blue) from a reference distribution Q. The screenshots are taken from the blog [Introduction to Diffusion Models for Machine Learning](https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/#:~:text=More%20specifically%2C%20a%20Diffusion%20Model,with%20the%20same%20dimensionality%20as%20.) by Ryan O'Connor at AssemblyAI:
 
-
+![](images/KL_divergence_1.png)
+![](images/KL_divergence_2.png)
+![](images/KL_divergence_3.png)
+![](images/KL_divergence_4.png)
+![](images/KL_divergence_5.png)
 
 
 ## 5. Convex Function
