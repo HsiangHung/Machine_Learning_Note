@@ -123,7 +123,7 @@ The green curve indicates the function within the integral in the definition for
 ![](images/KL_divergence_3.png)
 ![](images/KL_divergence_4.png)
 
-We can see if P is close to Q, the KL divergence is small. Otherwise the area under the green curve describe the discrepancy between P and Q.
+We can see if P is close to Q, the KL divergence is small. Otherwise the area under the green curve describes the distribution discrepancy between P and Q.
 
 
 ## 5. Convex Function
