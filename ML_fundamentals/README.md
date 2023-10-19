@@ -48,7 +48,7 @@ The $L_q$ norms with $q < 1$ is not convex, so difficult to optimize [Cross Vali
 ![Lq_regularization](images/Lq_regularization.png)
 
 
-## 3. $L_1$ / $L_2$ regularization distribution
+## 3. L1/L_2 regularization distribution
 
 $\textrm{L}_1$ and $\textrm{L}_2$ regularization correspond to the priors of MAP in Bayesian. See [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Bayesian_%26_MCMC#22-map). $\textrm{L}_2$ regularization is equivalent to **Gaussian** prior [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?]][Why is the L2 regularization equivalent to Gaussian prior?], whereas $\textrm{L}_1$ corresponds to [Laplace prior](https://en.wikipedia.org/wiki/Laplace_distribution) (double exponential distribution).
 
@@ -114,6 +114,10 @@ $$D_{KL}(p||q) = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \b
 The [blog: Kullback-Leibler Divergence Explained](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) shows using KL divergence to minimize how much information loss we have when approximating a distribution. We can combine KL divergence with neural networks allows us to learn very complex approximating distribution for our data. A common approach to this is called a "Variational Autoencoder" which learns the best way to approximate the information in a data set.
 
 The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-understanding-kl-divergence-2b382ca2b2a8) shows an example using KL-divergence to interpret approximation to a true distribution with the bionomial and uniform distribition.
+
+In the following we visualize how KL divergence varies given a varying distribution P (blue) from a reference distribution Q. The screenshots are taken from the blog [Introduction to Diffusion Models for Machine Learning](https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/#:~:text=More%20specifically%2C%20a%20Diffusion%20Model,with%20the%20same%20dimensionality%20as%20.) by Ryan O'Connor at AssemblyAI:
+
+
 
 
 ## 5. Convex Function
