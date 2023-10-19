@@ -9,7 +9,7 @@ Large language models (LLMs) sometimes can nail the answer to questions, but oth
 
 RAG is an AI framework for retrieving facts from an **external** knowledge base to ground LLMs on the most accurate, **up-to-date** information and to give users insight into LLMs' generative process [[IBM Blog]][What is retrieval-augmented generation?]. 
 
-## Benfit Using RAG
+### Benfits Using RAG
 
 Implementing RAG in an LLM-based question answering system has the following main benefits [[IBM Blog]][What is retrieval-augmented generation?]: 
 1. It ensures that the model has access to the most current, reliable facts, and that users have access to the model’s sources, ensuring that its claims can be checked for accuracy and ultimately trusted.
@@ -24,7 +24,7 @@ LLMs need to be explicitly trained to recognize questions they can’t answer, r
 
 ### Use Case
 
-Alice, has learned that her son’s school will have early dismissal on Wednesdays for the rest of the year. She wants to know if she can take vacation in half-day increments and if she has enough vacation to finish the year.
+Alice has learned that her son’s school will have early dismissal on Wednesdays for the rest of the year. She wants to know if she can take vacation in half-day increments and if she has enough vacation to finish the year.
 
 To craft its response, the LLM first pulls data from Alice’s HR files to find out how much vacation she gets as a longtime employee, and how many days she has left for the year. It also searches the company’s policies to verify that her vacation can be taken in half-days. These facts are injected into Alice’s initial query and passed to the LLM, which generates a concise, personalized answer. A chatbot delivers the response, with links to its sources.
 
