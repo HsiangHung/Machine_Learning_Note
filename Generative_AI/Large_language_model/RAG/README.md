@@ -7,7 +7,10 @@
 
 Large language models (LLMs) sometimes can nail the answer to questions, but other times they regurgitate random facts from their training data. We might observe hallucination in LLMs: they have no idea what they’re saying. LLMs know how words relate statistically, but not what they mean [[IBM Blog]][What is retrieval-augmented generation?].
 
-RAG is an AI framework for retrieving facts from an **external** knowledge base to ground LLMs on the most accurate, **up-to-date** information and to give users insight into LLMs' generative process [[IBM Blog]][What is retrieval-augmented generation?]. 
+RAG is an AI framework for retrieving facts from an **external** knowledge base to ground LLMs on the most accurate, **up-to-date** information and to give users insight into LLMs' generative process [[Meta AI]][Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models][[IBM Blog]][What is retrieval-augmented generation?].  This flexibility makes RAG adaptive for situations where facts could evolve over time. 
+
+RAG can be fine-tuned and its internal knowledge can be modified in an efficient manner and without needing retraining of the entire model.
+
 
 ### Benfits Using RAG
 
@@ -24,9 +27,11 @@ LLMs need to be explicitly trained to recognize questions they can’t answer, r
 
 ### Use Case
 
-Alice has learned that her son’s school will have early dismissal on Wednesdays for the rest of the year. She wants to know if she can take vacation in half-day increments and if she has enough vacation to finish the year.
+Alice has learned that her son’s school will have early dismissal on Wednesdays for the rest of the year. She wants to know if she can take vacation in half-day increments and if she has enough vacation to finish the year. 
 
 To craft its response, the LLM first pulls data from Alice’s HR files to find out how much vacation she gets as a longtime employee, and how many days she has left for the year. It also searches the company’s policies to verify that her vacation can be taken in half-days. These facts are injected into Alice’s initial query and passed to the LLM, which generates a concise, personalized answer. A chatbot delivers the response, with links to its sources.
+
+For example, Alice wants to know how many days of maternity leave she gets. A chatbot that does not use RAG responds cheerfully (and incorrectly): “Take as long as you want.” When the LLM failed to find a precise answer, it should have responded, “I’m sorry, I don’t know,”
 
 
 ## Implementing RAG
@@ -45,6 +50,15 @@ This assortment of external knowledge is appended to the user’s prompt and pas
 
 
 
+
+
+
+* [Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models]: https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/
+[[Meta AI] Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models](https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/)
+
+
+* [Retrieval Augmented Generation (RAG)]: https://www.promptingguide.ai/techniques/rag
+[[Prompt Engineering Guide] Retrieval Augmented Generation (RAG)](https://www.promptingguide.ai/techniques/rag)
 
 
 * [What is retrieval-augmented generation?]: https://research.ibm.com/blog/retrieval-augmented-generation-RAG
