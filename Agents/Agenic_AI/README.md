@@ -24,11 +24,9 @@ The CoT-ReAct process has the following components:
 
 Working with CoT and ReAct requires careful thought and well-structured code. You have now experienced how to make an AI not just generate text, but perform methodical reasoning and take action to solve problems.
 
-Below we show a scenario by comparing CoT + ReAct and one-shot LLM.
+Below we show a scenario by comparing the CoT + ReAct technique and one-shot LLM prompt.
 
-### Scenario 
-
-A patient presents with a persistent cough and fatigue. Our goal is to determine the likely cause.
+### Scenario: A patient presents with a persistent cough and fatigue. Our goal is to determine the likely cause.
 
 #### Approach A: The "All Data Upfront" CoT Method
 
@@ -68,7 +66,7 @@ A more dynamic and powerful approach is to build an agent that can decide what i
 Instead of one big prompt, we give the agent a role and access to tools:
 * `order_lab_test`(test_name: str)
 * `check_patient_history`(record_id: str)
-* final_answer(diagnosis: str, reasoning: str)
+* `final_answer`(diagnosis: str, reasoning: str)
 
 Now, watch how the interaction unfolds turn-by-turn:
 * **Interaction turn 1**
@@ -84,7 +82,7 @@ Now, watch how the interaction unfolds turn-by-turn:
         * THINK: The elevated white blood cell count suggests an underlying infection is likely. Given the respiratory symptom (cough), I should now investigate the lungs. I will order a chest X-ray.
         * ACT: `order_lab_test`(test_name="Chest X-Ray")
     
-    Notice the difference. The ReAct agent is not passively analyzing a data file. It is actively participating in a diagnostic process, deciding what information is relevant at each step.
+Notice the difference. The ReAct agent is not passively analyzing a data file. It is actively participating in a diagnostic process, deciding what information is relevant at each step.
 
 
 
@@ -92,21 +90,23 @@ Now, watch how the interaction unfolds turn-by-turn:
 
 When using the ReACT technique, you'll need to create a comprehensive system prompt that **teaches an AI agent** how to use the ReAct framework. This is the most important part of building a **ReAct agent**, as this single prompt sets the rules, defines the tools, and teaches the AI how to "think."
 
-Let's break down how to build such a prompt.
-
-#### Scenario
-
-We need an AI agent to help a logistics coordinator track a delayed shipment. A good ReAct system prompt has four key parts:
+A good ReAct system prompt has four key parts:
 1. The Role and Goal: Who is the agent? What is its purpose?
 2. The THINK/ACT Instruction: How must the agent format its reasoning and actions?
 3. The Tool Definitions: What tools can the agent use, and how do they work?
 4. A Complete Example: A full example of a multi-turn interaction.
 
+
+Let's break down how to build such a prompt in a more concrete way.
+
+#### Scenario: We need an AI agent to help a logistics coordinator track a delayed shipment. 
+
 Let's build the prompt piece by piece.
 1. **Define the Role and Goal**: We start by telling the agent its identity and overall mission.
 ```Python
 """
-You are a Supply Chain Logistics Coordinator. Your goal is to diagnose shipment delays by gathering information from different systems.
+You are a Supply Chain Logistics Coordinator. 
+Your goal is to diagnose shipment delays by gathering information from different systems.
 """
 ```
 
@@ -142,21 +142,23 @@ ACT: Based on your thought process, you will call ONE of the available tools.
 """
 ```
 
-4. Provide a Complete Example Interaction
-Finally, you put it all together by showing the agent a complete, multi-step example of how to use these components to solve a problem. This few-shot example is often the most effective way for the agent to learn the pattern.
+4. **Provide a Complete Example Interaction**: Finally, you put it all together by showing the agent a complete, multi-step example of how to use these components to solve a problem. This few-shot example is often the most effective way for the agent to learn the pattern.
+
+```Python
+"""
 ---
 ## Example
 
-
 **User:** Find out why shipment XYZ123 is delayed.
-
 
 **AI Assistant:**
 THINK: I need to find out why shipment XYZ123 is delayed. My first step is to get the current status and location of the shipment using the `get_shipment_status` tool.
 ACT: get_shipment_status(tracking_id="XYZ123")
 
-
 **(System provides `OBSERVE: {"status": "Delayed", "location": "Chicago Rail Yard"}` and the AI continues...)**
+"""
+```
+
 When you combine all four of these parts, you get a system prompt that gives the AI everything it needs to begin its task.
 
 
