@@ -86,8 +86,7 @@ A good ReAct system prompt has four key parts:
 
 Let's break down how to build such a prompt in a more concrete way.
 
-### Scenario
-We need an AI agent to help a logistics coordinator track a delayed shipment. 
+### Scenario: We need an AI agent to help a logistics coordinator track a delayed shipment. 
 
 Let's build the prompt piece by piece.
 1. **Define the Role and Goal**: We start by telling the agent its identity and overall mission.
@@ -151,17 +150,4 @@ When you combine all four of these parts, you get a system prompt that gives the
 
 
 
-* [Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models]: https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/
-[[Meta AI] Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models](https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/)
 
-
-* [Retrieval Augmented Generation (RAG)]: https://www.promptingguide.ai/techniques/rag
-[[Prompt Engineering Guide] Retrieval Augmented Generation (RAG)](https://www.promptingguide.ai/techniques/rag)
-
-
-* [Retrieval Augmented Generation (RAG) for LLMs]: https://www.hopsworks.ai/dictionary/retrieval-augmented-generation-llm
-[[HopsWorks] Retrieval Augmented Generation (RAG) for LLMs](https://www.hopsworks.ai/dictionary/retrieval-augmented-generation-llm)
-
-
-* [What is retrieval-augmented generation?]: https://research.ibm.com/blog/retrieval-augmented-generation-RAG
-[[IBM Blog] What is retrieval-augmented generation?](https://research.ibm.com/blog/retrieval-augmented-generation-RAG)
