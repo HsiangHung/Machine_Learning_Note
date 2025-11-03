@@ -26,7 +26,7 @@ A patient presents with a persistent cough and fatigue. Our goal is to determine
 
 One way to solve this is to give the AI a single, large prompt containing all the information we have about the patient and ask it to reason through the data.
 
-Python ```
+```Python
 system_prompt_cot = """
 You are a diagnostic physician. 
 Think step by step, correlating the symptoms with the provided patient data to form a differential diagnosis. 
