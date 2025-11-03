@@ -28,7 +28,11 @@ One way to solve this is to give the AI a single, large prompt containing all th
 
 ```
 system_prompt_cot = """
-You are a diagnostic physician. Think step by step, correlating the symptoms with the provided patient data to form a differential diagnosis. Explain your reasoning.
+You are a diagnostic physician. 
+
+Think step by step, correlating the symptoms with the provided patient data to form a differential diagnosis. 
+
+Explain your reasoning.
 """
 ```
 
