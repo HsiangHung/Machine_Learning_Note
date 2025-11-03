@@ -1,6 +1,7 @@
 
-# Retrieval-Augmented Generation (RAG)
+# Agentic AI
 
+This document is a note from Udacity course **Agentic AI**.
 
 ## Common components of an AI Agent:
 
@@ -9,8 +10,27 @@
 * **Instructions**: Guidelines (system prompts) defining behavior and goals.
 * **Memory**: Short-term (context) & Long-term (history) for learning and consistency.
 * **Runtime/Orchestration Layer**: Manages execution flow, tool usage, observation processing.
+ 
 
 
+## Chain-of-Thought (CoT) and ReAct
+
+A detailed Chain-of-Thought (CoT) prompt instructs an LLM to analyze multiple data sources and structure its reasoning to solve a complex problem.
+
+
+### Scenario 1: 
+
+A patient presents with a persistent cough and fatigue. Our goal is to determine the likely cause.
+
+#### Approach a: The "All Data Upfront" CoT Method
+
+One way to solve this is to give the AI a single, large prompt containing all the information we have about the patient and ask it to reason through the data.
+
+```
+system_prompt_cot = """
+You are a diagnostic physician. Think step by step, correlating the symptoms with the provided patient data to form a differential diagnosis. Explain your reasoning.
+"""
+```
 
 
 
