@@ -63,13 +63,14 @@ Instead of one big prompt, we give the agent a role and access to tools:
 * final_answer(diagnosis: str, reasoning: str)
 
 Now, watch how the interaction unfolds turn-by-turn:
-* Interaction turn 1
+* **Interaction turn 1**
     * User: "A patient presents with a persistent cough and fatigue."
     * AI Assistant Response:
         * THINK: The symptoms 'cough' and 'fatigue' are non-specific. I need more information to form a hypothesis. I will start by ordering a standard blood panel (CBC) to check for signs of infection or other abnormalities.
-        * ACT: order_lab_test(test_name="CBC")
+        * ACT: `order_lab_test`(test_name="CBC")
+
     The system runs the `order_lab_test` tool and provides the result back to the agent.
-* Interaction turn 2
+* **Interaction turn 2**
     * System Observation: RESULTS: White blood cell count elevated.
     * AI Assistant Response:
         * THINK: The elevated white blood cell count suggests an underlying infection is likely. Given the respiratory symptom (cough), I should now investigate the lungs. I will order a chest X-ray.
