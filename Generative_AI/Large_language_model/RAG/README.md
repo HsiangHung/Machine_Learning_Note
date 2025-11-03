@@ -7,7 +7,16 @@
 
 Large language models (LLMs) sometimes can nail the answer to questions, but other times they regurgitate random facts from their training data. We might observe hallucination in LLMs: they have no idea what they’re saying. LLMs know how words relate statistically, but not what they mean [[IBM Blog]][What is retrieval-augmented generation?].
 
-RAG is an AI framework for retrieving facts from an **external** knowledge base to ground LLMs on the most accurate, **up-to-date** information and to give users insight into LLMs' generative process [[Meta AI]][Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models][[IBM Blog]][What is retrieval-augmented generation?].  This flexibility makes RAG adaptive for situations where facts could evolve over time. 
+RAG is an AI framework for retrieving facts from an **external** knowledge base to ground LLMs on the most accurate, **up-to-date** information and to give users insight into LLMs' generative process [[Meta AI]], [Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models][[IBM Blog]][What is retrieval-augmented generation?], [[Prompt Engineering Guide]][Retrieval Augmented Generation (RAG)].  
+
+This flexibility makes RAG adaptive for situations where facts could evolve over time. Some examples of context information used by RAG include [[HopsWorks]][Retrieval Augmented Generation (RAG) for LLMs]:
+
+1. Real-time context (the weather, your location, etc)
+2. User-specific information (orders the user has made at this website, actions the user has taken on the website, the user’s status, etc);
+3. Relevant factual information (documents not included in the LLM’s training data - either because they are private or they were updated after the LLM was trained).
+
+
+
 
 RAG can be fine-tuned and its internal knowledge can be modified in an efficient manner and without needing retraining of the entire model.
 
@@ -44,6 +53,11 @@ RAG has two phases, retrieval and content generation:
 
 In the retrieval phase, algorithms search for and retrieve snippets of information relevant to the user’s prompt or question. In an open-domain, consumer setting, those facts can come from indexed documents on the internet; in a closed-domain, enterprise setting, a narrower set of sources are typically used for added security and reliability.
 
+The most common systems used to provide external data for RAG LLMs are **vector databases** and **feature stores**.
+
+Vector databases are used to retrieve relevant documents using similarity search. Vector databases can be standalone or embedded with the LLM application (e.g., Chroma embedded vector database). When structured (tabular) data is needed, an operational data store, such as a feature store, is typically used. Popular vector databases and feature stores are Weaviate and Hopsworks that both provide time-unlimited free tiers [[HopsWorks] Retrieval Augmented Generation (RAG) for LLMs].  
+
+
 ### Content generation
 
 This assortment of external knowledge is appended to the user’s prompt and passed to the language model. In the generative phase, the LLM draws from the augmented prompt and its internal representation of its training data to synthesize an engaging answer tailored to the user in that instant. The answer can then be passed to a chatbot with links to its sources.
@@ -59,6 +73,10 @@ This assortment of external knowledge is appended to the user’s prompt and pas
 
 * [Retrieval Augmented Generation (RAG)]: https://www.promptingguide.ai/techniques/rag
 [[Prompt Engineering Guide] Retrieval Augmented Generation (RAG)](https://www.promptingguide.ai/techniques/rag)
+
+
+* [Retrieval Augmented Generation (RAG) for LLMs]: https://www.hopsworks.ai/dictionary/retrieval-augmented-generation-llm
+[[HopsWorks] Retrieval Augmented Generation (RAG) for LLMs](https://www.hopsworks.ai/dictionary/retrieval-augmented-generation-llm)
 
 
 * [What is retrieval-augmented generation?]: https://research.ibm.com/blog/retrieval-augmented-generation-RAG
