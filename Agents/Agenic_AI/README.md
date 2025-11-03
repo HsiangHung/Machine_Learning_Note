@@ -22,7 +22,7 @@ A detailed Chain-of-Thought (CoT) prompt instructs an LLM to analyze multiple da
 
 A patient presents with a persistent cough and fatigue. Our goal is to determine the likely cause.
 
-#### Approach a: The "All Data Upfront" CoT Method
+#### Approach A: The "All Data Upfront" CoT Method
 
 One way to solve this is to give the AI a single, large prompt containing all the information we have about the patient and ask it to reason through the data.
 
@@ -44,10 +44,37 @@ Here is their patient chart:
 
 Based on all this information, what is the likely diagnosis?
 """
+
+response = get_completion(system_prompt_cot, user_prompt_with_data)
+print(response)
 ```
 
+This is a **Chain-of-Thought** approach. We provide all the context and ask the model to "think step by step" to connect the dots. It's powerful, but it has a key limitation: it's static. What if we didn't have the lab results yet? We wouldn't be able to run the prompt.
 
 
+
+#### Approach B: The Agentic ReAct Method
+
+A more dynamic and powerful approach is to build an agent that can decide what information it needs and then go get it using tools. This is the **ReAct** framework in action.
+
+Instead of one big prompt, we give the agent a role and access to tools:
+* `order_lab_test`(test_name: str)
+* `check_patient_history`(record_id: str)
+* final_answer(diagnosis: str, reasoning: str)
+
+Now, watch how the interaction unfolds turn-by-turn:
+* Interaction turn 1
+    * User: "A patient presents with a persistent cough and fatigue."
+    * AI Assistant Response:
+        * THINK: The symptoms 'cough' and 'fatigue' are non-specific. I need more information to form a hypothesis. I will start by ordering a standard blood panel (CBC) to check for signs of infection or other abnormalities.
+        * ACT: order_lab_test(test_name="CBC")
+    The system runs the `order_lab_test` tool and provides the result back to the agent.
+* Interaction turn 2
+    * System Observation: RESULTS: White blood cell count elevated.
+    * AI Assistant Response:
+        * THINK: The elevated white blood cell count suggests an underlying infection is likely. Given the respiratory symptom (cough), I should now investigate the lungs. I will order a chest X-ray.
+        * ACT: `order_lab_test`(test_name="Chest X-Ray")
+    Notice the difference. The ReAct agent is not passively analyzing a data file. It is actively participating in a diagnostic process, deciding what information is relevant at each step.
 
 
 
