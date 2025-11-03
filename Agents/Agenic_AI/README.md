@@ -15,7 +15,11 @@ This document is a note from Udacity course **Agentic AI**.
 
 ## Chain-of-Thought (CoT) and ReAct
 
-A detailed Chain-of-Thought (CoT) prompt instructs an LLM to analyze multiple data sources and structure its reasoning to solve a complex problem.
+CoT and ReAct together helps agents to solve more complicated problems. The CoT-ReAct process has the following components:
+* **Crafting Structured CoT Prompts**: You practiced writing a detailed Chain-of-Thought prompt that instructs an LLM to analyze multiple data sources and structure its reasoning to solve a complex problem.
+* **Building a ReAct System Prompt**: You learned how to compose a comprehensive ReAct system prompt from scratch, defining the agent's role, the THINK/ACT cycle, a set of available tools, and a complete example to guide the agent's behavior.
+* **Implementing the ReAct Orchestration Loop**: You wrote the Python code that serves as the agent's runtime, successfully parsing the AI's ACT responses and creating the observation loop that allows the agent to use tools and receive feedback.
+
 
 
 ### Scenario 1: 
@@ -75,6 +79,7 @@ Now, watch how the interaction unfolds turn-by-turn:
     * AI Assistant Response:
         * THINK: The elevated white blood cell count suggests an underlying infection is likely. Given the respiratory symptom (cough), I should now investigate the lungs. I will order a chest X-ray.
         * ACT: `order_lab_test`(test_name="Chest X-Ray")
+    
     Notice the difference. The ReAct agent is not passively analyzing a data file. It is actively participating in a diagnostic process, deciding what information is relevant at each step.
 
 
