@@ -1,7 +1,7 @@
 
 # Chain-of-Thought and ReACT Prompting
 
-$${\color{red}This \space section \spave corresponds \space to \space Sec \space 6 \space of \space Udacity \space **Agentic AI** \space course.}$$
+$${\color{red}This \space section \space corresponds \space to \space Sec \space 6 \space of \space Udacity \space **Agentic \space AI** \space course.}$$
 
 CoT and ReAct together build AI agents to solve more complicated problems. 
 
