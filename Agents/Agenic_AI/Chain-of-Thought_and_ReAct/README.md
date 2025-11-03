@@ -1,19 +1,5 @@
 
-# Agentic AI
-
-This document is a note from Udacity course **Agentic AI**.
-
-## Common components of an AI Agent:
-
-* **Large Language Model (LLM)**: The "brain" for understanding, reasoning, acting.
-* **Tools**: External functions, APIs for interaction and enhanced capabilities.
-* **Instructions**: Guidelines (system prompts) defining behavior and goals.
-* **Memory**: Short-term (context) & Long-term (history) for learning and consistency.
-* **Runtime/Orchestration Layer**: Manages execution flow, tool usage, observation processing.
- 
-
-
-## Chain-of-Thought (CoT) and ReAct
+# Chain-of-Thought and ReACT Prompting
 
 CoT and ReAct together build AI agents to solve more complicated problems. 
 
@@ -26,9 +12,10 @@ Working with CoT and ReAct requires careful thought and well-structured code. Yo
 
 Below we show a scenario by comparing the CoT + ReAct technique and one-shot LLM prompt.
 
-### Scenario: A patient presents with a persistent cough and fatigue. Our goal is to determine the likely cause.
+## Scenario
+A patient presents with a persistent cough and fatigue. Our goal is to determine the likely cause.
 
-#### Approach A: The "All Data Upfront" CoT Method
+### Approach A: The "All Data Upfront" CoT Method
 
 One way to solve this is to give the AI a single, large prompt containing all the information we have about the patient and ask it to reason through the data.
 
@@ -59,7 +46,7 @@ This is a **Chain-of-Thought** approach. We provide all the context and ask the 
 
 
 
-#### Approach B: The Agentic ReAct Method
+### Approach B: The Agentic ReAct Method
 
 A more dynamic and powerful approach is to build an agent that can decide what information it needs and then go get it using tools. This is the **ReAct** framework in action.
 
@@ -86,7 +73,7 @@ Notice the difference. The ReAct agent is not passively analyzing a data file. I
 
 
 
-### Craft the ReAct System Prompt
+## Craft the ReAct System Prompt
 
 When using the ReACT technique, you'll need to create a comprehensive system prompt that **teaches an AI agent** how to use the ReAct framework. This is the most important part of building a **ReAct agent**, as this single prompt sets the rules, defines the tools, and teaches the AI how to "think."
 
@@ -99,7 +86,8 @@ A good ReAct system prompt has four key parts:
 
 Let's break down how to build such a prompt in a more concrete way.
 
-#### Scenario: We need an AI agent to help a logistics coordinator track a delayed shipment. 
+### Scenario
+We need an AI agent to help a logistics coordinator track a delayed shipment. 
 
 Let's build the prompt piece by piece.
 1. **Define the Role and Goal**: We start by telling the agent its identity and overall mission.
