@@ -1,4 +1,4 @@
-# Chaining Prompts for Agentic Reasoning
+# 4. Chaining Prompts for Agentic Reasoning
 
 Recall the common components of an AI Agent:
 * **Large Language Model (LLM)**: The "brain" for understanding, reasoning, acting.
