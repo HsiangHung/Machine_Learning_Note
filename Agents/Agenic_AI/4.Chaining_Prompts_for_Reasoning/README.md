@@ -11,6 +11,18 @@ Recall the common components of an AI Agent:
 * **Memory**: Short-term (context) & Long-term (history) for learning and consistency.
 * **Runtime/Orchestration Layer**: Manages execution flow, tool usage, observation processing.
 
+At its core, prompt chaining is simply about managing strings and making sequential API calls. We're going to build a complete prompt chain from scratch using basic Python to show you how it works. 
+
+We’ll cover:
+* **Sequential Prompting**: Using it for multi-step reasoning.
+* **Task Chaining**: Connecting prompts by feeding one step's output to the next's input.
+* **Gate Checks**: Using programmatic validation between steps for quality control.
+* **Implementing Gate Checks**: Writing code for automatic verification.
+* **Examples**: A prompt chain for a multi-part coding assignment (outline, code generation, validation, refinement).
+
+
+
+
 
 ## Prompt Chaining
 
