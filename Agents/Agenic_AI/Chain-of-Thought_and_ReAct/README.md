@@ -5,21 +5,21 @@ $${\color{red}The \space content \space here \space corresponds \space to \space
 
 CoT and ReAct together build AI agents to solve more complicated problems. 
 
-The CoT-ReAct process has the following components:
+A CoT-ReAct process has the following components:
 * **Crafting Structured CoT Prompts**: You practiced writing a detailed Chain-of-Thought prompt that instructs an LLM to analyze multiple data sources and structure its reasoning to solve a complex problem.
-* **Building a ReAct System Prompt**: You learned how to compose a comprehensive ReAct system prompt from scratch, defining the agent's role, the THINK/ACT cycle, a set of available tools, and a complete example to guide the agent's behavior.
+* **Building a ReAct System Prompts**: You learned how to compose a comprehensive ReAct system prompt from scratch, defining the agent's role, the THINK/ACT cycle, a set of available tools, and a complete example to guide the agent's behavior.
 * **Implementing the ReAct Orchestration Loop**: You wrote the Python code that serves as the agent's runtime, successfully parsing the AI's ACT responses and creating the observation loop that allows the agent to use tools and receive feedback.
 
 Working with CoT and ReAct requires careful thought and well-structured code. You have now experienced how to make an AI not just generate text, but perform methodical reasoning and take action to solve problems.
 
 Below we show a scenario by comparing the CoT + ReAct technique and one-shot LLM prompt.
 
-## Scenario
+## Scenario: Medical Diagonosis
 A patient presents with a persistent cough and fatigue. Our goal is to determine the likely cause.
 
 ### Approach A: The "All Data Upfront" CoT Method
 
-One way to solve this is to give the AI a single, large prompt containing all the information we have about the patient and ask it to reason through the data.
+One way to solve this is to give the AI a **single**, **large** prompt containing all the information we have about the patient and ask it to reason through the data.
 
 ```Python
 system_prompt_cot = """
