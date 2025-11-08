@@ -1,5 +1,9 @@
 # 4. Chaining Prompts for Agentic Reasoning
 
+$${\color{red}The \space content \space here \space corresponds \space to \space Sec. \space 9-10 \space of \space Udacity \space **Agentic \space AI** \space course.}$$
+
+![](images/ai_agent_components.png)
+
 Recall the common components of an AI Agent:
 * **Large Language Model (LLM)**: The "brain" for understanding, reasoning, acting.
 * **Tools**: External functions, APIs for interaction and enhanced capabilities.
