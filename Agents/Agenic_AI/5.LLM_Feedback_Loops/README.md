@@ -1,6 +1,6 @@
 # 5. LLM Feedback Loops
 
-$${\color{red}The \space content \space here \space corresponds \space to \space Sec \space 11-12 \space of \space Udacity \space **Agentic \space AI** \space course.}$$
+$${\color{red}The \space content \space here \space corresponds \space to \space Sec. \space 11-12 \space of \space Udacity \space **Agentic \space AI** \space course.}$$
 
 
 ## Sources of Feedback for LLMs:
@@ -36,7 +36,7 @@ We need an AI to generate the HTML and CSS for a simple, styled user profile car
 
 ### Step 1: The Initial (Flawed) Generation
 
-First, we'll give the AI a prompt with our initial request.
+First, we'll give the AI a prompt with our initial request:
 
 ```Python
 # The initial prompt for the profile card
