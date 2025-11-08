@@ -2,7 +2,7 @@
 
 $${\color{red}The \space content \space here \space corresponds \space to \space Sec. \space 9-10 \space of \space Udacity \space **Agentic \space AI** \space course.}$$
 
-![](images/ai_agent_components.png)
+![](images/ai_agent_components.png| width=100)
 
 Recall the common components of an AI Agent:
 * **Large Language Model (LLM)**: The "brain" for understanding, reasoning, acting.
