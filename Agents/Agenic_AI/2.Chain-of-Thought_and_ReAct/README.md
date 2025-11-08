@@ -3,7 +3,7 @@
 
 $${\color{red}The \space content \space here \space corresponds \space to \space Sec \space 5-6 \space of \space Udacity \space **Agentic \space AI** \space course.}$$
 
-CoT and ReAct together build AI agents to solve more complicated problems. 
+Chain-of-Thought (CoT) and ReAct technique together build AI agents to solve more complicated problems. 
 
 A CoT-ReAct process has the following components:
 * **Crafting Structured CoT Prompts**: You practiced writing a detailed Chain-of-Thought prompt that instructs an LLM to analyze multiple data sources and structure its reasoning to solve a complex problem.
